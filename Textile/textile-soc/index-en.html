@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>EU DPP Textile Ontology - Textile Substances of Concern Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/textile-soc#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/textile-soc#","name":"EU DPP Textile Ontology - Textile Substances of Concern Module", "headline":"Document describing the ontology https://w3id.org/eudpp/textile-soc#", "dateReleased":"2026-07-09", "dateModified":"2026-07-16", "version":"Version 1.1.2", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Elio Hbeich"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>EU DPP Textile Ontology - Textile Substances of Concern Module</h1>
+<h2>Release: 2026-07-09</h2>
+
+
+<dl>
+<dt>Modified on: 2026-07-16</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/eudpp/textile-soc/1.1.2">https://w3id.org/eudpp/textile-soc/1.1.2</a></dd>
+<dt>Revision:</dt>
+<dd>Version 1.1.2</dd>
+<dt>Issued on:</dt>
+<dd>2026-07-09</dd>
+<dt>Authors:</dt>
+<dd>Elio Hbeich</dd>
+
+<dt>Source:</dt>
+<dd><a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a></dd><dd><a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a></dd><dd><a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="CC BY 4.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>EU DPP Textile Ontology - Textile Substances of Concern Module. Version 1.1.2.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Textile substances of concern ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#NonTextileComponentMaterialGroup"
+         title="https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup">Non-textile component material group</a>
+   </li>
+   <li>
+      <a href="#TextileConcentrationInformation"
+         title="https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation">Textile concentration information</a>
+   </li>
+   <li>
+      <a href="#TextileFibreCompositionMaterialGroup"
+         title="https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup">Textile fibre-composition material group</a>
+   </li>
+   <li>
+      <a href="#TextileMaterialGroup"
+         title="https://w3id.org/eudpp/textile-soc#TextileMaterialGroup">Textile material group</a>
+   </li>
+   <li>
+      <a href="#TextileProductGroupSoCReference"
+         title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a>
+   </li>
+   <li>
+      <a href="#TextileRecyclingAlertThreshold"
+         title="https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold">Textile recycling alert threshold</a>
+   </li>
+   <li>
+      <a href="#TextileSoCHandlingInformation"
+         title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a>
+   </li>
+   <li>
+      <a href="#TextileSoCLocationTypeConcept"
+         title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a>
+   </li>
+   <li>
+      <a href="#TextileSubstanceOfConcernPresenceContext"
+         title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a>
+   </li>
+   <li>
+      <a href="#TextileTrackingThreshold"
+         title="https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold">Textile tracking threshold</a>
+   </li>
+   <li>
+      <a href="#TextileTypeDQualification"
+         title="https://w3id.org/eudpp/textile-soc#TextileTypeDQualification">Textile type (d) qualification</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasPresenceChemicalFunction"
+         title="https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction">has presence chemical function</a>
+   </li>
+   <li>
+      <a href="#hasPresenceUseCategory"
+         title="https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory">has presence use category</a>
+   </li>
+   <li>
+      <a href="#hasTextileHandlingInformation"
+         title="https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation">has textile handling information</a>
+   </li>
+   <li>
+      <a href="#hasTextileLocationType"
+         title="https://w3id.org/eudpp/textile-soc#hasTextileLocationType">has textile location type</a>
+   </li>
+   <li>
+      <a href="#hasTextileProductGroupReference"
+         title="https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference">has textile product-group reference</a>
+   </li>
+   <li>
+      <a href="#relevantToTextileProcess"
+         title="https://w3id.org/eudpp/textile-soc#relevantToTextileProcess">relevant to textile process</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept"
+         title="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+         <span>has Top Concept</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">
+         <span>in Scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#modellingNote"
+         title="https://w3id.org/eudpp/textile-connector#modellingNote">
+         <span>modelling Note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">
+         <span>notation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">
+         <span>pref Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceLocator"
+         title="https://w3id.org/eudpp/textile-connector#sourceLocator">
+         <span>source Locator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceType"
+         title="https://w3id.org/eudpp/textile-connector#sourceType">
+         <span>source Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">
+         <span>top Concept Of</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#adhesiveOrBondingLayerLocation"
+         title="https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation">Adhesive or bonding layer location</a>
+   </li>
+   <li>
+      <a href="#coatingOrFinishLocation"
+         title="https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation">Coating or finish location</a>
+   </li>
+   <li>
+      <a href="#fibreCompositionLocation"
+         title="https://w3id.org/eudpp/textile-soc#fibreCompositionLocation">Fibre composition location</a>
+   </li>
+   <li>
+      <a href="#nonTextileComponentLocation"
+         title="https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation">Non-textile component location</a>
+   </li>
+   <li>
+      <a href="#printedOrDyedRegionLocation"
+         title="https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation">Printed or dyed region location</a>
+   </li>
+   <li>
+      <a href="#TextileSoCLocationTypeScheme"
+         title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a>
+   </li>
+   <li>
+      <a href="#unknownTextileProductLocation"
+         title="https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation">Unknown textile product location</a>
+   </li>
+   <li>
+      <a href="#wholeProductLocation"
+         title="https://w3id.org/eudpp/textile-soc#wholeProductLocation">Whole textile product location</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Textile substances of concern ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module does not classify every textile chemical as a substance of concern. It specialises the generic SoC presence-context model for textile products and attaches textile-specific information to the occurrence, not globally to the chemical identity.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Textile substances of concern ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Textile substances of concern ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#NonTextileComponentMaterialGroup" title="https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup">Non-textile component material group</a></li>
+  <li><a href="#TextileConcentrationInformation" title="https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation">Textile concentration information</a></li>
+  <li><a href="#TextileFibreCompositionMaterialGroup" title="https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup">Textile fibre-composition material group</a></li>
+  <li><a href="#TextileMaterialGroup" title="https://w3id.org/eudpp/textile-soc#TextileMaterialGroup">Textile material group</a></li>
+  <li><a href="#TextileProductGroupSoCReference" title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a></li>
+  <li><a href="#TextileRecyclingAlertThreshold" title="https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold">Textile recycling alert threshold</a></li>
+  <li><a href="#TextileSoCHandlingInformation" title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a></li>
+  <li><a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a></li>
+  <li><a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a></li>
+  <li><a href="#TextileTrackingThreshold" title="https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold">Textile tracking threshold</a></li>
+  <li><a href="#TextileTypeDQualification" title="https://w3id.org/eudpp/textile-soc#TextileTypeDQualification">Textile type (d) qualification</a></li>
+ </ul>
+ <div class="entity" id="NonTextileComponentMaterialGroup">
+  <h3>Non-textile component material group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup</p>
+  <div class="comment">
+   <span class="markdown">A material grouping associated with one or more non-textile components, used as a location or concentration reference unit without treating the component itself as a material group.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#MaterialGroup" target="_blank" title="https://w3id.org/eudpp/soc#MaterialGroup">Material Group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileConcentrationInformation">
+  <h3>Textile concentration information<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation</p>
+  <div class="comment">
+   <span class="markdown">Concentration information for a substance present in a textile product, expressed at product, component, material-group or spare-part level as an exact value, maximum value or range.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#ConcentrationInformation" target="_blank" title="https://w3id.org/eudpp/soc#ConcentrationInformation">Concentration Information</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#TextileProductGroupSoCReference" title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSoCHandlingInformation" title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileFibreCompositionMaterialGroup">
+  <h3>Textile fibre-composition material group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup</p>
+  <div class="comment">
+   <span class="markdown">Bridge class for a fibre-composition component that is used as the material-group scope of a textile substance-of-concern presence context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-core#FibreCompositionComponent" target="_blank" title="https://w3id.org/eudpp/textile-core#FibreCompositionComponent">Fibre Composition Component</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileMaterialGroup" title="https://w3id.org/eudpp/textile-soc#TextileMaterialGroup">Textile material group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileMaterialGroup">
+  <h3>Textile material group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileMaterialGroup</p>
+  <div class="comment">
+   <span class="markdown">A fibre-, yarn- or fabric-based material grouping within a textile product that serves as a location or mass-reference unit for substance reporting.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#MaterialGroup" target="_blank" title="https://w3id.org/eudpp/soc#MaterialGroup">Material Group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TextileFibreCompositionMaterialGroup" title="https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup">Textile fibre-composition material group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileProductGroupSoCReference">
+  <h3>Textile product-group SoC reference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference</p>
+  <div class="comment">
+   <span class="markdown">A versioned reference identifying the textile-product-group source that qualifies a substance under the product-group-specific type (d) criterion.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList" target="_blank" title="https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList">Product Group Specific So C List</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTextileProductGroupReference" title="https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference">has textile product-group reference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#TextileConcentrationInformation" title="https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation">Textile concentration information</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSoCHandlingInformation" title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileRecyclingAlertThreshold">
+  <h3>Textile recycling alert threshold<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold</p>
+  <div class="comment">
+   <span class="markdown">A textile-sector alert concentration used to inform sorting, recycling or environmentally sound end-of-life handling when the substance may hinder circular treatment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#AlertConcentrationThreshold" target="_blank" title="https://w3id.org/eudpp/soc#AlertConcentrationThreshold">Alert Concentration Threshold</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileSoCHandlingInformation">
+  <h3>Textile SoC handling information<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation</p>
+  <div class="comment">
+   <span class="markdown">Textile-specific instruction information concerning safe use and lifecycle handling in the presence of a substance of concern, including disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management; repair guidance may be added as a textile/JRC extension.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#InstructionInformation" target="_blank" title="https://w3id.org/eudpp/soc#InstructionInformation">Instruction Information</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTextileHandlingInformation" title="https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation">has textile handling information</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#TextileConcentrationInformation" title="https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation">Textile concentration information</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileProductGroupSoCReference" title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileSoCLocationTypeConcept">
+  <h3>Textile SoC location type concept<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept</p>
+  <div class="comment">
+   <span class="markdown">Controlled concept describing a textile-specific kind of product location used to qualify a substance location statement.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTextileLocationType" title="https://w3id.org/eudpp/textile-soc#hasTextileLocationType">has textile location type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#adhesiveOrBondingLayerLocation" title="https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation">Adhesive or bonding layer location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#coatingOrFinishLocation" title="https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation">Coating or finish location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#fibreCompositionLocation" title="https://w3id.org/eudpp/textile-soc#fibreCompositionLocation">Fibre composition location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#nonTextileComponentLocation" title="https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation">Non-textile component location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#printedOrDyedRegionLocation" title="https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation">Printed or dyed region location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#unknownTextileProductLocation" title="https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation">Unknown textile product location</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#wholeProductLocation" title="https://w3id.org/eudpp/textile-soc#wholeProductLocation">Whole textile product location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileSubstanceOfConcernPresenceContext">
+  <h3>Textile substance of concern presence context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext</p>
+  <div class="comment">
+   <span class="markdown">A substance-of-concern presence context specialised for a textile product, textile material group or non-textile component.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext" target="_blank" title="https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext">Substance Of Concern Presence Context</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPresenceChemicalFunction" title="https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction">has presence chemical function</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPresenceUseCategory" title="https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory">has presence use category</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTextileHandlingInformation" title="https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation">has textile handling information</a> <sup class="type-op" title="object property">op</sup>, <a href="#relevantToTextileProcess" title="https://w3id.org/eudpp/textile-soc#relevantToTextileProcess">relevant to textile process</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#TextileConcentrationInformation" title="https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation">Textile concentration information</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileProductGroupSoCReference" title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a> <sup class="type-c" title="class">c</sup>, <a href="#TextileSoCHandlingInformation" title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileTrackingThreshold">
+  <h3>Textile tracking threshold<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold</p>
+  <div class="comment">
+   <span class="markdown">A tracking or disclosure threshold applicable to a substance occurrence in a textile product or textile product group.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#TrackingThreshold" target="_blank" title="https://w3id.org/eudpp/soc#TrackingThreshold">Tracking Threshold</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileTypeDQualification">
+  <h3>Textile type (d) qualification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileTypeDQualification</p>
+  <div class="comment">
+   <span class="markdown">A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/soc#SoCTypeDQualification" target="_blank" title="https://w3id.org/eudpp/soc#SoCTypeDQualification">So C Type D Qualification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasTextileProductGroupReference" title="https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference">has textile product-group reference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasPresenceChemicalFunction" title="https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction">has presence chemical function</a></li>
+  <li><a href="#hasPresenceUseCategory" title="https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory">has presence use category</a></li>
+  <li><a href="#hasTextileHandlingInformation" title="https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation">has textile handling information</a></li>
+  <li><a href="#hasTextileLocationType" title="https://w3id.org/eudpp/textile-soc#hasTextileLocationType">has textile location type</a></li>
+  <li><a href="#hasTextileProductGroupReference" title="https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference">has textile product-group reference</a></li>
+  <li><a href="#relevantToTextileProcess" title="https://w3id.org/eudpp/textile-soc#relevantToTextileProcess">relevant to textile process</a></li>
+ </ul>
+ <div class="entity" id="hasPresenceChemicalFunction">
+  <h3>has presence chemical function<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile substance occurrence to the chemical function performed in that textile context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept" target="_blank" title="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept">Textile Chemical Function Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPresenceUseCategory">
+  <h3>has presence use category<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory</p>
+  <div class="comment">
+   <span class="markdown">Classifies the textile chemical occurrence by whether it is associated with process use, intended performance use or unintended presence. The classification is attached to the occurrence rather than globally to the substance identity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept" target="_blank" title="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept">Textile Chemical Use Category Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTextileHandlingInformation">
+  <h3>has textile handling information<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile substance-of-concern presence context to textile-specific safe-use or lifecycle-handling information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/soc#hasInstructionInformation" target="_blank" title="https://w3id.org/eudpp/soc#hasInstructionInformation">has Instruction Information</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TextileSoCHandlingInformation" title="https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation">Textile SoC handling information</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTextileLocationType">
+  <h3>has textile location type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#hasTextileLocationType</p>
+  <div class="comment">
+   <span class="markdown">Relates a location information object to a controlled textile-specific location type.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/soc#LocationInformation" target="_blank" title="https://w3id.org/eudpp/soc#LocationInformation">Location Information</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTextileProductGroupReference">
+  <h3>has textile product-group reference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile type (d) qualification to the versioned textile product-group reference supporting that qualification.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/soc#isQualifiedByProductGroupList" target="_blank" title="https://w3id.org/eudpp/soc#isQualifiedByProductGroupList">is Qualified By Product Group List</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileTypeDQualification" title="https://w3id.org/eudpp/textile-soc#TextileTypeDQualification">Textile type (d) qualification</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TextileProductGroupSoCReference" title="https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference">Textile product-group SoC reference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="relevantToTextileProcess">
+  <h3>relevant to textile process<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#relevantToTextileProcess</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile substance occurrence to a textile process type that introduced, used, transformed or is affected by the substance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileSubstanceOfConcernPresenceContext" title="https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext">Textile substance of concern presence context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-process#TextileProcess" target="_blank" title="https://w3id.org/eudpp/textile-process#TextileProcess">Textile Process</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#hasTopConcept" title="http://www.w3.org/2004/02/skos/core#hasTopConcept"> <span>has Top Concept</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#modellingNote" title="https://w3id.org/eudpp/textile-connector#modellingNote"> <span>modelling Note</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel"> <span>pref Label</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceLocator" title="https://w3id.org/eudpp/textile-connector#sourceLocator"> <span>source Locator</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceType" title="https://w3id.org/eudpp/textile-connector#sourceType"> <span>source Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf"> <span>top Concept Of</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+  <h3>has Top Concept<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#hasTopConcept</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
+  <h3>in Scheme<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#modellingNote">
+  <h3>modelling Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#modellingNote</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+  <h3>notation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#prefLabel">
+  <h3>pref Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#prefLabel</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceLocator">
+  <h3>source Locator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceLocator</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceType">
+  <h3>source Type<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceType</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#topConceptOf">
+  <h3>top Concept Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#topConceptOf</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#adhesiveOrBondingLayerLocation" title="https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation">Adhesive or bonding layer location</a></li>
+  <li><a href="#coatingOrFinishLocation" title="https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation">Coating or finish location</a></li>
+  <li><a href="#fibreCompositionLocation" title="https://w3id.org/eudpp/textile-soc#fibreCompositionLocation">Fibre composition location</a></li>
+  <li><a href="#nonTextileComponentLocation" title="https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation">Non-textile component location</a></li>
+  <li><a href="#printedOrDyedRegionLocation" title="https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation">Printed or dyed region location</a></li>
+  <li><a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a></li>
+  <li><a href="#unknownTextileProductLocation" title="https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation">Unknown textile product location</a></li>
+  <li><a href="#wholeProductLocation" title="https://w3id.org/eudpp/textile-soc#wholeProductLocation">Whole textile product location</a></li>
+ </ul>
+ <div class="entity" id="adhesiveOrBondingLayerLocation">
+  <h3>Adhesive or bonding layer location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is located in an adhesive, laminate, bonding film or other joining layer.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_ADHESIVE_BONDING"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Adhesive or bonding layer location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="coatingOrFinishLocation">
+  <h3>Coating or finish location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is located in a coating, finish or functional surface treatment applied to the textile product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_COATING_FINISH"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Coating or finish location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="fibreCompositionLocation">
+  <h3>Fibre composition location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#fibreCompositionLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is located in a fibre-composition material group, including a fibre-, yarn- or fabric-based part.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_FIBRE_COMPOSITION"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Fibre composition location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="nonTextileComponentLocation">
+  <h3>Non-textile component location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is located in a non-textile component such as a button, zipper, buckle, rivet, sequin or other hard component.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_NON_TEXTILE_COMPONENT"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Non-textile component location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="printedOrDyedRegionLocation">
+  <h3>Printed or dyed region location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is located in a printed, dyed or otherwise colour-treated region of the textile product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_PRINT_DYE"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Printed or dyed region location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileSoCLocationTypeScheme">
+  <h3>Textile SoC location type scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme</p>
+  <div class="comment">
+   <span class="markdown">Controlled vocabulary of textile-specific location types used in substance location information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#adhesiveOrBondingLayerLocation" title="https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation">Adhesive or bonding layer location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#coatingOrFinishLocation" title="https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation">Coating or finish location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#fibreCompositionLocation" title="https://w3id.org/eudpp/textile-soc#fibreCompositionLocation">Fibre composition location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#nonTextileComponentLocation" title="https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation">Non-textile component location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#printedOrDyedRegionLocation" title="https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation">Printed or dyed region location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#unknownTextileProductLocation" title="https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation">Unknown textile product location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#wholeProductLocation" title="https://w3id.org/eudpp/textile-soc#wholeProductLocation">Whole textile product location</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Textile SoC location type scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="unknownTextileProductLocation">
+  <h3>Unknown textile product location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation</p>
+  <div class="comment">
+   <span class="markdown">The product contains the substance but the more specific location within the textile product has not been determined or disclosed.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_UNKNOWN"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Unknown textile product location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="wholeProductLocation">
+  <h3>Whole textile product location<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-soc#wholeProductLocation</p>
+  <div class="comment">
+   <span class="markdown">The substance is reported as distributed throughout, or only locatable at the level of, the whole textile product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-soc">https://w3id.org/eudpp/textile-soc</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#TextileSoCLocationTypeConcept" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept">Textile SoC location type concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf" target="_blank" title="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">Textile Prep Study 3rd Milestone 20251212.pdf</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-ontology" target="_blank" title="https://w3id.org/eudpp/textile-ontology">textile ontology</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"LOC_WHOLE_PRODUCT"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Whole textile product location"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#TextileSoCLocationTypeScheme" title="https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme">Textile SoC location type scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceLocator" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceLocator">source Locator</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en</span>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-connector#sourceType" target="_blank" title="https://w3id.org/eudpp/textile-connector#sourceType">source Type</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/textile-connector#modellingAbstraction" target="_blank" title="https://w3id.org/eudpp/textile-connector#modellingAbstraction">modelling Abstraction</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

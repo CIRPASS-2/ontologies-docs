@@ -1,0 +1,665 @@
+<https://w3id.org/eudpp/eto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/eto/0.1> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/ACTOR> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/CONNECTOR> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/LCA> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/P_DPP> .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp/eto> <http://purl.org/dc/terms/description> "Example Tyre Ontology (ETO) is an examplar ontology for the tyre sector." .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2000/01/rdf-schema#label> "Example Tyre Ontology"@en .
+<https://w3id.org/eudpp/eto> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#hasManufacturer
+<https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/eudpp/eto#hasRetreader
+<https://w3id.org/eudpp/eto#hasRetreader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/eto#hasRetreader> <http://www.w3.org/2000/01/rdf-schema#label> "A product has a retreader (Actor from ACTOR module)." .
+<https://w3id.org/eudpp/eto#hasRetreader> <http://www.w3.org/2000/01/rdf-schema#label> "has retreader" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#GTIN
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/eudpp/eto#DOTTINFactoryCode
+<https://w3id.org/eudpp/eto#DOTTINFactoryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#DOTTINFactoryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#DOTTINFactoryCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#DOTTINFactoryCode> <http://www.w3.org/2000/01/rdf-schema#comment> "DOT TIN (Tire Identification Number) for US Market - Plant code (NHTSA Part 574)2 or 3 digits. From April 2025, only 3 digits" .
+<https://w3id.org/eudpp/eto#DOTTINFactoryCode> <http://www.w3.org/2000/01/rdf-schema#label> "DOT TIN Factory Code" .
+# 
+# https://w3id.org/eudpp/eto#DOTTINOptionalCode
+<https://w3id.org/eudpp/eto#DOTTINOptionalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#DOTTINOptionalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#DOTTINOptionalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#DOTTINOptionalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "DOT TIN - tire optional code" .
+<https://w3id.org/eudpp/eto#DOTTINOptionalCode> <http://www.w3.org/2000/01/rdf-schema#label> "DOT TIN Optional Code" .
+# 
+# https://w3id.org/eudpp/eto#DOTTINSizeCode
+<https://w3id.org/eudpp/eto#DOTTINSizeCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#DOTTINSizeCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#DOTTINSizeCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#DOTTINSizeCode> <http://www.w3.org/2000/01/rdf-schema#comment> "DOT TIN - Tire size code" .
+<https://w3id.org/eudpp/eto#DOTTINSizeCode> <http://www.w3.org/2000/01/rdf-schema#label> "DOT TIN Size Code" .
+# 
+# https://w3id.org/eudpp/eto#DOTTINWeekYear
+<https://w3id.org/eudpp/eto#DOTTINWeekYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#DOTTINWeekYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#DOTTINWeekYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#DOTTINWeekYear> <http://www.w3.org/2000/01/rdf-schema#comment> "DOT TIN (Tire Identification Number) for US Market - Production Date Week/Year (WWYY)" .
+<https://w3id.org/eudpp/eto#DOTTINWeekYear> <http://www.w3.org/2000/01/rdf-schema#label> "DOT TIN Week Year" .
+# 
+# https://w3id.org/eudpp/eto#SGTIN
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#GTIN> .
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique Item Identifier - SGTIN-96 following Pure identity EPC URN (GS1 EPCIS) format" .
+<https://w3id.org/eudpp/eto#SGTIN> <http://www.w3.org/2000/01/rdf-schema#label> "SGTIN" .
+# 
+# https://w3id.org/eudpp/eto#commercialNameLongDescription
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#productName> .
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/eto#Tyre> .
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Marketing text / Commercial name of the product" .
+<https://w3id.org/eudpp/eto#commercialNameLongDescription> <http://www.w3.org/2000/01/rdf-schema#label> "commercial name long description" .
+# 
+# https://w3id.org/eudpp/eto#eanCode
+<https://w3id.org/eudpp/eto#eanCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#eanCode> <http://www.w3.org/2000/01/rdf-schema#comment> "European Article number according to GS1 standard" .
+<https://w3id.org/eudpp/eto#eanCode> <http://www.w3.org/2000/01/rdf-schema#label> "EAN Code" .
+# 
+# https://w3id.org/eudpp/eto#hasValue
+<https://w3id.org/eudpp/eto#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/eudpp/eto#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Property has value" .
+<https://w3id.org/eudpp/eto#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value" .
+# 
+# https://w3id.org/eudpp/eto#upcCode
+<https://w3id.org/eudpp/eto#upcCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/eto#upcCode> <http://www.w3.org/2000/01/rdf-schema#comment> "(Private) Universal Product code according to GS1 standard" .
+<https://w3id.org/eudpp/eto#upcCode> <http://www.w3.org/2000/01/rdf-schema#label> "UPC Code" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/eto#AcousticInternalStructure
+<https://w3id.org/eudpp/eto#AcousticInternalStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#AcousticInternalStructure> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#AcousticInternalStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#AcousticInternalStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the presence of an internal structure with specific characteristics added to a “conventional” tyre with the aim to reduce the tyre cavity noise (not necessarily external rolling noise) (TRUE/FALSE)" .
+<https://w3id.org/eudpp/eto#AcousticInternalStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Acoustic Internal Structure" .
+# 
+# https://w3id.org/eudpp/eto#AmountOfActualRepairs
+<https://w3id.org/eudpp/eto#AmountOfActualRepairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#AmountOfActualRepairs> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#AmountOfActualRepairs> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#AmountOfActualRepairs> <http://www.w3.org/2000/01/rdf-schema#comment> "An incremental counter to record the number of repairs/patch occurred during the tyre's life - starting with zero" .
+<https://w3id.org/eudpp/eto#AmountOfActualRepairs> <http://www.w3.org/2000/01/rdf-schema#label> "Amount Of Actual Repairs" .
+# 
+# https://w3id.org/eudpp/eto#AspectRatio
+<https://w3id.org/eudpp/eto#AspectRatio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#AspectRatio> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#AspectRatio> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
+<https://w3id.org/eudpp/eto#AspectRatio> <http://www.w3.org/2000/01/rdf-schema#comment> "Aspect ratio" .
+<https://w3id.org/eudpp/eto#AspectRatio> <http://www.w3.org/2000/01/rdf-schema#label> "Aspect Ratio" .
+# 
+# https://w3id.org/eudpp/eto#BirthDate
+<https://w3id.org/eudpp/eto#BirthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#BirthDate> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#BirthDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#BirthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the tyre is born following ISO-8601 format \"YYYY-MM-DD\"" .
+<https://w3id.org/eudpp/eto#BirthDate> <http://www.w3.org/2000/01/rdf-schema#label> "Birth Date" .
+# 
+# https://w3id.org/eudpp/eto#CountryOfOrigin
+<https://w3id.org/eudpp/eto#CountryOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#CountryOfOrigin> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#CountryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#CountryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of origin (ISO 3166-1 alpha-3)" .
+<https://w3id.org/eudpp/eto#CountryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Country Of Origin" .
+# 
+# https://w3id.org/eudpp/eto#DateOfELTCollection
+<https://w3id.org/eudpp/eto#DateOfELTCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#DateOfELTCollection> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#DateOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#DateOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the ELT has been collected by the used tyre collector (DD/MM/YY)" .
+<https://w3id.org/eudpp/eto#DateOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Date Of ELT Collection" .
+# 
+# https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination
+<https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of deconstruction (ISO 3166-1 alpha-3) of the used tyre" .
+<https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination> <http://www.w3.org/2000/01/rdf-schema#label> "ELT Recycling Channel Destination" .
+# 
+# https://w3id.org/eudpp/eto#ELTRecyclingDate
+<https://w3id.org/eudpp/eto#ELTRecyclingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ELTRecyclingDate> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#ELTRecyclingDate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ELTRecyclingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the ELT has been deconstructed (DD/MM/YY)" .
+<https://w3id.org/eudpp/eto#ELTRecyclingDate> <http://www.w3.org/2000/01/rdf-schema#label> "ELT Recycling Date" .
+# 
+# https://w3id.org/eudpp/eto#ELTReuseStatus
+<https://w3id.org/eudpp/eto#ELTReuseStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ELTReuseStatus> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#ELTReuseStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ELTReuseStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the ELT has been sent back to the market because partly worn out or to be sent to a retreader" .
+<https://w3id.org/eudpp/eto#ELTReuseStatus> <http://www.w3.org/2000/01/rdf-schema#label> "ELT Reuse Status" .
+# 
+# https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl
+<https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "URL to the EPREL record of the tire" .
+<https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl> <http://www.w3.org/2000/01/rdf-schema#label> "EPREL Record Reference Url" .
+# 
+# https://w3id.org/eudpp/eto#ExtraLoad
+<https://w3id.org/eudpp/eto#ExtraLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ExtraLoad> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#ExtraLoad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#ExtraLoad> <http://www.w3.org/2000/01/rdf-schema#comment> "Extra Load symbol - to be associated to the load index if needed." .
+<https://w3id.org/eudpp/eto#ExtraLoad> <http://www.w3.org/2000/01/rdf-schema#label> "Extra Load" .
+# 
+# https://w3id.org/eudpp/eto#GeometricalTyreSize
+<https://w3id.org/eudpp/eto#GeometricalTyreSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#GeometricalTyreSize> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#GeometricalTyreSize> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
+<https://w3id.org/eudpp/eto#GeometricalTyreSize> <http://www.w3.org/2000/01/rdf-schema#comment> "Tyre size designation" .
+<https://w3id.org/eudpp/eto#GeometricalTyreSize> <http://www.w3.org/2000/01/rdf-schema#label> "Geometrical Tyre Size" .
+# 
+# https://w3id.org/eudpp/eto#HLPC
+<https://w3id.org/eudpp/eto#HLPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#HLPC> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#HLPC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#HLPC> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if the tire meets the UN R.30 definition of High Load (HL), values according to ETRTO standard" .
+<https://w3id.org/eudpp/eto#HLPC> <http://www.w3.org/2000/01/rdf-schema#label> "HLPC" .
+# 
+# https://w3id.org/eudpp/eto#HighLoad
+<https://w3id.org/eudpp/eto#HighLoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#HighLoad> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#HighLoad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#HighLoad> <http://www.w3.org/2000/01/rdf-schema#comment> "High Load symbol - to be associated to the load index if needed." .
+<https://w3id.org/eudpp/eto#HighLoad> <http://www.w3.org/2000/01/rdf-schema#label> "High Load" .
+# 
+# https://w3id.org/eudpp/eto#LabelPictureUrl
+<https://w3id.org/eudpp/eto#LabelPictureUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LabelPictureUrl> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#LabelPictureUrl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#LabelPictureUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "URL to the label picture" .
+<https://w3id.org/eudpp/eto#LabelPictureUrl> <http://www.w3.org/2000/01/rdf-schema#label> "Label Picture Url" .
+# 
+# https://w3id.org/eudpp/eto#LabellingReferenceRegulation
+<https://w3id.org/eudpp/eto#LabellingReferenceRegulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LabellingReferenceRegulation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#LabellingReferenceRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#LabellingReferenceRegulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Regulation to which the labelling level of the tire for wet, noise and rolling resist    ance is given" .
+<https://w3id.org/eudpp/eto#LabellingReferenceRegulation> <http://www.w3.org/2000/01/rdf-schema#label> "Labelling Reference Regulation" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndex
+<https://w3id.org/eudpp/eto#LoadIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndex> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#LoadIndex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#LoadIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Load index is a integer number refererenced by the load weight that tyre can carry." .
+<https://w3id.org/eudpp/eto#LoadIndex> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndexAfterRET
+<https://w3id.org/eudpp/eto#LoadIndexAfterRET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndexAfterRET> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#LoadIndexAfterRET> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#LoadIndexAfterRET> <http://www.w3.org/2000/01/rdf-schema#comment> "Load index after Retreading" .
+<https://w3id.org/eudpp/eto#LoadIndexAfterRET> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index After RET" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET
+<https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#LoadIndexAfterRET> .
+<https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET> <http://www.w3.org/2000/01/rdf-schema#comment> "Load index for dual fitment after Retreading" .
+<https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index Dual Fitment After RET" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndexForDualFitment
+<https://w3id.org/eudpp/eto#LoadIndexForDualFitment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndexForDualFitment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#LoadIndex> .
+<https://w3id.org/eudpp/eto#LoadIndexForDualFitment> <http://www.w3.org/2000/01/rdf-schema#comment> "Load index for dual fitment" .
+<https://w3id.org/eudpp/eto#LoadIndexForDualFitment> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index For Dual Fitment" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#LoadIndex> .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "For commercial tyres, speed adjusted load" .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index For Supplementary Service Condition" .
+# 
+# https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#LoadIndex> .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment> <http://www.w3.org/2000/01/rdf-schema#comment> "For commercial tyres, speed adjusted load for dual fitment" .
+<https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment> <http://www.w3.org/2000/01/rdf-schema#label> "Load Index For Supplementary Service Condition Dual Fitment" .
+# 
+# https://w3id.org/eudpp/eto#MudAndSnow
+<https://w3id.org/eudpp/eto#MudAndSnow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#MudAndSnow> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#MudAndSnow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductMarking> .
+<https://w3id.org/eudpp/eto#MudAndSnow> <http://www.w3.org/2000/01/rdf-schema#comment> "Mud and Snow (M+S) marking" .
+<https://w3id.org/eudpp/eto#MudAndSnow> <http://www.w3.org/2000/01/rdf-schema#label> "Mud And Snow" .
+# 
+# https://w3id.org/eudpp/eto#NoiseClass
+<https://w3id.org/eudpp/eto#NoiseClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#NoiseClass> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#NoiseClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#NoiseClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Labelling noise class" .
+<https://w3id.org/eudpp/eto#NoiseClass> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Class" .
+# 
+# https://w3id.org/eudpp/eto#NoisePerformance
+<https://w3id.org/eudpp/eto#NoisePerformance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#NoisePerformance> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#NoisePerformance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#NoisePerformance> <http://www.w3.org/2000/01/rdf-schema#comment> "Labelling noise performance" .
+<https://w3id.org/eudpp/eto#NoisePerformance> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Performance" .
+# 
+# https://w3id.org/eudpp/eto#PlaceOfELTCollection
+<https://w3id.org/eudpp/eto#PlaceOfELTCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#PlaceOfELTCollection> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#PlaceOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#PlaceOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Country of collection (ISO 3166-1 alpha-3) of the used tyre" .
+<https://w3id.org/eudpp/eto#PlaceOfELTCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Place Of ELT Collection" .
+# 
+# https://w3id.org/eudpp/eto#PlaceOfELTRecycling
+<https://w3id.org/eudpp/eto#PlaceOfELTRecycling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#PlaceOfELTRecycling> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#PlaceOfELTRecycling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#PlaceOfELTRecycling> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates to which recycling channel category the used tyre has been sent (Cement , Pyrolisis, etc.)" .
+<https://w3id.org/eudpp/eto#PlaceOfELTRecycling> <http://www.w3.org/2000/01/rdf-schema#label> "Place Of ELT Recycling" .
+# 
+# https://w3id.org/eudpp/eto#ProductLabelling
+<https://w3id.org/eudpp/eto#ProductLabelling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ProductLabelling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ProductLabelling> <http://www.w3.org/2000/01/rdf-schema#comment> "Labelling-related property" .
+<https://w3id.org/eudpp/eto#ProductLabelling> <http://www.w3.org/2000/01/rdf-schema#label> "Product Labelling" .
+# 
+# https://w3id.org/eudpp/eto#ProductMarking
+<https://w3id.org/eudpp/eto#ProductMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ProductMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ProductMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Marking-related property" .
+<https://w3id.org/eudpp/eto#ProductMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Product Marking" .
+# 
+# https://w3id.org/eudpp/eto#ProductSpecification
+<https://w3id.org/eudpp/eto#ProductSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#ProductSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#ProductSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification-related property" .
+<https://w3id.org/eudpp/eto#ProductSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Product Specification" .
+# 
+# https://w3id.org/eudpp/eto#Regrooved
+<https://w3id.org/eudpp/eto#Regrooved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#Regrooved> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Regrooved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#Regrooved> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the tyre has been regrooved according to ECE R54 definition" .
+<https://w3id.org/eudpp/eto#Regrooved> <http://www.w3.org/2000/01/rdf-schema#label> "Regrooved" .
+# 
+# https://w3id.org/eudpp/eto#RegulationsComplianceCode
+<https://w3id.org/eudpp/eto#RegulationsComplianceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceCode> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Code that indicates compliance of tire to specific international legal market requirement based on PRICAT standard" .
+<https://w3id.org/eudpp/eto#RegulationsComplianceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Regulations Compliance Code" .
+# 
+# https://w3id.org/eudpp/eto#RegulationsComplianceMarkings
+<https://w3id.org/eudpp/eto#RegulationsComplianceMarkings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceMarkings> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceMarkings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#RegulationsComplianceMarkings> <http://www.w3.org/2000/01/rdf-schema#comment> "Code description : lists the regulations to which the tire is compliant." .
+<https://w3id.org/eudpp/eto#RegulationsComplianceMarkings> <http://www.w3.org/2000/01/rdf-schema#label> "Regulations Compliance Markings" .
+# 
+# https://w3id.org/eudpp/eto#RemainingTreadDepth
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://si-digital-framework.org/SI#MeasurementUnit> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasMeasurementUnit> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/2000/01/rdf-schema#comment> "In millimeters, the remaining tread depth of the used tyre at the moment of deconstruction" .
+<https://w3id.org/eudpp/eto#RemainingTreadDepth> <http://www.w3.org/2000/01/rdf-schema#label> "Remaining Tread Depth" .
+# 
+# https://w3id.org/eudpp/eto#RetreadingCycle
+<https://w3id.org/eudpp/eto#RetreadingCycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RetreadingCycle> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RetreadingCycle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#RetreadingCycle> <http://www.w3.org/2000/01/rdf-schema#label> "An incremental counter to record the number of retreading operations occurred during the tyre's life - starting with zero" .
+<https://w3id.org/eudpp/eto#RetreadingCycle> <http://www.w3.org/2000/01/rdf-schema#label> "Retreading Cycle" .
+# 
+# https://w3id.org/eudpp/eto#RimCode
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://si-digital-framework.org/SI#MeasurementUnit> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasMeasurementUnit> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Rim diameter in millimeters or inches" .
+<https://w3id.org/eudpp/eto#RimCode> <http://www.w3.org/2000/01/rdf-schema#label> "Rim Code" .
+# 
+# https://w3id.org/eudpp/eto#RollingResistanceClass
+<https://w3id.org/eudpp/eto#RollingResistanceClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#RollingResistanceClass> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#RollingResistanceClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#RollingResistanceClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Labelling rolling resistance class" .
+<https://w3id.org/eudpp/eto#RollingResistanceClass> <http://www.w3.org/2000/01/rdf-schema#label> "Rolling Resistance Class" .
+# 
+# https://w3id.org/eudpp/eto#SVHCPresence
+<https://w3id.org/eudpp/eto#SVHCPresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SVHCPresence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SVHCPresence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#SVHCPresence> <http://www.w3.org/2000/01/rdf-schema#comment> "SVHC designation (ECHA std) and presence % in weight of the article - EU REACH regulation" .
+<https://w3id.org/eudpp/eto#SVHCPresence> <http://www.w3.org/2000/01/rdf-schema#label> "SVHC Presence" .
+# 
+# https://w3id.org/eudpp/eto#Sealant
+<https://w3id.org/eudpp/eto#Sealant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#Sealant> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Sealant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#Sealant> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the tyre is equipped with a puncture sealant" .
+<https://w3id.org/eudpp/eto#Sealant> <http://www.w3.org/2000/01/rdf-schema#label> "Sealant" .
+# 
+# https://w3id.org/eudpp/eto#SectionWidth
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://si-digital-framework.org/SI#MeasurementUnit> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasMeasurementUnit> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal section width of the tyre in millimeters" .
+<https://w3id.org/eudpp/eto#SectionWidth> <http://www.w3.org/2000/01/rdf-schema#label> "Section Width" .
+# 
+# https://w3id.org/eudpp/eto#SectionWidthCode
+<https://w3id.org/eudpp/eto#SectionWidthCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SectionWidthCode> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SectionWidthCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
+<https://w3id.org/eudpp/eto#SectionWidthCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal section width of the tyre defined by a code (CV tyre)" .
+<https://w3id.org/eudpp/eto#SectionWidthCode> <http://www.w3.org/2000/01/rdf-schema#label> "Section Width Code" .
+# 
+# https://w3id.org/eudpp/eto#SizePrefix
+<https://w3id.org/eudpp/eto#SizePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SizePrefix> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SizePrefix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductMarking> .
+<https://w3id.org/eudpp/eto#SizePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)" .
+<https://w3id.org/eudpp/eto#SizePrefix> <http://www.w3.org/2000/01/rdf-schema#label> "Size Prefix" .
+# 
+# https://w3id.org/eudpp/eto#SizeSuffix
+<https://w3id.org/eudpp/eto#SizeSuffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SizeSuffix> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SizeSuffix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductMarking> .
+<https://w3id.org/eudpp/eto#SizeSuffix> <http://www.w3.org/2000/01/rdf-schema#comment> "Part of identification marking for light truck tyres (see G9 - G13 ETRTO Std Manual)" .
+<https://w3id.org/eudpp/eto#SizeSuffix> <http://www.w3.org/2000/01/rdf-schema#label> "Size Suffix" .
+# 
+# https://w3id.org/eudpp/eto#SpeedSymbol
+<https://w3id.org/eudpp/eto#SpeedSymbol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SpeedSymbol> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SpeedSymbol> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#SpeedSymbol> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed symbol" .
+<https://w3id.org/eudpp/eto#SpeedSymbol> <http://www.w3.org/2000/01/rdf-schema#label> "Speed Symbol" .
+# 
+# https://w3id.org/eudpp/eto#SpeedSymbolAfterRET
+<https://w3id.org/eudpp/eto#SpeedSymbolAfterRET> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SpeedSymbolAfterRET> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SpeedSymbolAfterRET> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#SpeedSymbolAfterRET> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed symbol after retreading" .
+<https://w3id.org/eudpp/eto#SpeedSymbolAfterRET> <http://www.w3.org/2000/01/rdf-schema#label> "Speed Symbol After RET" .
+# 
+# https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition
+<https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid47 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#SpeedSymbol> .
+<https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "For commercial tyres, load adjusted speed" .
+<https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Speed Symbol For Supplementary Service Condition" .
+# 
+# https://w3id.org/eudpp/eto#Structure
+<https://w3id.org/eudpp/eto#Structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#Structure> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Structure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#Structure> <http://www.w3.org/2000/01/rdf-schema#comment> "Structure of the tyre. Radial (R) or Bias (B)" .
+<https://w3id.org/eudpp/eto#Structure> <http://www.w3.org/2000/01/rdf-schema#label> "Structure" .
+# 
+# https://w3id.org/eudpp/eto#StructureWordMarking
+<https://w3id.org/eudpp/eto#StructureWordMarking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#StructureWordMarking> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#StructureWordMarking> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#StructureWordMarking> <http://www.w3.org/2000/01/rdf-schema#comment> "Tyre construction word marked on the sidewall" .
+<https://w3id.org/eudpp/eto#StructureWordMarking> <http://www.w3.org/2000/01/rdf-schema#label> "Structure Word Marking" .
+# 
+# https://w3id.org/eudpp/eto#TmsContainerPresence
+<https://w3id.org/eudpp/eto#TmsContainerPresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#TmsContainerPresence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#TmsContainerPresence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#TmsContainerPresence> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a rubber container for the Sensor is present on the tyre updated at each tyre inspection" .
+<https://w3id.org/eudpp/eto#TmsContainerPresence> <http://www.w3.org/2000/01/rdf-schema#label> "Tms Container Presence" .
+# 
+# https://w3id.org/eudpp/eto#TmsSensorPresence
+<https://w3id.org/eudpp/eto#TmsSensorPresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#TmsSensorPresence> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#TmsSensorPresence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp/eto#TmsSensorPresence> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection" .
+<https://w3id.org/eudpp/eto#TmsSensorPresence> <http://www.w3.org/2000/01/rdf-schema#label> "Tms Sensor Presence" .
+# 
+# https://w3id.org/eudpp/eto#TubeCharacteristic
+<https://w3id.org/eudpp/eto#TubeCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#TubeCharacteristic> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#TubeCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductSpecification> .
+<https://w3id.org/eudpp/eto#TubeCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates tubeless or tube type tyres" .
+<https://w3id.org/eudpp/eto#TubeCharacteristic> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Characteristic" .
+# 
+# https://w3id.org/eudpp/eto#Tyre
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/eudpp#Actor> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasManufacturer> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#DOTTINFactoryCode> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#DOTTINWeekYear> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid56 .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#SGTIN> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2000/01/rdf-schema#comment> "Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Dictionary Cambride]" .
+<https://w3id.org/eudpp/eto#Tyre> <http://www.w3.org/2000/01/rdf-schema#label> "Tyre" .
+# 
+# https://w3id.org/eudpp/eto#WetClass
+<https://w3id.org/eudpp/eto#WetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#WetClass> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#WetClass> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductLabelling> .
+<https://w3id.org/eudpp/eto#WetClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Labelling wet class" .
+<https://w3id.org/eudpp/eto#WetClass> <http://www.w3.org/2000/01/rdf-schema#label> "Wet Class" .
+# 
+# https://w3id.org/eudpp/eto#3PMSF
+<https://w3id.org/eudpp/eto#3PMSF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/eto#3PMSF> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid58 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/eto#hasValue> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/eto#3PMSF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/eto#ProductMarking> .
+<https://w3id.org/eudpp/eto#3PMSF> <http://www.w3.org/2000/01/rdf-schema#comment> "3PMSF marking - Indicates tyres designed for use in severe snow conditions." .
+<https://w3id.org/eudpp/eto#3PMSF> <http://www.w3.org/2000/01/rdf-schema#label> "3PMSF" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

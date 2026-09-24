@@ -1,0 +1,1550 @@
+@prefix : <https://w3id.org/eudpp/textile-repairability#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/eudpp/textile-repairability#> .
+
+<https://w3id.org/eudpp/textile-repairability> rdf:type owl:Ontology ;
+                                                owl:versionIRI <https://w3id.org/eudpp/textile-repairability/1.1.2> ;
+                                                owl:imports <https://w3id.org/eudpp/textile-actor-mireot> ,
+                                                            <https://w3id.org/eudpp/textile-assessment> ,
+                                                            <https://w3id.org/eudpp/textile-associated-materials> ,
+                                                            <https://w3id.org/eudpp/textile-connector> ,
+                                                            <https://w3id.org/eudpp/textile-context> ,
+                                                            <https://w3id.org/eudpp/textile-core> ,
+                                                            <https://w3id.org/eudpp/textile-dpp-mireot> ,
+                                                            <https://w3id.org/eudpp/textile-durability> ,
+                                                            <https://w3id.org/eudpp/textile-event-mireot> ,
+                                                            <https://w3id.org/eudpp/textile-process> ;
+                                                <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Repairability Ontology. Version 1.1.2."@en ;
+                                                <http://purl.org/dc/terms/created> "2026-07-01"^^xsd:date ;
+                                                <http://purl.org/dc/terms/creator> "Elio Hbeich"@en ;
+                                                <http://purl.org/dc/terms/description> "Ontology module for textile repairability-related product aspects, services, guidance, design features, contextual conditions, priority elements, assessments, repair-related process specialisations and their links to EU DPP product-event semantics. The module does not define a universal objective repairability score."@en ;
+                                                <http://purl.org/dc/terms/issued> "2026-07-01"^^xsd:date ;
+                                                <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                <http://purl.org/dc/terms/modified> "2026-07-16"^^xsd:date ;
+                                                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                <http://purl.org/dc/terms/title> "EU DPP Textile Repairability Ontology"@en ;
+                                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtrep" ;
+                                                <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-repairability#" ;
+                                                rdfs:comment "The JRC concludes that textile-apparel repairability cannot currently be represented by a simple objective framework. This ontology therefore represents evidence and enabling conditions without inferring that a product is objectively repairable."@en ,
+                                                             "The module reuses the semantic product-event classes defined in the EU DPP EVENT module. Textile-specific life-extension event classes bridge those event semantics with concrete textile process executions; EPCIS technical carriers remain defined by the EVENT module."@en ;
+                                                rdfs:label "EU DPP Textile Repairability Ontology"@en ;
+                                                owl:versionInfo "Version 1.1.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#relatedMatch
+<http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#modellingNote
+<https://w3id.org/eudpp/textile-connector#modellingNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#typicallyContributesTo
+<https://w3id.org/eudpp/textile-connector#typicallyContributesTo> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/eudpp#hasProperty
+<https://w3id.org/eudpp#hasProperty> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-assessment#assessesProduct
+<https://w3id.org/eudpp/textile-assessment#assessesProduct> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasRatingValue
+<https://w3id.org/eudpp/textile-assessment#hasRatingValue> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-process#executesProcessType
+<https://w3id.org/eudpp/textile-process#executesProcessType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-process#hasProcessMethod
+<https://w3id.org/eudpp/textile-process#hasProcessMethod> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-process#producesOutput
+<https://w3id.org/eudpp/textile-process#producesOutput> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-process#usesInput
+<https://w3id.org/eudpp/textile-process#usesInput> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/eudpp/textile-repairability#addressesFailureMode
+:addressesFailureMode rdf:type owl:ObjectProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( <https://w3id.org/eudpp/textile-process#TextileProcessExecution>
+                                                  :PriorityRepairElement
+                                                )
+                                  ] ;
+                      rdfs:range <https://w3id.org/eudpp/textile-durability#FailureMode> ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Relates a concrete repair-related process execution or priority element to a textile failure mode that it addresses."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                      rdfs:label "addresses failure mode"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#assessesRepairabilityOf
+:assessesRepairabilityOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <https://w3id.org/eudpp/textile-assessment#assessesProduct> ;
+                         rdfs:domain :RepairabilityAssessment ;
+                         rdfs:range <https://w3id.org/eudpp/textile-core#TextileApparel> ;
+                         <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                         rdfs:comment "Relates a repairability assessment execution to the textile apparel it assesses."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "assesses repairability of"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#considersProcessType
+:considersProcessType rdf:type owl:ObjectProperty ;
+                      rdfs:domain :RepairabilityAssessment ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( <https://w3id.org/eudpp/textile-process#RepairProcess>
+                                                 :RepairRelatedProcess
+                                               )
+                                 ] ;
+                      <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                      rdfs:comment "Relates a repairability assessment to a repair or other repair-related life-extension process type considered by the assessment."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                      rdfs:label "considers process type"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#considersRepairService
+:considersRepairService rdf:type owl:ObjectProperty ;
+                        rdfs:domain :RepairabilityAssessment ;
+                        rdfs:range :RepairService ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Relates a repairability assessment to a repair service evaluated or considered as evidence."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "considers repair service"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#coversPriorityElementType
+:coversPriorityElementType rdf:type owl:ObjectProperty ;
+                           rdfs:domain :RepairGuidance ;
+                           rdfs:range :PriorityRepairElementTypeConcept ;
+                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                           rdfs:comment "Relates repair guidance to a controlled priority-element type covered by the guidance."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                           rdfs:label "covers priority element type"@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.3.1, printed page 128, lines 3416-3421; Section 9.2.3.3, Table 48, printed page 130, caption at line 3482."@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasDesignFeature
+:hasDesignFeature rdf:type owl:ObjectProperty ;
+                  rdfs:domain :RepairabilityAssessment ;
+                  rdfs:range :RepairabilityDesignFeature ;
+                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                  rdfs:comment "Relates a repairability assessment to a design feature considered in the assessment."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                  rdfs:label "has repairability design feature"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11290; JRC Preparatory Study, Section 9.2.3.1, printed page 127, lines 3362-3375."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasElementType
+:hasElementType rdf:type owl:ObjectProperty ;
+                rdfs:domain :PriorityRepairElement ;
+                rdfs:range :PriorityRepairElementTypeConcept ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Assigns a controlled element type to a priority repair element role."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                rdfs:label "has priority repair element type"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasInteractiveRepairSupport
+:hasInteractiveRepairSupport rdf:type owl:ObjectProperty ;
+                             rdfs:domain :RepairService ;
+                             rdfs:range :InteractiveRepairSupport ;
+                             <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                             rdfs:comment "Relates a repair service to interactive real-time repair support."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                             rdfs:label "has interactive repair support"@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasLifeExtensionInterventionAspect
+:hasLifeExtensionInterventionAspect rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <https://w3id.org/eudpp#hasProperty> ;
+                                    rdfs:domain <https://w3id.org/eudpp/textile-core#TextileApparel> ;
+                                    rdfs:range :LifeExtensionInterventionAspect ;
+                                    <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                    rdfs:comment "Relates textile apparel to a repairability-related product aspect."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                    rdfs:label "has life-extension intervention aspect"@en ;
+                                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasPriorityRepairElement
+:hasPriorityRepairElement rdf:type owl:ObjectProperty ;
+                          rdfs:domain :RepairabilityAssessment ;
+                          rdfs:range :PriorityRepairElement ;
+                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                          rdfs:comment "Relates a repairability assessment to a priority repair element considered in the assessment."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                          rdfs:label "has priority repair element"@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairActionType
+:hasRepairActionType rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <https://w3id.org/eudpp/textile-process#hasProcessMethod> ;
+                     rdfs:domain <https://w3id.org/eudpp/textile-process#TextileProcessExecution> ;
+                     rdfs:range :RepairActionTypeConcept ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Relates a concrete repair process execution to a controlled repair-action method such as patching, mending, button replacement or zipper replacement."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "has repair action type"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairActorType
+:hasRepairActorType rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://w3id.org/eudpp#Actor> ;
+                    rdfs:range :RepairActorTypeConcept ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Classifies a DPP actor by its role or category in textile repair."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                    rdfs:label "has repair actor type"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairCostCondition
+:hasRepairCostCondition rdf:type owl:ObjectProperty ;
+                        rdfs:domain :RepairabilityAssessment ;
+                        rdfs:range :RepairCostCondition ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Relates a repairability assessment to the repair-cost condition considered."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "has repair cost condition"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairCostToNewProductPriceRatio
+:hasRepairCostToNewProductPriceRatio rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :RepairCostCondition ;
+                                     rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                     rdfs:comment "Relates a repair-cost condition to a dimensionless quantitative ratio between repair cost and the price of a comparable new product."@en ;
+                                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                     rdfs:label "has repair cost-to-new-product price ratio"@en ;
+                                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481."@en ;
+                                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairGuidance
+:hasRepairGuidance rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <https://w3id.org/eudpp#hasProperty> ;
+                   rdfs:domain <https://w3id.org/eudpp/textile-core#TextileApparel> ;
+                   rdfs:range :RepairGuidance ;
+                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                   rdfs:comment "Relates textile apparel to repair guidance or repair-support information."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                   rdfs:label "has repair guidance"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairResponseTimeValue
+:hasRepairResponseTimeValue rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RepairService ;
+                            rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Relates a repair service to a quantitative response-time value expressed with an SI time unit."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "has repair response time value"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairService
+:hasRepairService rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://w3id.org/eudpp/textile-core#TextileApparel> ;
+                  rdfs:range :RepairService ;
+                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                  rdfs:comment "Relates textile apparel to a repair service available for the product or product category."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                  rdfs:label "has repair service"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairServiceConfiguration
+:hasRepairServiceConfiguration rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <https://w3id.org/eudpp/textile-assessment#hasRatingValue> ;
+                               rdfs:domain :RepairabilityAssessmentResult ;
+                               rdfs:range :RepairServiceConfigurationConcept ;
+                               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                               rdfs:comment "Relates a repairability assessment result to a BC, BAT or BNAT service-and-guidance configuration from JRC Table 48."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                               rdfs:label "has repair service configuration"@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairabilityAssessment
+:hasRepairabilityAssessment rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :assessesRepairabilityOf ;
+                            rdfs:domain <https://w3id.org/eudpp/textile-core#TextileApparel> ;
+                            rdfs:range :RepairabilityAssessment ;
+                            <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                            rdfs:comment "Relates textile apparel to a repairability assessment execution."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "has repairability assessment"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasSparePartAvailabilityCondition
+:hasSparePartAvailabilityCondition rdf:type owl:ObjectProperty ;
+                                   rdfs:domain :RepairabilityAssessment ;
+                                   rdfs:range :SparePartAvailabilityCondition ;
+                                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                   rdfs:comment "Relates a repairability assessment to a spare-part availability condition."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                   rdfs:label "has spare-part availability condition"@en ;
+                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3399-3408; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11291-11296."@en ;
+                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasUserAcceptanceCondition
+:hasUserAcceptanceCondition rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RepairabilityAssessment ;
+                            rdfs:range :UserAcceptanceCondition ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Relates a repairability assessment to a user-acceptance condition."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "has user acceptance condition"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3419-3428."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasUserAcceptanceStatus
+:hasUserAcceptanceStatus rdf:type owl:ObjectProperty ;
+                         rdfs:domain :UserAcceptanceCondition ;
+                         rdfs:range :UserAcceptanceStatusConcept ;
+                         <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                         rdfs:comment "Relates a user-acceptance condition to a controlled acceptance status recorded in the assessment context."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "has user acceptance status"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#producesNewTextileProduct
+:producesNewTextileProduct rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <https://w3id.org/eudpp/textile-process#producesOutput> ;
+                           rdfs:domain <https://w3id.org/eudpp/textile-process#TextileProcessExecution> ;
+                           rdfs:range <https://w3id.org/eudpp/textile-core#TextileProduct> ;
+                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                           rdfs:comment "Relates a remanufacturing execution to the new textile product it produces."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                           rdfs:label "produces new textile product"@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#providedBy
+:providedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :RepairService ;
+            rdfs:range <https://w3id.org/eudpp#Actor> ;
+            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+            rdfs:comment "Relates a repair service to the actor providing or organising it."@en ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+            rdfs:label "provided by"@en ;
+            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#providesGuidance
+:providesGuidance rdf:type owl:ObjectProperty ;
+                  rdfs:domain :RepairService ;
+                  rdfs:range :RepairGuidance ;
+                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                  rdfs:comment "Relates a repair service to guidance made available through that service."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                  rdfs:label "provides guidance"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#refersToComponent
+:refersToComponent rdf:type owl:ObjectProperty ;
+                   rdfs:domain :PriorityRepairElement ;
+                   rdfs:range <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> ;
+                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                   rdfs:comment "Links a priority repair element role to a concrete non-textile component represented in Textile Associated Materials."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                   rdfs:label "refers to component"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#refersToTextileElement
+:refersToTextileElement rdf:type owl:ObjectProperty ;
+                        rdfs:domain :PriorityRepairElement ;
+                        rdfs:range <https://w3id.org/eudpp/textile-core#TextileProduct> ;
+                        <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                        rdfs:comment "Links a priority repair element role to a textile product used as a component or repairable element, such as a fabric element."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "refers to textile element"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, repair-element role modelling specification."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#supportsProcessType
+:supportsProcessType rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :RepairGuidance
+                                                 :RepairService
+                                               )
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( <https://w3id.org/eudpp/textile-process#RepairProcess>
+                                                :RepairRelatedProcess
+                                              )
+                                ] ;
+                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                     rdfs:comment "Relates a repair service or repair guidance to the maintenance, repair, upgrade, refurbishment or remanufacturing process type it supports."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "supports process type"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#usesRepairBehaviourObservation
+:usesRepairBehaviourObservation rdf:type owl:ObjectProperty ;
+                                rdfs:domain :RepairabilityAssessment ;
+                                rdfs:range <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                rdfs:comment "Relates a repairability assessment to a textile context observation describing repair behaviour. The observation should use txtctx:repairBehaviour as its factor type."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                rdfs:label "uses repair behaviour observation"@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#usesReusableTextileInput
+:usesReusableTextileInput rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <https://w3id.org/eudpp/textile-process#usesInput> ;
+                          rdfs:domain <https://w3id.org/eudpp/textile-process#TextileProcessExecution> ;
+                          rdfs:range <https://w3id.org/eudpp/textile-core#TextileProduct> ;
+                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                          rdfs:comment "Relates a refurbishment or remanufacturing execution to a textile product used as reusable input, including a product used as a component of another product."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                          rdfs:label "uses reusable textile input"@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.10.1.7, printed pages 473-475, lines 11280-11386."@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#usesSpareComponent
+:usesSpareComponent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <https://w3id.org/eudpp/textile-process#usesInput> ;
+                    rdfs:domain <https://w3id.org/eudpp/textile-process#TextileProcessExecution> ;
+                    rdfs:range <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Relates a concrete repair-related process execution to a replacement non-textile component used during the intervention."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                    rdfs:label "uses spare component"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3399-3408; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11291-11296."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/eudpp/textile-repairability#canBeDisassembledWithoutDamage
+:canBeDisassembledWithoutDamage rdf:type owl:DatatypeProperty ;
+                                rdfs:domain :RepairabilityAssessmentResult ;
+                                rdfs:range xsd:boolean ;
+                                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                rdfs:comment "Indicates whether the assessed product or relevant element was found capable of disassembly without damage in the stated assessment context."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                rdfs:label "can be disassembled without damage"@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658."@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#hasRepairPriceTransparency
+:hasRepairPriceTransparency rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :RepairService ;
+                            rdfs:range xsd:boolean ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Indicates whether transparent repair-price or cost information is available for the service."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "has repair price transparency"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#isAvailableInWholeSalesRegion
+:isAvailableInWholeSalesRegion rdf:type owl:DatatypeProperty ;
+                               rdfs:domain :RepairService ;
+                               rdfs:range xsd:boolean ;
+                               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                               rdfs:comment "Indicates whether the repair service is available throughout the region in which the textile product is sold."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                               rdfs:label "is available in whole sales region"@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Actor
+<https://w3id.org/eudpp#Actor> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#DigitalInstruction
+<https://w3id.org/eudpp#DigitalInstruction> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#DocumentFormattedProperty
+<https://w3id.org/eudpp#DocumentFormattedProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#ProductEvent
+<https://w3id.org/eudpp#ProductEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Property
+<https://w3id.org/eudpp#Property> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#RefurbishmentEvent
+<https://w3id.org/eudpp#RefurbishmentEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#RemanufacturingEvent
+<https://w3id.org/eudpp#RemanufacturingEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#RepairEvent
+<https://w3id.org/eudpp#RepairEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#UpgradingEvent
+<https://w3id.org/eudpp#UpgradingEvent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentCondition
+<https://w3id.org/eudpp/textile-assessment#AssessmentCondition> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentElement
+<https://w3id.org/eudpp/textile-assessment#AssessmentElement> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentExecution
+<https://w3id.org/eudpp/textile-assessment#AssessmentExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentResult
+<https://w3id.org/eudpp/textile-assessment#AssessmentResult> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#DurabilityAssessment
+<https://w3id.org/eudpp/textile-assessment#DurabilityAssessment> rdf:type owl:Class ;
+                                                                 owl:disjointWith :RepairabilityAssessment .
+
+
+###  https://w3id.org/eudpp/textile-assessment#RatingValueConcept
+<https://w3id.org/eudpp/textile-assessment#RatingValueConcept> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-connector#QuantitativeValue
+<https://w3id.org/eudpp/textile-connector#QuantitativeValue> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-context#TextileContextObservation
+<https://w3id.org/eudpp/textile-context#TextileContextObservation> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-core#TextileApparel
+<https://w3id.org/eudpp/textile-core#TextileApparel> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-core#TextileProduct
+<https://w3id.org/eudpp/textile-core#TextileProduct> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-durability#FailureMode
+<https://w3id.org/eudpp/textile-durability#FailureMode> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-process#EndOfLifeProcess
+<https://w3id.org/eudpp/textile-process#EndOfLifeProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-process#ProcessMethodConcept
+<https://w3id.org/eudpp/textile-process#ProcessMethodConcept> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-process#RepairProcess
+<https://w3id.org/eudpp/textile-process#RepairProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-process#TextileProcess
+<https://w3id.org/eudpp/textile-process#TextileProcess> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-process#TextileProcessExecution
+<https://w3id.org/eudpp/textile-process#TextileProcessExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-repairability#DigitalRepairGuidance
+:DigitalRepairGuidance rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/eudpp#DigitalInstruction> ,
+                                       :RepairGuidance ;
+                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                       rdfs:comment "Repair guidance provided in digital form and capable of carrying a web link through the DPP digital-instruction pattern."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                       rdfs:label "Digital repair guidance"@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#DisassemblyFeature
+:DisassemblyFeature rdf:type owl:Class ;
+                    rdfs:subClassOf :RepairabilityDesignFeature ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Design feature describing whether a product or relevant element can be taken apart for repair, upgrade, refurbishment or remanufacturing."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                    rdfs:label "Disassembly feature"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#EaseOfDisassembly
+:EaseOfDisassembly rdf:type owl:Class ;
+                   rdfs:subClassOf :DisassemblyFeature ;
+                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                   rdfs:comment "Disassembly feature concerning the ease with which a product or relevant element can be taken apart without damage or excessive effort."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                   rdfs:label "Ease of disassembly"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11283; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11378-11386; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11649-11658."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#InteractiveRepairSupport
+:InteractiveRepairSupport rdf:type owl:Class ;
+                          rdfs:subClassOf :DigitalRepairGuidance ;
+                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                          rdfs:comment "Interactive real-time digital repair guidance, for example through augmented reality, artificial intelligence or another interactive technology."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                          rdfs:label "Interactive repair support"@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#LifeExtensionInterventionAspect
+:LifeExtensionInterventionAspect rdf:type owl:Class ;
+                                 rdfs:subClassOf <https://w3id.org/eudpp#Property> ;
+                                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                 rdfs:comment "Product aspect concerning intervention-based extension or restoration of textile-product use, functionality or value through repair, upgrade, refurbishment or remanufacturing. It is an organising class and not a score."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                 rdfs:label "Life-extension intervention aspect"@en ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#LifeExtensionProductEvent
+:LifeExtensionProductEvent rdf:type owl:Class ;
+                           rdfs:subClassOf <https://w3id.org/eudpp#ProductEvent> ,
+                                           <https://w3id.org/eudpp/textile-process#TextileProcessExecution> ;
+                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ,
+                                                             <https://w3id.org/eudpp/textile-event-mireot> ;
+                           rdfs:comment "A concrete textile process occurrence that is also interpreted as a product lifecycle event intended to extend, restore or substantially change the useful life, functionality or condition of a textile product."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                           rdfs:label "Life-extension product event"@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#ModularityFeature
+:ModularityFeature rdf:type owl:Class ;
+                   rdfs:subClassOf :RepairabilityDesignFeature ;
+                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                   rdfs:comment "Design feature by which relevant product elements are modular, detachable or interchangeable in support of repair or upgrade."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                   rdfs:label "Modularity feature"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#PriorityRepairElement
+:PriorityRepairElement rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/eudpp/textile-assessment#AssessmentElement> ;
+                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                       rdfs:comment "Assessment role assigned to a product element that is important for repairability because of failure frequency or functional relevance. The physical element itself remains represented in the appropriate textile or component module."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                       rdfs:label "Priority repair element"@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#PriorityRepairElementTypeConcept
+:PriorityRepairElementTypeConcept rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                  rdfs:comment "SKOS concept identifying a priority repair element type such as fabric, zipper, button or embellishment."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                  rdfs:label "Priority repair element type concept"@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RefurbishmentPossibility
+:RefurbishmentPossibility rdf:type owl:Class ;
+                          rdfs:subClassOf :LifeExtensionInterventionAspect ;
+                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                          rdfs:comment "Ability of a product or discarded product to be prepared, cleaned, tested, serviced and, where necessary, repaired so that performance or functionality is restored within the originally intended use and performance range."@en ;
+                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                          rdfs:label "Possibility of refurbishment"@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RefurbishmentProcess
+:RefurbishmentProcess rdf:type owl:Class ;
+                      rdfs:subClassOf :RepairRelatedProcess .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RemanufacturingPossibility
+:RemanufacturingPossibility rdf:type owl:Class ;
+                            rdfs:subClassOf :LifeExtensionInterventionAspect ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Possibility of producing a new product from waste objects, products or components through actions involving at least one change that may affect the product performance, purpose or type."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "Possibility of remanufacturing"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RemanufacturingProcess
+:RemanufacturingProcess rdf:type owl:Class ;
+                        rdfs:subClassOf <https://w3id.org/eudpp/textile-process#EndOfLifeProcess> ,
+                                        :RepairRelatedProcess .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairActionTypeConcept
+:RepairActionTypeConcept rdf:type owl:Class ;
+                         rdfs:subClassOf <https://w3id.org/eudpp/textile-process#ProcessMethodConcept> ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Controlled process-method concept identifying a textile repair action such as patching, mending, button replacement or zipper replacement."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "Repair action type concept"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairActorTypeConcept
+:RepairActorTypeConcept rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "SKOS concept used to classify the role or category of an actor participating in textile repair."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "Repair actor type concept"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairCostCondition
+:RepairCostCondition rdf:type owl:Class ;
+                     rdfs:subClassOf :RepairabilityContextCondition ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Economic condition describing repair cost in relation to a comparable new product price and its influence on a repair decision."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "Repair cost condition"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3429-3435; JRC Preparatory Study, Section 9.2.3.3, printed page 129, lines 3477-3481."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairGuidance
+:RepairGuidance rdf:type owl:Class ;
+                rdfs:subClassOf <https://w3id.org/eudpp#DocumentFormattedProperty> ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Information or instructions supporting repair of textile apparel or common damaged elements. Guidance may be physical or digital and is distinct from the repair service and the repair operation."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                rdfs:label "Repair guidance"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairRelatedProcess
+:RepairRelatedProcess rdf:type owl:Class ;
+                      rdfs:subClassOf <https://w3id.org/eudpp/textile-process#TextileProcess> ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Textile process type related to upgrade, refurbishment or remanufacturing and organised with repair under the broader family of life-extension interventions. Concrete operations are represented as txtprc:TextileProcessExecution."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                      rdfs:label "Repair-related life-extension process"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairService
+:RepairService rdf:type owl:Class ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Service that performs, organises or supports textile repair interventions, including company-provided, independent professional and community-supported repair."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+               rdfs:label "Repair service"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationConcept
+:RepairServiceConfigurationConcept rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                   <https://w3id.org/eudpp/textile-assessment#RatingValueConcept> ;
+                                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                   rdfs:comment "SKOS concept representing a BC, BAT or BNAT repair-service and guidance configuration from JRC Table 48."@en ;
+                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                   rdfs:label "Repair service configuration concept"@en ;
+                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#Repairability
+:Repairability rdf:type owl:Class ;
+               rdfs:subClassOf :LifeExtensionInterventionAspect ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Ability of a defective product or waste object to return, through one or more actions, to a condition in which it fulfils its intended use. For textile apparel, user acceptance of restored functionality and potentially changed aesthetics is contextually relevant."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+               rdfs:label "Repairability"@en ;
+               <https://w3id.org/eudpp/textile-connector#modellingNote> "Repair may extend product use, but the outcome depends on failure type, service availability, cost, user acceptance and the effectiveness of the intervention; no deterministic inference is asserted."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11273-11279; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+               <https://w3id.org/eudpp/textile-connector#typicallyContributesTo> <https://w3id.org/eudpp/textile-durability#Durability> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment
+:RepairabilityAssessment rdf:type owl:Class ;
+                         rdfs:subClassOf <https://w3id.org/eudpp/textile-assessment#AssessmentExecution> ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Assessment execution that gathers contextual evidence about repairability-related product aspects, services, guidance, design features, priority elements, costs, spare-part availability and user acceptance. It does not itself constitute the result."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "Repairability assessment"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairabilityAssessmentResult
+:RepairabilityAssessmentResult rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/eudpp/textile-assessment#AssessmentResult> ;
+                               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                               rdfs:comment "Result produced by a repairability assessment. It records the evidence-based outcome and relevant service configuration without asserting a universal objective repairability score."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                               rdfs:label "Repairability assessment result"@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476."@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairabilityContextCondition
+:RepairabilityContextCondition rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/eudpp/textile-assessment#AssessmentCondition> ;
+                               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                               rdfs:comment "Assessment condition external to intrinsic product design that influences repair feasibility or the decision to repair."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                               rdfs:label "Repairability contextual condition"@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476."@en ;
+                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairabilityDesignFeature
+:RepairabilityDesignFeature rdf:type owl:Class ;
+                            rdfs:subClassOf <https://w3id.org/eudpp/textile-assessment#AssessmentElement> ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Design-related feature that may enable repair, upgrade, refurbishment or remanufacturing, such as modularity, standardisation or disassembly."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "Repairability design feature"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11280-11290; JRC Preparatory Study, Section 9.2.3.1, printed page 127, lines 3362-3375."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#SparePartAvailabilityCondition
+:SparePartAvailabilityCondition rdf:type owl:Class ;
+                                rdfs:subClassOf :RepairabilityContextCondition ;
+                                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                rdfs:comment "Condition describing whether a suitable spare component or replacement element is available for a contemplated repair. Availability may depend on collections, styles, colours, logistics and actual expected use."@en ;
+                                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                rdfs:label "Spare-part availability condition"@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3399-3408; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11291-11296."@en ;
+                                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#StandardisationFeature
+:StandardisationFeature rdf:type owl:Class ;
+                        rdfs:subClassOf :RepairabilityDesignFeature ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Design feature by which components or interfaces are standardised in a way that may support replacement, repair or upgrade."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "Standardisation feature"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#TextileRefurbishmentEvent
+:TextileRefurbishmentEvent rdf:type owl:Class ;
+                           rdfs:subClassOf <https://w3id.org/eudpp#RefurbishmentEvent> ,
+                                           :LifeExtensionProductEvent ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <https://w3id.org/eudpp/textile-process#executesProcessType> ;
+                                             owl:hasValue :RefurbishmentProcess
+                                           ] ;
+                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ,
+                                                             <https://w3id.org/eudpp/textile-event-mireot> ;
+                           rdfs:comment "A concrete textile refurbishment occurrence that is both a textile process execution and an instance of the EU DPP RefurbishmentEvent semantics."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                           rdfs:label "Textile refurbishment event"@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#TextileRemanufacturingEvent
+:TextileRemanufacturingEvent rdf:type owl:Class ;
+                             rdfs:subClassOf <https://w3id.org/eudpp#RemanufacturingEvent> ,
+                                             :LifeExtensionProductEvent ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <https://w3id.org/eudpp/textile-process#executesProcessType> ;
+                                               owl:hasValue :RemanufacturingProcess
+                                             ] ;
+                             <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ,
+                                                               <https://w3id.org/eudpp/textile-event-mireot> ;
+                             rdfs:comment "A concrete textile remanufacturing occurrence that is both a textile process execution and an instance of the EU DPP RemanufacturingEvent semantics."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                             rdfs:label "Textile remanufacturing event"@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#TextileRepairEvent
+:TextileRepairEvent rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/eudpp#RepairEvent> ,
+                                    :LifeExtensionProductEvent ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <https://w3id.org/eudpp/textile-process#executesProcessType> ;
+                                      owl:hasValue <https://w3id.org/eudpp/textile-process#RepairProcess>
+                                    ] ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ,
+                                                      <https://w3id.org/eudpp/textile-event-mireot> ;
+                    rdfs:comment "A concrete textile repair occurrence that is both a textile process execution and an instance of the EU DPP RepairEvent semantics."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                    rdfs:label "Textile repair event"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11273-11279; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#TextileUpgradingEvent
+:TextileUpgradingEvent rdf:type owl:Class ;
+                       rdfs:subClassOf <https://w3id.org/eudpp#UpgradingEvent> ,
+                                       :LifeExtensionProductEvent ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <https://w3id.org/eudpp/textile-process#executesProcessType> ;
+                                         owl:hasValue :UpgradeProcess
+                                       ] ;
+                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ,
+                                                         <https://w3id.org/eudpp/textile-event-mireot> ;
+                       rdfs:comment "A concrete textile upgrading occurrence that is both a textile process execution and an instance of the EU DPP UpgradingEvent semantics."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                       rdfs:label "Textile upgrading event"@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.1.3, printed page 108, lines 2816-2831."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#Upgradability
+:Upgradability rdf:type owl:Class ;
+               rdfs:subClassOf :LifeExtensionInterventionAspect ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Ability of a product to be accessible for actions that enhance functionality, performance, capacity, safety or aesthetics."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+               rdfs:label "Upgradability"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.1.2, printed pages 101-102, lines 2722-2728; JRC Preparatory Study, Section 13.10.1.4, printed page 472, lines 11264-11272; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#UpgradeProcess
+:UpgradeProcess rdf:type owl:Class ;
+                rdfs:subClassOf :RepairRelatedProcess .
+
+
+###  https://w3id.org/eudpp/textile-repairability#UserAcceptanceCondition
+:UserAcceptanceCondition rdf:type owl:Class ;
+                         rdfs:subClassOf :RepairabilityContextCondition ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Contextual condition concerning whether a user accepts the restored function and potentially changed aesthetics of the product after repair."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "User acceptance condition"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3419-3428."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusConcept
+:UserAcceptanceStatusConcept rdf:type owl:Class ;
+                             rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                             <https://w3id.org/eudpp/textile-assessment#RatingValueConcept> ;
+                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                             rdfs:comment "Controlled rating-value concept describing the recorded acceptance status of a repaired product in a stated assessment context."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                             rdfs:label "User acceptance status concept"@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/eudpp/textile-process#RepairProcess
+<https://w3id.org/eudpp/textile-process#RepairProcess> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/eudpp/textile-repairability#PriorityRepairElementTypeScheme
+:PriorityRepairElementTypeScheme rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                 rdfs:comment "Controlled scheme for the non-exhaustive priority-element types identified in the JRC repairability analysis."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                 rdfs:label "Priority repair element type scheme"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#hasTopConcept> :buttonRepairElement ,
+                                                                                     :embellishmentRepairElement ,
+                                                                                     :fabricRepairElement ,
+                                                                                     :zipperRepairElement ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Priority repair element type scheme"@en ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RefurbishmentProcess
+:RefurbishmentProcess rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RemanufacturingProcess
+:RemanufacturingProcess rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairActionTypeScheme
+:RepairActionTypeScheme rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Controlled scheme for common repair-action methods explicitly cited in the JRC textile repairability discussion."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "Repair action type scheme"@en ;
+                        <http://www.w3.org/2004/02/skos/core#hasTopConcept> :buttonReplacementAction ,
+                                                                            :mendingAction ,
+                                                                            :patchingAction ,
+                                                                            :zipperReplacementAction ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Repair action type scheme"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairActorTypeScheme
+:RepairActorTypeScheme rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                       rdfs:comment "Controlled scheme for actor types participating in textile repair."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                       rdfs:label "Repair actor type scheme"@en ;
+                       <http://www.w3.org/2004/02/skos/core#hasTopConcept> :companyRepairActor ,
+                                                                           :consumerRepairActor ,
+                                                                           :independentProfessionalRepairer ,
+                                                                           :repairCafeActor ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Repair actor type scheme"@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#RepairServiceConfigurationScheme
+:RepairServiceConfigurationScheme rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                  rdfs:comment "Controlled scheme for the JRC Table 48 BC, BAT and BNAT descriptions of repair-service and guidance configurations."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                  rdfs:label "Repair service configuration scheme"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#hasTopConcept> :repairServiceBAT ,
+                                                                                      :repairServiceBC ,
+                                                                                      :repairServiceBNAT ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Repair service configuration scheme"@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#UpgradeProcess
+:UpgradeProcess rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/eudpp/textile-repairability#UserAcceptanceStatusScheme
+:UserAcceptanceStatusScheme rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                            <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                            rdfs:comment "Controlled scheme for recording whether a repaired product is accepted by the user in the stated assessment context."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "User acceptance status scheme"@en ;
+                            <http://www.w3.org/2004/02/skos/core#hasTopConcept> :userAcceptanceAccepted ,
+                                                                                :userAcceptanceNotAccepted ,
+                                                                                :userAcceptanceUnknown ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "User acceptance status scheme"@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#buttonRepairElement
+:buttonRepairElement rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              :PriorityRepairElementTypeConcept ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Priority repair element type corresponding to a button."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "Button repair element"@en ;
+                     rdfs:seeAlso <https://w3id.org/eudpp/textile-durability#TrimFailure> ;
+                     <http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/eudpp/textile-associated-materials-codelists#button> ;
+                     <http://www.w3.org/2004/02/skos/core#inScheme> :PriorityRepairElementTypeScheme ;
+                     <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ELEMENT_BUTTON" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Button repair element"@en ;
+                     <http://www.w3.org/2004/02/skos/core#topConceptOf> :PriorityRepairElementTypeScheme ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#buttonReplacementAction
+:buttonReplacementAction rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  :RepairActionTypeConcept ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Repair action replacing a missing or damaged button."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "Button replacement"@en ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActionTypeScheme ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTION_BUTTON_REPLACEMENT" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Button replacement"@en ;
+                         <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActionTypeScheme ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#companyRepairActor
+:companyRepairActor rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#Concept> ,
+                             :RepairActorTypeConcept ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Company or brand providing or organising repair services for textile apparel."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                    rdfs:label "Company or brand repair actor"@en ;
+                    <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActorTypeScheme ;
+                    <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTOR_COMPANY" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Company or brand repair actor"@en ;
+                    <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActorTypeScheme ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418; JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3474-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; Table 48, printed page 130, caption line 3482."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#consumerRepairActor
+:consumerRepairActor rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              :RepairActorTypeConcept ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Consumer or user performing self-repair."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "Consumer self-repair actor"@en ;
+                     <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActorTypeScheme ;
+                     <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTOR_CONSUMER" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Consumer self-repair actor"@en ;
+                     <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActorTypeScheme ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#embellishmentRepairElement
+:embellishmentRepairElement rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                     :PriorityRepairElementTypeConcept ;
+                            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                            rdfs:comment "Priority repair element type corresponding to embellishments such as sequins, gems or beads."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                            rdfs:label "Embellishment repair element"@en ;
+                            rdfs:seeAlso <https://w3id.org/eudpp/textile-durability#TrimFailure> ;
+                            <http://www.w3.org/2004/02/skos/core#inScheme> :PriorityRepairElementTypeScheme ;
+                            <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ELEMENT_EMBELLISHMENT" ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Embellishment repair element"@en ;
+                            <http://www.w3.org/2004/02/skos/core#relatedMatch> <https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> ,
+                                                                               <https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> ;
+                            <http://www.w3.org/2004/02/skos/core#topConceptOf> :PriorityRepairElementTypeScheme ;
+                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#fabricRepairElement
+:fabricRepairElement rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              :PriorityRepairElementTypeConcept ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Priority repair element type corresponding to fabric or a fabric area."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "Fabric repair element"@en ;
+                     rdfs:seeAlso <https://w3id.org/eudpp/textile-core#Fabric> ;
+                     <http://www.w3.org/2004/02/skos/core#inScheme> :PriorityRepairElementTypeScheme ;
+                     <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ELEMENT_FABRIC" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Fabric repair element"@en ;
+                     <http://www.w3.org/2004/02/skos/core#topConceptOf> :PriorityRepairElementTypeScheme ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#independentProfessionalRepairer
+:independentProfessionalRepairer rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                          :RepairActorTypeConcept ;
+                                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                 rdfs:comment "Independent professional actor providing paid textile repair services."@en ;
+                                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                                 rdfs:label "Independent professional repairer"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActorTypeScheme ;
+                                 <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTOR_INDEPENDENT_PROFESSIONAL" ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Independent professional repairer"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActorTypeScheme ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#mendingAction
+:mendingAction rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                        :RepairActionTypeConcept ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Repair action involving mending of textile apparel or a fabric area."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+               rdfs:label "Mending"@en ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActionTypeScheme ;
+               <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTION_MENDING" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Mending"@en ;
+               <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActionTypeScheme ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#patchingAction
+:patchingAction rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                         :RepairActionTypeConcept ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Repair action using a patch to restore a damaged fabric area."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                rdfs:label "Patching"@en ;
+                <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActionTypeScheme ;
+                <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTION_PATCHING" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Patching"@en ;
+                <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActionTypeScheme ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.3, printed page 127, lines 3355-3360; Section 9.2.3.1, printed page 128, lines 3416-3421."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#repairCafeActor
+:repairCafeActor rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                          :RepairActorTypeConcept ;
+                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                 rdfs:comment "Community organisation, association or repair café supporting unpaid or assisted repair."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                 rdfs:label "Repair café or community repair actor"@en ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActorTypeScheme ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTOR_REPAIR_CAFE" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Repair café or community repair actor"@en ;
+                 <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActorTypeScheme ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3436-3443."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#repairServiceBAT
+:repairServiceBAT rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                           :RepairServiceConfigurationConcept ;
+                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                  rdfs:comment "Professional repair services are available and transparent; detailed repair guidance covers common damaged elements; company repair service is available throughout the sales region."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                  rdfs:label "Best available repair service configuration"@en ;
+                  <http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/eudpp/textile-connector#bestAvailableTechnologyLevel> ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :RepairServiceConfigurationScheme ;
+                  <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_SERVICE_BAT" ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Best available repair service configuration"@en ;
+                  <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairServiceConfigurationScheme ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#repairServiceBC
+:repairServiceBC rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                          :RepairServiceConfigurationConcept ;
+                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                 rdfs:comment "Professional repair services are available but have long response times, reduced transparency and consumer mistrust; repair support is very limited and company service is available only in parts of the sales region."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                 rdfs:label "Base-case repair service configuration"@en ;
+                 <http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/eudpp/textile-connector#baseCaseTechnologyLevel> ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :RepairServiceConfigurationScheme ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_SERVICE_BC" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Base-case repair service configuration"@en ;
+                 <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairServiceConfigurationScheme ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#repairServiceBNAT
+:repairServiceBNAT rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos/core#Concept> ,
+                            :RepairServiceConfigurationConcept ;
+                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                   rdfs:comment "Interactive real-time repair support is available through augmented reality, artificial intelligence or another technology, and company repair service is available throughout the sales region."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                   rdfs:label "Best not-yet-available repair service configuration"@en ;
+                   <http://www.w3.org/2004/02/skos/core#broadMatch> <https://w3id.org/eudpp/textile-connector#bestNotYetAvailableTechnologyLevel> ;
+                   <http://www.w3.org/2004/02/skos/core#inScheme> :RepairServiceConfigurationScheme ;
+                   <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_SERVICE_BNAT" ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Best not-yet-available repair service configuration"@en ;
+                   <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairServiceConfigurationScheme ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3483; JRC Preparatory Study, Section 9.2.3.3, Table 48, printed page 130; caption line 3482."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#userAcceptanceAccepted
+:userAcceptanceAccepted rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                 :UserAcceptanceStatusConcept ;
+                        <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                        rdfs:comment "The repaired product is accepted by the user in the stated assessment context."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "Accepted by user"@en ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :UserAcceptanceStatusScheme ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "USER_ACCEPTANCE_ACCEPTED" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Accepted by user"@en ;
+                        <http://www.w3.org/2004/02/skos/core#topConceptOf> :UserAcceptanceStatusScheme ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#userAcceptanceNotAccepted
+:userAcceptanceNotAccepted rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :UserAcceptanceStatusConcept ;
+                           <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                           rdfs:comment "The repaired product is not accepted by the user in the stated assessment context."@en ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                           rdfs:label "Not accepted by user"@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :UserAcceptanceStatusScheme ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "USER_ACCEPTANCE_NOT_ACCEPTED" ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Not accepted by user"@en ;
+                           <http://www.w3.org/2004/02/skos/core#topConceptOf> :UserAcceptanceStatusScheme ;
+                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#userAcceptanceUnknown
+:userAcceptanceUnknown rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                :UserAcceptanceStatusConcept ;
+                       <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                       rdfs:comment "User acceptance has not been observed, declared or assessed."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                       rdfs:label "User acceptance unknown"@en ;
+                       <http://www.w3.org/2004/02/skos/core#inScheme> :UserAcceptanceStatusScheme ;
+                       <http://www.w3.org/2004/02/skos/core#notation> "USER_ACCEPTANCE_UNKNOWN" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "User acceptance unknown"@en ;
+                       <http://www.w3.org/2004/02/skos/core#topConceptOf> :UserAcceptanceStatusScheme ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#zipperRepairElement
+:zipperRepairElement rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              :PriorityRepairElementTypeConcept ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Priority repair element type corresponding to a zipper or zip fastener."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                     rdfs:label "Zipper repair element"@en ;
+                     rdfs:seeAlso <https://w3id.org/eudpp/textile-durability#ZipperFailure> ;
+                     <http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> ;
+                     <http://www.w3.org/2004/02/skos/core#inScheme> :PriorityRepairElementTypeScheme ;
+                     <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ELEMENT_ZIPPER" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Zipper repair element"@en ;
+                     <http://www.w3.org/2004/02/skos/core#topConceptOf> :PriorityRepairElementTypeScheme ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.10.1.5, printed page 473, lines 11284-11290; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11381-11385; JRC Preparatory Study, Section 13.10.1.13, printed page 480, lines 11655-11658."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-repairability#zipperReplacementAction
+:zipperReplacementAction rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  :RepairActionTypeConcept ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Repair action replacing a damaged zipper or zip fastener."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                         rdfs:label "Zipper replacement"@en ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :RepairActionTypeScheme ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "REPAIR_ACTION_ZIPPER_REPLACEMENT" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Zipper replacement"@en ;
+                         <http://www.w3.org/2004/02/skos/core#topConceptOf> :RepairActionTypeScheme ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.3, printed page 127, lines 3355-3360; JRC Preparatory Study, Section 9.2.3.1, printed page 128, lines 3416-3418."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:RefurbishmentProcess <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Process involving preparation, cleaning, testing, servicing and, where necessary, repair to restore a textile product within its originally intended use and performance range."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                      rdfs:label "Refurbishment process"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 13.10.1.7, printed page 475, lines 11374-11400; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+:RemanufacturingProcess <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Process producing a new textile product from waste objects, products or components, with at least one change that may affect performance, purpose or type. It is distinct from material recycling."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                        rdfs:label "Remanufacturing process"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 16-17, lines 222-225; JRC Preparatory Study, Section 13.10.1.13, printed pages 480-481, lines 11645-11673; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+:UpgradeProcess <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Textile intervention process intended to enhance the functionality, performance, capacity, safety or aesthetics of a product or component."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-repairability> ;
+                rdfs:label "Upgrade process"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed pages 15-16, lines 218-222; JRC Preparatory Study, Section 9.1.2, printed pages 101-102, lines 2722-2728; JRC Preparatory Study, Section 13.10.1.4, printed page 472, lines 11264-11272; JRC Preparatory Study, relevant section, Table 2, printed page 15; caption line 219."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

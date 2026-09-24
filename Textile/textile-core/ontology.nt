@@ -1,0 +1,1143 @@
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-core/1.1.2> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Core Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/description> "Ontology module for representing core textile product data relevant to EU Digital Product Passports, including textile product classes, textile apparel scope concepts, fibre composition structures, and controlled SKOS vocabularies for textile apparel product types and fibre types aligned with the JRC preparatory study on textiles."@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/title> "EU DPP Textile Core Ontology"@en .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txt" .
+<https://w3id.org/eudpp/textile-core> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-core#" .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "Fibre, yarn and fabric are modelled as textile products. When one product is intended to be incorporated into another, dpp:isComponentOf expresses the component role; the ontology does not create a separate intermediate-product class."@en .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "Named fibre types and textile apparel product categories are represented as SKOS concepts because they are controlled classification values rather than product subclasses."@en .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "Product types such as medical-device, PPE or toy textile apparel remain textile apparel by product nature but are annotated as excluded from the JRC preparatory study scope where appropriate."@en .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#comment> "These notations are stable local identifiers intended to support data exchange, mapping and validation."@en .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Core Ontology"@en .
+<https://w3id.org/eudpp/textile-core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#modellingNote
+<https://w3id.org/eudpp/textile-connector#modellingNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property used on product-type classes to document their default status with respect to a study or regulatory modelling scope."@en .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#label> "default study scope status"@en .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#modellingNote> "This is an annotation-level modelling aid for product types. Instance-level scope status, if needed, should be represented with a data validation pattern or a dedicated object property in a context module."@en .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#jrcExclusionReason
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation specifying the reason why a textile product class or category is excluded from the JRC preparatory study scope."@en .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://www.w3.org/2000/01/rdf-schema#label> "JRC exclusion reason"@en .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+<https://w3id.org/eudpp/textile-core#jrcExclusionReason> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/eudpp/textile-core#jrcScopeCondition
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation specifying a textual condition governing inclusion of a textile product class or category in the JRC preparatory study scope."@en .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#label> "JRC scope condition"@en .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+<https://w3id.org/eudpp/textile-core#jrcScopeCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-core#hasFibreComponent
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to a textile fibre type concept that is part of its composition."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has fibre component"@en .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> "Non-quantitative relation indicating that a textile product contains a given textile fibre type. This property is useful when the presence of a fibre type is known but its quantitative share is not represented."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreComponent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to a structured fibre composition component."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has fibre composition component"@en .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> "No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> "Preferred relation for representing the declared fibre composition of a textile product, including the fibre type and its quantitative share."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasFibreMassFraction
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+<https://w3id.org/eudpp/textile-connector#QuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a fibre composition component to the mass fraction of that fibre in the textile product."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#label> "has fibre mass fraction"@en .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <https://w3id.org/eudpp/textile-connector#modellingNote> "Values use a 0-1 mass-fraction scale and the dimensionless SI unit units:one. Cardinality, range and sum rules will be defined in SHACL."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreMassFraction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasFibreType
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a fibre composition component to the textile fibre type concept it describes."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#label> "has fibre type"@en .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasFibreType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to the mass fraction represented by non-textile materials."@en .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <http://www.w3.org/2000/01/rdf-schema#label> "has non-textile material mass fraction"@en .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <https://w3id.org/eudpp/textile-connector#modellingNote> "Values use a 0-1 mass-fraction scale and the dimensionless SI unit units:one. Cardinality, range and sum rules will be defined in SHACL."@en .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasNonTextileMaterialMassFraction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasStudyScopeStatus
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product instance to a controlled study scope status concept."@en .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has study scope status"@en .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-core#hasStudyScopeStatus> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasTextileApparelProductType
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileApparel> .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile apparel product to a controlled textile apparel product type concept."@en .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <http://www.w3.org/2000/01/rdf-schema#label> "has textile apparel product type"@en .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-core#hasTextileApparelProductType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a product to the total mass fraction represented by textile fibres."@en .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <http://www.w3.org/2000/01/rdf-schema#label> "has textile fibre mass fraction"@en .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <https://w3id.org/eudpp/textile-connector#modellingNote> "Values use a 0-1 mass-fraction scale and the dimensionless SI unit units:one. Cardinality, range and sum rules will be defined in SHACL."@en .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#hasTextileFibreMassFraction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp#MaterialOfComposition
+<https://w3id.org/eudpp#MaterialOfComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp#Product
+# 
+# https://w3id.org/eudpp/textile-connector#QuantitativeValue
+# 
+# https://w3id.org/eudpp/textile-core#ElectronicTextile
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile-based system that exhibits an intended and exploitable response to changes in its surroundings or to an external signal or input."@en .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic textile"@en .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <http://www.w3.org/2004/02/skos/core#altLabel> "E-textile"@en .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-477."@en .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#ElectronicTextile> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because electronic textiles are very different from textile apparel in terms of function and physical characteristics."@en .
+# 
+# https://w3id.org/eudpp/textile-core#Fabric
+<https://w3id.org/eudpp/textile-core#Fabric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#Fabric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#Fabric> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#Fabric> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile product made from yarns, fibres or filaments and intended to be incorporated into another textile product or used in further manufacturing."@en .
+<https://w3id.org/eudpp/textile-core#Fabric> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#Fabric> <http://www.w3.org/2000/01/rdf-schema#label> "Fabric"@en .
+<https://w3id.org/eudpp/textile-core#Fabric> <https://w3id.org/eudpp/textile-connector#modellingNote> "Fabric is modelled as a textile product. When a fabric is incorporated into another product, the instance-level relation dpp:isComponentOf expresses that role; no separate intermediate-product class is required."@en .
+<https://w3id.org/eudpp/textile-core#Fabric> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 486-492; JRC Preparatory Study, Section 3.3.1, printed page 27, lines 536-546."@en .
+<https://w3id.org/eudpp/textile-core#Fabric> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#FibreCompositionComponent
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialOfComposition> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/textile-core#hasFibreMassFraction> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp/textile-core#hasFibreType> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured component of a textile product fibre composition, specifying a fibre type and its quantitative share in the product."@en .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre composition component"@en .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 2, printed page 14, lines 161-166; JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535; JRC Preparatory Study, Section 4.1, printed page 33, lines 703-709."@en .
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#FibreTypeConcept
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "SKOS concept used as a controlled value for textile fibre type in a fibre composition."@en .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre type concept"@en .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileApparel> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel identified as a medical device or as an accessory for a medical device in accordance with Regulation (EU) 2017/745."@en .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <http://www.w3.org/2000/01/rdf-schema#label> "Medical device textile apparel"@en .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-481."@en .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#MedicalDeviceTextileApparel> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because textile apparel identified as a medical device or as an accessory for a medical device is outside the selected scope."@en .
+# 
+# https://w3id.org/eudpp/textile-core#PPETextileApparel
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileApparel> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel identified as personal protective equipment in accordance with Regulation (EU) 2016/425."@en .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/2000/01/rdf-schema#label> "PPE textile apparel"@en .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <http://www.w3.org/2004/02/skos/core#altLabel> "Personal protective equipment textile apparel"@en .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-479."@en .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#PPETextileApparel> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because textile apparel identified as personal protective equipment is outside the selected scope."@en .
+# 
+# https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Reusable textile absorbent hygiene product considered a technical textile and excluded from scope."@en .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable textile absorbent hygiene product"@en .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 495-506; JRC Preparatory Study, relevant section, printed page 19, lines 275-279; JRC Preparatory Study, relevant section, Table 3, printed page 19; caption line 275."@en .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#ReusableTextileAbsorbentHygieneProduct> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because reusable textile absorbent hygiene products perform a different function from textile apparel and are considered technical textiles."@en .
+# 
+# https://w3id.org/eudpp/textile-core#SmartTextile
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile able to sense and react to environmental conditions or external stimuli through incorporated sensors or responsive components."@en .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <http://www.w3.org/2000/01/rdf-schema#label> "Smart textile"@en .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-474."@en .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#SmartTextile> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because smart textiles are very different from textile apparel in terms of function and physical characteristics."@en .
+# 
+# https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "SKOS concept used to indicate whether a textile product type is included in, excluded from, or otherwise qualified with respect to a study or regulatory modelling scope."@en .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Study scope status concept"@en .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#TextileApparel
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile products that aim to cover the body with everything except footwear, including clothing and clothing accessories worn to clothe, adorn, shield, provide comfort, or express identity and belonging."@en .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <http://www.w3.org/2000/01/rdf-schema#label> "Textile apparel"@en .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <https://w3id.org/eudpp/textile-connector#modellingNote> "TextileApparel is a final textile product category for apparel and apparel accessories. The supplied EU DPP Core snapshot does not declare a separate FinalProduct class, so final-product status remains a local textile distinction under dpp:Product. It is narrower than TextileProduct and should not be confused with the whole textile product domain."@en .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed page 14, lines 167-170; JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#TextileApparel> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> .
+# 
+# https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "SKOS concept used as a controlled value for classifying textile apparel product types."@en .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Textile apparel product type concept"@en .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#TextileCleaningProduct
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile cleaning product considered a technical textile and excluded from scope because its function differs from apparel."@en .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Textile cleaning product"@en .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 495-505; JRC Preparatory Study, relevant section, printed page 19, lines 275-279; JRC Preparatory Study, relevant section, Table 3, printed page 19; caption line 275."@en .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#TextileCleaningProduct> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because textile cleaning products perform a different function from textile apparel and are considered technical textiles."@en .
+# 
+# https://w3id.org/eudpp/textile-core#TextileFibre
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit of matter characterised by flexibility, fineness and a high ratio of length to maximum transverse dimension, suitable for textile applications."@en .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Textile fibre"@en .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <https://w3id.org/eudpp/textile-connector#modellingNote> "TextileFibre is modelled as a textile product when it is represented as an identifiable fibre batch or traceability object. Its incorporation into yarn, fabric or another product is represented with dpp:isComponentOf."@en .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed page 14, lines 154-160."@en .
+<https://w3id.org/eudpp/textile-core#TextileFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-core#TextileProduct
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Any raw, semi-worked, worked, semi-manufactured, manufactured, semi-made-up or made-up product which is exclusively composed of textile fibres, as well as a product containing at least 80% textile fibres by weight."@en .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Textile product"@en .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <https://w3id.org/eudpp/textile-connector#modellingNote> "TextileProduct is the broad textile product class. It includes final products and products serving an intermediate or component role when they are represented as product-like traceability resources. Identification constraints should be specified by SHACL according to product granularity rather than imposed uniformly on every TextileProduct."@en .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, relevant section, printed page 14, lines 161-166."@en .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-core#ToyTextileApparel
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileApparel> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel identified as a toy in accordance with Directive 2009/48/EC."@en .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <http://www.w3.org/2000/01/rdf-schema#label> "Toy textile apparel"@en .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-482."@en .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <https://w3id.org/eudpp/textile-core#defaultStudyScopeStatus> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-core#ToyTextileApparel> <https://w3id.org/eudpp/textile-core#jrcExclusionReason> "Excluded because textile apparel identified as a toy is outside the selected scope."@en .
+# 
+# https://w3id.org/eudpp/textile-core#Yarn
+<https://w3id.org/eudpp/textile-core#Yarn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-core#Yarn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#Yarn> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-core#Yarn> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile product consisting of fibres assembled into a continuous strand and intended to be incorporated into fabric or another textile product."@en .
+<https://w3id.org/eudpp/textile-core#Yarn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-core#Yarn> <http://www.w3.org/2000/01/rdf-schema#label> "Yarn"@en .
+<https://w3id.org/eudpp/textile-core#Yarn> <https://w3id.org/eudpp/textile-connector#modellingNote> "Yarn is modelled as a textile product. Its role as an input or component of a fabric or another product is represented with dpp:isComponentOf."@en .
+<https://w3id.org/eudpp/textile-core#Yarn> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.2, printed page 25, lines 486-492; JRC Preparatory Study, Section 3.3.1, printed page 27, lines 536-546."@en .
+<https://w3id.org/eudpp/textile-core#Yarn> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-codelists#FibreTypeScheme
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary of textile fibre types used to describe textile fibre composition."@en .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Textile fibre type scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#chemicalFibre> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile fibre type scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary for representing the status of a textile product type with respect to the JRC preparatory study scope."@en .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Study scope status scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Study scope status scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary representing the textile apparel categories of JRC Table 7. The JRC categories are aligned with the PEFCR Apparel and Footwear work but this scheme does not claim identity with the complete PEFCR segmentation."@en .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Textile apparel product type scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#jacketOrCoat> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#pantsOrShorts> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#swimwear> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#tShirt> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#underwear> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-codelists#workwear> .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile apparel product type scheme"@en .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <https://w3id.org/eudpp/textile-connector#modellingNote> "A single textile product-type scheme is retained to avoid duplicating JRC and PEFCR classifications. External PEFCR identifiers may be mapped when a stable authoritative classification is selected."@en .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-codelists#acetate
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2000/01/rdf-schema#label> "Acetate"@en .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_ACETATE" .
+<https://w3id.org/eudpp/textile-codelists#acetate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acetate"@en .
+<https://w3id.org/eudpp/textile-codelists#acetate> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#acetate> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#acrylic
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2000/01/rdf-schema#label> "Acrylic"@en .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_ACRYLIC" .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acrylic"@en .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#acrylic> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#animalOriginFibre
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural-origin textile fibre category that includes wool, silk and hair."@en .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Animal origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#hair> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#silk> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#wool> .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_ANIMAL_ORIGIN" .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Animal origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#animalOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#belt
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2000/01/rdf-schema#comment> "Flexible band or strap worn around the waist or over the shoulders, used to secure or hold up clothing such as pants."@en .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2000/01/rdf-schema#label> "Belt"@en .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2004/02/skos/core#notation> "ACCESSORY_BELT" .
+<https://w3id.org/eudpp/textile-codelists#belt> <http://www.w3.org/2004/02/skos/core#prefLabel> "Belt"@en .
+<https://w3id.org/eudpp/textile-codelists#belt> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#belt> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#chemicalFibre
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made textile fibre category that includes man-made cellulosic fibres and synthetic polymer fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Chemical fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_CHEMICAL" .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chemical fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#chemicalFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#cotton
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2000/01/rdf-schema#comment> "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2000/01/rdf-schema#label> "Cotton"@en .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_COTTON" .
+<https://w3id.org/eudpp/textile-codelists#cotton> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cotton"@en .
+<https://w3id.org/eudpp/textile-codelists#cotton> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#cotton> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#cupro
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2000/01/rdf-schema#label> "Cupro"@en .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_CUPRO" .
+<https://w3id.org/eudpp/textile-codelists#cupro> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cupro"@en .
+<https://w3id.org/eudpp/textile-codelists#cupro> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#cupro> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2000/01/rdf-schema#comment> "One-piece garment covering the upper and lower body, or the lower body only, other than pants and shorts."@en .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2000/01/rdf-schema#label> "Dresses, skirts and jumpsuits"@en .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_DRESS_SKIRT_JUMPSUIT" .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dresses, skirts and jumpsuits"@en .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-codelists#dressSkirtOrJumpsuit> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#elastane
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2000/01/rdf-schema#label> "Elastane"@en .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_ELASTANE" .
+<https://w3id.org/eudpp/textile-codelists#elastane> <http://www.w3.org/2004/02/skos/core#prefLabel> "Elastane"@en .
+<https://w3id.org/eudpp/textile-codelists#elastane> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#elastane> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Study scope status indicating that the textile product type is excluded from the JRC preparatory study scope without implying that it is not a textile product."@en .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#label> "Excluded from JRC preparatory study scope"@en .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#prefLabel> "Excluded from JRC preparatory study scope"@en .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-codelists#excludedFromJRCPreparatoryStudyScope> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-codelists#flax
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2000/01/rdf-schema#comment> "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2000/01/rdf-schema#label> "Flax"@en .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_FLAX" .
+<https://w3id.org/eudpp/textile-codelists#flax> <http://www.w3.org/2004/02/skos/core#prefLabel> "Flax"@en .
+<https://w3id.org/eudpp/textile-codelists#flax> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#flax> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#gloveOrMitten
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2000/01/rdf-schema#comment> "Article of clothing used in pairs to protect hands and wrists from the elements or as a fashion item."@en .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2000/01/rdf-schema#label> "Glove or mitten"@en .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2004/02/skos/core#altLabel> "Gloves and mittens"@en .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2004/02/skos/core#notation> "ACCESSORY_GLOVE_MITTEN" .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <http://www.w3.org/2004/02/skos/core#prefLabel> "Glove or mitten"@en .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#gloveOrMitten> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#hair
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2000/01/rdf-schema#label> "Hair"@en .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#animalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_HAIR" .
+<https://w3id.org/eudpp/textile-codelists#hair> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hair"@en .
+<https://w3id.org/eudpp/textile-codelists#hair> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#hair> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#hat
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel accessory used to cover the head for warmth or as a fashion item, including caps, flat caps, woollen hats, beanies, fedoras, panamas, bowlers, newsboys and berets."@en .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2000/01/rdf-schema#label> "Hat"@en .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2004/02/skos/core#notation> "ACCESSORY_HAT" .
+<https://w3id.org/eudpp/textile-codelists#hat> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hat"@en .
+<https://w3id.org/eudpp/textile-codelists#hat> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-codelists#hat> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#StudyScopeStatusConcept> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Study scope status indicating that the textile product type is included in the JRC preparatory study scope."@en .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2000/01/rdf-schema#label> "Included in JRC preparatory study scope"@en .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#prefLabel> "Included in JRC preparatory study scope"@en .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#StudyScopeStatusScheme> .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 443-468; JRC Preparatory Study, Section 3.2.2, printed pages 25-26, lines 469-506."@en .
+<https://w3id.org/eudpp/textile-codelists#includedInJRCPreparatoryStudyScope> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-codelists#jacketOrCoat
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2000/01/rdf-schema#comment> "Garments worn on top of a shirt or sweater or intended to protect from natural elements, including blazers, suit jackets, overcoats, rain jackets, parkas and anoraks."@en .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2000/01/rdf-schema#label> "Jackets and coats"@en .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_JACKET_COAT" .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2004/02/skos/core#prefLabel> "Jackets and coats"@en .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#jacketOrCoat> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#jute
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2000/01/rdf-schema#comment> "A vegetable-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2000/01/rdf-schema#label> "Jute"@en .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_JUTE" .
+<https://w3id.org/eudpp/textile-codelists#jute> <http://www.w3.org/2004/02/skos/core#prefLabel> "Jute"@en .
+<https://w3id.org/eudpp/textile-codelists#jute> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#jute> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2000/01/rdf-schema#comment> "Tight garment to cover the legs and/or feet."@en .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2000/01/rdf-schema#label> "Leggings, stockings, tights and socks"@en .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_LEGGING_STOCKING_TIGHT_SOCK" .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2004/02/skos/core#prefLabel> "Leggings, stockings, tights and socks"@en .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#leggingStockingTightOrSock> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#lyocell
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2000/01/rdf-schema#label> "Lyocell"@en .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_LYOCELL" .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lyocell"@en .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#lyocell> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre category that includes viscose, cupro, lyocell, acetate and triacetate."@en .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Man-made cellulosic fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#chemicalFibre> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#acetate> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#cupro> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#lyocell> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#triacetate> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#viscose> .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_MAN_MADE_CELLULOSIC" .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Man-made cellulosic fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#naturalOriginFibre
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A textile fibre category of natural origin."@en .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Natural origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#animalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_NATURAL_ORIGIN" .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Natural origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2000/01/rdf-schema#comment> "Workwear included in the JRC preparatory study scope when it is not classified as personal protective equipment."@en .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2000/01/rdf-schema#label> "Non-PPE workwear"@en .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#workwear> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_NON_PPE_WORKWEAR" .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-PPE workwear"@en .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 455-468; JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-482."@en .
+<https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#pantsOrShorts
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment to cover the lower body, including casual pants, jeans, sports pants, dress pants and shorts."@en .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2000/01/rdf-schema#label> "Pants and shorts"@en .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_PANTS_SHORTS" .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pants and shorts"@en .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#pantsOrShorts> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#polyamide
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2000/01/rdf-schema#label> "Polyamide"@en .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_POLYAMIDE" .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polyamide"@en .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#polyamide> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#polyester
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2000/01/rdf-schema#label> "Polyester"@en .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_POLYESTER" .
+<https://w3id.org/eudpp/textile-codelists#polyester> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polyester"@en .
+<https://w3id.org/eudpp/textile-codelists#polyester> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#polyester> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#polypropylene
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2000/01/rdf-schema#label> "Polypropylene"@en .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_POLYPROPYLENE" .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polypropylene"@en .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#polypropylene> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#scarfOrTie
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel accessory worn around the neck for warmth or as a fashion item, including warm and light scarves, buffs, neckerchiefs, headscarves, shawls, bowties and ties."@en .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2000/01/rdf-schema#label> "Scarf or tie"@en .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2004/02/skos/core#altLabel> "Scarves and ties"@en .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2004/02/skos/core#notation> "ACCESSORY_SCARF_TIE" .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <http://www.w3.org/2004/02/skos/core#prefLabel> "Scarf or tie"@en .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#scarfOrTie> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#shirtOrBlouse
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment to cover the upper body including the entire arm, including long-sleeved shirts, blouses and base layers."@en .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2000/01/rdf-schema#label> "Shirts and blouses"@en .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_SHIRT_BLOUSE" .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2004/02/skos/core#prefLabel> "Shirts and blouses"@en .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#shirtOrBlouse> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#silk
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2000/01/rdf-schema#label> "Silk"@en .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#animalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_SILK" .
+<https://w3id.org/eudpp/textile-codelists#silk> <http://www.w3.org/2004/02/skos/core#prefLabel> "Silk"@en .
+<https://w3id.org/eudpp/textile-codelists#silk> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#silk> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment to keep the upper body warm and covered, including pullovers, cardigans, hoodies, jerseys, sweatshirts and sweaters."@en .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2000/01/rdf-schema#label> "Sweaters, pullovers and mid-layers"@en .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2004/02/skos/core#altLabel> "Sweaters and mid-layers"@en .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_SWEATER_MID_LAYER" .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sweaters, pullovers and mid-layers"@en .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#sweaterOrMidLayer> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#swimwear
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment worn for water-based or sun-based activities, including bikinis, bathing suits, racing-style swimwear and board shorts."@en .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2000/01/rdf-schema#label> "Swimwear"@en .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_SWIMWEAR" .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2004/02/skos/core#prefLabel> "Swimwear"@en .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#swimwear> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A synthetic polymer fibre category that includes polyester, polyamide, acrylic, polypropylene and elastane."@en .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Synthetic polymer fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#chemicalFibre> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#acrylic> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#elastane> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#polyamide> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#polyester> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#polypropylene> .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_SYNTHETIC_POLYMER" .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Synthetic polymer fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#syntheticPolymerFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#tShirt
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment to cover the upper body to the elbow, including singlets, vests, T-shirts, polo shirts and other short-sleeved shirts."@en .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2000/01/rdf-schema#label> "T-shirts and tops"@en .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2004/02/skos/core#altLabel> "T-shirts"@en .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_TSHIRT_TOP" .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2004/02/skos/core#prefLabel> "T-shirts and tops"@en .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#tShirt> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#textileApparelAccessory
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled product-type concept corresponding to the textile apparel accessories category in JRC Table 7, including hats, scarves and ties, belts, gloves and mittens."@en .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2000/01/rdf-schema#label> "Textile apparel accessory"@en .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#belt> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#gloveOrMitten> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#hat> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#scarfOrTie> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_ACCESSORY" .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile apparel accessory"@en .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed page 24, lines 443-456; JRC Preparatory Study, Section 3.2.1, Table 7, printed page 24; caption line 450."@en .
+<https://w3id.org/eudpp/textile-codelists#textileApparelAccessory> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#triacetate
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2000/01/rdf-schema#label> "Triacetate"@en .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_TRIACETATE" .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Triacetate"@en .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#triacetate> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#underwear
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2000/01/rdf-schema#comment> "Garment worn under clothes, often next to the skin of the upper or lower body, including boxers, briefs, panties, bras and body-shaping suits."@en .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2000/01/rdf-schema#label> "Underwear"@en .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_UNDERWEAR" .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2004/02/skos/core#prefLabel> "Underwear"@en .
+<https://w3id.org/eudpp/textile-codelists#underwear> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#underwear> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.2.1, Table 7, printed page 24; table caption at line 455."@en .
+<https://w3id.org/eudpp/textile-codelists#underwear> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural-origin textile fibre category that includes cotton, flax and jute."@en .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetable origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#naturalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#cotton> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#flax> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#jute> .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_VEGETABLE_ORIGIN" .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vegetable origin fibre"@en .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#vegetableOriginFibre> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#viscose
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2000/01/rdf-schema#comment> "A man-made cellulosic fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2000/01/rdf-schema#label> "Viscose"@en .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#manMadeCellulosicFibre> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_VISCOSE" .
+<https://w3id.org/eudpp/textile-codelists#viscose> <http://www.w3.org/2004/02/skos/core#prefLabel> "Viscose"@en .
+<https://w3id.org/eudpp/textile-codelists#viscose> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#viscose> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#wool
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#FibreTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2000/01/rdf-schema#comment> "An animal-origin textile fibre listed in the JRC classification of commonly used textile fibres."@en .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2000/01/rdf-schema#label> "Wool"@en .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-codelists#animalOriginFibre> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#FibreTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2004/02/skos/core#notation> "FIBRE_WOOL" .
+<https://w3id.org/eudpp/textile-codelists#wool> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wool"@en .
+<https://w3id.org/eudpp/textile-codelists#wool> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed page 26, lines 522-535."@en .
+<https://w3id.org/eudpp/textile-codelists#wool> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-codelists#workwear
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-core#TextileApparelProductTypeConcept> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile apparel designed or used for professional or occupational contexts."@en .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2000/01/rdf-schema#label> "Workwear"@en .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-codelists#nonPPEWorkwear> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2004/02/skos/core#notation> "APPAREL_WORKWEAR" .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2004/02/skos/core#prefLabel> "Workwear"@en .
+<https://w3id.org/eudpp/textile-codelists#workwear> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-codelists#TextileApparelProductTypeScheme> .
+<https://w3id.org/eudpp/textile-codelists#workwear> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.2.1, printed pages 24-25, lines 455-468; JRC Preparatory Study, Section 3.2.2, printed page 25, lines 469-482."@en .
+<https://w3id.org/eudpp/textile-codelists#workwear> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

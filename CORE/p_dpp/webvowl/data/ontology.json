@@ -1,0 +1,2229 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://si-digital-framework.org/SI", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/eudpp" ],
+    "title" : {
+      "en" : "The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."
+    },
+    "iri" : "https://w3id.org/eudpp/P_DPP",
+    "version" : "2.0.7",
+    "author" : [ "Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors." ],
+    "description" : {
+      "en" : "The EU DPP core ontology proposed in CIRPASS-2 European project  is a shared formal specification of basic concepts and properties/relationships in the cross-sectorial DPP domain to facilitate knowledge sharing across sector-specific DPPs.\n\nThe proposed  EU DPP core ontology captures several modules from which the Product and DPP module plays a central role.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, ACTOR, SOC.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., & Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342\n\n"
+    },
+    "labels" : {
+      "en" : "EU DPP CO P_DPP"
+    },
+    "comments" : {
+      "en" : "The Product and DPP module of an EU DPP core ontology proposed by the CIRPASS-2 European project."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors.",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Tarmo Robal",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Riina Maigre",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Theodor Chirvasuta",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-01-29",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "dpp",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.0.7",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "https://doi.org/10.5281/zenodo.15270342",
+        "type" : "iri"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-09-22",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "73",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/eudpp#Length",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Length",
+      "en" : "Length"
+    },
+    "comment" : {
+      "en" : "Length of the product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#PackagingWasteAmount",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PackagingWasteAmount",
+      "en" : "Packaging waste amount"
+    },
+    "comment" : {
+      "en" : "Packaging waste amount of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#ProductDimension",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProductDimension",
+      "en" : "Product dimension"
+    },
+    "subClasses" : [ "10", "6", "11", "12", "13" ],
+    "comment" : {
+      "en" : "Dimension class covers measurements of length, width, height, volume, and weight of the product required by\nESPR Annex I in its product parameters"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#QuantitativeProperty",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QuantitativeProperty",
+      "en" : "Quantitative Property"
+    },
+    "subClasses" : [ "15", "16", "17", "18", "19", "4", "7", "20", "9", "21" ],
+    "comment" : {
+      "en" : "A property (respectively measurand of a property) of the product (model) that is expressed by a quantity value. A specific quantity."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#DocumentFormattedProperty",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DocumentFormattedProperty",
+      "en" : "Document"
+    },
+    "subClasses" : [ "23" ],
+    "comment" : {
+      "en" : "The document class describes the semantic representation of any instance of a document that might be required to be included into a digital product passport instance."
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#HazardousWasteAmount",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HazardousWasteAmount",
+      "en" : "Hazardous waste amount"
+    },
+    "comment" : {
+      "en" : "Hazardous waste amount of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#RecycledMaterialsUse",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecycledMaterialsUse",
+      "en" : "Recycled materials use"
+    },
+    "comment" : {
+      "en" : "Recycled materials use of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Height",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Height",
+      "en" : "Height"
+    },
+    "comment" : {
+      "en" : "Height of the product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#CircularEconomyIndicator",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://environment.ec.europa.eu/strategy/circular-economy-action-plan_en",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CircularEconomyIndicator",
+      "en" : "Circular Economy Indicator"
+    },
+    "subClasses" : [ "59", "60", "61" ],
+    "comment" : {
+      "en" : "Circular Economy indicators are measures for relevant monitoring the transition to a circular economy and to measure the effects of new policy and trends.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#MaterialFootprint",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (26)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MaterialFootprint",
+      "en" : "Material footprint"
+    },
+    "comment" : {
+      "en" : "Material footprint\nrefers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "62",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#PlasticsWasteAmount",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlasticsWasteAmount",
+      "en" : "Plastics waste amount"
+    },
+    "comment" : {
+      "en" : "Hazardous waste amount of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#SustainableRenewableMaterialsUse",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SustainableRenewableMaterialsUse",
+      "en" : "Sustainable renewable materials use"
+    },
+    "comment" : {
+      "en" : "Sustainable renewable materials use of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "63",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#RecyclingRate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecyclingRate",
+      "en" : "Recycling rate"
+    },
+    "comment" : {
+      "en" : "This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "61",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#CarbonFootprint",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (25)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CarbonFootprint",
+      "en" : "Carbon footprint"
+    },
+    "comment" : {
+      "en" : "Carbon footprint\nmeans the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category\nof climate change. (ESPR Art 2 25))\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#DigitalInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 27(7)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DigitalInstruction",
+      "en" : "DigitalInstruction"
+    },
+    "comment" : {
+      "en" : "Digital instructions\nmean instructions in digital format concerning the product (‘digital instructions’) in a language that can be easily understood. ESPR Art 27(7)\nDigital instructions are ensured by manufacturers. These should also ensured by importers. (ESPR Art 29(4))\n\nThis class can be extended/specialised according to delegated acts or industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EmissionToWater",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EmissionToWater",
+      "en" : "Emission to water"
+    },
+    "comment" : {
+      "en" : "Product parameters are listed in the ESPR Annex I :\n\n(q) emissions to air, water or soil released in one or more lifecycle stages of the product as expressed through quantities and nature of emissions, including noise.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "67",
+    "superClasses" : [ "68" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#DPP",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (28)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DPP",
+      "en" : "Digital Product Passport (DPP)"
+    },
+    "comment" : {
+      "en" : "Digital Product Passport (DPP) means a set of data specific to a product that includes the information specified in the applicable\ndelegated act adopted pursuant to Article 4 and that is accessible via electronic means through a data carrier in accordance with Chapter III. (ESPR Art 2 (28))"
+    },
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/eudpp#WaterConsumption",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WaterConsumption",
+      "en" : "Water consumption"
+    },
+    "comment" : {
+      "en" : "Water consumption of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "66",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 7(5)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConcentrationOfSubstanceOfConcern",
+      "en" : "Concentration of the substance of concern"
+    },
+    "comment" : {
+      "en" : "The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EnergyConsumption",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnergyConsumption",
+      "en" : "Energy consumption"
+    },
+    "comment" : {
+      "en" : "Energy consumption of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "73",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#ClassificationCode",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassificationCode",
+      "en" : "ClassificationCode"
+    },
+    "comment" : {
+      "en" : "A classification code from some product classification scheme ."
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR FAQ 10.115, p59",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ThresholdOfSubstanceOfConcern",
+      "en" : "Threshold of substance of concern"
+    },
+    "comment" : {
+      "en" : "Relevant threshold of Substance of Concern.\n\nBy default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Volume",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Volume",
+      "en" : "Volume"
+    },
+    "comment" : {
+      "en" : "Volume of the product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#MicroplasticRelease",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MicroplasticRelease",
+      "en" : "Microplastic release"
+    },
+    "comment" : {
+      "en" : "Product parameters as listed in the ESPR Annex I :\n\n(p) microplastic and nano plastic release as expressed through the release during relevant\nproduct life cycle stages, including manufacturing, transport, use and end of life stages;\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "107",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Reliability",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (16)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Reliability",
+      "en" : "Reliability"
+    },
+    "comment" : {
+      "en" : "Reliability\nmeans the probability that a product functions as required under given conditions for a given\nduration without an occurrence which results in a primary or secondary function of the product no\nlonger being performed. (ESPR Art 2 (16))\n\nReliability is usually expressed in terms of mean time between failures (MTBF), which is the average length of time that a device will operate without failure.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "82",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#QualityIndicator",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "QualityIndicator",
+      "en" : "Quality indicator"
+    },
+    "subClasses" : [ "88", "82" ],
+    "comment" : {
+      "en" : "Product characteristics like durability and reliability.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "16",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EnvironmentalPollution",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.britannica.com/science/pollution-environment",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalPollution",
+      "en" : "Environmental pollution"
+    },
+    "subClasses" : [ "68", "75" ],
+    "comment" : {
+      "en" : "Environmental pollution is the addition of any substance or form of energy to the environment at a rate faster than it can be dispersed or safely stored.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "18",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#RecyclingCollectionRate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecyclingCollectionRate",
+      "en" : "Recycling collection rate"
+    },
+    "comment" : {
+      "en" : "This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://si-digital-framework.org/SI#MeasurementUnit",
+    "baseIri" : "https://si-digital-framework.org/SI",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeasurementUnit",
+      "en" : "Unit of measurement"
+    },
+    "comment" : {
+      "en" : "Measurement unit defining the magnitude of the quantity in respect to the value.\nsi:MeasurementUnit class is reused"
+    },
+    "attributes" : [ "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/eudpp#ResourceConsumption",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceConsumption",
+      "en" : "Resource consumption"
+    },
+    "subClasses" : [ "73", "40", "78", "63", "66" ],
+    "comment" : {
+      "en" : "Resource consumption of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EnvironmentalFootprint",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (24)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalFootprint",
+      "en" : "Environmental footprint"
+    },
+    "subClasses" : [ "64", "62" ],
+    "comment" : {
+      "en" : "Environmental footprint\nmeans a quantification of the environmental impacts resulting from a product throughout its life\ncycle, whether in relation to a single environmental impact category or an aggregated set of impact\ncategories based on the Product Environmental Footprint method established by Recommendation\n(EU) 2 021/2279 or other scientific methods developed by international organisations, widely tested\nin collaboration with different industry sectors and adopted or implemented by the Commission in\nother Union law. (ESPR Art 2 (24)).\n\nProduct parameters list ESPR Annex I\n(m) The environmental footprint of the product, expressed as a quantification;\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#RecoverableRate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecoverableRate",
+      "en" : "Recoverable rate"
+    },
+    "comment" : {
+      "en" : "This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#LandUse",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LandUse",
+      "en" : "Land use"
+    },
+    "comment" : {
+      "en" : "Land use of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "78",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#Weight",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Weight",
+      "en" : "Weight"
+    },
+    "comment" : {
+      "en" : "Weight of the product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#WasteGenerationAmount",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WasteGenerationAmount",
+      "en" : "Waste generation amount"
+    },
+    "subClasses" : [ "39", "8", "57" ],
+    "comment" : {
+      "en" : "Waste generation amount of the product.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "112",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "110",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#ProductToPackagingRatio",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ProductToPackagingRatio",
+      "en" : "Product to packaging ratio"
+    },
+    "comment" : {
+      "en" : "ESPR Annex I, the list of product parameters includes the parameter called the  product to packaging ratio.\n\nHowever, it is not specified in ESPR  whether that ratio is defined on the basis of weight or on the basis of volume.\n\n**This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.**"
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EmissionToSoil",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EmissionToSoil",
+      "en" : "Emission to soil"
+    },
+    "comment" : {
+      "en" : "Product parameters are listed in the ESPR Annex I :\n\n(q) emissions to air, water or soil released in one or more lifecycle stages of the product as expressed through quantities and nature of emissions, including noise.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "117",
+    "superClasses" : [ "68" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#PlasticsRelease",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PlasticsRelease",
+      "en" : "Plastic release"
+    },
+    "subClasses" : [ "121", "107" ],
+    "comment" : {
+      "en" : "Product parameters as listed in the ESPR Annex I :\n\n(p) microplastic and nano plastic release as expressed through the release during relevant\nproduct life cycle stages, including manufacturing, transport, use and end of life stages;\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#NanoplasticRelease",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NanoplasticRelease",
+      "en" : "Nanoplastic release"
+    },
+    "comment" : {
+      "en" : "Product parameters as listed in the ESPR Annex I :\n\n(p) microplastic and nano plastic release as expressed through the release during relevant\nproduct life cycle stages, including manufacturing, transport, use and end of life stages;\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "121",
+    "superClasses" : [ "75" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EnvironmentalEmission",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://dictionary.cambridge.org/dictionary/english/emission",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EnvironmentalEmission",
+      "en" : "Environmental emission"
+    },
+    "subClasses" : [ "124", "67", "117" ],
+    "comment" : {
+      "en" : "Emission is the act or amount of sending out gas, heat, light, etc. It can also refer to harmful substances that are released into the environment, especially carbon dioxide.\n\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "68",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#EmissionToAir",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EmissionToAir",
+      "en" : "Emission to air"
+    },
+    "comment" : {
+      "en" : "Product parameters are listed in the ESPR Annex I :\n\n(q) emissions to air, water or soil released in one or more lifecycle stages of the product as expressed through quantities and nature of emissions, including noise.\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "124",
+    "superClasses" : [ "68" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Product",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (1)",
+        "type" : "label"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "schema:Product",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Product",
+      "en" : "Product"
+    },
+    "comment" : {
+      "en" : "Product means any physical goods that are placed on the market or put into service. ESPR Art 2 (1))"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/eudpp#Durability",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (22)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Durability",
+      "en" : "Durability"
+    },
+    "comment" : {
+      "en" : "Durability\nmeans the ability of a product to maintain over time its function and performance under specified conditions of use, maintenance and repair. (ESPR Art 2 (22))\n\nThis class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."
+    },
+    "attributes" : [ "external" ],
+    "id" : "88",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Property",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Property",
+      "en" : "Property"
+    },
+    "subClasses" : [ "5", "22" ],
+    "comment" : {
+      "en" : "A property of the product."
+    },
+    "attributes" : [ "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/eudpp#Width",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Width",
+      "en" : "Width"
+    },
+    "comment" : {
+      "en" : "Width of the product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "7" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "119",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/eudpp#commodityCode",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "2",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex III (d)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "commodityCode",
+      "en" : "commodity code"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relevant commodity codes, such as a TARIC code as defined in Council Regulation (EEC) No 2658/87.[ESPR Annex III (d)]"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "3"
+  }, {
+    "range" : "5",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "24"
+  }, {
+    "range" : "5",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/eudpp#linkToPreviousDPP",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "28",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 11 (d)",
+        "type" : "label"
+      }, {
+        "identifier" : "references",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "linkToPreviousDPP",
+      "en" : "link to previous DPP"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "Where a new digital product passport is created for a product that already has a digital product passport, the new digital product passport shall be linked to the original digital product passport or passports. (ESPR Art 11 (d))"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasProductGroup",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "30",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (4)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProductGroup",
+      "en" : "has product group"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Product group\nmeans a set of products that serve similar purposes and are similar in terms of use, or have similar\nfunctional properties, and are similar in terms of consumer perception (ESPR Art 2 (4)). The product\ngroup or groups covered are given by delegated acts. (ESPR Art 8 (a))\n\nThis will be probably a classification code from some product classification scheme ."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "29"
+  }, {
+    "range" : "5",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "7",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "32"
+  }, {
+    "range" : "5",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "5",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "7",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "7",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "7",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasDPP",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasDPP",
+      "en" : "has DPP"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A Product has a DPP. The property links a Product with a DPP."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/eudpp#webLink",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "webLink",
+      "en" : "weblink"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Web link to an instruction document or video etc."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/eudpp#productImage",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "productImage",
+      "en" : "product image"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An image of the product."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "44"
+  }, {
+    "range" : "9",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "9",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "20",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "20",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "range" : "17",
+    "domain" : "62",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "70"
+  }, {
+    "range" : "17",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "71"
+  }, {
+    "range" : "20",
+    "domain" : "73",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "18",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/eudpp#isSparePartOf",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "1",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Annex I",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSparePartOf",
+      "en" : "is spare part of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A product is a spare part of another product."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "76"
+  }, {
+    "range" : "20",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "77"
+  }, {
+    "range" : "20",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "18",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "16",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/eudpp#description",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "description"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Product description"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/eudpp#productName",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "productName",
+      "en" : "product name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Product name"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/eudpp#value",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "value related to the document"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Contains the data of the value encapsulated in the Document.\n\nValue is xsd:string that is formatted as a URL,  where to fetch the file."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "86"
+  }, {
+    "range" : "16",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "19",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "22",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "19",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "19",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/eudpp#contentType",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "contentType",
+      "en" : "content type"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Content type of a document. Can be only “application” or “pdf”."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "93"
+  }, {
+    "range" : "5",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "94"
+  }, {
+    "range" : "5",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/eudpp#dictionaryReference",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "dictionaryReference",
+      "en" : "dictionary reference"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "The reference to the unique identifier of the data point specification defined in the repository/data dictionary.\n\nIt is formatted as a URI/URL ."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "96"
+  }, {
+    "range" : "5",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
+  }, {
+    "range" : "5",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/eudpp#isEnergyRelated",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "101",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2 (4)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isEnergyRelated",
+      "en" : "is energy related Product"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Energy related product\nmeans any product that has an impact on energy consumption during use. (ESPR Art 2 (4)).\n\nThe boolean data type property indicates is a Product energy related or not?"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://w3id.org/eudpp#codeSet",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "103",
+    "label" : {
+      "IRI-based" : "codeSet",
+      "en" : "classification code set"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "The product classification code set.\n\nSee also Produc hasProductGroup ClassificationCode documentation."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "105",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit",
+      "en" : "has measurement unit"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Linking quantitative property to the unit of measurement."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/eudpp#validUntil",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "validUntil",
+      "en" : "valid until"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The date and timestamp that the DPP is valid until."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/eudpp#manufacturingDate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "manufacturingDate",
+      "en" : "manufacturing date"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Date of manufacture of the product. \n\nThe range of the data property is intentionally left open to be specified in accordance of sectorial needs."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/eudpp#codeValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "110",
+    "label" : {
+      "IRI-based" : "codeValue",
+      "en" : "classification code value"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Classification code value from the Classification code set."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/eudpp#lastUpdate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "112",
+    "label" : {
+      "IRI-based" : "lastUpdate",
+      "en" : "last update"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The date and time of the latest update to the DPP instance."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/eudpp#isComponentOf",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "1",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 2(2)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isComponentOf",
+      "en" : "is component of"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A product is a component of another product.\n\n‘component’ means a product intended to be incorporated into another product; [ESPR Art 2(2)]"
+    },
+    "attributes" : [ "transitive", "object", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/eudpp#appliesToProduct",
+    "inverse" : "41",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "appliesToProduct",
+      "en" : "applies to product"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The property links DPP and the Product."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "114"
+  }, {
+    "range" : "14",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "115"
+  }, {
+    "range" : "68",
+    "domain" : "117",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "116"
+  }, {
+    "range" : "14",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "75",
+    "domain" : "107",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "range" : "75",
+    "domain" : "121",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "120"
+  }, {
+    "range" : "68",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "range" : "68",
+    "domain" : "124",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/eudpp#granularity",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "51",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Art 9 (2) d",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "granularity",
+      "en" : "granularity"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "ESPR Art 9 (2) d  declares that the digital product passport is to be established at model, batch or item level, and the definition of such levels (is determined by delegated acts (DA));\n\nThe product passport should be defined at the level of item, batch or product model, depending on specific needs and complexity of the value chain, the size, nature or impacts of the products considered. (Standardisation Request 5423 7)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/eudpp#validFrom",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "validFrom",
+      "en" : "valid from"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The date and timestamp that the DPP is valid from."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/eudpp#tolerance",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "tolerance",
+      "en" : "tolerance"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Engineering tolerance is the permissible variation in measurements deriving from the base measurement.\nTolerances can apply to many different units."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/eudpp#numericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "126",
+    "label" : {
+      "IRI-based" : "numericalValue",
+      "en" : "numerical value"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "The numerical value of the quantity, i.e., quantitative property of the product."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasProperty",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Product has a property that could be a document or some measurable properties (measurands).\n\nLinking the product to the property."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/eudpp#dppStatus",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "dppStatus",
+      "en" : "DPP status"
+    },
+    "domain" : "27",
+    "comment" : {
+      "en" : "The status of the DPP instance as digital resource."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "131"
+  } ]
+}

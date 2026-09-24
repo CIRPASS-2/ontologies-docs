@@ -1,0 +1,2652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>EU DPP Textile Durability Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/textile-durability#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/textile-durability#","name":"EU DPP Textile Durability Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/textile-durability#", "dateReleased":"2026-03-06", "dateModified":"2026-07-16", "version":"Version 1.1.2", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Elio Hbeich"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>EU DPP Textile Durability Ontology</h1>
+<h2>Release: 2026-03-06</h2>
+
+
+<dl>
+<dt>Modified on: 2026-07-16</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/eudpp/textile-durability/1.1.2">https://w3id.org/eudpp/textile-durability/1.1.2</a></dd>
+<dt>Revision:</dt>
+<dd>Version 1.1.2</dd>
+<dt>Issued on:</dt>
+<dd>2026-03-06</dd>
+<dt>Authors:</dt>
+<dd>Elio Hbeich</dd>
+
+<dt>Source:</dt>
+<dd><a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="CC BY 4.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>EU DPP Textile Durability Ontology. Version 1.1.2.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">EU DPP Textile Durability Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AbrasionResistance"
+         title="https://w3id.org/eudpp/textile-durability#AbrasionResistance">Abrasion resistance</a>
+   </li>
+   <li>
+      <a href="#AccidentalDamage"
+         title="https://w3id.org/eudpp/textile-durability#AccidentalDamage">Accidental damage</a>
+   </li>
+   <li>
+      <a href="#AssemblyPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter">Assembly performance parameter</a>
+   </li>
+   <li>
+      <a href="#ColourDepthEvenness"
+         title="https://w3id.org/eudpp/textile-durability#ColourDepthEvenness">Colour depth and evenness</a>
+   </li>
+   <li>
+      <a href="#ColourFading"
+         title="https://w3id.org/eudpp/textile-durability#ColourFading">Colour fading</a>
+   </li>
+   <li>
+      <a href="#ColourFastness"
+         title="https://w3id.org/eudpp/textile-durability#ColourFastness">Colour fastness</a>
+   </li>
+   <li>
+      <a href="#ComponentFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#ComponentFailureMode">Component failure mode</a>
+   </li>
+   <li>
+      <a href="#DeformationPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter">Deformation performance parameter</a>
+   </li>
+   <li>
+      <a href="#DimensionalStability"
+         title="https://w3id.org/eudpp/textile-durability#DimensionalStability">Dimensional stability</a>
+   </li>
+   <li>
+      <a href="#Discolouration"
+         title="https://w3id.org/eudpp/textile-durability#Discolouration">Discolouration</a>
+   </li>
+   <li>
+      <a href="#Durability"
+         title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a>
+   </li>
+   <li>
+      <a href="#ElasticityLoss"
+         title="https://w3id.org/eudpp/textile-durability#ElasticityLoss">Elasticity loss</a>
+   </li>
+   <li>
+      <a href="#ExternalDamage"
+         title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a>
+   </li>
+   <li>
+      <a href="#FabricBreakdown"
+         title="https://w3id.org/eudpp/textile-durability#FabricBreakdown">Fabric breakdown</a>
+   </li>
+   <li>
+      <a href="#FabricSmoothness"
+         title="https://w3id.org/eudpp/textile-durability#FabricSmoothness">Fabric smoothness</a>
+   </li>
+   <li>
+      <a href="#FabricStrength"
+         title="https://w3id.org/eudpp/textile-durability#FabricStrength">Fabric strength</a>
+   </li>
+   <li>
+      <a href="#FailureMode"
+         title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a>
+   </li>
+   <li>
+      <a href="#FunctionalFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#FunctionalFailureMode">Functional failure mode</a>
+   </li>
+   <li>
+      <a href="#FuzzingOrMatting"
+         title="https://w3id.org/eudpp/textile-durability#FuzzingOrMatting">Fuzzing or matting</a>
+   </li>
+   <li>
+      <a href="#HoleInSeam"
+         title="https://w3id.org/eudpp/textile-durability#HoleInSeam">Hole in seam</a>
+   </li>
+   <li>
+      <a href="#IntrinsicDurability"
+         title="https://w3id.org/eudpp/textile-durability#IntrinsicDurability">Intrinsic durability</a>
+   </li>
+   <li>
+      <a href="#LogoFailure"
+         title="https://w3id.org/eudpp/textile-durability#LogoFailure">Logo failure</a>
+   </li>
+   <li>
+      <a href="#LossOfComfort"
+         title="https://w3id.org/eudpp/textile-durability#LossOfComfort">Loss of comfort</a>
+   </li>
+   <li>
+      <a href="#LossOfDimensionalStability"
+         title="https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability">Loss of dimensional stability</a>
+   </li>
+   <li>
+      <a href="#MechanicalFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#MechanicalFailureMode">Mechanical failure mode</a>
+   </li>
+   <li>
+      <a href="#MechanicalPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter">Mechanical performance parameter</a>
+   </li>
+   <li>
+      <a href="#ObservedDegradationPhenomenon"
+         title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a>
+   </li>
+   <li>
+      <a href="#ObservedPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a>
+   </li>
+   <li>
+      <a href="#Pilling"
+         title="https://w3id.org/eudpp/textile-durability#Pilling">Pilling</a>
+   </li>
+   <li>
+      <a href="#PillingResistance"
+         title="https://w3id.org/eudpp/textile-durability#PillingResistance">Pilling resistance</a>
+   </li>
+   <li>
+      <a href="#ProductAgeing"
+         title="https://w3id.org/eudpp/textile-durability#ProductAgeing">Product ageing</a>
+   </li>
+   <li>
+      <a href="#RadiationInducedDegradation"
+         title="https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation">Radiation-induced degradation</a>
+   </li>
+   <li>
+      <a href="#RoughOrStiffFabric"
+         title="https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric">Rough or stiff fabric</a>
+   </li>
+   <li>
+      <a href="#SeamFailure"
+         title="https://w3id.org/eudpp/textile-durability#SeamFailure">Seam failure</a>
+   </li>
+   <li>
+      <a href="#SeamSlippage"
+         title="https://w3id.org/eudpp/textile-durability#SeamSlippage">Seam slippage</a>
+   </li>
+   <li>
+      <a href="#StructuralFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a>
+   </li>
+   <li>
+      <a href="#SurfaceDegradationPhenomenon"
+         title="https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon">Surface degradation phenomenon</a>
+   </li>
+   <li>
+      <a href="#SurfaceFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#SurfaceFailureMode">Surface failure mode</a>
+   </li>
+   <li>
+      <a href="#SurfacePerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter">Surface performance parameter</a>
+   </li>
+   <li>
+      <a href="#TactileFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#TactileFailureMode">Tactile failure mode</a>
+   </li>
+   <li>
+      <a href="#TearOrRip"
+         title="https://w3id.org/eudpp/textile-durability#TearOrRip">Tear or rip</a>
+   </li>
+   <li>
+      <a href="#TrimFailure"
+         title="https://w3id.org/eudpp/textile-durability#TrimFailure">Trim failure</a>
+   </li>
+   <li>
+      <a href="#VisualFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a>
+   </li>
+   <li>
+      <a href="#VisualPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a>
+   </li>
+   <li>
+      <a href="#Wrinkling"
+         title="https://w3id.org/eudpp/textile-durability#Wrinkling">Wrinkling</a>
+   </li>
+   <li>
+      <a href="#ZipperFailure"
+         title="https://w3id.org/eudpp/textile-durability#ZipperFailure">Zipper failure</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasDegradationExpression"
+         title="https://w3id.org/eudpp/textile-durability#hasDegradationExpression">has degradation expression</a>
+   </li>
+   <li>
+      <a href="#hasDurabilityAspect"
+         title="https://w3id.org/eudpp/textile-durability#hasDurabilityAspect">has durability aspect</a>
+   </li>
+   <li>
+      <a href="#hasExternalDamage"
+         title="https://w3id.org/eudpp/textile-durability#hasExternalDamage">has external damage</a>
+   </li>
+   <li>
+      <a href="#hasFailureExpression"
+         title="https://w3id.org/eudpp/textile-durability#hasFailureExpression">has failure expression</a>
+   </li>
+   <li>
+      <a href="#hasFailureMode"
+         title="https://w3id.org/eudpp/textile-durability#hasFailureMode">has failure mode</a>
+   </li>
+   <li>
+      <a href="#hasObservedDegradationPhenomenon"
+         title="https://w3id.org/eudpp/textile-durability#hasObservedDegradationPhenomenon">has observed degradation phenomenon</a>
+   </li>
+   <li>
+      <a href="#hasObservedPerformanceParameter"
+         title="https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter">has observed performance parameter</a>
+   </li>
+   <li>
+      <a href="#mayResultIn"
+         title="https://w3id.org/eudpp/textile-durability#mayResultIn">may result in</a>
+   </li>
+   <li>
+      <a href="#negativelyAffects"
+         title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
+         <span>alt Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#evidenceStatus"
+         title="https://w3id.org/eudpp/textile-connector#evidenceStatus">
+         <span>evidence Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#modellingNote"
+         title="https://w3id.org/eudpp/textile-connector#modellingNote">
+         <span>modelling Note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceLocator"
+         title="https://w3id.org/eudpp/textile-connector#sourceLocator">
+         <span>source Locator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceType"
+         title="https://w3id.org/eudpp/textile-connector#sourceType">
+         <span>source Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#typicalDegradationExpression"
+         title="https://w3id.org/eudpp/textile-durability#typicalDegradationExpression">typical degradation expression</a>
+   </li>
+   <li>
+      <a href="#typicalFailureExpression"
+         title="https://w3id.org/eudpp/textile-durability#typicalFailureExpression">typical failure expression</a>
+   </li>
+   <li>
+      <a href="#typicalProgressionTo"
+         title="https://w3id.org/eudpp/textile-durability#typicalProgressionTo">typical progression to</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf"
+         title="https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf">
+         <span>typically Increases Likelihood Of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf"
+         title="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf">
+         <span>typically Reduces Likelihood Of</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">EU DPP Textile Durability Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This module represents durability constructs, observed performance parameter types and failure mode types as OWL classes. It intentionally does not introduce SKOS codelists for these concepts in the core ontology.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for EU DPP Textile Durability Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EU DPP Textile Durability Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AbrasionResistance" title="https://w3id.org/eudpp/textile-durability#AbrasionResistance">Abrasion resistance</a></li>
+  <li><a href="#AccidentalDamage" title="https://w3id.org/eudpp/textile-durability#AccidentalDamage">Accidental damage</a></li>
+  <li><a href="#AssemblyPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter">Assembly performance parameter</a></li>
+  <li><a href="#ColourDepthEvenness" title="https://w3id.org/eudpp/textile-durability#ColourDepthEvenness">Colour depth and evenness</a></li>
+  <li><a href="#ColourFading" title="https://w3id.org/eudpp/textile-durability#ColourFading">Colour fading</a></li>
+  <li><a href="#ColourFastness" title="https://w3id.org/eudpp/textile-durability#ColourFastness">Colour fastness</a></li>
+  <li><a href="#ComponentFailureMode" title="https://w3id.org/eudpp/textile-durability#ComponentFailureMode">Component failure mode</a></li>
+  <li><a href="#DeformationPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter">Deformation performance parameter</a></li>
+  <li><a href="#DimensionalStability" title="https://w3id.org/eudpp/textile-durability#DimensionalStability">Dimensional stability</a></li>
+  <li><a href="#Discolouration" title="https://w3id.org/eudpp/textile-durability#Discolouration">Discolouration</a></li>
+  <li><a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a></li>
+  <li><a href="#ElasticityLoss" title="https://w3id.org/eudpp/textile-durability#ElasticityLoss">Elasticity loss</a></li>
+  <li><a href="#ExternalDamage" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a></li>
+  <li><a href="#FabricBreakdown" title="https://w3id.org/eudpp/textile-durability#FabricBreakdown">Fabric breakdown</a></li>
+  <li><a href="#FabricSmoothness" title="https://w3id.org/eudpp/textile-durability#FabricSmoothness">Fabric smoothness</a></li>
+  <li><a href="#FabricStrength" title="https://w3id.org/eudpp/textile-durability#FabricStrength">Fabric strength</a></li>
+  <li><a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a></li>
+  <li><a href="#FunctionalFailureMode" title="https://w3id.org/eudpp/textile-durability#FunctionalFailureMode">Functional failure mode</a></li>
+  <li><a href="#FuzzingOrMatting" title="https://w3id.org/eudpp/textile-durability#FuzzingOrMatting">Fuzzing or matting</a></li>
+  <li><a href="#HoleInSeam" title="https://w3id.org/eudpp/textile-durability#HoleInSeam">Hole in seam</a></li>
+  <li><a href="#IntrinsicDurability" title="https://w3id.org/eudpp/textile-durability#IntrinsicDurability">Intrinsic durability</a></li>
+  <li><a href="#LogoFailure" title="https://w3id.org/eudpp/textile-durability#LogoFailure">Logo failure</a></li>
+  <li><a href="#LossOfComfort" title="https://w3id.org/eudpp/textile-durability#LossOfComfort">Loss of comfort</a></li>
+  <li><a href="#LossOfDimensionalStability" title="https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability">Loss of dimensional stability</a></li>
+  <li><a href="#MechanicalFailureMode" title="https://w3id.org/eudpp/textile-durability#MechanicalFailureMode">Mechanical failure mode</a></li>
+  <li><a href="#MechanicalPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter">Mechanical performance parameter</a></li>
+  <li><a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a></li>
+  <li><a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a></li>
+  <li><a href="#Pilling" title="https://w3id.org/eudpp/textile-durability#Pilling">Pilling</a></li>
+  <li><a href="#PillingResistance" title="https://w3id.org/eudpp/textile-durability#PillingResistance">Pilling resistance</a></li>
+  <li><a href="#ProductAgeing" title="https://w3id.org/eudpp/textile-durability#ProductAgeing">Product ageing</a></li>
+  <li><a href="#RadiationInducedDegradation" title="https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation">Radiation-induced degradation</a></li>
+  <li><a href="#RoughOrStiffFabric" title="https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric">Rough or stiff fabric</a></li>
+  <li><a href="#SeamFailure" title="https://w3id.org/eudpp/textile-durability#SeamFailure">Seam failure</a></li>
+  <li><a href="#SeamSlippage" title="https://w3id.org/eudpp/textile-durability#SeamSlippage">Seam slippage</a></li>
+  <li><a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a></li>
+  <li><a href="#SurfaceDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon">Surface degradation phenomenon</a></li>
+  <li><a href="#SurfaceFailureMode" title="https://w3id.org/eudpp/textile-durability#SurfaceFailureMode">Surface failure mode</a></li>
+  <li><a href="#SurfacePerformanceParameter" title="https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter">Surface performance parameter</a></li>
+  <li><a href="#TactileFailureMode" title="https://w3id.org/eudpp/textile-durability#TactileFailureMode">Tactile failure mode</a></li>
+  <li><a href="#TearOrRip" title="https://w3id.org/eudpp/textile-durability#TearOrRip">Tear or rip</a></li>
+  <li><a href="#TrimFailure" title="https://w3id.org/eudpp/textile-durability#TrimFailure">Trim failure</a></li>
+  <li><a href="#VisualFailureMode" title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a></li>
+  <li><a href="#VisualPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a></li>
+  <li><a href="#Wrinkling" title="https://w3id.org/eudpp/textile-durability#Wrinkling">Wrinkling</a></li>
+  <li><a href="#ZipperFailure" title="https://w3id.org/eudpp/textile-durability#ZipperFailure">Zipper failure</a></li>
+ </ul>
+ <div class="entity" id="AbrasionResistance">
+  <h3>Abrasion resistance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#AbrasionResistance</p>
+  <div class="comment">
+   <span class="markdown">Observed performance parameter describing the resistance of a textile material or product to wear caused by rubbing or abrasion.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MechanicalPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter">Mechanical performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AccidentalDamage">
+  <h3>Accidental damage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#AccidentalDamage</p>
+  <div class="comment">
+   <span class="markdown">External damage occurring during use, such as accidental tearing, ripping or staining, which may lead to product rejection or disposal.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExternalDamage" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AssemblyPerformanceParameter">
+  <h3>Assembly performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Category of observed performance parameters related to seams, assembly or garment construction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SeamSlippage" title="https://w3id.org/eudpp/textile-durability#SeamSlippage">Seam slippage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ColourDepthEvenness">
+  <h3>Colour depth and evenness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ColourDepthEvenness</p>
+  <div class="comment">
+   <span class="markdown">Observed visual performance parameter describing the depth and evenness of colour in a textile product or fabric, especially in relation to dyeing and finishing quality.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ColourFading">
+  <h3>Colour fading<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ColourFading</p>
+  <div class="comment">
+   <span class="markdown">Visual failure mode corresponding to progressive loss of colour intensity during use, washing, ageing or exposure.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualFailureMode" title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ColourFastness">
+  <h3>Colour fastness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ColourFastness</p>
+  <div class="comment">
+   <span class="markdown">Observed performance parameter describing the resistance of a textile colour to fading, running or alteration under conditions such as washing, rubbing, perspiration or light exposure.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComponentFailureMode">
+  <h3>Component failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ComponentFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes affecting components or trims.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TrimFailure" title="https://w3id.org/eudpp/textile-durability#TrimFailure">Trim failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DeformationPerformanceParameter">
+  <h3>Deformation performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Category of observed performance parameters related to deformation, shape retention or dimensional behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#DimensionalStability" title="https://w3id.org/eudpp/textile-durability#DimensionalStability">Dimensional stability</a> <sup class="type-c" title="class">c</sup>, <a href="#Wrinkling" title="https://w3id.org/eudpp/textile-durability#Wrinkling">Wrinkling</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DimensionalStability">
+  <h3>Dimensional stability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#DimensionalStability</p>
+  <div class="comment">
+   <span class="markdown">Observed performance parameter describing the ability of a textile product or fabric to retain its dimensions after use, laundering or other treatment cycles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DeformationPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter">Deformation performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Discolouration">
+  <h3>Discolouration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#Discolouration</p>
+  <div class="comment">
+   <span class="markdown">Kept distinct from colour fading because discolouration may be localised, irregular or caused by specific use or exposure conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualFailureMode" title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Durability">
+  <h3>Durability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#Durability</p>
+  <div class="comment">
+   <span class="markdown">Ability of a product to maintain over time its function and performance under specified conditions of use, maintenance and repair.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#Durability" target="_blank" title="https://w3id.org/eudpp#Durability">Durability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#IntrinsicDurability" title="https://w3id.org/eudpp/textile-durability#IntrinsicDurability">Intrinsic durability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDurabilityAspect" title="https://w3id.org/eudpp/textile-durability#hasDurabilityAspect">has durability aspect</a> <sup class="type-op" title="object property">op</sup>, <a href="#negativelyAffects" title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ElasticityLoss">
+  <h3>Elasticity loss<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ElasticityLoss</p>
+  <div class="comment">
+   <span class="markdown">Structural failure mode corresponding to loss of elasticity, elastic recovery or stretch-related functionality of a textile product or fabric.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExternalDamage">
+  <h3>External damage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ExternalDamage</p>
+  <div class="comment">
+   <span class="markdown">Damage caused by external or accidental events during product use, not necessarily resulting from intrinsic lack of durability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AccidentalDamage" title="https://w3id.org/eudpp/textile-durability#AccidentalDamage">Accidental damage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#mayResultIn" title="https://w3id.org/eudpp/textile-durability#mayResultIn">may result in</a> <sup class="type-op" title="object property">op</sup>, <a href="#negativelyAffects" title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasExternalDamage" title="https://w3id.org/eudpp/textile-durability#hasExternalDamage">has external damage</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricBreakdown">
+  <h3>Fabric breakdown<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FabricBreakdown</p>
+  <div class="comment">
+   <span class="markdown">Aggregated failure mode. It may be decomposed later into more specific phenomena such as fraying, thinning, localised wear or hole formation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricSmoothness">
+  <h3>Fabric smoothness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FabricSmoothness</p>
+  <div class="comment">
+   <span class="markdown">Observed performance parameter describing the visible or tactile smoothness of a fabric surface, commonly considered during visual inspection after washing, drying or other durability-related stress.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SurfacePerformanceParameter" title="https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter">Surface performance parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#VisualPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricStrength">
+  <h3>Fabric strength<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FabricStrength</p>
+  <div class="comment">
+   <span class="markdown">Aggregated observed mechanical performance parameter describing the strength of a fabric, potentially covering tensile strength, tear strength or bursting strength depending on the test context.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MechanicalPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter">Mechanical performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FailureMode">
+  <h3>Failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FailureMode</p>
+  <div class="comment">
+   <span class="markdown">Failure modes are kept separate from observed performance parameters. For example, colour fastness is a parameter, while colour fading is a failure mode.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComponentFailureMode" title="https://w3id.org/eudpp/textile-durability#ComponentFailureMode">Component failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#FunctionalFailureMode" title="https://w3id.org/eudpp/textile-durability#FunctionalFailureMode">Functional failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#MechanicalFailureMode" title="https://w3id.org/eudpp/textile-durability#MechanicalFailureMode">Mechanical failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#SurfaceFailureMode" title="https://w3id.org/eudpp/textile-durability#SurfaceFailureMode">Surface failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#TactileFailureMode" title="https://w3id.org/eudpp/textile-durability#TactileFailureMode">Tactile failure mode</a> <sup class="type-c" title="class">c</sup>, <a href="#VisualFailureMode" title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#negativelyAffects" title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFailureExpression" title="https://w3id.org/eudpp/textile-durability#hasFailureExpression">has failure expression</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFailureMode" title="https://w3id.org/eudpp/textile-durability#hasFailureMode">has failure mode</a> <sup class="type-op" title="object property">op</sup>, <a href="#mayResultIn" title="https://w3id.org/eudpp/textile-durability#mayResultIn">may result in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a> <sup class="type-c" title="class">c</sup>, <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FunctionalFailureMode">
+  <h3>Functional failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FunctionalFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily involving loss of intended use, comfort or functional suitability of a textile product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#LossOfComfort" title="https://w3id.org/eudpp/textile-durability#LossOfComfort">Loss of comfort</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FuzzingOrMatting">
+  <h3>Fuzzing or matting<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#FuzzingOrMatting</p>
+  <div class="comment">
+   <span class="markdown">Observed surface degradation phenomenon involving fuzzing or matting of the fabric surface. The term follows the JRC and ISO wording 'fuzzing or matting', not 'melting'.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SurfaceDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon">Surface degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HoleInSeam">
+  <h3>Hole in seam<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#HoleInSeam</p>
+  <div class="comment">
+   <span class="markdown">Specific seam failure involving a hole or localised opening at or around a seam.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SeamFailure" title="https://w3id.org/eudpp/textile-durability#SeamFailure">Seam failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntrinsicDurability">
+  <h3>Intrinsic durability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#IntrinsicDurability</p>
+  <div class="comment">
+   <span class="markdown">Durability construct based on the physical and measurable ability of a textile product to maintain relevant performance characteristics over time under specified use, maintenance or test conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LogoFailure">
+  <h3>Logo failure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#LogoFailure</p>
+  <div class="comment">
+   <span class="markdown">Logo failure may also be interpreted as a component-related failure depending on whether the logo is printed, embroidered or applied as a separate component. It is kept under visual failure mode in this module.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualFailureMode" title="https://w3id.org/eudpp/textile-durability#VisualFailureMode">Visual failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LossOfComfort">
+  <h3>Loss of comfort<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#LossOfComfort</p>
+  <div class="comment">
+   <span class="markdown">Functional failure mode corresponding to loss of comfort or comfort-related suitability during use, maintenance or ageing.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FunctionalFailureMode" title="https://w3id.org/eudpp/textile-durability#FunctionalFailureMode">Functional failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LossOfDimensionalStability">
+  <h3>Loss of dimensional stability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability</p>
+  <div class="comment">
+   <span class="markdown">Failure expression corresponding to loss of the ability of a textile product or fabric to retain its dimensions after use, laundering or treatment cycles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MechanicalFailureMode">
+  <h3>Mechanical failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#MechanicalFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily involving rupture, tearing or mechanical damage.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TearOrRip" title="https://w3id.org/eudpp/textile-durability#TearOrRip">Tear or rip</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MechanicalPerformanceParameter">
+  <h3>Mechanical performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Category of observed performance parameters related to mechanical resistance or strength.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AbrasionResistance" title="https://w3id.org/eudpp/textile-durability#AbrasionResistance">Abrasion resistance</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricStrength" title="https://w3id.org/eudpp/textile-durability#FabricStrength">Fabric strength</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ObservedDegradationPhenomenon">
+  <h3>Observed degradation phenomenon<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon</p>
+  <div class="comment">
+   <span class="markdown">Observable phenomenon indicating physical deterioration of a textile material or product. It is distinct from the performance characteristic used to assess resistance to that deterioration.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Pilling" title="https://w3id.org/eudpp/textile-durability#Pilling">Pilling</a> <sup class="type-c" title="class">c</sup>, <a href="#ProductAgeing" title="https://w3id.org/eudpp/textile-durability#ProductAgeing">Product ageing</a> <sup class="type-c" title="class">c</sup>, <a href="#SurfaceDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon">Surface degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#negativelyAffects" title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDegradationExpression" title="https://w3id.org/eudpp/textile-durability#hasDegradationExpression">has degradation expression</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#hasObservedDegradationPhenomenon">has observed degradation phenomenon</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ObservedPerformanceParameter">
+  <h3>Observed performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Durability-related product characteristic that can be observed, assessed or measured to evaluate physical durability. It denotes the characteristic type, not a test, observation, result or quantitative value.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#Property" target="_blank" title="https://w3id.org/eudpp#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter">Assembly performance parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#DeformationPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter">Deformation performance parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#MechanicalPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#MechanicalPerformanceParameter">Mechanical performance parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#SurfacePerformanceParameter" title="https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter">Surface performance parameter</a> <sup class="type-c" title="class">c</sup>, <a href="#VisualPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter">Visual performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDegradationExpression" title="https://w3id.org/eudpp/textile-durability#hasDegradationExpression">has degradation expression</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFailureExpression" title="https://w3id.org/eudpp/textile-durability#hasFailureExpression">has failure expression</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter">has observed performance parameter</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a> <sup class="type-c" title="class">c</sup>, <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Pilling">
+  <h3>Pilling<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#Pilling</p>
+  <div class="comment">
+   <span class="markdown">Observed surface degradation phenomenon involving the formation of small balls or pills of entangled fibres on a textile surface during wear, friction, use or testing.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>, <a href="#SurfaceDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon">Surface degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PillingResistance">
+  <h3>Pilling resistance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#PillingResistance</p>
+  <div class="comment">
+   <span class="markdown">Durability-related performance characteristic describing the ability of a textile material, fabric or product to resist the formation of pills under friction, wear or use conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#SurfacePerformanceParameter" title="https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter">Surface performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ProductAgeing">
+  <h3>Product ageing<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ProductAgeing</p>
+  <div class="comment">
+   <span class="markdown">Progressive change or degradation of textile product performance over time under repeated use, care, environmental exposure or stress.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#RadiationInducedDegradation" title="https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation">Radiation-induced degradation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RadiationInducedDegradation">
+  <h3>Radiation-induced degradation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#RadiationInducedDegradation</p>
+  <div class="comment">
+   <span class="markdown">Degradation of textile material or product properties associated with ultraviolet or other relevant radiation exposure.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ProductAgeing" title="https://w3id.org/eudpp/textile-durability#ProductAgeing">Product ageing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="RoughOrStiffFabric">
+  <h3>Rough or stiff fabric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric</p>
+  <div class="comment">
+   <span class="markdown">Failure mode in which a fabric becomes or is perceived as rough, stiff or unpleasant to touch, affecting user acceptance and comfort-related use.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TactileFailureMode" title="https://w3id.org/eudpp/textile-durability#TactileFailureMode">Tactile failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeamFailure">
+  <h3>Seam failure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#SeamFailure</p>
+  <div class="comment">
+   <span class="markdown">Structural or assembly-related failure mode involving loss of seam integrity or seam functionality.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFailureMode" title="https://w3id.org/eudpp/textile-durability#StructuralFailureMode">Structural failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#HoleInSeam" title="https://w3id.org/eudpp/textile-durability#HoleInSeam">Hole in seam</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeamSlippage">
+  <h3>Seam slippage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#SeamSlippage</p>
+  <div class="comment">
+   <span class="markdown">Durability-related assembly performance characteristic describing displacement of yarns at or near a seam under mechanical stress, which may lead to deformation or opening.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#AssemblyPerformanceParameter">Assembly performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralFailureMode">
+  <h3>Structural failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#StructuralFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily affecting structure, integrity or dimensional behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ElasticityLoss" title="https://w3id.org/eudpp/textile-durability#ElasticityLoss">Elasticity loss</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricBreakdown" title="https://w3id.org/eudpp/textile-durability#FabricBreakdown">Fabric breakdown</a> <sup class="type-c" title="class">c</sup>, <a href="#LossOfDimensionalStability" title="https://w3id.org/eudpp/textile-durability#LossOfDimensionalStability">Loss of dimensional stability</a> <sup class="type-c" title="class">c</sup>, <a href="#SeamFailure" title="https://w3id.org/eudpp/textile-durability#SeamFailure">Seam failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SurfaceDegradationPhenomenon">
+  <h3>Surface degradation phenomenon<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#SurfaceDegradationPhenomenon</p>
+  <div class="comment">
+   <span class="markdown">Observed degradation phenomenon affecting the surface condition of a textile material or product, such as pilling, fuzzing or matting.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FuzzingOrMatting" title="https://w3id.org/eudpp/textile-durability#FuzzingOrMatting">Fuzzing or matting</a> <sup class="type-c" title="class">c</sup>, <a href="#Pilling" title="https://w3id.org/eudpp/textile-durability#Pilling">Pilling</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SurfaceFailureMode">
+  <h3>Surface failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#SurfaceFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily affecting the textile surface. Borderline surface phenomena that are also assessed as performance parameters should remain under ObservedDegradationPhenomenon to preserve the module disjointness pattern.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SurfacePerformanceParameter">
+  <h3>Surface performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#SurfacePerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Category of observed performance parameters related to surface behaviour or surface degradation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricSmoothness" title="https://w3id.org/eudpp/textile-durability#FabricSmoothness">Fabric smoothness</a> <sup class="type-c" title="class">c</sup>, <a href="#PillingResistance" title="https://w3id.org/eudpp/textile-durability#PillingResistance">Pilling resistance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TactileFailureMode">
+  <h3>Tactile failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#TactileFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily affecting tactile perception, hand feel or comfort-related touch properties of a textile product or fabric.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#RoughOrStiffFabric" title="https://w3id.org/eudpp/textile-durability#RoughOrStiffFabric">Rough or stiff fabric</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TearOrRip">
+  <h3>Tear or rip<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#TearOrRip</p>
+  <div class="comment">
+   <span class="markdown">Mechanical failure mode involving rupture, tearing or ripping of textile material under stress, snagging or damage.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MechanicalFailureMode" title="https://w3id.org/eudpp/textile-durability#MechanicalFailureMode">Mechanical failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TrimFailure">
+  <h3>Trim failure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#TrimFailure</p>
+  <div class="comment">
+   <span class="markdown">Component failure mode involving failure of trims or auxiliary components associated with a textile product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ComponentFailureMode" title="https://w3id.org/eudpp/textile-durability#ComponentFailureMode">Component failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ZipperFailure" title="https://w3id.org/eudpp/textile-durability#ZipperFailure">Zipper failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisualFailureMode">
+  <h3>Visual failure mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#VisualFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Category of failure modes primarily affecting visible appearance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ColourFading" title="https://w3id.org/eudpp/textile-durability#ColourFading">Colour fading</a> <sup class="type-c" title="class">c</sup>, <a href="#Discolouration" title="https://w3id.org/eudpp/textile-durability#Discolouration">Discolouration</a> <sup class="type-c" title="class">c</sup>, <a href="#LogoFailure" title="https://w3id.org/eudpp/textile-durability#LogoFailure">Logo failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisualPerformanceParameter">
+  <h3>Visual performance parameter<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#VisualPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Category of observed performance parameters related to visual appearance or colour behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ColourDepthEvenness" title="https://w3id.org/eudpp/textile-durability#ColourDepthEvenness">Colour depth and evenness</a> <sup class="type-c" title="class">c</sup>, <a href="#ColourFastness" title="https://w3id.org/eudpp/textile-durability#ColourFastness">Colour fastness</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricSmoothness" title="https://w3id.org/eudpp/textile-durability#FabricSmoothness">Fabric smoothness</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Wrinkling">
+  <h3>Wrinkling<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#Wrinkling</p>
+  <div class="comment">
+   <span class="markdown">Durability-related deformation behaviour describing the tendency of a textile material or product to form creases under use or after deformation and recovery cycles.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DeformationPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#DeformationPerformanceParameter">Deformation performance parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ZipperFailure">
+  <h3>Zipper failure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#ZipperFailure</p>
+  <div class="comment">
+   <span class="markdown">Specific trim failure involving failure of a zipper or zip fastener.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TrimFailure" title="https://w3id.org/eudpp/textile-durability#TrimFailure">Trim failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasDegradationExpression" title="https://w3id.org/eudpp/textile-durability#hasDegradationExpression">has degradation expression</a></li>
+  <li><a href="#hasDurabilityAspect" title="https://w3id.org/eudpp/textile-durability#hasDurabilityAspect">has durability aspect</a></li>
+  <li><a href="#hasExternalDamage" title="https://w3id.org/eudpp/textile-durability#hasExternalDamage">has external damage</a></li>
+  <li><a href="#hasFailureExpression" title="https://w3id.org/eudpp/textile-durability#hasFailureExpression">has failure expression</a></li>
+  <li><a href="#hasFailureMode" title="https://w3id.org/eudpp/textile-durability#hasFailureMode">has failure mode</a></li>
+  <li><a href="#hasObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#hasObservedDegradationPhenomenon">has observed degradation phenomenon</a></li>
+  <li><a href="#hasObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter">has observed performance parameter</a></li>
+  <li><a href="#mayResultIn" title="https://w3id.org/eudpp/textile-durability#mayResultIn">may result in</a></li>
+  <li><a href="#negativelyAffects" title="https://w3id.org/eudpp/textile-durability#negativelyAffects">negatively affects</a></li>
+ </ul>
+ <div class="entity" id="hasDegradationExpression">
+  <h3>has degradation expression<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasDegradationExpression</p>
+  <div class="comment">
+   <span class="markdown">Relates a durability-related performance characteristic to a degradation phenomenon that expresses deterioration of that characteristic. This is an instance-level relation and is not a deterministic causal axiom.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDurabilityAspect">
+  <h3>has durability aspect<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasDurabilityAspect</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile product to a durability aspect relevant to its assessment or declaration.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExternalDamage">
+  <h3>has external damage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasExternalDamage</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile product or product observation to external damage occurring during use.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExternalDamage" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFailureExpression">
+  <h3>has failure expression<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasFailureExpression</p>
+  <div class="comment">
+   <span class="markdown">Relates an observed performance parameter to a failure mode that expresses degradation or loss of that parameter.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFailureMode">
+  <h3>has failure mode<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasFailureMode</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile product to a failure mode observed, expected or considered relevant for that product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasObservedDegradationPhenomenon">
+  <h3>has observed degradation phenomenon<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasObservedDegradationPhenomenon</p>
+  <div class="comment">
+   <span class="markdown">Relates a product to a degradation phenomenon observed or considered relevant for that product. A concrete observation, test and result should be represented in the textile assessment module.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasObservedPerformanceParameter">
+  <h3>has observed performance parameter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#hasObservedPerformanceParameter</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile product to an observed performance parameter relevant to its durability assessment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#Product" target="_blank" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ObservedPerformanceParameter" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed performance parameter</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mayResultIn">
+  <h3>may result in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#mayResultIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates that external damage may result in a failure mode.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ExternalDamage" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="negativelyAffects">
+  <h3>negatively affects<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#negativelyAffects</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a failure mode, degradation phenomenon or damage negatively affects a durability-related aspect.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ExternalDamage" title="https://w3id.org/eudpp/textile-durability#ExternalDamage">External damage</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#FailureMode" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure mode</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ObservedDegradationPhenomenon" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed degradation phenomenon</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Durability" title="https://w3id.org/eudpp/textile-durability#Durability">Durability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#evidenceStatus" title="https://w3id.org/eudpp/textile-connector#evidenceStatus"> <span>evidence Status</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#modellingNote" title="https://w3id.org/eudpp/textile-connector#modellingNote"> <span>modelling Note</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceLocator" title="https://w3id.org/eudpp/textile-connector#sourceLocator"> <span>source Locator</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceType" title="https://w3id.org/eudpp/textile-connector#sourceType"> <span>source Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#typicalDegradationExpression" title="https://w3id.org/eudpp/textile-durability#typicalDegradationExpression">typical degradation expression</a></li>
+  <li><a href="#typicalFailureExpression" title="https://w3id.org/eudpp/textile-durability#typicalFailureExpression">typical failure expression</a></li>
+  <li><a href="#typicalProgressionTo" title="https://w3id.org/eudpp/textile-durability#typicalProgressionTo">typical progression to</a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf" title="https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf"> <span>typically Increases Likelihood Of</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf" title="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf"> <span>typically Reduces Likelihood Of</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
+  <h3>alt Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#evidenceStatus">
+  <h3>evidence Status<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#evidenceStatus</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#modellingNote">
+  <h3>modelling Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#modellingNote</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceLocator">
+  <h3>source Locator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceLocator</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceType">
+  <h3>source Type<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceType</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="typicalDegradationExpression">
+  <h3>typical degradation expression<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#typicalDegradationExpression</p>
+  <div class="comment">
+   <span class="markdown">Annotation used at class level to document a usual degradation expression of a durability-related performance characteristic without imposing a necessary OWL restriction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="typicalFailureExpression">
+  <h3>typical failure expression<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#typicalFailureExpression</p>
+  <div class="comment">
+   <span class="markdown">Annotation used at class level to document the usual failure expression of an observed performance parameter without imposing an OWL existential restriction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="typicalProgressionTo">
+  <h3>typical progression to<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-durability#typicalProgressionTo</p>
+  <div class="comment">
+   <span class="markdown">Annotation used at class level to document a typical degradation progression without asserting a necessary causal relation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability">https://w3id.org/eudpp/textile-durability</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf">
+  <h3>typically Increases Likelihood Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#typicallyIncreasesLikelihoodOf</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf">
+  <h3>typically Reduces Likelihood Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

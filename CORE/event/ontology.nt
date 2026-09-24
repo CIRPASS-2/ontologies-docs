@@ -1,0 +1,873 @@
+<https://w3id.org/eudpp/EVENT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Core Ontology Event Module. Draft version 0.1.0. DOI: https://doi.org/10.5281/zenodo.15270342/"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/contributor> "Riina Maigre"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/contributor> "Tarmo Robal"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/contributor> "Theodor Chirvasuta"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/description> "Provides classes and properties for representing ESPR-level product and DPP events, and links product-facing events to selected GS1 EPCIS and CBV technical representation terms. Cross-module EU DPP Core Ontology relations are intended to be managed in the Connector/mapping layer."@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/dc/terms/title> "EU DPP Core Ontology Event Module"@en .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/vocab/vann/preferredNamespacePrefix> "evt" .
+<https://w3id.org/eudpp/EVENT> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp#" .
+<https://w3id.org/eudpp/EVENT> <http://www.w3.org/2000/01/rdf-schema#comment> "Draft Event module of the EU DPP Core Ontology. It defines ESPR-level product and DPP event concepts. Selected GS1 EPCIS and CBV terms are referenced in this file for technical event representation only; this does not imply a global owl:imports of EPCIS/CBV nor logical subclassing between GS1 Web Vocabulary concepts and EU DPP Core Ontology classes. Cross-module EU DPP Core Ontology relations are intended to be managed in the Connector/mapping layer."@en .
+<https://w3id.org/eudpp/EVENT> <http://www.w3.org/2000/01/rdf-schema#label> "Event module"@en .
+<https://w3id.org/eudpp/EVENT> <http://www.w3.org/2002/07/owl#versionInfo> "Version 0.1.0 DRAFT"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/domainIncludes
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/rangeIncludes
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://ref.gs1.org/epcis/jsonldLabel
+<https://ref.gs1.org/epcis/jsonldLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://ref.gs1.org/epcis/jsonldUriLabel
+<https://ref.gs1.org/epcis/jsonldUriLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://ref.gs1.org/epcis/bizLocation
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizLocation> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) The business location where the objects associated with the EPCs may be found, until contradicted by a subsequent event."@en .
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/2000/01/rdf-schema#label> "bizLocation" .
+<https://ref.gs1.org/epcis/bizLocation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/bizStep
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/cbv/BizStep> .
+<https://ref.gs1.org/cbv/BizStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/bizStep> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizStep> <http://schema.org/rangeIncludes> <https://ref.gs1.org/cbv/BizStep> .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) The business step of which this event was a part."@en .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2000/01/rdf-schema#label> "bizStep" .
+<https://ref.gs1.org/epcis/bizStep> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/bizTransactionList
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/BizTransaction> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/BizTransaction> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of business transactions that define the context of this event."@en .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2000/01/rdf-schema#label> "bizTransactionList" .
+<https://ref.gs1.org/epcis/bizTransactionList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/bizTransactionType
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/BizTransaction> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/cbv/BTT> .
+<https://ref.gs1.org/cbv/BTT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/BizTransaction> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://schema.org/rangeIncludes> <https://ref.gs1.org/cbv/BTT> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that indicates the type of BizTransaction document (e.g. Purchase Order, Despatch Advice)."@en .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2000/01/rdf-schema#label> "bizTransactionType" .
+<https://ref.gs1.org/epcis/bizTransactionType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/bizTransactionType> <https://ref.gs1.org/epcis/jsonldLabel> "type" .
+# 
+# https://ref.gs1.org/epcis/childEPCs
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AssociationEvent> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AggregationEvent> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/childEPCs> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AggregationEvent> .
+<https://ref.gs1.org/epcis/childEPCs> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AssociationEvent> .
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of the EPCs of contained objects identified by instance-level identifiers. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disassociated from the parent."@en .
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/2000/01/rdf-schema#label> "childEPCs" .
+<https://ref.gs1.org/epcis/childEPCs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/childQuantityList
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AssociationEvent> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AggregationEvent> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AggregationEvent> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AssociationEvent> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more QuantityElements identifying (at the class level) contained objects. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent."@en .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2000/01/rdf-schema#label> "childQuantityList" .
+<https://ref.gs1.org/epcis/childQuantityList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/destinationList
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/destinationList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/destinationList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of Destination elements that provide context about the terminating endpoint of a business transfer of which this event is a part."@en .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2000/01/rdf-schema#label> "destinationList" .
+<https://ref.gs1.org/epcis/destinationList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/disposition
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/cbv/Disp> .
+<https://ref.gs1.org/cbv/Disp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/disposition> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/disposition> <http://schema.org/rangeIncludes> <https://ref.gs1.org/cbv/Disp> .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) The business condition of the objects associated with the EPCs, presumed to hold true until contradicted by a subsequent event."@en .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2000/01/rdf-schema#label> "disposition" .
+<https://ref.gs1.org/epcis/disposition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/epcClass
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/epcClass> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/2000/01/rdf-schema#comment> "A class-level identifier for the class to which the specified quantity of objects belongs."@en .
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/2000/01/rdf-schema#label> "epcClass" .
+<https://ref.gs1.org/epcis/epcClass> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/epcList
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/TransactionEvent> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/ObjectEvent> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/epcList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/ObjectEvent> .
+<https://ref.gs1.org/epcis/epcList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransactionEvent> .
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more EPCs naming specific objects to which the event pertained."@en .
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/2000/01/rdf-schema#label> "epcList" .
+<https://ref.gs1.org/epcis/epcList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/inputEPCList
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/inputEPCList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more EPCs identifying (at the instance level) objects that were inputs to the transformation."@en .
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/2000/01/rdf-schema#label> "inputEPCList" .
+<https://ref.gs1.org/epcis/inputEPCList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/inputQuantityList
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were inputs to the transformation. See below for constraints on when inputQuantityList may be omitted."@en .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2000/01/rdf-schema#label> "inputQuantityList" .
+<https://ref.gs1.org/epcis/inputQuantityList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/outputEPCList
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/outputEPCList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more EPCs naming (at the instance level) objects that were outputs from the transformation."@en .
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/2000/01/rdf-schema#label> "outputEPCList" .
+<https://ref.gs1.org/epcis/outputEPCList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/outputQuantityList
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were outputs from the transformation. See below for constraints on when outputQuantityList may be omitted."@en .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2000/01/rdf-schema#label> "outputQuantityList" .
+<https://ref.gs1.org/epcis/outputQuantityList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/parentID
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/TransactionEvent> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AssociationEvent> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AggregationEvent> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/parentID> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AggregationEvent> .
+<https://ref.gs1.org/epcis/parentID> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AssociationEvent> .
+<https://ref.gs1.org/epcis/parentID> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransactionEvent> .
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional when action is OBSERVE, required otherwise) The identifier of the parent of the aggregation or association. When the parent identifier is an EPC, this field SHALL contain the 'pure identity' URI for the EPC as specified in the GS1 Tag Data Standard"@en .
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/2000/01/rdf-schema#label> "parentID" .
+<https://ref.gs1.org/epcis/parentID> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/quantityList
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/TransactionEvent> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/ObjectEvent> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/quantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/ObjectEvent> .
+<https://ref.gs1.org/epcis/quantityList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransactionEvent> .
+<https://ref.gs1.org/epcis/quantityList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects to which the event pertained."@en .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2000/01/rdf-schema#label> "quantityList" .
+<https://ref.gs1.org/epcis/quantityList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/readPoint
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/readPoint> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) The read point at which the event took place."@en .
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/2000/01/rdf-schema#label> "readPoint" .
+<https://ref.gs1.org/epcis/readPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/sourceList
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceList> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/sourceList> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) An unordered list of Source elements that provide context about the originating endpoint of a business transfer of which this event is a part."@en .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2000/01/rdf-schema#label> "sourceList" .
+<https://ref.gs1.org/epcis/sourceList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/sourceOrDestination
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that denotes the specific source or destination of a business transfer.\r\nThe semantic role of the identifier is indicated by sourceOrDestinationType. Resolution of that identifier to EU DPP Actor or Facility concepts, when applicable, is handled outside the EPCIS technical carrier layer."@en .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#label> "sourceOrDestination" .
+<https://ref.gs1.org/epcis/sourceOrDestination> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/sourceOrDestination> <https://ref.gs1.org/epcis/jsonldLabel> "destination" .
+<https://ref.gs1.org/epcis/sourceOrDestination> <https://ref.gs1.org/epcis/jsonldLabel> "source" .
+# 
+# https://ref.gs1.org/epcis/sourceOrDestinationType
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/cbv/SDT> .
+<https://ref.gs1.org/cbv/SDT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/SourceOrDestination> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://schema.org/rangeIncludes> <https://ref.gs1.org/cbv/SDT> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier that indicates the role of SourceOrDestination in a transfer (Owning Party, Possessing Party, or Location).\r\nThis role determines how the corresponding sourceOrDestination identifier is interpreted. Mapping to EU DPP Actor or Facility concepts, when applicable, is handled outside the EPCIS technical carrier layer."@en .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2000/01/rdf-schema#label> "sourceOrDestinationType" .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/sourceOrDestinationType> <https://ref.gs1.org/epcis/jsonldLabel> "type" .
+# 
+# https://ref.gs1.org/epcis/transformationID
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/Transformation> .
+<https://ref.gs1.org/epcis/transformationID> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransformationEvent> .
+<https://ref.gs1.org/epcis/transformationID> <http://schema.org/rangeIncludes> <https://ref.gs1.org/epcis/Transformation> .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) Associates several TransformationEvents with a longer-running Transformation process, therefore linking them together."@en .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2000/01/rdf-schema#label> "transformationID" .
+<https://ref.gs1.org/epcis/transformationID> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/eudpp#hasDPPActionType
+<https://w3id.org/eudpp#hasDPPActionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasDPPActionType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPUpdateEvent> .
+<https://w3id.org/eudpp#hasDPPActionType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPPActionType> .
+<https://w3id.org/eudpp#hasDPPActionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP update event to the type of information-level action performed on the Digital Product Passport."@en .
+<https://w3id.org/eudpp#hasDPPActionType> <http://www.w3.org/2000/01/rdf-schema#label> "has DPP action type"@en .
+# 
+# https://w3id.org/eudpp#hasProductEvent
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#isRepresentedByCarrier> .
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an EPCIS-inspired technical event carrier to the product event semantics it journalises."@en .
+<https://w3id.org/eudpp#hasProductEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has product event"@en .
+# 
+# https://w3id.org/eudpp#isRecordedAs
+<https://w3id.org/eudpp#isRecordedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#isRecordedAs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#isRecordedAs> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#isRecordedAs> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP event to a technical audit record representing its registration in an information system or audit trail."@en .
+<https://w3id.org/eudpp#isRecordedAs> <http://www.w3.org/2000/01/rdf-schema#label> "is recorded as"@en .
+# 
+# https://w3id.org/eudpp#isRepresentedByCarrier
+<https://w3id.org/eudpp#isRepresentedByCarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#isRepresentedByCarrier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#isRepresentedByCarrier> <http://www.w3.org/2000/01/rdf-schema#range> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://w3id.org/eudpp#isRepresentedByCarrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a product event concept to an EPCIS-inspired technical event carrier used to journalise and structure the corresponding event data."@en .
+<https://w3id.org/eudpp#isRepresentedByCarrier> <http://www.w3.org/2000/01/rdf-schema#label> "is represented by carrier"@en .
+# 
+# https://w3id.org/eudpp#isTriggeredByProductEvent
+<https://w3id.org/eudpp#isTriggeredByProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#isTriggeredByProductEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#isTriggeredByProductEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#isTriggeredByProductEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP event to the product event that caused or required it. This property is used when the DPP event results from a lifecycle change affecting the product."@en .
+<https://w3id.org/eudpp#isTriggeredByProductEvent> <http://www.w3.org/2000/01/rdf-schema#label> "is triggered by product event"@en .
+# 
+# https://w3id.org/eudpp#recordsDPPEvent
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#isRecordedAs> .
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP event record to the DPP event whose technical registration it captures."@en .
+<https://w3id.org/eudpp#recordsDPPEvent> <http://www.w3.org/2000/01/rdf-schema#label> "records DPP event"@en .
+# 
+# https://w3id.org/eudpp#triggersDPPEvent
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#isTriggeredByProductEvent> .
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a product event to a DPP event that is triggered as a consequence of it, reflecting the obligation to update the DPP following lifecycle changes of the product."@en .
+<https://w3id.org/eudpp#triggersDPPEvent> <http://www.w3.org/2000/01/rdf-schema#label> "triggers DPP event"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://ref.gs1.org/epcis/action
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/TransactionEvent> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/ObjectEvent> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AssociationEvent> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/AggregationEvent> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/action> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AggregationEvent> .
+<https://ref.gs1.org/epcis/action> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/AssociationEvent> .
+<https://ref.gs1.org/epcis/action> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/ObjectEvent> .
+<https://ref.gs1.org/epcis/action> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/TransactionEvent> .
+<https://ref.gs1.org/epcis/action> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2000/01/rdf-schema#comment> "How this event relates to the lifecycle of the EPCs named in this event."@en .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2000/01/rdf-schema#label> "action" .
+<https://ref.gs1.org/epcis/action> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/eventTime
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://ref.gs1.org/epcis/eventTime> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/eventTime> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time at which the EPCIS Capturing Applications asserts the event occurred."@en .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2000/01/rdf-schema#label> "eventTime" .
+<https://ref.gs1.org/epcis/eventTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/eventTimeZoneOffset
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2000/01/rdf-schema#comment> "The time zone offset in effect at the time and place the event occurred, expressed as an offset from UTC. The value of this field SHALL be a string consisting of the character '+' or the character '-', followed by two digits whose value is within the range 00 through 14 (inclusive), followed by a colon character ':', followed by two digits whose value is within the range 00 through 59 (inclusive), except that if the value of the first two digits is 14, the value of the second two digits must be 00. For example, the value +05:30 specifies that where the event occurred, local time was five hours and 30 minutes later than UTC (that is, midnight UTC was 5:30am local time)."@en .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2000/01/rdf-schema#label> "eventTimeZoneOffset" .
+<https://ref.gs1.org/epcis/eventTimeZoneOffset> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/quantity
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<https://ref.gs1.org/epcis/quantity> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/quantity> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#double> .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "A number that specifies how many or how much of the specified EPCClass is denoted by this QuantityElement."@en .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2000/01/rdf-schema#label> "quantity" .
+<https://ref.gs1.org/epcis/quantity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/recordTime
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://ref.gs1.org/epcis/recordTime> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/recordTime> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) The date and time at which this event was recorded by an EPCIS Repository. This field SHALL be ignored when an event is presented to the EPCIS Capture Interface, and SHALL be present when an event is retrieved through the EPCIS Query Interfaces. The recordTime does not describe anything about the real-world event, but is rather a bookkeeping mechanism that plays a role in the interpretation of standing queries"@en .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2000/01/rdf-schema#label> "recordTime" .
+<https://ref.gs1.org/epcis/recordTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/uom
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/SensorReport> .
+<https://ref.gs1.org/epcis/SensorReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://ref.gs1.org/epcis/QuantityElement> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/uom> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/QuantityElement> .
+<https://ref.gs1.org/epcis/uom> <http://schema.org/domainIncludes> <https://ref.gs1.org/epcis/SensorReport> .
+<https://ref.gs1.org/epcis/uom> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#string> .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2000/01/rdf-schema#comment> "(Optional) Unit of measure by which the specified value(s) of the property specified by type should be interpreted.  If there is no value, minValue, maxValue, averageValue or percValue field present, uom SHALL be omitted.  When a uom field is present, its value SHALL be the 2- or 3-character code for a physical unit specified in the 'Common Code' column of UN/CEFACT Recommendation'20 [CEFACT20].   Note: GS1 provides a tool containing a machine-readable file which enables the automatic conversion between quantitative values expressed using UN/CEFACT common codes. [https://ref.gs1.org/tools/UnitConverterUNECERec20]"@en .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2000/01/rdf-schema#label> "uom" .
+<https://ref.gs1.org/epcis/uom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/eudpp#dppEventRecordIdentifier
+<https://w3id.org/eudpp#dppEventRecordIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#dppEventRecordIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#dppEventRecordIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/eudpp#dppEventRecordIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier assigned to a DPP event record."@en .
+<https://w3id.org/eudpp#dppEventRecordIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "dpp event record identifier"@en .
+# 
+# https://w3id.org/eudpp#dppEventRecordedAt
+<https://w3id.org/eudpp#dppEventRecordedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#dppEventRecordedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#dppEventRecordedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/eudpp#dppEventRecordedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time at which the technical record of a DPP event was created in an information system or audit trail."@en .
+<https://w3id.org/eudpp#dppEventRecordedAt> <http://www.w3.org/2000/01/rdf-schema#label> "dpp event recorded at"@en .
+# 
+# https://w3id.org/eudpp#recordedInSystem
+<https://w3id.org/eudpp#recordedInSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#recordedInSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#recordedInSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/eudpp#recordedInSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the URI identifying the system, application, or audit log in which the DPP event record is maintained."@en .
+<https://w3id.org/eudpp#recordedInSystem> <http://www.w3.org/2000/01/rdf-schema#label> "recorded in system"@en .
+# 
+# https://w3id.org/eudpp#recordedInSystemName
+<https://w3id.org/eudpp#recordedInSystemName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#recordedInSystemName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#recordedInSystemName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#recordedInSystemName> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the human-readable name of the system, application, or audit log in which the DPP event record is maintained."@en .
+<https://w3id.org/eudpp#recordedInSystemName> <http://www.w3.org/2000/01/rdf-schema#label> "recorded in system name"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://ref.gs1.org/cbv/BTT
+# 
+# https://ref.gs1.org/cbv/BizStep
+# 
+# https://ref.gs1.org/cbv/Disp
+# 
+# https://ref.gs1.org/cbv/SDT
+# 
+# https://ref.gs1.org/epcis/AggregationEvent
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The event type AggregationEvent describes events that apply to objects that have been aggregated to one another. In such an event, there is a set of 'contained' objects that have been aggregated within a 'containing' entity that's meant to identify the aggregation itself.  This event type is intended to be used for 'aggregations', meaning an association where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated."@en .
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "AggregationEvent" .
+<https://ref.gs1.org/epcis/AggregationEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/AggregationEvent> <https://ref.gs1.org/epcis/jsonldUriLabel> "eventID" .
+# 
+# https://ref.gs1.org/epcis/AssociationEvent
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The event type AssociationEvent describes the association or disassociation of one or several physical objects with a parent object or a specific physical location.  Like the AggregationEvent, the AssociationEvent is also used to capture associations where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated. However, the AggregationEvent does not allow for associations of objects with physical locations;  if action is DELETE while omitting the childEPC and childQuantityList field, all contained children are disaggregated from the containing parent. Because there are situations in which associations are more permanent, i.e. beyond the physical flow of goods (e.g. packing/unpacking and loading/unloading), an AssociationEvent SHOULD be used: (a) when objects need to be associated with a physical location or (b) when the parent object could also be subject to other, more temporary associations (i.e. captured using AggregationEvent)."@en .
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "AssociationEvent" .
+<https://ref.gs1.org/epcis/AssociationEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/AssociationEvent> <https://ref.gs1.org/epcis/jsonldUriLabel> "eventID" .
+# 
+# https://ref.gs1.org/epcis/BizTransaction
+<https://ref.gs1.org/epcis/BizTransaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/BizTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Document that describes a particular business transaction. An example is a specific Purchase Order or Despatch Advice. Business Transaction information may be included in EPCIS events to record an event's participation in particular business transactions."@en .
+<https://ref.gs1.org/epcis/BizTransaction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/BizTransaction> <http://www.w3.org/2000/01/rdf-schema#label> "BizTransaction" .
+<https://ref.gs1.org/epcis/BizTransaction> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/BizTransaction> <https://ref.gs1.org/epcis/jsonldUriLabel> "bizTransaction" .
+# 
+# https://ref.gs1.org/epcis/EPCISEvent
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A logistics event. This is a common superclass (base type) for all EPCIS events. All of the more specific event types are subclasses of EPCISEvent."@en .
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/2000/01/rdf-schema#label> "EPCISEvent" .
+<https://ref.gs1.org/epcis/EPCISEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/ObjectEvent
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An ObjectEvent captures information about an event pertaining to one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers. In most situations, an ObjectEvent is envisioned to represent an actual observations of objects, but strictly speaking it can be used for any event a Capturing Application wants to assert about objects, including for example capturing the fact that an expected observation failed to occur."@en .
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/2000/01/rdf-schema#label> "ObjectEvent" .
+<https://ref.gs1.org/epcis/ObjectEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/ObjectEvent> <https://ref.gs1.org/epcis/jsonldUriLabel> "eventID" .
+# 
+# https://ref.gs1.org/epcis/QuantityElement
+<https://ref.gs1.org/epcis/QuantityElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/QuantityElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A QuantityElement is a structure that identifies objects identified by a specific class-level identifier, either a specific quantity or an unspecified quantity."@en .
+<https://ref.gs1.org/epcis/QuantityElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/QuantityElement> <http://www.w3.org/2000/01/rdf-schema#label> "QuantityElement" .
+<https://ref.gs1.org/epcis/QuantityElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/SensorReport
+# 
+# https://ref.gs1.org/epcis/SourceOrDestination
+<https://ref.gs1.org/epcis/SourceOrDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/SourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides additional business context when an EPCIS event is part of a business transfer; that is, a process in which there is a change of location, or transfer of ownership, or transfer of possession of physical or digital objects. Within a specified type of transfer, the business transfer is from the Source to the Destination."@en .
+<https://ref.gs1.org/epcis/SourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/SourceOrDestination> <http://www.w3.org/2000/01/rdf-schema#label> "Source or Destination" .
+<https://ref.gs1.org/epcis/SourceOrDestination> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/SourceOrDestination> <https://ref.gs1.org/epcis/jsonldUriLabel> "id" .
+# 
+# https://ref.gs1.org/epcis/TransactionEvent
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The event type TransactionEvent describes the association or disassociation of physical or digital objects to one or more business transactions. While other event types have an optional bizTransactionList field that may be used to provide context for an event, the TransactionEvent is used to declare in an unequivocal way that certain objects have been associated or disassociated with one or more business transactions as part of the event."@en .
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "TransactionEvent" .
+<https://ref.gs1.org/epcis/TransactionEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/TransactionEvent> <https://ref.gs1.org/epcis/jsonldUriLabel> "eventID" .
+# 
+# https://ref.gs1.org/epcis/Transformation
+<https://ref.gs1.org/epcis/Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/Transformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A transformation business processes that takes a longer period of time than a single TransformationEvent, so is associated with a series of such events.\r\nWhen events share the same Transformation, the meaning is that the inputs to any of those events may have contributed in some way to each of the outputs in any of those same events."@en .
+<https://ref.gs1.org/epcis/Transformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/Transformation> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation" .
+<https://ref.gs1.org/epcis/Transformation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://ref.gs1.org/epcis/TransformationEvent
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ref.gs1.org/epcis/EPCISEvent> .
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A TransformationEvent captures information about an event in which one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are fully or partially consumed as inputs and one or more objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are produced as outputs. The TransformationEvent captures the relationship between the inputs and the outputs, such that any of the inputs may have contributed in some way to each of the outputs."@en .
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://ref.gs1.org/epcis/> .
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "TransformationEvent" .
+<https://ref.gs1.org/epcis/TransformationEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://ref.gs1.org/epcis/TransformationEvent> <https://ref.gs1.org/epcis/jsonldUriLabel> "eventID" .
+# 
+# https://w3id.org/eudpp#DPPActionType
+<https://w3id.org/eudpp#DPPActionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPActionType> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#oneOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#ModifyDPPDataAction> .
+<https://w3id.org/eudpp#ModifyDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#DeleteDPPDataAction> .
+<https://w3id.org/eudpp#DeleteDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#CorrectDPPDataAction> .
+<https://w3id.org/eudpp#CorrectDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#AddDPPDataAction> .
+<https://w3id.org/eudpp#AddDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPActionType> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification indicating the type of information-level action performed during a DPP update event."@en .
+<https://w3id.org/eudpp#DPPActionType> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Action Type"@en .
+# 
+# https://w3id.org/eudpp#DPPArchivalEvent
+<https://w3id.org/eudpp#DPPArchivalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPArchivalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#DPPArchivalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event corresponding to the archival or end-of-active-life management of a Digital Product Passport."@en .
+<https://w3id.org/eudpp#DPPArchivalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Archival Event"@en .
+# 
+# https://w3id.org/eudpp#DPPCreationEvent
+<https://w3id.org/eudpp#DPPCreationEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPCreationEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#DPPCreationEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event corresponding to the creation or initial issuance of a Digital Product Passport."@en .
+<https://w3id.org/eudpp#DPPCreationEvent> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Creation Event"@en .
+# 
+# https://w3id.org/eudpp#DPPEvent
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ESPREvent> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/eudpp#ProductEvent> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#isTriggeredByProductEvent> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An ESPR-level event concept representing an event that affects the existence, content, accessibility, update, correction, or governance of a DPP. A DPPEvent captures the passport-facing semantics of the occurrence and is modelled as distinct from the product event that may trigger it."@en .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Event"@en .
+# 
+# https://w3id.org/eudpp#DPPEventRecord
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/eudpp#DPPEvent> .
+_:genid31 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#recordsDPPEvent> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#dppEventRecordIdentifier> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#dppEventRecordedAt> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#recordedInSystem> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#recordedInSystemName> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://purl.org/dc/terms/source> "Defined in the EU DPP Core Ontology Event module to support the technical recording of DPP-related events."@en .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A technical audit record used to represent and log an information-level event affecting a Digital Product Passport. Unlike EPCIS carriers, this class is intended for recording DPP-side information events rather than product-facing operational events."@en .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Event Record"@en .
+# 
+# https://w3id.org/eudpp#DPPUpdateEvent
+<https://w3id.org/eudpp#DPPUpdateEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPUpdateEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#DPPUpdateEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/eudpp#DPPActionType> .
+_:genid36 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasDPPActionType> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPUpdateEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event corresponding to an update of the content of a Digital Product Passport."@en .
+<https://w3id.org/eudpp#DPPUpdateEvent> <http://www.w3.org/2000/01/rdf-schema#label> "DPP Update Event"@en .
+# 
+# https://w3id.org/eudpp#DestructionEvent
+<https://w3id.org/eudpp#DestructionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DestructionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#DestructionEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#DestructionEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(34); Art 25(1)"@en .
+<https://w3id.org/eudpp#DestructionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The intentional damaging or discarding of a product and unsold products as waste, with the exception of discarding for the sole purpose of delivering the discarded product for preparing for reuse, including refurbishment or remanufacturing operations. ESPR Art 2(34) and Art 25(1)."@en .
+<https://w3id.org/eudpp#DestructionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Destruction"@en .
+# 
+# https://w3id.org/eudpp#ESPREvent
+<https://w3id.org/eudpp#ESPREvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ESPREvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#ESPREvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; lifecycle-event-oriented abstraction introduced for modelling purposes."@en .
+<https://w3id.org/eudpp#ESPREvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract superclass introduced for modelling purposes. Used to represent the regulatory or business semantics of an event relevant in the ESPR context and concerning either a product or its DPP, independently of its technical journalisation."@en .
+<https://w3id.org/eudpp#ESPREvent> <http://www.w3.org/2000/01/rdf-schema#label> "ESPR Event"@en .
+# 
+# https://w3id.org/eudpp#MaintenanceEvent
+<https://w3id.org/eudpp#MaintenanceEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MaintenanceEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#MaintenanceEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#MaintenanceEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(19)"@en .
+<https://w3id.org/eudpp#MaintenanceEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions (one or more) taken to keep a product in a condition where it can fulfil its intended purpose. ESPR Art 2(19)."@en .
+<https://w3id.org/eudpp#MaintenanceEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance"@en .
+# 
+# https://w3id.org/eudpp#MakingAvailableOnMarketEvent
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(39)"@en .
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Any supply of a product for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge. ESPR Art 2(39)."@en .
+<https://w3id.org/eudpp#MakingAvailableOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Making Available on the Market"@en .
+# 
+# https://w3id.org/eudpp#PlacingOnMarketEvent
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MakingAvailableOnMarketEvent> .
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(40)"@en .
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The very first time a product is made available on the Union market. ESPR Art 2(40)."@en .
+<https://w3id.org/eudpp#PlacingOnMarketEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Placing on the Market"@en .
+# 
+# https://w3id.org/eudpp#ProductEvent
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ESPREvent> .
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An ESPR-level event concept representing an event that affects the state, condition, use, circulation, transformation, maintenance, or end-of-life status of a product. A ProductEvent captures the product-facing semantics of the occurrence and is distinct from any DPP-side event that may be triggered to record or reflect it."@en .
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Product Event"@en .
+# 
+# https://w3id.org/eudpp#PuttingIntoServiceEvent
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(41)"@en .
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "The first use of a product for its intended purpose in the Union. ESPR Art 2(41)."@en .
+<https://w3id.org/eudpp#PuttingIntoServiceEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Putting into Service"@en .
+# 
+# https://w3id.org/eudpp#RefurbishmentEvent
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(18)"@en .
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions carried out to prepare, clean, test, service and, where necessary, repair a product or a discarded product in order to restore its performance or functionality within the intended use and range of performance originally conceived at the design stage at the time of the placing of the product on the market. ESPR Art 2(18)."@en .
+<https://w3id.org/eudpp#RefurbishmentEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Refurbishment"@en .
+# 
+# https://w3id.org/eudpp#RemanufacturingEvent
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(16)"@en .
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions through which a new product is produced from objects that are waste, products or components and through which at least one change is made that substantially affects the safety, performance, purpose or type of the product. ESPR Art 2(16)."@en .
+<https://w3id.org/eudpp#RemanufacturingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Remanufacturing"@en .
+# 
+# https://w3id.org/eudpp#RepairEvent
+<https://w3id.org/eudpp#RepairEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#RepairEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#RepairEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#RepairEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(20)"@en .
+<https://w3id.org/eudpp#RepairEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions taken to return a defective product or waste to a condition where it fulfils its intended purpose. ESPR Art 2(20)."@en .
+<https://w3id.org/eudpp#RepairEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Repair"@en .
+# 
+# https://w3id.org/eudpp#UpgradingEvent
+<https://w3id.org/eudpp#UpgradingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#UpgradingEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#UpgradingEvent> <http://purl.org/dc/terms/identifier> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+<https://w3id.org/eudpp#UpgradingEvent> <http://purl.org/dc/terms/source> "Regulation (EU) 2024/1781; Art 2(17)"@en .
+<https://w3id.org/eudpp#UpgradingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Actions carried out to enhance the functionality, performance, capacity, safety or aesthetics of a product. ESPR Art 2(17)."@en .
+<https://w3id.org/eudpp#UpgradingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Upgrading"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#AddDPPDataAction
+<https://w3id.org/eudpp#AddDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#DPPActionType> .
+<https://w3id.org/eudpp#AddDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that new information is added to the Digital Product Passport."@en .
+<https://w3id.org/eudpp#AddDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#label> "add data"@en .
+# 
+# https://w3id.org/eudpp#CorrectDPPDataAction
+<https://w3id.org/eudpp#CorrectDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#DPPActionType> .
+<https://w3id.org/eudpp#CorrectDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that erroneous, inconsistent, or incomplete information in the Digital Product Passport is corrected."@en .
+<https://w3id.org/eudpp#CorrectDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#label> "correct data"@en .
+# 
+# https://w3id.org/eudpp#DeleteDPPDataAction
+<https://w3id.org/eudpp#DeleteDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#DPPActionType> .
+<https://w3id.org/eudpp#DeleteDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that information is removed from the Digital Product Passport."@en .
+<https://w3id.org/eudpp#DeleteDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#label> "delete data"@en .
+# 
+# https://w3id.org/eudpp#ModifyDPPDataAction
+<https://w3id.org/eudpp#ModifyDPPDataAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#DPPActionType> .
+<https://w3id.org/eudpp#ModifyDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that existing information in the Digital Product Passport is modified."@en .
+<https://w3id.org/eudpp#ModifyDPPDataAction> <http://www.w3.org/2000/01/rdf-schema#label> "modify data"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid37 <http://www.w3.org/2002/07/owl#members> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#DPPUpdateEvent> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#DPPCreationEvent> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#DPPArchivalEvent> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

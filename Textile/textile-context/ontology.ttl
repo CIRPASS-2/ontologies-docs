@@ -1,0 +1,836 @@
+@prefix : <https://w3id.org/eudpp/textile-durability#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/eudpp/textile-durability#> .
+
+<https://w3id.org/eudpp/textile-durability> rdf:type owl:Ontology ;
+                                             owl:imports <https://w3id.org/eudpp/textile-connector> ,
+                                                         <https://w3id.org/eudpp/textile-dpp-mireot> ,
+                                                         <https://w3id.org/eudpp/textile-durability> ,
+                                                         <https://w3id.org/eudpp/textile-process> ;
+                                             <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Context Ontology. Version 1.1.2."@en ;
+                                             <http://purl.org/dc/terms/created> "2026-03-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/creator> "Elio Hbeich"@en ;
+                                             <http://purl.org/dc/terms/description> "Ontology module for representing concrete observations, declarations and settings about textile use, care, environmental exposure, storage and user behaviour. Context factor types are represented as SKOS concepts; processes and process parameters remain in TEXTILE_PROCESS."@en ;
+                                             <http://purl.org/dc/terms/issued> "2026-03-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                             <http://purl.org/dc/terms/modified> "2026-07-16"^^xsd:date ;
+                                             <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                             <http://purl.org/dc/terms/title> "EU DPP Textile Context Ontology"@en ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtctx" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-context#" ;
+                                             rdfs:comment "A context observation is not a textile process, process parameter, assessment result or derived indicator. Washing temperature and similar operational settings remain represented through TEXTILE_PROCESS."@en ;
+                                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                             rdfs:label "EU DPP Textile Context Ontology"@en ;
+                                             owl:versionInfo "Version 1.1.2" ;
+                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC 3rd milestone, Sections 6.3 (pages 84-87, lines 2105-2244), 9.2.2.2 (pages 125-126, lines 3296-3327), and 13.7.2 (pages 395-410, lines 10227-10646)."@en ;
+                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#modellingNote
+<https://w3id.org/eudpp/textile-connector#modellingNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#typicalInfluenceOn
+<https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess
+<https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> rdf:type owl:AnnotationProperty ;
+                                                                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                   rdfs:comment "Weak annotation relation indicating that a context factor typically qualifies the interpretation, applicability or expected effect of a textile process type."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                   rdfs:label "typically qualifies process"@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/eudpp/textile-context#hasCategoricalValue
+<https://w3id.org/eudpp/textile-context#hasCategoricalValue> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                             rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                             rdfs:comment "Relates a textile context observation to a controlled categorical value represented as a SKOS concept."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                             rdfs:label "has categorical value"@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#hasContextFactorType
+<https://w3id.org/eudpp/textile-context#hasContextFactorType> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                              rdfs:range <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                              <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                              rdfs:comment "Identifies the controlled context factor concept observed or declared by a textile context observation."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                              rdfs:label "has context factor type"@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#hasContextObservation
+<https://w3id.org/eudpp/textile-context#hasContextObservation> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <https://w3id.org/eudpp#Product>
+                                                                                           <https://w3id.org/eudpp/textile-process#TextileProcessExecution>
+                                                                                         )
+                                                                           ] ;
+                                                               rdfs:range <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                               <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                               rdfs:comment "Relates a product or a concrete textile process execution to a context observation applying to it."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                               rdfs:label "has context observation"@en ;
+                                                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#hasQuantitativeValue
+<https://w3id.org/eudpp/textile-context#hasQuantitativeValue> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                              rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                                                              <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                              rdfs:comment "Relates a textile context observation to its quantitative value."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                              rdfs:label "has quantitative value"@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#hasReferencePeriod
+<https://w3id.org/eudpp/textile-context#hasReferencePeriod> rdf:type owl:ObjectProperty ;
+                                                            rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                            rdfs:range <https://w3id.org/eudpp/textile-connector#ReferencePeriod> ;
+                                                            <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                            rdfs:comment "Relates a textile context observation to the structured time interval for which it is valid or observed."@en ;
+                                                            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                            rdfs:label "has reference period"@en ;
+                                                            <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#observationOf
+<https://w3id.org/eudpp/textile-context#observationOf> rdf:type owl:ObjectProperty ;
+                                                       owl:inverseOf <https://w3id.org/eudpp/textile-context#hasContextObservation> ;
+                                                       rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                       rdfs:range [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://w3id.org/eudpp#Product>
+                                                                                  <https://w3id.org/eudpp/textile-process#TextileProcessExecution>
+                                                                                )
+                                                                  ] ;
+                                                       <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                       rdfs:comment "Relates a textile context observation to the product or process execution to which it applies."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                       rdfs:label "observation of"@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/eudpp/textile-context#hasTextualValue
+<https://w3id.org/eudpp/textile-context#hasTextualValue> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <https://w3id.org/eudpp/textile-context#TextileContextObservation> ;
+                                                         rdfs:range xsd:string ;
+                                                         <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                         rdfs:comment "Relates a textile context observation to a textual value used when no controlled concept or quantitative representation is available."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                         rdfs:label "has textual value"@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Product
+<https://w3id.org/eudpp#Product> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-connector#QuantitativeValue
+<https://w3id.org/eudpp/textile-connector#QuantitativeValue> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-connector#ReferencePeriod
+<https://w3id.org/eudpp/textile-connector#ReferencePeriod> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-context#TextileContextFactorConcept
+<https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                     rdfs:comment "A SKOS concept identifying the type of contextual condition observed or declared for a textile product or process execution."@en ;
+                                                                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                     rdfs:label "Textile context factor concept"@en ;
+                                                                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#TextileContextObservation
+<https://w3id.org/eudpp/textile-context#TextileContextObservation> rdf:type owl:Class ;
+                                                                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                   rdfs:comment "A concrete observation, declaration or setting of a contextual condition applying to a textile product or a textile process execution."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                   rdfs:label "Textile context observation"@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-process#TextileProcessExecution
+<https://w3id.org/eudpp/textile-process#TextileProcessExecution> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/eudpp/textile-context#ContextFactorScheme
+<https://w3id.org/eudpp/textile-context#ContextFactorScheme> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                             rdfs:comment "Controlled vocabulary of textile use, care, exposure, storage and user-behaviour context factor types."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                             rdfs:label "Textile context factor scheme"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-context#careContextFactor> ,
+                                                                                                                 <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ,
+                                                                                                                 <https://w3id.org/eudpp/textile-context#storageContextFactor> ,
+                                                                                                                 <https://w3id.org/eudpp/textile-context#useContextFactor> ,
+                                                                                                                 <https://w3id.org/eudpp/textile-context#userBehaviourFactor> ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile context factor scheme"@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#abrasionExposure
+<https://w3id.org/eudpp/textile-context#abrasionExposure> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "Exposure of a textile product to rubbing, friction or abrasion during use."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Abrasion exposure"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#useContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Abrasion exposure"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed page 113, lines 3000-3009; Annex 13.4, Table 124, printed pages 362-367."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#activeOrInactiveStorage
+<https://w3id.org/eudpp/textile-context#activeOrInactiveStorage> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                          <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                 rdfs:comment "Whether a textile item is stored for regular access and use or kept unused for an extended period."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                 rdfs:label "Active or inactive storage"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#storageContextFactor> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Active or inactive storage"@en ;
+                                                                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2231; JRC Preparatory Study, Section 13.7.2.10, printed page 410, lines 10618-10646."@en ;
+                                                                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#bleachingPractice
+<https://w3id.org/eudpp/textile-context#bleachingPractice> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                    <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                           rdfs:comment "Practice or condition describing whether bleaching is used and under what care conditions."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                           rdfs:label "Bleaching practice"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Bleaching practice"@en ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3305."@en ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                           <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#careBehaviour
+<https://w3id.org/eudpp/textile-context#careBehaviour> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                       rdfs:comment "User choices and practices affecting laundering, drying, ironing, storage or maintenance of a textile product."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                       rdfs:label "Care behaviour"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "Maintenance practice"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#userBehaviourFactor> ;
+                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Care behaviour"@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.1, printed pages 84-85, lines 2105-2143; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248."@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#careContextFactor
+<https://w3id.org/eudpp/textile-context#careContextFactor> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                    <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                           <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                           rdfs:comment "Context factor related to laundering, cleaning, drying, ironing, bleaching or other care practices."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                           rdfs:label "Care context factor"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                           <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-context#bleachingPractice> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#cleaningFrequency> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#detergentUsePractice> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#dryingPractice> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#ironingPractice> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#laundrySortingPractice> ,
+                                                                                                          <https://w3id.org/eudpp/textile-context#washingFrequency> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Care context factor"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#careInstructionCompliance
+<https://w3id.org/eudpp/textile-context#careInstructionCompliance> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                            <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                   rdfs:comment "Extent to which the user follows the care instructions provided for a textile product."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                   rdfs:label "Care-instruction compliance"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#userBehaviourFactor> ;
+                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Care-instruction compliance"@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#modellingNote> "Following care instructions may support maintenance of product condition, but no deterministic lifetime inference is asserted."@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2157; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458; JRC Preparatory Study, Section 9.2.2.1, printed pages 122-123, lines 3234-3262."@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> ;
+                                                                   <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> :IntrinsicDurability .
+
+
+###  https://w3id.org/eudpp/textile-context#cleaningFrequency
+<https://w3id.org/eudpp/textile-context#cleaningFrequency> rdf:type owl:NamedIndividual ,
+                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                    <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                           <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                           rdfs:comment "How often a textile product undergoes laundering, professional cleaning, hand washing, airing, steaming or another cleaning operation."@en ;
+                                                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                           rdfs:label "Cleaning frequency"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Cleaning frequency"@en ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10230-10248."@en ;
+                                                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                           <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#detergentUsePractice
+<https://w3id.org/eudpp/textile-context#detergentUsePractice> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                       <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                              <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                              rdfs:comment "Practice concerning the choice and dosing of detergent or softener during textile care."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                              rdfs:label "Detergent use practice"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Detergent use practice"@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2112-2116; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3308-3314."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                              <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#dryingPractice
+<https://w3id.org/eudpp/textile-context#dryingPractice> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                 <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                        rdfs:comment "Method or practice used to dry a textile product, such as tumble drying, indoor line drying or outdoor line drying."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                        rdfs:label "Drying practice"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Drying practice"@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#modellingNote> "Drying method and temperature may influence shrinkage and dimensional stability; no deterministic effect is asserted."@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2.5, printed page 403, lines 10404-10416; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2126-2131."@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                        <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> :DimensionalStability ;
+                                                        <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#DryingProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#durationOfUse
+<https://w3id.org/eudpp/textile-context#durationOfUse> rdf:type owl:NamedIndividual ,
+                                                                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                       <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                       rdfs:comment "The duration for which a product is used during a stated episode or reference period, distinct from an estimated product lifetime."@en ;
+                                                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                       rdfs:label "Duration of use"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#useContextFactor> ;
+                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Duration of use"@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Annex 13.7.2, printed page 395, lines 10235-10243."@en ;
+                                                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#environmentalContextFactor
+<https://w3id.org/eudpp/textile-context#environmentalContextFactor> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                             <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                    <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                    rdfs:comment "Context factor related to sunlight, ultraviolet radiation, humidity, moisture, temperature or external chemicals."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                    rdfs:label "Environmental exposure context factor"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                    <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-context#externalChemicalExposure> ,
+                                                                                                                   <https://w3id.org/eudpp/textile-context#humidityExposure> ,
+                                                                                                                   <https://w3id.org/eudpp/textile-context#moistureExposure> ,
+                                                                                                                   <https://w3id.org/eudpp/textile-context#sunlightExposure> ,
+                                                                                                                   <https://w3id.org/eudpp/textile-context#temperatureExposure> ,
+                                                                                                                   <https://w3id.org/eudpp/textile-context#uvExposure> ;
+                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Environmental exposure context factor"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#externalChemicalExposure
+<https://w3id.org/eudpp/textile-context#externalChemicalExposure> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                           <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                  rdfs:comment "Exposure of a textile product to an external chemical formulation during care or use; the substance or formulation should be identified separately where possible."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                  rdfs:label "External chemical exposure"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "External chemical exposure"@en ;
+                                                                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10244; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3310-3314."@en ;
+                                                                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#foldingOrHangingCondition
+<https://w3id.org/eudpp/textile-context#foldingOrHangingCondition> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                            <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                   rdfs:comment "Whether and how a textile product is folded or hung during storage."@en ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                   rdfs:label "Folding or hanging condition"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#storageContextFactor> ;
+                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Folding or hanging condition"@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3259-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 13.7.2.7, printed page 403, lines 10434-10439."@en ;
+                                                                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> ;
+                                                                   <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#StorageProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#frequencyOfUse
+<https://w3id.org/eudpp/textile-context#frequencyOfUse> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                 <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                        rdfs:comment "How often a textile product is used or worn during a stated reference period."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                        rdfs:label "Frequency of use"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#useContextFactor> ;
+                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Frequency of use"@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10235-10243; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111."@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#humidityExposure
+<https://w3id.org/eudpp/textile-context#humidityExposure> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "Exposure of a textile product to a stated ambient humidity condition."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Humidity exposure"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Humidity exposure"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#intensityOfUse
+<https://w3id.org/eudpp/textile-context#intensityOfUse> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                 <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                        rdfs:comment "The severity or demanding nature of product use; any implementation must define the scale or operational criterion used."@en ;
+                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                        rdfs:label "Intensity of use"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#useContextFactor> ;
+                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Intensity of use"@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.6.1, printed pages 146-147, lines 4090-4130."@en ;
+                                                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#ironingPractice
+<https://w3id.org/eudpp/textile-context#ironingPractice> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                  <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                         rdfs:comment "Practice and frequency with which a textile product is ironed or steamed."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                         rdfs:label "Ironing practice"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Ironing practice"@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#modellingNote> "High-temperature ironing may contribute to shrinkage; the effect remains product- and condition-dependent."@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2.6, printed page 403, lines 10417-10433; JRC Preparatory Study, Section 6.3.1, printed page 85, lines 2132-2134."@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> ;
+                                                         <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> :DimensionalStability ;
+                                                         <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#IroningProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#laundrySortingPractice
+<https://w3id.org/eudpp/textile-context#laundrySortingPractice> rdf:type owl:NamedIndividual ,
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                         <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                rdfs:comment "Practice used to sort textile items before washing, for example by colour, fibre type or washing temperature."@en ;
+                                                                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                rdfs:label "Laundry sorting practice"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Laundry sorting practice"@en ;
+                                                                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2.1, printed pages 395-396, lines 10249-10268; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3249-3255."@en ;
+                                                                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                                <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#mechanicalStress
+<https://w3id.org/eudpp/textile-context#mechanicalStress> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "Mechanical loading or deformation imposed on a textile product during use."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Mechanical stress"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#useContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Mechanical stress"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed page 113, lines 3000-3009; Annex 13.4, Table 124, printed pages 362-367."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#moistureExposure
+<https://w3id.org/eudpp/textile-context#moistureExposure> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "Exposure of a textile product to moisture or a wet condition, distinguished from ambient relative humidity."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Moisture exposure"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Moisture exposure"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3317-3318."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#repairBehaviour
+<https://w3id.org/eudpp/textile-context#repairBehaviour> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                  <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                         rdfs:comment "User behaviour concerning self-repair, seeking help or using a professional repair service."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                         rdfs:label "Repair behaviour"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#userBehaviourFactor> ;
+                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Repair behaviour"@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2196-2219; JRC Preparatory Study, Section 13.7.2.9, printed pages 406-407, lines 10528-10556."@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                         <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#RepairProcess> .
+
+
+###  https://w3id.org/eudpp/textile-context#replacementBehaviour
+<https://w3id.org/eudpp/textile-context#replacementBehaviour> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                       <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                              <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                              rdfs:comment "User behaviour concerning substitution or disposal of a textile product; replacement frequency remains a derived indicator in TEXTILE_INDICATOR."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                              rdfs:label "Replacement behaviour"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#userBehaviourFactor> ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Replacement behaviour"@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 6.3.4, printed pages 86-87, lines 2220-2244; JRC Preparatory Study, Section 6.4.1, printed page 87, lines 2246-2259."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#storageContextFactor
+<https://w3id.org/eudpp/textile-context#storageContextFactor> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                       <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                              <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                              rdfs:comment "Context factor related to storage practice or storage conditions."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                              rdfs:label "Storage context factor"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                              <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-context#activeOrInactiveStorage> ,
+                                                                                                             <https://w3id.org/eudpp/textile-context#foldingOrHangingCondition> ,
+                                                                                                             <https://w3id.org/eudpp/textile-context#storageHumidity> ,
+                                                                                                             <https://w3id.org/eudpp/textile-context#storageSunlightExposure> ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Storage context factor"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#storageHumidity
+<https://w3id.org/eudpp/textile-context#storageHumidity> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                  <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                         rdfs:comment "Ambient humidity condition applying while a textile product is stored."@en ;
+                                                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                         rdfs:label "Storage humidity"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#storageContextFactor> ;
+                                                         <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Storage humidity"@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3260-3262."@en ;
+                                                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#storageSunlightExposure
+<https://w3id.org/eudpp/textile-context#storageSunlightExposure> rdf:type owl:NamedIndividual ,
+                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                          <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                                 rdfs:comment "Exposure to sunlight while a textile product is stored."@en ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                                 rdfs:label "Storage sunlight exposure"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#storageContextFactor> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Storage sunlight exposure"@en ;
+                                                                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325; JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262."@en ;
+                                                                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-context#sunlightExposure
+<https://w3id.org/eudpp/textile-context#sunlightExposure> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "Exposure of a textile product to direct or indirect sunlight during drying, storage or use."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Sunlight exposure"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Sunlight exposure"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#modellingNote> "Sunlight exposure may influence colour fastness and appearance depending on dyes, material and exposure conditions."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.1, printed page 123, lines 3257-3262; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3315-3316; JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3322-3325."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> ;
+                                                          <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> :ColourFastness .
+
+
+###  https://w3id.org/eudpp/textile-context#temperatureExposure
+<https://w3id.org/eudpp/textile-context#temperatureExposure> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                      <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                             <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                             rdfs:comment "Exposure of a textile product to a stated temperature condition during use, care, drying, ironing or storage."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                             rdfs:label "Temperature exposure"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Temperature exposure"@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3309-3318."@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#useContextFactor
+<https://w3id.org/eudpp/textile-context#useContextFactor> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                          rdfs:comment "Context factor related to how a textile product is used or worn."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Use context factor"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-context#abrasionExposure> ,
+                                                                                                         <https://w3id.org/eudpp/textile-context#durationOfUse> ,
+                                                                                                         <https://w3id.org/eudpp/textile-context#frequencyOfUse> ,
+                                                                                                         <https://w3id.org/eudpp/textile-context#intensityOfUse> ,
+                                                                                                         <https://w3id.org/eudpp/textile-context#mechanicalStress> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Use context factor"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#userBehaviourFactor
+<https://w3id.org/eudpp/textile-context#userBehaviourFactor> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                      <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                             rdfs:comment "Context factor related to user choices affecting care, repair, storage, replacement or product use."@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                             rdfs:label "User behaviour factor"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                             <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-context#careBehaviour> ,
+                                                                                                            <https://w3id.org/eudpp/textile-context#careInstructionCompliance> ,
+                                                                                                            <https://w3id.org/eudpp/textile-context#repairBehaviour> ,
+                                                                                                            <https://w3id.org/eudpp/textile-context#replacementBehaviour> ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "User behaviour factor"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#uvExposure
+<https://w3id.org/eudpp/textile-context#uvExposure> rdf:type owl:NamedIndividual ,
+                                                             <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                             <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                    rdfs:comment "Exposure of a textile product to ultraviolet radiation; the source and exposure conditions should be stated where known."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                    rdfs:label "Ultraviolet exposure"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#environmentalContextFactor> ;
+                                                    <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Ultraviolet exposure"@en ;
+                                                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 10.2.3, printed page 180, lines 5038-5043."@en ;
+                                                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-context#washingFrequency
+<https://w3id.org/eudpp/textile-context#washingFrequency> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                   <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept> ;
+                                                          <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                                                          rdfs:comment "How often a textile product is washed during a stated reference period."@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/eudpp/textile-context> ;
+                                                          rdfs:label "Washing frequency"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-context#careContextFactor> ;
+                                                          <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-context#ContextFactorScheme> ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Washing frequency"@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#modellingNote> "Washing frequency may influence physical durability and dimensional stability, but the effect depends on material, programme and care conditions."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 13.7.2, printed page 395, lines 10241-10248; JRC Preparatory Study, Section 6.3.1, printed page 84, lines 2105-2111."@en ;
+                                                          <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> ;
+                                                          <https://w3id.org/eudpp/textile-connector#typicalInfluenceOn> :DimensionalStability ;
+                                                          <https://w3id.org/eudpp/textile-context#typicallyQualifiesProcess> <https://w3id.org/eudpp/textile-process#WashingProcess> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <https://w3id.org/eudpp/textile-context#TextileContextFactorConcept>
+                <https://w3id.org/eudpp/textile-context#TextileContextObservation>
+                <https://w3id.org/eudpp/textile-process#TextileProcessExecution>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

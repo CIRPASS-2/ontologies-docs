@@ -1,0 +1,731 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/eudpp/IDENT#"
+     xml:base="https://w3id.org/eudpp/IDENT"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:eudpp="https://w3id.org/eudpp#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/eudpp/IDENT">
+        <terms:contributor xml:lang="en">Riina Maigre</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-13</terms:created>
+        <terms:creator xml:lang="en">Tarmo Robal</terms:creator>
+        <terms:description xml:lang="en">MODULE: IDENT
+Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.
+
+The Identifier module proposes an universal approach for identifiers used in the EU DPP CO delivered by the CIRPASS-2 European Project.  
+The module describes identifiers used for the project through aspects and scheme references, if appropriate, granularity is added.
+---
+
+DESIGN RESTRICTION: Specific modules of the EU DPP CO need to use the Connector to establish a link to the Identifiers module. The link needs to be establsihed to a subclass of aIdentifier class, e.g., Product hasUniqueProductIdentifier ProductIdentifier.
+---
+
+DEPENDENCIES: This module may have dependencies to all  EU DPP Core Ontology (CO) modules that use different types of identifiers, including: CON, P_DPP, SOC, ACTOR, ...  
+--
+
+THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
+All liability for any damages arising from use or misuse of this vocabulary is with the user.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-22</terms:issued>
+        <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
+        <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
+In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
+        <terms:title xml:lang="en">The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.</terms:title>
+        <vann:preferredNamespacePrefix>ident</vann:preferredNamespacePrefix>
+        <rdfs:comment xml:lang="en">First iteration of the Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.</rdfs:comment>
+        <rdfs:label xml:lang="en">EU DPP IDENT</rdfs:label>
+        <owl:versionInfo>1.0.7</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#hasGranularity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasGranularity">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#IdentifierGranularity"/>
+        <rdfs:comment xml:lang="en">Defines the granularity of an identifier, if exists.</rdfs:comment>
+        <rdfs:label xml:lang="en">has granularity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasScheme -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasScheme">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:comment>The scheme/standard the Identifier follows</rdfs:comment>
+        <rdfs:label xml:lang="en">has scheme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierExampleValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierExampleValue">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Example value of the identifier</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier example value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierExpiresOn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierExpiresOn">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">identifier expires on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierIssuedOn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierIssuedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">identifier issued on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierMaxLength -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierMaxLength">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Maximum length of the identifier</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier maximum length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierMinLength -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierMinLength">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Minimum length of the identifier</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier minimum length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierPattern -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierPattern">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A pattern the identifier conforms to, given as a regular expression (regex).</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier pattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierSchemeIssuer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierSchemeIssuer">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Issuer of the identifier scheme</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier scheme issuer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierSchemeVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierSchemeVersion">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Reference standard version the instance schema refers to</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier scheme version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierValue">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The (unique) value of the identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#ActorIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ActorIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasScheme"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eudpp#ActorIdentifierScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#DPPIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#FacilityIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <rdfs:comment xml:lang="en">A type of identifier to identify Actors. A unique code assigned to Actor based on a scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actor identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ActorIdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ActorIdentifierScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify Actors. e.g., GLN, LEI, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Actor identifier scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#FacilityIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <rdfs:comment xml:lang="en">A type of identifier to identify DPP. DPP Identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#FacilityIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#FacilityIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <rdfs:comment xml:lang="en">A unique code assigned to a physical site (factory, warehouse, plant, school, hospital, etc.), i.e., identifies a location.</rdfs:comment>
+        <rdfs:label xml:lang="en">Facility identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#Identifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#Identifier">
+        <rdfs:comment xml:lang="en">Identifier. A general class to hold different kinds of identifiers described and used for EU DPP CO. Each sub-class of this class describes a different kind of identifier. Intentionally modelled as sub-classes. 
+Identifiers have value, and a scheme/standard they are based on.
+
+Cardinatlity restrictions added to each subclass to enforce inheritance of the data propertyy identifierValue.</rdfs:comment>
+        <rdfs:label>Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#IdentifierGranularity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#IdentifierGranularity">
+        <rdfs:comment xml:lang="en">The granularity of the identifier. For example, for Products this could be model, batch, item.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier granularity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#IdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#IdentifierScheme">
+        <rdfs:comment xml:lang="en">The scheme or standard used for Identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Identifier scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#MaterialIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#MaterialIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasScheme"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eudpp#MaterialIdentifierScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <rdfs:comment xml:lang="en">A type of identifier to identify materials. A unique code assigned to Material based on a scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#MaterialIdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#MaterialIdentifierScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify materials, e.g., CAS.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material identifier scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ProductIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ProductIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasScheme"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasGranularity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <rdfs:comment xml:lang="en">A type of identifier to identify Products. A unique code assigned to identify a product. e.g., GTIN.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ProductIdentifierGranularity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ProductIdentifierGranularity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#batch"/>
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#item"/>
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#model"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierGranularity"/>
+        <rdfs:comment xml:lang="en">The granularity level (batch, item, model) at which the product identifier represents the product.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product identifier granularity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ProductIdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ProductIdentifierScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify Products, e.g., GTIN, SKU, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product identifier scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#SoCIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#SoCIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of identifier to identify substances of concern.</rdfs:comment>
+        <rdfs:label xml:lang="en">Substance of concern identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#CAS -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#CAS">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#MaterialIdentifierScheme"/>
+        <eudpp:identifierExampleValue>7732-18-5</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</eudpp:identifierMinLength>
+        <rdfs:comment xml:lang="en">CAS Number (Chemical Abstracts Service)</rdfs:comment>
+        <rdfs:label xml:lang="en">CAS</rdfs:label>
+        <rdfs:seeAlso>https://www.cas.org/support/documentation/chemical-substances/faqs</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Chemical Abstracts Service Registry Number</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#EORI -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#EORI">
+        <eudpp:identifierExampleValue>DE123456789012345</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</eudpp:identifierMinLength>
+        <rdfs:comment xml:lang="en">Economic Operators Registration and Identification (EU).
+This is the EU’s official identifier for companies involved in import/export.
+Mandatory for any company trading with the EU.
+
+Used in customs declarations
+Unique per company
+
+Format: country code + number (e.g., DE123456789)
+
+This is the most widely used identifier for economic operators in EU trade.</rdfs:comment>
+        <rdfs:label xml:lang="en">EORI</rdfs:label>
+        <rdfs:label>https://taxation-customs.ec.europa.eu/customs/customs-procedures-import-and-export/customs-operations/economic-operators-registration-and-identification-number-eori_en</rdfs:label>
+        <skos:altLabel xml:lang="en">Economic Operators Registration and Identification (EU</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#GLN -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#GLN">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ActorIdentifierScheme"/>
+        <eudpp:identifierExampleValue>9501101530003</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</eudpp:identifierMinLength>
+        <eudpp:identifierSchemeIssuer>GS1</eudpp:identifierSchemeIssuer>
+        <rdfs:comment xml:lang="en">A globally unique identifier defined by GS1 used to identify legal entities, functional entities, and physical locations within business and supply chain processes.
+
+Typically identifies: legal entities, functional entities (departments), physical locations (warehouses, sites).</rdfs:comment>
+        <rdfs:label xml:lang="en">GLN</rdfs:label>
+        <rdfs:seeAlso>https://www.gs1.org/standards/id-keys/gln</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Global Location Number</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#GTIN -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#GTIN">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <eudpp:identifierExampleValue>14006381333938</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</eudpp:identifierMinLength>
+        <eudpp:identifierSchemeIssuer>GS1</eudpp:identifierSchemeIssuer>
+        <rdfs:comment xml:lang="en">A globally unique identifier for trade items, defined by GS1, used to identify products at various packaging levels.</rdfs:comment>
+        <rdfs:label xml:lang="en">GTIN</rdfs:label>
+        <rdfs:seeAlso>https://www.gs1.org/standards/id-keys/gtin</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Global Trade Item Number</skos:altLabel>
+        <skos:definition xml:lang="en">A globally unique identifier for trade items, defined by GS1, used to identify products at various packaging levels.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#LEI -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#LEI">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ActorIdentifierScheme"/>
+        <eudpp:identifierExampleValue>529900T8BM49AURSDO55</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</eudpp:identifierMinLength>
+        <eudpp:identifierSchemeIssuer>ISO</eudpp:identifierSchemeIssuer>
+        <rdfs:comment xml:lang="en">A Legal Entity Identifier (LEI) is a globally unique 20-character alphanumeric code that identifies legally distinct entities participating in financial transactions, as defined by ISO 17442.
+
+A 20‑character code used globally for financial and regulatory reporting.
+Required for companies involved in financial transactions.
+Used by regulators, banks, customs, and some trade systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">LEI</rdfs:label>
+        <rdfs:seeAlso>https://www.iso.org/standard/78829.html</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#SKU -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#SKU">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <eudpp:identifierExampleValue>ABC-RED-XL</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</eudpp:identifierMaxLength>
+        <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</eudpp:identifierMinLength>
+        <rdfs:comment xml:lang="en">A Stock Keeping Unit (SKU) is an internal identifier assigned by an organization to uniquely identify and track a product, item, or variant within its own inventory and management systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">SKU</rdfs:label>
+        <rdfs:seeAlso>https://en.wikipedia.org/wiki/Stock_keeping_unit</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">Stock Keeping Unit</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#batch -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#batch">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:label xml:lang="en">batch</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#item -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#item">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:label xml:lang="en">item</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#model -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#model">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:label xml:lang="en">model</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

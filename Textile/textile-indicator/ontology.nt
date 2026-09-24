@@ -1,0 +1,591 @@
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-indicator/1.1.2> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-assessment> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-dpp-mireot> .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-durability> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Indicator Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/description> "Ontology module for derived textile durability and use-related indicators. It separates indicators from assessment results, product characteristics, thresholds and quantitative values."@en .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/dc/terms/title> "EU DPP Textile Indicator Ontology"@en .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtind" .
+<https://w3id.org/eudpp/textile-indicator> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-indicator#" .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "The module deliberately does not subclass dpp:QualityIndicator because the inspected DPP Core makes dpp:QualityIndicator a subclass of dpp:QuantitativeProperty. That pattern would conflate an indicator with the quantitative-value model rejected by the textile network."@en .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "This module models interpretive or calculated indicators. It does not treat a raw assessment result, a durability characteristic, a threshold or a quantitative value as an indicator."@en .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Indicator Ontology"@en .
+<https://w3id.org/eudpp/textile-indicator> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#typicallyContributesTo
+<https://w3id.org/eudpp/textile-connector#typicallyContributesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon> .
+<https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to an observed textile degradation phenomenon that it interprets."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <http://www.w3.org/2000/01/rdf-schema#label> "concerns degradation phenomenon"@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDegradationPhenomenon> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#Durability> .
+<https://w3id.org/eudpp/textile-durability#Durability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the durability concept whose interpretation it supports."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <http://www.w3.org/2000/01/rdf-schema#label> "concerns durability aspect"@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsDurabilityAspect> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#concernsFailureMode
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#FailureMode> .
+<https://w3id.org/eudpp/textile-durability#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a textile failure mode that it interprets or uses in its derivation."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <http://www.w3.org/2000/01/rdf-schema#label> "concerns failure mode"@en .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3177-3180."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsFailureMode> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> .
+<https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the durability-related performance parameter that it interprets."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "concerns performance parameter"@en .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsPerformanceParameter> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#concernsProduct
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the product that it describes or interprets."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#label> "concerns product"@en .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#concernsProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#contributesToIndicator
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a broader indicator to which it contributes."@en .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "contributes to indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#contributesToIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#derivedFrom
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-assessment#AssessmentResult> .
+<https://w3id.org/eudpp/textile-assessment#AssessmentResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to an assessment result or another indicator used as evidence in its calculation, aggregation or interpretation."@en .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "derived from"@en .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#derivedFrom> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#derivedUsingMethod
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#AssessmentMethod> .
+<https://w3id.org/eudpp/textile-assessment#AssessmentMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the assessment, scoring or interpretive method used to derive it."@en .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <http://www.w3.org/2000/01/rdf-schema#label> "derived using method"@en .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5251-5284."@en .
+<https://w3id.org/eudpp/textile-indicator#derivedUsingMethod> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#PerformanceThreshold> .
+<https://w3id.org/eudpp/textile-assessment#PerformanceThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a performance threshold used to interpret or classify its value."@en .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <http://www.w3.org/2000/01/rdf-schema#label> "evaluated against threshold"@en .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#evaluatedAgainstThreshold> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasCategoricalValue
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a controlled categorical, ordinal or rating value represented as a SKOS concept."@en .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <http://www.w3.org/2000/01/rdf-schema#label> "has categorical value"@en .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasCategoricalValue> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp/textile-indicator#contributesToIndicator> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an aggregate or trajectory indicator to a more specific indicator included in its derivation."@en .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "has constituent indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasConstituentIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasIndicator
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp/textile-indicator#isIndicatorOf> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a product to an indicator that describes or interprets it."@en .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "has indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+<https://w3id.org/eudpp/textile-connector#QuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the quantitative value that expresses its reported or calculated value."@en .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#label> "has quantitative value"@en .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasQuantitativeValue> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasReferencePeriod
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-connector#ReferencePeriod> .
+<https://w3id.org/eudpp/textile-connector#ReferencePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the structured temporal interval to which it applies."@en .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <http://www.w3.org/2000/01/rdf-schema#label> "has reference period"@en .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasReferencePeriod> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#informsEstimateOf
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates supporting indicator evidence to a lifetime-of-product indicator whose value is inferred from that evidence."@en .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <http://www.w3.org/2000/01/rdf-schema#label> "informs estimate of"@en .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3168-3181."@en .
+<https://w3id.org/eudpp/textile-indicator#informsEstimateOf> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#isIndicatorOf
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp/textile-indicator#concernsProduct> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the product that it describes or interprets."@en .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is indicator of"@en .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#isIndicatorOf> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting> .
+<https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to the concrete measurement-parameter setting that qualifies its meaning, such as a number and type of cycles."@en .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <http://www.w3.org/2000/01/rdf-schema#label> "is qualified by parameter setting"@en .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#isQualifiedByParameterSetting> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-assessment#MeasurementParameter> .
+<https://w3id.org/eudpp/textile-assessment#MeasurementParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a series or trajectory indicator to the measurement parameter used as its organising axis."@en .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <http://www.w3.org/2000/01/rdf-schema#label> "is structured by measurement parameter"@en .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#isStructuredByMeasurementParameter> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-durability#Durability> .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a durability concept whose assessment it supports without asserting equivalence."@en .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <http://www.w3.org/2000/01/rdf-schema#label> "supports assessment of"@en .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#supportsAssessmentOf> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-indicator#calculationAssumption
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual statement of an assumption used in calculating, estimating or interpreting an indicator."@en .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "calculation assumption"@en .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1, printed page 185, lines 5239-5243."@en .
+<https://w3id.org/eudpp/textile-indicator#calculationAssumption> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#calculationDescription
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Textual description of the calculation, aggregation or interpretation procedure used for an indicator."@en .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <http://www.w3.org/2000/01/rdf-schema#label> "calculation description"@en .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#calculationDescription> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#hasTextualValue
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an indicator to a free-text value when no controlled categorical value is available."@en .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <http://www.w3.org/2000/01/rdf-schema#label> "has textual value"@en .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#hasTextualValue> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# https://w3id.org/eudpp#Product
+# 
+# https://w3id.org/eudpp/textile-assessment#AssessmentMethod
+# 
+# https://w3id.org/eudpp/textile-assessment#AssessmentResult
+# 
+# https://w3id.org/eudpp/textile-assessment#MeasurementParameter
+# 
+# https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting
+# 
+# https://w3id.org/eudpp/textile-assessment#PerformanceThreshold
+# 
+# https://w3id.org/eudpp/textile-connector#QuantitativeValue
+# 
+# https://w3id.org/eudpp/textile-connector#ReferencePeriod
+# 
+# https://w3id.org/eudpp/textile-durability#Durability
+# 
+# https://w3id.org/eudpp/textile-durability#FailureMode
+# 
+# https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon
+# 
+# https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter
+# 
+# https://w3id.org/eudpp/textile-indicator#DegradationRate
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Calculated indicator expressing change in a performance parameter or degradation phenomenon per stated unit of time, use, cycle or exposure."@en .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <http://www.w3.org/2000/01/rdf-schema#label> "Degradation rate"@en .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1, printed page 185, lines 5231-5243."@en .
+<https://w3id.org/eudpp/textile-indicator#DegradationRate> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#DurabilityIndicator
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://purl.org/dc/terms/relation> <https://w3id.org/eudpp#QualityIndicator> .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicator used to express or interpret durability-related evidence about a textile product."@en .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Durability indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#EstimatedLifetime
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://www.w3.org/2000/01/rdf-schema#comment> "An estimated lifetime is not a directly measured property and must identify its evidence, method and assumptions."@en .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated lifetime"@en .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3168-3181; JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5243."@en .
+<https://w3id.org/eudpp/textile-indicator#EstimatedLifetime> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#Indicator
+<https://w3id.org/eudpp/textile-indicator#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Derived information object used to calculate, interpret, aggregate, compare or communicate evidence about a textile product. An indicator is not the underlying assessment result, characteristic, threshold or quantitative value."@en .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#Indicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#LifetimeIndicator
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Durability indicator expressing, estimating or interpreting a product lifespan or duration of service."@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Lifetime indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 5.8, printed page 73, lines 1695-1715; Section 9.2.1.5, printed page 121, lines 3168-3179."@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#LifetimeIndicator> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicator expressing a stated, observed or inferred lifespan of a textile product using a specified lifespan descriptor and stated assumptions."@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Lifetime of product"@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 5.8, printed page 73, lines 1695-1710; JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3168-3181; JRC Preparatory Study, Section 5.8, Table 32, printed page 73; caption line 1703."@en .
+<https://w3id.org/eudpp/textile-indicator#LifetimeOfProduct> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicator concerns product use and must not be confused with txtass:NumberOfCycles used as a test-protocol parameter."@en .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <http://www.w3.org/2000/01/rdf-schema#label> "Number of use cycles"@en .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5238."@en .
+<https://w3id.org/eudpp/textile-indicator#NumberOfUseCycles> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://www.w3.org/2000/01/rdf-schema#comment> "Derived performance indicator reporting a performance state or level after a stated number and type of use, wash, abrasion, ageing or other cycles."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <http://www.w3.org/2000/01/rdf-schema#label> "Performance after N cycles"@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5238."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceAfterNCycles> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#PerformanceIndicator
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#DurabilityIndicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Durability indicator expressing a derived level, score, rate, retention or trajectory of a durability-related performance parameter."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Performance indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A performance trajectory should preserve the underlying assessment results or constituent point indicators from which it was derived."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <http://www.w3.org/2000/01/rdf-schema#label> "Performance level over time"@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5243."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceLevelOverTime> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Calculated indicator expressing retained performance relative to an initial or reference performance value under stated calculation rules."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <http://www.w3.org/2000/01/rdf-schema#label> "Performance retention rate"@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5243."@en .
+<https://w3id.org/eudpp/textile-indicator#PerformanceRetentionRate> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Replacement frequency is not a direct measure of intrinsic durability because disposal and replacement also depend on fit, perceived value, fashion and other contextual factors."@en .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "Product replacement frequency"@en .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 5.8, printed page 73, lines 1695-1710; JRC Preparatory Study, Section 6.4.1, printed pages 88-89, lines 2281-2294."@en .
+<https://w3id.org/eudpp/textile-indicator#ProductReplacementFrequency> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-indicator#RobustnessScore
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#PerformanceIndicator> .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Score produced by a robustness scoring method from selected textile test and visual-inspection results; it is proxy information for physical durability and is not a service-lifetime value."@en .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <http://www.w3.org/2000/01/rdf-schema#label> "Robustness score"@en .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5228-5246; JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5286; JRC Preparatory Study, Section 11.1.1.1, Table 71, printed page 186; caption line 5284."@en .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+<https://w3id.org/eudpp/textile-indicator#RobustnessScore> <https://w3id.org/eudpp/textile-connector#typicallyContributesTo> <https://w3id.org/eudpp/textile-durability#IntrinsicDurability> .
+# 
+# https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicator concerning actual or expected product use, use-cycle count or replacement behaviour."@en .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-indicator> .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Use-related indicator"@en .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 5.8, printed page 73, lines 1705-1710; JRC Preparatory Study, Section 6.4.1, printed pages 88-89, lines 2281-2294."@en .
+<https://w3id.org/eudpp/textile-indicator#UseRelatedIndicator> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid4 <http://www.w3.org/2002/07/owl#members> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-indicator#Indicator> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-durability#FailureMode> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-connector#QuantitativeValue> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-assessment#AssessmentResult> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

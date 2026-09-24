@@ -1,0 +1,423 @@
+<https://w3id.org/eudpp/IDENT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/contributor> "Riina Maigre"@en .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/created> "2026-04-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/description> "MODULE: IDENT\nIdentifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe Identifier module proposes an universal approach for identifiers used in the EU DPP CO delivered by the CIRPASS-2 European Project.  \nThe module describes identifiers used for the project through aspects and scheme references, if appropriate, granularity is added.\n---\n\nDESIGN RESTRICTION: Specific modules of the EU DPP CO need to use the Connector to establish a link to the Identifiers module. The link needs to be establsihed to a subclass of aIdentifier class, e.g., Product hasUniqueProductIdentifier ProductIdentifier.\n---\n\nDEPENDENCIES: This module may have dependencies to all  EU DPP Core Ontology (CO) modules that use different types of identifiers, including: CON, P_DPP, SOC, ACTOR, ...  \n--\n\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/issued> "2026-09-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/dc/terms/title> "The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."@en .
+<https://w3id.org/eudpp/IDENT> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ident" .
+<https://w3id.org/eudpp/IDENT> <http://www.w3.org/2000/01/rdf-schema#comment> "First iteration of the Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
+<https://w3id.org/eudpp/IDENT> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP IDENT"@en .
+<https://w3id.org/eudpp/IDENT> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.7" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#hasGranularity
+<https://w3id.org/eudpp#hasGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#IdentifierGranularity> .
+<https://w3id.org/eudpp#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the granularity of an identifier, if exists."@en .
+<https://w3id.org/eudpp#hasGranularity> <http://www.w3.org/2000/01/rdf-schema#label> "has granularity"@en .
+# 
+# https://w3id.org/eudpp#hasScheme
+<https://w3id.org/eudpp#hasScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#hasScheme> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#hasScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The scheme/standard the Identifier follows" .
+<https://w3id.org/eudpp#hasScheme> <http://www.w3.org/2000/01/rdf-schema#label> "has scheme"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#identifierExampleValue
+<https://w3id.org/eudpp#identifierExampleValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierExampleValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierExampleValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#identifierExampleValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Example value of the identifier"@en .
+<https://w3id.org/eudpp#identifierExampleValue> <http://www.w3.org/2000/01/rdf-schema#label> "identifier example value"@en .
+# 
+# https://w3id.org/eudpp#identifierExpiresOn
+<https://w3id.org/eudpp#identifierExpiresOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierExpiresOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#identifierExpiresOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp#identifierExpiresOn> <http://www.w3.org/2000/01/rdf-schema#label> "identifier expires on"@en .
+# 
+# https://w3id.org/eudpp#identifierIssuedOn
+<https://w3id.org/eudpp#identifierIssuedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierIssuedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#identifierIssuedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp#identifierIssuedOn> <http://www.w3.org/2000/01/rdf-schema#label> "identifier issued on"@en .
+# 
+# https://w3id.org/eudpp#identifierMaxLength
+<https://w3id.org/eudpp#identifierMaxLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierMaxLength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierMaxLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#identifierMaxLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum length of the identifier"@en .
+<https://w3id.org/eudpp#identifierMaxLength> <http://www.w3.org/2000/01/rdf-schema#label> "identifier maximum length"@en .
+# 
+# https://w3id.org/eudpp#identifierMinLength
+<https://w3id.org/eudpp#identifierMinLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierMinLength> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierMinLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#identifierMinLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum length of the identifier"@en .
+<https://w3id.org/eudpp#identifierMinLength> <http://www.w3.org/2000/01/rdf-schema#label> "identifier minimum length"@en .
+# 
+# https://w3id.org/eudpp#identifierPattern
+<https://w3id.org/eudpp#identifierPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#identifierPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A pattern the identifier conforms to, given as a regular expression (regex)."@en .
+<https://w3id.org/eudpp#identifierPattern> <http://www.w3.org/2000/01/rdf-schema#label> "identifier pattern"@en .
+# 
+# https://w3id.org/eudpp#identifierSchemeIssuer
+<https://w3id.org/eudpp#identifierSchemeIssuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierSchemeIssuer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierSchemeIssuer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#identifierSchemeIssuer> <http://www.w3.org/2000/01/rdf-schema#comment> "Issuer of the identifier scheme"@en .
+<https://w3id.org/eudpp#identifierSchemeIssuer> <http://www.w3.org/2000/01/rdf-schema#label> "identifier scheme issuer"@en .
+# 
+# https://w3id.org/eudpp#identifierSchemeVersion
+<https://w3id.org/eudpp#identifierSchemeVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierSchemeVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#identifierSchemeVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#identifierSchemeVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference standard version the instance schema refers to"@en .
+<https://w3id.org/eudpp#identifierSchemeVersion> <http://www.w3.org/2000/01/rdf-schema#label> "identifier scheme version"@en .
+# 
+# https://w3id.org/eudpp#identifierValue
+<https://w3id.org/eudpp#identifierValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#identifierValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#identifierValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#identifierValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The (unique) value of the identifier."@en .
+<https://w3id.org/eudpp#identifierValue> <http://www.w3.org/2000/01/rdf-schema#label> "identifier value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#ActorIdentifier
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp#ActorIdentifierScheme> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasScheme> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#DPPIdentifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#FacilityIdentifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#MaterialIdentifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#SoCIdentifier> .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of identifier to identify Actors. A unique code assigned to Actor based on a scheme."@en .
+<https://w3id.org/eudpp#ActorIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Actor identifier"@en .
+# 
+# https://w3id.org/eudpp#ActorIdentifierScheme
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#MaterialIdentifierScheme> .
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifierScheme> .
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of identifier scheme. The scheme or standard used to identify Actors. e.g., GLN, LEI, etc."@en .
+<https://w3id.org/eudpp#ActorIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Actor identifier scheme"@en .
+# 
+# https://w3id.org/eudpp#DPPIdentifier
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#FacilityIdentifier> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#MaterialIdentifier> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifier> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#SoCIdentifier> .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of identifier to identify DPP. DPP Identifier."@en .
+<https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "DPP identifier"@en .
+# 
+# https://w3id.org/eudpp#FacilityIdentifier
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#MaterialIdentifier> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifier> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#SoCIdentifier> .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique code assigned to a physical site (factory, warehouse, plant, school, hospital, etc.), i.e., identifies a location."@en .
+<https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Facility identifier"@en .
+# 
+# https://w3id.org/eudpp#Identifier
+<https://w3id.org/eudpp#Identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#Identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier. A general class to hold different kinds of identifiers described and used for EU DPP CO. Each sub-class of this class describes a different kind of identifier. Intentionally modelled as sub-classes. \nIdentifiers have value, and a scheme/standard they are based on.\n\nCardinatlity restrictions added to each subclass to enforce inheritance of the data propertyy identifierValue."@en .
+<https://w3id.org/eudpp#Identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier" .
+# 
+# https://w3id.org/eudpp#IdentifierGranularity
+<https://w3id.org/eudpp#IdentifierGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#IdentifierGranularity> <http://www.w3.org/2000/01/rdf-schema#comment> "The granularity of the identifier. For example, for Products this could be model, batch, item."@en .
+<https://w3id.org/eudpp#IdentifierGranularity> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier granularity"@en .
+# 
+# https://w3id.org/eudpp#IdentifierScheme
+<https://w3id.org/eudpp#IdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "The scheme or standard used for Identifier."@en .
+<https://w3id.org/eudpp#IdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier scheme"@en .
+# 
+# https://w3id.org/eudpp#MaterialIdentifier
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp#MaterialIdentifierScheme> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasScheme> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifier> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#SoCIdentifier> .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of identifier to identify materials. A unique code assigned to Material based on a scheme."@en .
+<https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Material identifier"@en .
+# 
+# https://w3id.org/eudpp#MaterialIdentifierScheme
+<https://w3id.org/eudpp#MaterialIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MaterialIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#MaterialIdentifierScheme> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#ProductIdentifierScheme> .
+<https://w3id.org/eudpp#MaterialIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of identifier scheme. The scheme or standard used to identify materials, e.g., CAS."@en .
+<https://w3id.org/eudpp#MaterialIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Material identifier scheme"@en .
+# 
+# https://w3id.org/eudpp#ProductIdentifier
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/eudpp#ProductIdentifierScheme> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/eudpp#ProductIdentifierGranularity> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#hasGranularity> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#SoCIdentifier> .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of identifier to identify Products. A unique code assigned to identify a product. e.g., GTIN."@en .
+<https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Product identifier"@en .
+# 
+# https://w3id.org/eudpp#ProductIdentifierGranularity
+<https://w3id.org/eudpp#ProductIdentifierGranularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductIdentifierGranularity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#oneOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#model> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#item> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#batch> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductIdentifierGranularity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#IdentifierGranularity> .
+<https://w3id.org/eudpp#ProductIdentifierGranularity> <http://www.w3.org/2000/01/rdf-schema#comment> "The granularity level (batch, item, model) at which the product identifier represents the product."@en .
+<https://w3id.org/eudpp#ProductIdentifierGranularity> <http://www.w3.org/2000/01/rdf-schema#label> "Product identifier granularity"@en .
+# 
+# https://w3id.org/eudpp#ProductIdentifierScheme
+<https://w3id.org/eudpp#ProductIdentifierScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#IdentifierScheme> .
+<https://w3id.org/eudpp#ProductIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of identifier scheme. The scheme or standard used to identify Products, e.g., GTIN, SKU, etc."@en .
+<https://w3id.org/eudpp#ProductIdentifierScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Product identifier scheme"@en .
+# 
+# https://w3id.org/eudpp#SoCIdentifier
+<https://w3id.org/eudpp#SoCIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SoCIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Identifier> .
+<https://w3id.org/eudpp#SoCIdentifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eudpp#identifierValue> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/eudpp#SoCIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of identifier to identify substances of concern."@en .
+<https://w3id.org/eudpp#SoCIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "Substance of concern identifier"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#CAS
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#MaterialIdentifierScheme> .
+<https://w3id.org/eudpp#CAS> <https://w3id.org/eudpp#identifierExampleValue> "7732-18-5" .
+<https://w3id.org/eudpp#CAS> <https://w3id.org/eudpp#identifierMaxLength> "12"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#CAS> <https://w3id.org/eudpp#identifierMinLength> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/2000/01/rdf-schema#comment> "CAS Number (Chemical Abstracts Service)"@en .
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/2000/01/rdf-schema#label> "CAS"@en .
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.cas.org/support/documentation/chemical-substances/faqs" .
+<https://w3id.org/eudpp#CAS> <http://www.w3.org/2004/02/skos/core#altLabel> "Chemical Abstracts Service Registry Number"@en .
+# 
+# https://w3id.org/eudpp#EORI
+<https://w3id.org/eudpp#EORI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#EORI> <https://w3id.org/eudpp#identifierExampleValue> "DE123456789012345" .
+<https://w3id.org/eudpp#EORI> <https://w3id.org/eudpp#identifierMaxLength> "17"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#EORI> <https://w3id.org/eudpp#identifierMinLength> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#EORI> <http://www.w3.org/2000/01/rdf-schema#comment> "Economic Operators Registration and Identification (EU).\nThis is the EU’s official identifier for companies involved in import/export.\nMandatory for any company trading with the EU.\n\nUsed in customs declarations\nUnique per company\n\nFormat: country code + number (e.g., DE123456789)\n\nThis is the most widely used identifier for economic operators in EU trade."@en .
+<https://w3id.org/eudpp#EORI> <http://www.w3.org/2000/01/rdf-schema#label> "EORI"@en .
+<https://w3id.org/eudpp#EORI> <http://www.w3.org/2000/01/rdf-schema#label> "https://taxation-customs.ec.europa.eu/customs/customs-procedures-import-and-export/customs-operations/economic-operators-registration-and-identification-number-eori_en" .
+<https://w3id.org/eudpp#EORI> <http://www.w3.org/2004/02/skos/core#altLabel> "Economic Operators Registration and Identification (EU"@en .
+# 
+# https://w3id.org/eudpp#GLN
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ActorIdentifierScheme> .
+<https://w3id.org/eudpp#GLN> <https://w3id.org/eudpp#identifierExampleValue> "9501101530003" .
+<https://w3id.org/eudpp#GLN> <https://w3id.org/eudpp#identifierMaxLength> "13"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#GLN> <https://w3id.org/eudpp#identifierMinLength> "13"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#GLN> <https://w3id.org/eudpp#identifierSchemeIssuer> "GS1" .
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique identifier defined by GS1 used to identify legal entities, functional entities, and physical locations within business and supply chain processes.\n\nTypically identifies: legal entities, functional entities (departments), physical locations (warehouses, sites)."@en .
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/2000/01/rdf-schema#label> "GLN"@en .
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.gs1.org/standards/id-keys/gln" .
+<https://w3id.org/eudpp#GLN> <http://www.w3.org/2004/02/skos/core#altLabel> "Global Location Number"@en .
+# 
+# https://w3id.org/eudpp#GTIN
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ProductIdentifierScheme> .
+<https://w3id.org/eudpp#GTIN> <https://w3id.org/eudpp#identifierExampleValue> "14006381333938" .
+<https://w3id.org/eudpp#GTIN> <https://w3id.org/eudpp#identifierMaxLength> "14"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#GTIN> <https://w3id.org/eudpp#identifierMinLength> "8"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#GTIN> <https://w3id.org/eudpp#identifierSchemeIssuer> "GS1" .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/2000/01/rdf-schema#comment> "A globally unique identifier for trade items, defined by GS1, used to identify products at various packaging levels."@en .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/2000/01/rdf-schema#label> "GTIN"@en .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.gs1.org/standards/id-keys/gtin" .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/2004/02/skos/core#altLabel> "Global Trade Item Number"@en .
+<https://w3id.org/eudpp#GTIN> <http://www.w3.org/2004/02/skos/core#definition> "A globally unique identifier for trade items, defined by GS1, used to identify products at various packaging levels."@en .
+# 
+# https://w3id.org/eudpp#LEI
+<https://w3id.org/eudpp#LEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#LEI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ActorIdentifierScheme> .
+<https://w3id.org/eudpp#LEI> <https://w3id.org/eudpp#identifierExampleValue> "529900T8BM49AURSDO55" .
+<https://w3id.org/eudpp#LEI> <https://w3id.org/eudpp#identifierMaxLength> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#LEI> <https://w3id.org/eudpp#identifierMinLength> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#LEI> <https://w3id.org/eudpp#identifierSchemeIssuer> "ISO" .
+<https://w3id.org/eudpp#LEI> <http://www.w3.org/2000/01/rdf-schema#comment> "A Legal Entity Identifier (LEI) is a globally unique 20-character alphanumeric code that identifies legally distinct entities participating in financial transactions, as defined by ISO 17442.\n\nA 20‑character code used globally for financial and regulatory reporting.\nRequired for companies involved in financial transactions.\nUsed by regulators, banks, customs, and some trade systems."@en .
+<https://w3id.org/eudpp#LEI> <http://www.w3.org/2000/01/rdf-schema#label> "LEI"@en .
+<https://w3id.org/eudpp#LEI> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://www.iso.org/standard/78829.html" .
+# 
+# https://w3id.org/eudpp#SKU
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ProductIdentifierScheme> .
+<https://w3id.org/eudpp#SKU> <https://w3id.org/eudpp#identifierExampleValue> "ABC-RED-XL" .
+<https://w3id.org/eudpp#SKU> <https://w3id.org/eudpp#identifierMaxLength> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#SKU> <https://w3id.org/eudpp#identifierMinLength> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/2000/01/rdf-schema#comment> "A Stock Keeping Unit (SKU) is an internal identifier assigned by an organization to uniquely identify and track a product, item, or variant within its own inventory and management systems."@en .
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/2000/01/rdf-schema#label> "SKU"@en .
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://en.wikipedia.org/wiki/Stock_keeping_unit" .
+<https://w3id.org/eudpp#SKU> <http://www.w3.org/2004/02/skos/core#altLabel> "Stock Keeping Unit"@en .
+# 
+# https://w3id.org/eudpp#batch
+<https://w3id.org/eudpp#batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ProductIdentifierGranularity> .
+<https://w3id.org/eudpp#batch> <http://www.w3.org/2000/01/rdf-schema#comment> "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en .
+<https://w3id.org/eudpp#batch> <http://www.w3.org/2000/01/rdf-schema#label> "batch"@en .
+# 
+# https://w3id.org/eudpp#item
+<https://w3id.org/eudpp#item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ProductIdentifierGranularity> .
+<https://w3id.org/eudpp#item> <http://www.w3.org/2000/01/rdf-schema#comment> "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en .
+<https://w3id.org/eudpp#item> <http://www.w3.org/2000/01/rdf-schema#label> "item"@en .
+# 
+# https://w3id.org/eudpp#model
+<https://w3id.org/eudpp#model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp#ProductIdentifierGranularity> .
+<https://w3id.org/eudpp#model> <http://www.w3.org/2000/01/rdf-schema#comment> "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en .
+<https://w3id.org/eudpp#model> <http://www.w3.org/2000/01/rdf-schema#label> "model"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

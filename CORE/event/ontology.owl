@@ -1,0 +1,1346 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/eudpp/EVENT#"
+     xml:base="https://w3id.org/eudpp/EVENT"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:epcis="https://ref.gs1.org/epcis/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/eudpp/EVENT">
+        <terms:bibliographicCitation xml:lang="en">EU DPP Core Ontology Event Module. Draft version 0.1.0. DOI: https://doi.org/10.5281/zenodo.15270342/</terms:bibliographicCitation>
+        <terms:contributor xml:lang="en">Riina Maigre</terms:contributor>
+        <terms:contributor xml:lang="en">Tarmo Robal</terms:contributor>
+        <terms:contributor xml:lang="en">Theodor Chirvasuta</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</terms:created>
+        <terms:creator xml:lang="en">Elio Hbeich</terms:creator>
+        <terms:description xml:lang="en">Provides classes and properties for representing ESPR-level product and DPP events, and links product-facing events to selected GS1 EPCIS and CBV technical representation terms. Cross-module EU DPP Core Ontology relations are intended to be managed in the Connector/mapping layer.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">EU DPP Core Ontology Event Module</terms:title>
+        <vann:preferredNamespacePrefix>evt</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/eudpp#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Draft Event module of the EU DPP Core Ontology. It defines ESPR-level product and DPP event concepts. Selected GS1 EPCIS and CBV terms are referenced in this file for technical event representation only; this does not imply a global owl:imports of EPCIS/CBV nor logical subclassing between GS1 Web Vocabulary concepts and EU DPP Core Ontology classes. Cross-module EU DPP Core Ontology relations are intended to be managed in the Connector/mapping layer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event module</rdfs:label>
+        <owl:versionInfo xml:lang="en">Version 0.1.0 DRAFT</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/domainIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
+    
+
+
+    <!-- http://schema.org/rangeIncludes -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/jsonldLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="https://ref.gs1.org/epcis/jsonldLabel"/>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/jsonldUriLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="https://ref.gs1.org/epcis/jsonldUriLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ref.gs1.org/epcis/bizLocation -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/bizLocation">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) The business location where the objects associated with the EPCs may be found, until contradicted by a subsequent event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>bizLocation</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/bizStep -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/bizStep">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/cbv/BizStep"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/cbv/BizStep"/>
+        <rdfs:comment xml:lang="en">(Optional) The business step of which this event was a part.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>bizStep</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/bizTransactionList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/bizTransactionList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/BizTransaction"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/BizTransaction"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of business transactions that define the context of this event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>bizTransactionList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/bizTransactionType -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/bizTransactionType">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/BizTransaction"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/cbv/BTT"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/BizTransaction"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/cbv/BTT"/>
+        <rdfs:comment xml:lang="en">An identifier that indicates the type of BizTransaction document (e.g. Purchase Order, Despatch Advice).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>bizTransactionType</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldLabel>type</epcis:jsonldLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/childEPCs -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/childEPCs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AggregationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AssociationEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AggregationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AssociationEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of the EPCs of contained objects identified by instance-level identifiers. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disassociated from the parent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>childEPCs</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/childQuantityList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/childQuantityList">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AggregationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AssociationEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AggregationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AssociationEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more QuantityElements identifying (at the class level) contained objects. An AggregationEvent SHALL contain either a nonempty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.  An AssociationEvent SHALL contain either a non-empty childEPCs, a non-empty childQuantityList, or both, except that both childEPCs and childQuantityList MAY be empty if action is DELETE, indicating that all children are disaggregated from the parent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>childQuantityList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/destinationList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/destinationList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of Destination elements that provide context about the terminating endpoint of a business transfer of which this event is a part.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>destinationList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/disposition -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/disposition">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/cbv/Disp"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/cbv/Disp"/>
+        <rdfs:comment xml:lang="en">(Optional) The business condition of the objects associated with the EPCs, presumed to hold true until contradicted by a subsequent event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>disposition</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/epcClass -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/epcClass">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:comment xml:lang="en">A class-level identifier for the class to which the specified quantity of objects belongs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>epcClass</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/epcList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/epcList">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/ObjectEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/TransactionEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/ObjectEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransactionEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more EPCs naming specific objects to which the event pertained.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>epcList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/inputEPCList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/inputEPCList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more EPCs identifying (at the instance level) objects that were inputs to the transformation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>inputEPCList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/inputQuantityList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/inputQuantityList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were inputs to the transformation. See below for constraints on when inputQuantityList may be omitted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>inputQuantityList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/outputEPCList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/outputEPCList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more EPCs naming (at the instance level) objects that were outputs from the transformation.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>outputEPCList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/outputQuantityList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/outputQuantityList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were outputs from the transformation. See below for constraints on when outputQuantityList may be omitted.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>outputQuantityList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/parentID -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/parentID">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AggregationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AssociationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/TransactionEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AggregationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AssociationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransactionEvent"/>
+        <rdfs:comment xml:lang="en">(Optional when action is OBSERVE, required otherwise) The identifier of the parent of the aggregation or association. When the parent identifier is an EPC, this field SHALL contain the &apos;pure identity&apos; URI for the EPC as specified in the GS1 Tag Data Standard</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>parentID</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/quantityList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/quantityList">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/ObjectEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/TransactionEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/ObjectEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransactionEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects to which the event pertained.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>quantityList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/readPoint -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/readPoint">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">(Optional) The read point at which the event took place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>readPoint</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/sourceList -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/sourceList">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <rdfs:comment xml:lang="en">(Optional) An unordered list of Source elements that provide context about the originating endpoint of a business transfer of which this event is a part.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>sourceList</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/sourceOrDestination -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/sourceOrDestination">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <rdfs:comment xml:lang="en">An identifier that denotes the specific source or destination of a business transfer.
+The semantic role of the identifier is indicated by sourceOrDestinationType. Resolution of that identifier to EU DPP Actor or Facility concepts, when applicable, is handled outside the EPCIS technical carrier layer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>sourceOrDestination</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldLabel>destination</epcis:jsonldLabel>
+        <epcis:jsonldLabel>source</epcis:jsonldLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/sourceOrDestinationType -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/sourceOrDestinationType">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/cbv/SDT"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/SourceOrDestination"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/cbv/SDT"/>
+        <rdfs:comment xml:lang="en">An identifier that indicates the role of SourceOrDestination in a transfer (Owning Party, Possessing Party, or Location).
+This role determines how the corresponding sourceOrDestination identifier is interpreted. Mapping to EU DPP Actor or Facility concepts, when applicable, is handled outside the EPCIS technical carrier layer.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>sourceOrDestinationType</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldLabel>type</epcis:jsonldLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/transformationID -->
+
+
+    <owl:ObjectProperty rdf:about="https://ref.gs1.org/epcis/transformationID">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/Transformation"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransformationEvent"/>
+        <schema:rangeIncludes rdf:resource="https://ref.gs1.org/epcis/Transformation"/>
+        <rdfs:comment xml:lang="en">(Optional) Associates several TransformationEvents with a longer-running Transformation process, therefore linking them together.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>transformationID</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasDPPActionType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasDPPActionType">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPUpdateEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+        <rdfs:comment xml:lang="en">Links a DPP update event to the type of information-level action performed on the Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">has DPP action type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasProductEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasProductEvent">
+        <owl:inverseOf rdf:resource="https://w3id.org/eudpp#isRepresentedByCarrier"/>
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:comment xml:lang="en">Links an EPCIS-inspired technical event carrier to the product event semantics it journalises.</rdfs:comment>
+        <rdfs:label xml:lang="en">has product event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#isRecordedAs -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isRecordedAs">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:comment xml:lang="en">Links a DPP event to a technical audit record representing its registration in an information system or audit trail.</rdfs:comment>
+        <rdfs:label xml:lang="en">is recorded as</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#isRepresentedByCarrier -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isRepresentedByCarrier">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:range rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">Links a product event concept to an EPCIS-inspired technical event carrier used to journalise and structure the corresponding event data.</rdfs:comment>
+        <rdfs:label xml:lang="en">is represented by carrier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#isTriggeredByProductEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isTriggeredByProductEvent">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:comment xml:lang="en">Links a DPP event to the product event that caused or required it. This property is used when the DPP event results from a lifecycle change affecting the product.</rdfs:comment>
+        <rdfs:label xml:lang="en">is triggered by product event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#recordsDPPEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#recordsDPPEvent">
+        <owl:inverseOf rdf:resource="https://w3id.org/eudpp#isRecordedAs"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:comment xml:lang="en">Links a DPP event record to the DPP event whose technical registration it captures.</rdfs:comment>
+        <rdfs:label xml:lang="en">records DPP event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#triggersDPPEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#triggersDPPEvent">
+        <owl:inverseOf rdf:resource="https://w3id.org/eudpp#isTriggeredByProductEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:comment xml:lang="en">Links a product event to a DPP event that is triggered as a consequence of it, reflecting the obligation to update the DPP following lifecycle changes of the product.</rdfs:comment>
+        <rdfs:label xml:lang="en">triggers DPP event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ref.gs1.org/epcis/action -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/action">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AggregationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/AssociationEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/ObjectEvent"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/TransactionEvent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AggregationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/AssociationEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/ObjectEvent"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/TransactionEvent"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">How this event relates to the lifecycle of the EPCs named in this event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>action</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/eventTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/eventTime">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment xml:lang="en">The date and time at which the EPCIS Capturing Applications asserts the event occurred.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>eventTime</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/eventTimeZoneOffset -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/eventTimeZoneOffset">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The time zone offset in effect at the time and place the event occurred, expressed as an offset from UTC. The value of this field SHALL be a string consisting of the character &apos;+&apos; or the character &apos;-&apos;, followed by two digits whose value is within the range 00 through 14 (inclusive), followed by a colon character &apos;:&apos;, followed by two digits whose value is within the range 00 through 59 (inclusive), except that if the value of the first two digits is 14, the value of the second two digits must be 00. For example, the value +05:30 specifies that where the event occurred, local time was five hours and 30 minutes later than UTC (that is, midnight UTC was 5:30am local time).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>eventTimeZoneOffset</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/quantity -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/quantity">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">A number that specifies how many or how much of the specified EPCClass is denoted by this QuantityElement.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>quantity</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/recordTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/recordTime">
+        <rdfs:domain rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment xml:lang="en">(Optional) The date and time at which this event was recorded by an EPCIS Repository. This field SHALL be ignored when an event is presented to the EPCIS Capture Interface, and SHALL be present when an event is retrieved through the EPCIS Query Interfaces. The recordTime does not describe anything about the real-world event, but is rather a bookkeeping mechanism that plays a role in the interpretation of standing queries</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>recordTime</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/uom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ref.gs1.org/epcis/uom">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/QuantityElement"/>
+                    <rdf:Description rdf:about="https://ref.gs1.org/epcis/SensorReport"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/QuantityElement"/>
+        <schema:domainIncludes rdf:resource="https://ref.gs1.org/epcis/SensorReport"/>
+        <schema:rangeIncludes rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">(Optional) Unit of measure by which the specified value(s) of the property specified by type should be interpreted.  If there is no value, minValue, maxValue, averageValue or percValue field present, uom SHALL be omitted.  When a uom field is present, its value SHALL be the 2- or 3-character code for a physical unit specified in the &apos;Common Code&apos; column of UN/CEFACT Recommendation&apos;20 [CEFACT20].   Note: GS1 provides a tool containing a machine-readable file which enables the automatic conversion between quantitative values expressed using UN/CEFACT common codes. [https://ref.gs1.org/tools/UnitConverterUNECERec20]</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>uom</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#dppEventRecordIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#dppEventRecordIdentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A unique identifier assigned to a DPP event record.</rdfs:comment>
+        <rdfs:label xml:lang="en">dpp event record identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#dppEventRecordedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#dppEventRecordedAt">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">The date and time at which the technical record of a DPP event was created in an information system or audit trail.</rdfs:comment>
+        <rdfs:label xml:lang="en">dpp event recorded at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#recordedInSystem -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#recordedInSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Indicates the URI identifying the system, application, or audit log in which the DPP event record is maintained.</rdfs:comment>
+        <rdfs:label xml:lang="en">recorded in system</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#recordedInSystemName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#recordedInSystemName">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Indicates the human-readable name of the system, application, or audit log in which the DPP event record is maintained.</rdfs:comment>
+        <rdfs:label xml:lang="en">recorded in system name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ref.gs1.org/cbv/BTT -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/cbv/BTT"/>
+    
+
+
+    <!-- https://ref.gs1.org/cbv/BizStep -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/cbv/BizStep"/>
+    
+
+
+    <!-- https://ref.gs1.org/cbv/Disp -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/cbv/Disp"/>
+    
+
+
+    <!-- https://ref.gs1.org/cbv/SDT -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/cbv/SDT"/>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/AggregationEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/AggregationEvent">
+        <rdfs:subClassOf rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">The event type AggregationEvent describes events that apply to objects that have been aggregated to one another. In such an event, there is a set of &apos;contained&apos; objects that have been aggregated within a &apos;containing&apos; entity that&apos;s meant to identify the aggregation itself.  This event type is intended to be used for &apos;aggregations&apos;, meaning an association where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>AggregationEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>eventID</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/AssociationEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/AssociationEvent">
+        <rdfs:subClassOf rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">The event type AssociationEvent describes the association or disassociation of one or several physical objects with a parent object or a specific physical location.  Like the AggregationEvent, the AssociationEvent is also used to capture associations where there is a strong physical relationship between the containing and the contained objects such that they will all occupy the same location at the same time, until such time as they are disaggregated. However, the AggregationEvent does not allow for associations of objects with physical locations;  if action is DELETE while omitting the childEPC and childQuantityList field, all contained children are disaggregated from the containing parent. Because there are situations in which associations are more permanent, i.e. beyond the physical flow of goods (e.g. packing/unpacking and loading/unloading), an AssociationEvent SHOULD be used: (a) when objects need to be associated with a physical location or (b) when the parent object could also be subject to other, more temporary associations (i.e. captured using AggregationEvent).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>AssociationEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>eventID</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/BizTransaction -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/BizTransaction">
+        <rdfs:comment xml:lang="en">Document that describes a particular business transaction. An example is a specific Purchase Order or Despatch Advice. Business Transaction information may be included in EPCIS events to record an event&apos;s participation in particular business transactions.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>BizTransaction</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>bizTransaction</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/EPCISEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/EPCISEvent">
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:comment xml:lang="en">A logistics event. This is a common superclass (base type) for all EPCIS events. All of the more specific event types are subclasses of EPCISEvent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>EPCISEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/ObjectEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/ObjectEvent">
+        <rdfs:subClassOf rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">An ObjectEvent captures information about an event pertaining to one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers. In most situations, an ObjectEvent is envisioned to represent an actual observations of objects, but strictly speaking it can be used for any event a Capturing Application wants to assert about objects, including for example capturing the fact that an expected observation failed to occur.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>ObjectEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>eventID</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/QuantityElement -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/QuantityElement">
+        <rdfs:comment xml:lang="en">A QuantityElement is a structure that identifies objects identified by a specific class-level identifier, either a specific quantity or an unspecified quantity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>QuantityElement</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/SensorReport -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/SensorReport"/>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/SourceOrDestination -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/SourceOrDestination">
+        <rdfs:comment xml:lang="en">Provides additional business context when an EPCIS event is part of a business transfer; that is, a process in which there is a change of location, or transfer of ownership, or transfer of possession of physical or digital objects. Within a specified type of transfer, the business transfer is from the Source to the Destination.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>Source or Destination</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>id</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/TransactionEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/TransactionEvent">
+        <rdfs:subClassOf rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">The event type TransactionEvent describes the association or disassociation of physical or digital objects to one or more business transactions. While other event types have an optional bizTransactionList field that may be used to provide context for an event, the TransactionEvent is used to declare in an unequivocal way that certain objects have been associated or disassociated with one or more business transactions as part of the event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>TransactionEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>eventID</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/Transformation -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/Transformation">
+        <rdfs:comment xml:lang="en">A transformation business processes that takes a longer period of time than a single TransformationEvent, so is associated with a series of such events.
+When events share the same Transformation, the meaning is that the inputs to any of those events may have contributed in some way to each of the outputs in any of those same events.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>Transformation</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- https://ref.gs1.org/epcis/TransformationEvent -->
+
+
+    <owl:Class rdf:about="https://ref.gs1.org/epcis/TransformationEvent">
+        <rdfs:subClassOf rdf:resource="https://ref.gs1.org/epcis/EPCISEvent"/>
+        <rdfs:comment xml:lang="en">A TransformationEvent captures information about an event in which one or more physical or digital objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are fully or partially consumed as inputs and one or more objects identified by instance-level (EPC) or class-level (EPC Class) identifiers are produced as outputs. The TransformationEvent captures the relationship between the inputs and the outputs, such that any of the inputs may have contributed in some way to each of the outputs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://ref.gs1.org/epcis/"/>
+        <rdfs:label>TransformationEvent</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+        <epcis:jsonldUriLabel>eventID</epcis:jsonldUriLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPActionType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPActionType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#AddDPPDataAction"/>
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#CorrectDPPDataAction"/>
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#DeleteDPPDataAction"/>
+                    <rdf:Description rdf:about="https://w3id.org/eudpp#ModifyDPPDataAction"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A classification indicating the type of information-level action performed during a DPP update event.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Action Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPArchivalEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPArchivalEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:comment xml:lang="en">An event corresponding to the archival or end-of-active-life management of a Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Archival Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPCreationEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPCreationEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:comment xml:lang="en">An event corresponding to the creation or initial issuance of a Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Creation Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ESPREvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#isTriggeredByProductEvent"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:comment xml:lang="en">An ESPR-level event concept representing an event that affects the existence, content, accessibility, update, correction, or governance of a DPP. A DPPEvent captures the passport-facing semantics of the occurrence and is modelled as distinct from the product event that may trigger it.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPEventRecord -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPEventRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#recordsDPPEvent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#dppEventRecordIdentifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#dppEventRecordedAt"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#recordedInSystem"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#recordedInSystemName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:source xml:lang="en">Defined in the EU DPP Core Ontology Event module to support the technical recording of DPP-related events.</terms:source>
+        <rdfs:comment xml:lang="en">A technical audit record used to represent and log an information-level event affecting a Digital Product Passport. Unlike EPCIS carriers, this class is intended for recording DPP-side information events rather than product-facing operational events.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Event Record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DPPUpdateEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DPPUpdateEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasDPPActionType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An event corresponding to an update of the content of a Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP Update Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#DestructionEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#DestructionEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(34); Art 25(1)</terms:source>
+        <rdfs:comment xml:lang="en">The intentional damaging or discarding of a product and unsold products as waste, with the exception of discarding for the sole purpose of delivering the discarded product for preparing for reuse, including refurbishment or remanufacturing operations. ESPR Art 2(34) and Art 25(1).</rdfs:comment>
+        <rdfs:label xml:lang="en">Destruction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ESPREvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ESPREvent">
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; lifecycle-event-oriented abstraction introduced for modelling purposes.</terms:source>
+        <rdfs:comment xml:lang="en">Abstract superclass introduced for modelling purposes. Used to represent the regulatory or business semantics of an event relevant in the ESPR context and concerning either a product or its DPP, independently of its technical journalisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">ESPR Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#MaintenanceEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#MaintenanceEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(19)</terms:source>
+        <rdfs:comment xml:lang="en">Actions (one or more) taken to keep a product in a condition where it can fulfil its intended purpose. ESPR Art 2(19).</rdfs:comment>
+        <rdfs:label xml:lang="en">Maintenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#MakingAvailableOnMarketEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#MakingAvailableOnMarketEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(39)</terms:source>
+        <rdfs:comment xml:lang="en">Any supply of a product for distribution, consumption or use on the Union market in the course of a commercial activity, whether in return for payment or free of charge. ESPR Art 2(39).</rdfs:comment>
+        <rdfs:label xml:lang="en">Making Available on the Market</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#PlacingOnMarketEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#PlacingOnMarketEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#MakingAvailableOnMarketEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(40)</terms:source>
+        <rdfs:comment xml:lang="en">The very first time a product is made available on the Union market. ESPR Art 2(40).</rdfs:comment>
+        <rdfs:label xml:lang="en">Placing on the Market</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ProductEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ProductEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ESPREvent"/>
+        <rdfs:comment xml:lang="en">An ESPR-level event concept representing an event that affects the state, condition, use, circulation, transformation, maintenance, or end-of-life status of a product. A ProductEvent captures the product-facing semantics of the occurrence and is distinct from any DPP-side event that may be triggered to record or reflect it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Product Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#PuttingIntoServiceEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#PuttingIntoServiceEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(41)</terms:source>
+        <rdfs:comment xml:lang="en">The first use of a product for its intended purpose in the Union. ESPR Art 2(41).</rdfs:comment>
+        <rdfs:label xml:lang="en">Putting into Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#RefurbishmentEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#RefurbishmentEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(18)</terms:source>
+        <rdfs:comment xml:lang="en">Actions carried out to prepare, clean, test, service and, where necessary, repair a product or a discarded product in order to restore its performance or functionality within the intended use and range of performance originally conceived at the design stage at the time of the placing of the product on the market. ESPR Art 2(18).</rdfs:comment>
+        <rdfs:label xml:lang="en">Refurbishment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#RemanufacturingEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#RemanufacturingEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(16)</terms:source>
+        <rdfs:comment xml:lang="en">Actions through which a new product is produced from objects that are waste, products or components and through which at least one change is made that substantially affects the safety, performance, purpose or type of the product. ESPR Art 2(16).</rdfs:comment>
+        <rdfs:label xml:lang="en">Remanufacturing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#RepairEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#RepairEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(20)</terms:source>
+        <rdfs:comment xml:lang="en">Actions taken to return a defective product or waste to a condition where it fulfils its intended purpose. ESPR Art 2(20).</rdfs:comment>
+        <rdfs:label xml:lang="en">Repair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#UpgradingEvent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#UpgradingEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+        <terms:identifier>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:identifier>
+        <terms:source xml:lang="en">Regulation (EU) 2024/1781; Art 2(17)</terms:source>
+        <rdfs:comment xml:lang="en">Actions carried out to enhance the functionality, performance, capacity, safety or aesthetics of a product. ESPR Art 2(17).</rdfs:comment>
+        <rdfs:label xml:lang="en">Upgrading</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#AddDPPDataAction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#AddDPPDataAction">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+        <rdfs:comment xml:lang="en">Indicates that new information is added to the Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">add data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#CorrectDPPDataAction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#CorrectDPPDataAction">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+        <rdfs:comment xml:lang="en">Indicates that erroneous, inconsistent, or incomplete information in the Digital Product Passport is corrected.</rdfs:comment>
+        <rdfs:label xml:lang="en">correct data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#DeleteDPPDataAction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#DeleteDPPDataAction">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+        <rdfs:comment xml:lang="en">Indicates that information is removed from the Digital Product Passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">delete data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#ModifyDPPDataAction -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#ModifyDPPDataAction">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
+        <rdfs:comment xml:lang="en">Indicates that existing information in the Digital Product Passport is modified.</rdfs:comment>
+        <rdfs:label xml:lang="en">modify data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/eudpp#DPPArchivalEvent"/>
+            <rdf:Description rdf:about="https://w3id.org/eudpp#DPPCreationEvent"/>
+            <rdf:Description rdf:about="https://w3id.org/eudpp#DPPUpdateEvent"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

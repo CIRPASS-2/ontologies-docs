@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>EU DPP Textile Structure Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/textile-structure#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/textile-structure#","name":"EU DPP Textile Structure Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/textile-structure#", "dateReleased":"2026-03-06", "dateModified":"2026-07-16", "version":"Version 1.1.2", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Elio Hbeich"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>EU DPP Textile Structure Ontology</h1>
+<h2>Release: 2026-03-06</h2>
+
+
+<dl>
+<dt>Modified on: 2026-07-16</dt>
+<dt>This version:</dt>
+<dd><a href="https://w3id.org/eudpp/textile-structure/1.1.2">https://w3id.org/eudpp/textile-structure/1.1.2</a></dd>
+<dt>Revision:</dt>
+<dd>Version 1.1.2</dd>
+<dt>Issued on:</dt>
+<dd>2026-03-06</dd>
+<dt>Authors:</dt>
+<dd>Elio Hbeich</dd>
+
+<dt>Source:</dt>
+<dd><a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="CC BY 4.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>EU DPP Textile Structure Ontology. Version 1.1.2.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">EU DPP Textile Structure Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#AssemblyCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a>
+   </li>
+   <li>
+      <a href="#CutPrecision"
+         title="https://w3id.org/eudpp/textile-structure#CutPrecision">Cut precision</a>
+   </li>
+   <li>
+      <a href="#FabricAppearance"
+         title="https://w3id.org/eudpp/textile-structure#FabricAppearance">Fabric appearance</a>
+   </li>
+   <li>
+      <a href="#FabricBehaviouralCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic">Fabric behavioural characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricBreathability"
+         title="https://w3id.org/eudpp/textile-structure#FabricBreathability">Fabric breathability</a>
+   </li>
+   <li>
+      <a href="#FabricCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricConstructionCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic">Fabric construction characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricDrape"
+         title="https://w3id.org/eudpp/textile-structure#FabricDrape">Fabric drape</a>
+   </li>
+   <li>
+      <a href="#FabricElasticity"
+         title="https://w3id.org/eudpp/textile-structure#FabricElasticity">Fabric elasticity</a>
+   </li>
+   <li>
+      <a href="#FabricFunctionalCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic">Fabric functional characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricHandle"
+         title="https://w3id.org/eudpp/textile-structure#FabricHandle">Fabric handle</a>
+   </li>
+   <li>
+      <a href="#FabricInsulation"
+         title="https://w3id.org/eudpp/textile-structure#FabricInsulation">Fabric insulation</a>
+   </li>
+   <li>
+      <a href="#FabricLustre"
+         title="https://w3id.org/eudpp/textile-structure#FabricLustre">Fabric lustre</a>
+   </li>
+   <li>
+      <a href="#FabricMassPerUnitArea"
+         title="https://w3id.org/eudpp/textile-structure#FabricMassPerUnitArea">Fabric mass per unit area</a>
+   </li>
+   <li>
+      <a href="#FabricRigidity"
+         title="https://w3id.org/eudpp/textile-structure#FabricRigidity">Fabric rigidity</a>
+   </li>
+   <li>
+      <a href="#FabricStructuralCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricTactileCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic">Fabric tactile characteristic</a>
+   </li>
+   <li>
+      <a href="#FabricVisualCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic">Fabric visual characteristic</a>
+   </li>
+   <li>
+      <a href="#FibreCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a>
+   </li>
+   <li>
+      <a href="#FibreCleanliness"
+         title="https://w3id.org/eudpp/textile-structure#FibreCleanliness">Fibre cleanliness</a>
+   </li>
+   <li>
+      <a href="#FibreColour"
+         title="https://w3id.org/eudpp/textile-structure#FibreColour">Fibre colour</a>
+   </li>
+   <li>
+      <a href="#FibreElasticity"
+         title="https://w3id.org/eudpp/textile-structure#FibreElasticity">Fibre elasticity</a>
+   </li>
+   <li>
+      <a href="#FibreFineness"
+         title="https://w3id.org/eudpp/textile-structure#FibreFineness">Fibre fineness</a>
+   </li>
+   <li>
+      <a href="#FibreLength"
+         title="https://w3id.org/eudpp/textile-structure#FibreLength">Fibre length</a>
+   </li>
+   <li>
+      <a href="#FibreQualityCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic">Fibre quality characteristic</a>
+   </li>
+   <li>
+      <a href="#FibreSectionShape"
+         title="https://w3id.org/eudpp/textile-structure#FibreSectionShape">Fibre section shape</a>
+   </li>
+   <li>
+      <a href="#FibreStrength"
+         title="https://w3id.org/eudpp/textile-structure#FibreStrength">Fibre strength</a>
+   </li>
+   <li>
+      <a href="#IntermediateTextileCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a>
+   </li>
+   <li>
+      <a href="#MechanicalFibreCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic">Mechanical fibre characteristic</a>
+   </li>
+   <li>
+      <a href="#MoistureRetention"
+         title="https://w3id.org/eudpp/textile-structure#MoistureRetention">Moisture retention</a>
+   </li>
+   <li>
+      <a href="#PhysicalFibreCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic">Physical fibre characteristic</a>
+   </li>
+   <li>
+      <a href="#ResistanceCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#ResistanceCharacteristic">Resistance characteristic</a>
+   </li>
+   <li>
+      <a href="#SeamStrength"
+         title="https://w3id.org/eudpp/textile-structure#SeamStrength">Seam strength</a>
+   </li>
+   <li>
+      <a href="#SewingCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#SewingCharacteristic">Sewing characteristic</a>
+   </li>
+   <li>
+      <a href="#StructuralFibreCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a>
+   </li>
+   <li>
+      <a href="#TextileStructureCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a>
+   </li>
+   <li>
+      <a href="#ThreadCount"
+         title="https://w3id.org/eudpp/textile-structure#ThreadCount">Thread count</a>
+   </li>
+   <li>
+      <a href="#VisualFibreCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic">Visual fibre characteristic</a>
+   </li>
+   <li>
+      <a href="#YarnAppearance"
+         title="https://w3id.org/eudpp/textile-structure#YarnAppearance">Yarn appearance</a>
+   </li>
+   <li>
+      <a href="#YarnCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a>
+   </li>
+   <li>
+      <a href="#YarnElasticity"
+         title="https://w3id.org/eudpp/textile-structure#YarnElasticity">Yarn elasticity</a>
+   </li>
+   <li>
+      <a href="#YarnHairiness"
+         title="https://w3id.org/eudpp/textile-structure#YarnHairiness">Yarn hairiness</a>
+   </li>
+   <li>
+      <a href="#YarnMechanicalCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic">Yarn mechanical characteristic</a>
+   </li>
+   <li>
+      <a href="#YarnSoftness"
+         title="https://w3id.org/eudpp/textile-structure#YarnSoftness">Yarn softness</a>
+   </li>
+   <li>
+      <a href="#YarnStrength"
+         title="https://w3id.org/eudpp/textile-structure#YarnStrength">Yarn strength</a>
+   </li>
+   <li>
+      <a href="#YarnStructuralCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic">Yarn structural characteristic</a>
+   </li>
+   <li>
+      <a href="#YarnTactileCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic">Yarn tactile characteristic</a>
+   </li>
+   <li>
+      <a href="#YarnUniformity"
+         title="https://w3id.org/eudpp/textile-structure#YarnUniformity">Yarn uniformity</a>
+   </li>
+   <li>
+      <a href="#YarnVisualCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#YarnVisualCharacteristic">Yarn visual characteristic</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#characteristicOf"
+         title="https://w3id.org/eudpp/textile-structure#characteristicOf">characteristic of</a>
+   </li>
+   <li>
+      <a href="#hasCharacteristicValue"
+         title="https://w3id.org/eudpp/textile-structure#hasCharacteristicValue">has characteristic value</a>
+   </li>
+   <li>
+      <a href="#hasStructuralCharacteristic"
+         title="https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic">has structural characteristic</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasTextualValue"
+         title="https://w3id.org/eudpp/textile-structure#hasTextualValue">has textual value</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
+         <span>alt Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#editorialNote"
+         title="http://www.w3.org/2004/02/skos/core#editorialNote">
+         <span>editorial Note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#evidenceStatus"
+         title="https://w3id.org/eudpp/textile-connector#evidenceStatus">
+         <span>evidence Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#modellingNote"
+         title="https://w3id.org/eudpp/textile-connector#modellingNote">
+         <span>modelling Note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch">
+         <span>related Match</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceLocator"
+         title="https://w3id.org/eudpp/textile-connector#sourceLocator">
+         <span>source Locator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#sourceType"
+         title="https://w3id.org/eudpp/textile-connector#sourceType">
+         <span>source Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"
+         title="https://w3id.org/eudpp/textile-connector#typicalInfluenceOn">
+         <span>typical Influence On</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf"
+         title="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf">
+         <span>typically Reduces Likelihood Of</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">EU DPP Textile Structure Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Characteristic classes describe what is observed or declared about a fibre, yarn, fabric or assembly. Concrete numerical values are represented as txtcon:QuantitativeValue instances, while methods and results belong to Textile Assessment and process settings belong to Textile Process.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for EU DPP Textile Structure Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EU DPP Textile Structure Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AssemblyCharacteristic" title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a></li>
+  <li><a href="#CutPrecision" title="https://w3id.org/eudpp/textile-structure#CutPrecision">Cut precision</a></li>
+  <li><a href="#FabricAppearance" title="https://w3id.org/eudpp/textile-structure#FabricAppearance">Fabric appearance</a></li>
+  <li><a href="#FabricBehaviouralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic">Fabric behavioural characteristic</a></li>
+  <li><a href="#FabricBreathability" title="https://w3id.org/eudpp/textile-structure#FabricBreathability">Fabric breathability</a></li>
+  <li><a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a></li>
+  <li><a href="#FabricConstructionCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic">Fabric construction characteristic</a></li>
+  <li><a href="#FabricDrape" title="https://w3id.org/eudpp/textile-structure#FabricDrape">Fabric drape</a></li>
+  <li><a href="#FabricElasticity" title="https://w3id.org/eudpp/textile-structure#FabricElasticity">Fabric elasticity</a></li>
+  <li><a href="#FabricFunctionalCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic">Fabric functional characteristic</a></li>
+  <li><a href="#FabricHandle" title="https://w3id.org/eudpp/textile-structure#FabricHandle">Fabric handle</a></li>
+  <li><a href="#FabricInsulation" title="https://w3id.org/eudpp/textile-structure#FabricInsulation">Fabric insulation</a></li>
+  <li><a href="#FabricLustre" title="https://w3id.org/eudpp/textile-structure#FabricLustre">Fabric lustre</a></li>
+  <li><a href="#FabricMassPerUnitArea" title="https://w3id.org/eudpp/textile-structure#FabricMassPerUnitArea">Fabric mass per unit area</a></li>
+  <li><a href="#FabricRigidity" title="https://w3id.org/eudpp/textile-structure#FabricRigidity">Fabric rigidity</a></li>
+  <li><a href="#FabricStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a></li>
+  <li><a href="#FabricTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic">Fabric tactile characteristic</a></li>
+  <li><a href="#FabricVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic">Fabric visual characteristic</a></li>
+  <li><a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a></li>
+  <li><a href="#FibreCleanliness" title="https://w3id.org/eudpp/textile-structure#FibreCleanliness">Fibre cleanliness</a></li>
+  <li><a href="#FibreColour" title="https://w3id.org/eudpp/textile-structure#FibreColour">Fibre colour</a></li>
+  <li><a href="#FibreElasticity" title="https://w3id.org/eudpp/textile-structure#FibreElasticity">Fibre elasticity</a></li>
+  <li><a href="#FibreFineness" title="https://w3id.org/eudpp/textile-structure#FibreFineness">Fibre fineness</a></li>
+  <li><a href="#FibreLength" title="https://w3id.org/eudpp/textile-structure#FibreLength">Fibre length</a></li>
+  <li><a href="#FibreQualityCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic">Fibre quality characteristic</a></li>
+  <li><a href="#FibreSectionShape" title="https://w3id.org/eudpp/textile-structure#FibreSectionShape">Fibre section shape</a></li>
+  <li><a href="#FibreStrength" title="https://w3id.org/eudpp/textile-structure#FibreStrength">Fibre strength</a></li>
+  <li><a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a></li>
+  <li><a href="#MechanicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic">Mechanical fibre characteristic</a></li>
+  <li><a href="#MoistureRetention" title="https://w3id.org/eudpp/textile-structure#MoistureRetention">Moisture retention</a></li>
+  <li><a href="#PhysicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic">Physical fibre characteristic</a></li>
+  <li><a href="#ResistanceCharacteristic" title="https://w3id.org/eudpp/textile-structure#ResistanceCharacteristic">Resistance characteristic</a></li>
+  <li><a href="#SeamStrength" title="https://w3id.org/eudpp/textile-structure#SeamStrength">Seam strength</a></li>
+  <li><a href="#SewingCharacteristic" title="https://w3id.org/eudpp/textile-structure#SewingCharacteristic">Sewing characteristic</a></li>
+  <li><a href="#StructuralFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a></li>
+  <li><a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a></li>
+  <li><a href="#ThreadCount" title="https://w3id.org/eudpp/textile-structure#ThreadCount">Thread count</a></li>
+  <li><a href="#VisualFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic">Visual fibre characteristic</a></li>
+  <li><a href="#YarnAppearance" title="https://w3id.org/eudpp/textile-structure#YarnAppearance">Yarn appearance</a></li>
+  <li><a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a></li>
+  <li><a href="#YarnElasticity" title="https://w3id.org/eudpp/textile-structure#YarnElasticity">Yarn elasticity</a></li>
+  <li><a href="#YarnHairiness" title="https://w3id.org/eudpp/textile-structure#YarnHairiness">Yarn hairiness</a></li>
+  <li><a href="#YarnMechanicalCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic">Yarn mechanical characteristic</a></li>
+  <li><a href="#YarnSoftness" title="https://w3id.org/eudpp/textile-structure#YarnSoftness">Yarn softness</a></li>
+  <li><a href="#YarnStrength" title="https://w3id.org/eudpp/textile-structure#YarnStrength">Yarn strength</a></li>
+  <li><a href="#YarnStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic">Yarn structural characteristic</a></li>
+  <li><a href="#YarnTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic">Yarn tactile characteristic</a></li>
+  <li><a href="#YarnUniformity" title="https://w3id.org/eudpp/textile-structure#YarnUniformity">Yarn uniformity</a></li>
+  <li><a href="#YarnVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnVisualCharacteristic">Yarn visual characteristic</a></li>
+ </ul>
+ <div class="entity" id="AssemblyCharacteristic">
+  <h3>Assembly characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Characteristic of garment or textile assembly, including seams, sewing and cutting quality.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CutPrecision" title="https://w3id.org/eudpp/textile-structure#CutPrecision">Cut precision</a> <sup class="type-c" title="class">c</sup>, <a href="#SeamStrength" title="https://w3id.org/eudpp/textile-structure#SeamStrength">Seam strength</a> <sup class="type-c" title="class">c</sup>, <a href="#SewingCharacteristic" title="https://w3id.org/eudpp/textile-structure#SewingCharacteristic">Sewing characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CutPrecision">
+  <h3>Cut precision<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#CutPrecision</p>
+  <div class="comment">
+   <span class="markdown">Assembly characteristic concerning precision of cutting or pattern construction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyCharacteristic" title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricAppearance">
+  <h3>Fabric appearance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricAppearance</p>
+  <div class="comment">
+   <span class="markdown">Fabric visual characteristic concerning the overall visible appearance or visual quality of a fabric.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic">Fabric visual characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricBehaviouralCharacteristic">
+  <h3>Fabric behavioural characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric-level characteristic concerning the physical behaviour of a fabric under use, gravity, movement, care or stress conditions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricDrape" title="https://w3id.org/eudpp/textile-structure#FabricDrape">Fabric drape</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricBreathability">
+  <h3>Fabric breathability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricBreathability</p>
+  <div class="comment">
+   <span class="markdown">Fabric functional characteristic concerning the passage of water vapour through the fabric and evaporative cooling.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricFunctionalCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic">Fabric functional characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricCharacteristic">
+  <h3>Fabric characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric-level characteristic relevant to durability, comfort, appearance or functional performance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricBehaviouralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic">Fabric behavioural characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricFunctionalCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic">Fabric functional characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic">Fabric tactile characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic">Fabric visual characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricConstructionCharacteristic">
+  <h3>Fabric construction characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric structural characteristic concerning fabric construction, density, mass per area or arrangement of yarns/threads.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricMassPerUnitArea" title="https://w3id.org/eudpp/textile-structure#FabricMassPerUnitArea">Fabric mass per unit area</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreadCount" title="https://w3id.org/eudpp/textile-structure#ThreadCount">Thread count</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricDrape">
+  <h3>Fabric drape<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricDrape</p>
+  <div class="comment">
+   <span class="markdown">Fabric behavioural characteristic concerning how a fabric hangs in three dimensions and adapts to contours.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricBehaviouralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricBehaviouralCharacteristic">Fabric behavioural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricElasticity">
+  <h3>Fabric elasticity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricElasticity</p>
+  <div class="comment">
+   <span class="markdown">Fabric structural characteristic denoting elastic behaviour of the fabric.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricFunctionalCharacteristic">
+  <h3>Fabric functional characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric-level characteristic concerning functional performance relevant to use, comfort or intended application.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricBreathability" title="https://w3id.org/eudpp/textile-structure#FabricBreathability">Fabric breathability</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricInsulation" title="https://w3id.org/eudpp/textile-structure#FabricInsulation">Fabric insulation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricHandle">
+  <h3>Fabric handle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricHandle</p>
+  <div class="comment">
+   <span class="markdown">Fabric tactile characteristic concerning softness, smoothness, flexibility and overall sensation when touched.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic">Fabric tactile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricInsulation">
+  <h3>Fabric insulation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricInsulation</p>
+  <div class="comment">
+   <span class="markdown">Fabric functional characteristic concerning the retention of heat and reduction of heat transfer.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricFunctionalCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricFunctionalCharacteristic">Fabric functional characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricLustre">
+  <h3>Fabric lustre<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricLustre</p>
+  <div class="comment">
+   <span class="markdown">Fabric visual characteristic concerning the reflection of light that creates a shiny or glossy appearance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic">Fabric visual characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricMassPerUnitArea">
+  <h3>Fabric mass per unit area<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricMassPerUnitArea</p>
+  <div class="comment">
+   <span class="markdown">Fabric construction characteristic expressing the mass of fabric per unit surface area.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricConstructionCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic">Fabric construction characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricRigidity">
+  <h3>Fabric rigidity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricRigidity</p>
+  <div class="comment">
+   <span class="markdown">Fabric structural characteristic denoting rigidity or stiffness.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic">Fabric structural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricStructuralCharacteristic">
+  <h3>Fabric structural characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Characteristic of fabric structure or fabric-level physical behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricConstructionCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic">Fabric construction characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricElasticity" title="https://w3id.org/eudpp/textile-structure#FabricElasticity">Fabric elasticity</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricRigidity" title="https://w3id.org/eudpp/textile-structure#FabricRigidity">Fabric rigidity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricTactileCharacteristic">
+  <h3>Fabric tactile characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricTactileCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric-level characteristic concerning touch, hand-feel or perceived tactile behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricHandle" title="https://w3id.org/eudpp/textile-structure#FabricHandle">Fabric handle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FabricVisualCharacteristic">
+  <h3>Fabric visual characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FabricVisualCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fabric-level characteristic concerning visible appearance, lustre, shininess, sheen or other visual qualities.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FabricAppearance" title="https://w3id.org/eudpp/textile-structure#FabricAppearance">Fabric appearance</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricLustre" title="https://w3id.org/eudpp/textile-structure#FabricLustre">Fabric lustre</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreCharacteristic">
+  <h3>Fibre characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">A characteristic of a textile fibre that can influence yarn manufacture, fabric behaviour and durability-related performance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreQualityCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic">Fibre quality characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#MechanicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic">Mechanical fibre characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#PhysicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic">Physical fibre characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#VisualFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic">Visual fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreCleanliness">
+  <h3>Fibre cleanliness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreCleanliness</p>
+  <div class="comment">
+   <span class="markdown">Fibre quality characteristic concerning impurities or foreign matter remaining in the fibre.</span>
+  </div>
+  <dl>
+   <dt>
+    editorial note
+   </dt>
+   <dd>
+    The term is named FibreCleanliness rather than FibreCleanness, following standard textile and English usage.
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreQualityCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic">Fibre quality characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreColour">
+  <h3>Fibre colour<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreColour</p>
+  <div class="comment">
+   <span class="markdown">Visual fibre characteristic concerning the colour of a fibre and its influence on dyeing or bleaching behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#VisualFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic">Visual fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreElasticity">
+  <h3>Fibre elasticity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreElasticity</p>
+  <div class="comment">
+   <span class="markdown">Mechanical fibre characteristic concerning deformation and recovery after removal of a load.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MechanicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic">Mechanical fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreFineness">
+  <h3>Fibre fineness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreFineness</p>
+  <div class="comment">
+   <span class="markdown">Structural fibre characteristic expressing fibre fineness or linear density.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreLength">
+  <h3>Fibre length<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreLength</p>
+  <div class="comment">
+   <span class="markdown">Structural fibre characteristic expressing the length of textile fibres.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreQualityCharacteristic">
+  <h3>Fibre quality characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreQualityCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fibre characteristic concerning fibre quality conditions that are not purely structural, mechanical, physical or visual.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreCleanliness" title="https://w3id.org/eudpp/textile-structure#FibreCleanliness">Fibre cleanliness</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreSectionShape">
+  <h3>Fibre section shape<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreSectionShape</p>
+  <div class="comment">
+   <span class="markdown">Structural fibre characteristic expressing the cross-sectional shape of textile fibres.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic">Structural fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FibreStrength">
+  <h3>Fibre strength<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#FibreStrength</p>
+  <div class="comment">
+   <span class="markdown">Mechanical fibre characteristic expressing resistance of fibres to tensile stress or breakage.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#MechanicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic">Mechanical fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntermediateTextileCharacteristic">
+  <h3>Intermediate textile characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Characteristic of an intermediate textile structure such as yarn, fabric, resistance property or assembly.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyCharacteristic" title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#FabricCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricCharacteristic">Fabric characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#ResistanceCharacteristic" title="https://w3id.org/eudpp/textile-structure#ResistanceCharacteristic">Resistance characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MechanicalFibreCharacteristic">
+  <h3>Mechanical fibre characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#MechanicalFibreCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fibre characteristic concerning mechanical behaviour such as strength or elasticity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreElasticity" title="https://w3id.org/eudpp/textile-structure#FibreElasticity">Fibre elasticity</a> <sup class="type-c" title="class">c</sup>, <a href="#FibreStrength" title="https://w3id.org/eudpp/textile-structure#FibreStrength">Fibre strength</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MoistureRetention">
+  <h3>Moisture retention<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#MoistureRetention</p>
+  <div class="comment">
+   <span class="markdown">Physical fibre characteristic concerning the capacity of fibres to absorb or retain moisture.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PhysicalFibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic">Physical fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PhysicalFibreCharacteristic">
+  <h3>Physical fibre characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#PhysicalFibreCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fibre characteristic concerning physical behaviour such as moisture retention.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#MoistureRetention" title="https://w3id.org/eudpp/textile-structure#MoistureRetention">Moisture retention</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResistanceCharacteristic">
+  <h3>Resistance characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#ResistanceCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Structural or material resistance characteristic, distinct from the observed degradation phenomenon itself.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SeamStrength">
+  <h3>Seam strength<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#SeamStrength</p>
+  <div class="comment">
+   <span class="markdown">Assembly characteristic expressing the mechanical strength or integrity of a seam.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyCharacteristic" title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SewingCharacteristic">
+  <h3>Sewing characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#SewingCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Assembly characteristic concerning sewing quality or sewing-related construction.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AssemblyCharacteristic" title="https://w3id.org/eudpp/textile-structure#AssemblyCharacteristic">Assembly characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralFibreCharacteristic">
+  <h3>Structural fibre characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#StructuralFibreCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fibre characteristic concerning fibre structure, morphology or geometry.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreFineness" title="https://w3id.org/eudpp/textile-structure#FibreFineness">Fibre fineness</a> <sup class="type-c" title="class">c</sup>, <a href="#FibreLength" title="https://w3id.org/eudpp/textile-structure#FibreLength">Fibre length</a> <sup class="type-c" title="class">c</sup>, <a href="#FibreSectionShape" title="https://w3id.org/eudpp/textile-structure#FibreSectionShape">Fibre section shape</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TextileStructureCharacteristic">
+  <h3>Textile structure characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">A property describing the structure, physical constitution, mechanical behaviour, tactile quality, visual quality or functional behaviour of a textile fibre, yarn, fabric or assembly.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#Property" target="_blank" title="https://w3id.org/eudpp#Property">Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#characteristicOf" title="https://w3id.org/eudpp/textile-structure#characteristicOf">characteristic of</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCharacteristicValue" title="https://w3id.org/eudpp/textile-structure#hasCharacteristicValue">has characteristic value</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTextualValue" title="https://w3id.org/eudpp/textile-structure#hasTextualValue">has textual value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic">has structural characteristic</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-durability#FailureMode" target="_blank" title="https://w3id.org/eudpp/textile-durability#FailureMode">Failure Mode</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon" target="_blank" title="https://w3id.org/eudpp/textile-durability#ObservedDegradationPhenomenon">Observed Degradation Phenomenon</a> <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter" target="_blank" title="https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter">Observed Performance Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThreadCount">
+  <h3>Thread count<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#ThreadCount</p>
+  <div class="comment">
+   <span class="markdown">Fabric construction characteristic expressing the number of threads per specified unit length in a woven fabric.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FabricConstructionCharacteristic" title="https://w3id.org/eudpp/textile-structure#FabricConstructionCharacteristic">Fabric construction characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisualFibreCharacteristic">
+  <h3>Visual fibre characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#VisualFibreCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Fibre characteristic concerning visual properties such as colour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FibreCharacteristic" title="https://w3id.org/eudpp/textile-structure#FibreCharacteristic">Fibre characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FibreColour" title="https://w3id.org/eudpp/textile-structure#FibreColour">Fibre colour</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnAppearance">
+  <h3>Yarn appearance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnAppearance</p>
+  <div class="comment">
+   <span class="markdown">Yarn visual characteristic concerning diameter, hairiness, visible defects and overall appearance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnVisualCharacteristic">Yarn visual characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnCharacteristic">
+  <h3>Yarn characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Characteristic of a yarn that may influence fabric and product durability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#IntermediateTextileCharacteristic" title="https://w3id.org/eudpp/textile-structure#IntermediateTextileCharacteristic">Intermediate textile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#YarnMechanicalCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic">Yarn mechanical characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic">Yarn structural characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic">Yarn tactile characteristic</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnVisualCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnVisualCharacteristic">Yarn visual characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnElasticity">
+  <h3>Yarn elasticity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnElasticity</p>
+  <div class="comment">
+   <span class="markdown">Yarn mechanical characteristic concerning the ability of yarn to deform and recover.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnMechanicalCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic">Yarn mechanical characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnHairiness">
+  <h3>Yarn hairiness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnHairiness</p>
+  <div class="comment">
+   <span class="markdown">Yarn structural characteristic concerning fibre ends and loops protruding from the yarn body.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic">Yarn structural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnMechanicalCharacteristic">
+  <h3>Yarn mechanical characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Yarn characteristic concerning mechanical behaviour such as yarn strength or elasticity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#YarnElasticity" title="https://w3id.org/eudpp/textile-structure#YarnElasticity">Yarn elasticity</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnStrength" title="https://w3id.org/eudpp/textile-structure#YarnStrength">Yarn strength</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnSoftness">
+  <h3>Yarn softness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnSoftness</p>
+  <div class="comment">
+   <span class="markdown">Yarn tactile characteristic concerning perceived softness or smoothness.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnTactileCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic">Yarn tactile characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnStrength">
+  <h3>Yarn strength<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnStrength</p>
+  <div class="comment">
+   <span class="markdown">Yarn mechanical characteristic expressing the ability of a yarn to withstand tensile force without breaking.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnMechanicalCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnMechanicalCharacteristic">Yarn mechanical characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnStructuralCharacteristic">
+  <h3>Yarn structural characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Yarn characteristic concerning structural regularity or configuration.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#YarnHairiness" title="https://w3id.org/eudpp/textile-structure#YarnHairiness">Yarn hairiness</a> <sup class="type-c" title="class">c</sup>, <a href="#YarnUniformity" title="https://w3id.org/eudpp/textile-structure#YarnUniformity">Yarn uniformity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnTactileCharacteristic">
+  <h3>Yarn tactile characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnTactileCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Yarn characteristic concerning tactile or hand-feel behaviour.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#YarnSoftness" title="https://w3id.org/eudpp/textile-structure#YarnSoftness">Yarn softness</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnUniformity">
+  <h3>Yarn uniformity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnUniformity</p>
+  <div class="comment">
+   <span class="markdown">Yarn structural characteristic expressing uniformity in thickness and mass along the yarn length.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnStructuralCharacteristic">Yarn structural characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YarnVisualCharacteristic">
+  <h3>Yarn visual characteristic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#YarnVisualCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Yarn characteristic concerning visible appearance or visual quality.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#YarnCharacteristic" title="https://w3id.org/eudpp/textile-structure#YarnCharacteristic">Yarn characteristic</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#YarnAppearance" title="https://w3id.org/eudpp/textile-structure#YarnAppearance">Yarn appearance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#characteristicOf" title="https://w3id.org/eudpp/textile-structure#characteristicOf">characteristic of</a></li>
+  <li><a href="#hasCharacteristicValue" title="https://w3id.org/eudpp/textile-structure#hasCharacteristicValue">has characteristic value</a></li>
+  <li><a href="#hasStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic">has structural characteristic</a></li>
+ </ul>
+ <div class="entity" id="characteristicOf">
+  <h3>characteristic of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#characteristicOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile structure characteristic occurrence to the textile product that it describes, including a product used as a component of another product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-core#TextileProduct" target="_blank" title="https://w3id.org/eudpp/textile-core#TextileProduct">Textile Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasStructuralCharacteristic" title="https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic">has structural characteristic</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCharacteristicValue">
+  <h3>has characteristic value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#hasCharacteristicValue</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile structure characteristic occurrence to a quantitative value containing a number and a measurement unit.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-connector#QuantitativeValue" target="_blank" title="https://w3id.org/eudpp/textile-connector#QuantitativeValue">Quantitative Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStructuralCharacteristic">
+  <h3>has structural characteristic<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#hasStructuralCharacteristic</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile product, including a product used as a component of another product, to a textile structure characteristic occurrence.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf">https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp#hasProperty" target="_blank" title="https://w3id.org/eudpp#hasProperty">has Property</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://w3id.org/eudpp/textile-core#TextileProduct" target="_blank" title="https://w3id.org/eudpp/textile-core#TextileProduct">Textile Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#characteristicOf" title="https://w3id.org/eudpp/textile-structure#characteristicOf">characteristic of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasTextualValue" title="https://w3id.org/eudpp/textile-structure#hasTextualValue">has textual value</a></li>
+ </ul>
+ <div class="entity" id="hasTextualValue">
+  <h3>has textual value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-structure#hasTextualValue</p>
+  <div class="comment">
+   <span class="markdown">Relates a textile structure characteristic occurrence to a free-text value when no controlled value list is available.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-structure">https://w3id.org/eudpp/textile-structure</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/textile-ontology">https://w3id.org/eudpp/textile-ontology</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TextileStructureCharacteristic" title="https://w3id.org/eudpp/textile-structure#TextileStructureCharacteristic">Textile structure characteristic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#editorialNote" title="http://www.w3.org/2004/02/skos/core#editorialNote"> <span>editorial Note</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#evidenceStatus" title="https://w3id.org/eudpp/textile-connector#evidenceStatus"> <span>evidence Status</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#modellingNote" title="https://w3id.org/eudpp/textile-connector#modellingNote"> <span>modelling Note</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#relatedMatch" title="http://www.w3.org/2004/02/skos/core#relatedMatch"> <span>related Match</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceLocator" title="https://w3id.org/eudpp/textile-connector#sourceLocator"> <span>source Locator</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#sourceType" title="https://w3id.org/eudpp/textile-connector#sourceType"> <span>source Type</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#typicalInfluenceOn" title="https://w3id.org/eudpp/textile-connector#typicalInfluenceOn"> <span>typical Influence On</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf" title="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf"> <span>typically Reduces Likelihood Of</span> </a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
+  <h3>alt Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#editorialNote">
+  <h3>editorial Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#editorialNote</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#evidenceStatus">
+  <h3>evidence Status<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#evidenceStatus</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#modellingNote">
+  <h3>modelling Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#modellingNote</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#relatedMatch">
+  <h3>related Match<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#relatedMatch</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceLocator">
+  <h3>source Locator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceLocator</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#sourceType">
+  <h3>source Type<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#sourceType</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#typicalInfluenceOn">
+  <h3>typical Influence On<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#typicalInfluenceOn</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf">
+  <h3>typically Reduces Likelihood Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/textile-connector#typicallyReducesLikelihoodOf</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
