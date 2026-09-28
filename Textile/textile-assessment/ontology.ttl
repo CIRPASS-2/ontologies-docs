@@ -1,0 +1,883 @@
+@prefix : <https://w3id.org/eudpp/textile-assessment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/eudpp/textile-assessment#> .
+
+<https://w3id.org/eudpp/textile-assessment> rdf:type owl:Ontology ;
+                                             owl:versionIRI <https://w3id.org/eudpp/textile-assessment/1.1.2> ;
+                                             owl:imports <https://w3id.org/eudpp/textile-connector> ,
+                                                         <https://w3id.org/eudpp/textile-dpp-mireot> ,
+                                                         <https://w3id.org/eudpp/textile-durability> ;
+                                             <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Assessment Ontology. Version 1.1.2."@en ;
+                                             <http://purl.org/dc/terms/created> "2026-03-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/creator> "Elio Hbeich"@en ;
+                                             <http://purl.org/dc/terms/description> "Ontology module for textile assessment methods, standards, executions, conditions, parameter settings, results, interpretation scales, endpoints and performance thresholds."@en ;
+                                             <http://purl.org/dc/terms/issued> "2026-03-06"^^xsd:date ;
+                                             <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                             <http://purl.org/dc/terms/modified> "2026-07-16"^^xsd:date ;
+                                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                             <http://purl.org/dc/terms/title> "EU DPP Textile Assessment Ontology"@en ;
+                                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtass" ;
+                                             <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-assessment#" ;
+                                             rdfs:comment "Quantitative results, parameter settings and thresholds use txtcon:QuantitativeValue and SI Digital Framework units through the Textile Connector pattern."@en ,
+                                                          "The module separates reusable methods and standards, concrete assessment executions, and the results produced by those executions."@en ;
+                                             rdfs:label "EU DPP Textile Assessment Ontology"@en ;
+                                             owl:versionInfo "Version 1.1.2" ;
+                                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/eudpp/textile-assessment#appliesMethod
+:appliesMethod rdf:type owl:ObjectProperty ;
+               rdfs:domain :AssessmentExecution ;
+               rdfs:range :AssessmentMethod ;
+               <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+               rdfs:comment "Relates an assessment execution to the reusable assessment method that it performs."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+               rdfs:label "applies method"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#appliesToEndpoint
+:appliesToEndpoint rdf:type owl:ObjectProperty ;
+                   rdfs:domain :PerformanceThreshold ;
+                   rdfs:range :TestEndpoint ;
+                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                   rdfs:comment "Relates a performance threshold to the test endpoint to which the threshold applies."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                   rdfs:label "applies to endpoint"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#assessesPerformanceParameter
+:assessesPerformanceParameter rdf:type owl:ObjectProperty ;
+                              rdfs:domain :AssessmentExecution ;
+                              rdfs:range <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> ;
+                              <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                              rdfs:comment "Relates an assessment execution to the durability-related performance parameter being evaluated."@en ;
+                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                              rdfs:label "assesses performance parameter"@en ;
+                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#assessesProduct
+:assessesProduct rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AssessmentExecution ;
+                 rdfs:range <https://w3id.org/eudpp#Product> ;
+                 <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                 rdfs:comment "Relates an assessment execution to the product being assessed, including a product that is used as a component of another product."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                 rdfs:label "assesses product"@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#criterionForPerformanceParameter
+:criterionForPerformanceParameter rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :AssessmentDecisionCriterion ;
+                                  rdfs:range <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> ;
+                                  <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                  rdfs:comment "Relates a decision criterion to the durability-related performance parameter to which it applies."@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                  rdfs:label "criterion for performance parameter"@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#definesEndpoint
+:definesEndpoint rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( :AssessmentMethod
+                                             :AssessmentStandard
+                                           )
+                             ] ;
+                 rdfs:range :TestEndpoint ;
+                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                 rdfs:comment "Relates a method or standard to an endpoint or stopping condition it defines."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                 rdfs:label "defines endpoint"@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#definesMethod
+:definesMethod rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isDefinedByStandard ;
+               rdfs:domain :AssessmentStandard ;
+               rdfs:range :AssessmentMethod ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Relates an assessment standard to an assessment method it defines or specifies."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+               rdfs:label "defines method"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasComparisonOperator
+:hasComparisonOperator rdf:type owl:ObjectProperty ;
+                       rdfs:domain :PerformanceThreshold ;
+                       rdfs:range :ThresholdComparisonOperatorConcept ;
+                       <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                       rdfs:comment "Relates a performance threshold to the controlled comparison operator applied to its threshold value."@en ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                       rdfs:label "has comparison operator"@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceLocator> "domain motivation from JRC Annex 13.8.3, pages 451-452."@en ;
+                       <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasCondition
+:hasCondition rdf:type owl:ObjectProperty ;
+              rdfs:domain :AssessmentExecution ;
+              rdfs:range :AssessmentCondition ;
+              <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+              rdfs:comment "Relates an assessment execution to a condition under which it is performed."@en ;
+              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+              rdfs:label "has condition"@en ;
+              <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186."@en ;
+              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasMeasuredValue
+:hasMeasuredValue rdf:type owl:ObjectProperty ;
+                  rdfs:domain :MeasurementResult ;
+                  rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                  <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                  rdfs:comment "Relates a measurement result to its quantitative measured value."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                  rdfs:label "has measured value"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC domain motivation in Section 11.1.1.1, lines 5255-5279."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasMeasurementParameter
+:hasMeasurementParameter rdf:type owl:ObjectProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :AssessmentCondition
+                                                     :AssessmentMethod
+                                                   )
+                                     ] ;
+                         rdfs:range :MeasurementParameter ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Relates a method or assessment condition to a protocol parameter it specifies."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                         rdfs:label "has measurement parameter"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010; Annex 13.4, Table 124, printed pages 362-367, caption line 9698."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasParameterSetting
+:hasParameterSetting rdf:type owl:ObjectProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :AssessmentCondition
+                                                 :AssessmentExecution
+                                               )
+                                 ] ;
+                     rdfs:range :MeasurementParameterSetting ;
+                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                     rdfs:comment "Relates an assessment execution or condition to a concrete parameter setting."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "has parameter setting"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasParameterValue
+:hasParameterValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain :MeasurementParameterSetting ;
+                   rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                   rdfs:comment "Relates a measurement parameter setting to its quantitative value."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                   rdfs:label "has parameter value"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasRatingValue
+:hasRatingValue rdf:type owl:ObjectProperty ;
+                rdfs:domain :MeasurementResult ;
+                rdfs:range :RatingValueConcept ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Relates a measurement result to a controlled rating value or grade."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                rdfs:label "has rating value"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasScaleValue
+:hasScaleValue rdf:type owl:ObjectProperty ;
+               owl:inverseOf :inScale ;
+               rdfs:domain :RatingScale ;
+               rdfs:range :RatingValueConcept ;
+               <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+               rdfs:comment "Relates a rating scale to one of its controlled rating values."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+               rdfs:label "has scale value"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasThresholdRatingValue
+:hasThresholdRatingValue rdf:type owl:ObjectProperty ;
+                         rdfs:domain :PerformanceThreshold ;
+                         rdfs:range :RatingValueConcept ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Relates a performance threshold to a controlled rating value used as its comparison level."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                         rdfs:label "has threshold rating value"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 165, printed pages 447-452; table caption at line 10985."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#hasThresholdValue
+:hasThresholdValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain :PerformanceThreshold ;
+                   rdfs:range <https://w3id.org/eudpp/textile-connector#QuantitativeValue> ;
+                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                   rdfs:comment "Relates a performance threshold to its quantitative comparison value."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                   rdfs:label "has threshold value"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC domain motivation in Annex 13.8.3, pages 451-452."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#inScale
+:inScale rdf:type owl:ObjectProperty ;
+         rdfs:domain :RatingValueConcept ;
+         rdfs:range :RatingScale ;
+         <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+         rdfs:comment "Relates a rating value to the rating scale to which it belongs."@en ;
+         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+         rdfs:label "in scale"@en ;
+         <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#isDefinedByStandard
+:isDefinedByStandard rdf:type owl:ObjectProperty ;
+                     rdfs:domain :AssessmentMethod ;
+                     rdfs:range :AssessmentStandard ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Relates an assessment method to the standard that defines or specifies it."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "is defined by standard"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#isEvaluatedAgainst
+:isEvaluatedAgainst rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AssessmentResult ;
+                    rdfs:range :AssessmentDecisionCriterion ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Relates an assessment result to a decision criterion against which it is evaluated."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                    rdfs:label "is evaluated against"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5284; Table 71, printed page 186."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#isInterpretedBy
+:isInterpretedBy rdf:type owl:ObjectProperty ;
+                 rdfs:domain :MeasurementResult ;
+                 rdfs:range :InterpretationScale ;
+                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                 rdfs:comment "Relates a measurement result to the scale used to interpret it."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                 rdfs:label "is interpreted by"@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5284; Table 71, printed page 186."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#measuresPerformanceParameter
+:measuresPerformanceParameter rdf:type owl:ObjectProperty ;
+                              rdfs:domain :TestMethod ;
+                              rdfs:range <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> ;
+                              <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                              rdfs:comment "Relates a test method to the durability-related performance parameter that the method is intended to assess."@en ;
+                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                              rdfs:label "measures performance parameter"@en ;
+                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3182-3184."@en ;
+                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#producesResult
+:producesResult rdf:type owl:ObjectProperty ;
+                owl:inverseOf :resultOfAssessment ;
+                rdfs:domain :AssessmentExecution ;
+                rdfs:range :AssessmentResult ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Relates an assessment execution to a result produced by that execution."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                rdfs:label "produces result"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#resultOfAssessment
+:resultOfAssessment rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AssessmentResult ;
+                    rdfs:range :AssessmentExecution ;
+                    <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                    rdfs:comment "Relates an assessment result to the assessment execution that produced it."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                    rdfs:label "result of assessment"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#settingForParameter
+:settingForParameter rdf:type owl:ObjectProperty ;
+                     rdfs:domain :MeasurementParameterSetting ;
+                     rdfs:range :MeasurementParameter ;
+                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                     rdfs:comment "Relates a concrete parameter setting to the measurement parameter that it sets."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "setting for parameter"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#specifiesCondition
+:specifiesCondition rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :AssessmentMethod
+                                                :AssessmentStandard
+                                              )
+                                ] ;
+                    rdfs:range :AssessmentCondition ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Relates a method or standard to a condition prescribed by its protocol."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                    rdfs:label "specifies condition"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 165, printed pages 447-452; table caption at line 10985."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedRelation> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/eudpp/textile-assessment#hasTextualValue
+:hasTextualValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :AssessmentResult ;
+                 rdfs:range xsd:string ;
+                 <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                 rdfs:comment "Relates an assessment result to a free-text outcome when no controlled rating concept is available."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                 rdfs:label "has textual value"@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Product
+<https://w3id.org/eudpp#Product> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AgeingSimulationMethod
+:AgeingSimulationMethod rdf:type owl:Class ;
+                        rdfs:subClassOf :TestMethod ;
+                        <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                        rdfs:comment "Test method that applies controlled and repeatable use or care cycles to simulate product ageing before or during durability assessment."@en ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                        rdfs:label "Ageing simulation method"@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.1.3, printed pages 112-113, lines 2968-3010."@en ;
+                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentCondition
+:AssessmentCondition rdf:type owl:Class ;
+                     rdfs:subClassOf :AssessmentElement ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Condition under which an assessment execution is performed or a result is obtained."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "Assessment condition"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 11.1.1.1, printed pages 185-186, lines 5252-5279; Table 71, printed page 186."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentDecisionCriterion
+:AssessmentDecisionCriterion rdf:type owl:Class ;
+                             rdfs:subClassOf :AssessmentElement ;
+                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                             rdfs:comment "Criterion used to interpret, accept, reject, classify or otherwise decide on an assessment result."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                             rdfs:label "Assessment decision criterion"@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentElement
+:AssessmentElement rdf:type owl:Class ;
+                   <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                   rdfs:comment "Generic superclass for entities used to specify, perform, interpret or report a textile assessment."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                   rdfs:label "Assessment element"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentExecution
+:AssessmentExecution rdf:type owl:Class ;
+                     rdfs:subClassOf :AssessmentElement ;
+                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                     rdfs:comment "Concrete performance of an assessment method on a specified product under stated conditions and parameter settings."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "Assessment execution"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentMethod
+:AssessmentMethod rdf:type owl:Class ;
+                  rdfs:subClassOf :AssessmentElement ;
+                  <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                  rdfs:comment "Procedure or documented approach used to assess, observe, test, measure or evaluate a textile product or a durability-related performance parameter."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                  rdfs:label "Assessment method"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3182-3184; JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5279."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentParameter
+:AssessmentParameter rdf:type owl:Class ;
+                     rdfs:subClassOf :AssessmentElement ;
+                     <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                     rdfs:comment "Parameter used to configure, qualify or interpret an assessment procedure."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "Assessment parameter"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentResult
+:AssessmentResult rdf:type owl:Class ;
+                  rdfs:subClassOf :AssessmentElement ;
+                  <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                  rdfs:comment "Output produced by an assessment execution, observation, test or evaluation."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                  rdfs:label "Assessment result"@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#AssessmentStandard
+:AssessmentStandard rdf:type owl:Class ;
+                    rdfs:subClassOf :AssessmentElement ;
+                    <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                    rdfs:comment "Normative or reference document that defines, constrains or supports assessment methods, conditions, result interpretation or decision criteria."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                    rdfs:label "Assessment standard"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3182-3184."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#DurabilityAssessment
+:DurabilityAssessment rdf:type owl:Class ;
+                      rdfs:subClassOf :AssessmentExecution ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Assessment execution focused on durability-related characteristics, degradation phenomena, failure modes or derived durability indicators of a textile product."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                      rdfs:label "Durability assessment"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.3, printed pages 112-113, lines 2968-3010; Section 11.1.1, printed pages 185-186, lines 5231-5279."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#InterpretationScale
+:InterpretationScale rdf:type owl:Class ;
+                     rdfs:subClassOf :AssessmentElement ;
+                     <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                     rdfs:comment "Scale used to interpret, classify or rate an assessment result."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                     rdfs:label "Interpretation scale"@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5279."@en ;
+                     <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#MeasurementParameter
+:MeasurementParameter rdf:type owl:Class ;
+                      rdfs:subClassOf :AssessmentParameter ;
+                      owl:disjointWith <https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Protocol parameter that is controlled or recorded during a measurement or test, distinct from the product performance characteristic being assessed."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                      rdfs:label "Measurement parameter"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5260-5279."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#MeasurementParameterSetting
+:MeasurementParameterSetting rdf:type owl:Class ;
+                             rdfs:subClassOf :AssessmentElement ;
+                             <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                             rdfs:comment "Concrete assignment of a quantitative or controlled value to a measurement parameter in an assessment execution or protocol."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                             rdfs:label "Measurement parameter setting"@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#MeasurementResult
+:MeasurementResult rdf:type owl:Class ;
+                   rdfs:subClassOf :AssessmentResult ;
+                   <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                   rdfs:comment "Assessment result that records a quantitative value, qualitative outcome or controlled rating obtained from a measurement or test."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                   rdfs:label "Measurement result"@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279."@en ;
+                   <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#NumberOfCycles
+:NumberOfCycles rdf:type owl:Class ;
+                rdfs:subClassOf :MeasurementParameter ;
+                <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                rdfs:comment "Measurement parameter specifying the number of repeated test, washing, abrasion or simulated-use cycles."@en ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                rdfs:label "Number of cycles"@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5235."@en ;
+                <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#PerformanceThreshold
+:PerformanceThreshold rdf:type owl:Class ;
+                      rdfs:subClassOf :AssessmentDecisionCriterion ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Decision criterion specifying a minimum, maximum, target or equality value against which a result is evaluated."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                      rdfs:label "Performance threshold"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5255-5279."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#RatingScale
+:RatingScale rdf:type owl:Class ;
+             rdfs:subClassOf :InterpretationScale ;
+             <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+             rdfs:comment "Interpretation scale composed of controlled rating values or grades."@en ;
+             rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+             rdfs:label "Rating scale"@en ;
+             <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5279."@en ;
+             <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#RatingValueConcept
+:RatingValueConcept rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                    <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                    rdfs:comment "SKOS concept used as a controlled rating value, grade or scale level."@en ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                    rdfs:label "Rating value concept"@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#RobustnessAssessment
+:RobustnessAssessment rdf:type owl:Class ;
+                      rdfs:subClassOf :AssessmentMethod ;
+                      <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                      rdfs:comment "Assessment framework that evaluates resistance to selected external stresses and inspection parameters as a proxy for physical durability."@en ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                      rdfs:label "Robustness assessment"@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1, printed page 185, lines 5231-5250; JRC Preparatory Study, Section 11.1.1.1, printed page 185, lines 5251-5259."@en ;
+                      <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#RobustnessScoringMethod
+:RobustnessScoringMethod rdf:type owl:Class ;
+                         rdfs:subClassOf :RobustnessAssessment ;
+                         <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                         rdfs:comment "Robustness assessment method that maps test and inspection results to points and combines them into a robustness score."@en ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                         rdfs:label "Robustness scoring method"@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5251-5279; JRC Preparatory Study, Section 11.1.1.1, Table 71, printed page 186; caption line 5284."@en ;
+                         <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#TestCondition
+:TestCondition rdf:type owl:Class ;
+               rdfs:subClassOf :AssessmentCondition ;
+               <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+               rdfs:comment "Controlled assessment condition used in a test protocol, such as temperature, humidity, load, duration, washing cycle or abrasion cycle."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+               rdfs:label "Test condition"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5260-5279."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#TestEndpoint
+:TestEndpoint rdf:type owl:Class ;
+              rdfs:subClassOf :AssessmentDecisionCriterion ;
+              <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+              rdfs:comment "Defined observation or stopping condition used to determine when a test is complete, such as specimen breakdown or a specified appearance change."@en ;
+              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+              rdfs:label "Test endpoint"@en ;
+              <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.4, Table 124, printed pages 362-367; table caption at line 9698."@en ;
+              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#TestExecution
+:TestExecution rdf:type owl:Class ;
+               rdfs:subClassOf :AssessmentExecution ;
+               <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+               rdfs:comment "Assessment execution that performs a test method under controlled test conditions."@en ;
+               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+               rdfs:label "Test execution"@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#TestMethod
+:TestMethod rdf:type owl:Class ;
+            rdfs:subClassOf :AssessmentMethod ;
+            <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+            rdfs:comment "Assessment method that applies a controlled experimental or inspection procedure to a durability-related performance parameter."@en ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+            rdfs:label "Test method"@en ;
+            <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3182-3184; JRC Preparatory Study, Section 11.1.1.1, printed pages 185-186, lines 5260-5279."@en ;
+            <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#TestingStandard
+:TestingStandard rdf:type owl:Class ;
+                 rdfs:subClassOf :AssessmentStandard ;
+                 <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> ;
+                 rdfs:comment "Assessment standard specialised for test and verification procedures."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                 rdfs:label "Testing standard"@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 9.2.1.5, printed page 121, lines 3182-3184."@en ;
+                 <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+
+
+###  https://w3id.org/eudpp/textile-assessment#ThresholdComparisonOperatorConcept
+:ThresholdComparisonOperatorConcept rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                    <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                    rdfs:comment "SKOS concept identifying the comparison operator used by a performance threshold."@en ;
+                                    rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                    rdfs:label "Threshold comparison operator concept"@en ;
+                                    <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology modelling specification, version 1.1.0."@en ;
+                                    <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-connector#QuantitativeValue
+<https://w3id.org/eudpp/textile-connector#QuantitativeValue> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter
+<https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme
+<https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                        <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                                        rdfs:comment "Controlled vocabulary of comparison operators used by performance thresholds."@en ;
+                                                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                                                        rdfs:label "Threshold comparison operator scheme"@en ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-assessment-codelists#equalTo> ,
+                                                                                                                                            <https://w3id.org/eudpp/textile-assessment-codelists#greaterThan> ,
+                                                                                                                                            <https://w3id.org/eudpp/textile-assessment-codelists#greaterThanOrEqualTo> ,
+                                                                                                                                            <https://w3id.org/eudpp/textile-assessment-codelists#lessThan> ,
+                                                                                                                                            <https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo> ;
+                                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Threshold comparison operator scheme"@en ;
+                                                                                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                                                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#equalTo
+<https://w3id.org/eudpp/textile-assessment-codelists#equalTo> rdf:type owl:NamedIndividual ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                       :ThresholdComparisonOperatorConcept ;
+                                                              <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                              rdfs:comment "The measured or assessed value must equal the threshold value."@en ;
+                                                              rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                              rdfs:label "equal to"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "equal to"@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                              <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#greaterThan
+<https://w3id.org/eudpp/textile-assessment-codelists#greaterThan> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                           :ThresholdComparisonOperatorConcept ;
+                                                                  <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                  rdfs:comment "The measured or assessed value must be greater than the threshold value."@en ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                                  rdfs:label "greater than"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "greater than"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                  <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                                  <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#greaterThanOrEqualTo
+<https://w3id.org/eudpp/textile-assessment-codelists#greaterThanOrEqualTo> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                    :ThresholdComparisonOperatorConcept ;
+                                                                           <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                           rdfs:comment "The measured or assessed value must be greater than or equal to the threshold value."@en ;
+                                                                           rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                                           rdfs:label "greater than or equal to"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "greater than or equal to"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                           <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                                           <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#lessThan
+<https://w3id.org/eudpp/textile-assessment-codelists#lessThan> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                        :ThresholdComparisonOperatorConcept ;
+                                                               <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                               rdfs:comment "The measured or assessed value must be lower than the threshold value."@en ;
+                                                               rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                               rdfs:label "less than"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "less than"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                               <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                               <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+###  https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo
+<https://w3id.org/eudpp/textile-assessment-codelists#lessThanOrEqualTo> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                                 :ThresholdComparisonOperatorConcept ;
+                                                                        <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> ;
+                                                                        rdfs:comment "The measured or assessed value must be lower than or equal to the threshold value."@en ;
+                                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/textile-assessment> ;
+                                                                        rdfs:label "less than or equal to"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "less than or equal to"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-assessment-codelists#ThresholdComparisonOperatorScheme> ;
+                                                                        <https://w3id.org/eudpp/textile-connector#sourceLocator> "CIRPASS Textile Ontology 1.1.0, assessment threshold-comparison vocabulary specification."@en ;
+                                                                        <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AssessmentCondition
+                :AssessmentDecisionCriterion
+                :AssessmentExecution
+                :AssessmentMethod
+                :AssessmentResult
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

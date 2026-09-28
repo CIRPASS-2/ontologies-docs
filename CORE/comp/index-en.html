@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Compliance module of an EU Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/COMP","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/COMP","name":"The Compliance module of an EU Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/COMP", "dateReleased":"2026-06-05", "version":"1.0.0", "author":[{"@type":"Person","name":"Daniel Hutzschenreuter"}], "contributor":[{"@type":"Person","name":"Gisa Foyer"},{"@type":"Person","name":"Jens Niederhausen"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>The Compliance module of an EU Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.</h1>
+<h2>Release: 2026-06-05</h2>
+
+
+<dl>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Issued on:</dt>
+<dd>2026-06-05</dd>
+<dt>Authors:</dt>
+<dd>Daniel Hutzschenreuter</dd>
+
+<dt>Contributors:</dt>
+<dd>Gisa Foyer</dd><dd>Jens Niederhausen</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>https://doi.org/10.5281/zenodo.15270342</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">EU DPP CO COMP: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#CommonSpecification" title="https://w3id.org/eudpp#CommonSpecification">Common Specification</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ConformityAssessmentModule"
+         title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">EU Declaration of Conformity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#HarmonisedStandard" title="https://w3id.org/eudpp#HarmonisedStandard">Harmonised Standard</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#OtherTechnicalSpecification"
+         title="https://w3id.org/eudpp#OtherTechnicalSpecification">Other Technical Specification</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ProductRequirement" title="https://w3id.org/eudpp#ProductRequirement">Product Requirement</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#TechnicalSpecification" title="https://w3id.org/eudpp#TechnicalSpecification">Technical Specification</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation"
+         title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#accordingTo" title="https://w3id.org/eudpp#accordingTo">according to</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#allowsConformityAssessmentModule"
+         title="https://w3id.org/eudpp#allowsConformityAssessmentModule">allows Conformity Assessment Module</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#conformityDeclaredTo" title="https://w3id.org/eudpp#conformityDeclaredTo">conformity declared to</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#hasUnionHarmonisationLegislation"
+         title="https://w3id.org/eudpp#hasUnionHarmonisationLegislation">has Union Harmonisation Legislation</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#usedForPresumptionOfConformity"
+         title="https://w3id.org/eudpp#usedForPresumptionOfConformity">used for presumtion of conformity</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#assignedELI" title="https://w3id.org/eudpp#assignedELI">assigned ELI</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#certificateNumber" title="https://w3id.org/eudpp#certificateNumber">certificate number</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#certificateRevisionNumber" title="https://w3id.org/eudpp#certificateRevisionNumber">certificate revision number</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleA" title="https://w3id.org/eudpp#moduleA">module A</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleA1" title="https://w3id.org/eudpp#moduleA1">module A1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleA2" title="https://w3id.org/eudpp#moduleA2">module A2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleB" title="https://w3id.org/eudpp#moduleB">module B</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleC" title="https://w3id.org/eudpp#moduleC">module C</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleC1" title="https://w3id.org/eudpp#moduleC1">module C1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleC2" title="https://w3id.org/eudpp#moduleC2">module C2</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleD" title="https://w3id.org/eudpp#moduleD">module D</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleD1" title="https://w3id.org/eudpp#moduleD1">module D1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleE" title="https://w3id.org/eudpp#moduleE">module E</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleE1" title="https://w3id.org/eudpp#moduleE1">module E1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleF" title="https://w3id.org/eudpp#moduleF">module F</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleF1" title="https://w3id.org/eudpp#moduleF1">module F1</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleG" title="https://w3id.org/eudpp#moduleG">module G</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleH" title="https://w3id.org/eudpp#moduleH">module H</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#moduleH1" title="https://w3id.org/eudpp#moduleH1">module H1</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">EU DPP CO COMP: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Compliance module of an EU DPP core ontology proposed by the CIRPASS-2 European project.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for EU DPP CO COMP classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EU DPP CO COMP.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#CommonSpecification" title="https://w3id.org/eudpp#CommonSpecification">Common Specification</a></li>
+  <li><a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a></li>
+  <li><a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a></li>
+  <li><a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">EU Declaration of Conformity</a></li>
+  <li><a href="#https://w3id.org/eudpp#HarmonisedStandard" title="https://w3id.org/eudpp#HarmonisedStandard">Harmonised Standard</a></li>
+  <li><a href="#https://w3id.org/eudpp#OtherTechnicalSpecification" title="https://w3id.org/eudpp#OtherTechnicalSpecification">Other Technical Specification</a></li>
+  <li><a href="#https://w3id.org/eudpp#ProductRequirement" title="https://w3id.org/eudpp#ProductRequirement">Product Requirement</a></li>
+  <li><a href="#https://w3id.org/eudpp#TechnicalSpecification" title="https://w3id.org/eudpp#TechnicalSpecification">Technical Specification</a></li>
+  <li><a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#CommonSpecification">
+  <h3>Common Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CommonSpecification</p>
+  <div class="comment">
+   <span class="markdown">Common specification means ecodesign requirements, essential requirements for digital product passports or test, measurement or calculation methods established by implementing acts adopted by the Commission for products covered by delegated acts pursuant to ESPR Article 4.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    ESPR Art 42, https://eur-lex.europa.eu/eli/reg/2024/1781/oj#art_42
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#TechnicalSpecification" title="https://w3id.org/eudpp#TechnicalSpecification">Technical Specification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ConformityAssessmentModule">
+  <h3>Conformity Assessment Module<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ConformityAssessmentModule</p>
+  <div class="comment">
+   <span class="markdown">Conformity Assessment module means the possible conformity assessment elements that can be chosen, in accordance with certain criteria, to fullfill the conformity accessement required to be performed by Community harmonisation legislation in respect of a particular product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Decision No 768/2008/EC Art 4, https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#art_4
+   </dd>
+   <dd>
+    ESPR Art 43, https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_43
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#accordingTo" title="https://w3id.org/eudpp#accordingTo">according to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#allowsConformityAssessmentModule" title="https://w3id.org/eudpp#allowsConformityAssessmentModule">allows Conformity Assessment Module</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#moduleA" title="https://w3id.org/eudpp#moduleA">module A</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleA1" title="https://w3id.org/eudpp#moduleA1">module A1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleA2" title="https://w3id.org/eudpp#moduleA2">module A2</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleB" title="https://w3id.org/eudpp#moduleB">module B</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleC" title="https://w3id.org/eudpp#moduleC">module C</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleC1" title="https://w3id.org/eudpp#moduleC1">module C1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleC2" title="https://w3id.org/eudpp#moduleC2">module C2</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleD" title="https://w3id.org/eudpp#moduleD">module D</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleD1" title="https://w3id.org/eudpp#moduleD1">module D1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleE" title="https://w3id.org/eudpp#moduleE">module E</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleE1" title="https://w3id.org/eudpp#moduleE1">module E1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleF" title="https://w3id.org/eudpp#moduleF">module F</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleF1" title="https://w3id.org/eudpp#moduleF1">module F1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleG" title="https://w3id.org/eudpp#moduleG">module G</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleH" title="https://w3id.org/eudpp#moduleH">module H</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#moduleH1" title="https://w3id.org/eudpp#moduleH1">module H1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ConformityCertificate">
+  <h3>Conformity Certificate<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ConformityCertificate</p>
+  <div class="comment">
+   <span class="markdown">Conformity assessment certificate for a certification. The blue guide uses the term "cerficate of conformity". The ESPR uses "conformity certificate" as well as "certificate" and "approval decision".</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4, https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001
+   </dd>
+   <dd>
+    ESPR Annex III (e)
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#accordingTo" title="https://w3id.org/eudpp#accordingTo">according to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#certificateNumber" title="https://w3id.org/eudpp#certificateNumber">certificate number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#certificateRevisionNumber" title="https://w3id.org/eudpp#certificateRevisionNumber">certificate revision number</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#EUDeclarationOfConformity">
+  <h3>EU Declaration of Conformity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EUDeclarationOfConformity</p>
+  <div class="comment">
+   <span class="markdown">The EU Declaration of Conformity shall state that the fulfilment of the ecodesign requirements specified in the applicable delegated acts adopted pursuant to ESPR Article&nbsp;4 has been demonstrated or that a&nbsp;presumption of conformity applies in accordance with ESPR Article&nbsp;41.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Decision No 768/2008/EC Annex I Art R10, https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I
+   </dd>
+   <dd>
+    ESPR Art 44, https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_44
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#conformityDeclaredTo" title="https://w3id.org/eudpp#conformityDeclaredTo">conformity declared to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasUnionHarmonisationLegislation" title="https://w3id.org/eudpp#hasUnionHarmonisationLegislation">has Union Harmonisation Legislation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#HarmonisedStandard">
+  <h3>Harmonised Standard<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#HarmonisedStandard</p>
+  <div class="comment">
+   <span class="markdown">Harmonised Standard means a European standard adopted on the basis of a request made by the Commission for the application of Union harmonisation legislation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Regulation (EU) No&nbsp;1025/2012 Art 2 (1c), https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32012R1025#art_2
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ProductRequirement" title="https://w3id.org/eudpp#ProductRequirement">Product Requirement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#OtherTechnicalSpecification">
+  <h3>Other Technical Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#OtherTechnicalSpecification</p>
+  <div class="comment">
+   <span class="markdown">Other technical specifications in relation to which conformity is declared.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    ESPR Annex V, (6)
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#TechnicalSpecification" title="https://w3id.org/eudpp#TechnicalSpecification">Technical Specification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ProductRequirement">
+  <h3>Product Requirement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ProductRequirement</p>
+  <div class="comment">
+   <span class="markdown">Product requirements means a requirement to be fullfilled by a product when placed on the market.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#HarmonisedStandard" title="https://w3id.org/eudpp#HarmonisedStandard">Harmonised Standard</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#TechnicalSpecification" title="https://w3id.org/eudpp#TechnicalSpecification">Technical Specification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#usedForPresumptionOfConformity" title="https://w3id.org/eudpp#usedForPresumptionOfConformity">used for presumtion of conformity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#TechnicalSpecification">
+  <h3>Technical Specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#TechnicalSpecification</p>
+  <div class="comment">
+   <span class="markdown">Technical specification means a document that prescribes technical requirements to be fulfilled by a product, process, service or system and which lays down one or more of the following: Common Specification or Other Technical Specification.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Regulation (EU) No&nbsp;1025/2012 Art 2 (4) https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32012R1025#art_2
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ProductRequirement" title="https://w3id.org/eudpp#ProductRequirement">Product Requirement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CommonSpecification" title="https://w3id.org/eudpp#CommonSpecification">Common Specification</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#OtherTechnicalSpecification" title="https://w3id.org/eudpp#OtherTechnicalSpecification">Other Technical Specification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#UnionHarmonisationLegislation">
+  <h3>Union Harmonised Legislation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#UnionHarmonisationLegislation</p>
+  <div class="comment">
+   <span class="markdown">Union Harmonisation Legislation shall mean any Union legislation harmonising the conditions for the marketing of products. Examples are directives, regulations and delegated acts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    Decision No 768/2008/EC Annex I Art R1 (17) https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#allowsConformityAssessmentModule" title="https://w3id.org/eudpp#allowsConformityAssessmentModule">allows Conformity Assessment Module</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#assignedELI" title="https://w3id.org/eudpp#assignedELI">assigned ELI</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#conformityDeclaredTo" title="https://w3id.org/eudpp#conformityDeclaredTo">conformity declared to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasUnionHarmonisationLegislation" title="https://w3id.org/eudpp#hasUnionHarmonisationLegislation">has Union Harmonisation Legislation</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#usedForPresumptionOfConformity" title="https://w3id.org/eudpp#usedForPresumptionOfConformity">used for presumtion of conformity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#accordingTo" title="https://w3id.org/eudpp#accordingTo">according to</a></li>
+  <li><a href="#https://w3id.org/eudpp#allowsConformityAssessmentModule" title="https://w3id.org/eudpp#allowsConformityAssessmentModule">allows Conformity Assessment Module</a></li>
+  <li><a href="#https://w3id.org/eudpp#conformityDeclaredTo" title="https://w3id.org/eudpp#conformityDeclaredTo">conformity declared to</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasUnionHarmonisationLegislation" title="https://w3id.org/eudpp#hasUnionHarmonisationLegislation">has Union Harmonisation Legislation</a></li>
+  <li><a href="#https://w3id.org/eudpp#usedForPresumptionOfConformity" title="https://w3id.org/eudpp#usedForPresumptionOfConformity">used for presumtion of conformity</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#accordingTo">
+  <h3>according to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#accordingTo</p>
+  <div class="comment">
+   <span class="markdown">Property defining specifies conformity assess procedure/cerfication scheme underlying the cerfificate.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#art_4 Decision No 768/2008/EC Art 4
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_43 ESPR Art 43
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#allowsConformityAssessmentModule">
+  <h3>allows Conformity Assessment Module<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#allowsConformityAssessmentModule</p>
+  <div class="comment">
+   <span class="markdown">A property that specifies the conformity assment procedure applicable to the type of product</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#art_4 Decision No 768/2008/EC Art 4
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_43 ESPR Art 43
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#conformityDeclaredTo">
+  <h3>conformity declared to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#conformityDeclaredTo</p>
+  <div class="comment">
+   <span class="markdown">A property which specifies which Union Harmonisation Legislation conformity is declared to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    ESPR Annex V
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">EU Declaration of Conformity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasUnionHarmonisationLegislation">
+  <h3>has Union Harmonisation Legislation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasUnionHarmonisationLegislation</p>
+  <div class="comment">
+   <span class="markdown">A property providing the Union Harmonisation Legislation refered to in the EU Declaration of Conformity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    ESPR Annex V, (5)
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">EU Declaration of Conformity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#usedForPresumptionOfConformity">
+  <h3>used for presumtion of conformity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#usedForPresumptionOfConformity</p>
+  <div class="comment">
+   <span class="markdown">This property specifies which harmonised standards (or parts thereof) was used to assess conformity with the Union harmonistation legislation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I Decision No 768/2008/EC Annex I Art R8
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_41 ESPR Art 41
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ProductRequirement" title="https://w3id.org/eudpp#ProductRequirement">Product Requirement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#assignedELI" title="https://w3id.org/eudpp#assignedELI">assigned ELI</a></li>
+  <li><a href="#https://w3id.org/eudpp#certificateNumber" title="https://w3id.org/eudpp#certificateNumber">certificate number</a></li>
+  <li><a href="#https://w3id.org/eudpp#certificateRevisionNumber" title="https://w3id.org/eudpp#certificateRevisionNumber">certificate revision number</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#assignedELI">
+  <h3>assigned ELI<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#assignedELI</p>
+  <div class="comment">
+   <span class="markdown">Standardised identification that makes it easier to identify and describe legislation across Europe.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli-register/what_is_eli.html
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonised Legislation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#certificateNumber">
+  <h3>certificate number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#certificateNumber</p>
+  <div class="comment">
+   <span class="markdown">Number of the certificate</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    certificate number
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#certificateRevisionNumber">
+  <h3>certificate revision number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#certificateRevisionNumber</p>
+  <div class="comment">
+   <span class="markdown">Number of the revision of a certificate</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/contributor">
+  <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#moduleA" title="https://w3id.org/eudpp#moduleA">module A</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleA1" title="https://w3id.org/eudpp#moduleA1">module A1</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleA2" title="https://w3id.org/eudpp#moduleA2">module A2</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleB" title="https://w3id.org/eudpp#moduleB">module B</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleC" title="https://w3id.org/eudpp#moduleC">module C</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleC1" title="https://w3id.org/eudpp#moduleC1">module C1</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleC2" title="https://w3id.org/eudpp#moduleC2">module C2</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleD" title="https://w3id.org/eudpp#moduleD">module D</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleD1" title="https://w3id.org/eudpp#moduleD1">module D1</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleE" title="https://w3id.org/eudpp#moduleE">module E</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleE1" title="https://w3id.org/eudpp#moduleE1">module E1</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleF" title="https://w3id.org/eudpp#moduleF">module F</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleF1" title="https://w3id.org/eudpp#moduleF1">module F1</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleG" title="https://w3id.org/eudpp#moduleG">module G</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleH" title="https://w3id.org/eudpp#moduleH">module H</a></li>
+  <li><a href="#https://w3id.org/eudpp#moduleH1" title="https://w3id.org/eudpp#moduleH1">module H1</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#moduleA">
+  <h3>module A<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleA</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module A Internal production control</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleA1">
+  <h3>module A1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleA1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module A1. Internal production control plus supervised product testing</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleA2">
+  <h3>module A2<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleA2</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module A2 Internal production control plus supervised product checks at random intervals</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleB">
+  <h3>module B<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleB</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module B EC-type examination</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleC">
+  <h3>module C<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleC</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module C Conformity to type based on internal production control</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleC1">
+  <h3>module C1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleC1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module C1 Conformity to type based on internal production control plus supervised product testing</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleC2">
+  <h3>module C2<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleC2</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module C2 Conformity to type based on internal production control plus supervised product checks at random intervals</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleD">
+  <h3>module D<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleD</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module D Conformity to EU-type based on quality assurance of the production process</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleD1">
+  <h3>module D1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleD1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module D1 Quality assurance of the production process</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleE">
+  <h3>module E<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleE</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module E Conformity to EU-type based on product quality assurance</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleE1">
+  <h3>module E1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleE1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module E1 Quality assurance of final product inspection and testing</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleF">
+  <h3>module F<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleF</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module F Conformity to EU-type based on product verification</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleF1">
+  <h3>module F1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleF1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module F1 Conformity based on product verification</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleG">
+  <h3>module G<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleG</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module G Conformity based on unit verification</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleH">
+  <h3>module H<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleH</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC moduleH Conformity based on full quality assurance</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#moduleH1">
+  <h3>module H1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#moduleH1</p>
+  <div class="comment">
+   <span class="markdown">Decision No 768/2008/EC module H1 Conformity based on full quality assurance plus design examination</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II
+   </dd>
+   <dd>
+    https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_II Decision No 768/2008/EC Annex II"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=oj:JOC_2022_247_R_0001 Commission notice The ‘Blue Guide’ on the implementation of EU product rules 2022 Annex 4"@en</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

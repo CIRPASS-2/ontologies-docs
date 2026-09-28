@@ -1,0 +1,543 @@
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-soc/1.1.2> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-process> .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-soc-mireot> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Ontology - Textile Substances of Concern Module. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/created> "2026-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/description> "Textile-sector specialisation of the EU DPP Substances of Concern ontology. It specialises substance presence, product location, concentration reporting, product-group qualification, thresholds and lifecycle handling for textile products."@en .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/issued> "2026-07-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/dc/terms/title> "EU DPP Textile Ontology - Textile Substances of Concern Module"@en .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtsoc" .
+<https://w3id.org/eudpp/textile-soc> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-soc#" .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2000/01/rdf-schema#comment> "This module does not classify every textile chemical as a substance of concern. It specialises the generic SoC presence-context model for textile products and attaches textile-specific information to the occurrence, not globally to the chemical identity."@en .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2000/01/rdf-schema#label> "Textile substances of concern ontology"@en .
+<https://w3id.org/eudpp/textile-soc> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#modellingNote
+<https://w3id.org/eudpp/textile-connector#modellingNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/soc#hasInstructionInformation
+<https://w3id.org/eudpp/soc#hasInstructionInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/eudpp/soc#isQualifiedByProductGroupList
+<https://w3id.org/eudpp/soc#isQualifiedByProductGroupList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile substance occurrence to the chemical function performed in that textile context."@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has presence chemical function"@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455."@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies the textile chemical occurrence by whether it is associated with process use, intended performance use or unintended presence. The classification is attached to the occurrence rather than globally to the substance identity."@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has presence use category"@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455."@en .
+<https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp/soc#hasInstructionInformation> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile substance-of-concern presence context to textile-specific safe-use or lifecycle-handling information."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "has textile handling information"@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 7(5)(d)-(e)."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#hasTextileLocationType
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/soc#LocationInformation> .
+<https://w3id.org/eudpp/soc#LocationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a location information object to a controlled textile-specific location type."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <http://www.w3.org/2000/01/rdf-schema#label> "has textile location type"@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 7(5)(b)."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileLocationType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp/soc#isQualifiedByProductGroupList> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile type (d) qualification to the versioned textile product-group reference supporting that qualification."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <http://www.w3.org/2000/01/rdf-schema#label> "has textile product-group reference"@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 2(27)(d)."@en .
+<https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#relevantToTextileProcess
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-process#TextileProcess> .
+<https://w3id.org/eudpp/textile-process#TextileProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile substance occurrence to a textile process type that introduced, used, transformed or is affected by the substance."@en .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <http://www.w3.org/2000/01/rdf-schema#label> "relevant to textile process"@en .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#relevantToTextileProcess> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#AlertConcentrationThreshold
+<https://w3id.org/eudpp/soc#AlertConcentrationThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#ConcentrationInformation
+<https://w3id.org/eudpp/soc#ConcentrationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#InstructionInformation
+<https://w3id.org/eudpp/soc#InstructionInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#LocationInformation
+# 
+# https://w3id.org/eudpp/soc#MaterialGroup
+<https://w3id.org/eudpp/soc#MaterialGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList
+<https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#SoCTypeDQualification
+<https://w3id.org/eudpp/soc#SoCTypeDQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext
+<https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#TrackingThreshold
+<https://w3id.org/eudpp/soc#TrackingThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept
+# 
+# https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept
+# 
+# https://w3id.org/eudpp/textile-core#FibreCompositionComponent
+<https://w3id.org/eudpp/textile-core#FibreCompositionComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/textile-process#TextileProcess
+# 
+# https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#MaterialGroup> .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A material grouping associated with one or more non-textile components, used as a location or concentration reference unit without treating the component itself as a material group."@en .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Non-textile component material group"@en .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en .
+<https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#ConcentrationInformation> .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Concentration information for a substance present in a textile product, expressed at product, component, material-group or spare-part level as an exact value, maximum value or range."@en .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Textile concentration information"@en .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 7(5)(c)"@en .
+<https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-core#FibreCompositionComponent> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Bridge class for a fibre-composition component that is used as the material-group scope of a textile substance-of-concern presence context."@en .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Textile fibre-composition material group"@en .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <https://w3id.org/eudpp/textile-connector#modellingNote> "This local bridge avoids globally reclassifying every Textile Core fibre-composition component as a SoC material group."@en .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3.12, printed page 246, lines 6847-6863."@en .
+<https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileMaterialGroup
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#MaterialGroup> .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A fibre-, yarn- or fabric-based material grouping within a textile product that serves as a location or mass-reference unit for substance reporting."@en .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Textile material group"@en .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en .
+<https://w3id.org/eudpp/textile-soc#TextileMaterialGroup> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList> .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A versioned reference identifying the textile-product-group source that qualifies a substance under the product-group-specific type (d) criterion."@en .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <http://www.w3.org/2000/01/rdf-schema#label> "Textile product-group SoC reference"@en .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 2(27)(d)."@en .
+<https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#AlertConcentrationThreshold> .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "A textile-sector alert concentration used to inform sorting, recycling or environmentally sound end-of-life handling when the substance may hinder circular treatment."@en .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <http://www.w3.org/2000/01/rdf-schema#label> "Textile recycling alert threshold"@en .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 9.2.5.2, printed page 142, lines 3910-3927; Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#InstructionInformation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Textile-specific instruction information concerning safe use and lifecycle handling in the presence of a substance of concern, including disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management; repair guidance may be added as a textile/JRC extension."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Textile SoC handling information"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.1, printed pages 219-220, lines 6205-6220."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled concept describing a textile-specific kind of product location used to qualify a substance location statement."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Textile SoC location type concept"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#SubstanceOfConcernPresenceContext> .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A substance-of-concern presence context specialised for a textile product, textile material group or non-textile component."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <http://www.w3.org/2000/01/rdf-schema#label> "Textile substance of concern presence context"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <https://w3id.org/eudpp/textile-connector#sourceLocator> "Regulation (EU) 2024/1781, Article 2(27) and Article 7(5); core pivot pattern soc:SubstanceOfConcernPresenceContext"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#TrackingThreshold> .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "A tracking or disclosure threshold applicable to a substance occurrence in a textile product or textile product group."@en .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <http://www.w3.org/2000/01/rdf-schema#label> "Textile tracking threshold"@en .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.1, printed page 220, lines 6213-6220; Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-soc#TextileTypeDQualification
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#SoCTypeDQualification> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://www.w3.org/2000/01/rdf-schema#comment> "A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream."@en .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <http://www.w3.org/2000/01/rdf-schema#label> "Textile type (d) qualification"@en .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822."@en .
+<https://w3id.org/eudpp/textile-soc#TextileTypeDQualification> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary of textile-specific location types used in substance location information."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Textile SoC location type scheme"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-soc#wholeProductLocation> .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile SoC location type scheme"@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is located in an adhesive, laminate, bonding film or other joining layer."@en .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive or bonding layer location"@en .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_ADHESIVE_BONDING" .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Adhesive or bonding layer location"@en .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is located in a coating, finish or functional surface treatment applied to the textile product."@en .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Coating or finish location"@en .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_COATING_FINISH" .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Coating or finish location"@en .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#fibreCompositionLocation
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is located in a fibre-composition material group, including a fibre-, yarn- or fabric-based part."@en .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre composition location"@en .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_FIBRE_COMPOSITION" .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fibre composition location"@en .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en .
+<https://w3id.org/eudpp/textile-soc#fibreCompositionLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is located in a non-textile component such as a button, zipper, buckle, rivet, sequin or other hard component."@en .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Non-textile component location"@en .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_NON_TEXTILE_COMPONENT" .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-textile component location"@en .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en .
+<https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."@en .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Printed or dyed region location"@en .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_PRINT_DYE" .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Printed or dyed region location"@en .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The product contains the substance but the more specific location within the textile product has not been determined or disclosed."@en .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Unknown textile product location"@en .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_UNKNOWN" .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unknown textile product location"@en .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-soc#wholeProductLocation
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is reported as distributed throughout, or only locatable at the level of, the whole textile product."@en .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-soc> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Whole textile product location"@en .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2004/02/skos/core#notation> "LOC_WHOLE_PRODUCT" .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Whole textile product location"@en .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme> .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <https://w3id.org/eudpp/textile-connector#sourceLocator> "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."@en .
+<https://w3id.org/eudpp/textile-soc#wholeProductLocation> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

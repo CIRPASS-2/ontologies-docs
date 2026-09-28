@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/ACTOR","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/ACTOR","name":"Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/ACTOR", "dateReleased":"2025-03-14", "dateModified":"2026-04-30", "version":"2.0.1", "author":[{"@type":"Person","name":"Riina Maigre"}], "contributor":[{"@type":"Person","name":"Hele-Mai Haav"},{"@type":"Person","name":"Tarmo Robal"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.</h1>
+<h2>Release: 2025-03-14</h2>
+
+
+<dl>
+<dt>Modified on: 2026-04-30</dt>
+<dt>Revision:</dt>
+<dd>2.0.1</dd>
+<dt>Issued on:</dt>
+<dd>2026-09-22</dd>
+<dt>Authors:</dt>
+<dd>Riina Maigre</dd>
+
+<dt>Contributors:</dt>
+<dd>Hele-Mai Haav</dd><dd>Tarmo Robal</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Riina Maigre. Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.. Revision: 2.0.1.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">EU DPP CO ACTOR: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment"
+         title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised representative role assignment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#AuthorityRole" title="https://w3id.org/eudpp#AuthorityRole">Authority role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ConformityAssessmentRole" title="https://w3id.org/eudpp#ConformityAssessmentRole">Conformity assessment role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/GeoCoordinates" title="https://schema.org/GeoCoordinates">
+         <span>Geo Coordinates</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms#Location" title="http://purl.org/dc/terms#Location">
+         <span>Location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#NaturalPerson" title="https://w3id.org/eudpp#NaturalPerson">Natural Person</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress">
+         <span>Postal Address</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#hasActor" title="https://w3id.org/eudpp#hasActor">has actor</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/address" title="https://schema.org/address">has address</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/geo" title="https://schema.org/geo">has coordinates</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#hasRepresentativeMandate" title="https://w3id.org/eudpp#hasRepresentativeMandate">has representative mandate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#hasRole" title="https://w3id.org/eudpp#hasRole">has role</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#isEstablishedIn" title="https://w3id.org/eudpp#isEstablishedIn">is established in</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#isResidingIn" title="https://w3id.org/eudpp#isResidingIn">is residing in</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#isRoleOf" title="https://w3id.org/eudpp#isRoleOf">is role of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#representsManufacturer" title="https://w3id.org/eudpp#representsManufacturer">represents manufacturer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#usesFacility" title="https://w3id.org/eudpp#usesFacility">uses facility</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#actorName" title="https://w3id.org/eudpp#actorName">actor name</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#assignmentValidFrom" title="https://w3id.org/eudpp#assignmentValidFrom">assignment valid from</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#assignmentValidTo" title="https://w3id.org/eudpp#assignmentValidTo">assignment valid to</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/email" title="https://schema.org/email">has email</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/telephone" title="https://schema.org/telephone">has phone</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#registeredTradeName" title="https://w3id.org/eudpp#registeredTradeName">registered trade name</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#registeredTrademark" title="https://w3id.org/eudpp#registeredTrademark">registered trademark</a>
+   </li>
+   <li>
+      <a href="#https://schema.org/url" title="https://schema.org/url">URL</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp:references" title="https://w3id.org/eudpp:references">
+         <span>eudpp:references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references">
+         <span>references</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/eudpp#authorisedRepresentative" title="https://w3id.org/eudpp#authorisedRepresentative">Authorised Representative</a>
+   </li>
+   <li>
+      <a href="#http://publications.europa.eu/resource/authority/corporate-body/COM"
+         title="http://publications.europa.eu/resource/authority/corporate-body/COM">
+         <span>C O M</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#conformityAssessmentBody" title="https://w3id.org/eudpp#conformityAssessmentBody">Conformity Assessment Body</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#consumer" title="https://w3id.org/eudpp#consumer">Consumer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#credentialAgency" title="https://w3id.org/eudpp#credentialAgency">Credential Agency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#customer" title="https://w3id.org/eudpp#customer">Customer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#customsAuthority" title="https://w3id.org/eudpp#customsAuthority">Customs Authority</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#dealer" title="https://w3id.org/eudpp#dealer">Dealer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#distributor" title="https://w3id.org/eudpp#distributor">Distributor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#dppServiceProvider" title="https://w3id.org/eudpp#dppServiceProvider">DPP Service Provider</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#endUser" title="https://w3id.org/eudpp#endUser">End User</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#EuropeanCommission" title="https://w3id.org/eudpp#EuropeanCommission">European Commission</a>
+   </li>
+   <li>
+      <a href="#http://publications.europa.eu/resource/authority/country/EUR"
+         title="http://publications.europa.eu/resource/authority/country/EUR">European Union</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#fulfilmentServiceProvider"
+         title="https://w3id.org/eudpp#fulfilmentServiceProvider">Fulfilment Service Provider</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#importer" title="https://w3id.org/eudpp#importer">Importer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#independentOperator" title="https://w3id.org/eudpp#independentOperator">Independent Operator</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#issuingAgency" title="https://w3id.org/eudpp#issuingAgency">Issuing Agency</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#manufacturer" title="https://w3id.org/eudpp#manufacturer">Manufacturer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#marketSurveillanceAuthority"
+         title="https://w3id.org/eudpp#marketSurveillanceAuthority">Market Surveillance Authority</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#notifiedBody" title="https://w3id.org/eudpp#notifiedBody">Notified Body</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#professionalRepairer" title="https://w3id.org/eudpp#professionalRepairer">Professional Repairer</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#recycler" title="https://w3id.org/eudpp#recycler">Recycler</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#refurbisher" title="https://w3id.org/eudpp#refurbisher">Refurbisher</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#remanufacturer" title="https://w3id.org/eudpp#remanufacturer">Remanufacturer</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">EU DPP CO ACTOR: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Actor module of an EU DPP core ontology proposed by the CIRPASS-2 European project.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for EU DPP CO ACTOR classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by EU DPP CO ACTOR.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a></li>
+  <li><a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a></li>
+  <li><a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised representative role assignment</a></li>
+  <li><a href="#https://w3id.org/eudpp#AuthorityRole" title="https://w3id.org/eudpp#AuthorityRole">Authority role</a></li>
+  <li><a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a></li>
+  <li><a href="#https://w3id.org/eudpp#ConformityAssessmentRole" title="https://w3id.org/eudpp#ConformityAssessmentRole">Conformity assessment role</a></li>
+  <li><a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a></li>
+  <li><a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a></li>
+  <li><a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a></li>
+  <li><a href="#https://schema.org/GeoCoordinates" title="https://schema.org/GeoCoordinates"> <span>Geo Coordinates</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a></li>
+  <li><a href="#http://purl.org/dc/terms#Location" title="http://purl.org/dc/terms#Location"> <span>Location</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp#NaturalPerson" title="https://w3id.org/eudpp#NaturalPerson">Natural Person</a></li>
+  <li><a href="#https://schema.org/PostalAddress" title="https://schema.org/PostalAddress"> <span>Postal Address</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#Actor">
+  <h3>Actor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#Actor</p>
+  <div class="comment">
+   <span class="markdown">Actor means a legal or natural person (e.g. John Doe, TNO). One actor can take on multiple roles; [CIRPASS-2 User Stories 3.1]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://zenodo.org/records/17979585
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#NaturalPerson" title="https://w3id.org/eudpp#NaturalPerson">Natural Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#actorName" title="https://w3id.org/eudpp#actorName">actor name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasRepresentativeMandate" title="https://w3id.org/eudpp#hasRepresentativeMandate">has representative mandate</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#registeredTradeName" title="https://w3id.org/eudpp#registeredTradeName">registered trade name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#registeredTrademark" title="https://w3id.org/eudpp#registeredTrademark">registered trademark</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#usesFacility" title="https://w3id.org/eudpp#usesFacility">uses facility</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#hasActor" title="https://w3id.org/eudpp#hasActor">has actor</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#representsManufacturer" title="https://w3id.org/eudpp#representsManufacturer">represents manufacturer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ActorRoleAssignment">
+  <h3>Actor role assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ActorRoleAssignment</p>
+  <div class="comment">
+   <span class="markdown">Assigns a role to the actor in a particular context (DPP, Product, Event).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised representative role assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#assignmentValidFrom" title="https://w3id.org/eudpp#assignmentValidFrom">assignment valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#assignmentValidTo" title="https://w3id.org/eudpp#assignmentValidTo">assignment valid to</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasActor" title="https://w3id.org/eudpp#hasActor">has actor</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasRole" title="https://w3id.org/eudpp#hasRole">has role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#isRoleOf" title="https://w3id.org/eudpp#isRoleOf">is role of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">
+  <h3>Authorised representative role assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment</p>
+  <div class="comment">
+   <span class="markdown">A specific assignment representing the written mandate between a manufacturer and an authorised representative; [ESPR Art 2 (43)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#representsManufacturer" title="https://w3id.org/eudpp#representsManufacturer">represents manufacturer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#hasRepresentativeMandate" title="https://w3id.org/eudpp#hasRepresentativeMandate">has representative mandate</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#AuthorityRole">
+  <h3>Authority role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#AuthorityRole</p>
+  <div class="comment">
+   <span class="markdown">Parent class for roles of authorities, such as market surveillance authority, customs authority, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#customsAuthority" title="https://w3id.org/eudpp#customsAuthority">Customs Authority</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#marketSurveillanceAuthority" title="https://w3id.org/eudpp#marketSurveillanceAuthority">Market Surveillance Authority</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#CircularEconomyRole">
+  <h3>Circular economy role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CircularEconomyRole</p>
+  <div class="comment">
+   <span class="markdown">Parent class for roles related to circular economy, such as remanufacturer, refurbisher, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#independentOperator" title="https://w3id.org/eudpp#independentOperator">Independent Operator</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#professionalRepairer" title="https://w3id.org/eudpp#professionalRepairer">Professional Repairer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#recycler" title="https://w3id.org/eudpp#recycler">Recycler</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#refurbisher" title="https://w3id.org/eudpp#refurbisher">Refurbisher</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#remanufacturer" title="https://w3id.org/eudpp#remanufacturer">Remanufacturer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ConformityAssessmentRole">
+  <h3>Conformity assessment role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ConformityAssessmentRole</p>
+  <div class="comment">
+   <span class="markdown">Conformity assessment means the process demonstrating whether the ecodesign requirements set out in the relevant delegated acts adopted pursuant to Article 4 have been fulfilled; [ESPR Art 2 (51)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#conformityAssessmentBody" title="https://w3id.org/eudpp#conformityAssessmentBody">Conformity Assessment Body</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#notifiedBody" title="https://w3id.org/eudpp#notifiedBody">Notified Body</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#EconomicOperatorRole">
+  <h3>Economic operator role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EconomicOperatorRole</p>
+  <div class="comment">
+   <span class="markdown">Economic operator means the manufacturer, the authorised representative, the importer, the distributor, the dealer and the fulfilment service provider; [ESPR Art 2 (46)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#authorisedRepresentative" title="https://w3id.org/eudpp#authorisedRepresentative">Authorised Representative</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#dealer" title="https://w3id.org/eudpp#dealer">Dealer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#distributor" title="https://w3id.org/eudpp#distributor">Distributor</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#fulfilmentServiceProvider" title="https://w3id.org/eudpp#fulfilmentServiceProvider">Fulfilment Service Provider</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#importer" title="https://w3id.org/eudpp#importer">Importer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#manufacturer" title="https://w3id.org/eudpp#manufacturer">Manufacturer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#EndUserRole">
+  <h3>End user role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EndUserRole</p>
+  <div class="comment">
+   <span class="markdown">Parent class for roles of end users, such as consumer, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#consumer" title="https://w3id.org/eudpp#consumer">Consumer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#customer" title="https://w3id.org/eudpp#customer">Customer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#endUser" title="https://w3id.org/eudpp#endUser">End User</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#Facility">
+  <h3>Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#Facility</p>
+  <div class="comment">
+   <span class="markdown">A Facility may be a place where specific activities occur. A production/manufacturing facility means a factory. The term may refer to any place that makes things, or plants that generate electricity.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://marketbusinessnews.com/financial-glossary/facility/
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#usesFacility" title="https://w3id.org/eudpp#usesFacility">uses facility</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/GeoCoordinates">
+  <h3>Geo Coordinates<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/GeoCoordinates</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/GeoCoordinates">https://schema.org/GeoCoordinates</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#LegalPerson">
+  <h3>Legal Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#LegalPerson</p>
+  <div class="comment">
+   <span class="markdown">A body of persons or an entity (as a corporation) considered as having many of the rights and responsibilities of a natural person and especially the capacity to sue and be sued.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://www.merriam-webster.com/legal/legal%20person
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#isEstablishedIn" title="https://w3id.org/eudpp#isEstablishedIn">is established in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EuropeanCommission" title="https://w3id.org/eudpp#EuropeanCommission">European Commission</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#NaturalPerson" title="https://w3id.org/eudpp#NaturalPerson">Natural Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms#Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms#Location</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms#Location">http://purl.org/dc/terms#Location</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#NaturalPerson">
+  <h3>Natural Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#NaturalPerson</p>
+  <div class="comment">
+   <span class="markdown">A human being as distinguished from a person (as a corporation) created by operation of law</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://www.merriam-webster.com/legal/natural%20person
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#isResidingIn" title="https://w3id.org/eudpp#isResidingIn">is residing in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/PostalAddress">
+  <h3>Postal Address<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/PostalAddress</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/PostalAddress">https://schema.org/PostalAddress</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#Role">
+  <h3>Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#Role</p>
+  <div class="comment">
+   <span class="markdown">Role means a set of tasks typically performed by one actor. (e.g. Responsible Economic Operator, Independent operator); [CIRPASS-2 User Stories 3.1]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://zenodo.org/records/17979585
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#AuthorityRole" title="https://w3id.org/eudpp#AuthorityRole">Authority role</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ConformityAssessmentRole" title="https://w3id.org/eudpp#ConformityAssessmentRole">Conformity assessment role</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#isRoleOf" title="https://w3id.org/eudpp#isRoleOf">is role of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#hasRole" title="https://w3id.org/eudpp#hasRole">has role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#credentialAgency" title="https://w3id.org/eudpp#credentialAgency">Credential Agency</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#dppServiceProvider" title="https://w3id.org/eudpp#dppServiceProvider">DPP Service Provider</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#issuingAgency" title="https://w3id.org/eudpp#issuingAgency">Issuing Agency</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#hasActor" title="https://w3id.org/eudpp#hasActor">has actor</a></li>
+  <li><a href="#https://schema.org/address" title="https://schema.org/address">has address</a></li>
+  <li><a href="#https://schema.org/geo" title="https://schema.org/geo">has coordinates</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasRepresentativeMandate" title="https://w3id.org/eudpp#hasRepresentativeMandate">has representative mandate</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasRole" title="https://w3id.org/eudpp#hasRole">has role</a></li>
+  <li><a href="#https://w3id.org/eudpp#isEstablishedIn" title="https://w3id.org/eudpp#isEstablishedIn">is established in</a></li>
+  <li><a href="#https://w3id.org/eudpp#isResidingIn" title="https://w3id.org/eudpp#isResidingIn">is residing in</a></li>
+  <li><a href="#https://w3id.org/eudpp#isRoleOf" title="https://w3id.org/eudpp#isRoleOf">is role of</a></li>
+  <li><a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a></li>
+  <li><a href="#https://w3id.org/eudpp#representsManufacturer" title="https://w3id.org/eudpp#representsManufacturer">represents manufacturer</a></li>
+  <li><a href="#https://w3id.org/eudpp#usesFacility" title="https://w3id.org/eudpp#usesFacility">uses facility</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#hasActor">
+  <h3>has actor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasActor</p>
+  <div class="comment">
+   <span class="markdown">Links actor role assignment to actor</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/address">
+  <h3>has address<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/address</p>
+  <div class="comment">
+   <span class="markdown">Links an Actor or Facility to its postal address, represented as a schema:PostalAddress</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/address">https://schema.org/address</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/geo">
+  <h3>has coordinates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/geo</p>
+  <div class="comment">
+   <span class="markdown">Links facility to its coordinates, represented as schema:geo.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/geo">https://schema.org/geo</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasRepresentativeMandate">
+  <h3>has representative mandate<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasRepresentativeMandate</p>
+  <div class="comment">
+   <span class="markdown">Relates a manufacturer to the mandate (assignment) that authorises an actor to act on the manufacturer's behalf.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised representative role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#representsManufacturer" title="https://w3id.org/eudpp#representsManufacturer">represents manufacturer</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasRole">
+  <h3>has role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasRole</p>
+  <div class="comment">
+   <span class="markdown">Links an actor role assignment to a role.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#isRoleOf" title="https://w3id.org/eudpp#isRoleOf">is role of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#isEstablishedIn">
+  <h3>is established in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#isEstablishedIn</p>
+  <div class="comment">
+   <span class="markdown">Relates a legal person to the location where it is established.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/dc/terms/Location" target="_blank" title="http://purl.org/dc/terms/Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#isResidingIn">
+  <h3>is residing in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#isResidingIn</p>
+  <div class="comment">
+   <span class="markdown">Relates a natural person to the location where they reside.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#NaturalPerson" title="https://w3id.org/eudpp#NaturalPerson">Natural Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://purl.org/dc/terms/Location" target="_blank" title="http://purl.org/dc/terms/Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#isRoleOf">
+  <h3>is role of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#isRoleOf</p>
+  <div class="comment">
+   <span class="markdown">Relates role to an actor role assignment.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#hasRole" title="https://w3id.org/eudpp#hasRole">has role</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#isUsedByActor">
+  <h3>is used by actor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#isUsedByActor</p>
+  <div class="comment">
+   <span class="markdown">Relates a facility to an actor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#usesFacility" title="https://w3id.org/eudpp#usesFacility">uses facility</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#representsManufacturer">
+  <h3>represents manufacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#representsManufacturer</p>
+  <div class="comment">
+   <span class="markdown">Used when the role is authorisedRepresentativeRole to indicate the manufacturer being represented.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised representative role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#hasRepresentativeMandate" title="https://w3id.org/eudpp#hasRepresentativeMandate">has representative mandate</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#usesFacility">
+  <h3>uses facility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#usesFacility</p>
+  <div class="comment">
+   <span class="markdown">Relates an actor to facility.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#actorName" title="https://w3id.org/eudpp#actorName">actor name</a></li>
+  <li><a href="#https://w3id.org/eudpp#assignmentValidFrom" title="https://w3id.org/eudpp#assignmentValidFrom">assignment valid from</a></li>
+  <li><a href="#https://w3id.org/eudpp#assignmentValidTo" title="https://w3id.org/eudpp#assignmentValidTo">assignment valid to</a></li>
+  <li><a href="#https://schema.org/email" title="https://schema.org/email">has email</a></li>
+  <li><a href="#https://schema.org/telephone" title="https://schema.org/telephone">has phone</a></li>
+  <li><a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a></li>
+  <li><a href="#https://schema.org/longitude" title="https://schema.org/longitude">longitude</a></li>
+  <li><a href="#https://w3id.org/eudpp#registeredTradeName" title="https://w3id.org/eudpp#registeredTradeName">registered trade name</a></li>
+  <li><a href="#https://w3id.org/eudpp#registeredTrademark" title="https://w3id.org/eudpp#registeredTrademark">registered trademark</a></li>
+  <li><a href="#https://schema.org/url" title="https://schema.org/url">URL</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#actorName">
+  <h3>actor name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#actorName</p>
+  <div class="comment">
+   <span class="markdown">Name of an actor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#assignmentValidFrom">
+  <h3>assignment valid from<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#assignmentValidFrom</p>
+  <div class="comment">
+   <span class="markdown">The date and time from which the actor role assignment is valid.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#assignmentValidTo">
+  <h3>assignment valid to<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#assignmentValidTo</p>
+  <div class="comment">
+   <span class="markdown">The date and time until which the actor role assignment is valid.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor role assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/email">
+  <h3>has email<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/email</p>
+  <div class="comment">
+   <span class="markdown">Links an Actor to its email address.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/email">https://schema.org/email</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/telephone">
+  <h3>has phone<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/telephone</p>
+  <div class="comment">
+   <span class="markdown">Links an Actor to its phone.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/telephone">https://schema.org/telephone</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/latitude">
+  <h3>latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/latitude</p>
+  <div class="comment">
+   <span class="markdown">Links facility to its coordinates. Part of schema:geo.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/latitude">https://schema.org/latitude</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/longitude">
+  <h3>longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/longitude</p>
+  <div class="comment">
+   <span class="markdown">Links facility to its coordinates. Part of schema:geo.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/longitude">https://schema.org/longitude</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#registeredTradeName">
+  <h3>registered trade name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#registeredTradeName</p>
+  <div class="comment">
+   <span class="markdown">Trade name under which a legal person or business operates and is registered.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#registeredTrademark">
+  <h3>registered trademark<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#registeredTrademark</p>
+  <div class="comment">
+   <span class="markdown">A trademark officially registered and owned by an actor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://schema.org/url">
+  <h3>URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/url</p>
+  <div class="comment">
+   <span class="markdown">The official website or webpage of the actor.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://schema.org/url">https://schema.org/url</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp:references" title="https://w3id.org/eudpp:references"> <span>eudpp:references</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references"> <span>references</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/contributor">
+  <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp:references">
+  <h3>eudpp:references<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp:references</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/references">
+  <h3>references<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/references</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/eudpp#authorisedRepresentative" title="https://w3id.org/eudpp#authorisedRepresentative">Authorised Representative</a></li>
+  <li><a href="#http://publications.europa.eu/resource/authority/corporate-body/COM" title="http://publications.europa.eu/resource/authority/corporate-body/COM"> <span>C O M</span> </a></li>
+  <li><a href="#https://w3id.org/eudpp#conformityAssessmentBody" title="https://w3id.org/eudpp#conformityAssessmentBody">Conformity Assessment Body</a></li>
+  <li><a href="#https://w3id.org/eudpp#consumer" title="https://w3id.org/eudpp#consumer">Consumer</a></li>
+  <li><a href="#https://w3id.org/eudpp#credentialAgency" title="https://w3id.org/eudpp#credentialAgency">Credential Agency</a></li>
+  <li><a href="#https://w3id.org/eudpp#customer" title="https://w3id.org/eudpp#customer">Customer</a></li>
+  <li><a href="#https://w3id.org/eudpp#customsAuthority" title="https://w3id.org/eudpp#customsAuthority">Customs Authority</a></li>
+  <li><a href="#https://w3id.org/eudpp#dealer" title="https://w3id.org/eudpp#dealer">Dealer</a></li>
+  <li><a href="#https://w3id.org/eudpp#distributor" title="https://w3id.org/eudpp#distributor">Distributor</a></li>
+  <li><a href="#https://w3id.org/eudpp#dppServiceProvider" title="https://w3id.org/eudpp#dppServiceProvider">DPP Service Provider</a></li>
+  <li><a href="#https://w3id.org/eudpp#endUser" title="https://w3id.org/eudpp#endUser">End User</a></li>
+  <li><a href="#https://w3id.org/eudpp#EuropeanCommission" title="https://w3id.org/eudpp#EuropeanCommission">European Commission</a></li>
+  <li><a href="#http://publications.europa.eu/resource/authority/country/EUR" title="http://publications.europa.eu/resource/authority/country/EUR">European Union</a></li>
+  <li><a href="#https://w3id.org/eudpp#fulfilmentServiceProvider" title="https://w3id.org/eudpp#fulfilmentServiceProvider">Fulfilment Service Provider</a></li>
+  <li><a href="#https://w3id.org/eudpp#importer" title="https://w3id.org/eudpp#importer">Importer</a></li>
+  <li><a href="#https://w3id.org/eudpp#independentOperator" title="https://w3id.org/eudpp#independentOperator">Independent Operator</a></li>
+  <li><a href="#https://w3id.org/eudpp#issuingAgency" title="https://w3id.org/eudpp#issuingAgency">Issuing Agency</a></li>
+  <li><a href="#https://w3id.org/eudpp#manufacturer" title="https://w3id.org/eudpp#manufacturer">Manufacturer</a></li>
+  <li><a href="#https://w3id.org/eudpp#marketSurveillanceAuthority" title="https://w3id.org/eudpp#marketSurveillanceAuthority">Market Surveillance Authority</a></li>
+  <li><a href="#https://w3id.org/eudpp#notifiedBody" title="https://w3id.org/eudpp#notifiedBody">Notified Body</a></li>
+  <li><a href="#https://w3id.org/eudpp#professionalRepairer" title="https://w3id.org/eudpp#professionalRepairer">Professional Repairer</a></li>
+  <li><a href="#https://w3id.org/eudpp#recycler" title="https://w3id.org/eudpp#recycler">Recycler</a></li>
+  <li><a href="#https://w3id.org/eudpp#refurbisher" title="https://w3id.org/eudpp#refurbisher">Refurbisher</a></li>
+  <li><a href="#https://w3id.org/eudpp#remanufacturer" title="https://w3id.org/eudpp#remanufacturer">Remanufacturer</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#authorisedRepresentative">
+  <h3>Authorised Representative<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#authorisedRepresentative</p>
+  <div class="comment">
+   <span class="markdown">Authorised representative means any natural or legal person established in the Union that has received a written mandate from the manufacturer to act on the manufacturer’s behalf in relation to specified tasks with regard to the manufacturer’s obligations under this Regulation; [ESPR Art 2 (43)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (43)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://publications.europa.eu/resource/authority/corporate-body/COM">
+  <h3>C O M<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://publications.europa.eu/resource/authority/corporate-body/COM</p>
+  <dl class="description">
+   <dt>
+    is same as
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EuropeanCommission" title="https://w3id.org/eudpp#EuropeanCommission">European Commission</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#sameAs" target="_blank" title="http://www.w3.org/2002/07/owl#sameAs">same As</a> <sup class="type-ep" title="external property">ep</sup> <a href="#https://w3id.org/eudpp#EuropeanCommission" title="https://w3id.org/eudpp#EuropeanCommission">European Commission</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#conformityAssessmentBody">
+  <h3>Conformity Assessment Body<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#conformityAssessmentBody</p>
+  <div class="comment">
+   <span class="markdown">Conformity assessment body means a body that performs conformity assessment activities including calibration, testing, certification and inspection; [ESPR Art 2 (52)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentRole" title="https://w3id.org/eudpp#ConformityAssessmentRole">Conformity assessment role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (52)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#consumer">
+  <h3>Consumer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#consumer</p>
+  <div class="comment">
+   <span class="markdown">Consumer means any natural person who, in relation to contracts covered by Directive (EU) 2019/771, is acting for purposes which are outside that person's trade, business, craft or profession; [Directive (EU) 2019/771, Art 2 (2)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    http://data.europa.eu/eli/dir/2019/771/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#customer" title="https://w3id.org/eudpp#customer">Customer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Directive (EU) 2019/771, Art 2 (2)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"http://data.europa.eu/eli/dir/2019/771/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#credentialAgency">
+  <h3>Credential Agency<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#credentialAgency</p>
+  <div class="comment">
+   <span class="markdown">A legal person that provides (professional) credentials to parties, which may be used to make and verify a variety of claims in the DPP, (ESPR) Art. 11 last paragraph. For example, a credentials agency could certify a professional repairer and provide appropriate credentials for the DPP system; [CIRPASS-2 User Stories 3.1]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://zenodo.org/records/17979585
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"CIRPASS-2 User Stories 3.1"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://zenodo.org/records/17979585"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#customer">
+  <h3>Customer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#customer</p>
+  <div class="comment">
+   <span class="markdown">Customer means a natural or legal person that purchases, hires or receives a product for their own use whether or not acting for purposes which are outside their trade, business, craft or profession; [ESPR Art 2 (35)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (35)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#customsAuthority">
+  <h3>Customs Authority<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#customsAuthority</p>
+  <div class="comment">
+   <span class="markdown">Customs authorities means customs authorities as defined in point 1 of Article 5 of Regulation (EU) No 952/2013; [Regulation (EU) 2019/1020, Art 3 (24)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2019/1020/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#AuthorityRole" title="https://w3id.org/eudpp#AuthorityRole">Authority role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Regulation (EU) 2019/1020, Art 3 (24)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2019/1020/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#dealer">
+  <h3>Dealer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#dealer</p>
+  <div class="comment">
+   <span class="markdown">Dealer means a distributor or any other natural or legal person that offers products for sale, hire or hire purchase, or that displays products, to end users in the course of a commercial activity, including through distance selling; and includes any natural or legal person that puts a product into service in the course of a commercial activity; [ESPR Art 2 (55)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#related" target="_blank" title="http://www.w3.org/2004/02/skos/core#related">related</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#distributor" title="https://w3id.org/eudpp#distributor">Distributor</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (55)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#distributor">
+  <h3>Distributor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#distributor</p>
+  <div class="comment">
+   <span class="markdown">Distributor means any natural or legal person in the supply chain, other than the manufacturer or the importer, that makes a product available on the market; [ESPR Art 2 (45)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#related" target="_blank" title="http://www.w3.org/2004/02/skos/core#related">related</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#dealer" title="https://w3id.org/eudpp#dealer">Dealer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (45)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#dppServiceProvider">
+  <h3>DPP Service Provider<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#dppServiceProvider</p>
+  <div class="comment">
+   <span class="markdown">Digital product passport service provider means a natural or legal person that is an independent third-party authorised by the economic operator which places the product on the market or puts it into service and that processes the digital product passport data for that product for the purpose of making such data available to economic operators and other relevant actors with a right to access those data under this Regulation or other Union law; [ESPR Art 2 (32)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (32)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#endUser">
+  <h3>End User<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#endUser</p>
+  <div class="comment">
+   <span class="markdown">End user means any natural or legal person residing or established in the Union, to whom a product has been made available either as a consumer outside of any trade, business, craft or profession or as a professional end user in the course of its industrial or professional activities; [Regulation (EU) 2019/1020 Art 3 (21)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2019/1020/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EndUserRole" title="https://w3id.org/eudpp#EndUserRole">End user role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#related" target="_blank" title="http://www.w3.org/2004/02/skos/core#related">related</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#customer" title="https://w3id.org/eudpp#customer">Customer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Regulation (EU) 2019/1020, Art 3 (21)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2019/1020/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#EuropeanCommission">
+  <h3>European Commission<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EuropeanCommission</p>
+  <div class="comment">
+   <span class="markdown">The European Commission, abbreviated as EC, is the executive branch of the European Union.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:European_Commission_(EC)
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#LegalPerson" title="https://w3id.org/eudpp#LegalPerson">Legal Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is same as
+   </dt>
+   <dd>
+    <a href="#http://publications.europa.eu/resource/authority/corporate-body/COM" title="http://publications.europa.eu/resource/authority/corporate-body/COM">C O M</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:European_Commission_(EC)"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://publications.europa.eu/resource/authority/country/EUR">
+  <h3>European Union<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://publications.europa.eu/resource/authority/country/EUR</p>
+  <div class="comment">
+   <span class="markdown">European Union is used here as a jurisdictional or geographic entity for legal and regulatory contexts.</span>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#fulfilmentServiceProvider">
+  <h3>Fulfilment Service Provider<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#fulfilmentServiceProvider</p>
+  <div class="comment">
+   <span class="markdown">Fulfilment service provider means any natural or legal person offering, in the course of commercial activity, at least two of the following services: warehousing, packaging, addressing and dispatching, without having ownership of the products involved, excluding postal services as defined in point 1 of Article 2 of Directive 97/67/EC of the European Parliament and of the Council (31), parcel delivery services as defined in point 2 of Article 2 of Regulation (EU) 2018/644 of the European Parliament and of the Council (32), and any other postal services or freight transport services; [Regulation (EU) 2019/1020 Art 3 (11)].</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2019/1020/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Regulation (EU) 2019/1020, Art 3 (11)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2019/1020/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#importer">
+  <h3>Importer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#importer</p>
+  <div class="comment">
+   <span class="markdown">Importer means any natural or legal person established in the Union that places a product from a third country on the Union market; [ESPR Art 2 (44)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (44)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#independentOperator">
+  <h3>Independent Operator<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#independentOperator</p>
+  <div class="comment">
+   <span class="markdown">Independent operator means natural or legal person that is independent of the manufacturer and is directly or indirectly involved in the refurbishment, repair, maintenance or repurposing of a product, and includes waste management operators, refurbishers, repairers, manufacturers or distributors of repair equipment, tools or spare parts, as well as publishers of technical information, operators offering inspection and testing services and operators offering training for installers, manufacturers and repairers of equipment; [ESPR Art 2 (47)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (47)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#issuingAgency">
+  <h3>Issuing Agency<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#issuingAgency</p>
+  <div class="comment">
+   <span class="markdown">Issuing agency is a legal persons that provide unique identifiers and data carriers Art 12 (4a). Under specific conditions, economic operators may perform the functions associated with an Issuing Agency; [ESPR Art 12 (4b)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Role" title="https://w3id.org/eudpp#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 12 (4a)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#manufacturer">
+  <h3>Manufacturer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#manufacturer</p>
+  <div class="comment">
+   <span class="markdown">Manufacturer means any natural or legal person that manufactures a product or that has a product designed or manufactured and markets that product under their name or trademark; [ESPR Art 2 (42)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EconomicOperatorRole" title="https://w3id.org/eudpp#EconomicOperatorRole">Economic operator role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (42)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#marketSurveillanceAuthority">
+  <h3>Market Surveillance Authority<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#marketSurveillanceAuthority</p>
+  <div class="comment">
+   <span class="markdown">Market surveillance authority means an authority designated by a Member State under Article 10 as responsible for carrying out market surveillance in the territory of that Member State; [Regulation (EU) 2019/1020 Art 3 (4)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2019/1020/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#AuthorityRole" title="https://w3id.org/eudpp#AuthorityRole">Authority role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Regulation (EU) 2019/1020, Art 3 (4)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2019/1020/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#notifiedBody">
+  <h3>Notified Body<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#notifiedBody</p>
+  <div class="comment">
+   <span class="markdown">Notified body means a conformity assessment body notified in accordance with Chapter IX.; [ESPR Art 2 (53)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ConformityAssessmentRole" title="https://w3id.org/eudpp#ConformityAssessmentRole">Conformity assessment role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (53)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#professionalRepairer">
+  <h3>Professional Repairer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#professionalRepairer</p>
+  <div class="comment">
+   <span class="markdown">Professional repairer means a natural or legal person that provides professional repair or maintenance services for a product, irrespective of whether that person acts within the manufacturer’s distribution system or independently; [ESPR Art 2 (48)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (48)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#recycler">
+  <h3>Recycler<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#recycler</p>
+  <div class="comment">
+   <span class="markdown">An actor performing recycling, which means "any recovery operation by which waste materials are reprocessed into products, materials or substances whether for the original or other purposes. It includes the reprocessing of organic material but does not include energy recovery and the reprocessing into materials that are to be used as fuels or for backfilling operations" [WFD Art 3 (17)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/dir/2008/98/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#independentOperator" title="https://w3id.org/eudpp#independentOperator">Independent Operator</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"WFD Art 3 (17)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/dir/2008/98/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#refurbisher">
+  <h3>Refurbisher<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#refurbisher</p>
+  <div class="comment">
+   <span class="markdown">An actor performing refurbishment, which means "actions carried out to prepare, clean, test, service and, where necessary, repair a product or a discarded product in order to restore its performance or functionality within the intended use and range of performance originally conceived at the design stage at the time of the placing of the product on the market."; [ESPR Art 2 (18)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#independentOperator" title="https://w3id.org/eudpp#independentOperator">Independent Operator</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (18)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#remanufacturer">
+  <h3>Remanufacturer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#remanufacturer</p>
+  <div class="comment">
+   <span class="markdown">An actor performing remanufacturing, which means "actions through which a new product is produced from objects that are waste, products or components and through which at least one change is made that substantially affects the safety, performance, purpose or type of the product"; [ESPR Art 2 (16)]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#CircularEconomyRole" title="https://w3id.org/eudpp#CircularEconomyRole">Circular economy role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#broader" target="_blank" title="http://www.w3.org/2004/02/skos/core#broader">broader</a> <sup class="type-op" title="object property">op</sup> <a href="#https://w3id.org/eudpp#manufacturer" title="https://w3id.org/eudpp#manufacturer">Manufacturer</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Art 2 (16)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"https://eur-lex.europa.eu/eli/reg/2024/1781/oj"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

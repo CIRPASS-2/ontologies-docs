@@ -1,0 +1,1046 @@
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/textile-associated-materials/1.1.2> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-connector> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-core> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-mat-mireot> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eudpp/textile-soc-mireot> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Textile Associated Materials Ontology. Version 1.1.2."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/created> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/creator> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/description> "Ontology module for non-textile components, packaging materials, textile chemical substances and controlled chemical classifications associated with textile products. Fibre composition remains in Textile Core, while regulatory qualification and occurrence of substances of concern belong to the Textile SoC module."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/issued> "2026-03-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> "2026-07-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/title> "EU DPP Textile Associated Materials Ontology"@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/vocab/vann/preferredNamespacePrefix> "txtam" .
+<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/textile-associated-materials#" .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical use category and chemical function are modelled as separate SKOS classification axes. This avoids treating a chemical function such as dye, biocide or softener as equivalent to whether the substance is intended to remain in the final article."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2000/01/rdf-schema#comment> "The module reuses soc:Substance for substance identity and the MAT MaterialOfComposition pattern where material occurrences are needed. It does not classify a substance as a substance of concern."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP Textile Associated Materials Ontology"@en .
+<https://w3id.org/eudpp/textile-associated-materials> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.2" .
+<https://w3id.org/eudpp/textile-associated-materials> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Textile Preparatory Study, Section 3.3.1, pages 27-29, lines 536-547; Section 3.3.2, pages 29-30, lines 575-593; Section 12.3, page 226, lines 6424-6455; Annex 13.8.3, Table 168, page 459, from line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#ontologyModule> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#modellingNote
+<https://w3id.org/eudpp/textile-connector#modellingNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceLocator
+<https://w3id.org/eudpp/textile-connector#sourceLocator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp/textile-connector#sourceType
+<https://w3id.org/eudpp/textile-connector#sourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#MaterialOfComposition> .
+<https://w3id.org/eudpp#MaterialOfComposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-mat-mireot> .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a non-textile component to a material occurrence from which the component is made."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has component material"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "EU DPP MAT module v1.0.2, dpp:MaterialOfComposition; JRC Annex 13.8.3, Table 168, page 459, from line 10991 (details/accessories with material type)"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasComponentMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#externalReuse> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-core#TextileProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to a non-textile component physically integrated into it."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has non-textile component"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> "The property is owned by Textile Associated Materials so that Textile Core remains independent of this extension module."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a non-textile component to a controlled concept describing its component type."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <http://www.w3.org/2000/01/rdf-schema#label> "has non-textile component type"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasNonTextileComponentType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-core#TextileProduct> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile product to a packaging-material occurrence used for its packaging, transport, storage or delivery."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> "The property is owned by Textile Associated Materials so that Textile Core remains independent of this extension module."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a packaging material occurrence to a controlled concept describing the material type."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <http://www.w3.org/2000/01/rdf-schema#label> "has packaging material type"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasPackagingMaterialType> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile chemical substance to a controlled concept describing its function in textile manufacturing, treatment, finishing or functionalisation."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has textile chemical function"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalFunction> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a textile chemical substance to a controlled category describing whether it is used as a process chemical, a performance chemical or occurs unintentionally."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has textile chemical use category"@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials#hasTextileChemicalUseCategory> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp#MaterialOfComposition
+# 
+# https://w3id.org/eudpp/soc#ProductComponent
+<https://w3id.org/eudpp/soc#ProductComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/soc#Substance
+<https://w3id.org/eudpp/soc#Substance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#ProductComponent> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical component integrated into a textile product that is not itself part of the primary textile fibre composition, such as a button, zipper or sequin."@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Non-textile component"@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> "The alignment with soc:ProductComponent is owned here because this module defines the non-textile component class. It does not imply that every component contains a substance of concern."@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546."@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled SKOS concept used to classify the functional type of a non-textile component."@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Non-textile component type concept"@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6855-6861."@en .
+<https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialOfComposition> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "A material occurrence used for the packaging, transport, storage or delivery of a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> "PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled SKOS concept used to classify a packaging material occurrence."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Packaging material type concept"@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled concept describing the technical function performed by a chemical in textile production or treatment."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Textile chemical function concept"@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp/soc#Substance> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#comment> "A substance used or occurring in a textile manufacturing, treatment, finishing, coating or related textile-production context."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <http://www.w3.org/2000/01/rdf-schema#label> "Textile chemical substance"@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <https://w3id.org/eudpp/textile-connector#modellingNote> "This class describes textile use context only. It does not assert that the substance remains in the final product or qualifies as a substance of concern."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed pages 225-226, lines 6424-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled concept describing whether a chemical is intended to act during processing, remain for product performance, or occur unintentionally."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <http://www.w3.org/2000/01/rdf-schema#label> "Textile chemical use category concept"@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-core#TextileProduct
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary of functional types of non-textile components integrated into textile products."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Non-textile component type scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#button> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Non-textile component type scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.3.1, printed pages 27-29, lines 536-547; Section 12.3.12, printed page 246, lines 6847-6863."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary of material types used for textile-product packaging."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Packaging material type scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Packaging material type scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary of technical functions performed by chemical substances in textile manufacturing, treatment, finishing or functionalisation."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Textile chemical function scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#dye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile chemical function scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 225-228, lines 6424-6455 and 6466-6537."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Controlled vocabulary distinguishing process chemicals, performance chemicals and unintended chemical substances."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Textile chemical use category scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "Textile chemical use category scheme"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 225-226, lines 6424-6455."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#modellingAbstraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2000/01/rdf-schema#comment> "Dye function corresponding to acid dyes used for compatible fibre types such as wool, silk or polyamide."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2000/01/rdf-schema#label> "Acid dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2004/02/skos/core#altLabel> "Acid dyes"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#dye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_ACID_DYE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acid dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving pH adjustment or chemical treatment during textile preparation, dyeing or finishing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2000/01/rdf-schema#label> "Acid or alkali"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2004/02/skos/core#altLabel> "Acids and alkalis"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_ACID_OR_ALKALI" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2004/02/skos/core#prefLabel> "Acid or alkali"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 226-228, lines 6440-6449, 6466-6470 and 6536-6537."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#acidOrAlkali> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function intended to prevent or limit growth of microorganisms on textile materials or products."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Antimicrobial agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2004/02/skos/core#altLabel> "Anti-microbial agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_ANTIMICROBIAL_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Antimicrobial agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 223 and 226, lines 6337-6342 and 6442-6445."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#antimicrobialAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2000/01/rdf-schema#comment> "Dye function corresponding to basic or cationic dyes used for compatible fibre types such as acrylic fibres."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2000/01/rdf-schema#label> "Basic dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2004/02/skos/core#altLabel> "Basic dyes"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#dye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_BASIC_DYE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <http://www.w3.org/2004/02/skos/core#prefLabel> "Basic dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#biocide
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving biocidal activity. Depending on use, a biocide may be a process chemical, such as a preservative, or a performance chemical intended to remain in the article."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2000/01/rdf-schema#label> "Biocide"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_BIOCIDE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2004/02/skos/core#prefLabel> "Biocide"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 226, lines 6440-6445 and 6470."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#biocide> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving bleaching or decolourising textile materials during preparation or finishing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Bleaching agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_BLEACHING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bleaching agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 5.4.2 and 12.3, printed pages 64 and 228, lines 1450-1451 and 6528."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#bleachingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#buckle
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2000/01/rdf-schema#comment> "A buckle integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2000/01/rdf-schema#label> "Buckle"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2004/02/skos/core#notation> "COMP_BUCKLE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Buckle"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#buckle> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#button
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2000/01/rdf-schema#comment> "A button integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2000/01/rdf-schema#label> "Button"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2004/02/skos/core#notation> "COMP_BUTTON" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2004/02/skos/core#prefLabel> "Button"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3.12, printed page 246, lines 6855-6863."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#button> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Packaging material made primarily of cardboard."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Cardboard packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_CARDBOARD" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Cardboard packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 13.11.9, printed page 512, lines 12384-12387."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#cardboardPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2000/01/rdf-schema#comment> "Decorative non-textile hardware integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2000/01/rdf-schema#label> "Decorative hardware"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2004/02/skos/core#notation> "COMP_DECORATIVE_HARDWARE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2004/02/skos/core#prefLabel> "Decorative hardware"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#decorativeHardware> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2000/01/rdf-schema#comment> "Dye function corresponding to disperse dyes used for compatible synthetic fibres."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2000/01/rdf-schema#label> "Disperse dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2004/02/skos/core#altLabel> "Disperse dyes"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#dye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_DISPERSE_DYE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <http://www.w3.org/2004/02/skos/core#prefLabel> "Disperse dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 227, lines 6506-6516; Annex 13.3.4, Table 121, printed page 355, caption at line 9581."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving dispersion of dyes, pigments or other substances in a textile-processing formulation."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Dispersing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_DISPERSING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dispersing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 228, lines 6524-6527."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dispersingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#dye
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving imparting colour to textile fibres, yarns, fabrics or finished textile products."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2000/01/rdf-schema#label> "Dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#acidDye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#basicDye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#disperseDye> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_DYE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dye"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226-227, lines 584-593, 6444-6445 and 6506-6516."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#dye> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving modification of appearance, handle or functional behaviour during textile finishing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Finishing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#softener> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_FINISHING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Finishing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.3.1 and Annex 13.3.4, printed pages 27-29 and 354-355, lines 536-547 and 9563-9581."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving improved fixation of a dye or finishing substance on a textile material."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Fixing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_FIXING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fixing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 228, lines 6524-6527."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#fixingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function intended to reduce flammability or delay ignition and flame propagation in a textile material."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2000/01/rdf-schema#label> "Flame retardant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_FLAME_RETARDANT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2004/02/skos/core#prefLabel> "Flame retardant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6444-6445."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#flameRetardant> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2000/01/rdf-schema#comment> "A hook-and-loop fastening component integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2000/01/rdf-schema#label> "Hook-and-loop fastener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2004/02/skos/core#notation> "COMP_HOOK_LOOP_FASTENER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hook-and-loop fastener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#hookAndLoopFastener> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving promotion of uniform dye uptake or colour distribution during dyeing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Levelling agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_LEVELLING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Levelling agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 228, lines 6524-6527."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#levellingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2000/01/rdf-schema#comment> "A metal rivet integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2000/01/rdf-schema#label> "Metal rivet"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2004/02/skos/core#notation> "COMP_METAL_RIVET" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2004/02/skos/core#prefLabel> "Metal rivet"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#metalRivet> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Packaging material made primarily of paper."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Paper packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_PAPER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Paper packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 13.11.9, printed page 512, lines 12384-12387."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#paperPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical intended to remain in the final textile article at a concentration needed to provide a desired function."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2000/01/rdf-schema#label> "Performance chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#altLabel> "Functional chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_PERFORMANCE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_USE_PERFORMANCE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#prefLabel> "Performance chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 226, lines 6442-6446."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#pigment
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving imparting colour through a pigment used in textile printing, coating or related treatment."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2000/01/rdf-schema#label> "Pigment"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_PIGMENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pigment"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226-227, lines 584-593, 6444-6445 and 6506-6516."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#pigment> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Packaging material made primarily of plastic."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Plastic packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_PLASTIC" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Plastic packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Plastic packaging material made from polyethylene."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Polyethylene packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_POLYETHYLENE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polyethylene packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethylenePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Plastic packaging material made from polyethylene terephthalate."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Polyethylene terephthalate packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_POLYETHYLENE_TEREPHTHALATE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polyethylene terephthalate packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyethyleneTerephthalatePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Plastic packaging material made from polypropylene."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Polypropylene packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_POLYPROPYLENE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polypropylene packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polypropylenePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#PackagingMaterialTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Plastic packaging material made from polyvinyl chloride. The vocabulary term does not imply that this material satisfies an applicable packaging requirement."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Polyvinyl chloride packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#plasticPackagingMaterial> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#PackagingMaterialTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2004/02/skos/core#notation> "PACK_MAT_POLYVINYL_CHLORIDE" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <http://www.w3.org/2004/02/skos/core#prefLabel> "Polyvinyl chloride packaging material"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Annex 13.8.3, Table 168, printed page 459; table caption at line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#polyvinylChloridePackagingMaterial> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2000/01/rdf-schema#comment> "A printed label or tag integrated into or attached to a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2000/01/rdf-schema#label> "Printed label or tag"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2004/02/skos/core#notation> "COMP_PRINTED_LABEL_OR_TAG" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2004/02/skos/core#prefLabel> "Printed label or tag"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#printedLabelOrTag> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical used during textile processing and not intended to remain in the final textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2000/01/rdf-schema#label> "Process chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#altLabel> "Auxiliary process chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_PROCESS" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_USE_PROCESS" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#prefLabel> "Process chemical"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 226, lines 6438-6442."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#processChemical> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#sequin
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2000/01/rdf-schema#comment> "A sequin integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2000/01/rdf-schema#label> "Sequin"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2004/02/skos/core#notation> "COMP_SEQUIN" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sequin"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3.12, printed page 246, lines 6855-6863."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sequin> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving application of sizing to improve yarn strength, smoothness or processability."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Sizing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_SIZING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sizing agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 228, lines 6530-6533."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#sizingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2000/01/rdf-schema#comment> "A snap fastener integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2000/01/rdf-schema#label> "Snap fastener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2004/02/skos/core#notation> "COMP_SNAP_FASTENER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2004/02/skos/core#prefLabel> "Snap fastener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <https://w3id.org/eudpp/textile-connector#sourceLocator> "TEXTILE_ONTOLOGY_COMMON_MODELLING_RULES.md, associated-materials code-list decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#snapFastener> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#projectDecision> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#softener
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving improvement of textile handle or drape. A softener may be used as an auxiliary or may remain as a finishing chemical, depending on the process."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2000/01/rdf-schema#label> "Softener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#finishingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_SOFTENER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <http://www.w3.org/2004/02/skos/core#prefLabel> "Softener"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 226-227, lines 6438-6445, 6470 and 6518."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#softener> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#solvent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving dissolution or carrying of other substances in textile processing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2000/01/rdf-schema#label> "Solvent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_SOLVENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Solvent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 3.3.2 and 12.3, printed pages 29-30 and 226, lines 584-593 and 6438-6442."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#solvent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function intended to reduce retention or penetration of stains in a textile material."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2000/01/rdf-schema#label> "Stain repellent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_STAIN_REPELLENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stain repellent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 3.3.2, printed pages 29-30, lines 584-593."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#stainRepellent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function involving reduction of surface tension in a textile-processing operation."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2000/01/rdf-schema#label> "Surfactant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2004/02/skos/core#narrower> <https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_SURFACTANT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surfactant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Sections 3.3.2 and 12.3, printed pages 29-30, 226 and 228, lines 584-593, 6438-6442 and 6535."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2000/01/rdf-schema#comment> "A contaminant or degradation product not intended to remain in the finished textile and having no intended function in textile processing or in the final product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2000/01/rdf-schema#label> "Unintended chemical substance"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_USE_UNINTENDED" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unintended chemical substance"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalUseCategoryScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 226, lines 6447-6452."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#unintendedChemical> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function covering ultraviolet absorbers or stabilisers added to reduce radiation-induced degradation of textile materials."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2000/01/rdf-schema#label> "UV absorber or stabiliser"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_FUNCTION_UV_ABSORBER_OR_STABILISER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2004/02/skos/core#prefLabel> "UV absorber or stabiliser"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2004/02/skos/core#related> <https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 223, lines 6325-6334; Section 12.3.16, printed page 254, lines 7150-7157."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvAbsorberOrStabiliser> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function intended to protect a textile material from ultraviolet radiation or related degradation."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2000/01/rdf-schema#label> "UV protectant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_UV_PROTECTANT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2004/02/skos/core#prefLabel> "UV protectant"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 227-228, lines 6517-6522."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#uvProtectant> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2000/01/rdf-schema#comment> "Chemical function intended to confer water repellency to a textile material."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2000/01/rdf-schema#label> "Water repellent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_WATER_REPELLENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Water repellent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed pages 226-227, lines 6442-6445 and 6520."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#waterRepellent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://purl.org/dc/terms/source> <https://w3id.org/eudpp/textile-ontology> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Surfactant function intended to improve wetting or liquid penetration of textile fibres, yarns or fabrics during wet processing."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Wetting agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2004/02/skos/core#broader> <https://w3id.org/eudpp/textile-associated-materials-codelists#surfactant> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#TextileChemicalFunctionScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2004/02/skos/core#notation> "CHEM_ROLE_WETTING_AGENT" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wetting agent"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3, printed page 228, lines 6524-6527."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#wettingAgent> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#adaptedDefinition> .
+# 
+# https://w3id.org/eudpp/textile-associated-materials-codelists#zipper
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/eudpp/textile-associated-materials#NonTextileComponentTypeConcept> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://purl.org/dc/terms/source> <https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2000/01/rdf-schema#comment> "A zipper integrated into a textile product."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/textile-associated-materials> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2000/01/rdf-schema#label> "Zipper"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2004/02/skos/core#notation> "COMP_ZIPPER" .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2004/02/skos/core#prefLabel> "Zipper"@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp/textile-associated-materials-codelists#NonTextileComponentTypeScheme> .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <https://w3id.org/eudpp/textile-connector#sourceLocator> "JRC Section 12.3.12, printed page 246, lines 6855-6863."@en .
+<https://w3id.org/eudpp/textile-associated-materials-codelists#zipper> <https://w3id.org/eudpp/textile-connector#sourceType> <https://w3id.org/eudpp/textile-connector#directExtraction> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

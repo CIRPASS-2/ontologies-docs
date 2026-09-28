@@ -1,0 +1,1127 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/eudpp/eto#"
+     xml:base="https://w3id.org/eudpp/eto"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann#"
+     xmlns:eudpp="https://w3id.org/eudpp#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vann2="http://purl.org/vocab/vann/"
+     xmlns:eudpp1="https://w3id.org/eudpp:"
+     xmlns:eudpp3="https://w3id.org/eudpp/"
+     xmlns:dcterms="http://purl.org/dc/dcterms/">
+    <owl:Ontology rdf:about="https://w3id.org/eudpp/eto">
+        <owl:versionIRI rdf:resource="https://w3id.org/eudpp/eto/0.1"/>
+        <owl:imports rdf:resource="https://w3id.org/eudpp/ACTOR"/>
+        <owl:imports rdf:resource="https://w3id.org/eudpp/CONNECTOR"/>
+        <owl:imports rdf:resource="https://w3id.org/eudpp/LCA"/>
+        <owl:imports rdf:resource="https://w3id.org/eudpp/P_DPP"/>
+        <owl:imports rdf:resource="https://w3id.org/eudpp/SOC"/>
+        <terms:description>Example Tyre Ontology (ETO) is an examplar ontology for the tyre sector.</terms:description>
+        <rdfs:label xml:lang="en">Example Tyre Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasManufacturer"/>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#hasRetreader -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp/eto#hasRetreader">
+        <rdfs:label>A product has a retreader (Actor from ACTOR module).</rdfs:label>
+        <rdfs:label>has retreader</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp#GTIN -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#GTIN"/>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#DOTTINFactoryCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#DOTTINFactoryCode">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>DOT TIN (Tire Identification Number) for US Market - Plant code (NHTSA Part 574)2 or 3 digits. From April 2025, only 3 digits</rdfs:comment>
+        <rdfs:label>DOT TIN Factory Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#DOTTINOptionalCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#DOTTINOptionalCode">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>DOT TIN - tire optional code</rdfs:comment>
+        <rdfs:label>DOT TIN Optional Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#DOTTINSizeCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#DOTTINSizeCode">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>DOT TIN - Tire size code</rdfs:comment>
+        <rdfs:label>DOT TIN Size Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#DOTTINWeekYear -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#DOTTINWeekYear">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>DOT TIN (Tire Identification Number) for US Market - Production Date Week/Year (WWYY)</rdfs:comment>
+        <rdfs:label>DOT TIN Week Year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SGTIN -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#SGTIN">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp#GTIN"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Unique Item Identifier - SGTIN-96 following Pure identity EPC URN (GS1 EPCIS) format</rdfs:comment>
+        <rdfs:label>SGTIN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#commercialNameLongDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#commercialNameLongDescription">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp#productName"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp/eto#Tyre"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Marketing text / Commercial name of the product</rdfs:comment>
+        <rdfs:label>commercial name long description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#eanCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#eanCode">
+        <rdfs:comment>European Article number according to GS1 standard</rdfs:comment>
+        <rdfs:label>EAN Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#hasValue">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Property has value</rdfs:comment>
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#upcCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/eto#upcCode">
+        <rdfs:comment>(Private) Universal Product code according to GS1 standard</rdfs:comment>
+        <rdfs:label>UPC Code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#AcousticInternalStructure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#AcousticInternalStructure">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>It indicates the presence of an internal structure with specific characteristics added to a “conventional” tyre with the aim to reduce the tyre cavity noise (not necessarily external rolling noise) (TRUE/FALSE)</rdfs:comment>
+        <rdfs:label>Acoustic Internal Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#AmountOfActualRepairs -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#AmountOfActualRepairs">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>An incremental counter to record the number of repairs/patch occurred during the tyre&apos;s life - starting with zero</rdfs:comment>
+        <rdfs:label>Amount Of Actual Repairs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#AspectRatio -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#AspectRatio">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
+        <rdfs:comment>Aspect ratio</rdfs:comment>
+        <rdfs:label>Aspect Ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#BirthDate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#BirthDate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Date when the tyre is born following ISO-8601 format &quot;YYYY-MM-DD&quot;</rdfs:comment>
+        <rdfs:label>Birth Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#CountryOfOrigin -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#CountryOfOrigin">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Country of origin (ISO 3166-1 alpha-3)</rdfs:comment>
+        <rdfs:label>Country Of Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#DateOfELTCollection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#DateOfELTCollection">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Date when the ELT has been collected by the used tyre collector (DD/MM/YY)</rdfs:comment>
+        <rdfs:label>Date Of ELT Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Country of deconstruction (ISO 3166-1 alpha-3) of the used tyre</rdfs:comment>
+        <rdfs:label>ELT Recycling Channel Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ELTRecyclingDate -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ELTRecyclingDate">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Date when the ELT has been deconstructed (DD/MM/YY)</rdfs:comment>
+        <rdfs:label>ELT Recycling Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ELTReuseStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ELTReuseStatus">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Indicates whether the ELT has been sent back to the market because partly worn out or to be sent to a retreader</rdfs:comment>
+        <rdfs:label>ELT Reuse Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>URL to the EPREL record of the tire</rdfs:comment>
+        <rdfs:label>EPREL Record Reference Url</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ExtraLoad -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ExtraLoad">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Extra Load symbol - to be associated to the load index if needed.</rdfs:comment>
+        <rdfs:label>Extra Load</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#GeometricalTyreSize -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#GeometricalTyreSize">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
+        <rdfs:comment>Tyre size designation</rdfs:comment>
+        <rdfs:label>Geometrical Tyre Size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#HLPC -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#HLPC">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Indicates if the tire meets the UN R.30 definition of High Load (HL), values according to ETRTO standard</rdfs:comment>
+        <rdfs:label>HLPC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#HighLoad -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#HighLoad">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>High Load symbol - to be associated to the load index if needed.</rdfs:comment>
+        <rdfs:label>High Load</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LabelPictureUrl -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LabelPictureUrl">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>URL to the label picture</rdfs:comment>
+        <rdfs:label>Label Picture Url</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LabellingReferenceRegulation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LabellingReferenceRegulation">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>Regulation to which the labelling level of the tire for wet, noise and rolling resist    ance is given</rdfs:comment>
+        <rdfs:label>Labelling Reference Regulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndex -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndex">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Load index is a integer number refererenced by the load weight that tyre can carry.</rdfs:comment>
+        <rdfs:label>Load Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndexAfterRET -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndexAfterRET">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Load index after Retreading</rdfs:comment>
+        <rdfs:label>Load Index After RET</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#LoadIndexAfterRET"/>
+        <rdfs:comment>Load index for dual fitment after Retreading</rdfs:comment>
+        <rdfs:label>Load Index Dual Fitment After RET</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndexForDualFitment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndexForDualFitment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#LoadIndex"/>
+        <rdfs:comment>Load index for dual fitment</rdfs:comment>
+        <rdfs:label>Load Index For Dual Fitment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceCondition">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#LoadIndex"/>
+        <rdfs:comment>For commercial tyres, speed adjusted load</rdfs:comment>
+        <rdfs:label>Load Index For Supplementary Service Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#LoadIndexForSupplementaryServiceConditionDualFitment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#LoadIndex"/>
+        <rdfs:comment>For commercial tyres, speed adjusted load for dual fitment</rdfs:comment>
+        <rdfs:label>Load Index For Supplementary Service Condition Dual Fitment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#MudAndSnow -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#MudAndSnow">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductMarking"/>
+        <rdfs:comment>Mud and Snow (M+S) marking</rdfs:comment>
+        <rdfs:label>Mud And Snow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#NoiseClass -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#NoiseClass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>Labelling noise class</rdfs:comment>
+        <rdfs:label>Noise Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#NoisePerformance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#NoisePerformance">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>Labelling noise performance</rdfs:comment>
+        <rdfs:label>Noise Performance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#PlaceOfELTCollection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#PlaceOfELTCollection">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Country of collection (ISO 3166-1 alpha-3) of the used tyre</rdfs:comment>
+        <rdfs:label>Place Of ELT Collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#PlaceOfELTRecycling -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#PlaceOfELTRecycling">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Indicates to which recycling channel category the used tyre has been sent (Cement , Pyrolisis, etc.)</rdfs:comment>
+        <rdfs:label>Place Of ELT Recycling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ProductLabelling -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ProductLabelling">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Labelling-related property</rdfs:comment>
+        <rdfs:label>Product Labelling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ProductMarking -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ProductMarking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Marking-related property</rdfs:comment>
+        <rdfs:label>Product Marking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#ProductSpecification -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#ProductSpecification">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Specification-related property</rdfs:comment>
+        <rdfs:label>Product Specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#Regrooved -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#Regrooved">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Indicates whether the tyre has been regrooved according to ECE R54 definition</rdfs:comment>
+        <rdfs:label>Regrooved</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RegulationsComplianceCode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RegulationsComplianceCode">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Code that indicates compliance of tire to specific international legal market requirement based on PRICAT standard</rdfs:comment>
+        <rdfs:label>Regulations Compliance Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RegulationsComplianceMarkings -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RegulationsComplianceMarkings">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Code description : lists the regulations to which the tire is compliant.</rdfs:comment>
+        <rdfs:label>Regulations Compliance Markings</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RemainingTreadDepth -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RemainingTreadDepth">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasMeasurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://si-digital-framework.org/SI#MeasurementUnit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>In millimeters, the remaining tread depth of the used tyre at the moment of deconstruction</rdfs:comment>
+        <rdfs:label>Remaining Tread Depth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RetreadingCycle -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RetreadingCycle">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:label>An incremental counter to record the number of retreading operations occurred during the tyre&apos;s life - starting with zero</rdfs:label>
+        <rdfs:label>Retreading Cycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RimCode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RimCode">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasMeasurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://si-digital-framework.org/SI#MeasurementUnit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
+        <rdfs:comment>Rim diameter in millimeters or inches</rdfs:comment>
+        <rdfs:label>Rim Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#RollingResistanceClass -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#RollingResistanceClass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>Labelling rolling resistance class</rdfs:comment>
+        <rdfs:label>Rolling Resistance Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SVHCPresence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SVHCPresence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>SVHC designation (ECHA std) and presence % in weight of the article - EU REACH regulation</rdfs:comment>
+        <rdfs:label>SVHC Presence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#Sealant -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#Sealant">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Indicates whether the tyre is equipped with a puncture sealant</rdfs:comment>
+        <rdfs:label>Sealant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SectionWidth -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SectionWidth">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasMeasurementUnit"/>
+                <owl:allValuesFrom rdf:resource="https://si-digital-framework.org/SI#MeasurementUnit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
+        <rdfs:comment>Nominal section width of the tyre in millimeters</rdfs:comment>
+        <rdfs:label>Section Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SectionWidthCode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SectionWidthCode">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
+        <rdfs:comment>Nominal section width of the tyre defined by a code (CV tyre)</rdfs:comment>
+        <rdfs:label>Section Width Code</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SizePrefix -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SizePrefix">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductMarking"/>
+        <rdfs:comment>Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)</rdfs:comment>
+        <rdfs:label>Size Prefix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SizeSuffix -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SizeSuffix">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductMarking"/>
+        <rdfs:comment>Part of identification marking for light truck tyres (see G9 - G13 ETRTO Std Manual)</rdfs:comment>
+        <rdfs:label>Size Suffix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SpeedSymbol -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SpeedSymbol">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Speed symbol</rdfs:comment>
+        <rdfs:label>Speed Symbol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SpeedSymbolAfterRET -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SpeedSymbolAfterRET">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Speed symbol after retreading</rdfs:comment>
+        <rdfs:label>Speed Symbol After RET</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#SpeedSymbol"/>
+        <rdfs:comment>For commercial tyres, load adjusted speed</rdfs:comment>
+        <rdfs:label>Speed Symbol For Supplementary Service Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#Structure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#Structure">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Structure of the tyre. Radial (R) or Bias (B)</rdfs:comment>
+        <rdfs:label>Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#StructureWordMarking -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#StructureWordMarking">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>Tyre construction word marked on the sidewall</rdfs:comment>
+        <rdfs:label>Structure Word Marking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#TmsContainerPresence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#TmsContainerPresence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Indicates whether a rubber container for the Sensor is present on the tyre updated at each tyre inspection</rdfs:comment>
+        <rdfs:label>Tms Container Presence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#TmsSensorPresence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#TmsSensorPresence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:comment>Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection</rdfs:comment>
+        <rdfs:label>Tms Sensor Presence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#TubeCharacteristic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#TubeCharacteristic">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductSpecification"/>
+        <rdfs:comment>It indicates tubeless or tube type tyres</rdfs:comment>
+        <rdfs:label>Tube Characteristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#Tyre -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#Tyre">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasManufacturer"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/eudpp#Actor"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#DOTTINFactoryCode"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#DOTTINWeekYear"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#SGTIN"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:comment>Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Dictionary Cambride]</rdfs:comment>
+        <rdfs:label>Tyre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#WetClass -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#WetClass">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductLabelling"/>
+        <rdfs:comment>Labelling wet class</rdfs:comment>
+        <rdfs:label>Wet Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp/eto#3PMSF -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp/eto#3PMSF">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp/eto#hasValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/eto#ProductMarking"/>
+        <rdfs:comment>3PMSF marking - Indicates tyres designed for use in severe snow conditions.</rdfs:comment>
+        <rdfs:label>3PMSF</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
