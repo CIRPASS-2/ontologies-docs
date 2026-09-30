@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/CON","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/CON","name":"The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/CON", "dateReleased":"2025-02-27", "version":"2.0.7", "author":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/CON","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/CON","name":"The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/CON", "dateReleased":"2025-02-27", "version":"2.0.8", "author":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -71,15 +71,15 @@ $(function(){
 
 <dl>
 <dt>Revision:</dt>
-<dd>2.0.7</dd>
+<dd>2.0.8</dd>
 <dt>Issued on:</dt>
-<dd>2026-09-22</dd>
+<dd>2026-09-28</dd>
 <dt>Authors:</dt>
 <dd>Riina Maigre</dd><dd>Tarmo Robal</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Riina Maigre, Tarmo Robal. The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.. Revision: 2.0.7.</dd>
+<dd>Riina Maigre, Tarmo Robal. The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.. Revision: 2.0.8.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -252,6 +252,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity"
          title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a>
@@ -755,7 +758,7 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -861,7 +864,7 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -970,6 +973,7 @@ This section provides details for each class and property defined by EU DPP CORE
   <li><a href="#https://w3id.org/eudpp#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a></li>
   <li><a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a></li>
   <li><a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a></li>
   <li><a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a></li>
   <li><a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a></li>
   <li><a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a></li>
@@ -1265,6 +1269,29 @@ This section provides details for each class and property defined by EU DPP CORE
     </dt>
     <dd>
      <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasFacility">
+  <h3>has facility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasFacility</p>
+  <div class="comment">
+   <span class="markdown">Links a product to a facility. Product is modelled in the EU DPP CO P_DPP module. Facility is modelled in the EU DPP CO ACTOR module.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

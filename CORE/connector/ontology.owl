@@ -18,7 +18,7 @@
 --
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-22</terms:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-28</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
@@ -26,7 +26,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
         <vann:preferredNamespacePrefix>con</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CORE CON</rdfs:label>
-        <owl:versionInfo>2.0.7</owl:versionInfo>
+        <owl:versionInfo>2.0.8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -331,6 +331,21 @@ Product is modelled in the EU DPP CO P_DPP module.</rdfs:comment>
 Product is modelled in the EU DPP CO P_DPP module.
 Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:label xml:lang="en">has economic operator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasFacility -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasFacility">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Facility"/>
+        <rdfs:comment xml:lang="en">Links a product to a facility.
+
+Product is modelled in the EU DPP CO P_DPP module.
+Facility is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has facility</rdfs:label>
     </owl:ObjectProperty>
     
 
