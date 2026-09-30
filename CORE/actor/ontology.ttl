@@ -18,18 +18,16 @@ DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontolog
 For more information, see 
 Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
 
-
         """@en ;
-                                <http://purl.org/dc/terms/issued> "2026-09-22"^^xsd:date ;
+                                <http://purl.org/dc/terms/issued> "2026-09-28"^^xsd:date ;
                                 <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                    """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
-                                <http://purl.org/dc/terms/modified> "2026-04-30"^^xsd:date ;
                                 <http://purl.org/dc/terms/title> "Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project."@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
                                 rdfs:comment "The Actor module of an EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
                                 rdfs:label "EU DPP CO ACTOR"@en ;
-                                owl:versionInfo "2.0.1" .
+                                owl:versionInfo "2.0.2" .
 
 #################################################################
 #    Annotation properties
@@ -278,6 +276,14 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:range xsd:string ;
                                              rdfs:comment "A trademark officially registered and owned by an actor."@en ;
                                              rdfs:label "registered trademark"@en .
+
+
+###  https://w3id.org/eudpp/facilityName
+<https://w3id.org/eudpp/facilityName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#Facility> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Optional human-readable name of the facility."@en ;
+                                      rdfs:label "facility name"@en .
 
 
 #################################################################
