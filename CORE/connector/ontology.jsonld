@@ -393,6 +393,23 @@
     "@id" : "https://w3id.org/eudpp#Actor"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#hasFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a product to a facility.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nFacility is modelled in the EU DPP CO ACTOR module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Facility"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#hasIssuer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -893,7 +910,7 @@
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-22"
+    "@value" : "2026-09-28"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://www.apache.org/licenses/LICENSE-2.0"
@@ -917,6 +934,6 @@
     "@value" : "EU DPP CORE CON"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2.0.7"
+    "@value" : "2.0.8"
   } ]
 } ]

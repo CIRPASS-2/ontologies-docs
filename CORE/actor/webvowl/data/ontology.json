@@ -7,10 +7,10 @@
       "en" : "Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/ACTOR",
-    "version" : "2.0.1",
+    "version" : "2.0.2",
     "author" : [ "Riina Maigre" ],
     "description" : {
-      "en" : "Actor module of an EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology modules: CON, P_DPP, EVENT.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342\n\n\n        "
+      "en" : "Actor module of an EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology modules: CON, P_DPP, EVENT.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342\n\n        "
     },
     "labels" : {
       "en" : "EU DPP CO ACTOR"
@@ -39,12 +39,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Tarmo Robal",
+        "value" : "Hele-Mai Haav",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Hele-Mai Haav",
+        "value" : "Tarmo Robal",
         "type" : "label"
       } ],
       "created" : [ {
@@ -59,16 +59,10 @@
         "value" : "act",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2026-04-30",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2.0.1",
+        "value" : "2.0.2",
         "type" : "label"
       } ],
       "title" : [ {
@@ -80,7 +74,7 @@
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
-        "value" : "2026-09-22",
+        "value" : "2026-09-28",
         "type" : "label"
       } ]
     }
@@ -99,26 +93,29 @@
     "id" : "14",
     "type" : "owl:Class"
   }, {
+    "id" : "11",
+    "type" : "owl:Thing"
+  }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "44",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
     "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "36",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
-    "type" : "owl:Thing"
+    "id" : "42",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "39",
     "type" : "rdfs:Datatype"
@@ -126,34 +123,34 @@
     "id" : "16",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "49",
+    "id" : "51",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "43",
+    "id" : "45",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "50",
+    "id" : "52",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "4",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "26",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "34",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "53",
+    "id" : "55",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "47",
+    "id" : "49",
     "type" : "owl:Class"
   }, {
     "id" : "12",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "61",
+    "id" : "63",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "9",
@@ -165,13 +162,13 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "64",
+    "id" : "66",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "28",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -196,7 +193,7 @@
       "IRI-based" : "Actor",
       "en" : "Actor"
     },
-    "subClasses" : [ "4", "5" ],
+    "subClasses" : [ "6", "7" ],
     "comment" : {
       "en" : "Actor means a legal or natural person (e.g. John Doe, TNO). One actor can take on multiple roles; [CIRPASS-2 User Stories 3.1]"
     },
@@ -297,30 +294,6 @@
         "en" : "Dealer"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp#manufacturer",
-      "baseIri" : "https://w3id.org/eudpp",
-      "annotations" : {
-        "references" : [ {
-          "identifier" : "references",
-          "language" : "en",
-          "value" : "ESPR Art 2 (42)",
-          "type" : "label"
-        } ],
-        "source" : [ {
-          "identifier" : "source",
-          "language" : "undefined",
-          "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Manufacturer means any natural or legal person that manufactures a product or that has a product designed or manufactured and markets that product under their name or trademark; [ESPR Art 2 (42)]"
-      },
-      "labels" : {
-        "IRI-based" : "manufacturer",
-        "en" : "Manufacturer"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp#importer",
       "baseIri" : "https://w3id.org/eudpp",
       "annotations" : {
@@ -343,6 +316,30 @@
       "labels" : {
         "IRI-based" : "importer",
         "en" : "Importer"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp#manufacturer",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Art 2 (42)",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Manufacturer means any natural or legal person that manufactures a product or that has a product designed or manufactured and markets that product under their name or trademark; [ESPR Art 2 (42)]"
+      },
+      "labels" : {
+        "IRI-based" : "manufacturer",
+        "en" : "Manufacturer"
       }
     }, {
       "iri" : "https://w3id.org/eudpp#distributor",
@@ -392,7 +389,7 @@
       "en" : "Facility"
     },
     "comment" : {
-      "en" : "A Facility may be a place where specific activities occur. A production/manufacturing facility means a factory. The term may refer to any place that makes things, or plants that generate electricity."
+      "en" : "Business facilities are structures that provide services to a business. This can include space for employees, technology, equipment and inventory. Facilities can be used for business administration, operations or to provide services to customers."
     },
     "attributes" : [ "external" ],
     "id" : "13"
@@ -460,6 +457,13 @@
     "id" : "14",
     "superClasses" : [ "9" ]
   }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "11",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
     "iri" : "https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
@@ -526,7 +530,7 @@
       "en" : "A body of persons or an entity (as a corporation) considered as having many of the rights and responsibilities of a natural person and especially the capacity to sue and be sued."
     },
     "attributes" : [ "external" ],
-    "id" : "5",
+    "id" : "7",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://schema.org/PostalAddress",
@@ -544,7 +548,7 @@
       "IRI-based" : "PostalAddress"
     },
     "attributes" : [ "external" ],
-    "id" : "44"
+    "id" : "46"
   }, {
     "iri" : "https://schema.org/GeoCoordinates",
     "baseIri" : "https://schema.org",
@@ -561,11 +565,11 @@
       "IRI-based" : "GeoCoordinates"
     },
     "attributes" : [ "external" ],
-    "id" : "45"
+    "id" : "47"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
+    "id" : "5",
     "label" : {
       "IRI-based" : "string"
     }
@@ -577,11 +581,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "11",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -600,21 +604,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "id" : "51",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "43",
+    "id" : "45",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
+    "id" : "52",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -638,12 +642,12 @@
       "en" : "A human being as distinguished from a person (as a corporation) created by operation of law"
     },
     "attributes" : [ "external" ],
-    "id" : "4",
+    "id" : "6",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "24",
+    "id" : "26",
     "label" : {
       "IRI-based" : "string"
     }
@@ -657,7 +661,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "53",
+    "id" : "55",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -669,7 +673,7 @@
       "IRI-based" : "Location"
     },
     "attributes" : [ "external" ],
-    "id" : "47"
+    "id" : "49"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -680,7 +684,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "61",
+    "id" : "63",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -779,7 +783,7 @@
         "en" : "DPP Service Provider"
       }
     } ],
-    "subClasses" : [ "14", "31", "22", "8", "27" ],
+    "subClasses" : [ "14", "24", "22", "8", "28" ],
     "comment" : {
       "en" : "Role means a set of tasks typically performed by one actor. (e.g. Responsible Economic Operator, Independent operator); [CIRPASS-2 User Stories 3.1]"
     },
@@ -1009,7 +1013,7 @@
       "en" : "Conformity assessment means the process demonstrating whether the ecodesign requirements set out in the relevant delegated acts adopted pursuant to Article 4 have been fulfilled; [ESPR Art 2 (51)]"
     },
     "attributes" : [ "external" ],
-    "id" : "31",
+    "id" : "24",
     "superClasses" : [ "9" ]
   }, {
     "iri" : "http://purl.org/dc/terms#Location",
@@ -1027,7 +1031,7 @@
       "IRI-based" : "Location"
     },
     "attributes" : [ "external" ],
-    "id" : "64"
+    "id" : "66"
   }, {
     "iri" : "https://w3id.org/eudpp#EndUserRole",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1113,14 +1117,14 @@
       "en" : "Parent class for roles of end users, such as consumer, etc."
     },
     "attributes" : [ "external" ],
-    "id" : "27",
+    "id" : "28",
     "superClasses" : [ "9" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "6",
+    "id" : "4",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "10",
@@ -1130,33 +1134,33 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "17",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "20",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "25",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "26",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "28",
+    "id" : "27",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
@@ -1178,28 +1182,25 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "41",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "42",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "46",
+    "id" : "43",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "48",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "51",
+    "id" : "50",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "52",
-    "type" : "owl:someValuesFrom"
+    "id" : "53",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "54",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "55",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "56",
     "type" : "owl:allValuesFrom"
@@ -1208,21 +1209,27 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "58",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "59",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "60",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "62",
+    "id" : "61",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "19",
+    "id" : "62",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "64",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "63",
+    "id" : "65",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -1238,12 +1245,12 @@
     "comment" : {
       "en" : "Relates a manufacturer to the mandate (assignment) that authorises an actor to act on the manufacturer's behalf."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/eudpp#registeredTrademark",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "7",
+    "range" : "5",
     "label" : {
       "IRI-based" : "registeredTrademark",
       "en" : "registered trademark"
@@ -1252,8 +1259,8 @@
     "comment" : {
       "en" : "A trademark officially registered and owned by an actor."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "6"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "4"
   }, {
     "iri" : "https://schema.org/email",
     "baseIri" : "https://schema.org",
@@ -1274,7 +1281,7 @@
     "comment" : {
       "en" : "Links an Actor to its email address."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "10"
   }, {
     "iri" : "https://schema.org/url",
@@ -1296,11 +1303,16 @@
     "comment" : {
       "undefined" : "The official website or webpage of the actor."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "15"
   }, {
+    "range" : "18",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "17"
+  }, {
     "iri" : "https://w3id.org/eudpp#hasRole",
-    "inverse" : "19",
+    "inverse" : "20",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "9",
     "label" : {
@@ -1311,22 +1323,22 @@
     "comment" : {
       "en" : "Links an actor role assignment to a role."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "17"
-  }, {
-    "range" : "9",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "20"
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
   }, {
     "range" : "9",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "21"
+  }, {
+    "range" : "9",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
   }, {
     "iri" : "https://schema.org/telephone",
     "baseIri" : "https://schema.org",
-    "range" : "24",
+    "range" : "26",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1343,8 +1355,8 @@
     "comment" : {
       "en" : "Links an Actor to its phone."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "23"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "25"
   }, {
     "iri" : "https://w3id.org/eudpp#representsManufacturer",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1357,37 +1369,32 @@
     "comment" : {
       "en" : "Used when the role is authorisedRepresentativeRole to indicate the manufacturer being represented."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "3"
   }, {
-    "range" : "18",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "25"
+    "range" : "9",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
   }, {
     "range" : "9",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "26"
-  }, {
-    "range" : "1",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
-  }, {
-    "range" : "1",
-    "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "29"
   }, {
-    "range" : "9",
-    "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
     "range" : "9",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "1",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "iri" : "https://schema.org/longitude",
@@ -1409,7 +1416,7 @@
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/eudpp#registeredTradeName",
@@ -1423,7 +1430,7 @@
     "comment" : {
       "en" : "Trade name under which a legal person or business operates and is registered."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "35"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broader",
@@ -1433,7 +1440,7 @@
       "IRI-based" : "broader"
     },
     "domain" : "11",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "37"
   }, {
     "iri" : "https://w3id.org/eudpp#actorName",
@@ -1447,7 +1454,7 @@
     "comment" : {
       "en" : "Name of an actor."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/eudpp#usesFacility",
@@ -1461,8 +1468,22 @@
     "comment" : {
       "en" : "Relates an actor to facility."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/eudpp/facilityName",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "facilityName",
+      "en" : "facility name"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Optional human-readable name of the facility."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "41"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#related",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1471,12 +1492,12 @@
       "IRI-based" : "related"
     },
     "domain" : "11",
-    "attributes" : [ "external", "object" ],
-    "id" : "41"
+    "attributes" : [ "object", "external" ],
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/eudpp#assignmentValidFrom",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "43",
+    "range" : "45",
     "label" : {
       "IRI-based" : "assignmentValidFrom",
       "en" : "assignment valid from"
@@ -1485,22 +1506,22 @@
     "comment" : {
       "en" : "The date and time from which the actor role assignment is valid."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "42"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "44"
   }, {
     "iri" : "https://w3id.org/eudpp#isResidingIn",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "47",
+    "range" : "49",
     "label" : {
       "IRI-based" : "isResidingIn",
       "en" : "is residing in"
     },
-    "domain" : "4",
+    "domain" : "6",
     "comment" : {
       "en" : "Relates a natural person to the location where they reside."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "46"
+    "attributes" : [ "object", "external" ],
+    "id" : "48"
   }, {
     "iri" : "https://w3id.org/eudpp#isUsedByActor",
     "inverse" : "40",
@@ -1514,48 +1535,48 @@
     "comment" : {
       "en" : "Relates a facility to an actor."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "48"
+    "attributes" : [ "object", "external" ],
+    "id" : "50"
   }, {
     "iri" : "https://w3id.org/eudpp#isEstablishedIn",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "47",
+    "range" : "49",
     "label" : {
       "IRI-based" : "isEstablishedIn",
       "en" : "is established in"
     },
-    "domain" : "5",
+    "domain" : "7",
     "comment" : {
       "en" : "Relates a legal person to the location where it is established."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "51"
+    "attributes" : [ "object", "external" ],
+    "id" : "53"
   }, {
-    "iri" : "https://schema.org/latitude",
+    "iri" : "https://schema.org/longitude",
     "baseIri" : "https://schema.org",
-    "range" : "53",
+    "range" : "55",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://schema.org/latitude",
+        "value" : "https://schema.org/longitude",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "latitude",
-      "en" : "latitude"
+      "IRI-based" : "longitude",
+      "en" : "longitude"
     },
-    "domain" : "45",
+    "domain" : "47",
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "someValues", "external", "datatype" ],
-    "id" : "52"
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "54"
   }, {
     "iri" : "https://schema.org/address",
     "baseIri" : "https://schema.org",
-    "range" : "44",
+    "range" : "46",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1572,11 +1593,11 @@
     "comment" : {
       "en" : "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"
     },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "54"
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/eudpp#hasRole",
-    "inverse" : "19",
+    "inverse" : "20",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "9",
     "label" : {
@@ -1587,34 +1608,12 @@
     "comment" : {
       "en" : "Links an actor role assignment to a role."
     },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "55"
-  }, {
-    "iri" : "https://schema.org/address",
-    "baseIri" : "https://schema.org",
-    "range" : "44",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://schema.org/address",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "address",
-      "en" : "has address"
-    },
-    "domain" : "13",
-    "comment" : {
-      "en" : "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"
-    },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "56"
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "57"
   }, {
     "iri" : "https://schema.org/geo",
     "baseIri" : "https://schema.org",
-    "range" : "45",
+    "range" : "47",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1631,17 +1630,39 @@
     "comment" : {
       "en" : "Links facility to its coordinates, represented as schema:geo."
     },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "57"
-  }, {
-    "range" : "4",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "58"
+  }, {
+    "iri" : "https://schema.org/address",
+    "baseIri" : "https://schema.org",
+    "range" : "46",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://schema.org/address",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "address",
+      "en" : "has address"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "59"
+  }, {
+    "range" : "6",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
   }, {
     "iri" : "https://w3id.org/eudpp#assignmentValidTo",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "49",
+    "range" : "51",
     "label" : {
       "IRI-based" : "assignmentValidTo",
       "en" : "assignment valid to"
@@ -1650,34 +1671,34 @@
     "comment" : {
       "en" : "The date and time until which the actor role assignment is valid."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "59"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "61"
   }, {
-    "iri" : "https://schema.org/longitude",
+    "iri" : "https://schema.org/latitude",
     "baseIri" : "https://schema.org",
-    "range" : "61",
+    "range" : "63",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://schema.org/longitude",
+        "value" : "https://schema.org/latitude",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "longitude",
-      "en" : "longitude"
+      "IRI-based" : "latitude",
+      "en" : "latitude"
     },
-    "domain" : "45",
+    "domain" : "47",
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "someValues", "external", "datatype" ],
-    "id" : "60"
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "62"
   }, {
     "iri" : "https://schema.org/latitude",
     "baseIri" : "https://schema.org",
-    "range" : "50",
+    "range" : "52",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1694,8 +1715,8 @@
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "62"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "64"
   }, {
     "iri" : "https://w3id.org/eudpp#isRoleOf",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1708,8 +1729,8 @@
     "comment" : {
       "en" : "Relates role to an actor role assignment."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "19"
+    "attributes" : [ "object", "external" ],
+    "id" : "20"
   }, {
     "iri" : "https://w3id.org/eudpp#hasActor",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1722,7 +1743,7 @@
     "comment" : {
       "en" : "Links actor role assignment to actor"
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "63"
+    "attributes" : [ "object", "external" ],
+    "id" : "65"
   } ]
 }

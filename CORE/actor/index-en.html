@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/ACTOR","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/ACTOR","name":"Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/ACTOR", "dateReleased":"2025-03-14", "dateModified":"2026-04-30", "version":"2.0.1", "author":[{"@type":"Person","name":"Riina Maigre"}], "contributor":[{"@type":"Person","name":"Hele-Mai Haav"},{"@type":"Person","name":"Tarmo Robal"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/ACTOR","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/ACTOR","name":"Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/ACTOR", "dateReleased":"2025-03-14", "version":"2.0.2", "author":[{"@type":"Person","name":"Riina Maigre"}], "contributor":[{"@type":"Person","name":"Hele-Mai Haav"},{"@type":"Person","name":"Tarmo Robal"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,11 +70,10 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-04-30</dt>
 <dt>Revision:</dt>
-<dd>2.0.1</dd>
+<dd>2.0.2</dd>
 <dt>Issued on:</dt>
-<dd>2026-09-22</dd>
+<dd>2026-09-28</dd>
 <dt>Authors:</dt>
 <dd>Riina Maigre</dd>
 
@@ -83,7 +82,7 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Riina Maigre. Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.. Revision: 2.0.1.</dd>
+<dd>Riina Maigre. Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project.. Revision: 2.0.2.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -201,6 +200,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#assignmentValidTo" title="https://w3id.org/eudpp#assignmentValidTo">assignment valid to</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/facilityName" title="https://w3id.org/eudpp/facilityName">facility name</a>
    </li>
    <li>
       <a href="#https://schema.org/email" title="https://schema.org/email">has email</a>
@@ -654,7 +656,7 @@ This section provides details for each class and property defined by EU DPP CO A
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/eudpp/facilityName" title="https://w3id.org/eudpp/facilityName">facility name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#isUsedByActor" title="https://w3id.org/eudpp#isUsedByActor">is used by actor</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1117,6 +1119,7 @@ This section provides details for each class and property defined by EU DPP CO A
   <li><a href="#https://w3id.org/eudpp#actorName" title="https://w3id.org/eudpp#actorName">actor name</a></li>
   <li><a href="#https://w3id.org/eudpp#assignmentValidFrom" title="https://w3id.org/eudpp#assignmentValidFrom">assignment valid from</a></li>
   <li><a href="#https://w3id.org/eudpp#assignmentValidTo" title="https://w3id.org/eudpp#assignmentValidTo">assignment valid to</a></li>
+  <li><a href="#https://w3id.org/eudpp/facilityName" title="https://w3id.org/eudpp/facilityName">facility name</a></li>
   <li><a href="#https://schema.org/email" title="https://schema.org/email">has email</a></li>
   <li><a href="#https://schema.org/telephone" title="https://schema.org/telephone">has phone</a></li>
   <li><a href="#https://schema.org/latitude" title="https://schema.org/latitude">latitude</a></li>
@@ -1190,6 +1193,29 @@ This section provides details for each class and property defined by EU DPP CO A
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/facilityName">
+  <h3>facility name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/facilityName</p>
+  <div class="comment">
+   <span class="markdown">Optional human-readable name of the facility.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
