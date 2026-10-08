@@ -6,13 +6,39 @@
 <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
 <script class="remove">
   var respecConfig = {
-    specStatus: "unofficial",
+    specStatus: "base",
     shortName: "cirpass2-dpp-ontologies",
     subtitle: "Architecture, modules and sectoral extensions",
-    publishDate: "2026-09-28",
-    latestVersion: null,
+    publishDate: "2026-10-08",
+    latestVersion: "https://cirpass-2.github.io/ontologies-docs/",
+    // ReSpec requires an editor; the editor is also among the authors, so the Editor line is hidden below.
     editors: [{ name: "Nader Jelassi", company: "Coexya" }],
-    license: "cc-by",
+    authors: [
+      { name: "Carolynn Bernier", company: "CEA" },
+      { name: "Fatima Danash", company: "CEA" },
+      { name: "Elio Hbeich", company: "GS1 France" },
+      { name: "Nader Jelassi", company: "Coexya" },
+      { name: "Riina Maigre", company: "Tallinn University of Technology" },
+      { name: "Tarmo Robal", company: "Tallinn University of Technology" },
+    ],
+    postProcess: [
+      function () {
+        // With specStatus "base", ReSpec writes a W3C copyright notice: this document stays under CC BY 4.0.
+        const copyright = document.querySelector(".head .copyright");
+        if (copyright) {
+          copyright.innerHTML = 'Copyright &copy; 2026 the document authors. Text is available under the ' +
+            '<a rel="license" href="https://creativecommons.org/licenses/by/4.0/legalcode">' +
+            'Creative Commons Attribution 4.0 International Public License</a>; additional terms may apply.';
+        }
+        for (const dt of document.querySelectorAll(".head dt")) {
+          if (/^Editors?:/.test(dt.textContent.trim())) {
+            let next = dt.nextElementSibling;
+            while (next && next.matches("dd.editor")) { const n = next.nextElementSibling; next.remove(); next = n; }
+            dt.remove();
+          }
+        }
+      },
+    ],
     localBiblio: {
       "CIRPASS-2": {
         title: "CIRPASS-2 project website",
@@ -162,9 +188,10 @@
   </p>
 </section>
 
-<section id="sotd">
+<section id="sotd" class="override">
+  <h2>Status of This Document</h2>
   <p>
-    This is an unofficial draft prepared within the CIRPASS-2 project [[CIRPASS-2]].
+    This document was prepared within the CIRPASS-2 project [[CIRPASS-2]].
   </p>
   <p id="disclaimer"><strong>Disclaimer</strong></p>
   <ol>
@@ -392,7 +419,7 @@
   </table>
   <p>
     A module for life cycle assessment (LCA) is under development and is not yet imported by the CORE. For reading
-    convenience, the reference documentation also has a page merging all CORE files, <em>CORE, complete vocabulary</em>.
+    convenience, the reference documentation also has a page merging all CORE files, <a href="CORE/core-complete/index-en.html"><em>CORE, complete vocabulary</em></a>.
   </p>
 </section>
 
@@ -416,15 +443,15 @@
     <caption>How each sectoral ontology attaches to the CORE.</caption>
     <thead><tr><th>Sector</th><th>Attachment</th><th>Main anchors in the CORE</th></tr></thead>
     <tbody>
-      <tr><td>Battery</td><td>Refers to CORE terms by IRI; no import.</td>
+      <tr><td><a href="Battery/battery-ontology/index-en.html">Battery</a></td><td>Refers to CORE terms by IRI; no import.</td>
         <td>The battery class specialises <code>eudpp:Product</code>; performance and durability classes specialise
         <code>eudpp:Property</code>, <code>eudpp:Durability</code> and <code>eudpp:ProductEvent</code>; battery chemistry
         specialises <code>eudpp:MaterialOfComposition</code>. Category concepts are <code>eudpp:ClassificationCode</code>
         values; chemistry and metal concepts are <code>eudpp:MaterialType</code> values.</td></tr>
-      <tr><td>Tyre</td><td>Imports the modules it reuses.</td>
+      <tr><td><a href="Tyre/eto/index-en.html">Tyre</a></td><td>Imports the modules it reuses.</td>
         <td>The tyre class specialises <code>eudpp:Product</code>; tyre characteristics specialise
         <code>eudpp:QuantitativeProperty</code> or <code>eudpp:ProductDimension</code>.</td></tr>
-      <tr><td>Textile</td><td>Imports MIREOT extracts of the CORE modules.</td>
+      <tr><td><a href="Textile/textile-ontology/index-en.html">Textile</a></td><td>Imports MIREOT extracts of the CORE modules.</td>
         <td>Textile product classes specialise <code>eudpp:Product</code>; processes, repairs and recycling operations
         are linked to <code>eudpp:ProductEvent</code>. The extracts (<code>textile-dpp-mireot</code>,
         <code>textile-mat-mireot</code>, <code>textile-actor-mireot</code>, <code>textile-event-mireot</code>,
@@ -457,24 +484,28 @@
       <caption>Modules of the battery ontology.</caption>
       <thead><tr><th>Module</th><th>Prefix</th><th>Scope</th></tr></thead>
       <tbody>
-        <tr><td>Battery (umbrella)</td><td><code>bat</code></td><td>The battery class, its status, warranty and document links.</td></tr>
-        <tr><td>Performance</td><td><code>batperf</code></td><td>Performance, durability and dated battery state records.</td></tr>
-        <tr><td>Materials</td><td><code>batmat</code></td><td>Battery chemistry and location of materials in the battery.</td></tr>
-        <tr><td>Labeling</td><td><code>batlab</code></td><td>Labels and symbols.</td></tr>
-        <tr><td>Categories</td><td><code>batcat</code></td><td>Vocabulary: battery categories of Article 3(1).</td></tr>
-        <tr><td>Chemistries</td><td><code>batchem</code></td><td>Vocabulary: battery chemistries.</td></tr>
-        <tr><td>Statuses</td><td><code>batstat</code></td><td>Vocabulary: life-cycle statuses of Annex XIII.</td></tr>
-        <tr><td>Extinguisher classes</td><td><code>batext</code></td><td>Vocabulary: fire extinguisher classes of EN 2.</td></tr>
-        <tr><td>Locations</td><td><code>batloc</code></td><td>Vocabulary: cathode, anode and electrolyte.</td></tr>
-        <tr><td>Metals</td><td><code>batmet</code></td><td>Vocabulary: cobalt, lead, lithium and nickel, whose recycled content is declared.</td></tr>
+        <tr><td><a href="Battery/battery-ontology/index-en.html">Battery (umbrella)</a></td><td><code>bat</code></td><td>The battery class, its status, warranty and document links.</td></tr>
+        <tr><td><a href="Battery/battery-performance/index-en.html">Performance</a></td><td><code>batperf</code></td><td>Performance, durability and dated battery state records.</td></tr>
+        <tr><td><a href="Battery/battery-materials/index-en.html">Materials</a></td><td><code>batmat</code></td><td>Battery chemistry and location of materials in the battery.</td></tr>
+        <tr><td><a href="Battery/battery-labeling/index-en.html">Labeling</a></td><td><code>batlab</code></td><td>Labels and symbols.</td></tr>
+        <tr><td><a href="Battery/battery-categories/index-en.html">Categories</a></td><td><code>batcat</code></td><td>Vocabulary: battery categories of Article 3(1).</td></tr>
+        <tr><td><a href="Battery/battery-chemistries/index-en.html">Chemistries</a></td><td><code>batchem</code></td><td>Vocabulary: battery chemistries.</td></tr>
+        <tr><td><a href="Battery/battery-statuses/index-en.html">Statuses</a></td><td><code>batstat</code></td><td>Vocabulary: life-cycle statuses of Annex XIII.</td></tr>
+        <tr><td><a href="Battery/battery-extinguisher-classes/index-en.html">Extinguisher classes</a></td><td><code>batext</code></td><td>Vocabulary: fire extinguisher classes of EN 2.</td></tr>
+        <tr><td><a href="Battery/battery-locations/index-en.html">Locations</a></td><td><code>batloc</code></td><td>Vocabulary: cathode, anode and electrolyte.</td></tr>
+        <tr><td><a href="Battery/battery-metals/index-en.html">Metals</a></td><td><code>batmet</code></td><td>Vocabulary: cobalt, lead, lithium and nickel, whose recycled content is declared.</td></tr>
       </tbody>
     </table>
+    <p>
+      For reading convenience, the reference documentation also has a page merging all battery files,
+      <a href="Battery/battery-ontology-complete/index-en.html"><em>Battery, complete vocabulary</em></a>.
+    </p>
   </section>
 
   <section id="tyre">
     <h3>Tyre</h3>
     <p>
-      The Example Tyre Ontology (ETO) was built to illustrate the CIRPASS-2 guidelines for sector ontology engineering.
+      The <a href="Tyre/eto/index-en.html">Example Tyre Ontology (ETO)</a> was built to illustrate the CIRPASS-2 guidelines for sector ontology engineering.
       It is an example: it represents neither the tyre use case defined in CIRPASS-2 nor the future tyre ontology.
     </p>
     <p>
@@ -500,21 +531,25 @@
       <caption>Modules of the textile ontology.</caption>
       <thead><tr><th>Module</th><th>Prefix</th><th>Scope</th></tr></thead>
       <tbody>
-        <tr><td>Textile ontology (umbrella)</td><td>&mdash;</td><td>Imports the twelve modules; declares no term.</td></tr>
-        <tr><td>Connector</td><td><code>txtcon</code></td><td>Shared patterns: quantitative values, reference periods, technology levels and provenance vocabularies.</td></tr>
-        <tr><td>Core</td><td><code>txt</code></td><td>Textile product classes, apparel scope, fibre composition and product type vocabularies.</td></tr>
-        <tr><td>Structure</td><td><code>txtstr</code></td><td>Characteristics of fibres, yarns, fabrics and assemblies.</td></tr>
-        <tr><td>Process</td><td><code>txtprc</code></td><td>Process types and executions, parameters and target specifications, from manufacturing to end of life.</td></tr>
-        <tr><td>Durability</td><td><code>txtdur</code></td><td>Durability characteristics, degradation phenomena, external damage and failure modes.</td></tr>
-        <tr><td>Assessment</td><td><code>txtass</code></td><td>Test methods and standards, executions, conditions, results, interpretation scales and thresholds.</td></tr>
-        <tr><td>Indicator</td><td><code>txtind</code></td><td>Derived durability and use indicators, kept apart from assessment results.</td></tr>
-        <tr><td>Context</td><td><code>txtctx</code></td><td>Observed use, care, environmental exposure, storage and user behaviour.</td></tr>
-        <tr><td>Repairability</td><td><code>txtrep</code></td><td>Repair services, guidance, design features, priority elements and repairability assessments.</td></tr>
-        <tr><td>Recyclability</td><td><code>txtrec</code></td><td>Recyclability by route, barriers, scores and labels, recycling events, recovered materials and recycled content.</td></tr>
-        <tr><td>Associated materials</td><td><code>txtam</code></td><td>Non-textile components, packaging materials and textile chemical substances.</td></tr>
-        <tr><td>Substances of concern</td><td><code>txtsoc</code></td><td>Textile specialisation of the draft SOC module: presence, location in the product, concentration and thresholds.</td></tr>
+        <tr><td><a href="Textile/textile-ontology/index-en.html">Textile ontology (umbrella)</a></td><td>&mdash;</td><td>Imports the twelve modules; declares no term.</td></tr>
+        <tr><td><a href="Textile/textile-connector/index-en.html">Connector</a></td><td><code>txtcon</code></td><td>Shared patterns: quantitative values, reference periods, technology levels and provenance vocabularies.</td></tr>
+        <tr><td><a href="Textile/textile-core/index-en.html">Core</a></td><td><code>txt</code></td><td>Textile product classes, apparel scope, fibre composition and product type vocabularies.</td></tr>
+        <tr><td><a href="Textile/textile-structure/index-en.html">Structure</a></td><td><code>txtstr</code></td><td>Characteristics of fibres, yarns, fabrics and assemblies.</td></tr>
+        <tr><td><a href="Textile/textile-process/index-en.html">Process</a></td><td><code>txtprc</code></td><td>Process types and executions, parameters and target specifications, from manufacturing to end of life.</td></tr>
+        <tr><td><a href="Textile/textile-durability/index-en.html">Durability</a></td><td><code>txtdur</code></td><td>Durability characteristics, degradation phenomena, external damage and failure modes.</td></tr>
+        <tr><td><a href="Textile/textile-assessment/index-en.html">Assessment</a></td><td><code>txtass</code></td><td>Test methods and standards, executions, conditions, results, interpretation scales and thresholds.</td></tr>
+        <tr><td><a href="Textile/textile-indicator/index-en.html">Indicator</a></td><td><code>txtind</code></td><td>Derived durability and use indicators, kept apart from assessment results.</td></tr>
+        <tr><td><a href="Textile/textile-context/index-en.html">Context</a></td><td><code>txtctx</code></td><td>Observed use, care, environmental exposure, storage and user behaviour.</td></tr>
+        <tr><td><a href="Textile/textile-repairability/index-en.html">Repairability</a></td><td><code>txtrep</code></td><td>Repair services, guidance, design features, priority elements and repairability assessments.</td></tr>
+        <tr><td><a href="Textile/textile-recyclability/index-en.html">Recyclability</a></td><td><code>txtrec</code></td><td>Recyclability by route, barriers, scores and labels, recycling events, recovered materials and recycled content.</td></tr>
+        <tr><td><a href="Textile/textile-associated-materials/index-en.html">Associated materials</a></td><td><code>txtam</code></td><td>Non-textile components, packaging materials and textile chemical substances.</td></tr>
+        <tr><td><a href="Textile/textile-soc/index-en.html">Substances of concern</a></td><td><code>txtsoc</code></td><td>Textile specialisation of the draft SOC module: presence, location in the product, concentration and thresholds.</td></tr>
       </tbody>
     </table>
+    <p>
+      For reading convenience, the reference documentation also has a page merging all textile files,
+      <a href="Textile/textile-ontology-complete/index-en.html"><em>Textile, complete vocabulary</em></a>.
+    </p>
   </section>
 </section>
 
