@@ -112,6 +112,41 @@
   } ]
 }, {
   "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid44"
+    }, {
+      "@id" : "_:genid42"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "http://www.w3.org/2001/XMLSchema#pattern" : [ {
+    "@value" : "[A-Z]{2}"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "http://www.w3.org/2001/XMLSchema#length" : [ {
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "post-consumer"
+    }, {
+      "@value" : "pre-consumer"
+    }, {
+      "@value" : "unknown"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://schema.org/latitude"
@@ -120,7 +155,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://schema.org/longitude"
@@ -129,7 +164,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://schema.org/PostalAddress"
@@ -138,7 +173,7 @@
     "@id" : "https://schema.org/address"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp#hasScheme"
@@ -147,7 +182,7 @@
     "@id" : "https://w3id.org/eudpp#ActorIdentifierScheme"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -160,7 +195,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/eudpp#Role"
@@ -169,7 +204,7 @@
     "@id" : "https://w3id.org/eudpp#hasRole"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/eudpp#authorisedRepresentative"
@@ -178,7 +213,7 @@
     "@id" : "https://w3id.org/eudpp#hasRole"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -192,7 +227,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/eudpp#ProductEvent"
@@ -201,7 +236,7 @@
     "@id" : "https://w3id.org/eudpp#isTriggeredByProductEvent"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -214,7 +249,7 @@
     "@id" : "https://w3id.org/eudpp#recordsDPPEvent"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -224,7 +259,7 @@
     "@id" : "https://w3id.org/eudpp#dppEventRecordIdentifier"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -234,7 +269,7 @@
     "@id" : "https://w3id.org/eudpp#dppEventRecordedAt"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -244,7 +279,7 @@
     "@id" : "https://w3id.org/eudpp#recordedInSystem"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -254,7 +289,7 @@
     "@id" : "https://w3id.org/eudpp#recordedInSystemName"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -267,7 +302,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/eudpp#DPPActionType"
@@ -280,78 +315,13 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://schema.org/PostalAddress"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://schema.org/address"
-  } ]
-}, {
-  "@id" : "_:genid61",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://schema.org/GeoCoordinates"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://schema.org/geo"
-  } ]
-}, {
-  "@id" : "_:genid62",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#identifierValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid63",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
-  } ]
-}, {
-  "@id" : "_:genid64",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#identifierValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid65",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/eudpp#raw"
-    }, {
-      "@id" : "https://w3id.org/eudpp#recycled"
-    }, {
-      "@id" : "https://w3id.org/eudpp#renewable"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -366,15 +336,11 @@
 }, {
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://schema.org/GeoCoordinates"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasGranularity"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+    "@id" : "https://schema.org/geo"
   } ]
 }, {
   "@id" : "_:genid71",
@@ -391,18 +357,15 @@
   } ]
 }, {
   "@id" : "_:genid72",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/eudpp#batch"
-    }, {
-      "@id" : "https://w3id.org/eudpp#item"
-    }, {
-      "@id" : "https://w3id.org/eudpp#model"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -415,12 +378,106 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid77",
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/eudpp#raw"
+    }, {
+      "@id" : "https://w3id.org/eudpp#recycled"
+    }, {
+      "@id" : "https://w3id.org/eudpp#renewable"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ]
+}, {
+  "@id" : "_:genid79",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasGranularity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#identifierValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/eudpp#batch"
+    }, {
+      "@id" : "https://w3id.org/eudpp#item"
+    }, {
+      "@id" : "https://w3id.org/eudpp#model"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#identifierValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid86",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ]
+}, {
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#identifierValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid88",
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The EU DPP core ontology"
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -449,14 +506,15 @@
     "@value" : "European Union"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/terms#Location",
+  "@id" : "http://purl.org/dc/terms/Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.org/dc/terms#Location"
+    "@id" : "http://purl.org/dc/terms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Location"
   } ]
-}, {
-  "@id" : "http://purl.org/dc/terms/Location",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/dc/terms/bibliographicCitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -508,24 +566,6 @@
 }, {
   "@id" : "http://schema.org/rangeIncludes",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://w3id.org/eudpp#DPPEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://w3id.org/eudpp/EVENT"
-  } ]
-}, {
-  "@id" : "http://w3id.org/eudpp#DPPEventRecord",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://w3id.org/eudpp/EVENT"
-  } ]
-}, {
-  "@id" : "http://w3id.org/eudpp#ProductEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "http://w3id.org/eudpp/EVENT"
-  } ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
@@ -1510,9 +1550,9 @@
     "@id" : "https://schema.org/GeoCoordinates"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://schema.org/PostalAddress",
@@ -1666,7 +1706,7 @@
     "@value" : "Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid42"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ActorIdentifier",
@@ -1685,9 +1725,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid52"
   }, {
-    "@id" : "_:genid44"
+    "@id" : "_:genid53"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#DPPIdentifier"
@@ -1699,6 +1739,8 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ActorIdentifierScheme",
@@ -1715,9 +1757,13 @@
     "@id" : "https://w3id.org/eudpp#IdentifierScheme"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#FacilityIdentifierScheme"
+  }, {
     "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
   }, {
     "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ActorRoleAssignment",
@@ -1734,7 +1780,7 @@
     "@value" : "Actor role assignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid45"
+    "@id" : "_:genid54"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#AddDPPDataAction",
@@ -1774,7 +1820,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ActorRoleAssignment"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#AuthorityRole",
@@ -1799,6 +1845,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "CAS Number (Chemical Abstracts Service)"
+  }, {
+    "@language" : "en",
+    "@value" : "Governance note: CAS is currently a MaterialIdentifierScheme. IDENT/MAT governance must determine whether a substance-identifier use requires reassignment, a shared scheme model, or another compatible pattern."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1935,6 +1984,9 @@
     "@language" : "en",
     "@value" : "The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/P_DPP"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Concentration of the substance of concern"
@@ -2052,7 +2104,7 @@
     "@value" : "DPP Action Type"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid47"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#DPPArchivalEvent",
@@ -2089,6 +2141,9 @@
     "@language" : "en",
     "@value" : "An ESPR-level event concept representing an event that affects the existence, content, accessibility, update, correction, or governance of a DPP. A DPPEvent captures the passport-facing semantics of the occurrence and is modelled as distinct from the product event that may trigger it."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/EVENT"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DPP Event"
@@ -2096,7 +2151,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ESPREvent"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid61"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#DPPEventRecord"
@@ -2114,20 +2169,23 @@
     "@language" : "en",
     "@value" : "A technical audit record used to represent and log an information-level event affecting a Digital Product Passport. Unlike EPCIS carriers, this class is intended for recording DPP-side information events rather than product-facing operational events."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/EVENT"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DPP Event Record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid62"
   }, {
-    "@id" : "_:genid54"
+    "@id" : "_:genid63"
   }, {
-    "@id" : "_:genid55"
+    "@id" : "_:genid64"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid65"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid66"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#DPPIdentifier",
@@ -2146,7 +2204,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid67"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#FacilityIdentifier"
@@ -2156,6 +2214,8 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#DPPUpdateEvent",
@@ -2171,7 +2231,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#DPPEvent"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#DeleteDPPDataAction",
@@ -2222,6 +2282,9 @@
     "@language" : "en",
     "@value" : "Digital instructions\nmean instructions in digital format concerning the product (‘digital instructions’) in a language that can be easily understood. ESPR Art 27(7)\nDigital instructions are ensured by manufacturers. These should also ensured by importers. (ESPR Art 29(4))\n\nThis class can be extended/specialised according to delegated acts or industry standards."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/P_DPP"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "DigitalInstruction"
@@ -2266,6 +2329,47 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QualityIndicator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#EC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation."
+  }, {
+    "@language" : "en",
+    "@value" : "The EC number is a seven-digit identifier typically written in the format XXX-XXX-X and used to identify chemical substances in European regulatory inventories.\n\nExample:\nSubstance: Ethanol\nEC number: 200-578-6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "EC"
+  } ],
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "200-578-6"
+  } ],
+  "https://w3id.org/eudpp#identifierMaxLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "9"
+  } ],
+  "https://w3id.org/eudpp#identifierPattern" : [ {
+    "@value" : "^[2-5]\\d{2}-\\d{3}-\\d$"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ECHA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ECHA substance identification scheme refers to the approach used by the European Chemicals Agency (ECHA) to identify and distinguish chemical substances for regulatory purposes under EU chemicals legislation, particularly REACH."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ECHA"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#EORI",
@@ -2547,9 +2651,9 @@
     "@value" : "Facility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid69"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#FacilityIdentifier",
@@ -2568,7 +2672,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid62"
+    "@id" : "_:genid71"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#MaterialIdentifier"
@@ -2576,6 +2680,29 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#FacilityIdentifierScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A kind of identifier scheme. The scheme or standard used to identify Facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Facility identifier scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#GLN",
@@ -2894,14 +3021,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid63"
+    "@id" : "_:genid72"
   }, {
-    "@id" : "_:genid64"
+    "@id" : "_:genid73"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme",
@@ -2919,6 +3048,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#MaterialOfComposition",
@@ -2953,7 +3084,7 @@
     "@value" : "Origin of material"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#MaterialType",
@@ -3179,6 +3310,9 @@
     "@language" : "en",
     "@value" : "An ESPR-level event concept representing an event that affects the state, condition, use, circulation, transformation, maintenance, or end-of-life status of a product. A ProductEvent captures the product-facing semantics of the occurrence and is distinct from any DPP-side event that may be triggered to record or reflect it."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/EVENT"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Product Event"
@@ -3203,14 +3337,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid78"
   }, {
-    "@id" : "_:genid70"
+    "@id" : "_:genid79"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity",
@@ -3227,7 +3363,7 @@
     "@id" : "https://w3id.org/eudpp#IdentifierGranularity"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid72"
+    "@id" : "_:genid81"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme",
@@ -3242,6 +3378,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductRequirement",
@@ -3253,6 +3392,20 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Product Requirement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ProductStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the current lifecycle status of a product."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/EVENT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Product Status"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductToPackagingRatio",
@@ -3553,7 +3706,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid76"
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  }, {
+    "@id" : "_:genid85"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#Substance",
@@ -3574,9 +3729,48 @@
     "@language" : "en",
     "@value" : "Means a chemical element and its compounds in the natural state or obtained by any manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; ESPR Art 2, Regulation (EC) No 1907/2006"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/SOC"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Substance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstanceIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of identifier to identify substances. A unique code assigned to substance based on a scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/IDENT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "substance identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#Identifier"
+  }, {
+    "@id" : "_:genid86"
+  }, {
+    "@id" : "_:genid87"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstanceManagementInstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/SOC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#DigitalInstruction"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#SubstanceOfConcern",
@@ -3601,6 +3795,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Substance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstancePresence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/eudpp/SOC"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#SustainableRenewableMaterialsUse",
@@ -3971,7 +4171,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘batch’ usually refers to a subset of a specific model composed of all products produced in a specific manufacturing plant at a specific moment in time (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4078,7 +4278,7 @@
     "@value" : "Links a DPP event to the Digital Product Passport whose content, state, or accessibility is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPEvent is modelled in the EU DPP CO EVENT module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/eudpp#DPPEvent"
+    "@id" : "https://w3id.org/eudpp#DPPEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4095,7 +4295,7 @@
     "@value" : "Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductEvent is modelled in the EU DPP CO EVENT module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/eudpp#ProductEvent"
+    "@id" : "https://w3id.org/eudpp#ProductEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4226,6 +4426,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#countryOfOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents customs/regulatory country of origin, which may be distinct from facility location. \n\nNote: not specified by ESPR, requested by sectors (reasoning: country of origin must not be inferred automatically from facility country).\n\nRecommended ISO 3166-1 country codes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "country of origin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#credentialAgency",
@@ -4376,6 +4593,23 @@
     "@id" : "https://w3id.org/eudpp#dealer"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#dppBackupUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Fallback URL providing direct access to Digital Product Passport data in case the primary provider becomes unavailable."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DPP backup URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#dppEventRecordIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4408,6 +4642,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#dppSchemaVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The reference standard the DPP instance schema refers to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DPP schema version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#dppServiceProvider",
@@ -4446,6 +4697,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid31"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#dppUrl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Provides the HTTP/URI endpoint to access the live DPP."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DPP URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#endUser",
@@ -4616,16 +4884,26 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Defines the the concentration, maximum concentration or concentration range of the substances of concern, at the level of the product, its relevant components, or spare parts; ESPR Art 7(5)"
+  }, {
+    "@language" : "en",
+    "@value" : "Links a substance presence to concentration information. A concentration is contextual to the structural location identified by the associated SubstancePresence. \n\nDifferent product, component, or spare-part locations requiring different concentrations should normally use distinct SubstancePresence records. \n\nExact, maximum, and range representations remain distinguished by the existing P_DPP/SOC concentration model.\n\nConcentrationOfSubstanceOfConcern is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#SubstanceOfConcern"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstancePresence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Has concentration"
+  }, {
+    "@language" : "en",
+    "@value" : "has concentration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#Concentration"
+  }, {
+    "@id" : "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasDPP",
@@ -4720,6 +4998,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#Actor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasFacility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a product to a facility.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nFacility is modelled in the EU DPP CO ACTOR module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Facility"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasGranularity",
@@ -4944,6 +5239,26 @@
     "@id" : "https://si-digital-framework.org/SI#MeasurementUnit"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#hasNextDPP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link to successor DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has next DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/eudpp#hasPreviousDPP"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#hasNotifiedBody",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -4969,6 +5284,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#Actor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasPreviousDPP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link to predecessor DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has previous DPP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#DPP"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasProductEvent",
@@ -5013,6 +5345,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#ClassificationCode"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasProductStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a Product to its current lifecycle status, as declared in its DPP.\nIt gives the current status only; the history of changes is represented with the events. \nProduct status is distinct from DPP status (#dppStatus), i.e., the status of the passport.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductStatus is modelled in the EU DPP CO EVENT module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has product status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductStatus"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasProperty",
@@ -5113,6 +5462,43 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasSubstanceIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Substance to an IDENT-owned SubstanceIdentifier link.\n\nSubstance is modelled in the EU DPP CO SOC module.\nSubstanceIdentifier is modelled in the EU DPP CO IDENT module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Substance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has substance identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasSubstancePresence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation from Product to contextual SubstancePresence.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has substance presence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstancePresence"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/eudpp#isSubstancePresenceOf"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasThreshold",
@@ -5244,6 +5630,10 @@
 }, {
   "@id" : "https://w3id.org/eudpp#identifierExpiresOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier expiration date"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   } ],
@@ -5257,6 +5647,10 @@
 }, {
   "@id" : "https://w3id.org/eudpp#identifierIssuedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date of issuing the identifier"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   } ],
@@ -5266,6 +5660,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifierJurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. \n\nFormat: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier juristiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#identifierMaxLength",
@@ -5606,6 +6017,23 @@
     "@id" : "https://w3id.org/eudpp#Actor"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#isLocatedInProduct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Location of a substance presence in a product, component or spare part, connection between substance presence and product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstancePresence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is located in product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#isMandatory",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -5651,6 +6079,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#DPPEventRecord"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#isReplaceable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates whether the product (e.g. a component of another product) can be replaced."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is replacable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#isRepresentedByCarrier",
@@ -5751,6 +6196,23 @@
     "@id" : "https://w3id.org/eudpp#Product"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#isSubstancePresenceOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Inverse relation from SubstancePresence to Product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstancePresence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is substance presence of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#isTriggeredByProductEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -5839,7 +6301,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘item’ usually refers to a single unit of a model (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5959,6 +6421,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#materialComponentLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing).\n\nNote: not defined by ESPR, requested by sectors (textile)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialOfComposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material component label"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#materialIsRecyclable",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -6041,6 +6517,57 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#materialRecycledContentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialOfComposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material recycled content type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid45"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#materialTypeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material type scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#materialTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code or label in the chosen nomenclature (specified by #materialTypeScheme)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material type value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#model",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -6048,7 +6575,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6581,7 +7108,7 @@
     "@value" : "Links a product event to the facility where the event was performed or operationally occurred. This is a cross-module relation between EVENT and ACTOR/Facility and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nFacility is modelled in the EU DPP CO ACTOR module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/eudpp#ProductEvent"
+    "@id" : "https://w3id.org/eudpp#ProductEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6603,7 +7130,7 @@
     "@value" : "Links a product event to the actor that performed, carried out, or was operationally responsible for the event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/eudpp#ProductEvent"
+    "@id" : "https://w3id.org/eudpp#ProductEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6650,6 +7177,30 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#productTradeMark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@language" : "en",
+    "@value" : "EUIPO guidelines 3.2.3.1 Trade Mark Guidelines"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "https://guidelines.euipo.europa.eu/1803468/1787175/trade-mark-guidelines/3-2-3-1-trade-names"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Trade marks identify goods or services as produced or marketed by a particular undertaking.\n\nTrade mark required by ESPR Art 27(6), Art 29(3), Art 36 (1a).\n\nWhen placing a product on the market, importers should indicate on the product their name, registered trade name or registered trade mark as well as the postal address at which and electronic means of communication through which they can be contacted. ESPR Preamble (64)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Product"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "product trade mark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#professionalRepairer",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -6691,7 +7242,7 @@
     "@value" : "Links a DPP event record to the actor that created the technical record of the logged DPP-side event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nDPPEventRecord is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://w3id.org/eudpp#DPPEventRecord"
+    "@id" : "https://w3id.org/eudpp#DPPEventRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6828,23 +7379,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "registered trade name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp#registeredTrademark",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A trademark officially registered and owned by an actor."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp#Actor"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "registered trademark"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -7181,6 +7715,20 @@
     "@value" : "2.0.7"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp:references",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@id" : "https://w3id.org/eudpp/facilityName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional human-readable name of the facility."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Facility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "facility name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
 } ]

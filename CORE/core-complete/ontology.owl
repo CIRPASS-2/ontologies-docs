@@ -12,8 +12,7 @@
      xmlns:epcis="https://ref.gs1.org/epcis/"
      xmlns:eudpp="https://w3id.org/eudpp#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:vann2="http://purl.org/vocab/vann/"
-     xmlns:eudpp1="https://w3id.org/eudpp:"
+     xmlns:vann1="http://purl.org/vocab/vann/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/eudpp/">
         <terms:contributor xml:lang="en">Hele-Mai Haav</terms:contributor>
@@ -30,7 +29,7 @@ All liability for any damages arising from use or misuse of this vocabulary is w
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
         <terms:title xml:lang="en">CORE  of the EU DPP core ontology proposed by the CIRPASS-2 project.</terms:title>
-        <vann2:preferredNamespacePrefix>eudpp</vann2:preferredNamespacePrefix>
+        <vann1:preferredNamespacePrefix>eudpp</vann1:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The CORE of the EU DPP core ontology proposal of the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CORE</rdfs:label>
         <owl:versionInfo>2.0.7</owl:versionInfo>
@@ -222,13 +221,6 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
 
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/eudpp#isMandatory"/>
-    
-
-
-    <!-- https://w3id.org/eudpp:references -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/eudpp:references"/>
     
 
 
@@ -714,7 +706,7 @@ ESPR Art 43</terms:source>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#concernsDPP">
-        <rdfs:domain rdf:resource="http://w3id.org/eudpp#DPPEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#DPP"/>
         <rdfs:comment xml:lang="en">Links a DPP event to the Digital Product Passport whose content, state, or accessibility is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.
 
@@ -729,7 +721,7 @@ DPPEvent is modelled in the EU DPP CO EVENT module.</rdfs:comment>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#concernsProduct">
-        <rdfs:domain rdf:resource="http://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Product"/>
         <rdfs:comment xml:lang="en">Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.
 
@@ -868,11 +860,22 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasConcentration">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#SubstanceOfConcern"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#SubstancePresence"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Concentration"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"/>
         <terms:references xml:lang="en">ESPR Art 7(5)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
         <rdfs:comment xml:lang="en">Defines the the concentration, maximum concentration or concentration range of the substances of concern, at the level of the product, its relevant components, or spare parts; ESPR Art 7(5)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a substance presence to concentration information. A concentration is contextual to the structural location identified by the associated SubstancePresence. 
+
+Different product, component, or spare-part locations requiring different concentrations should normally use distinct SubstancePresence records. 
+
+Exact, maximum, and range representations remain distinguished by the existing P_DPP/SOC concentration model.
+
+ConcentrationOfSubstanceOfConcern is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
         <rdfs:label xml:lang="en">Has concentration</rdfs:label>
+        <rdfs:label xml:lang="en">has concentration</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -946,6 +949,21 @@ Product is modelled in the EU DPP CO P_DPP module.</rdfs:comment>
 Product is modelled in the EU DPP CO P_DPP module.
 Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:label xml:lang="en">has economic operator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasFacility -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasFacility">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Facility"/>
+        <rdfs:comment xml:lang="en">Links a product to a facility.
+
+Product is modelled in the EU DPP CO P_DPP module.
+Facility is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has facility</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1088,6 +1106,19 @@ MaterialIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#hasNextDPP -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasNextDPP">
+        <owl:inverseOf rdf:resource="https://w3id.org/eudpp#hasPreviousDPP"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:comment xml:lang="en">Link to successor DPP</rdfs:comment>
+        <rdfs:label xml:lang="en">has next DPP</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#hasNotifiedBody -->
 
 
@@ -1103,6 +1134,18 @@ MaterialIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
 EUDeclarationOfConformity is modelled in the EU DPP CO COMP module.
 Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:label xml:lang="en">has notified body</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasPreviousDPP -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasPreviousDPP">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:comment xml:lang="en">Link to predecessor DPP</rdfs:comment>
+        <rdfs:label xml:lang="en">has previous DPP</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1135,6 +1178,23 @@ group or groups covered are given by delegated acts. (ESPR Art 8 (a))
 
 This will be probably a classification code from some product classification scheme .</rdfs:comment>
         <rdfs:label xml:lang="en">has product group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasProductStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasProductStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#ProductStatus"/>
+        <rdfs:comment xml:lang="en">Links a Product to its current lifecycle status, as declared in its DPP.
+It gives the current status only; the history of changes is represented with the events. 
+Product status is distinct from DPP status (#dppStatus), i.e., the status of the passport.
+
+Product is modelled in the EU DPP CO P_DPP module.
+ProductStatus is modelled in the EU DPP CO EVENT module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has product status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1207,6 +1267,37 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
         <rdfs:comment>The scheme/standard the Identifier follows</rdfs:comment>
         <rdfs:label xml:lang="en">has scheme</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasSubstanceIdentifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasSubstanceIdentifier">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Substance"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
+        <rdfs:comment xml:lang="en">Substance to an IDENT-owned SubstanceIdentifier link.
+
+Substance is modelled in the EU DPP CO SOC module.
+SubstanceIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has substance identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasSubstancePresence -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasSubstancePresence">
+        <owl:inverseOf rdf:resource="https://w3id.org/eudpp#isSubstancePresenceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#SubstancePresence"/>
+        <rdfs:comment xml:lang="en">Relation from Product to contextual SubstancePresence.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has substance presence</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1406,6 +1497,21 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#isLocatedInProduct -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isLocatedInProduct">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#SubstancePresence"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:comment xml:lang="en">Location of a substance presence in a product, component or spare part, connection between substance presence and product.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
+        <rdfs:label xml:lang="en">is located in product</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#isNotifiedFor -->
 
 
@@ -1505,6 +1611,21 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#isSubstancePresenceOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isSubstancePresenceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#SubstancePresence"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:comment xml:lang="en">Inverse relation from SubstancePresence to Product.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
+        <rdfs:label xml:lang="en">is substance presence of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#isTriggeredByProductEvent -->
 
 
@@ -1570,7 +1691,7 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#performedAt">
-        <rdfs:domain rdf:resource="http://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Facility"/>
         <rdfs:comment xml:lang="en">Links a product event to the facility where the event was performed or operationally occurred. This is a cross-module relation between EVENT and ACTOR/Facility and is therefore managed in the Connector/mapping layer.
 
@@ -1587,7 +1708,7 @@ Facility is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#performedBy">
-        <rdfs:domain rdf:resource="http://w3id.org/eudpp#ProductEvent"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
         <rdfs:comment xml:lang="en">Links a product event to the actor that performed, carried out, or was operationally responsible for the event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.
 
@@ -1603,7 +1724,7 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#recordedBy">
-        <rdfs:domain rdf:resource="http://w3id.org/eudpp#DPPEventRecord"/>
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
         <rdfs:comment xml:lang="en">Links a DPP event record to the actor that created the technical record of the logged DPP-side event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.
 
@@ -2038,6 +2159,22 @@ See also Produc hasProductGroup ClassificationCode documentation.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#countryOfOrigin -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#countryOfOrigin">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Represents customs/regulatory country of origin, which may be distinct from facility location. 
+
+Note: not specified by ESPR, requested by sectors (reasoning: country of origin must not be inferred automatically from facility country).
+
+Recommended ISO 3166-1 country codes.</rdfs:comment>
+        <rdfs:label xml:lang="en">country of origin</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#description -->
 
 
@@ -2064,6 +2201,18 @@ It is formatted as a URI/URL .</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#dppBackupUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#dppBackupUrl">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Fallback URL providing direct access to Digital Product Passport data in case the primary provider becomes unavailable.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP backup URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#dppEventRecordIdentifier -->
 
 
@@ -2084,6 +2233,18 @@ It is formatted as a URI/URL .</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">The date and time at which the technical record of a DPP event was created in an information system or audit trail.</rdfs:comment>
         <rdfs:label xml:lang="en">dpp event recorded at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#dppSchemaVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#dppSchemaVersion">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The reference standard the DPP instance schema refers to.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP schema version</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2124,6 +2285,18 @@ It is formatted as a URI/URL .</rdfs:comment>
         </rdfs:range>
         <rdfs:comment xml:lang="en">The status of the DPP instance as digital resource.</rdfs:comment>
         <rdfs:label xml:lang="en">DPP status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#dppUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#dppUrl">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Provides the HTTP/URI endpoint to access the live DPP.</rdfs:comment>
+        <rdfs:label xml:lang="en">DPP URL</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2212,6 +2385,7 @@ The product passport should be defined at the level of item, batch or product mo
     <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierExpiresOn">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Identifier expiration date</rdfs:comment>
         <rdfs:label xml:lang="en">identifier expires on</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2223,7 +2397,34 @@ The product passport should be defined at the level of item, batch or product mo
     <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierIssuedOn">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Date of issuing the identifier</rdfs:comment>
         <rdfs:label xml:lang="en">identifier issued on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifierJurisdiction -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#identifierJurisdiction">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length>2</xsd:length>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:pattern>[A-Z]{2}</xsd:pattern>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. 
+
+Format: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier juristiction</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2331,6 +2532,18 @@ The boolean data type property indicates is a Product energy related or not?</rd
     
 
 
+    <!-- https://w3id.org/eudpp#isReplaceable -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#isReplaceable">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the product (e.g. a component of another product) can be replaced.</rdfs:comment>
+        <rdfs:label xml:lang="en">is replacable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#lastUpdate -->
 
 
@@ -2383,6 +2596,19 @@ For example, in case of a textile product: [Main, Lining, Filling].</rdfs:commen
     
 
 
+    <!-- https://w3id.org/eudpp#materialComponentLabel -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#materialComponentLabel">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#MaterialOfComposition"/>
+        <rdfs:comment xml:lang="en">Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing).
+
+Note: not defined by ESPR, requested by sectors (textile)</rdfs:comment>
+        <rdfs:label xml:lang="en">material component label</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#materialIsRecyclable -->
 
 
@@ -2431,6 +2657,64 @@ For example, in case of a textile product: [Main, Lining, Filling].</rdfs:commen
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Percentage of recycled content</rdfs:comment>
         <rdfs:label xml:lang="en">recycled content amount in material</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#materialRecycledContentType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#materialRecycledContentType">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#MaterialOfComposition"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>post-consumer</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>pre-consumer</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>unknown</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation.</rdfs:comment>
+        <rdfs:label xml:lang="en">material recycled content type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#materialTypeScheme -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#materialTypeScheme">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#MaterialType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)</rdfs:comment>
+        <rdfs:label xml:lang="en">material type scheme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#materialTypeValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#materialTypeValue">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#MaterialType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Code or label in the chosen nomenclature (specified by #materialTypeScheme).</rdfs:comment>
+        <rdfs:label xml:lang="en">material type value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2546,6 +2830,24 @@ CAS Number: 15829-53-5</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#productTradeMark -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#productTradeMark">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:references xml:lang="en">EUIPO guidelines 3.2.3.1 Trade Mark Guidelines</terms:references>
+        <terms:source>https://guidelines.euipo.europa.eu/1803468/1787175/trade-mark-guidelines/3-2-3-1-trade-names</terms:source>
+        <rdfs:comment xml:lang="en">Trade marks identify goods or services as produced or marketed by a particular undertaking.
+
+Trade mark required by ESPR Art 27(6), Art 29(3), Art 36 (1a).
+
+When placing a product on the market, importers should indicate on the product their name, registered trade name or registered trade mark as well as the postal address at which and electronic means of communication through which they can be contacted. ESPR Preamble (64).</rdfs:comment>
+        <rdfs:label xml:lang="en">product trade mark</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#recordedInSystem -->
 
 
@@ -2578,18 +2880,6 @@ CAS Number: 15829-53-5</rdfs:comment>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Trade name under which a legal person or business operates and is registered.</rdfs:comment>
         <rdfs:label xml:lang="en">registered trade name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/eudpp#registeredTrademark -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#registeredTrademark">
-        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Actor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A trademark officially registered and owned by an actor.</rdfs:comment>
-        <rdfs:label xml:lang="en">registered trademark</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2697,6 +2987,18 @@ Value is xsd:string that is formatted as a URL,  where to fetch the file.</rdfs:
     
 
 
+    <!-- https://w3id.org/eudpp/facilityName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp/facilityName">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Facility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Optional human-readable name of the facility.</rdfs:comment>
+        <rdfs:label xml:lang="en">facility name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2709,45 +3011,12 @@ Value is xsd:string that is formatted as a URL,  where to fetch the file.</rdfs:
     
 
 
-    <!-- http://purl.org/dc/terms#Location -->
-
-
-    <owl:Class rdf:about="http://purl.org/dc/terms#Location">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms#Location"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/dc/terms/Location -->
 
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/Location"/>
-    
-
-
-    <!-- http://w3id.org/eudpp#DPPEvent -->
-
-
-    <owl:Class rdf:about="http://w3id.org/eudpp#DPPEvent">
-        <rdfs:isDefinedBy>http://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/eudpp#DPPEventRecord -->
-
-
-    <owl:Class rdf:about="http://w3id.org/eudpp#DPPEventRecord">
-        <rdfs:isDefinedBy>http://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/eudpp#ProductEvent -->
-
-
-    <owl:Class rdf:about="http://w3id.org/eudpp#ProductEvent">
-        <rdfs:isDefinedBy>http://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
     </owl:Class>
     
 
@@ -3004,6 +3273,7 @@ si:MeasurementUnit class is reused</rdfs:comment>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:comment xml:lang="en">A type of identifier to identify Actors. A unique code assigned to Actor based on a scheme.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/IDENT"/>
         <rdfs:label xml:lang="en">Actor identifier</rdfs:label>
@@ -3016,8 +3286,10 @@ si:MeasurementUnit class is reused</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/eudpp#ActorIdentifierScheme">
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#FacilityIdentifierScheme"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifierScheme"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
         <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify Actors. e.g., GLN, LEI, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Actor identifier scheme</rdfs:label>
     </owl:Class>
@@ -3156,6 +3428,7 @@ This class description needs to be extended/specialised according to the corresp
         <terms:references xml:lang="en">ESPR Art 7(5)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
         <rdfs:comment xml:lang="en">The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/P_DPP"/>
         <rdfs:label xml:lang="en">Concentration of the substance of concern</rdfs:label>
     </owl:Class>
     
@@ -3270,6 +3543,7 @@ delegated act adopted pursuant to Article 4 and that is accessible via electroni
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#DPPEventRecord"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
         <rdfs:comment xml:lang="en">An ESPR-level event concept representing an event that affects the existence, content, accessibility, update, correction, or governance of a DPP. A DPPEvent captures the passport-facing semantics of the occurrence and is modelled as distinct from the product event that may trigger it.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DPP Event</rdfs:label>
     </owl:Class>
     
@@ -3312,6 +3586,7 @@ delegated act adopted pursuant to Article 4 and that is accessible via electroni
         </rdfs:subClassOf>
         <terms:source xml:lang="en">Defined in the EU DPP Core Ontology Event module to support the technical recording of DPP-related events.</terms:source>
         <rdfs:comment xml:lang="en">A technical audit record used to represent and log an information-level event affecting a Digital Product Passport. Unlike EPCIS carriers, this class is intended for recording DPP-side information events rather than product-facing operational events.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DPP Event Record</rdfs:label>
     </owl:Class>
     
@@ -3333,6 +3608,7 @@ delegated act adopted pursuant to Article 4 and that is accessible via electroni
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:comment xml:lang="en">A type of identifier to identify DPP. DPP Identifier.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/eudpp/IDENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">DPP identifier</rdfs:label>
@@ -3383,6 +3659,7 @@ mean instructions in digital format concerning the product (‘digital instructi
 Digital instructions are ensured by manufacturers. These should also ensured by importers. (ESPR Art 29(4))
 
 This class can be extended/specialised according to delegated acts or industry standards.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/P_DPP"/>
         <rdfs:label xml:lang="en">DigitalInstruction</rdfs:label>
     </owl:Class>
     
@@ -3625,9 +3902,24 @@ This class description needs to be extended/specialised according to the corresp
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:comment xml:lang="en">A unique code assigned to a physical site (factory, warehouse, plant, school, hospital, etc.), i.e., identifies a location.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/IDENT"/>
         <rdfs:label xml:lang="en">Facility identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#FacilityIdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#FacilityIdentifierScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#MaterialIdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
+        <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify Facilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Facility identifier scheme</rdfs:label>
     </owl:Class>
     
 
@@ -3809,6 +4101,7 @@ This class description needs to be extended/specialised according to the corresp
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifier"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:comment xml:lang="en">A type of identifier to identify materials. A unique code assigned to Material based on a scheme.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/eudpp/IDENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Material identifier</rdfs:label>
@@ -3822,6 +4115,7 @@ This class description needs to be extended/specialised according to the corresp
     <owl:Class rdf:about="https://w3id.org/eudpp#MaterialIdentifierScheme">
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#ProductIdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
         <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify materials, e.g., CAS.</rdfs:comment>
         <rdfs:label xml:lang="en">Material identifier scheme</rdfs:label>
     </owl:Class>
@@ -4023,6 +4317,7 @@ ESPR Annex I in its product parameters</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/eudpp#ProductEvent">
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ESPREvent"/>
         <rdfs:comment xml:lang="en">An ESPR-level event concept representing an event that affects the state, condition, use, circulation, transformation, maintenance, or end-of-life status of a product. A ProductEvent captures the product-facing semantics of the occurrence and is distinct from any DPP-side event that may be triggered to record or reflect it.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Product Event</rdfs:label>
     </owl:Class>
     
@@ -4054,6 +4349,7 @@ ESPR Annex I in its product parameters</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SoCIdentifier"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:comment xml:lang="en">A type of identifier to identify Products. A unique code assigned to identify a product. e.g., GTIN.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/eudpp/IDENT</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Product identifier</rdfs:label>
@@ -4086,6 +4382,7 @@ ESPR Annex I in its product parameters</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/eudpp#ProductIdentifierScheme">
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
         <rdfs:comment xml:lang="en">A kind of identifier scheme. The scheme or standard used to identify Products, e.g., GTIN, SKU, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Product identifier scheme</rdfs:label>
     </owl:Class>
@@ -4098,6 +4395,17 @@ ESPR Annex I in its product parameters</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/eudpp#ProductRequirement">
         <rdfs:comment xml:lang="en">Product requirements means a requirement to be fullfilled by a product when placed on the market.</rdfs:comment>
         <rdfs:label xml:lang="en">Product Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ProductStatus -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ProductStatus">
+        <rdfs:comment xml:lang="en">Represents the current lifecycle status of a product.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Product Status</rdfs:label>
     </owl:Class>
     
 
@@ -4301,6 +4609,7 @@ This class description needs to be extended/specialised according to the corresp
 
     <owl:Class rdf:about="https://w3id.org/eudpp#SoCIdentifier">
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#SubstanceIdentifier"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
@@ -4323,7 +4632,52 @@ This class description needs to be extended/specialised according to the corresp
         <terms:source>http://data.europa.eu/eli/reg/2006/1907/oj</terms:source>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
         <rdfs:comment xml:lang="en">Means a chemical element and its compounds in the natural state or obtained by any manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; ESPR Art 2, Regulation (EC) No 1907/2006</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/SOC</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#SubstanceIdentifier -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#SubstanceIdentifier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#Identifier"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#hasScheme"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/eudpp#identifierValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A type of identifier to identify substances. A unique code assigned to substance based on a scheme.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/IDENT</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">substance identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#SubstanceIdentifierScheme -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#SubstanceIdentifierScheme">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#IdentifierScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#SubstanceManagementInstruction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#SubstanceManagementInstruction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DigitalInstruction"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/SOC"/>
     </owl:Class>
     
 
@@ -4338,6 +4692,15 @@ This class description needs to be extended/specialised according to the corresp
         <rdfs:comment xml:lang="en">means a substance that:(a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present [ESPR Art 2(10)]</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/SOC"/>
         <rdfs:label xml:lang="en">Substance of concern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#SubstancePresence -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#SubstancePresence">
+        <rdfs:isDefinedBy>https://w3id.org/eudpp/SOC</rdfs:isDefinedBy>
     </owl:Class>
     
 
@@ -4540,6 +4903,7 @@ This class description needs to be extended/specialised according to the corresp
         <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</eudpp:identifierMaxLength>
         <eudpp:identifierMinLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</eudpp:identifierMinLength>
         <rdfs:comment xml:lang="en">CAS Number (Chemical Abstracts Service)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Governance note: CAS is currently a MaterialIdentifierScheme. IDENT/MAT governance must determine whether a substance-identifier use requires reassignment, a shared scheme model, or another compatible pattern.</rdfs:comment>
         <rdfs:label xml:lang="en">CAS</rdfs:label>
         <rdfs:seeAlso>https://www.cas.org/support/documentation/chemical-substances/faqs</rdfs:seeAlso>
         <skos:altLabel xml:lang="en">Chemical Abstracts Service Registry Number</skos:altLabel>
@@ -4565,6 +4929,36 @@ This class description needs to be extended/specialised according to the corresp
         <rdf:type rdf:resource="https://w3id.org/eudpp#DPPActionType"/>
         <rdfs:comment xml:lang="en">Indicates that information is removed from the Digital Product Passport.</rdfs:comment>
         <rdfs:label xml:lang="en">delete data</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#EC -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#EC">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
+        <eudpp:identifierExampleValue>200-578-6</eudpp:identifierExampleValue>
+        <eudpp:identifierMaxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</eudpp:identifierMaxLength>
+        <eudpp:identifierPattern>^[2-5]\d{2}-\d{3}-\d$</eudpp:identifierPattern>
+        <rdfs:comment xml:lang="en">EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The EC number is a seven-digit identifier typically written in the format XXX-XXX-X and used to identify chemical substances in European regulatory inventories.
+
+Example:
+Substance: Ethanol
+EC number: 200-578-6</rdfs:comment>
+        <rdfs:label xml:lang="en">EC</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/eudpp#ECHA -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#ECHA">
+        <rdf:type rdf:resource="https://w3id.org/eudpp#SubstanceIdentifierScheme"/>
+        <rdfs:comment xml:lang="en">ECHA substance identification scheme refers to the approach used by the European Chemicals Agency (ECHA) to identify and distinguish chemical substances for regulatory purposes under EU chemicals legislation, particularly REACH.</rdfs:comment>
+        <rdfs:label xml:lang="en">ECHA</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4707,7 +5101,9 @@ Used by regulators, banks, customs, and some trade systems.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#batch">
         <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
-        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘batch’ usually refers to a subset of a specific model composed of all products produced in a specific manufacturing plant at a specific moment in time (ESPR preamble (33)).</rdfs:comment>
         <rdfs:label xml:lang="en">batch</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4892,7 +5288,9 @@ Used by regulators, banks, customs, and some trade systems.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#item">
         <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
-        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘item’ usually refers to a single unit of a model (ESPR preamble (33)).</rdfs:comment>
         <rdfs:label xml:lang="en">item</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4929,7 +5327,9 @@ Used by regulators, banks, customs, and some trade systems.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://w3id.org/eudpp#model">
         <rdf:type rdf:resource="https://w3id.org/eudpp#ProductIdentifierGranularity"/>
-        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</rdfs:comment>
+        <rdfs:comment xml:lang="en">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier (ESPR preamble (33)).</rdfs:comment>
         <rdfs:label xml:lang="en">model</rdfs:label>
     </owl:NamedIndividual>
     
