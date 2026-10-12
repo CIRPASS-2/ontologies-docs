@@ -1,23 +1,59 @@
 [ {
   "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid5"
+    }, {
+      "@id" : "_:genid3"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp#hasScheme"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#ActorIdentifierScheme"
+    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
   } ]
 }, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/eudpp#batch"
-    }, {
-      "@id" : "https://w3id.org/eudpp#item"
-    }, {
-      "@id" : "https://w3id.org/eudpp#model"
-    } ]
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#identifierValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasGranularity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid14",
@@ -33,7 +69,41 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/eudpp#batch"
+    }, {
+      "@id" : "https://w3id.org/eudpp#item"
+    }, {
+      "@id" : "https://w3id.org/eudpp#model"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#identifierValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ]
+}, {
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -47,42 +117,26 @@
   } ]
 }, {
   "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#identifierValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#identifierValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2001/XMLSchema#pattern" : [ {
+    "@value" : "[A-Z]{2}"
   } ]
 }, {
   "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
+  "http://www.w3.org/2001/XMLSchema#length" : [ {
+    "@value" : "2"
   } ]
 }, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#hasScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/eudpp#ActorIdentifierScheme"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
@@ -94,22 +148,13 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
-  } ]
-}, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasGranularity"
+    "@id" : "https://w3id.org/eudpp#identifierValue"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -184,9 +229,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid1"
+    "@id" : "_:genid6"
   }, {
-    "@id" : "_:genid2"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#DPPIdentifier"
@@ -198,6 +243,8 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ActorIdentifierScheme",
@@ -214,9 +261,13 @@
     "@id" : "https://w3id.org/eudpp#IdentifierScheme"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#FacilityIdentifierScheme"
+  }, {
     "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
   }, {
     "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#CAS",
@@ -227,6 +278,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "CAS Number (Chemical Abstracts Service)"
+  }, {
+    "@language" : "en",
+    "@value" : "Governance note: CAS is currently a MaterialIdentifierScheme. IDENT/MAT governance must determine whether a substance-identifier use requires reassignment, a shared scheme model, or another compatible pattern."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -264,7 +318,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid3"
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#FacilityIdentifier"
@@ -274,6 +328,49 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#EC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation."
+  }, {
+    "@language" : "en",
+    "@value" : "The EC number is a seven-digit identifier typically written in the format XXX-XXX-X and used to identify chemical substances in European regulatory inventories.\n\nExample:\nSubstance: Ethanol\nEC number: 200-578-6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "EC"
+  } ],
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "200-578-6"
+  } ],
+  "https://w3id.org/eudpp#identifierMaxLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9"
+  } ],
+  "https://w3id.org/eudpp#identifierPattern" : [ {
+    "@value" : "^[2-5]\\d{2}-\\d{3}-\\d$"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ECHA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "ECHA substance identification scheme refers to the approach used by the European Chemicals Agency (ECHA) to identify and distinguish chemical substances for regulatory purposes under EU chemicals legislation, particularly REACH."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ECHA"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#EORI",
@@ -317,7 +414,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid4"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#MaterialIdentifier"
@@ -325,6 +422,29 @@
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#FacilityIdentifierScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A kind of identifier scheme. The scheme or standard used to identify Facilities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Facility identifier scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#GLN",
@@ -477,14 +597,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid5"
+    "@id" : "_:genid10"
   }, {
-    "@id" : "_:genid6"
+    "@id" : "_:genid11"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
   }, {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#MaterialIdentifierScheme",
@@ -502,6 +624,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductIdentifier",
@@ -517,14 +641,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid12"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid13"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/eudpp#SoCIdentifier"
+  }, {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductIdentifierGranularity",
@@ -541,7 +667,7 @@
     "@id" : "https://w3id.org/eudpp#IdentifierGranularity"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme",
@@ -556,6 +682,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#IdentifierScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#SKU",
@@ -603,7 +732,33 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "https://w3id.org/eudpp#SubstanceIdentifier"
+  }, {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstanceIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A type of identifier to identify substances. A unique code assigned to substance based on a scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "substance identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#Identifier"
+  }, {
+    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#SubstanceIdentifierScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#IdentifierScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#batch",
@@ -613,7 +768,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘batch’ usually refers to a subset of a specific model composed of all products produced in a specific manufacturing plant at a specific moment in time (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -672,6 +827,10 @@
 }, {
   "@id" : "https://w3id.org/eudpp#identifierExpiresOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier expiration date"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   } ],
@@ -685,6 +844,10 @@
 }, {
   "@id" : "https://w3id.org/eudpp#identifierIssuedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Date of issuing the identifier"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#Identifier"
   } ],
@@ -694,6 +857,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifierJurisdiction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. \n\nFormat: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier juristiction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#identifierMaxLength",
@@ -805,7 +985,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘item’ usually refers to a single unit of a model (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -819,7 +999,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"
+    "@value" : "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;\n\nThe term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier (ESPR preamble (33))."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -829,6 +1009,9 @@
   "@id" : "https://w3id.org/eudpp/IDENT",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Elio Hbeich"
+  }, {
     "@language" : "en",
     "@value" : "Riina Maigre"
   } ],
@@ -846,7 +1029,7 @@
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-22"
+    "@value" : "2026-10-09"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://www.apache.org/licenses/LICENSE-2.0"
@@ -863,13 +1046,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "First iteration of the Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project."
+    "@value" : "The Identifier module (IDENT) of the EU DPP core ontology proposal of the CIRPASS-2 European project."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "EU DPP IDENT"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0.7"
+    "@value" : "1.2.0"
   } ]
 } ]

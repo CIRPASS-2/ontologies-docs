@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/IDENT","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/IDENT","name":"The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/IDENT", "dateReleased":"2026-09-22", "dateCreated":"2026-04-13", "version":"1.0.7", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Riina Maigre"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/IDENT","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/IDENT","name":"The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/IDENT", "dateReleased":"2026-10-09", "dateCreated":"2026-04-13", "version":"1.2.0", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Elio Hbeich"},{"@type":"Person","name":"Riina Maigre"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -66,24 +66,24 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.</h1>
-<h2>Release: 2026-09-22</h2>
+<h2>Release: 2026-10-09</h2>
 <p class="created-on"><small>Created on: 2026-04-13</small></p>
 
 
 <dl>
 <dt>Revision:</dt>
-<dd>1.0.7</dd>
+<dd>1.2.0</dd>
 <dt>Issued on:</dt>
-<dd>2026-09-22</dd>
+<dd>2026-10-09</dd>
 <dt>Authors:</dt>
 <dd>Tarmo Robal</dd>
 
 <dt>Contributors:</dt>
-<dd>Riina Maigre</dd>
+<dd>Elio Hbeich</dd><dd>Riina Maigre</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Tarmo Robal. The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 1.0.7.</dd>
+<dd>Tarmo Robal. The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 1.2.0.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -115,6 +115,9 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a>
    </li>
    <li>
@@ -140,6 +143,14 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">
+         <span>Substance Identifier Scheme</span>
+      </a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -162,6 +173,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#identifierIssuedOn" title="https://w3id.org/eudpp#identifierIssuedOn">identifier issued on</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#identifierJurisdiction" title="https://w3id.org/eudpp#identifierJurisdiction">identifier juristiction</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#identifierMaxLength" title="https://w3id.org/eudpp#identifierMaxLength">identifier maximum length</a>
@@ -260,6 +274,12 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#CAS" title="https://w3id.org/eudpp#CAS">CAS</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#EC" title="https://w3id.org/eudpp#EC">EC</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#ECHA" title="https://w3id.org/eudpp#ECHA">ECHA</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#EORI" title="https://w3id.org/eudpp#EORI">EORI</a>
    </li>
    <li>
@@ -287,7 +307,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">EU DPP IDENT: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">First iteration of the Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.</span></div>
+<span class="markdown">The Identifier module (IDENT) of the EU DPP core ontology proposal of the CIRPASS-2 European project.</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -300,6 +320,7 @@ This section provides details for each class and property defined by EU DPP IDEN
   <li><a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a></li>
   <li><a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a></li>
   <li><a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a></li>
+  <li><a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a></li>
   <li><a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a></li>
   <li><a href="#https://w3id.org/eudpp#IdentifierGranularity" title="https://w3id.org/eudpp#IdentifierGranularity">Identifier granularity</a></li>
   <li><a href="#https://w3id.org/eudpp#IdentifierScheme" title="https://w3id.org/eudpp#IdentifierScheme">Identifier scheme</a></li>
@@ -308,6 +329,8 @@ This section provides details for each class and property defined by EU DPP IDEN
   <li><a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a></li>
   <li><a href="#https://w3id.org/eudpp#ProductIdentifierGranularity" title="https://w3id.org/eudpp#ProductIdentifierGranularity">Product identifier granularity</a></li>
   <li><a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a></li>
+  <li><a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a></li>
+  <li><a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme"> <span>Substance Identifier Scheme</span> </a></li>
   <li><a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a></li>
  </ul>
  <div class="entity" id="https://w3id.org/eudpp#ActorIdentifier">
@@ -327,7 +350,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -354,7 +377,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -375,7 +398,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -396,7 +419,28 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#FacilityIdentifierScheme">
+  <h3>Facility identifier scheme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#FacilityIdentifierScheme</p>
+  <div class="comment">
+   <span class="markdown">A kind of identifier scheme. The scheme or standard used to identify Facilities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#IdentifierScheme" title="https://w3id.org/eudpp#IdentifierScheme">Identifier scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -411,13 +455,13 @@ This section provides details for each class and property defined by EU DPP IDEN
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasGranularity" title="https://w3id.org/eudpp#hasGranularity">has granularity</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasScheme" title="https://w3id.org/eudpp#hasScheme">has scheme</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#identifierExpiresOn" title="https://w3id.org/eudpp#identifierExpiresOn">identifier expires on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#identifierIssuedOn" title="https://w3id.org/eudpp#identifierIssuedOn">identifier issued on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#identifierValue" title="https://w3id.org/eudpp#identifierValue">identifier value</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/eudpp#hasGranularity" title="https://w3id.org/eudpp#hasGranularity">has granularity</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasScheme" title="https://w3id.org/eudpp#hasScheme">has scheme</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#identifierExpiresOn" title="https://w3id.org/eudpp#identifierExpiresOn">identifier expires on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#identifierIssuedOn" title="https://w3id.org/eudpp#identifierIssuedOn">identifier issued on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#identifierJurisdiction" title="https://w3id.org/eudpp#identifierJurisdiction">identifier juristiction</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#identifierValue" title="https://w3id.org/eudpp#identifierValue">identifier value</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -453,7 +497,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -486,7 +530,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -513,7 +557,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -534,7 +578,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -588,7 +632,58 @@ This section provides details for each class and property defined by EU DPP IDEN
     is disjoint with
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceIdentifier">
+  <h3>substance identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceIdentifier</p>
+  <div class="comment">
+   <span class="markdown">A type of identifier to identify substances. A unique code assigned to substance based on a scheme.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#SoCIdentifier" title="https://w3id.org/eudpp#SoCIdentifier">Substance of concern identifier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">DPP identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product identifier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceIdentifierScheme">
+  <h3>Substance Identifier Scheme<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceIdentifierScheme</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#IdentifierScheme" title="https://w3id.org/eudpp#IdentifierScheme">Identifier scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#EC" title="https://w3id.org/eudpp#EC">EC</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://w3id.org/eudpp#ECHA" title="https://w3id.org/eudpp#ECHA">ECHA</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#ActorIdentifierScheme" title="https://w3id.org/eudpp#ActorIdentifierScheme">Actor identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#FacilityIdentifierScheme" title="https://w3id.org/eudpp#FacilityIdentifierScheme">Facility identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#MaterialIdentifierScheme" title="https://w3id.org/eudpp#MaterialIdentifierScheme">Material identifier scheme</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#ProductIdentifierScheme" title="https://w3id.org/eudpp#ProductIdentifierScheme">Product identifier scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -603,7 +698,7 @@ This section provides details for each class and property defined by EU DPP IDEN
     has super-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">substance identifier</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is disjoint with
@@ -671,6 +766,7 @@ This section provides details for each class and property defined by EU DPP IDEN
   <li><a href="#https://w3id.org/eudpp#identifierExampleValue" title="https://w3id.org/eudpp#identifierExampleValue">identifier example value</a></li>
   <li><a href="#https://w3id.org/eudpp#identifierExpiresOn" title="https://w3id.org/eudpp#identifierExpiresOn">identifier expires on</a></li>
   <li><a href="#https://w3id.org/eudpp#identifierIssuedOn" title="https://w3id.org/eudpp#identifierIssuedOn">identifier issued on</a></li>
+  <li><a href="#https://w3id.org/eudpp#identifierJurisdiction" title="https://w3id.org/eudpp#identifierJurisdiction">identifier juristiction</a></li>
   <li><a href="#https://w3id.org/eudpp#identifierMaxLength" title="https://w3id.org/eudpp#identifierMaxLength">identifier maximum length</a></li>
   <li><a href="#https://w3id.org/eudpp#identifierMinLength" title="https://w3id.org/eudpp#identifierMinLength">identifier minimum length</a></li>
   <li><a href="#https://w3id.org/eudpp#identifierPattern" title="https://w3id.org/eudpp#identifierPattern">identifier pattern</a></li>
@@ -704,6 +800,9 @@ This section provides details for each class and property defined by EU DPP IDEN
  <div class="entity" id="https://w3id.org/eudpp#identifierExpiresOn">
   <h3>identifier expires on<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#identifierExpiresOn</p>
+  <div class="comment">
+   <span class="markdown">Identifier expiration date</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -724,6 +823,9 @@ This section provides details for each class and property defined by EU DPP IDEN
  <div class="entity" id="https://w3id.org/eudpp#identifierIssuedOn">
   <h3>identifier issued on<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#identifierIssuedOn</p>
+  <div class="comment">
+   <span class="markdown">Date of issuing the identifier</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -738,6 +840,27 @@ This section provides details for each class and property defined by EU DPP IDEN
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
     </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#identifierJurisdiction">
+  <h3>identifier juristiction<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#identifierJurisdiction</p>
+  <div class="comment">
+   <span class="markdown">An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. Format: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Identifier" title="https://w3id.org/eudpp#Identifier">Identifier</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd></dd>
    </dl>
   </div>
  </div>
@@ -953,6 +1076,8 @@ This section provides details for each class and property defined by EU DPP IDEN
  <ul class="hlist">
   <li><a href="#https://w3id.org/eudpp#batch" title="https://w3id.org/eudpp#batch">batch</a></li>
   <li><a href="#https://w3id.org/eudpp#CAS" title="https://w3id.org/eudpp#CAS">CAS</a></li>
+  <li><a href="#https://w3id.org/eudpp#EC" title="https://w3id.org/eudpp#EC">EC</a></li>
+  <li><a href="#https://w3id.org/eudpp#ECHA" title="https://w3id.org/eudpp#ECHA">ECHA</a></li>
   <li><a href="#https://w3id.org/eudpp#EORI" title="https://w3id.org/eudpp#EORI">EORI</a></li>
   <li><a href="#https://w3id.org/eudpp#GLN" title="https://w3id.org/eudpp#GLN">GLN</a></li>
   <li><a href="#https://w3id.org/eudpp#GTIN" title="https://w3id.org/eudpp#GTIN">GTIN</a></li>
@@ -965,7 +1090,7 @@ This section provides details for each class and property defined by EU DPP IDEN
   <h3>batch<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#batch</p>
   <div class="comment">
-   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</span>
+   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts; The term ‘batch’ usually refers to a subset of a specific model composed of all products produced in a specific manufacturing plant at a specific moment in time (ESPR preamble (33)).</span>
   </div>
   <dl class="description">
    <dt>
@@ -1003,6 +1128,48 @@ This section provides details for each class and property defined by EU DPP IDEN
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#altLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#altLabel">alt Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Chemical Abstracts Service Registry Number"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#EC">
+  <h3>EC<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EC</p>
+  <div class="comment">
+   <span class="markdown">EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#identifierExampleValue" title="https://w3id.org/eudpp#identifierExampleValue">identifier example value</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"200-578-6"</span>
+   </dd>
+   <dd>
+    <a href="#https://w3id.org/eudpp#identifierMaxLength" title="https://w3id.org/eudpp#identifierMaxLength">identifier maximum length</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#https://w3id.org/eudpp#identifierPattern" title="https://w3id.org/eudpp#identifierPattern">identifier pattern</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"^[2-5]\d{2}-\d{3}-\d$"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ECHA">
+  <h3>ECHA<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ECHA</p>
+  <div class="comment">
+   <span class="markdown">ECHA substance identification scheme refers to the approach used by the European Chemicals Agency (ECHA) to identify and distinguish chemical substances for regulatory purposes under EU chemicals legislation, particularly REACH.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#SubstanceIdentifierScheme" title="https://w3id.org/eudpp#SubstanceIdentifierScheme">Substance Identifier Scheme</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1106,7 +1273,7 @@ This section provides details for each class and property defined by EU DPP IDEN
   <h3>item<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#item</p>
   <div class="comment">
-   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</span>
+   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts; The term ‘item’ usually refers to a single unit of a model (ESPR preamble (33)).</span>
   </div>
   <dl class="description">
    <dt>
@@ -1151,7 +1318,7 @@ This section provides details for each class and property defined by EU DPP IDEN
   <h3>model<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#model</p>
   <div class="comment">
-   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;</span>
+   <span class="markdown">According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts; The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier (ESPR preamble (33)).</span>
   </div>
   <dl class="description">
    <dt>

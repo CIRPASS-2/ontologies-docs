@@ -7,7 +7,8 @@
 @base <https://w3id.org/eudpp/IDENT#> .
 
 <https://w3id.org/eudpp/IDENT> rdf:type owl:Ontology ;
-                                <http://purl.org/dc/terms/contributor> "Riina Maigre"@en ;
+                                <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en ,
+                                                                       "Riina Maigre"@en ;
                                 <http://purl.org/dc/terms/created> "2026-04-13"^^xsd:date ;
                                 <http://purl.org/dc/terms/creator> "Tarmo Robal"@en ;
                                 <http://purl.org/dc/terms/description> """MODULE: IDENT
@@ -25,15 +26,15 @@ DEPENDENCIES: This module may have dependencies to all  EU DPP Core Ontology (CO
 
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user."""@en ;
-                                <http://purl.org/dc/terms/issued> "2026-09-22"^^xsd:date ;
+                                <http://purl.org/dc/terms/issued> "2026-10-09"^^xsd:date ;
                                 <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                    """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
                                 <http://purl.org/dc/terms/title> "The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "ident" ;
-                                rdfs:comment "First iteration of the Identifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en ;
+                                rdfs:comment "The Identifier module (IDENT) of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en ;
                                 rdfs:label "EU DPP IDENT"@en ;
-                                owl:versionInfo "1.0.7" .
+                                owl:versionInfo "1.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -135,6 +136,7 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/eudpp#identifierExpiresOn> rdf:type owl:DatatypeProperty ;
                                              rdfs:domain <https://w3id.org/eudpp#Identifier> ;
                                              rdfs:range xsd:date ;
+                                             rdfs:comment "Identifier expiration date"@en ;
                                              rdfs:label "identifier expires on"@en .
 
 
@@ -142,7 +144,25 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/eudpp#identifierIssuedOn> rdf:type owl:DatatypeProperty ;
                                             rdfs:domain <https://w3id.org/eudpp#Identifier> ;
                                             rdfs:range xsd:date ;
+                                            rdfs:comment "Date of issuing the identifier"@en ;
                                             rdfs:label "identifier issued on"@en .
+
+
+###  https://w3id.org/eudpp#identifierJurisdiction
+<https://w3id.org/eudpp#identifierJurisdiction> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <https://w3id.org/eudpp#Identifier> ;
+                                                rdfs:range [ rdf:type rdfs:Datatype ;
+                                                             owl:onDatatype xsd:string ;
+                                                             owl:withRestrictions ( [ xsd:length "2"
+                                                                                    ]
+                                                                                    [ xsd:pattern "[A-Z]{2}"
+                                                                                    ]
+                                                                                  )
+                                                           ] ;
+                                                rdfs:comment """An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. 
+
+Format: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc."""@en ;
+                                                rdfs:label "identifier juristiction"@en .
 
 
 ###  https://w3id.org/eudpp#identifierMaxLength
@@ -213,7 +233,8 @@ xsd:date rdf:type rdfs:Datatype .
                                                           <https://w3id.org/eudpp#FacilityIdentifier> ,
                                                           <https://w3id.org/eudpp#MaterialIdentifier> ,
                                                           <https://w3id.org/eudpp#ProductIdentifier> ,
-                                                          <https://w3id.org/eudpp#SoCIdentifier> ;
+                                                          <https://w3id.org/eudpp#SoCIdentifier> ,
+                                                          <https://w3id.org/eudpp#SubstanceIdentifier> ;
                                          rdfs:comment "A type of identifier to identify Actors. A unique code assigned to Actor based on a scheme."@en ;
                                          rdfs:label "Actor identifier"@en .
 
@@ -221,8 +242,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/eudpp#ActorIdentifierScheme
 <https://w3id.org/eudpp#ActorIdentifierScheme> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/eudpp#IdentifierScheme> ;
-                                               owl:disjointWith <https://w3id.org/eudpp#MaterialIdentifierScheme> ,
-                                                                <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+                                               owl:disjointWith <https://w3id.org/eudpp#FacilityIdentifierScheme> ,
+                                                                <https://w3id.org/eudpp#MaterialIdentifierScheme> ,
+                                                                <https://w3id.org/eudpp#ProductIdentifierScheme> ,
+                                                                <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
                                                rdfs:comment "A kind of identifier scheme. The scheme or standard used to identify Actors. e.g., GLN, LEI, etc."@en ;
                                                rdfs:label "Actor identifier scheme"@en .
 
@@ -238,7 +261,8 @@ xsd:date rdf:type rdfs:Datatype .
                                        owl:disjointWith <https://w3id.org/eudpp#FacilityIdentifier> ,
                                                         <https://w3id.org/eudpp#MaterialIdentifier> ,
                                                         <https://w3id.org/eudpp#ProductIdentifier> ,
-                                                        <https://w3id.org/eudpp#SoCIdentifier> ;
+                                                        <https://w3id.org/eudpp#SoCIdentifier> ,
+                                                        <https://w3id.org/eudpp#SubstanceIdentifier> ;
                                        rdfs:comment "A type of identifier to identify DPP. DPP Identifier."@en ;
                                        rdfs:label "DPP identifier"@en .
 
@@ -253,9 +277,20 @@ xsd:date rdf:type rdfs:Datatype .
                                                             ] ;
                                             owl:disjointWith <https://w3id.org/eudpp#MaterialIdentifier> ,
                                                              <https://w3id.org/eudpp#ProductIdentifier> ,
-                                                             <https://w3id.org/eudpp#SoCIdentifier> ;
+                                                             <https://w3id.org/eudpp#SoCIdentifier> ,
+                                                             <https://w3id.org/eudpp#SubstanceIdentifier> ;
                                             rdfs:comment "A unique code assigned to a physical site (factory, warehouse, plant, school, hospital, etc.), i.e., identifies a location."@en ;
                                             rdfs:label "Facility identifier"@en .
+
+
+###  https://w3id.org/eudpp#FacilityIdentifierScheme
+<https://w3id.org/eudpp#FacilityIdentifierScheme> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/eudpp#IdentifierScheme> ;
+                                                  owl:disjointWith <https://w3id.org/eudpp#MaterialIdentifierScheme> ,
+                                                                   <https://w3id.org/eudpp#ProductIdentifierScheme> ,
+                                                                   <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
+                                                  rdfs:comment "A kind of identifier scheme. The scheme or standard used to identify Facilities."@en ;
+                                                  rdfs:label "Facility identifier scheme"@en .
 
 
 ###  https://w3id.org/eudpp#Identifier
@@ -292,7 +327,8 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
                                                               owl:onDataRange xsd:string
                                                             ] ;
                                             owl:disjointWith <https://w3id.org/eudpp#ProductIdentifier> ,
-                                                             <https://w3id.org/eudpp#SoCIdentifier> ;
+                                                             <https://w3id.org/eudpp#SoCIdentifier> ,
+                                                             <https://w3id.org/eudpp#SubstanceIdentifier> ;
                                             rdfs:comment "A type of identifier to identify materials. A unique code assigned to Material based on a scheme."@en ;
                                             rdfs:label "Material identifier"@en .
 
@@ -300,7 +336,8 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
 ###  https://w3id.org/eudpp#MaterialIdentifierScheme
 <https://w3id.org/eudpp#MaterialIdentifierScheme> rdf:type owl:Class ;
                                                   rdfs:subClassOf <https://w3id.org/eudpp#IdentifierScheme> ;
-                                                  owl:disjointWith <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+                                                  owl:disjointWith <https://w3id.org/eudpp#ProductIdentifierScheme> ,
+                                                                   <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
                                                   rdfs:comment "A kind of identifier scheme. The scheme or standard used to identify materials, e.g., CAS."@en ;
                                                   rdfs:label "Material identifier scheme"@en .
 
@@ -322,7 +359,8 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                              owl:onDataRange xsd:string
                                                            ] ;
-                                           owl:disjointWith <https://w3id.org/eudpp#SoCIdentifier> ;
+                                           owl:disjointWith <https://w3id.org/eudpp#SoCIdentifier> ,
+                                                            <https://w3id.org/eudpp#SubstanceIdentifier> ;
                                            rdfs:comment "A type of identifier to identify Products. A unique code assigned to identify a product. e.g., GTIN."@en ;
                                            rdfs:label "Product identifier"@en .
 
@@ -343,6 +381,7 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
 ###  https://w3id.org/eudpp#ProductIdentifierScheme
 <https://w3id.org/eudpp#ProductIdentifierScheme> rdf:type owl:Class ;
                                                  rdfs:subClassOf <https://w3id.org/eudpp#IdentifierScheme> ;
+                                                 owl:disjointWith <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
                                                  rdfs:comment "A kind of identifier scheme. The scheme or standard used to identify Products, e.g., GTIN, SKU, etc."@en ;
                                                  rdfs:label "Product identifier scheme"@en .
 
@@ -350,6 +389,7 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
 ###  https://w3id.org/eudpp#SoCIdentifier
 <https://w3id.org/eudpp#SoCIdentifier> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/eudpp#Identifier> ,
+                                                       <https://w3id.org/eudpp#SubstanceIdentifier> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/eudpp#identifierValue> ;
                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -357,6 +397,27 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
                                                        ] ;
                                        rdfs:comment "A type of identifier to identify substances of concern."@en ;
                                        rdfs:label "Substance of concern identifier"@en .
+
+
+###  https://w3id.org/eudpp#SubstanceIdentifier
+<https://w3id.org/eudpp#SubstanceIdentifier> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/eudpp#Identifier> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://w3id.org/eudpp#hasScheme> ;
+                                                               owl:someValuesFrom <https://w3id.org/eudpp#SubstanceIdentifierScheme>
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <https://w3id.org/eudpp#identifierValue> ;
+                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                               owl:onDataRange xsd:string
+                                                             ] ;
+                                             rdfs:comment "A type of identifier to identify substances. A unique code assigned to substance based on a scheme."@en ;
+                                             rdfs:label "substance identifier"@en .
+
+
+###  https://w3id.org/eudpp#SubstanceIdentifierScheme
+<https://w3id.org/eudpp#SubstanceIdentifierScheme> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/eudpp#IdentifierScheme> .
 
 
 #################################################################
@@ -369,10 +430,33 @@ Cardinatlity restrictions added to each subclass to enforce inheritance of the d
                              <https://w3id.org/eudpp#identifierExampleValue> "7732-18-5" ;
                              <https://w3id.org/eudpp#identifierMaxLength> 12 ;
                              <https://w3id.org/eudpp#identifierMinLength> 7 ;
-                             rdfs:comment "CAS Number (Chemical Abstracts Service)"@en ;
+                             rdfs:comment "CAS Number (Chemical Abstracts Service)"@en ,
+                                          "Governance note: CAS is currently a MaterialIdentifierScheme. IDENT/MAT governance must determine whether a substance-identifier use requires reassignment, a shared scheme model, or another compatible pattern."@en ;
                              rdfs:label "CAS"@en ;
                              rdfs:seeAlso "https://www.cas.org/support/documentation/chemical-substances/faqs" ;
                              <http://www.w3.org/2004/02/skos/core#altLabel> "Chemical Abstracts Service Registry Number"@en .
+
+
+###  https://w3id.org/eudpp#EC
+<https://w3id.org/eudpp#EC> rdf:type owl:NamedIndividual ,
+                                     <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
+                            <https://w3id.org/eudpp#identifierExampleValue> "200-578-6" ;
+                            <https://w3id.org/eudpp#identifierMaxLength> 9 ;
+                            <https://w3id.org/eudpp#identifierPattern> "^[2-5]\\d{2}-\\d{3}-\\d$" ;
+                            rdfs:comment "EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation."@en ,
+                                         """The EC number is a seven-digit identifier typically written in the format XXX-XXX-X and used to identify chemical substances in European regulatory inventories.
+
+Example:
+Substance: Ethanol
+EC number: 200-578-6"""@en ;
+                            rdfs:label "EC"@en .
+
+
+###  https://w3id.org/eudpp#ECHA
+<https://w3id.org/eudpp#ECHA> rdf:type owl:NamedIndividual ,
+                                       <https://w3id.org/eudpp#SubstanceIdentifierScheme> ;
+                              rdfs:comment "ECHA substance identification scheme refers to the approach used by the European Chemicals Agency (ECHA) to identify and distinguish chemical substances for regulatory purposes under EU chemicals legislation, particularly REACH."@en ;
+                              rdfs:label "ECHA"@en .
 
 
 ###  https://w3id.org/eudpp#EORI
@@ -455,21 +539,27 @@ Used by regulators, banks, customs, and some trade systems."""@en ;
 ###  https://w3id.org/eudpp#batch
 <https://w3id.org/eudpp#batch> rdf:type owl:NamedIndividual ,
                                         <https://w3id.org/eudpp#ProductIdentifierGranularity> ;
-                               rdfs:comment "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en ;
+                               rdfs:comment """According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘batch’ usually refers to a subset of a specific model composed of all products produced in a specific manufacturing plant at a specific moment in time (ESPR preamble (33))."""@en ;
                                rdfs:label "batch"@en .
 
 
 ###  https://w3id.org/eudpp#item
 <https://w3id.org/eudpp#item> rdf:type owl:NamedIndividual ,
                                        <https://w3id.org/eudpp#ProductIdentifierGranularity> ;
-                              rdfs:comment "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en ;
+                              rdfs:comment """According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘item’ usually refers to a single unit of a model (ESPR preamble (33))."""@en ;
                               rdfs:label "item"@en .
 
 
 ###  https://w3id.org/eudpp#model
 <https://w3id.org/eudpp#model> rdf:type owl:NamedIndividual ,
                                         <https://w3id.org/eudpp#ProductIdentifierGranularity> ;
-                               rdfs:comment "According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;"@en ;
+                               rdfs:comment """According to ESPR Art 9 (2d) the digital product passport is to be established at model, batch or item level, and the definition of such levels is given by delegated acts;
+
+The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier (ESPR preamble (33))."""@en ;
                                rdfs:label "model"@en .
 
 
