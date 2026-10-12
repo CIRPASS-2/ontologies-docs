@@ -49,6 +49,9 @@
             dt.textContent = "Authors (in alphabetical order):";
           }
         }
+        // The date under the title is the date of the last update of this page.
+        const updated = document.querySelector("#w3c-state time.dt-published");
+        if (updated) updated.before("Document updated on: ");
       },
     ],
     localBiblio: {
