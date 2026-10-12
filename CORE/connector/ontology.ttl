@@ -7,6 +7,7 @@
 @base <https://w3id.org/eudpp/CON#> .
 
 <https://w3id.org/eudpp/CON> rdf:type owl:Ontology ;
+                              <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en ;
                               <http://purl.org/dc/terms/created> "2025-02-27"^^xsd:date ;
                               <http://purl.org/dc/terms/creator> "Riina Maigre"@en ,
                                                                  "Tarmo Robal"@en ;
@@ -15,7 +16,7 @@
 --
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user."""@en ;
-                              <http://purl.org/dc/terms/issued> "2026-09-28"^^xsd:date ;
+                              <http://purl.org/dc/terms/issued> "2026-10-09"^^xsd:date ;
                               <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                  """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
@@ -23,7 +24,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" ;
                               rdfs:comment "The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en ;
                               rdfs:label "EU DPP CORE CON"@en ;
-                              owl:versionInfo "2.0.8" .
+                              owl:versionInfo "2.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -69,10 +70,6 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/vocab/vann#preferredNamespacePrefix
-<http://purl.org/vocab/vann#preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
@@ -91,7 +88,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/eudpp#concernsDPP
 <https://w3id.org/eudpp#concernsDPP> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <http://w3id.org/eudpp#DPPEvent> ;
+                                     rdfs:domain <https://w3id.org/eudpp#DPPEvent> ;
                                      rdfs:range <https://w3id.org/eudpp#DPP> ;
                                      rdfs:comment """Links a DPP event to the Digital Product Passport whose content, state, or accessibility is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.
 
@@ -102,7 +99,7 @@ DPPEvent is modelled in the EU DPP CO EVENT module."""@en ;
 
 ###  https://w3id.org/eudpp#concernsProduct
 <https://w3id.org/eudpp#concernsProduct> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain <http://w3id.org/eudpp#ProductEvent> ;
+                                         rdfs:domain <https://w3id.org/eudpp#ProductEvent> ;
                                          rdfs:range <https://w3id.org/eudpp#Product> ;
                                          rdfs:comment """Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.
 
@@ -184,6 +181,21 @@ https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V"""@en ;
 DPP is modelled in the EU DPP CO P_DPP module.
 Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                            rdfs:label "has back-up-copy host"@en .
+
+
+###  https://w3id.org/eudpp#hasConcentration
+<https://w3id.org/eudpp#hasConcentration> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/eudpp#SubstancePresence> ;
+                                          rdfs:range <https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> ;
+                                          rdfs:comment """Links a substance presence to concentration information. A concentration is contextual to the structural location identified by the associated SubstancePresence. 
+
+Different product, component, or spare-part locations requiring different concentrations should normally use distinct SubstancePresence records. 
+
+Exact, maximum, and range representations remain distinguished by the existing P_DPP/SOC concentration model.
+
+ConcentrationOfSubstanceOfConcern is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module."""@en ;
+                                          rdfs:label "has concentration"@en .
 
 
 ###  https://w3id.org/eudpp#hasDigitalProductPassportId
@@ -304,6 +316,19 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                          rdfs:label "has notified body"@en .
 
 
+###  https://w3id.org/eudpp#hasProductStatus
+<https://w3id.org/eudpp#hasProductStatus> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/eudpp#Product> ;
+                                          rdfs:range <https://w3id.org/eudpp#ProductStatus> ;
+                                          rdfs:comment """Links a Product to its current lifecycle status, as declared in its DPP.
+It gives the current status only; the history of changes is represented with the events. 
+Product status is distinct from DPP status (#dppStatus), i.e., the status of the passport.
+
+Product is modelled in the EU DPP CO P_DPP module.
+ProductStatus is modelled in the EU DPP CO EVENT module."""@en ;
+                                          rdfs:label "has product status"@en .
+
+
 ###  https://w3id.org/eudpp#hasResponsibleManufacturer
 <https://w3id.org/eudpp#hasResponsibleManufacturer> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain <https://w3id.org/eudpp#EUDeclarationOfConformity> ;
@@ -318,6 +343,29 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
 EUDeclarationOfConformity is modelled in the EU DPP CO COMP module.
 Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                                     rdfs:label "has responsible manufacturer"@en .
+
+
+###  https://w3id.org/eudpp#hasSubstanceIdentifier
+<https://w3id.org/eudpp#hasSubstanceIdentifier> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/eudpp#Substance> ;
+                                                rdfs:range <https://w3id.org/eudpp#SubstanceIdentifier> ;
+                                                rdfs:comment """Substance to an IDENT-owned SubstanceIdentifier link.
+
+Substance is modelled in the EU DPP CO SOC module.
+SubstanceIdentifier is modelled in the EU DPP CO IDENT module."""@en ;
+                                                rdfs:label "has substance identifier"@en .
+
+
+###  https://w3id.org/eudpp#hasSubstancePresence
+<https://w3id.org/eudpp#hasSubstancePresence> rdf:type owl:ObjectProperty ;
+                                              owl:inverseOf <https://w3id.org/eudpp#isSubstancePresenceOf> ;
+                                              rdfs:domain <https://w3id.org/eudpp#Product> ;
+                                              rdfs:range <https://w3id.org/eudpp#SubstancePresence> ;
+                                              rdfs:comment """Relation from Product to contextual SubstancePresence.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module."""@en ;
+                                              rdfs:label "has substance presence"@en .
 
 
 ###  https://w3id.org/eudpp#hasUniqueFacilityIdentifier
@@ -421,6 +469,17 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                     rdfs:label "issued by"@en .
 
 
+###  https://w3id.org/eudpp#isLocatedInProduct
+<https://w3id.org/eudpp#isLocatedInProduct> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/eudpp#SubstancePresence> ;
+                                            rdfs:range <https://w3id.org/eudpp#Product> ;
+                                            rdfs:comment """Location of a substance presence in a product, component or spare part, connection between substance presence and product.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module."""@en ;
+                                            rdfs:label "is located in product"@en .
+
+
 ###  https://w3id.org/eudpp#isNotifiedFor
 <https://w3id.org/eudpp#isNotifiedFor> rdf:type owl:ObjectProperty ;
                                        rdfs:domain <https://w3id.org/eudpp#Actor> ;
@@ -448,6 +507,17 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
 EUDeclarationOfConformity is modelled in the EU DPP CO COMP module.
 Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                     rdfs:label "is signed by"@en .
+
+
+###  https://w3id.org/eudpp#isSubstancePresenceOf
+<https://w3id.org/eudpp#isSubstancePresenceOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/eudpp#SubstancePresence> ;
+                                               rdfs:range <https://w3id.org/eudpp#Product> ;
+                                               rdfs:comment """Inverse relation from SubstancePresence to Product.
+
+Product is modelled in the EU DPP CO P_DPP module.
+SubstancePresence is modelled in the EU DPP CO IDENT module."""@en ;
+                                               rdfs:label "is substance presence of"@en .
 
 
 ###  https://w3id.org/eudpp#issuesCertificate
@@ -480,7 +550,7 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
 
 ###  https://w3id.org/eudpp#performedAt
 <https://w3id.org/eudpp#performedAt> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <http://w3id.org/eudpp#ProductEvent> ;
+                                     rdfs:domain <https://w3id.org/eudpp#ProductEvent> ;
                                      rdfs:range <https://w3id.org/eudpp#Facility> ;
                                      rdfs:comment """Links a product event to the facility where the event was performed or operationally occurred. This is a cross-module relation between EVENT and ACTOR/Facility and is therefore managed in the Connector/mapping layer.
 
@@ -493,7 +563,7 @@ Facility is modelled in the EU DPP CO ACTOR module."""@en ;
 
 ###  https://w3id.org/eudpp#performedBy
 <https://w3id.org/eudpp#performedBy> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <http://w3id.org/eudpp#ProductEvent> ;
+                                     rdfs:domain <https://w3id.org/eudpp#ProductEvent> ;
                                      rdfs:range <https://w3id.org/eudpp#Actor> ;
                                      rdfs:comment """Links a product event to the actor that performed, carried out, or was operationally responsible for the event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.
 
@@ -505,7 +575,7 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
 
 ###  https://w3id.org/eudpp#recordedBy
 <https://w3id.org/eudpp#recordedBy> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://w3id.org/eudpp#DPPEventRecord> ;
+                                    rdfs:domain <https://w3id.org/eudpp#DPPEventRecord> ;
                                     rdfs:range <https://w3id.org/eudpp#Actor> ;
                                     rdfs:comment """Links a DPP event record to the actor that created the technical record of the logged DPP-side event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.
 
@@ -529,21 +599,6 @@ Product is modelled in the EU DPP CO P_DPP module."""@en ;
 #    Classes
 #################################################################
 
-###  http://w3id.org/eudpp#DPPEvent
-<http://w3id.org/eudpp#DPPEvent> rdf:type owl:Class ;
-                                 rdfs:isDefinedBy "http://w3id.org/eudpp/EVENT" .
-
-
-###  http://w3id.org/eudpp#DPPEventRecord
-<http://w3id.org/eudpp#DPPEventRecord> rdf:type owl:Class ;
-                                       rdfs:isDefinedBy "http://w3id.org/eudpp/EVENT" .
-
-
-###  http://w3id.org/eudpp#ProductEvent
-<http://w3id.org/eudpp#ProductEvent> rdf:type owl:Class ;
-                                     rdfs:isDefinedBy "http://w3id.org/eudpp/EVENT" .
-
-
 ###  https://w3id.org/eudpp#Actor
 <https://w3id.org/eudpp#Actor> rdf:type owl:Class ;
                                rdfs:isDefinedBy <https://w3id.org/eudpp/ACTOR> .
@@ -564,6 +619,11 @@ Product is modelled in the EU DPP CO P_DPP module."""@en ;
                                                                 rdfs:isDefinedBy <https://w3id.org/eudpp/ACTOR> .
 
 
+###  https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern
+<https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> rdf:type owl:Class ;
+                                                           rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
+
+
 ###  https://w3id.org/eudpp#ConformityAssessmentModule
 <https://w3id.org/eudpp#ConformityAssessmentModule> rdf:type owl:Class ;
                                                     rdfs:isDefinedBy "https://w3id.org/eudpp/COMP" .
@@ -579,9 +639,24 @@ Product is modelled in the EU DPP CO P_DPP module."""@en ;
                              rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
 
 
+###  https://w3id.org/eudpp#DPPEvent
+<https://w3id.org/eudpp#DPPEvent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy "https://w3id.org/eudpp/EVENT" .
+
+
+###  https://w3id.org/eudpp#DPPEventRecord
+<https://w3id.org/eudpp#DPPEventRecord> rdf:type owl:Class ;
+                                        rdfs:isDefinedBy "https://w3id.org/eudpp/EVENT" .
+
+
 ###  https://w3id.org/eudpp#DPPIdentifier
 <https://w3id.org/eudpp#DPPIdentifier> rdf:type owl:Class ;
                                        rdfs:isDefinedBy "https://w3id.org/eudpp/IDENT" .
+
+
+###  https://w3id.org/eudpp#DigitalInstruction
+<https://w3id.org/eudpp#DigitalInstruction> rdf:type owl:Class ;
+                                            rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
 
 
 ###  https://w3id.org/eudpp#DocumentFormattedProperty
@@ -630,14 +705,45 @@ Product is modelled in the EU DPP CO P_DPP module."""@en ;
                                  rdfs:isDefinedBy <https://w3id.org/eudpp/P_DPP> .
 
 
+###  https://w3id.org/eudpp#ProductEvent
+<https://w3id.org/eudpp#ProductEvent> rdf:type owl:Class ;
+                                      rdfs:isDefinedBy "https://w3id.org/eudpp/EVENT" .
+
+
 ###  https://w3id.org/eudpp#ProductIdentifier
 <https://w3id.org/eudpp#ProductIdentifier> rdf:type owl:Class ;
                                            rdfs:isDefinedBy "https://w3id.org/eudpp/IDENT" .
 
 
+###  https://w3id.org/eudpp#ProductStatus
+<https://w3id.org/eudpp#ProductStatus> rdf:type owl:Class ;
+                                       rdfs:isDefinedBy "https://w3id.org/eudpp/EVENT" .
+
+
+###  https://w3id.org/eudpp#Substance
+<https://w3id.org/eudpp#Substance> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy "https://w3id.org/eudpp/SOC" .
+
+
+###  https://w3id.org/eudpp#SubstanceIdentifier
+<https://w3id.org/eudpp#SubstanceIdentifier> rdf:type owl:Class ;
+                                             rdfs:isDefinedBy "https://w3id.org/eudpp/IDENT" .
+
+
+###  https://w3id.org/eudpp#SubstanceManagementInstruction
+<https://w3id.org/eudpp#SubstanceManagementInstruction> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://w3id.org/eudpp#DigitalInstruction> ;
+                                                        rdfs:isDefinedBy <https://w3id.org/eudpp/SOC> .
+
+
 ###  https://w3id.org/eudpp#SubstanceOfConcern
 <https://w3id.org/eudpp#SubstanceOfConcern> rdf:type owl:Class ;
                                             rdfs:isDefinedBy <https://w3id.org/eudpp/SOC> .
+
+
+###  https://w3id.org/eudpp#SubstancePresence
+<https://w3id.org/eudpp#SubstancePresence> rdf:type owl:Class ;
+                                           rdfs:isDefinedBy "https://w3id.org/eudpp/SOC" .
 
 
 ###  https://w3id.org/eudpp#UnionHarmonisationLegislation

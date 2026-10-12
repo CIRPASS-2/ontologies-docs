@@ -1,16 +1,17 @@
 <https://w3id.org/eudpp/CON> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/created> "2025-02-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Riina Maigre"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/description> "Connector (Bridge) module that only defines object properties between modules. The connector contains only object properties that have domain and range specified in different modules. \n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
-<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-09-28"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-10-09"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/title> "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#comment> "The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP CORE CON"@en .
-<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.8" .
+<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.2.0" .
 # 
 # 
 # #################################################################
@@ -50,9 +51,6 @@
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/vocab/vann#preferredNamespacePrefix
-<http://purl.org/vocab/vann#preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -79,14 +77,14 @@
 # 
 # https://w3id.org/eudpp#concernsDPP
 <https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/eudpp#DPPEvent> .
+<https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEvent> .
 <https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPP> .
 <https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP event to the Digital Product Passport whose content, state, or accessibility is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPEvent is modelled in the EU DPP CO EVENT module."@en .
 <https://w3id.org/eudpp#concernsDPP> <http://www.w3.org/2000/01/rdf-schema#label> "concerns DPP"@en .
 # 
 # https://w3id.org/eudpp#concernsProduct
 <https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ProductEvent> .
 <https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
 <https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductEvent is modelled in the EU DPP CO EVENT module."@en .
 <https://w3id.org/eudpp#concernsProduct> <http://www.w3.org/2000/01/rdf-schema#label> "concerns product"@en .
@@ -142,6 +140,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasBackUpCopyHost> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
 <https://w3id.org/eudpp#hasBackUpCopyHost> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference of the digital product passport service provider hosting the back-up copy of the digital product passport [ESPR Annex III].\n\nDPP is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#hasBackUpCopyHost> <http://www.w3.org/2000/01/rdf-schema#label> "has back-up-copy host"@en .
+# 
+# https://w3id.org/eudpp#hasConcentration
+<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> .
+<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to concentration information. A concentration is contextual to the structural location identified by the associated SubstancePresence. \n\nDifferent product, component, or spare-part locations requiring different concentrations should normally use distinct SubstancePresence records. \n\nExact, maximum, and range representations remain distinguished by the existing P_DPP/SOC concentration model.\n\nConcentrationOfSubstanceOfConcern is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "has concentration"@en .
 # 
 # https://w3id.org/eudpp#hasDigitalProductPassportId
 <https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -221,6 +226,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasNotifiedBody> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the conformity assessment body notified in accordance with ESPR Chapter IX\t\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#hasNotifiedBody> <http://www.w3.org/2000/01/rdf-schema#label> "has notified body"@en .
 # 
+# https://w3id.org/eudpp#hasProductStatus
+<https://w3id.org/eudpp#hasProductStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasProductStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#hasProductStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ProductStatus> .
+<https://w3id.org/eudpp#hasProductStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Product to its current lifecycle status, as declared in its DPP.\nIt gives the current status only; the history of changes is represented with the events. \nProduct status is distinct from DPP status (#dppStatus), i.e., the status of the passport.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductStatus is modelled in the EU DPP CO EVENT module."@en .
+<https://w3id.org/eudpp#hasProductStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has product status"@en .
+# 
 # https://w3id.org/eudpp#hasResponsibleManufacturer
 <https://w3id.org/eudpp#hasResponsibleManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasResponsibleManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#EUDeclarationOfConformity> .
@@ -231,6 +243,21 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasResponsibleManufacturer> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" .
 <https://w3id.org/eudpp#hasResponsibleManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the natural or legal person responsible for the EU declaration of conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#hasResponsibleManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has responsible manufacturer"@en .
+# 
+# https://w3id.org/eudpp#hasSubstanceIdentifier
+<https://w3id.org/eudpp#hasSubstanceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasSubstanceIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#hasSubstanceIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceIdentifier> .
+<https://w3id.org/eudpp#hasSubstanceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Substance to an IDENT-owned SubstanceIdentifier link.\n\nSubstance is modelled in the EU DPP CO SOC module.\nSubstanceIdentifier is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#hasSubstanceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has substance identifier"@en .
+# 
+# https://w3id.org/eudpp#hasSubstancePresence
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#isSubstancePresenceOf> .
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from Product to contextual SubstancePresence.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#hasSubstancePresence> <http://www.w3.org/2000/01/rdf-schema#label> "has substance presence"@en .
 # 
 # https://w3id.org/eudpp#hasUniqueFacilityIdentifier
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -300,6 +327,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#isIssuedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the natural or legal person issuing the Declaration of Conformity; ESPR Annex V, paragraph 3 requirement: \"This declaration of conformity is issued under the sole responsibility of the manufacturer:\"\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#isIssuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "issued by"@en .
 # 
+# https://w3id.org/eudpp#isLocatedInProduct
+<https://w3id.org/eudpp#isLocatedInProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#isLocatedInProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#isLocatedInProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#isLocatedInProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of a substance presence in a product, component or spare part, connection between substance presence and product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#isLocatedInProduct> <http://www.w3.org/2000/01/rdf-schema#label> "is located in product"@en .
+# 
 # https://w3id.org/eudpp#isNotifiedFor
 <https://w3id.org/eudpp#isNotifiedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#isNotifiedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Actor> .
@@ -319,6 +353,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#isSignedBy> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" .
 <https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the natural or legal person signying the Declaration of Conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is signed by"@en .
+# 
+# https://w3id.org/eudpp#isSubstancePresenceOf
+<https://w3id.org/eudpp#isSubstancePresenceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#isSubstancePresenceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#isSubstancePresenceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#isSubstancePresenceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse relation from SubstancePresence to Product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#isSubstancePresenceOf> <http://www.w3.org/2000/01/rdf-schema#label> "is substance presence of"@en .
 # 
 # https://w3id.org/eudpp#issuesCertificate
 <https://w3id.org/eudpp#issuesCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -340,7 +381,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/eudpp#performedAt
 <https://w3id.org/eudpp#performedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#performedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#performedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ProductEvent> .
 <https://w3id.org/eudpp#performedAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Facility> .
 <https://w3id.org/eudpp#performedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a product event to the facility where the event was performed or operationally occurred. This is a cross-module relation between EVENT and ACTOR/Facility and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nFacility is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#performedAt> <http://www.w3.org/2000/01/rdf-schema#label> "performed at"@en .
@@ -349,7 +390,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/eudpp#performedBy
 <https://w3id.org/eudpp#performedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#performedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/eudpp#ProductEvent> .
+<https://w3id.org/eudpp#performedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ProductEvent> .
 <https://w3id.org/eudpp#performedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#performedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a product event to the actor that performed, carried out, or was operationally responsible for the event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#performedBy> <http://www.w3.org/2000/01/rdf-schema#label> "performed by"@en .
@@ -357,7 +398,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/eudpp#recordedBy
 <https://w3id.org/eudpp#recordedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#recordedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/eudpp#DPPEventRecord> .
+<https://w3id.org/eudpp#recordedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPPEventRecord> .
 <https://w3id.org/eudpp#recordedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#recordedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a DPP event record to the actor that created the technical record of the logged DPP-side event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nDPPEventRecord is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#recordedBy> <http://www.w3.org/2000/01/rdf-schema#label> "recorded by"@en .
@@ -378,18 +419,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://w3id.org/eudpp#DPPEvent
-<http://w3id.org/eudpp#DPPEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://w3id.org/eudpp/EVENT" .
-# 
-# http://w3id.org/eudpp#DPPEventRecord
-<http://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://w3id.org/eudpp/EVENT" .
-# 
-# http://w3id.org/eudpp#ProductEvent
-<http://w3id.org/eudpp#ProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/eudpp#ProductEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://w3id.org/eudpp/EVENT" .
-# 
 # https://w3id.org/eudpp#Actor
 <https://w3id.org/eudpp#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#Actor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/ACTOR> .
@@ -406,6 +435,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/ACTOR> .
 # 
+# https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern
+<https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
+# 
 # https://w3id.org/eudpp#ConformityAssessmentModule
 <https://w3id.org/eudpp#ConformityAssessmentModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#ConformityAssessmentModule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/COMP" .
@@ -418,9 +451,21 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#DPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#DPP> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
 # 
+# https://w3id.org/eudpp#DPPEvent
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
+# 
+# https://w3id.org/eudpp#DPPEventRecord
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DPPEventRecord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
+# 
 # https://w3id.org/eudpp#DPPIdentifier
 <https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#DPPIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/IDENT" .
+# 
+# https://w3id.org/eudpp#DigitalInstruction
+<https://w3id.org/eudpp#DigitalInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#DigitalInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
 # 
 # https://w3id.org/eudpp#DocumentFormattedProperty
 <https://w3id.org/eudpp#DocumentFormattedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -459,13 +504,38 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#Product> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
 # 
+# https://w3id.org/eudpp#ProductEvent
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
+# 
 # https://w3id.org/eudpp#ProductIdentifier
 <https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#ProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/IDENT" .
 # 
+# https://w3id.org/eudpp#ProductStatus
+<https://w3id.org/eudpp#ProductStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ProductStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
+# 
+# https://w3id.org/eudpp#Substance
+<https://w3id.org/eudpp#Substance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#Substance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/SOC" .
+# 
+# https://w3id.org/eudpp#SubstanceIdentifier
+<https://w3id.org/eudpp#SubstanceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SubstanceIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/IDENT" .
+# 
+# https://w3id.org/eudpp#SubstanceManagementInstruction
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#DigitalInstruction> .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+# 
 # https://w3id.org/eudpp#SubstanceOfConcern
 <https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+# 
+# https://w3id.org/eudpp#SubstancePresence
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/SOC" .
 # 
 # https://w3id.org/eudpp#UnionHarmonisationLegislation
 <https://w3id.org/eudpp#UnionHarmonisationLegislation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
