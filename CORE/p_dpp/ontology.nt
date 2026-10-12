@@ -6,14 +6,14 @@
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/created> "2025-01-29"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/creator> "Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors."@en .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/description> "The EU DPP core ontology proposed in CIRPASS-2 European project  is a shared formal specification of basic concepts and properties/relationships in the cross-sectorial DPP domain to facilitate knowledge sharing across sector-specific DPPs.\n\nThe proposed  EU DPP core ontology captures several modules from which the Product and DPP module plays a central role.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, ACTOR, SOC.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., & Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342\n\n"@en .
-<https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/issued> "2026-09-22"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/issued> "2026-10-02" .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/dc/terms/title> "The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/P_DPP> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dpp" .
 <https://w3id.org/eudpp/P_DPP> <http://www.w3.org/2000/01/rdf-schema#comment> "The Product and DPP module of an EU DPP core ontology proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/P_DPP> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP CO P_DPP"@en .
-<https://w3id.org/eudpp/P_DPP> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.7" .
+<https://w3id.org/eudpp/P_DPP> <http://www.w3.org/2002/07/owl#versionInfo> "2.1.0" .
 # 
 # 
 # #################################################################
@@ -111,6 +111,21 @@
 <https://w3id.org/eudpp#hasMeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking quantitative property to the unit of measurement."@en .
 <https://w3id.org/eudpp#hasMeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement unit"@en .
 # 
+# https://w3id.org/eudpp#hasNextDPP
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#hasPreviousDPP> .
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to successor DPP"@en .
+<https://w3id.org/eudpp#hasNextDPP> <http://www.w3.org/2000/01/rdf-schema#label> "has next DPP"@en .
+# 
+# https://w3id.org/eudpp#hasPreviousDPP
+<https://w3id.org/eudpp#hasPreviousDPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasPreviousDPP> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#hasPreviousDPP> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#hasPreviousDPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to predecessor DPP"@en .
+<https://w3id.org/eudpp#hasPreviousDPP> <http://www.w3.org/2000/01/rdf-schema#label> "has previous DPP"@en .
+# 
 # https://w3id.org/eudpp#hasProductGroup
 <https://w3id.org/eudpp#hasProductGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasProductGroup> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
@@ -193,6 +208,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#contentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Content type of a document. Can be only “application” or “pdf”."@en .
 <https://w3id.org/eudpp#contentType> <http://www.w3.org/2000/01/rdf-schema#label> "content type"@en .
 # 
+# https://w3id.org/eudpp#countryOfOrigin
+<https://w3id.org/eudpp#countryOfOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents customs/regulatory country of origin, which may be distinct from facility location. \n\nNote: not specified by ESPR, requested by sectors (reasoning: country of origin must not be inferred automatically from facility country).\n\nRecommended ISO 3166-1 country codes."@en .
+<https://w3id.org/eudpp#countryOfOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "country of origin"@en .
+# 
 # https://w3id.org/eudpp#description
 <https://w3id.org/eudpp#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/eudpp#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
@@ -206,6 +228,20 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#dictionaryReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/eudpp#dictionaryReference> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference to the unique identifier of the data point specification defined in the repository/data dictionary.\n\nIt is formatted as a URI/URL ."@en .
 <https://w3id.org/eudpp#dictionaryReference> <http://www.w3.org/2000/01/rdf-schema#label> "dictionary reference"@en .
+# 
+# https://w3id.org/eudpp#dppBackupUrl
+<https://w3id.org/eudpp#dppBackupUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#dppBackupUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#dppBackupUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/eudpp#dppBackupUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "Fallback URL providing direct access to Digital Product Passport data in case the primary provider becomes unavailable."@en .
+<https://w3id.org/eudpp#dppBackupUrl> <http://www.w3.org/2000/01/rdf-schema#label> "DPP backup URL"@en .
+# 
+# https://w3id.org/eudpp#dppSchemaVersion
+<https://w3id.org/eudpp#dppSchemaVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#dppSchemaVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#dppSchemaVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#dppSchemaVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference standard the DPP instance schema refers to."@en .
+<https://w3id.org/eudpp#dppSchemaVersion> <http://www.w3.org/2000/01/rdf-schema#label> "DPP schema version"@en .
 # 
 # https://w3id.org/eudpp#dppStatus
 <https://w3id.org/eudpp#dppStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -227,6 +263,13 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 <https://w3id.org/eudpp#dppStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the DPP instance as digital resource."@en .
 <https://w3id.org/eudpp#dppStatus> <http://www.w3.org/2000/01/rdf-schema#label> "DPP status"@en .
+# 
+# https://w3id.org/eudpp#dppUrl
+<https://w3id.org/eudpp#dppUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#dppUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
+<https://w3id.org/eudpp#dppUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/eudpp#dppUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides the HTTP/URI endpoint to access the live DPP."@en .
+<https://w3id.org/eudpp#dppUrl> <http://www.w3.org/2000/01/rdf-schema#label> "DPP URL"@en .
 # 
 # https://w3id.org/eudpp#granularity
 <https://w3id.org/eudpp#granularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -256,6 +299,13 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#isEnergyRelated> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
 <https://w3id.org/eudpp#isEnergyRelated> <http://www.w3.org/2000/01/rdf-schema#comment> "Energy related product\nmeans any product that has an impact on energy consumption during use. (ESPR Art 2 (4)).\n\nThe boolean data type property indicates is a Product energy related or not?"@en .
 <https://w3id.org/eudpp#isEnergyRelated> <http://www.w3.org/2000/01/rdf-schema#label> "is energy related Product"@en .
+# 
+# https://w3id.org/eudpp#isReplaceable
+<https://w3id.org/eudpp#isReplaceable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#isReplaceable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#isReplaceable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/eudpp#isReplaceable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the product (e.g. a component of another product) can be replaced."@en .
+<https://w3id.org/eudpp#isReplaceable> <http://www.w3.org/2000/01/rdf-schema#label> "is replacable"@en .
 # 
 # https://w3id.org/eudpp#lastUpdate
 <https://w3id.org/eudpp#lastUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -299,6 +349,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#productName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/eudpp#productName> <http://www.w3.org/2000/01/rdf-schema#comment> "Product name"@en .
 <https://w3id.org/eudpp#productName> <http://www.w3.org/2000/01/rdf-schema#label> "product name"@en .
+# 
+# https://w3id.org/eudpp#productTradeMark
+<https://w3id.org/eudpp#productTradeMark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#productTradeMark> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
+<https://w3id.org/eudpp#productTradeMark> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#productTradeMark> <http://purl.org/dc/terms/references> "EUIPO guidelines 3.2.3.1 Trade Mark Guidelines"@en .
+<https://w3id.org/eudpp#productTradeMark> <http://purl.org/dc/terms/source> "https://guidelines.euipo.europa.eu/1803468/1787175/trade-mark-guidelines/3-2-3-1-trade-names" .
+<https://w3id.org/eudpp#productTradeMark> <http://www.w3.org/2000/01/rdf-schema#comment> "Trade marks identify goods or services as produced or marketed by a particular undertaking.\n\nTrade mark required by ESPR Art 27(6), Art 29(3), Art 36 (1a).\n\nWhen placing a product on the market, importers should indicate on the product their name, registered trade name or registered trade mark as well as the postal address at which and electronic means of communication through which they can be contacted. ESPR Preamble (64)."@en .
+<https://w3id.org/eudpp#productTradeMark> <http://www.w3.org/2000/01/rdf-schema#label> "product trade mark"@en .
 # 
 # https://w3id.org/eudpp#tolerance
 <https://w3id.org/eudpp#tolerance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -648,27 +707,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#Width> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ProductDimension> .
 <https://w3id.org/eudpp#Width> <http://www.w3.org/2000/01/rdf-schema#comment> "Width of the product"@en .
 <https://w3id.org/eudpp#Width> <http://www.w3.org/2000/01/rdf-schema#label> "Width"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Individuals
-# #
-# #################################################################
-# 
-# 
-# https://w3id.org/eudpp#batch
-<https://w3id.org/eudpp#batch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/eudpp#batch> <http://www.w3.org/2000/01/rdf-schema#label> "batch"@en .
-# 
-# https://w3id.org/eudpp#item
-<https://w3id.org/eudpp#item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/eudpp#item> <http://www.w3.org/2000/01/rdf-schema#label> "item"@en .
-# 
-# https://w3id.org/eudpp#model
-<https://w3id.org/eudpp#model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/eudpp#model> <http://www.w3.org/2000/01/rdf-schema#label> "model"@en .
 # 
 _:genid13 <http://www.w3.org/2000/01/rdf-schema#comment> "The EU DPP core ontology" .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

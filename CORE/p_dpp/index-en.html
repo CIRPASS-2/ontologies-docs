@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/P_DPP","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/P_DPP","name":"The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/P_DPP", "dateReleased":"2026-09-22", "dateCreated":"2025-01-29", "version":"2.0.7", "author":[{"@type":"Person","name":"Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors."}], "contributor":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"},{"@type":"Person","name":"Theodor Chirvasuta"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/P_DPP","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/P_DPP","name":"The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/P_DPP", "dateReleased":"2026-10-02", "dateCreated":"2025-01-29", "version":"2.1.0", "author":[{"@type":"Person","name":"Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors."}], "contributor":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"},{"@type":"Person","name":"Theodor Chirvasuta"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -66,15 +66,15 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Product and DPP module of an EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.</h1>
-<h2>Release: 2026-09-22</h2>
+<h2>Release: 2026-10-02</h2>
 <p class="created-on"><small>Created on: 2025-01-29</small></p>
 
 
 <dl>
 <dt>Revision:</dt>
-<dd>2.0.7</dd>
+<dd>2.1.0</dd>
 <dt>Issued on:</dt>
-<dd>2026-09-22</dd>
+<dd>2026-10-02</dd>
 <dt>Authors:</dt>
 <dd>Hele-Mai Haav (up until version 1.7.1 incl.), further maintained by contributors.</dd>
 
@@ -254,6 +254,12 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#hasMeasurementUnit" title="https://w3id.org/eudpp#hasMeasurementUnit">has measurement unit</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#hasNextDPP" title="https://w3id.org/eudpp#hasNextDPP">has next DPP</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#hasPreviousDPP" title="https://w3id.org/eudpp#hasPreviousDPP">has previous DPP</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#hasProductGroup" title="https://w3id.org/eudpp#hasProductGroup">has product group</a>
    </li>
    <li>
@@ -281,19 +287,34 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#contentType" title="https://w3id.org/eudpp#contentType">content type</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#countryOfOrigin" title="https://w3id.org/eudpp#countryOfOrigin">country of origin</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#description" title="https://w3id.org/eudpp#description">description</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#dictionaryReference" title="https://w3id.org/eudpp#dictionaryReference">dictionary reference</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#dppBackupUrl" title="https://w3id.org/eudpp#dppBackupUrl">DPP backup URL</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#dppSchemaVersion" title="https://w3id.org/eudpp#dppSchemaVersion">DPP schema version</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#dppStatus" title="https://w3id.org/eudpp#dppStatus">DPP status</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#dppUrl" title="https://w3id.org/eudpp#dppUrl">DPP URL</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#granularity" title="https://w3id.org/eudpp#granularity">granularity</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#isEnergyRelated" title="https://w3id.org/eudpp#isEnergyRelated">is energy related Product</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#isReplaceable" title="https://w3id.org/eudpp#isReplaceable">is replacable</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#lastUpdate" title="https://w3id.org/eudpp#lastUpdate">last update</a>
@@ -312,6 +333,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#productName" title="https://w3id.org/eudpp#productName">product name</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#productTradeMark" title="https://w3id.org/eudpp#productTradeMark">product trade mark</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#tolerance" title="https://w3id.org/eudpp#tolerance">tolerance</a>
@@ -406,18 +430,6 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
          <span>title</span>
       </a>
-   </li>
-</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#https://w3id.org/eudpp#batch" title="https://w3id.org/eudpp#batch">batch</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/eudpp#item" title="https://w3id.org/eudpp#item">item</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/eudpp#model" title="https://w3id.org/eudpp#model">model</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
@@ -588,13 +600,13 @@ This section provides details for each class and property defined by EU DPP CO P
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#dppStatus" title="https://w3id.org/eudpp#dppStatus">DPP status</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#appliesToProduct" title="https://w3id.org/eudpp#appliesToProduct">applies to product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#granularity" title="https://w3id.org/eudpp#granularity">granularity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#lastUpdate" title="https://w3id.org/eudpp#lastUpdate">last update</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#linkToPreviousDPP" title="https://w3id.org/eudpp#linkToPreviousDPP">link to previous DPP</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#validFrom" title="https://w3id.org/eudpp#validFrom">valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#validUntil" title="https://w3id.org/eudpp#validUntil">valid until</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/eudpp#dppUrl" title="https://w3id.org/eudpp#dppUrl">DPP URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#dppBackupUrl" title="https://w3id.org/eudpp#dppBackupUrl">DPP backup URL</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#dppSchemaVersion" title="https://w3id.org/eudpp#dppSchemaVersion">DPP schema version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#dppStatus" title="https://w3id.org/eudpp#dppStatus">DPP status</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#appliesToProduct" title="https://w3id.org/eudpp#appliesToProduct">applies to product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#granularity" title="https://w3id.org/eudpp#granularity">granularity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasNextDPP" title="https://w3id.org/eudpp#hasNextDPP">has next DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasPreviousDPP" title="https://w3id.org/eudpp#hasPreviousDPP">has previous DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#lastUpdate" title="https://w3id.org/eudpp#lastUpdate">last update</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#linkToPreviousDPP" title="https://w3id.org/eudpp#linkToPreviousDPP">link to previous DPP</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#validFrom" title="https://w3id.org/eudpp#validFrom">valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#validUntil" title="https://w3id.org/eudpp#validUntil">valid until</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasDPP" title="https://w3id.org/eudpp#hasDPP">has DPP</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/eudpp#hasDPP" title="https://w3id.org/eudpp#hasDPP">has DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasNextDPP" title="https://w3id.org/eudpp#hasNextDPP">has next DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasPreviousDPP" title="https://w3id.org/eudpp#hasPreviousDPP">has previous DPP</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1039,7 +1051,7 @@ This section provides details for each class and property defined by EU DPP CO P
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#commodityCode" title="https://w3id.org/eudpp#commodityCode">commodity code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#description" title="https://w3id.org/eudpp#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasDPP" title="https://w3id.org/eudpp#hasDPP">has DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasProductGroup" title="https://w3id.org/eudpp#hasProductGroup">has product group</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasProperty" title="https://w3id.org/eudpp#hasProperty">has property</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isComponentOf" title="https://w3id.org/eudpp#isComponentOf">is component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isEnergyRelated" title="https://w3id.org/eudpp#isEnergyRelated">is energy related Product</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#isSparePartOf" title="https://w3id.org/eudpp#isSparePartOf">is spare part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#manufacturingDate" title="https://w3id.org/eudpp#manufacturingDate">manufacturing date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#productImage" title="https://w3id.org/eudpp#productImage">product image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#productName" title="https://w3id.org/eudpp#productName">product name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/eudpp#commodityCode" title="https://w3id.org/eudpp#commodityCode">commodity code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#countryOfOrigin" title="https://w3id.org/eudpp#countryOfOrigin">country of origin</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#description" title="https://w3id.org/eudpp#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasDPP" title="https://w3id.org/eudpp#hasDPP">has DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasProductGroup" title="https://w3id.org/eudpp#hasProductGroup">has product group</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasProperty" title="https://w3id.org/eudpp#hasProperty">has property</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isComponentOf" title="https://w3id.org/eudpp#isComponentOf">is component of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isEnergyRelated" title="https://w3id.org/eudpp#isEnergyRelated">is energy related Product</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#isReplaceable" title="https://w3id.org/eudpp#isReplaceable">is replacable</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#isSparePartOf" title="https://w3id.org/eudpp#isSparePartOf">is spare part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#manufacturingDate" title="https://w3id.org/eudpp#manufacturingDate">manufacturing date</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#productImage" title="https://w3id.org/eudpp#productImage">product image</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#productName" title="https://w3id.org/eudpp#productName">product name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#productTradeMark" title="https://w3id.org/eudpp#productTradeMark">product trade mark</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -1420,6 +1432,8 @@ This section provides details for each class and property defined by EU DPP CO P
   <li><a href="#https://w3id.org/eudpp#appliesToProduct" title="https://w3id.org/eudpp#appliesToProduct">applies to product</a></li>
   <li><a href="#https://w3id.org/eudpp#hasDPP" title="https://w3id.org/eudpp#hasDPP">has DPP</a></li>
   <li><a href="#https://w3id.org/eudpp#hasMeasurementUnit" title="https://w3id.org/eudpp#hasMeasurementUnit">has measurement unit</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasNextDPP" title="https://w3id.org/eudpp#hasNextDPP">has next DPP</a></li>
+  <li><a href="#https://w3id.org/eudpp#hasPreviousDPP" title="https://w3id.org/eudpp#hasPreviousDPP">has previous DPP</a></li>
   <li><a href="#https://w3id.org/eudpp#hasProductGroup" title="https://w3id.org/eudpp#hasProductGroup">has product group</a></li>
   <li><a href="#https://w3id.org/eudpp#hasProperty" title="https://w3id.org/eudpp#hasProperty">has property</a></li>
   <li><a href="#https://w3id.org/eudpp#isComponentOf" title="https://w3id.org/eudpp#isComponentOf">is component of</a></li>
@@ -1502,6 +1516,64 @@ This section provides details for each class and property defined by EU DPP CO P
     </dt>
     <dd>
      <a href="#https://si-digital-framework.org/SI#MeasurementUnit" title="https://si-digital-framework.org/SI#MeasurementUnit">Unit of measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasNextDPP">
+  <h3>has next DPP<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasNextDPP</p>
+  <div class="comment">
+   <span class="markdown">Link to successor DPP</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#hasPreviousDPP" title="https://w3id.org/eudpp#hasPreviousDPP">has previous DPP</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasPreviousDPP">
+  <h3>has previous DPP<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasPreviousDPP</p>
+  <div class="comment">
+   <span class="markdown">Link to predecessor DPP</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#hasNextDPP" title="https://w3id.org/eudpp#hasNextDPP">has next DPP</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1630,17 +1702,23 @@ This section provides details for each class and property defined by EU DPP CO P
   <li><a href="#https://w3id.org/eudpp#codeValue" title="https://w3id.org/eudpp#codeValue">classification code value</a></li>
   <li><a href="#https://w3id.org/eudpp#commodityCode" title="https://w3id.org/eudpp#commodityCode">commodity code</a></li>
   <li><a href="#https://w3id.org/eudpp#contentType" title="https://w3id.org/eudpp#contentType">content type</a></li>
+  <li><a href="#https://w3id.org/eudpp#countryOfOrigin" title="https://w3id.org/eudpp#countryOfOrigin">country of origin</a></li>
   <li><a href="#https://w3id.org/eudpp#description" title="https://w3id.org/eudpp#description">description</a></li>
   <li><a href="#https://w3id.org/eudpp#dictionaryReference" title="https://w3id.org/eudpp#dictionaryReference">dictionary reference</a></li>
+  <li><a href="#https://w3id.org/eudpp#dppBackupUrl" title="https://w3id.org/eudpp#dppBackupUrl">DPP backup URL</a></li>
+  <li><a href="#https://w3id.org/eudpp#dppSchemaVersion" title="https://w3id.org/eudpp#dppSchemaVersion">DPP schema version</a></li>
   <li><a href="#https://w3id.org/eudpp#dppStatus" title="https://w3id.org/eudpp#dppStatus">DPP status</a></li>
+  <li><a href="#https://w3id.org/eudpp#dppUrl" title="https://w3id.org/eudpp#dppUrl">DPP URL</a></li>
   <li><a href="#https://w3id.org/eudpp#granularity" title="https://w3id.org/eudpp#granularity">granularity</a></li>
   <li><a href="#https://w3id.org/eudpp#isEnergyRelated" title="https://w3id.org/eudpp#isEnergyRelated">is energy related Product</a></li>
+  <li><a href="#https://w3id.org/eudpp#isReplaceable" title="https://w3id.org/eudpp#isReplaceable">is replacable</a></li>
   <li><a href="#https://w3id.org/eudpp#lastUpdate" title="https://w3id.org/eudpp#lastUpdate">last update</a></li>
   <li><a href="#https://w3id.org/eudpp#linkToPreviousDPP" title="https://w3id.org/eudpp#linkToPreviousDPP">link to previous DPP</a></li>
   <li><a href="#https://w3id.org/eudpp#manufacturingDate" title="https://w3id.org/eudpp#manufacturingDate">manufacturing date</a></li>
   <li><a href="#https://w3id.org/eudpp#numericalValue" title="https://w3id.org/eudpp#numericalValue">numerical value</a></li>
   <li><a href="#https://w3id.org/eudpp#productImage" title="https://w3id.org/eudpp#productImage">product image</a></li>
   <li><a href="#https://w3id.org/eudpp#productName" title="https://w3id.org/eudpp#productName">product name</a></li>
+  <li><a href="#https://w3id.org/eudpp#productTradeMark" title="https://w3id.org/eudpp#productTradeMark">product trade mark</a></li>
   <li><a href="#https://w3id.org/eudpp#tolerance" title="https://w3id.org/eudpp#tolerance">tolerance</a></li>
   <li><a href="#https://w3id.org/eudpp#validFrom" title="https://w3id.org/eudpp#validFrom">valid from</a></li>
   <li><a href="#https://w3id.org/eudpp#validUntil" title="https://w3id.org/eudpp#validUntil">valid until</a></li>
@@ -1747,6 +1825,29 @@ This section provides details for each class and property defined by EU DPP CO P
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/eudpp#countryOfOrigin">
+  <h3>country of origin<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#countryOfOrigin</p>
+  <div class="comment">
+   <span class="markdown">Represents customs/regulatory country of origin, which may be distinct from facility location. Note: not specified by ESPR, requested by sectors (reasoning: country of origin must not be inferred automatically from facility country). Recommended ISO 3166-1 country codes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://w3id.org/eudpp#description">
   <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#description</p>
@@ -1793,6 +1894,52 @@ This section provides details for each class and property defined by EU DPP CO P
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/eudpp#dppBackupUrl">
+  <h3>DPP backup URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#dppBackupUrl</p>
+  <div class="comment">
+   <span class="markdown">Fallback URL providing direct access to Digital Product Passport data in case the primary provider becomes unavailable.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#dppSchemaVersion">
+  <h3>DPP schema version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#dppSchemaVersion</p>
+  <div class="comment">
+   <span class="markdown">The reference standard the DPP instance schema refers to.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://w3id.org/eudpp#dppStatus">
   <h3>DPP status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#dppStatus</p>
@@ -1812,6 +1959,29 @@ This section provides details for each class and property defined by EU DPP CO P
     </dt>
     <dd>
      { "Active" , "Archived" , "Inactive" , "Invalid" }
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#dppUrl">
+  <h3>DPP URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#dppUrl</p>
+  <div class="comment">
+   <span class="markdown">Provides the HTTP/URI endpoint to access the live DPP.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">Digital Product Passport (DPP)</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
     </dd>
    </dl>
   </div>
@@ -1861,6 +2031,29 @@ This section provides details for each class and property defined by EU DPP CO P
     https://eur-lex.europa.eu/eli/reg/2024/1781/oj
    </dd>
   </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#isReplaceable">
+  <h3>is replacable<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#isReplaceable</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether the product (e.g. a component of another product) can be replaced.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1993,6 +2186,37 @@ This section provides details for each class and property defined by EU DPP CO P
   <div class="comment">
    <span class="markdown">Product name</span>
   </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#productTradeMark">
+  <h3>product trade mark<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#productTradeMark</p>
+  <div class="comment">
+   <span class="markdown">Trade marks identify goods or services as produced or marketed by a particular undertaking. Trade mark required by ESPR Art 27(6), Art 29(3), Art 36 (1a). When placing a product on the market, importers should indicate on the product their name, registered trade name or registered trade mark as well as the postal address at which and electronic means of communication through which they can be contacted. ESPR Preamble (64).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://guidelines.euipo.europa.eu/1803468/1787175/trade-mark-guidelines/3-2-3-1-trade-names
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
@@ -2204,32 +2428,12 @@ This section provides details for each class and property defined by EU DPP CO P
   <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
  </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
- <h3 id="namedindividuals" class="list">Named Individuals</h3>
- <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#batch" title="https://w3id.org/eudpp#batch">batch</a></li>
-  <li><a href="#https://w3id.org/eudpp#item" title="https://w3id.org/eudpp#item">item</a></li>
-  <li><a href="#https://w3id.org/eudpp#model" title="https://w3id.org/eudpp#model">model</a></li>
- </ul>
- <div class="entity" id="https://w3id.org/eudpp#batch">
-  <h3>batch<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#batch</p>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#item">
-  <h3>item<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#item</p>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#model">
-  <h3>model<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#model</p>
- </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
-<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
 </div>
 </div>
 </div>

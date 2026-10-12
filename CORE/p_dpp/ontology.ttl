@@ -23,7 +23,7 @@ For more information, see
 Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., & Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
 
 """@en ;
-                                <http://purl.org/dc/terms/issued> "2026-09-22"^^xsd:date ;
+                                <http://purl.org/dc/terms/issued> "2026-10-02" ;
                                 <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                    """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
@@ -31,7 +31,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "dpp" ;
                                 rdfs:comment "The Product and DPP module of an EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
                                 rdfs:label "EU DPP CO P_DPP"@en ;
-                                owl:versionInfo "2.0.7" .
+                                owl:versionInfo "2.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -134,6 +134,23 @@ xsd:date rdf:type rdfs:Datatype .
                                             rdfs:label "has measurement unit"@en .
 
 
+###  https://w3id.org/eudpp#hasNextDPP
+<https://w3id.org/eudpp#hasNextDPP> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <https://w3id.org/eudpp#hasPreviousDPP> ;
+                                    rdfs:domain <https://w3id.org/eudpp#DPP> ;
+                                    rdfs:range <https://w3id.org/eudpp#DPP> ;
+                                    rdfs:comment "Link to successor DPP"@en ;
+                                    rdfs:label "has next DPP"@en .
+
+
+###  https://w3id.org/eudpp#hasPreviousDPP
+<https://w3id.org/eudpp#hasPreviousDPP> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/eudpp#DPP> ;
+                                        rdfs:range <https://w3id.org/eudpp#DPP> ;
+                                        rdfs:comment "Link to predecessor DPP"@en ;
+                                        rdfs:label "has previous DPP"@en .
+
+
 ###  https://w3id.org/eudpp#hasProductGroup
 <https://w3id.org/eudpp#hasProductGroup> rdf:type owl:ObjectProperty ;
                                          rdfs:domain <https://w3id.org/eudpp#Product> ;
@@ -230,6 +247,18 @@ See also Produc hasProductGroup ClassificationCode documentation."""@en ;
                                      rdfs:label "content type"@en .
 
 
+###  https://w3id.org/eudpp#countryOfOrigin
+<https://w3id.org/eudpp#countryOfOrigin> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <https://w3id.org/eudpp#Product> ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment """Represents customs/regulatory country of origin, which may be distinct from facility location. 
+
+Note: not specified by ESPR, requested by sectors (reasoning: country of origin must not be inferred automatically from facility country).
+
+Recommended ISO 3166-1 country codes."""@en ;
+                                         rdfs:label "country of origin"@en .
+
+
 ###  https://w3id.org/eudpp#description
 <https://w3id.org/eudpp#description> rdf:type owl:DatatypeProperty ;
                                      rdfs:domain <https://w3id.org/eudpp#Product> ;
@@ -246,6 +275,22 @@ See also Produc hasProductGroup ClassificationCode documentation."""@en ;
 
 It is formatted as a URI/URL ."""@en ;
                                              rdfs:label "dictionary reference"@en .
+
+
+###  https://w3id.org/eudpp#dppBackupUrl
+<https://w3id.org/eudpp#dppBackupUrl> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#DPP> ;
+                                      rdfs:range xsd:anyURI ;
+                                      rdfs:comment "Fallback URL providing direct access to Digital Product Passport data in case the primary provider becomes unavailable."@en ;
+                                      rdfs:label "DPP backup URL"@en .
+
+
+###  https://w3id.org/eudpp#dppSchemaVersion
+<https://w3id.org/eudpp#dppSchemaVersion> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/eudpp#DPP> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "The reference standard the DPP instance schema refers to."@en ;
+                                          rdfs:label "DPP schema version"@en .
 
 
 ###  https://w3id.org/eudpp#dppStatus
@@ -268,6 +313,14 @@ It is formatted as a URI/URL ."""@en ;
                                               ] ;
                                    rdfs:comment "The status of the DPP instance as digital resource."@en ;
                                    rdfs:label "DPP status"@en .
+
+
+###  https://w3id.org/eudpp#dppUrl
+<https://w3id.org/eudpp#dppUrl> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <https://w3id.org/eudpp#DPP> ;
+                                rdfs:range xsd:anyURI ;
+                                rdfs:comment "Provides the HTTP/URI endpoint to access the live DPP."@en ;
+                                rdfs:label "DPP URL"@en .
 
 
 ###  https://w3id.org/eudpp#granularity
@@ -304,6 +357,14 @@ means any product that has an impact on energy consumption during use. (ESPR Art
 
 The boolean data type property indicates is a Product energy related or not?"""@en ;
                                          rdfs:label "is energy related Product"@en .
+
+
+###  https://w3id.org/eudpp#isReplaceable
+<https://w3id.org/eudpp#isReplaceable> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://w3id.org/eudpp#Product> ;
+                                       rdfs:range xsd:boolean ;
+                                       rdfs:comment "Indicates whether the product (e.g. a component of another product) can be replaced."@en ;
+                                       rdfs:label "is replacable"@en .
 
 
 ###  https://w3id.org/eudpp#lastUpdate
@@ -355,6 +416,20 @@ The range of the data property is intentionally left open to be specified in acc
                                      rdfs:range xsd:string ;
                                      rdfs:comment "Product name"@en ;
                                      rdfs:label "product name"@en .
+
+
+###  https://w3id.org/eudpp#productTradeMark
+<https://w3id.org/eudpp#productTradeMark> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/eudpp#Product> ;
+                                          rdfs:range xsd:string ;
+                                          <http://purl.org/dc/terms/references> "EUIPO guidelines 3.2.3.1 Trade Mark Guidelines"@en ;
+                                          <http://purl.org/dc/terms/source> "https://guidelines.euipo.europa.eu/1803468/1787175/trade-mark-guidelines/3-2-3-1-trade-names" ;
+                                          rdfs:comment """Trade marks identify goods or services as produced or marketed by a particular undertaking.
+
+Trade mark required by ESPR Art 27(6), Art 29(3), Art 36 (1a).
+
+When placing a product on the market, importers should indicate on the product their name, registered trade name or registered trade mark as well as the postal address at which and electronic means of communication through which they can be contacted. ESPR Preamble (64)."""@en ;
+                                          rdfs:label "product trade mark"@en .
 
 
 ###  https://w3id.org/eudpp#tolerance
@@ -849,25 +924,6 @@ This class description needs to be extended/specialised according to the corresp
                                rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
                                rdfs:comment "Width of the product"@en ;
                                rdfs:label "Width"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://w3id.org/eudpp#batch
-<https://w3id.org/eudpp#batch> rdf:type owl:NamedIndividual ;
-                               rdfs:label "batch"@en .
-
-
-###  https://w3id.org/eudpp#item
-<https://w3id.org/eudpp#item> rdf:type owl:NamedIndividual ;
-                              rdfs:label "item"@en .
-
-
-###  https://w3id.org/eudpp#model
-<https://w3id.org/eudpp#model> rdf:type owl:NamedIndividual ;
-                               rdfs:label "model"@en .
 
 
 [ rdfs:comment "The EU DPP core ontology"
