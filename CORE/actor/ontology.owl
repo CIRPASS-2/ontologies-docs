@@ -8,7 +8,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:eudpp="https://w3id.org/eudpp:"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/eudpp/ACTOR">
         <terms:contributor xml:lang="en">Hele-Mai Haav</terms:contributor>
@@ -22,8 +21,8 @@ DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontolog
 For more information, see 
 Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp;amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
 
-        </terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-28</terms:issued>
+	</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-12</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
@@ -31,7 +30,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
         <vann:preferredNamespacePrefix>act</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The Actor module of an EU DPP core ontology proposed by the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CO ACTOR</rdfs:label>
-        <owl:versionInfo>2.0.2</owl:versionInfo>
+        <owl:versionInfo>2.1.3</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -129,13 +128,6 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
-
-
-    <!-- https://w3id.org/eudpp:references -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/eudpp:references"/>
     
 
 
@@ -437,18 +429,6 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
     
 
 
-    <!-- https://w3id.org/eudpp#registeredTrademark -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#registeredTrademark">
-        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Actor"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A trademark officially registered and owned by an actor.</rdfs:comment>
-        <rdfs:label xml:lang="en">registered trademark</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/eudpp/facilityName -->
 
 
@@ -473,19 +453,13 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
     
 
 
-    <!-- http://purl.org/dc/terms#Location -->
-
-
-    <owl:Class rdf:about="http://purl.org/dc/terms#Location">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms#Location"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/dc/terms/Location -->
 
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/Location"/>
+    <owl:Class rdf:about="http://purl.org/dc/terms/Location">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms"/>
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
     
 
 

@@ -18,8 +18,8 @@ DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontolog
 For more information, see 
 Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
 
-        """@en ;
-                                <http://purl.org/dc/terms/issued> "2026-09-28"^^xsd:date ;
+	"""@en ;
+                                <http://purl.org/dc/terms/issued> "2026-10-12"^^xsd:date ;
                                 <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                    """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
@@ -27,7 +27,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
                                 rdfs:comment "The Actor module of an EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
                                 rdfs:label "EU DPP CO ACTOR"@en ;
-                                owl:versionInfo "2.0.2" .
+                                owl:versionInfo "2.1.3" .
 
 #################################################################
 #    Annotation properties
@@ -79,10 +79,6 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/eudpp:references
-<https://w3id.org/eudpp:references> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -270,14 +266,6 @@ xsd:date rdf:type rdfs:Datatype .
                                              rdfs:label "registered trade name"@en .
 
 
-###  https://w3id.org/eudpp#registeredTrademark
-<https://w3id.org/eudpp#registeredTrademark> rdf:type owl:DatatypeProperty ;
-                                             rdfs:domain <https://w3id.org/eudpp#Actor> ;
-                                             rdfs:range xsd:string ;
-                                             rdfs:comment "A trademark officially registered and owned by an actor."@en ;
-                                             rdfs:label "registered trademark"@en .
-
-
 ###  https://w3id.org/eudpp/facilityName
 <https://w3id.org/eudpp/facilityName> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain <https://w3id.org/eudpp#Facility> ;
@@ -290,13 +278,10 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://purl.org/dc/terms#Location
-<http://purl.org/dc/terms#Location> rdf:type owl:Class ;
-                                    rdfs:isDefinedBy <http://purl.org/dc/terms#Location> .
-
-
 ###  http://purl.org/dc/terms/Location
-<http://purl.org/dc/terms/Location> rdf:type owl:Class .
+<http://purl.org/dc/terms/Location> rdf:type owl:Class ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms> ;
+                                    rdfs:label "Location"@en .
 
 
 ###  https://schema.org/GeoCoordinates
