@@ -2,24 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>CIRPASS-2 Ontologies for the Digital Product Passport</title>
+<title>CIRPASS-2 Ontologies for the European Digital Product Passport</title>
 <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
 <script class="remove">
   var respecConfig = {
     specStatus: "base",
     shortName: "cirpass2-dpp-ontologies",
     subtitle: "Architecture, modules and sectoral extensions",
-    publishDate: "2026-10-08",
+    publishDate: "2026-10-12",
     latestVersion: "https://cirpass-2.github.io/ontologies-docs/",
     // ReSpec requires an editor; the editor is also among the authors, so the Editor line is hidden below.
     editors: [{ name: "Nader Jelassi", company: "Coexya" }],
+    // Authors in alphabetical order of surname; postProcess says so in the "Authors" label.
     authors: [
       { name: "Carolynn Bernier", company: "CEA" },
+      { name: "Jelte Bootsma", company: "TNO" },
+      { name: "Theodor Chirvasuta", company: "TNO" },
       { name: "Fatima Danash", company: "CEA" },
+      { name: "Hele-Mai Haav", company: "Tallinn University of Technology" },
       { name: "Elio Hbeich", company: "GS1 France" },
+      { name: "Daniel Hutzschenreuter", company: "PTB" },
       { name: "Nader Jelassi", company: "Coexya" },
       { name: "Riina Maigre", company: "Tallinn University of Technology" },
+      { name: "Jan Merckx", company: "GS1 Netherlands" },
+      { name: "Quang-Duy Nguyen", company: "CEA" },
+      { name: "Jens Niederhausen", company: "PTB" },
       { name: "Tarmo Robal", company: "Tallinn University of Technology" },
+      { name: "Arnab Sinha", company: "CEA" },
+      { name: "Marc-Andree Wolf", company: "maki Consulting" },
     ],
     postProcess: [
       function () {
@@ -35,6 +45,8 @@
             let next = dt.nextElementSibling;
             while (next && next.matches("dd.editor")) { const n = next.nextElementSibling; next.remove(); next = n; }
             dt.remove();
+          } else if (/^Authors?:/.test(dt.textContent.trim())) {
+            dt.textContent = "Authors (in alphabetical order):";
           }
         }
       },
@@ -177,68 +189,66 @@
 
 <section id="abstract">
   <p>
-    This document describes how the ontologies proposed by the CIRPASS-2 project for the Digital Product Passport (DPP)
-    are organised: the EU DPP Core Ontology (CORE) with its modules, and the sectoral ontologies for batteries, tyres and
-    textiles that build on it. It explains what each ontology covers and how they fit together, and links to the
-    reference documentation of each one.
-  </p>
-  <p>
-    It defines no term. Classes and properties are documented in the reference pages, generated from the ontology files
-    (<a href="#reference-documentation"></a>).
+    This document describes the CIRPASS-2 [[CIRPASS-2]] ontologies for the European Digital Product Passport (DPP).
+    These ontologies provide a structured way to organise the concepts (classes and properties) required to represent
+    the product attributes required by EU DPP regulations. Cross-sectoral concepts, i.e. those that could be applicable
+    to any product group, are described in the EU DPP Core Ontology (CORE). Sector-specific concepts (e.g. for
+    batteries, tyres and textiles) are described in sector-specific ontologies. The CORE ontology adopts a modular
+    architecture. Sector-specific ontologies may or may not adopt a modular approach depending on implementation
+    choice.
   </p>
 </section>
 
 <section id="sotd" class="override">
-  <h2>Status of This Document</h2>
-  <p>
-    This document was prepared within the CIRPASS-2 project [[CIRPASS-2]].
-  </p>
-  <p id="disclaimer"><strong>Disclaimer</strong></p>
+  <h2 id="disclaimer">Disclaimer</h2>
   <ol>
     <li>All software and artifacts produced by the CIRPASS-2 consortium are designed for exploration and are provided for information purposes only. They should not be interpreted as being either complete, exhaustive, or normative. The CIRPASS-2 consortium partners are not liable for any damage that could result from making use of this information. Technical interpretations of the European Digital Product Passport system expressed in these artifacts are those of the author(s) only and do not necessarily reflect those of the European Union, European Commission, or the European Health and Digital Executive Agency (HADEA). Neither the European Union, the European Commission nor the granting authority can be held responsible for them. Technical interpretations of the European Digital Product Passport system expressed in these artifacts are those of the author(s) only and should not be interpreted as reflecting those of CEN-CENELEC JTC 24.</li>
     <li>The EU DPP Core Ontology (CORE), its modules and the sectoral ontologies described in this document, generated within the CIRPASS-2 project, do not represent an official ontology for the Digital Product Passport.</li>
-    <li>This project is under active development. Information may be incomplete and is subject to change.</li>
+    <li>This project is under active development. Information may be incomplete and is subject to change as further guidance from the European Commission is made available.</li>
   </ol>
 </section>
 
 <section id="introduction">
   <h2>Introduction</h2>
   <p>
-    CIRPASS-2 demonstrates Digital Product Passports in real settings, through pilots in several value chains
-    [[CIRPASS-2]]. Within the project, a set of ontologies gives DPP data a shared, machine-readable meaning, within
-    and across sectors. They are organised in two levels (<a href="#fig-layers"></a>):
+    The objective of the CIRPASS-2 project is to demonstrate Digital Product Passports in real settings thanks to 13
+    Lighthouse pilots operating in multiple value chains [[CIRPASS-2]]. To facilitate the understanding and
+    exploitation of DPP data, and thus enable the Digital Circular Economy, the project applies strong semantic
+    interoperability principles in its recommended approach to data sharing. To this end, the project has developed
+    several ontologies that provide machine-readable semantic anchors to the exchanged data, to ensure the unambiguous
+    transmission of meaning within and across sectors. They are organised in two levels (<a href="#fig-layers"></a>):
   </p>
   <ul>
     <li>
       the <strong>EU DPP Core Ontology (CORE)</strong> captures the cross-sectoral concepts identified in the
-      Ecodesign for Sustainable Products Regulation (ESPR) [[ESPR]] and related acts, and is split into modules;
+      Ecodesign for Sustainable Products Regulation (ESPR) [[ESPR]] and related acts;
     </li>
     <li>
-      <strong>sectoral ontologies</strong> reuse the CORE and extend it with what a sector needs. This document covers
-      the battery, tyre and textile ontologies.
+      <strong>Sectoral ontologies</strong> reuse concepts from CORE as needed and extend it with sector-specific
+      concepts.
     </li>
   </ul>
+  <p>
+    The expectation is that all product attributes required by sector-specific regulatory acts will be covered by a
+    combination of concepts (classes and properties) from both CORE and the relevant sector-specific ontology.
+  </p>
 
   <section id="how-to-read">
     <h3>How to read this documentation</h3>
     <p>The documentation has two parts.</p>
     <ul>
       <li>
-        <strong>This overview</strong> explains the architecture: why a CORE and modules, what each module covers,
-        how the sectoral ontologies attach to the CORE, and which questions they are designed to answer.
+        <strong>This overview</strong> explains the modular architecture of the CORE and how the sectoral ontologies
+        attach to the CORE. It also provides examples of questions each ontology has been designed to answer.
       </li>
       <li>
-        <strong>The reference documentation</strong> has one page per ontology, generated with WIDOCO [[WIDOCO]] from
-        the ontology file: every class and property with its definition, domain and range, an interactive WebVOWL
-        graph, and the ontology in RDF/XML, Turtle, N-Triples and JSON-LD. The pages are listed in
-        <a href="#reference-documentation"></a> and in the <a href="ontologies.html">index page</a>.
+        <strong>The reference documentation</strong> provides links to the documentation page of each referenced
+        ontology. This documentation is generated with WIDOCO [[WIDOCO]] from the ontology file: every class and
+        property with its definition, domain and range, an interactive WebVOWL graph, and the ontology in RDF/XML,
+        Turtle, N-Triples and JSON-LD. The pages are listed in <a href="#reference-documentation"></a> and in the
+        <a href="ontologies.html">index page</a>.
       </li>
     </ul>
-    <p>
-      For example, the meaning of the battery property <code>batperf:ratedCapacity</code> is given on the
-      <a href="Battery/battery-performance/index-en.html">battery performance page</a>; the reason why the battery
-      ontology is split into ten modules is given in <a href="#battery"></a>.
-    </p>
   </section>
 
   <section id="namespaces">
@@ -251,9 +261,10 @@
     </p>
     <p>
       These IRIs are permanent identifiers from w3id.org, redirected to the DPP Vocabulary Hub [[DPP-HUB]] where the
-      ontologies are published. The proposed pattern for sectoral ontologies is
-      <code>https://w3id.org/eudpp/&lt;name&gt;</code>, with a namespace of their own; <a href="#tab-battery"></a> lists
-      the prefixes of the battery modules.
+      ontologies are published. Sectoral ontologies may use the <code>https://w3id.org/eudpp/&lt;name&gt;</code>
+      pattern, with a single <code>&lt;name&gt;</code> or several <code>&lt;modulename&gt;</code> depending on
+      implementation (monolithic or modular). For example, <a href="#tab-battery"></a> lists the prefixes of the battery
+      ontology modules.
     </p>
   </section>
 </section>
@@ -266,9 +277,9 @@
 <rect x="0" y="0" width="960" height="424" fill="#ffffff"/>
 <rect x="40" y="14" width="880" height="70" rx="10" fill="#FDF1EC" stroke="#D9531E" stroke-width="1.5"/>
 <text x="60" y="38" font-size="14" fill="#D9531E" font-weight="bold" text-anchor="start">Application profiles</text>
-<text x="60" y="64" font-size="12" fill="#1a1a1a" font-weight="normal" text-anchor="start">DPP templates and SHACL shapes: which data a passport must contain, with which datatype, for which audience</text>
+<text x="60" y="64" font-size="12" fill="#1a1a1a" font-weight="normal" text-anchor="start">DPP templates and SHACL shapes: Defines stakeholder-specific mandatory DPP message content and datatypes.</text>
 <line x1="480" y1="84" x2="480" y2="112" stroke="#5D6D7E" stroke-width="1.5" marker-end="url(#a1)"/>
-<text x="492" y="102.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">built on</text>
+<text x="492" y="102.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">builds on</text>
 <rect x="40" y="114" width="880" height="104" rx="10" fill="#E8F4F3" stroke="#1B7F79" stroke-width="1.5"/>
 <text x="60" y="138" font-size="14" fill="#1B7F79" font-weight="bold" text-anchor="start">Sectoral ontologies</text>
 <text x="900" y="138" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="end">https://w3id.org/eudpp/&lt;name&gt;</text>
@@ -284,7 +295,7 @@
 <rect x="702" y="152" width="198" height="50" rx="7" fill="#ffffff" stroke="#1B7F79" stroke-width="1.3" stroke-dasharray="5 4"/>
 <text x="801.0" y="181.0" font-size="12" fill="#1a1a1a" font-weight="bold" text-anchor="middle">Other sectors</text>
 <line x1="480" y1="218" x2="480" y2="246" stroke="#5D6D7E" stroke-width="1.5" marker-end="url(#a1)"/>
-<text x="492" y="236.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">specialise or reference</text>
+<text x="492" y="236.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">specialises or references</text>
 <rect x="40" y="248" width="880" height="104" rx="10" fill="#EAF0F4" stroke="#02364D" stroke-width="1.5"/>
 <text x="60" y="272" font-size="14" fill="#02364D" font-weight="bold" text-anchor="start">EU DPP Core Ontology (CORE)</text>
 <text x="900" y="272" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="end">https://w3id.org/eudpp</text>
@@ -306,7 +317,7 @@
 <text x="850.0" y="305.0" font-size="12" fill="#1a1a1a" font-weight="bold" text-anchor="middle">CONNECTOR</text>
 <text x="60" y="340" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">The CORE file imports the modules; CONNECTOR holds the properties that link them.</text>
 <line x1="480" y1="352" x2="480" y2="378" stroke="#5D6D7E" stroke-width="1.5" marker-end="url(#a1)"/>
-<text x="492" y="369.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">reuse</text>
+<text x="492" y="369.0" font-size="11" fill="#5D6D7E" font-weight="normal" text-anchor="start">reuses</text>
 <rect x="40" y="380" width="880" height="40" rx="10" fill="#F4F5F6" stroke="#9AA5AD" stroke-width="1.5"/>
 <text x="60" y="404" font-size="14" fill="#9AA5AD" font-weight="bold" text-anchor="start"></text>
 <text x="480" y="405" font-size="12" fill="#1a1a1a" font-weight="normal" text-anchor="middle">Existing vocabularies, e.g. SI units, QUDT, schema.org</text>
@@ -343,7 +354,7 @@
 <section id="core">
   <h2>The EU DPP Core Ontology</h2>
   <p>
-    The CORE file declares no term: it only imports the modules, using <code>owl:imports</code> [[OWL2-OVERVIEW]]
+    The <a href="CORE/core/index-en.html">CORE file</a> declares no term: it only imports the modules, using <code>owl:imports</code> [[OWL2-OVERVIEW]]
     (<a href="#fig-core"></a>). Object properties whose domain and range belong to different modules are grouped in a
     dedicated module, CONNECTOR, so that the other modules do not depend on each other.
   </p>
@@ -650,6 +661,35 @@
       <tr><td><a href="Textile/textile-soc/index-en.html">Textile substances of concern</a></td><td>Textile specialisation of the draft SOC module.</td></tr>
     </tbody>
   </table>
+</section>
+
+<section id="references">
+  <h2>References</h2>
+  <section id="scientific-references">
+    <h3>Scientific references</h3>
+    <p>
+      Scientific publications of the CIRPASS-2 project on its ontologies. More publications are listed on the
+      <a href="https://cirpass2.eu/project-results/">CIRPASS-2 project results page</a>.
+    </p>
+    <ul>
+      <li>
+        R. Maigre, T. Robal, H.-M. Haav. <cite>Modular ontology design approach for an ESPR compliant digital product
+        passport core ontology</cite>. 17th International Baltic Conference on Digital Business and Intelligent Systems
+        (Baltic DB&amp;IS 2026). Paper: <a href="https://ceur-ws.org/Vol-4211/paper11.pdf">https://ceur-ws.org/Vol-4211/paper11.pdf</a>;
+        poster: <a href="https://data.taltech.ee/records/1c5ma-hgx14">https://data.taltech.ee/records/1c5ma-hgx14</a>
+      </li>
+      <li>
+        E. Hbeich, C. Bernier, S. Van Hooland, T. Robal, R. Maigre. <cite>Achieving Semantic Interoperability for Digital
+        Product Passports</cite>. 7th International Conference on Industry of the Future and Smart Manufacturing.
+        <a href="https://doi.org/10.1016/j.procs.2026.02.334">https://doi.org/10.1016/j.procs.2026.02.334</a>
+      </li>
+      <li>
+        T. Robal, R. Maigre, H.-M. Haav. <cite>Ontology Requirements for Digital Product Passports based on the Ecodesign
+        for Sustainable Products Regulation</cite>. 7th International Conference on Industry of the Future and Smart
+        Manufacturing. <a href="https://doi.org/10.1016/j.procs.2026.02.077">https://doi.org/10.1016/j.procs.2026.02.077</a>
+      </li>
+    </ul>
+  </section>
 </section>
 
 </body>
