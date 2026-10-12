@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/MAT","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/MAT","name":"The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/MAT", "dateReleased":"2026-09-22", "dateCreated":"2026-04-10", "version":"1.0.3", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Riina Maigre"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/MAT","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/MAT","name":"The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/MAT", "dateReleased":"2026-09-22", "dateCreated":"2026-04-10", "version":"1.1.0", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Riina Maigre"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -72,7 +72,7 @@ $(function(){
 
 <dl>
 <dt>Revision:</dt>
-<dd>1.0.3</dd>
+<dd>1.1.0</dd>
 <dt>Issued on:</dt>
 <dd>2026-09-22</dd>
 <dt>Authors:</dt>
@@ -83,7 +83,7 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Tarmo Robal. The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 1.0.3.</dd>
+<dd>Tarmo Robal. The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 1.1.0.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -127,7 +127,20 @@ This ontology has the following classes and properties.</span>
       <a href="#https://w3id.org/eudpp#isCriticalRawMaterial" title="https://w3id.org/eudpp#isCriticalRawMaterial">critical raw material</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp#materialComponentLabel" title="https://w3id.org/eudpp#materialComponentLabel">material component label</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp#materialPercentage" title="https://w3id.org/eudpp#materialPercentage">material percentage</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#materialRecycledContentType"
+         title="https://w3id.org/eudpp#materialRecycledContentType">material recycled content type</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#materialTypeScheme" title="https://w3id.org/eudpp#materialTypeScheme">material type scheme</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp#materialTypeValue" title="https://w3id.org/eudpp#materialTypeValue">material type value</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp#materialComponent" title="https://w3id.org/eudpp#materialComponent">part of product material is in</a>
@@ -244,7 +257,7 @@ This section provides details for each class and property defined by EU DPP MAT.
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#isCriticalRawMaterial" title="https://w3id.org/eudpp#isCriticalRawMaterial">critical raw material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasMaterialOrigin" title="https://w3id.org/eudpp#hasMaterialOrigin">has material origin</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterialType" title="https://w3id.org/eudpp#hasMaterialType">has material type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#materialPercentage" title="https://w3id.org/eudpp#materialPercentage">material percentage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialComponent" title="https://w3id.org/eudpp#materialComponent">part of product material is in</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialIsRecyclable" title="https://w3id.org/eudpp#materialIsRecyclable">recyclable material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialRecycledContent" title="https://w3id.org/eudpp#materialRecycledContent">recycled content amount in material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialIsSustainableRenewable" title="https://w3id.org/eudpp#materialIsSustainableRenewable">sustainale or renewable material</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/eudpp#isCriticalRawMaterial" title="https://w3id.org/eudpp#isCriticalRawMaterial">critical raw material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasMaterialOrigin" title="https://w3id.org/eudpp#hasMaterialOrigin">has material origin</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterialType" title="https://w3id.org/eudpp#hasMaterialType">has material type</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#materialComponentLabel" title="https://w3id.org/eudpp#materialComponentLabel">material component label</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialPercentage" title="https://w3id.org/eudpp#materialPercentage">material percentage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialRecycledContentType" title="https://w3id.org/eudpp#materialRecycledContentType">material recycled content type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialComponent" title="https://w3id.org/eudpp#materialComponent">part of product material is in</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialIsRecyclable" title="https://w3id.org/eudpp#materialIsRecyclable">recyclable material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialRecycledContent" title="https://w3id.org/eudpp#materialRecycledContent">recycled content amount in material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialIsSustainableRenewable" title="https://w3id.org/eudpp#materialIsSustainableRenewable">sustainale or renewable material</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -255,6 +268,12 @@ This section provides details for each class and property defined by EU DPP MAT.
    <span class="markdown">Placeholder class for material type classification applicable in a sector or mandated by a delegated act (DA). Potential types could be, on the example of textile sector: cotton, nylon, ...</span>
   </div>
   <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/eudpp#materialTypeScheme" title="https://w3id.org/eudpp#materialTypeScheme">material type scheme</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#materialTypeValue" title="https://w3id.org/eudpp#materialTypeValue">material type value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
    <dt>
     is in range of
    </dt>
@@ -354,7 +373,11 @@ This section provides details for each class and property defined by EU DPP MAT.
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#https://w3id.org/eudpp#isCriticalRawMaterial" title="https://w3id.org/eudpp#isCriticalRawMaterial">critical raw material</a></li>
+  <li><a href="#https://w3id.org/eudpp#materialComponentLabel" title="https://w3id.org/eudpp#materialComponentLabel">material component label</a></li>
   <li><a href="#https://w3id.org/eudpp#materialPercentage" title="https://w3id.org/eudpp#materialPercentage">material percentage</a></li>
+  <li><a href="#https://w3id.org/eudpp#materialRecycledContentType" title="https://w3id.org/eudpp#materialRecycledContentType">material recycled content type</a></li>
+  <li><a href="#https://w3id.org/eudpp#materialTypeScheme" title="https://w3id.org/eudpp#materialTypeScheme">material type scheme</a></li>
+  <li><a href="#https://w3id.org/eudpp#materialTypeValue" title="https://w3id.org/eudpp#materialTypeValue">material type value</a></li>
   <li><a href="#https://w3id.org/eudpp#materialComponent" title="https://w3id.org/eudpp#materialComponent">part of product material is in</a></li>
   <li><a href="#https://w3id.org/eudpp#materialIsRecyclable" title="https://w3id.org/eudpp#materialIsRecyclable">recyclable material</a></li>
   <li><a href="#https://w3id.org/eudpp#materialRecycledContent" title="https://w3id.org/eudpp#materialRecycledContent">recycled content amount in material</a></li>
@@ -391,6 +414,23 @@ This section provides details for each class and property defined by EU DPP MAT.
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/eudpp#materialComponentLabel">
+  <h3>material component label<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#materialComponentLabel</p>
+  <div class="comment">
+   <span class="markdown">Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing). Note: not defined by ESPR, requested by sectors (textile)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material of composition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://w3id.org/eudpp#materialPercentage">
   <h3>material percentage<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#materialPercentage</p>
@@ -410,6 +450,75 @@ This section provides details for each class and property defined by EU DPP MAT.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#materialRecycledContentType">
+  <h3>material recycled content type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#materialRecycledContentType</p>
+  <div class="comment">
+   <span class="markdown">Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material of composition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     { "post-consumer" , "pre-consumer" , "unknown" }
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#materialTypeScheme">
+  <h3>material type scheme<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#materialTypeScheme</p>
+  <div class="comment">
+   <span class="markdown">Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#MaterialType" title="https://w3id.org/eudpp#MaterialType">Material type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anyURI" target="_blank" title="http://www.w3.org/2001/XMLSchema#anyURI">any U R I</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#materialTypeValue">
+  <h3>material type value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#materialTypeValue</p>
+  <div class="comment">
+   <span class="markdown">Code or label in the chosen nomenclature (specified by #materialTypeScheme).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp#MaterialType" title="https://w3id.org/eudpp#MaterialType">Material type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>

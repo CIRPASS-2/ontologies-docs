@@ -2,7 +2,7 @@
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/contributor> "Riina Maigre"@en .
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/created> "2026-04-10"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
-<https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/description> "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requiremetns regarding materials are given in ESPR Annex I. \n\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
+<https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/description> "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requiremetns regarding materials are given in ESPR Annex I. \n\n===============\nv1.1.0\n - add data prop. materialComponentLabel, materialTypeScheme, materialTypeValue, materialRecycledContentType.\n\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/issued> "2026-09-22"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/MAT> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
@@ -10,7 +10,7 @@
 <https://w3id.org/eudpp/MAT> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mat" .
 <https://w3id.org/eudpp/MAT> <http://www.w3.org/2000/01/rdf-schema#comment> "First iteration of the Material module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/MAT> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP MAT"@en .
-<https://w3id.org/eudpp/MAT> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.3" .
+<https://w3id.org/eudpp/MAT> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
 # 
 # 
 # #################################################################
@@ -113,6 +113,12 @@
 <https://w3id.org/eudpp#materialComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The specific part of the Product this material belongs to. Description. \nFor example, in case of a textile product: [Main, Lining, Filling]."@en .
 <https://w3id.org/eudpp#materialComponent> <http://www.w3.org/2000/01/rdf-schema#label> "part of product material is in"@en .
 # 
+# https://w3id.org/eudpp#materialComponentLabel
+<https://w3id.org/eudpp#materialComponentLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#materialComponentLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialOfComposition> .
+<https://w3id.org/eudpp#materialComponentLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing).\n\nNote: not defined by ESPR, requested by sectors (textile)"@en .
+<https://w3id.org/eudpp#materialComponentLabel> <http://www.w3.org/2000/01/rdf-schema#label> "material component label"@en .
+# 
 # https://w3id.org/eudpp#materialIsRecyclable
 <https://w3id.org/eudpp#materialIsRecyclable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/eudpp#materialIsRecyclable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialOfComposition> .
@@ -145,6 +151,38 @@
 <https://w3id.org/eudpp#materialRecycledContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Percentage of recycled content"@en .
 <https://w3id.org/eudpp#materialRecycledContent> <http://www.w3.org/2000/01/rdf-schema#label> "recycled content amount in material"@en .
 # 
+# https://w3id.org/eudpp#materialRecycledContentType
+<https://w3id.org/eudpp#materialRecycledContentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#materialRecycledContentType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialOfComposition> .
+<https://w3id.org/eudpp#materialRecycledContentType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "unknown" .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "pre-consumer" .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "post-consumer" .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<https://w3id.org/eudpp#materialRecycledContentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation."@en .
+<https://w3id.org/eudpp#materialRecycledContentType> <http://www.w3.org/2000/01/rdf-schema#label> "material recycled content type"@en .
+# 
+# https://w3id.org/eudpp#materialTypeScheme
+<https://w3id.org/eudpp#materialTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#materialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialType> .
+<https://w3id.org/eudpp#materialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/eudpp#materialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)"@en .
+<https://w3id.org/eudpp#materialTypeScheme> <http://www.w3.org/2000/01/rdf-schema#label> "material type scheme"@en .
+# 
+# https://w3id.org/eudpp#materialTypeValue
+<https://w3id.org/eudpp#materialTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#materialTypeValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialType> .
+<https://w3id.org/eudpp#materialTypeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#materialTypeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Code or label in the chosen nomenclature (specified by #materialTypeScheme)."@en .
+<https://w3id.org/eudpp#materialTypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "material type value"@en .
+# 
 # 
 # 
 # #################################################################
@@ -161,18 +199,18 @@
 # 
 # https://w3id.org/eudpp#MaterialOrigin
 <https://w3id.org/eudpp#MaterialOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp#MaterialOrigin> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#renewable> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#recycled> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#raw> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MaterialOrigin> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#oneOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#renewable> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#recycled> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/eudpp#raw> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#MaterialOrigin> <http://purl.org/dc/terms/references> "[ESPR Annex I]"@en .
 <https://w3id.org/eudpp#MaterialOrigin> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
 <https://w3id.org/eudpp#MaterialOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Origin of the material used in product [ESPR Annex I]"@en .

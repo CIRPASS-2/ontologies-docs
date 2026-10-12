@@ -1,5 +1,17 @@
 [ {
   "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@value" : "post-consumer"
+    }, {
+      "@value" : "pre-consumer"
+    }, {
+      "@value" : "unknown"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -76,7 +88,7 @@
     "@value" : "Origin of material"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#MaterialType",
@@ -165,6 +177,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#materialComponentLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing).\n\nNote: not defined by ESPR, requested by sectors (textile)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialOfComposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material component label"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#materialIsRecyclable",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -247,6 +273,57 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#materialRecycledContentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialOfComposition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material recycled content type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#materialTypeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material type scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#materialTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Code or label in the chosen nomenclature (specified by #materialTypeScheme)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#MaterialType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "material type value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#raw",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -302,7 +379,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requiremetns regarding materials are given in ESPR Annex I. \n\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
+    "@value" : "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requiremetns regarding materials are given in ESPR Annex I. \n\n===============\nv1.1.0\n - add data prop. materialComponentLabel, materialTypeScheme, materialTypeValue, materialRecycledContentType.\n\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -330,6 +407,6 @@
     "@value" : "EU DPP MAT"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0.3"
+    "@value" : "1.1.0"
   } ]
 } ]
