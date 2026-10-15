@@ -1,0 +1,2255 @@
+@prefix : <https://w3id.org/eudpp/LCA#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/eudpp/LCA#> .
+
+<https://w3id.org/eudpp/LCA> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://w3id.org/eudpp/LCA/3.0> ;
+                              <http://purl.org/dc/terms/created> "2026-10-5" ;
+                              <http://purl.org/dc/terms/creator> "Fatima Danash and Marc-Andree Wolf"@en ;
+                              <http://purl.org/dc/terms/description> """LCA (Life Cycle Assessment) module of an EU DPP (Digital Product Passport) core ontology proposal of the CIRPASS-2 European project.
+
+SCOPE
+This module covers environmental-performance metadata that a DPP needs to carry and is based on the ILCD+EPD v1.3 data format (https://indatawg.github.io/ILCD-EPD-Data-Format/). 
+It supports both (a) general LCA studies of any product, expressed via eudpp:LCAStudy, and (b) Environmental Product Declarations (EPDs) conforming to EN 15804+A2 with EF 3.1 characterisation, expressed via eudpp:EPDStudy (a subclass of LCAStudy). 
+
+DEPENDENCIES
+This module imports the ACTOR module of the CIRPASS-2 EU DPP Core Ontology (https://w3id.org/eudpp/ACTOR) for its eudpp:Actor and eudpp:Facility classes. It also references, but does not import, the Ontology of Units of Measure (OM-2; http://www.ontology-of-units-of-measure.org/resource/om-2/) for units. Cross-module object properties whose domain is in this module and whose range is in another EUDPP module (Actor, Facility, Product, DPP) are NOT defined here; per the EU DPP Core Ontology design principles, they are defined in the CONNECTOR module. The full list of Connector entries that this module expects is given in the per-class comments below."""@en ;
+                              <http://purl.org/dc/terms/issued> "2026-10-16" ;
+                              <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
+                                                                 "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en ;
+                              <http://purl.org/dc/terms/title> "LCA module of the CIRPASS-2 EU DPP Core Ontology"@en ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "eudpp" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp#" ;
+                              rdfs:comment "The LCA module of the EU DPP core ontology, version 3.0"@en ;
+                              rdfs:label "EU DPP LCA"@en ;
+                              rdfs:seeAlso <https://indatawg.github.io/ILCD-EPD-Data-Format/> ,
+                                           <https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:65243> ;
+                              owl:priorVersion <https://w3id.org/eudpp/LCA/2.0> ;
+                              owl:versionInfo 3.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/accessRights
+<http://purl.org/dc/terms/accessRights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp#sourceVocabulary
+<https://w3id.org/eudpp#sourceVocabulary> rdf:type owl:AnnotationProperty ;
+                                          rdfs:comment """Provenance annotation identifying the vocabulary, standard, or ontology from which a class, property, or named individual of this ontology aligns with. 
+Possible values: \"LCA ontology\" (introduced by this ontology, no direct external counterpart), \"ILCD base\" (corresponds to the ILCD base data format), \"ILCD+EPD extension\" (corresponds to the ILCD+EPD v1.3 extension, InData epd/epd2/epd24 namespaces), \"Dublin Core\" (aligned with dcterms), \"PROV-O\" (aligned with W3C Provenance Ontology), \"SKOS\" (aligned with W3C Simple Knowledge Organization System), \"FOAF\" (aligned with Friend of a Friend vocabulary), \"LCAnet\" (aligned with the LCAnet ontology)."""@en ;
+                                          rdfs:label "source vocabulary"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#unitAsString
+<https://w3id.org/eudpp#unitAsString> rdf:type owl:AnnotationProperty ;
+                                      rdfs:comment "Human-readable label of the unit in which the associated EN 15804 indicator value is expressed, e.g. \"kg CO2-eq\", \"MJ, net calorific value\", \"m3\". Annotation property (not for automated unit arithmetic)."@en ;
+                                      rdfs:label "unit as string"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp/LCA#assessesImpactCategory
+:assessesImpactCategory rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/eudpp/LCA#relatesToLCAIndicator
+:relatesToLCAIndicator rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/eudpp#addressesAoP
+<https://w3id.org/eudpp#addressesAoP> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                      rdfs:range <https://w3id.org/eudpp#AreaOfProtection> ;
+                                      rdfs:comment """Link between an LCIAImpactCategory and the Area(s)-of-protection it addresses.
+1..n cardinality: a single impact category can address several Areas of Protection — for example, ozone depletion affects both Natural Environment and Human Health."""@en ;
+                                      rdfs:label "addresses AoP"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#assessesImpactCategory
+<https://w3id.org/eudpp#assessesImpactCategory> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                rdfs:range <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                rdfs:comment "Link from an LCIA impact indicator to the mid-point impact category it characterises. Multiple indicators may assess the same category (e.g. Eutrophication, freshwater and Eutrophication, marine both relate to Eutrophication). This property expresses a conceptual classification link, not equivalence."@en ;
+                                                rdfs:label "assesses impact category"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "LCAnet: relates to the element assessIC (https://w3id.org/lcanet/ia#assessIC) in the IA module."@en .
+
+
+###  https://w3id.org/eudpp#belongsToEn15804Group
+<https://w3id.org/eudpp#belongsToEn15804Group> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/eudpp#EN15804Indicator> ;
+                                               rdfs:range <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                               rdfs:comment "Link from an EN15804Indicator individual to the indicator EN15804IndicatorGroup it belongs to (core impact, with-caveats, resource use, waste, valorisation, exported energy)."@en ;
+                                               rdfs:label "belongs to EN 15804 indicator group"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#belongsToMethodology
+<https://w3id.org/eudpp#belongsToMethodology> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                              rdfs:range <https://w3id.org/eudpp#LCAMethodology> ;
+                                              rdfs:comment "Link from a Method to one or several LCAMethodology individuals it belongs to (e.g. eudpp:methodology_EF3_1). Cardinality 1..n: a single method can be classified into more than one methodology (for example, when two methodologies share the same characterisation factors for one indicator)."@en ;
+                                              rdfs:label "belongs to methodology"@en ;
+                                              <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en ,
+                                                                                        "LCAnet: relates to the element includedInMethodology (https://w3id.org/lcanet/ia#includedInMethodology) in the IA module." .
+
+
+###  https://w3id.org/eudpp#computedByMethod
+<https://w3id.org/eudpp#computedByMethod> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <https://w3id.org/eudpp#LCAIndicator> ;
+                                          rdfs:range <https://w3id.org/eudpp#LCAMethod> ;
+                                          rdfs:comment """Link from an LCAIndicator individual to the IndicatorMethod instance that describes how this indicator is computed — its impact model, impact category, methodology reference, reference report, and ILCD method metadata. 
+Cardinality: at most 1 per indicator individual.\""""@en ;
+                                          rdfs:label "computed by method"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#followsPCR
+<https://w3id.org/eudpp#followsPCR> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/eudpp#EPDStudy> ;
+                                    rdfs:range <https://w3id.org/eudpp#PCR> ;
+                                    rdfs:comment "Link from an EPDStudy to the Product Category Rules document(s) it follows (1..n)."@en ;
+                                    rdfs:label "follows PCR"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element referenceToPCR."@en .
+
+
+###  https://w3id.org/eudpp#followsPEFCR
+<https://w3id.org/eudpp#followsPEFCR> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                      rdfs:range <https://w3id.org/eudpp#PEFCR> ;
+                                      rdfs:comment "Link from an LCAStudy to a Product Environmental Footprint Category Rules document (1..n)."@en ;
+                                      rdfs:label "follows PEFCR"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#forLifeCycleModule
+<https://w3id.org/eudpp#forLifeCycleModule> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/eudpp#LCAModuleValue> ;
+                                            rdfs:range <https://w3id.org/eudpp#LifeCycleModule> ;
+                                            rdfs:comment "Link from an LCAModuleValue to the Life-cycle module it refers to."@en ;
+                                            rdfs:label "for life-cycle module"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the attribute @epd:module on epd:amount."@en .
+
+
+###  https://w3id.org/eudpp#hasComplianceDeclaration
+<https://w3id.org/eudpp#hasComplianceDeclaration> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                                  rdfs:range <https://w3id.org/eudpp#ComplianceDeclaration> ;
+                                                  rdfs:comment "Link from an LCAStudy (or its subclass EPDStudy) to a ComplianceDeclaration. Compliance can be declared against any standard relevant to the study type (ISO 14040/14044, ISO 14025, ISO 14067, ISO 21930, EN 15804+A2, PEFCR-specific rules, etc.)."@en ;
+                                                  rdfs:label "has compliance declaration"@en ;
+                                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element complianceDeclarations/compliance. Domain widened in v1.9.7 from EPDStudy to LCAStudy."@en .
+
+
+###  https://w3id.org/eudpp#hasExternalSource
+<https://w3id.org/eudpp#hasExternalSource> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                           rdfs:range <https://w3id.org/eudpp#Source> ;
+                                           rdfs:comment "Link from an LCAStudy to a background source. It can be a (a) documentation (e.g. an LCA project report, safety data sheet, or explanatory material) - covering the ILCD+EPD element referenceToExternalDocumentation on dataSetInformation, (b) databases or, (c)  literature sources used for modelling."@en ;
+                                           rdfs:label "has external source"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#hasImpactCategory
+<https://w3id.org/eudpp#hasImpactCategory> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                           rdfs:range <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                           rdfs:comment "Impact category addressed by the Method."@en ;
+                                           rdfs:label "has impact category"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element impactCategory on LCIAMethodDataSet."@en ,
+                                                                                     "LCAnet: relates to the element hasImpactCategory (https://w3id.org/lcanet/ia#hasIC) in the IA module."@en .
+
+
+###  https://w3id.org/eudpp#hasImpactModel
+<https://w3id.org/eudpp#hasImpactModel> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                        rdfs:range <https://w3id.org/eudpp#ImpactModel> ;
+                                        rdfs:comment "Link from an Method to its characterisation-model block (where applicable; inventory-only methods may not have one)."@en ;
+                                        rdfs:label "has impact model"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "LCAnet: relates to the element usesCM (https://w3id.org/lcanet/ia#usesCM) in the IA module."@en .
+
+
+###  https://w3id.org/eudpp#hasInventoryIndicatorResult
+<https://w3id.org/eudpp#hasInventoryIndicatorResult> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <https://w3id.org/eudpp#hasLCAResult> ;
+                                                     rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                                     rdfs:range <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                                     rdfs:comment "Sub-property of eudpp:hasLCAResult; range narrowed to eudpp:InventoryIndicatorResult."@en ;
+                                                     rdfs:label "has inventory indicator result"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element LCIAResults/LCIAResult when the indicator is an EN 15804+A2 inventory indicator (resource use, waste, output flows)."@en .
+
+
+###  https://w3id.org/eudpp#hasLCAResult
+<https://w3id.org/eudpp#hasLCAResult> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                      rdfs:range <https://w3id.org/eudpp#LCAResult> ;
+                                      rdfs:comment "Link from an LCAStudy (or its subclass EPDStudy) to one of its LCA results. Range is the abstract eudpp:LCAResult; sub-properties eudpp:hasLCIAResult and eudpp:hasInventoryResult narrow the result to the corresponding sibling subclass. Querying for eudpp:hasLCAResult retrieves both kinds of results in one go."@en ;
+                                      rdfs:label "has LCA result"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#hasLCIAResult
+<https://w3id.org/eudpp#hasLCIAResult> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <https://w3id.org/eudpp#hasLCAResult> ;
+                                       rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                       rdfs:range <https://w3id.org/eudpp#LCIAResult> ;
+                                       rdfs:comment "Sub-property of eudpp:hasLCAResult; range narrowed to eudpp:LCIAResult."@en ;
+                                       rdfs:label "has LCIA result"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element LCIAResults/LCIAResult when the indicator is an EN 15804+A2 impact indicator."@en .
+
+
+###  https://w3id.org/eudpp#hasLicenseType
+<https://w3id.org/eudpp#hasLicenseType> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                        rdfs:range <https://w3id.org/eudpp#LicenseType> ;
+                                        rdfs:comment "License applicable to the LCA / EPD study."@en ;
+                                        rdfs:label "has license type"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element publicationAndOwnership/licenseType."@en .
+
+
+###  https://w3id.org/eudpp#hasPerModuleValue
+<https://w3id.org/eudpp#hasPerModuleValue> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <https://w3id.org/eudpp#LCAResult> ;
+                                           rdfs:range <https://w3id.org/eudpp#LCAModuleValue> ;
+                                           rdfs:comment "Link from an LCAResult (LCIAResult or InventoryIndicatorResult) to one of its per-module (and optionally per-scenario) numerical values."@en ;
+                                           rdfs:label "has per module value"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element LCIAResult/other/epd:amount."@en .
+
+
+###  https://w3id.org/eudpp#hasReferenceToBackgroundDatabase
+<https://w3id.org/eudpp#hasReferenceToBackgroundDatabase> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <https://w3id.org/eudpp#hasExternalSource> ;
+                                                          rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                                          rdfs:range <https://w3id.org/eudpp#BackgroundDatabase> ;
+                                                          rdfs:comment "Link from an LCAStudy to a background LCI database used for the modelling (1..n). Sub-property of eudpp:hasExternalSource."@en ;
+                                                          rdfs:label "has reference to background database"@en ;
+                                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#hasReview
+<https://w3id.org/eudpp#hasReview> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                   rdfs:range <https://w3id.org/eudpp#Review> ;
+                                   rdfs:comment "Link from an LCAStudy to a critical-review / verification record."@en ;
+                                   rdfs:label "has review"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element validation/review."@en .
+
+
+###  https://w3id.org/eudpp#hasTypeOfReview
+<https://w3id.org/eudpp#hasTypeOfReview> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain <https://w3id.org/eudpp#Review> ;
+                                         rdfs:range <https://w3id.org/eudpp#TypeOfReview> ;
+                                         rdfs:comment "The kind of review performed (independent external, accredited third party, etc.)."@en ;
+                                         rdfs:label "has type of review"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the attribute review/@type."@en .
+
+
+###  https://w3id.org/eudpp#includesMethod
+<https://w3id.org/eudpp#includesMethod> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                        rdfs:range <https://w3id.org/eudpp#LCAMethod> ;
+                                        rdfs:comment "Link from a Method (a collection of methods sharing a methodology such as \"EF 3.1\") to each of the individual-indicator method instances it aggregates."@en ;
+                                        rdfs:label "includes method"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> """ILCD base: Corresponds to the element referenceToIncludedMethods.
+ILCD+EPD LCIA Method Data Sets can represent either a single LCIA or inventory method (one indicator) or a methodology (a collection/list of methods); this property is used only in the latter case."""@en .
+
+
+###  https://w3id.org/eudpp#quantifiesIndicator
+<https://w3id.org/eudpp#quantifiesIndicator> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/eudpp#LCAResult> ;
+                                             rdfs:range <https://w3id.org/eudpp#LCAIndicator> ;
+                                             rdfs:comment """Link from an LCAResult (LCIAResult or InventoryIndicatorResult) to the LCAIndicator individual that this result quantifies. 
+This is the primary semantic identity of a result: a result is a quantification of an indicator, not of a method. 
+Cardinality: exactly 1 per result instance.
+Range: LCAIndicator (covers both EN15804Indicator individuals and non-EN-15804 indicators)."""@en ;
+                                             rdfs:label "quantifies indicator"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#referenceToCompleteReviewReport
+<https://w3id.org/eudpp#referenceToCompleteReviewReport> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://w3id.org/eudpp#Review> ;
+                                                         rdfs:range <https://w3id.org/eudpp#ReviewReport> ;
+                                                         rdfs:comment "Link from a Review to the full review report."@en ;
+                                                         rdfs:label "reference to complete review report"@en ;
+                                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element review/referenceToCompleteReviewReport."@en .
+
+
+###  https://w3id.org/eudpp#referenceToComplianceStatus
+<https://w3id.org/eudpp#referenceToComplianceStatus> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/eudpp#ComplianceDeclaration> ;
+                                                     rdfs:range <https://w3id.org/eudpp#ComplianceStatus> ;
+                                                     rdfs:comment "Level of compliance declared by a ComplianceDeclaration (fully compliant, partially compliant, or not compliant)."@en ;
+                                                     rdfs:label "reference to compliance status"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#referenceToComplianceSystem
+<https://w3id.org/eudpp#referenceToComplianceSystem> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://w3id.org/eudpp#ComplianceDeclaration> ;
+                                                     rdfs:range <https://w3id.org/eudpp#ComplianceSystem> ;
+                                                     rdfs:comment "Link from a ComplianceDeclaration to the standard or programme it references (EN 15804+A2, ISO 14025, ISO 21930, etc.)."@en ;
+                                                     rdfs:label "reference to compliance system"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element compliance/referenceToComplianceSystem."@en .
+
+
+###  https://w3id.org/eudpp#referenceToExternalSource
+<https://w3id.org/eudpp#referenceToExternalSource> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                                   rdfs:range <https://w3id.org/eudpp#Source> ;
+                                                   rdfs:comment "Link from a Method to the external documentation describing the method."@en ;
+                                                   rdfs:label "reference to external source"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element referenceToExternalDocumentation on LCIAMethodDataSet/dataSetInformation."@en .
+
+
+###  https://w3id.org/eudpp#referenceToLCAMethodReport
+<https://w3id.org/eudpp#referenceToLCAMethodReport> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <https://w3id.org/eudpp#referenceToExternalSource> ;
+                                                    rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                                    rdfs:range <https://w3id.org/eudpp#LCAMethodReport> ;
+                                                    rdfs:comment "Link from a Method to the formal LCIA method report (e.g. the EF 3.1 method description)."@en ;
+                                                    rdfs:label "reference to LCA method report"@en ;
+                                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#referenceToModelSource
+<https://w3id.org/eudpp#referenceToModelSource> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/eudpp#ImpactModel> ;
+                                                rdfs:range <https://w3id.org/eudpp#Source> ;
+                                                rdfs:comment "Link from an ImpactModel to the bibliographic source(s) describing the characterisation model."@en ;
+                                                rdfs:label "reference to model source"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element referenceToModelSource."@en .
+
+
+###  https://w3id.org/eudpp#referenceToOriginalEPD
+<https://w3id.org/eudpp#referenceToOriginalEPD> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <https://w3id.org/eudpp#EPDStudy> ;
+                                                rdfs:range <https://w3id.org/eudpp#EPDDocument> ;
+                                                rdfs:comment "Link from the machine-readable EPDStudy to the published EPD document (typically PDF)."@en ;
+                                                rdfs:label "reference to original EPD"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element epd2:referenceToOriginalEPD."@en .
+
+
+###  https://w3id.org/eudpp#relatesToLCAIndicator
+<https://w3id.org/eudpp#relatesToLCAIndicator> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                               rdfs:range <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                               rdfs:comment """Relates an EN15804 impact indicator to the conceptually corresponding EF 3.1 / PEF LCIA impact indicator. 
+The two indicators are not equivalent — EN15804 indicators are EPD-specific reporting slots defined by EN15804+A2, while LCIA impact indicators follow the broader EF 3.1 characterisation framework. This property records a conceptual correspondence without implying any equivalence."""@en ;
+                                               rdfs:label "relates to LCA indicator"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/eudpp#accessRestrictions
+<https://w3id.org/eudpp#accessRestrictions> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                            rdfs:range rdf:langString ;
+                                            rdfs:comment "Human-readable description of access and use restrictions for the LCA / EPD study (equivalent to dcterms:accessRights)."@en ;
+                                            rdfs:label "access restrictions"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element accessRestrictions."@en .
+
+
+###  https://w3id.org/eudpp#amount
+<https://w3id.org/eudpp#amount> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( <https://w3id.org/eudpp#LCAModuleValue>
+                                                            <https://w3id.org/eudpp#LCAResult>
+                                                          )
+                                            ] ;
+                                rdfs:range xsd:double ;
+                                rdfs:comment "Numerical value of an LCA result or an LCIAModuleValue."@en ;
+                                rdfs:label "amount"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: corresponds to the text content of epd:amount inside LCIAResult/other."@en .
+
+
+###  https://w3id.org/eudpp#dataSetVersion
+<https://w3id.org/eudpp#dataSetVersion> rdf:type owl:DatatypeProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                        rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Version number of this LCA / EPD study instance, independent of the ontology version. Format: major.minor.sub-minor (e.g. \"02.00.011\")."@en ;
+                                        rdfs:label "data set version"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element publicationAndOwnership/dataSetVersion."@en .
+
+
+###  https://w3id.org/eudpp#epdFormatVersion
+<https://w3id.org/eudpp#epdFormatVersion> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                          rdfs:domain <https://w3id.org/eudpp#EPDStudy> ;
+                                          rdfs:range xsd:string ;
+                                          rdfs:comment "Version tag of the ILCD+EPD format used (e.g. \"1.3\")."@en ;
+                                          rdfs:label "EPD format version"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the attribute @epd2:epd-version on processDataSet."@en .
+
+
+###  https://w3id.org/eudpp#expiryDate
+<https://w3id.org/eudpp#expiryDate> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://w3id.org/eudpp#EPDStudy> ;
+                                    rdfs:range xsd:date ;
+                                    rdfs:comment "Date on which the EPD's validity expires. EN 15804+A2 EPDs are typically valid for five years from publication."@en ;
+                                    rdfs:label "expiry date"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element epd2:expirationDateOfEPD on time/other."@en .
+
+
+###  https://w3id.org/eudpp#forScenario
+<https://w3id.org/eudpp#forScenario> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <https://w3id.org/eudpp#LCAModuleValue> ;
+                                     rdfs:range xsd:string ;
+                                     rdfs:comment "Identifier of the scenario this LCIAModuleValue applies to (free-text label matching the EPD's scenario declaration)."@en ;
+                                     rdfs:label "for scenario"@en ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the attribute @epd:scenario on epd:amount."@en .
+
+
+###  https://w3id.org/eudpp#hasCopyright
+<https://w3id.org/eudpp#hasCopyright> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                      rdfs:range xsd:boolean ;
+                                      rdfs:comment "True if a copyright applies to the LCA / EPD study, false otherwise."@en ;
+                                      rdfs:label "has copyright"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element publicationAndOwnership/copyright. Modelled as xsd:boolean per the ILCD+EPD schema definition (two-valued)."@en .
+
+
+###  https://w3id.org/eudpp#ilcdFormatVersion
+<https://w3id.org/eudpp#ilcdFormatVersion> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                           rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:comment "ILCD schema version used by the source serialisation of this study (e.g. '1.1')."@en ;
+                                           rdfs:label "ILCD format version"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the attribute @version on processDataSet."@en .
+
+
+###  https://w3id.org/eudpp#isDeclared
+<https://w3id.org/eudpp#isDeclared> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://w3id.org/eudpp#LCAModuleValue> ;
+                                    rdfs:range xsd:boolean ;
+                                    rdfs:comment "True if this module value is declared in the study (has a numerical amount), false if the module is explicitly marked as not declared (ND / MND) for this indicator/scenario. Absence of the LCIAModuleValue triple altogether means the module was not in scope of the study (MNA - module not applicable)."@en ;
+                                    rdfs:label "is declared"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#methodVersion
+<https://w3id.org/eudpp#methodVersion> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                       rdfs:domain <https://w3id.org/eudpp#LCAMethod> ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "Version of the specific LCIA or Inventory method instance (where applicable). Captures method-instance-level versioning, distinct from methodology-level versioning (eudpp:methodologyVersion on LCAMethodology)."@en ;
+                                       rdfs:label "method version"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#methodologyVersion
+<https://w3id.org/eudpp#methodologyVersion> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                            rdfs:domain <https://w3id.org/eudpp#LCAMethodology> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "Version identifier of an LCAMethodology individual (e.g. \"3.1\" for EF 3.1, \"2002\" for CML 2002)."@en ;
+                                            rdfs:label "methodology version"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#modelVersion
+<https://w3id.org/eudpp#modelVersion> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/terms/hasVersion> ;
+                                      rdfs:domain <https://w3id.org/eudpp#ImpactModel> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Version of the characterisation model used (e.g. \"IPCC AR6 2021\" vs \"IPCC AR5 2013\", which give different GWP100 values)."@en ;
+                                      rdfs:label "model version"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#referenceYear
+<https://w3id.org/eudpp#referenceYear> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                                       rdfs:range xsd:gYear ;
+                                       rdfs:comment "Start year of the time period for which the study is valid."@en ;
+                                       rdfs:label "reference year"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element time/referenceYear on processDataSet."@en .
+
+
+###  https://w3id.org/eudpp#registrationNumber
+<https://w3id.org/eudpp#registrationNumber> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+                                            rdfs:domain <https://w3id.org/eudpp#EPDStudy> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "Identifying number issued by the EPD programme operator (typically visible on the EPD document). Distinct from the dataset UUID."@en ;
+                                            rdfs:label "registration number"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: Corresponds to the element publicationAndOwnership/registrationNumber."@en .
+
+
+###  https://w3id.org/eudpp#reviewDate
+<https://w3id.org/eudpp#reviewDate> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <https://w3id.org/eudpp#Review> ;
+                                    rdfs:range xsd:date ;
+                                    rdfs:comment "Date on which the review was completed. Important for DPP consumers to assess whether the review is still current."@en ;
+                                    rdfs:label "review date"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#uuid
+<https://w3id.org/eudpp#uuid> rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+                              rdfs:domain <https://w3id.org/eudpp#LCAStudy> ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "The Universally Unique Identifier of this LCA / EPD study, as mandated by ILCD+EPD as the primary persistent identifier. Once a study is created and a UUID is generated, the UUID stays the same forever; any change increments eudpp:dataSetVersion. String formatted as an RFC 4122 UUID (36 characters, hyphenated)."@en ;
+                              rdfs:label "UUID"@en ;
+                              <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://spdx.org/rdf/terms#License
+<http://spdx.org/rdf/terms#License> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#AreaOfProtection
+<https://w3id.org/eudpp#AreaOfProtection> rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                owl:oneOf ( <https://w3id.org/eudpp#aopHumanHealth>
+                                                                            <https://w3id.org/eudpp#aopManMadeEnvironment>
+                                                                            <https://w3id.org/eudpp#aopNaturalEnvironment>
+                                                                            <https://w3id.org/eudpp#aopNaturalResources>
+                                                                            <https://w3id.org/eudpp#aopOther>
+                                                                          )
+                                                              ] ;
+                                          rdfs:comment "Damage area addressed by an LCIA method via the LCIA Impact Category class using the addressesAoP object property. A closed enumeration of 5 individuals."@en ;
+                                          rdfs:label "Area of Protection"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: corresponds to the element AreaOfProtectionValues."@en .
+
+
+###  https://w3id.org/eudpp#BackgroundDatabase
+<https://w3id.org/eudpp#BackgroundDatabase> rdf:type owl:Class ;
+                                            rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                                            rdfs:comment "Source representing a background LCI database used for the LCA modelling (e.g. ecoinvent, GaBi/Sphera, Okobaudat)."@en ;
+                                            rdfs:label "Background Database"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#CarbonFootprint
+<https://w3id.org/eudpp#CarbonFootprint> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/eudpp#LCIAResult> ,
+                                                         [ rdf:type owl:Class ;
+                                                           owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                                           owl:hasValue <https://w3id.org/eudpp#ind_EF_climateChange>
+                                                                         ]
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                                           owl:hasValue <https://w3id.org/eudpp#ind_GWPtotal>
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                         rdfs:comment """An LCIAResult that \"means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change\". (ESPR Art 2 25))
+ 
+It quantifies the global warming potential of a product over a 100-year time horizon.
+Instances of this class quantify either the EN 15804+A2 individual \"GWP-total - Global Warming Potential (total)\" (ind_GWPtotal, an EN15804ImpactIndicator) or the EF 3.1 \"Climate Change EF\" indicator (ind_EF_climateChange, an LCIAImpactIndicator), depending on the reporting framework of the EPD or LCA study."""@en ;
+                                         rdfs:label "Carbon Footprint"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ESPR Art 2 (25) https://eur-lex.europa.eu/eli/reg/2024/1781/oj"@en ,
+                                                                                   "LCAnet: relates to the element CarbonFootprint (https://w3id.org/lcanet/ia#CarbonFootprint) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#ComplianceDeclaration
+<https://w3id.org/eudpp#ComplianceDeclaration> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                               rdfs:comment "A statement that the LCA or EPD study complies with a given compliance system (typically ISO 14040/14044, ISO 14025, ISO 14067, ISO 21930, EN 15804+A2, or a PEFCR). The level of compliance (fully, partially, not compliant) is recorded via eudpp:complianceStatus."@en ;
+                                               rdfs:label "Compliance Declaration"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element complianceDeclarations/compliance."@en .
+
+
+###  https://w3id.org/eudpp#ComplianceStatus
+<https://w3id.org/eudpp#ComplianceStatus> rdf:type owl:Class ;
+                                          owl:equivalentClass [ rdf:type owl:Class ;
+                                                                owl:oneOf ( <https://w3id.org/eudpp#fullyCompliant>
+                                                                            <https://w3id.org/eudpp#notCompliant>
+                                                                            <https://w3id.org/eudpp#partiallyCompliant>
+                                                                          )
+                                                              ] ;
+                                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                          rdfs:comment "Level of compliance declared by a ComplianceDeclaration relative to its compliance system. Enumeration of 3 named individuals (fullyCompliant, partiallyCompliant, notCompliant)."@en ;
+                                          rdfs:label "Compliance Status"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#ComplianceSystem
+<https://w3id.org/eudpp#ComplianceSystem> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                                          rdfs:comment "A standard or programme against which an LCA or EPD study is declared compliant, such as ISO 14040/14044, ISO 14025, ISO 14067, ISO 21930, EN 15804+A2, PEFCR programmes, or a specific programme operator's scheme."@en ;
+                                          rdfs:label "Compliance System"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#EN15804ImpactIndicator
+<https://w3id.org/eudpp#EN15804ImpactIndicator> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/eudpp#EN15804Indicator> ;
+                                                rdfs:comment "An EN 15804+A2 characterised impact indicator (core set of 13 or the 6 additional \"with caveats\" indicators). Characterised via the EF 3.1 characterisation models. Results computed for this indicator are eudpp:LCIAResult instances."@en ;
+                                                rdfs:label "EN 15804 Impact Indicator"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#EN15804Indicator
+<https://w3id.org/eudpp#EN15804Indicator> rdf:type owl:Class ;
+                                          rdfs:subClassOf <https://w3id.org/eudpp#LCAIndicator> ;
+                                          rdfs:comment """An indicator defined by EN 15804+A2 (core impact, impact with caveats, resource use, waste output, or output-flow indicator). 
+Subclass of the abstract eudpp:LCAIndicator parent. 
+Note: an EN15804Indicator individual is the indicator definition; a result computed for that indicator is an eudpp:LCAResult instance (LCIAResult or InventoryIndicatorResult sibling)."""@en ;
+                                          rdfs:label "EN 15804 Indicator"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#EN15804IndicatorGroup
+<https://w3id.org/eudpp#EN15804IndicatorGroup> rdf:type owl:Class ;
+                                               owl:equivalentClass [ rdf:type owl:Class ;
+                                                                     owl:oneOf ( <https://w3id.org/eudpp#group_coreImpact>
+                                                                                 <https://w3id.org/eudpp#group_exportedEnergy>
+                                                                                 <https://w3id.org/eudpp#group_resourceUse>
+                                                                                 <https://w3id.org/eudpp#group_valorisation>
+                                                                                 <https://w3id.org/eudpp#group_waste>
+                                                                                 <https://w3id.org/eudpp#group_withCaveats>
+                                                                               )
+                                                                   ] ;
+                                               rdfs:comment "Grouping of the EN 15804+A2 indicators based on the printed standard's tables: core impact (Table 3), impact indicators with caveats (Table 4), resource use (Table 5 resource use), waste categories (Table 5 waste), output flows valorisation (Table 5 output flows), exported energy (Table 5 output flows). Enumeration of 6 named individuals."@en ;
+                                               rdfs:label "EN 15804 Indicator Group"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#EN15804InventoryIndicator
+<https://w3id.org/eudpp#EN15804InventoryIndicator> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/eudpp#EN15804Indicator> ;
+                                                   rdfs:comment "An EN 15804+A2 inventory-level indicator (resource use, waste disposed, or output flow for valorisation / exported energy). Not characterised; value is an aggregated inventory quantity. Results computed for this indicator are eudpp:InventoryIndicatorResult instances."@en ;
+                                                   rdfs:label "EN 15804 Inventory Indicator"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#EPDDocument
+<https://w3id.org/eudpp#EPDDocument> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                                     rdfs:comment "Source representing the published PDF or HTML EPD document itself (as distinct from the ILCD+EPD machine-readable EPDStudy)."@en ;
+                                     rdfs:label "EPD Document"@en ;
+                                     <http://www.w3.org/2004/02/skos/core#broadMatch> <http://xmlns.com/foaf/0.1/Document> ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#EPDStudy
+<https://w3id.org/eudpp#EPDStudy> rdf:type owl:Class ;
+                                  rdfs:subClassOf <https://w3id.org/eudpp#LCAStudy> ;
+                                  rdfs:comment "An LCA study that conforms to EN 15804+A2 with EF 3.1 characterisation, i.e. an Environmental Product Declaration. Inherits all study-level metadata from eudpp:LCAStudy (compliance declarations, manufacturer records, reviews, LCA results, etc.) and adds EPD-specific properties: ILCD+EPD format version (eudpp:epdFormatVersion), registration number, expiry date, reference to the published EPD document (eudpp:EPDDocument via referenceToOriginalEPD), reference to the applicable Product Category Rules (eudpp:PCR via referenceToPCR). EN 15804+A2 module values per LCAResult are used to populate per-life-cycle-module values. Replaces v1.9.4's mixed structure and v1.9.5's eudpp:EPDDataSet."@en ;
+                                  rdfs:label "EPD Study"@en ,
+                                             "EPD-Studie"@de ;
+                                  rdfs:seeAlso <https://indatawg.github.io/ILCD-EPD-Data-Format/doc/> ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#EnergyConsumptionResult
+<https://w3id.org/eudpp#EnergyConsumptionResult> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                                 rdfs:comment """An LCA inventory indicator result quantifying the consumption of primary energy resources — renewable and non-renewable — in a product system. 
+Commonly associated with the EN 15804+A2 primary energy indicators (e.g. PERE, PERM, PERT, PENRE, PENRM, PENRT), though no formal quantifiesIndicator restriction is imposed, as energy consumption may span multiple indicators depending on the study scope."""@en ;
+                                                 rdfs:label "Energy Consumption Result"@en ;
+                                                 <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#EnvironmentalFootprintScore
+<https://w3id.org/eudpp#EnvironmentalFootprintScore> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://w3id.org/eudpp#LCAIndicator> ;
+                                                     rdfs:comment """An aggregated single-score indicator computed as the normalised and weighted sum of a set of impact-category results. 
+Holds one named individual eudpp:ind_EF_singleScore representing the EU Environmental Footprint single score (PEF score). The applied normalisation factors and weighting set are not modelled here as properties; they are determined by the active EF / PEF methodology version, which is resolvable via the study's eudpp:hasComplianceDeclaration link to a eudpp:ComplianceSystem source. 
+Results computed for an EnvironmentalFootprintScore individual are eudpp:LCIAResult instances."""@en ;
+                                                     rdfs:label "Environmental Footprint Score"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#EnvironmentalFootprintScoreResult
+<https://w3id.org/eudpp#EnvironmentalFootprintScoreResult> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://w3id.org/eudpp#LCAResult> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onClass <https://w3id.org/eudpp#EnvironmentalFootprintScore>
+                                                                           ] ;
+                                                           rdfs:comment """A normalized and weighted aggregate LCA result expressing the overall environmental performance of a product system as a single dimensionless score, computed by applying the Product Environmental Footprint (PEF) method (Recommendation (EU) 2021/2279). 
+Aggregates the characterised results of all 16 EF 3.1 impact categories through normalization and weighting factors.
+Instances of this class quantify the EF single score indicator (ind_EF_singleScore, an EnvironmentalFootprintScore individual) via quantifiesIndicator."""@en ;
+                                                           rdfs:label "Environmental Footprint Score Result"@en ;
+                                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology: third sibling subclass of eudpp:LCAResult alongside eudpp:LCIAResult and eudpp:InventoryIndicatorResult, introduced to represent the aggregated EF single score result."@en .
+
+
+###  https://w3id.org/eudpp#ImpactModel
+<https://w3id.org/eudpp#ImpactModel> rdf:type owl:Class ;
+                                     rdfs:comment "The characterisation model underlying an LCIA method (e.g. IPCC AR6 2021 for GWP). It carries a model name (eudpp:modelName), optional version (eudpp:modelVersion), and optional bibliographic source (eudpp:referenceToModelSource)."@en ;
+                                     rdfs:label "Impact Model"@en ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: corresponds to the element impactModel of an LCIA Method Data Set."@en ,
+                                                                               "LCAnet: relates to the element CharacterizationModel (https://w3id.org/lcanet/ia#CharacterizationModel) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#InventoryIndicatorResult
+<https://w3id.org/eudpp#InventoryIndicatorResult> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/eudpp#LCAResult> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass <https://w3id.org/eudpp#EN15804InventoryIndicator>
+                                                                  ] ;
+                                                  rdfs:comment """A specific LCA result representing an aggregated inventory-indicator result computed for an EN 15804+A2 inventory indicator (Table 5: resource use, waste categories, output flows). 
+Important disambiguation: this class represents the AGGREGATED inventory-indicator value (e.g. total kg of HWD across A1-A3 for one product), as printed in EN 15804+A2 EPD tables and computed by a Method instance. It is NOT the raw flow-level life-cycle inventory (LCI) result of a process (which would be a list of elementary-flow exchanges with amounts and units, and is out of scope for this DPP-oriented LCA module)."""@en ;
+                                                  rdfs:label "Inventory Indicator Result"@en ;
+                                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#LCAIndicator
+<https://w3id.org/eudpp#LCAIndicator> rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/eudpp#computedByMethod> ;
+                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass <https://w3id.org/eudpp#LCAMethod>
+                                                      ] ;
+                                      rdfs:comment """Abstract umbrella class for an indicator definition (impact or inventory category) that an eudpp:Method calculates values for. 
+Each instance identifies exactly one method under which it is computed; this constraint is formalised as owl:maxCardinality 1 on eudpp:computedByMethod. 
+Note: an indicator individual is the indicator DEFINITION (e.g. \"FW – Net use of fresh water, in m3\"); a numerical value computed for that indicator on a specific study is an eudpp:LCAResult instance (LCIAResult or InventoryIndicatorResult)."""@en ;
+                                      rdfs:label "LCA Indicator"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#LCAMethod
+<https://w3id.org/eudpp#LCAMethod> rdf:type owl:Class ;
+                                   rdfs:comment """A life-cycle assessement method that produces values for one indicator from an inventory of elementary flows. 
+Covers both (a) characterised LCIA methods (which apply characterisation factors to compute a midpoint impact result), and (b) inventory aggregation methods (which sum / aggregate inventory flows to produce an inventory-indicator result, e.g. the EN 15804+A2 inventory indicators FW, HWD, PERE etc. defined as inventory-level by the standard's calculation rules)."""@en ;
+                                   rdfs:label "LCA Method"@en ;
+                                   rdfs:seeAlso <https://indatawg.github.io/ILCD-EPD-Data-Format/gitBranches/release/v1.3/schemadoc/ILCD_LCIAMethodDataSet.html> ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: corresponds to the element LCIA Method Data Set, which is used in practice for both LCIA method and inventory indicator methods."@en ,
+                                                                             "LCAnet: relates to the element Method (https://w3id.org/lcanet/ia#Method) in the IA module."@en .
+
+
+###  https://w3id.org/eudpp#LCAMethodReport
+<https://w3id.org/eudpp#LCAMethodReport> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                                         rdfs:comment "Source that documents a life-cycle impact assessment (LCIA) method (e.g. the EF 3.1 method description)."@en ;
+                                         rdfs:label "LCIA Method Report"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#broadMatch> <http://xmlns.com/foaf/0.1/Document> ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#LCAMethodology
+<https://w3id.org/eudpp#LCAMethodology> rdf:type owl:Class ;
+                                        rdfs:comment """A named, versioned LCA methodology (a coherent set of LCA methods sharing principles and a set of characterisation factors), to which one or more Method instances belong. 
+Each individual SHOULD carry a skos:altLabel giving a short code (e.g. \"EF 3.1\") and eudpp:methodologyVersion giving the version identifier."""@en ;
+                                        rdfs:label "LCA Methodology"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en ,
+                                                                                  "LCAnet: relates to the element Methodology (https://w3id.org/lcanet/ia#Methodology) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#LCAModuleValue
+<https://w3id.org/eudpp#LCAModuleValue> rdf:type owl:Class ;
+                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/eudpp#forLifeCycleModule> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass <https://w3id.org/eudpp#LifeCycleModule>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/eudpp#amount> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onDataRange xsd:double
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/eudpp#isDeclared> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onDataRange xsd:boolean
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/eudpp#forScenario> ;
+                                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onDataRange xsd:string
+                                                        ] ;
+                                        rdfs:comment """One numerical LCA-result value (impact or inventory-indicator) for a specific EN 15804+A2 life-cycle module (A1-A3, A4, ..., D) and optionally a specific scenario. 
+It carries eudpp:amount (the numeric value), eudpp:forLifeCycleModule, optionally eudpp:forScenario, and eudpp:isDeclared (boolean: true if the module is declared with this value; false if the module is explicitly not declared for this indicator)."""@en ;
+                                        rdfs:label "LCA Module Value"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: corresponds to the element epd:amount inside LCIAResult/other."@en .
+
+
+###  https://w3id.org/eudpp#LCAResult
+<https://w3id.org/eudpp#LCAResult> rdf:type owl:Class ;
+                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass <https://w3id.org/eudpp#LCAIndicator>
+                                                   ] ;
+                                   rdfs:comment """Abstract class for any LCA computation output of a study. Has three subclasses: 
+eudpp:LCIAResult (characterised impact result) which applies characterisation factors of an LCIA method, eudpp:InventoryIndicatorResult (aggregated inventory-indicator result) whcih is a sum/aggregation over the inventory without characterisation, and eudpp:EnvironmentalFootprintScoreResult which represents the aggregated EF single score result. 
+
+In the regulatory sense of ESPR Art. 2(24), some characterized individuals of LCAResult constitute environmental footprints — quantifications of environmental impacts of a product throughout its life cycle.Other LCAResult instances, however, fall outside the strict ESPR definition. For this reason, LCAResult is linked to the ESPR \"Environmental Footprint\" concept via skos:broadMatch rather than owl:equivalentClass."""@en ;
+                                   rdfs:label "LCA Result"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#broadMatch> "ESPR Art 2 (24) https://eur-lex.europa.eu/eli/reg/2024/1781/oj#Art2_24"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en ,
+                                                                             "LCAnet: relates to the element LcaResult (https://w3id.org/lcanet/ia#LcaResult) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#LCAStudy
+<https://w3id.org/eudpp#LCAStudy> rdf:type owl:Class ;
+                                  rdfs:comment """A life-cycle assessment study of a product, conducted per ISO 14040/14044, producing one or more LCA results. The general study container, applicable to any product whether or not the study follows EN 15804+A2. 
+Carries study-level metadata (UUID, dataset version, name, reference year, license, copyright, ILCD format version, compliance declarations, manufacturer records, reviews, references to data sources / background databases / PEFCR, etc.). 
+Cross-module link from a product to this class is provided by the Connector property eudpp:hasLCAStudy."""@en ;
+                                  rdfs:label "LCA Study"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en ,
+                                                                            "LCAnet: relates to the element LcaModel (https://w3id.org/lcanet/core#LcaModel) of the Core module, which represents an LCA instance."@en .
+
+
+###  https://w3id.org/eudpp#LCIAImpactCategory
+<https://w3id.org/eudpp#LCIAImpactCategory> rdf:type owl:Class ;
+                                            owl:equivalentClass [ rdf:type owl:Class ;
+                                                                  owl:oneOf ( <https://w3id.org/eudpp#acidification>
+                                                                              <https://w3id.org/eudpp#climateChange>
+                                                                              <https://w3id.org/eudpp#eutrophication>
+                                                                              <https://w3id.org/eudpp#freshwaterEcotoxicity>
+                                                                              <https://w3id.org/eudpp#humanToxicity>
+                                                                              <https://w3id.org/eudpp#ionisingRadiationEcosystems>
+                                                                              <https://w3id.org/eudpp#ionisingRadiationHumanHealth>
+                                                                              <https://w3id.org/eudpp#landUseSoilQuality>
+                                                                              <https://w3id.org/eudpp#marineEcotoxicity>
+                                                                              <https://w3id.org/eudpp#ozoneDepletion>
+                                                                              <https://w3id.org/eudpp#photochemicalOzoneFormation>
+                                                                              <https://w3id.org/eudpp#resourceUseFossil>
+                                                                              <https://w3id.org/eudpp#resourceUseMineralsMetals>
+                                                                              <https://w3id.org/eudpp#respiratoryInorganics>
+                                                                              <https://w3id.org/eudpp#terrestrialEcotoxicity>
+                                                                              <https://w3id.org/eudpp#waterUseDeprivation>
+                                                                            )
+                                                                ] ;
+                                            rdfs:comment "A mid-point impact category that an LCAMethod addresses. A closed enumeration."@en ;
+                                            rdfs:label "LCIA Impact Category"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: matches the LCIAImpactCategoryValues."@en ,
+                                                                                      "LCAnet: relates to the element ImpactCategory (https://w3id.org/lcanet/ia#ImpactCategory) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#LCIAImpactIndicator
+<https://w3id.org/eudpp#LCIAImpactIndicator> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/eudpp#LCAIndicator> ;
+                                             rdfs:comment """A characterised impact indicator outside the EN 15804+A2 selection — direct subclass of eudpp:LCAIndicator, sibling of eudpp:EN15804Indicator. Holds the 16 official EF 3.1 / PEF impact category indicators as named individuals (Andreasi Bassi et al., JRC, 2023). 
+These are the impact indicators used by general LCA studies (eudpp:LCAStudy) following the EU Environmental Footprint method, distinct from the EN 15804+A2 set used by EPDStudy. 
+The two sets overlap conceptually — both have e.g. a \"Climate change\" indicator with kg CO2-eq — but differ operationally: EN 15804+A2 splits Climate change into four sub-indicators (total, fossil, biogenic, luluc) and selects 6 \"with caveats\" indicators with EN-specific reporting rules; EF 3.1 keeps Climate change as one indicator and presents 16 categories at one aggregation level."""@en ;
+                                             rdfs:label "LCIA Impact Indicator"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en ,
+                                                                                       "LCAnet: relates to the element ImpactCategoryIndicator (https://w3id.org/lcanet/ia#ImpactCategoryIndicator) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#LCIAResult
+<https://w3id.org/eudpp#LCIAResult> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://w3id.org/eudpp#LCAResult> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://w3id.org/eudpp#quantifiesIndicator> ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <https://w3id.org/eudpp#EN15804ImpactIndicator>
+                                                                                  <https://w3id.org/eudpp#LCIAImpactIndicator>
+                                                                                )
+                                                                  ]
+                                                    ] ;
+                                    rdfs:comment "A characterised LCA result quantifying one LCIA indicator (an EN15804ImpactIndicator or an LCIAImpactIndicator ) for a product system. Each instance is linked to exactly one indicator individual via quantifiesIndicator, and carries its numerical value per life-cycle module via hasLCAModuleValue."@en ;
+                                    rdfs:label "LCIA Result"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: corresponds to the element LCIAResults/LCIAResult when the indicator is a characterised impact indicator."@en .
+
+
+###  https://w3id.org/eudpp#LandUseResult
+<https://w3id.org/eudpp#LandUseResult> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                       rdfs:comment """An LCA result quantifying impacts associated with land occupation and transformation in a product system. 
+Commonly associated with the EN 15804+A2 land use indicator (LU), which is characterised under EF 3.1. No formal quantifiesIndicator restriction is imposed; note that LU sits at the boundary between inventory and impact in EN 15804 and may be refined in future ontology versions."""@en ;
+                                       rdfs:label "Land Use Result"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#LicenseType
+<https://w3id.org/eudpp#LicenseType> rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Class ;
+                                                           owl:oneOf ( <https://w3id.org/eudpp#freeOfChargeAll>
+                                                                       <https://w3id.org/eudpp#freeOfChargeMembers>
+                                                                       <https://w3id.org/eudpp#freeOfChargeSome>
+                                                                       <https://w3id.org/eudpp#licenseFee>
+                                                                       <https://w3id.org/eudpp#licenseOther>
+                                                                     )
+                                                         ] ;
+                                     rdfs:subClassOf <http://spdx.org/rdf/terms#License> ;
+                                     rdfs:comment "License applicable to access and use of the LCA / EPD study. A closed enumeration."@en ;
+                                     rdfs:label "License Type"@en ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: matching the ILCD LicenseTypeValues."@en .
+
+
+###  https://w3id.org/eudpp#LifeCycleModule
+<https://w3id.org/eudpp#LifeCycleModule> rdf:type owl:Class ;
+                                         owl:equivalentClass [ rdf:type owl:Class ;
+                                                               owl:oneOf ( <https://w3id.org/eudpp#en15804moduleA1>
+                                                                           <https://w3id.org/eudpp#en15804moduleA1A3>
+                                                                           <https://w3id.org/eudpp#en15804moduleA2>
+                                                                           <https://w3id.org/eudpp#en15804moduleA3>
+                                                                           <https://w3id.org/eudpp#en15804moduleA4>
+                                                                           <https://w3id.org/eudpp#en15804moduleA5>
+                                                                           <https://w3id.org/eudpp#en15804moduleB1>
+                                                                           <https://w3id.org/eudpp#en15804moduleB2>
+                                                                           <https://w3id.org/eudpp#en15804moduleB3>
+                                                                           <https://w3id.org/eudpp#en15804moduleB4>
+                                                                           <https://w3id.org/eudpp#en15804moduleB5>
+                                                                           <https://w3id.org/eudpp#en15804moduleB6>
+                                                                           <https://w3id.org/eudpp#en15804moduleB7>
+                                                                           <https://w3id.org/eudpp#en15804moduleC1>
+                                                                           <https://w3id.org/eudpp#en15804moduleC2>
+                                                                           <https://w3id.org/eudpp#en15804moduleC3>
+                                                                           <https://w3id.org/eudpp#en15804moduleC4>
+                                                                           <https://w3id.org/eudpp#moduleD>
+                                                                         )
+                                                             ] ;
+                                         rdfs:comment """A modelled life-cycle module per EN 15804+A2 (product stage A1-A3, construction A4-A5, use stage B1-B7, end-of-life C1-C4, benefits/loads D). Enumeration of 18 named individuals. 
+Note that moduleA1A3 (aggregated product stage) is an alternative reporting form of A1+A2+A3; an EPD that reports A1-A3 should not additionally report A1, A2, A3 separately for the same indicator/scenario."""@en ;
+                                         rdfs:label "Life Cycle Module"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+
+
+###  https://w3id.org/eudpp#MaterialFootprint
+<https://w3id.org/eudpp#MaterialFootprint> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                           rdfs:comment """An InventoryIndicatorResult that \"refers to the total amount of raw materials extracted to meet final consumption demands\" (ESPR Art. 2(26)).
+
+Modelled as an inventory-level result rather than a characterised LCIA result, as it aggregates raw material extraction flows without applying characterisation factors.
+No single EN 15804+A2 inventory indicator individual is pinned via quantifiesIndicator; the link is left to individual instances, as material footprint spans multiple EN 15804+A2 resource use inventory indicators (PERE, PENRE, SM, RSF, NRSF, etc.)."""@en ;
+                                           rdfs:label "Material Footprint"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ESPR Art 2 (26) https://eur-lex.europa.eu/eli/reg/2024/1781/oj"@en ,
+                                                                                     "LCAnet: relates to the element MaterialFootprint (https://w3id.org/lcanet/ia#MaterialFootprint) of the IA module."@en .
+
+
+###  https://w3id.org/eudpp#PCR
+<https://w3id.org/eudpp#PCR> rdf:type owl:Class ;
+                             rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                             rdfs:comment "Source that is a Product Category Rules document (EN 15804+A2 Table 2 Line 1). Used in EN 15804+A2 EPDStudy via eudpp:referenceToPCR."@en ;
+                             rdfs:label "Product Category Rules (PCR)"@en ;
+                             <http://www.w3.org/2004/02/skos/core#broadMatch> <http://xmlns.com/foaf/0.1/Document> ;
+                             <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#PEFCR
+<https://w3id.org/eudpp#PEFCR> rdf:type owl:Class ;
+                               rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                               rdfs:comment "Source that is a Product Environmental Footprint Category Rules document, the European Commission Environmental Footprint methodology's product-category-specific rules. Parallel role to PCR but for PEF studies (rather than EN 15804+A2 EPD studies). Used by an LCAStudy via eudpp:referenceToPEFCR. NEW in v1.9.7."@en ;
+                               rdfs:label "Product Environmental Footprint Category Rules (PEFCR)"@en ;
+                               <http://www.w3.org/2004/02/skos/core#broadMatch> <http://xmlns.com/foaf/0.1/Document> ;
+                               <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#RecycledMaterialsUseResult
+<https://w3id.org/eudpp#RecycledMaterialsUseResult> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                                    rdfs:comment """An LCA inventory indicator result quantifying the use of secondary (recycled) material inputs in a product system. 
+Commonly associated with the EN 15804+A2 inventory indicator “Use of secondary material” (SM), though no formal quantifiesIndicator restriction is imposed."""@en ;
+                                                    rdfs:label "Recycled Materials Use Result"@en ;
+                                                    <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#Review
+<https://w3id.org/eudpp#Review> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+                                rdfs:comment "A verification / critical review performed on an LCA study or EPD study."@en ;
+                                rdfs:label "Review"@en ;
+                                rdfs:seeAlso <https://indatawg.github.io/ILCD-EPD-Data-Format/doc/> ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD base: corresponds to the element validation/review."@en .
+
+
+###  https://w3id.org/eudpp#ReviewReport
+<https://w3id.org/eudpp#ReviewReport> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/eudpp#Source> ;
+                                      rdfs:comment "Source holding the complete critical-review / verification report referenced from a Review."@en ;
+                                      rdfs:label "Review Report"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#broadMatch> <http://xmlns.com/foaf/0.1/Document> ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#Source
+<https://w3id.org/eudpp#Source> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                rdfs:comment "A bibliographic or documentary source referenced from an LCA study, EPD study or LCIA Method. Abstract superclass; concrete source instances typically use one of the more specific subclasses (PCR, LCAMethodReport, BackgroundDatabase, ComplianceSystem, ReviewReport, EPDDocument)."@en ;
+                                rdfs:label "Source"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element Source Data Set."@en .
+
+
+###  https://w3id.org/eudpp#SustainableRenewableMaterialsUseResult
+<https://w3id.org/eudpp#SustainableRenewableMaterialsUseResult> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                                                rdfs:comment """An LCA inventory indicator result quantifying the use of renewable secondary material and fuel inputs in a product system. 
+Commonly associated with the EN 15804+A2 inventory indicators “Use of renewable secondary fuels” (RSF) or “Use of non-renewable secondary fuels” (NRSF), though no formal quantifiesIndicator restriction is imposed, as the scope of renewable material inputs may evolve."""@en ;
+                                                                rdfs:label "Sustainable Renewable Materials Use Result"@en ;
+                                                                <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+###  https://w3id.org/eudpp#TypeOfReview
+<https://w3id.org/eudpp#TypeOfReview> rdf:type owl:Class ;
+                                      owl:equivalentClass [ rdf:type owl:Class ;
+                                                            owl:oneOf ( <https://w3id.org/eudpp#accreditedThirdPartyReview>
+                                                                        <https://w3id.org/eudpp#dependentInternalReview>
+                                                                        <https://w3id.org/eudpp#independentExternalReview>
+                                                                        <https://w3id.org/eudpp#independentInternalReview>
+                                                                        <https://w3id.org/eudpp#independentReviewPanel>
+                                                                        <https://w3id.org/eudpp#notReviewed>
+                                                                      )
+                                                          ] ;
+                                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                      rdfs:comment "Kind of critical-review/verification performed on a dataset. Enumeration matching ILCD TypeOfReviewValues."@en ;
+                                      rdfs:label "Type of Review"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base"@en .
+
+
+###  https://w3id.org/eudpp#WaterConsumptionResult
+<https://w3id.org/eudpp#WaterConsumptionResult> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/eudpp#InventoryIndicatorResult> ;
+                                                rdfs:comment """An LCA inventory indicator result quantifying the net consumption of fresh water resources in a product system. 
+This class is typically associated with the EN 15804+A2 inventory indicator “Use of net fresh water” (FW), though no formal quantifiesIndicator restriction is imposed to allow for future indicator additions or revised indicator frameworks."""@en ;
+                                                rdfs:label "Water Consumption Result"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/eudpp#accreditedThirdPartyReview
+<https://w3id.org/eudpp#accreditedThirdPartyReview> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/eudpp#TypeOfReview> ;
+                                                    rdfs:comment "Reviewer independent of the organisations involved and accredited by an independent accreditation body. Highest level acceptable for EN 15804+A2 compliance."@en ;
+                                                    rdfs:label "Accredited third party review"@en ;
+                                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#acidification
+<https://w3id.org/eudpp#acidification> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                       <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                       rdfs:label "Acidification"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#aopHumanHealth
+<https://w3id.org/eudpp#aopHumanHealth> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/eudpp#AreaOfProtection> ;
+                                        rdfs:label "Human health"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#aopManMadeEnvironment
+<https://w3id.org/eudpp#aopManMadeEnvironment> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/eudpp#AreaOfProtection> ;
+                                               rdfs:label "Man-made environment"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#aopNaturalEnvironment
+<https://w3id.org/eudpp#aopNaturalEnvironment> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/eudpp#AreaOfProtection> ;
+                                               rdfs:label "Natural environment"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#aopNaturalResources
+<https://w3id.org/eudpp#aopNaturalResources> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/eudpp#AreaOfProtection> ;
+                                             rdfs:label "Natural resources"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#aopOther
+<https://w3id.org/eudpp#aopOther> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#AreaOfProtection> ;
+                                  rdfs:label "Other AoP"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#climateChange
+<https://w3id.org/eudpp#climateChange> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                       <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ,
+                                                                             <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                       rdfs:label "Climate change"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#dependentInternalReview
+<https://w3id.org/eudpp#dependentInternalReview> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/eudpp#TypeOfReview> ;
+                                                 rdfs:comment "Reviewer involved in data collection or modelling, or representing the process/product system. Not acceptable for EN 15804+A2 compliance."@en ;
+                                                 rdfs:label "Dependent internal review"@en ;
+                                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA1
+<https://w3id.org/eudpp#en15804moduleA1> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "A1 - Raw material extraction and supply"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "A1"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA1A3
+<https://w3id.org/eudpp#en15804moduleA1A3> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#LifeCycleModule> ;
+                                           rdfs:label "A1-A3 - Product stage (aggregated)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "A1-A3"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA2
+<https://w3id.org/eudpp#en15804moduleA2> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "A2 - Transport to manufacturer"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "A2"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA3
+<https://w3id.org/eudpp#en15804moduleA3> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "A3 - Manufacturing"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "A3"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA4
+<https://w3id.org/eudpp#en15804moduleA4> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "A4 - Transport to building site"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "A4"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleA5
+<https://w3id.org/eudpp#en15804moduleA5> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "A5 - Construction / installation"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "A5"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB1
+<https://w3id.org/eudpp#en15804moduleB1> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B1 - Use"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B1"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB2
+<https://w3id.org/eudpp#en15804moduleB2> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B2 - Maintenance"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B2"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB3
+<https://w3id.org/eudpp#en15804moduleB3> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B3 - Repair"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B3"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB4
+<https://w3id.org/eudpp#en15804moduleB4> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B4 - Replacement"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B4"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB5
+<https://w3id.org/eudpp#en15804moduleB5> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B5 - Refurbishment"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B5"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB6
+<https://w3id.org/eudpp#en15804moduleB6> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B6 - Operational energy use"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B6"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleB7
+<https://w3id.org/eudpp#en15804moduleB7> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "B7 - Operational water use"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "B7"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleC1
+<https://w3id.org/eudpp#en15804moduleC1> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "C1 - Deconstruction / demolition"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "C1"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleC2
+<https://w3id.org/eudpp#en15804moduleC2> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "C2 - Transport to waste processing"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "C2"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleC3
+<https://w3id.org/eudpp#en15804moduleC3> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "C3 - Waste processing"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "C3"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#en15804moduleC4
+<https://w3id.org/eudpp#en15804moduleC4> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LifeCycleModule> ;
+                                         rdfs:label "C4 - Disposal"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "C4"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#eutrophication
+<https://w3id.org/eudpp#eutrophication> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                        <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                        rdfs:label "Eutrophication"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#freeOfChargeAll
+<https://w3id.org/eudpp#freeOfChargeAll> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LicenseType> ;
+                                         rdfs:comment "The study can be freely accessed and used by all user types and for all uses, including commercial."@en ;
+                                         rdfs:label "Free of charge for all users and uses"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#freeOfChargeMembers
+<https://w3id.org/eudpp#freeOfChargeMembers> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/eudpp#LicenseType> ;
+                                             rdfs:comment "The study is accessible free of charge only to members of the dataset owner's organisation."@en ;
+                                             rdfs:label "Free of charge for members only"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#freeOfChargeSome
+<https://w3id.org/eudpp#freeOfChargeSome> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/eudpp#LicenseType> ;
+                                          rdfs:comment "The study can be accessed free of charge for certain user types or uses."@en ;
+                                          rdfs:label "Free of charge for some user types or use types"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#freshwaterEcotoxicity
+<https://w3id.org/eudpp#freshwaterEcotoxicity> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                               <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                               rdfs:label "Freshwater ecotoxicity"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#fullyCompliant
+<https://w3id.org/eudpp#fullyCompliant> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/eudpp#ComplianceStatus> ;
+                                        rdfs:comment "The EPD study is declared fully compliant with the referenced compliance system."@en ;
+                                        rdfs:label "Fully compliant"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_coreImpact
+<https://w3id.org/eudpp#group_coreImpact> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                          rdfs:comment "Core set of 13 characterised impact indicators mandatory for EN 15804+A2 EPDs (Table 3)."@en ;
+                                          rdfs:label "core impact"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_exportedEnergy
+<https://w3id.org/eudpp#group_exportedEnergy> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                              rdfs:comment "Exported-energy inventory indicators of EN 15804+A2 (electrical energy, thermal energy)."@en ;
+                                              rdfs:label "exported energy"@en ;
+                                              <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_resourceUse
+<https://w3id.org/eudpp#group_resourceUse> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                           rdfs:comment "Resource-use inventory indicators of EN 15804+A2 (primary energy, secondary materials, secondary fuels, water)."@en ;
+                                           rdfs:label "resource use"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_valorisation
+<https://w3id.org/eudpp#group_valorisation> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                            rdfs:comment "Valorisation-output inventory indicators of EN 15804+A2 (components for re-use, materials for recycling, materials for energy recovery)."@en ;
+                                            rdfs:label "valorisation"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_waste
+<https://w3id.org/eudpp#group_waste> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                     rdfs:comment "Waste-output inventory indicators of EN 15804+A2 (hazardous, non-hazardous, radioactive waste disposed)."@en ;
+                                     rdfs:label "waste"@en ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#group_withCaveats
+<https://w3id.org/eudpp#group_withCaveats> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#EN15804IndicatorGroup> ;
+                                           rdfs:comment "Additional 6 characterised impact indicators of EN 15804+A2 that must be reported with the standard caveat statement (Table 4)."@en ;
+                                           rdfs:label "impact with caveats"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#humanToxicity
+<https://w3id.org/eudpp#humanToxicity> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                       <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ;
+                                       rdfs:label "Human toxicity"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#ind_ADPE
+<https://w3id.org/eudpp#ind_ADPE> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                  rdfs:comment "Abiotic depletion potential for non-fossil resources (minerals and metals), in kg Sb-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                  rdfs:label "ADPE - Abiotic Depletion Potential (elements, minerals and metals)"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "ADPE"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "kg Sb-eq"@en ;
+                                  :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_resourceUseMineralsMetals> .
+
+
+###  https://w3id.org/eudpp#ind_ADPF
+<https://w3id.org/eudpp#ind_ADPF> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                  rdfs:comment "Abiotic depletion potential for fossil resources, in MJ (net calorific value). Core EN 15804+A2 impact indicator."@en ;
+                                  rdfs:label "ADPF - Abiotic Depletion Potential (fossil resources)"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "ADPF"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en ;
+                                  :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_resourceUseFossils> .
+
+
+###  https://w3id.org/eudpp#ind_AP
+<https://w3id.org/eudpp#ind_AP> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                rdfs:comment "Acidification accumulated exceedance, in mol H+-equivalent. Core EN 15804+A2 impact indicator (note: unit change versus EN 15804+A1, which used kg SO2-eq)."@en ;
+                                rdfs:label "AP - Acidification (accumulated exceedance)"@en ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "AP"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                <https://w3id.org/eudpp#unitAsString> "mol H+-eq"@en ;
+                                :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_acidification> .
+
+
+###  https://w3id.org/eudpp#ind_CRU
+<https://w3id.org/eudpp#ind_CRU> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_valorisation> ;
+                                 rdfs:comment "Components for re-use, in kg. EN 15804+A2 inventory indicator (output flow - valorisation)."@en ;
+                                 rdfs:label "CRU - Components for re-use"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "CRU"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_EEE
+<https://w3id.org/eudpp#ind_EEE> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_exportedEnergy> ;
+                                 rdfs:comment "Exported electrical energy, in MJ per energy carrier. EN 15804+A2 inventory indicator (output flow - exported energy)."@en ;
+                                 rdfs:label "EEE - Exported electrical energy"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "EEE"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "MJ per energy carrier"@en .
+
+
+###  https://w3id.org/eudpp#ind_EET
+<https://w3id.org/eudpp#ind_EET> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_exportedEnergy> ;
+                                 rdfs:comment "Exported thermal energy, in MJ per energy carrier. EN 15804+A2 inventory indicator (output flow - exported energy)."@en ;
+                                 rdfs:label "EET - Exported thermal energy"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "EET"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "MJ per energy carrier"@en .
+
+
+###  https://w3id.org/eudpp#ind_EF_acidification
+<https://w3id.org/eudpp#ind_EF_acidification> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                              rdfs:comment "Accumulated exceedance, in mol H+-equivalent. EF 3.1 / PEF impact category."@en ;
+                                              rdfs:label "Acidification EF"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "Acidification"@en ;
+                                              <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                              <https://w3id.org/eudpp#unitAsString> "mol H+-eq"@en ;
+                                              :assessesImpactCategory <https://w3id.org/eudpp#acidification> .
+
+
+###  https://w3id.org/eudpp#ind_EF_climateChange
+<https://w3id.org/eudpp#ind_EF_climateChange> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                              rdfs:comment "Radiative forcing as global warming potential, GWP100, expressed in kg CO2-equivalent. Aggregate of climate-change effects from fossil, biogenic and land-use-and-land-use-change sources. EF 3.1 / PEF impact category. Colloquially known as the carbon footprint of the product. JRC characterisation factors per EUR 31414 EN (2023)."@en ;
+                                              rdfs:label "Climate change EF"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "Carbon footprint"@en ,
+                                                                                             "Climate change"@en ;
+                                              <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                              <https://w3id.org/eudpp#unitAsString> "kg CO2-eq"@en ;
+                                              :assessesImpactCategory <https://w3id.org/eudpp#climateChange> .
+
+
+###  https://w3id.org/eudpp#ind_EF_ecotoxicityFreshwater
+<https://w3id.org/eudpp#ind_EF_ecotoxicityFreshwater> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                      rdfs:comment "Comparative toxic unit for ecosystems (freshwater), in CTUe. EF 3.1 / PEF impact category."@en ;
+                                                      rdfs:label "Ecotoxicity, freshwater"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#altLabel> "Ecotoxicity, freshwater"@en ;
+                                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                      <https://w3id.org/eudpp#unitAsString> "CTUe"@en ;
+                                                      :assessesImpactCategory <https://w3id.org/eudpp#freshwaterEcotoxicity> .
+
+
+###  https://w3id.org/eudpp#ind_EF_eutrophicationFreshwater
+<https://w3id.org/eudpp#ind_EF_eutrophicationFreshwater> rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                         rdfs:comment "Fraction of nutrients reaching the freshwater end compartment, in kg P-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                         rdfs:label "Eutrophication, freshwater"@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#altLabel> "Eutrophication, freshwater"@en ;
+                                                         <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                         <https://w3id.org/eudpp#unitAsString> "kg P-eq"@en ;
+                                                         :assessesImpactCategory <https://w3id.org/eudpp#eutrophication> .
+
+
+###  https://w3id.org/eudpp#ind_EF_eutrophicationMarine
+<https://w3id.org/eudpp#ind_EF_eutrophicationMarine> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                     rdfs:comment "Fraction of nutrients reaching the marine end compartment, in kg N-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                     rdfs:label "Eutrophication, marine"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#altLabel> "Eutrophication, marine"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                     <https://w3id.org/eudpp#unitAsString> "kg N-eq"@en ;
+                                                     :assessesImpactCategory <https://w3id.org/eudpp#eutrophication> .
+
+
+###  https://w3id.org/eudpp#ind_EF_eutrophicationTerrestrial
+<https://w3id.org/eudpp#ind_EF_eutrophicationTerrestrial> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                          rdfs:comment "Accumulated exceedance for terrestrial compartments, in mol N-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                          rdfs:label "Eutrophication, terrestrial"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Eutrophication, terrestrial"@en ;
+                                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                          <https://w3id.org/eudpp#unitAsString> "mol N-eq"@en ;
+                                                          :assessesImpactCategory <https://w3id.org/eudpp#eutrophication> .
+
+
+###  https://w3id.org/eudpp#ind_EF_humanToxicityCancer
+<https://w3id.org/eudpp#ind_EF_humanToxicityCancer> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                    rdfs:comment "Human toxicity, cancer effects, in CTUh (comparative toxic unit for humans). EF 3.1 / PEF impact category."@en ;
+                                                    rdfs:label "Human toxicity, cancer"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "Human toxicity, cancer"@en ;
+                                                    <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                    <https://w3id.org/eudpp#unitAsString> "CTUh"@en ;
+                                                    :assessesImpactCategory <https://w3id.org/eudpp#humanToxicity> .
+
+
+###  https://w3id.org/eudpp#ind_EF_humanToxicityNonCancer
+<https://w3id.org/eudpp#ind_EF_humanToxicityNonCancer> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                       rdfs:comment "Human toxicity, non-cancer effects, in CTUh. EF 3.1 / PEF impact category."@en ;
+                                                       rdfs:label "Human toxicity, non-cancer"@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "Human toxicity, non-cancer"@en ;
+                                                       <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                       <https://w3id.org/eudpp#unitAsString> "CTUh"@en ;
+                                                       :assessesImpactCategory <https://w3id.org/eudpp#humanToxicity> .
+
+
+###  https://w3id.org/eudpp#ind_EF_ionisingRadiationHumanHealth
+<https://w3id.org/eudpp#ind_EF_ionisingRadiationHumanHealth> rdf:type owl:NamedIndividual ,
+                                                                      <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                             rdfs:comment "Human exposure efficiency to ionising radiation, relative to U-235, in kBq U235-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                             rdfs:label "Ionising radiation, human health EF"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#altLabel> "Ionising radiation, human health"@en ;
+                                                             <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                             <https://w3id.org/eudpp#unitAsString> "kBq U235-eq"@en ;
+                                                             :assessesImpactCategory <https://w3id.org/eudpp#ionisingRadiationHumanHealth> .
+
+
+###  https://w3id.org/eudpp#ind_EF_landUse
+<https://w3id.org/eudpp#ind_EF_landUse> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                        rdfs:comment "Soil quality index, dimensionless (Pt), aggregating biotic production, erosion resistance, mechanical filtration and groundwater replenishment. EF 3.1 / PEF impact category."@en ;
+                                        rdfs:label "Land use"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#altLabel> "Land use"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                        <https://w3id.org/eudpp#unitAsString> "dimensionless (Pt)"@en ;
+                                        :assessesImpactCategory <https://w3id.org/eudpp#landUseSoilQuality> .
+
+
+###  https://w3id.org/eudpp#ind_EF_ozoneDepletion
+<https://w3id.org/eudpp#ind_EF_ozoneDepletion> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                               rdfs:comment "Ozone depletion potential (ODP), in kg CFC-11-equivalent. EF 3.1 / PEF impact category."@en ;
+                                               rdfs:label "Ozone depletion EF"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#altLabel> "Ozone depletion"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                               <https://w3id.org/eudpp#unitAsString> "kg CFC-11-eq"@en ;
+                                               :assessesImpactCategory <https://w3id.org/eudpp#ozoneDepletion> .
+
+
+###  https://w3id.org/eudpp#ind_EF_particulateMatter
+<https://w3id.org/eudpp#ind_EF_particulateMatter> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                  rdfs:comment "Impact on human health from fine particulate matter, in disease incidence. EF 3.1 / PEF impact category."@en ;
+                                                  rdfs:label "Particulate matter"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#altLabel> "Particulate matter"@en ;
+                                                  <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                  <https://w3id.org/eudpp#unitAsString> "disease incidence"@en ;
+                                                  :assessesImpactCategory <https://w3id.org/eudpp#respiratoryInorganics> .
+
+
+###  https://w3id.org/eudpp#ind_EF_photochemicalOzoneFormation
+<https://w3id.org/eudpp#ind_EF_photochemicalOzoneFormation> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                            rdfs:comment "Tropospheric ozone concentration increase, photochemical ozone formation potential, in kg NMVOC-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                            rdfs:label "Photochemical ozone formation, human health"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#altLabel> "Photochemical ozone formation, human health"@en ;
+                                                            <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                            <https://w3id.org/eudpp#unitAsString> "kg NMVOC-eq"@en ;
+                                                            :assessesImpactCategory <https://w3id.org/eudpp#photochemicalOzoneFormation> .
+
+
+###  https://w3id.org/eudpp#ind_EF_resourceUseFossils
+<https://w3id.org/eudpp#ind_EF_resourceUseFossils> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                   rdfs:comment "Abiotic resource depletion of fossil fuels (ADP-fossil), in MJ. EF 3.1 / PEF impact category."@en ;
+                                                   rdfs:label "Resource use, fossils"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Resource use, fossils"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                   <https://w3id.org/eudpp#unitAsString> "MJ"@en ;
+                                                   :assessesImpactCategory <https://w3id.org/eudpp#resourceUseFossil> .
+
+
+###  https://w3id.org/eudpp#ind_EF_resourceUseMineralsMetals
+<https://w3id.org/eudpp#ind_EF_resourceUseMineralsMetals> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                                          rdfs:comment "Abiotic resource depletion (ADP) of mineral and metal resources, in kg Sb-equivalent. EF 3.1 / PEF impact category."@en ;
+                                                          rdfs:label "Resource use, minerals and metals EF"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Resource use, minerals and metals"@en ;
+                                                          <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                                          <https://w3id.org/eudpp#unitAsString> "kg Sb-eq"@en ;
+                                                          :assessesImpactCategory <https://w3id.org/eudpp#resourceUseMineralsMetals> .
+
+
+###  https://w3id.org/eudpp#ind_EF_singleScore
+<https://w3id.org/eudpp#ind_EF_singleScore> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/eudpp#EnvironmentalFootprintScore> ;
+                                            rdfs:comment "EU Environmental Footprint single score (also referred to as PEF score), computed as a normalised and weighted aggregate of the 16 EF impact-category results. Expressed in dimensionless points (Pt). The applied normalisation factors and weighting set are determined by the methodology version (e.g. EF 3.1 per JRC EUR 31414 EN), which is resolvable from the study via eudpp:hasComplianceDeclaration on its referenced eudpp:ComplianceSystem source."@en ;
+                                            rdfs:label "Environmental Footprint single score"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "EF single score"@en ,
+                                                                                           "Environmental footprint"@en ,
+                                                                                           "PEF score"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                            <https://w3id.org/eudpp#unitAsString> "dimensionless (Pt)"@en .
+
+
+###  https://w3id.org/eudpp#ind_EF_waterUse
+<https://w3id.org/eudpp#ind_EF_waterUse> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#LCIAImpactIndicator> ;
+                                         rdfs:comment "Weighted user deprivation potential, in m3 world-equivalent. EF 3.1 / PEF impact category."@en ;
+                                         rdfs:label "Water use"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "Water use"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" ;
+                                         <https://w3id.org/eudpp#unitAsString> "m3 world-eq"@en ;
+                                         :assessesImpactCategory <https://w3id.org/eudpp#waterUseDeprivation> .
+
+
+###  https://w3id.org/eudpp#ind_EPfreshwater
+<https://w3id.org/eudpp#ind_EPfreshwater> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                          <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                          rdfs:comment "Fraction of nutrients reaching freshwater end compartment, in kg P-equivalent. Core EN 15804+A2 impact indicator. ERRATUM: the published text of EN 15804:2012+A2:2019 states the unit as 'kg PO4-eq' for this indicator, but the characterisation factors used by the EF 3.1 implementation operate on phosphorus (P), so the correct unit when reporting results against EF 3.1 characterisation factors is 'kg P-eq'. This ontology adopts the corrected unit. See JRC / EPD programme clarifications for details."@en ;
+                                          rdfs:label "EP-freshwater - Eutrophication (freshwater)"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "EP-freshwater"@en ;
+                                          <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                          <https://w3id.org/eudpp#unitAsString> "kg P-eq"@en ;
+                                          :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_eutrophicationFreshwater> .
+
+
+###  https://w3id.org/eudpp#ind_EPmarine
+<https://w3id.org/eudpp#ind_EPmarine> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                      <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                      rdfs:comment "Fraction of nutrients reaching marine end compartment, in kg N-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                      rdfs:label "EP-marine - Eutrophication (marine)"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "EP-marine"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                      <https://w3id.org/eudpp#unitAsString> "kg N-eq"@en ;
+                                      :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_eutrophicationMarine> .
+
+
+###  https://w3id.org/eudpp#ind_EPterrestrial
+<https://w3id.org/eudpp#ind_EPterrestrial> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                           <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                           rdfs:comment "Eutrophication accumulated exceedance for terrestrial compartments, in mol N-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                           rdfs:label "EP-terrestrial - Eutrophication (accumulated exceedance, terrestrial)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "EP-terrestrial"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                           <https://w3id.org/eudpp#unitAsString> "mol N-eq"@en ;
+                                           :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_eutrophicationTerrestrial> .
+
+
+###  https://w3id.org/eudpp#ind_ETPfw
+<https://w3id.org/eudpp#ind_ETPfw> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                   <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                   rdfs:comment "Ecotoxicity freshwater, in CTUe (comparative toxic units for ecosystems). EN 15804+A2 indicator with caveat."@en ;
+                                   rdfs:label "ETP-fw - Potential comparative Toxic Unit for ecosystems (freshwater)"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "ETP-fw"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                   <https://w3id.org/eudpp#unitAsString> "CTUe"@en ;
+                                   :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_ecotoxicityFreshwater> .
+
+
+###  https://w3id.org/eudpp#ind_FW
+<https://w3id.org/eudpp#ind_FW> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                rdfs:comment "Net use of fresh water, in m3. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                rdfs:label "FW - Net use of fresh water"@en ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "FW"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                <https://w3id.org/eudpp#unitAsString> "m3"@en .
+
+
+###  https://w3id.org/eudpp#ind_GWPbiogenic
+<https://w3id.org/eudpp#ind_GWPbiogenic> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                         <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                         rdfs:comment "Global Warming Potential for biogenic GHG emissions and removals, in kg CO2-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                         rdfs:label "GWP-biogenic - Global Warming Potential (biogenic)"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#altLabel> "GWP-biogenic"@en ;
+                                         <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                         <https://w3id.org/eudpp#unitAsString> "kg CO2-eq"@en ;
+                                         :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_climateChange> .
+
+
+###  https://w3id.org/eudpp#ind_GWPfossil
+<https://w3id.org/eudpp#ind_GWPfossil> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                       <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                       rdfs:comment "Global Warming Potential for fossil-fuel-related GHG emissions, in kg CO2-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                       rdfs:label "GWP-fossil - Global Warming Potential (fossil)"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#altLabel> "GWP-fossil"@en ;
+                                       <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                       <https://w3id.org/eudpp#unitAsString> "kg CO2-eq"@en ;
+                                       :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_climateChange> .
+
+
+###  https://w3id.org/eudpp#ind_GWPluluc
+<https://w3id.org/eudpp#ind_GWPluluc> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                      <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                      rdfs:comment "Global Warming Potential from land use and land-use-change emissions and removals, in kg CO2-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                      rdfs:label "GWP-luluc - Global Warming Potential (land use and land use change)"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "GWP-luluc"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                      <https://w3id.org/eudpp#unitAsString> "kg CO2-eq"@en ;
+                                      :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_climateChange> .
+
+
+###  https://w3id.org/eudpp#ind_GWPtotal
+<https://w3id.org/eudpp#ind_GWPtotal> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                      <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                      rdfs:comment "Global Warming Potential including all GHG emissions and removals, expressed in kg CO2-equivalent. Core EN 15804+A2 impact indicator. Colloquially known as the carbon footprint of the product."@en ;
+                                      rdfs:label "GWP-total - Global Warming Potential (total)"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#altLabel> "Carbon footprint"@en ,
+                                                                                     "GWP-total"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                      <https://w3id.org/eudpp#unitAsString> "kg CO2-eq"@en ;
+                                      :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_climateChange> .
+
+
+###  https://w3id.org/eudpp#ind_HTPc
+<https://w3id.org/eudpp#ind_HTPc> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                  rdfs:comment "Human toxicity, cancer effects, in CTUh. EN 15804+A2 indicator with caveat."@en ;
+                                  rdfs:label "HTP-c - Potential comparative Toxic Unit for humans (cancer)"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "HTP-c"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "CTUh"@en ;
+                                  :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_humanToxicityCancer> .
+
+
+###  https://w3id.org/eudpp#ind_HTPnc
+<https://w3id.org/eudpp#ind_HTPnc> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                   <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                   rdfs:comment "Human toxicity, non-cancer effects, in CTUh. EN 15804+A2 indicator with caveat."@en ;
+                                   rdfs:label "HTP-nc - Potential comparative Toxic Unit for humans (non-cancer)"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "HTP-nc"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                   <https://w3id.org/eudpp#unitAsString> "CTUh"@en ;
+                                   :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_humanToxicityNonCancer> .
+
+
+###  https://w3id.org/eudpp#ind_HWD
+<https://w3id.org/eudpp#ind_HWD> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_waste> ;
+                                 rdfs:comment "Hazardous waste disposed, in kg. EN 15804+A2 inventory indicator (output flow - waste)."@en ;
+                                 rdfs:label "HWD - Hazardous waste disposed"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "HWD"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_IRP
+<https://w3id.org/eudpp#ind_IRP> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                 rdfs:comment "Ionising radiation, potential human exposure efficiency relative to U235, in kBq U235-eq. EN 15804+A2 indicator with caveat."@en ;
+                                 rdfs:label "IRP - Potential Human exposure efficiency relative to U235"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "IRP"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kBq U235-eq"@en ;
+                                 :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_ionisingRadiationHumanHealth> .
+
+
+###  https://w3id.org/eudpp#ind_MER
+<https://w3id.org/eudpp#ind_MER> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_valorisation> ;
+                                 rdfs:comment "Materials for energy recovery, in kg. EN 15804+A2 inventory indicator (output flow - valorisation)."@en ;
+                                 rdfs:label "MER - Materials for energy recovery"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "MER"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_MFR
+<https://w3id.org/eudpp#ind_MFR> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_valorisation> ;
+                                 rdfs:comment "Materials for recycling, in kg. EN 15804+A2 inventory indicator (output flow - valorisation)."@en ;
+                                 rdfs:label "MFR - Materials for recycling"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "MFR"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_NHWD
+<https://w3id.org/eudpp#ind_NHWD> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_waste> ;
+                                  rdfs:comment "Non-hazardous waste disposed, in kg. EN 15804+A2 inventory indicator (output flow - waste)."@en ;
+                                  rdfs:label "NHWD - Non-hazardous waste disposed"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "NHWD"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_NRSF
+<https://w3id.org/eudpp#ind_NRSF> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                  rdfs:comment "Use of non-renewable secondary fuels, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                  rdfs:label "NRSF - Use of non-renewable secondary fuels"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "NRSF"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_ODP
+<https://w3id.org/eudpp#ind_ODP> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                 rdfs:comment "Ozone depletion potential, in kg CFC-11-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                 rdfs:label "ODP - Depletion potential of the stratospheric ozone layer"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "ODP"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg CFC-11-eq"@en ;
+                                 :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_ozoneDepletion> .
+
+
+###  https://w3id.org/eudpp#ind_PENRE
+<https://w3id.org/eudpp#ind_PENRE> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                   <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                   rdfs:comment "Use of non-renewable primary energy excluding non-renewable primary energy resources used as raw materials, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                   rdfs:label "PENRE - Use of non-renewable primary energy (excl. raw material)"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "PENRE"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                   <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PENRM
+<https://w3id.org/eudpp#ind_PENRM> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                   <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                   rdfs:comment "Use of non-renewable primary energy resources used as raw materials, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                   rdfs:label "PENRM - Use of non-renewable primary energy resources used as raw materials"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "PENRM"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                   <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PENRT
+<https://w3id.org/eudpp#ind_PENRT> rdf:type owl:NamedIndividual ,
+                                            <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                   <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                   rdfs:comment "Total use of non-renewable primary energy resources (PENRE + PENRM), in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                   rdfs:label "PENRT - Total use of non-renewable primary energy resources"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#altLabel> "PENRT"@en ;
+                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                   <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PERE
+<https://w3id.org/eudpp#ind_PERE> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                  rdfs:comment "Use of renewable primary energy excluding renewable primary energy resources used as raw materials, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                  rdfs:label "PERE - Use of renewable primary energy (excl. raw material)"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "PERE"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PERM
+<https://w3id.org/eudpp#ind_PERM> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                  rdfs:comment "Use of renewable primary energy resources used as raw materials, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                  rdfs:label "PERM - Use of renewable primary energy resources used as raw materials"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "PERM"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PERT
+<https://w3id.org/eudpp#ind_PERT> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                  rdfs:comment "Total use of renewable primary energy resources (PERE + PERM), in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                  rdfs:label "PERT - Total use of renewable primary energy resources"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "PERT"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_PM
+<https://w3id.org/eudpp#ind_PM> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                rdfs:comment "Particulate-matter-related incidence of disease, in disease incidence. EN 15804+A2 indicator with caveat: to be reported with the standard caveat statement per EN 15804+A2 Table 4."@en ;
+                                rdfs:label "PM - Potential incidence of disease due to PM emissions"@en ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "PM"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                <https://w3id.org/eudpp#unitAsString> "disease incidence"@en ;
+                                :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_particulateMatter> .
+
+
+###  https://w3id.org/eudpp#ind_POCP
+<https://w3id.org/eudpp#ind_POCP> rdf:type owl:NamedIndividual ,
+                                           <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                  <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                  rdfs:comment "Photochemical ozone creation potential, in kg NMVOC-equivalent. Core EN 15804+A2 impact indicator."@en ;
+                                  rdfs:label "POCP - Formation potential of tropospheric ozone"@en ;
+                                  <http://www.w3.org/2004/02/skos/core#altLabel> "POCP"@en ;
+                                  <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                  <https://w3id.org/eudpp#unitAsString> "kg NMVOC-eq"@en ;
+                                  :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_photochemicalOzoneFormation> .
+
+
+###  https://w3id.org/eudpp#ind_RSF
+<https://w3id.org/eudpp#ind_RSF> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                 rdfs:comment "Use of renewable secondary fuels, in MJ net calorific value. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                 rdfs:label "RSF - Use of renewable secondary fuels"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "RSF"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "MJ, net calorific value"@en .
+
+
+###  https://w3id.org/eudpp#ind_RWD
+<https://w3id.org/eudpp#ind_RWD> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_waste> ;
+                                 rdfs:comment "Radioactive waste disposed, in kg. EN 15804+A2 inventory indicator (output flow - waste)."@en ;
+                                 rdfs:label "RWD - Radioactive waste disposed"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "RWD"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_SM
+<https://w3id.org/eudpp#ind_SM> rdf:type owl:NamedIndividual ,
+                                         <https://w3id.org/eudpp#EN15804InventoryIndicator> ;
+                                <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_resourceUse> ;
+                                rdfs:comment "Use of secondary material, in kg. EN 15804+A2 inventory indicator (resource use)."@en ;
+                                rdfs:label "SM - Use of secondary material"@en ;
+                                <http://www.w3.org/2004/02/skos/core#altLabel> "SM"@en ;
+                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                <https://w3id.org/eudpp#unitAsString> "kg"@en .
+
+
+###  https://w3id.org/eudpp#ind_SQP
+<https://w3id.org/eudpp#ind_SQP> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_withCaveats> ;
+                                 rdfs:comment "Soil quality (land use) index, dimensionless (Pt). EN 15804+A2 indicator with caveat."@en ;
+                                 rdfs:label "SQP - Potential Soil Quality Index"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "SQP"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "dimensionless (Pt)"@en ;
+                                 :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_landUse> .
+
+
+###  https://w3id.org/eudpp#ind_WDP
+<https://w3id.org/eudpp#ind_WDP> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#EN15804ImpactIndicator> ;
+                                 <https://w3id.org/eudpp#belongsToEn15804Group> <https://w3id.org/eudpp#group_coreImpact> ;
+                                 rdfs:comment "Deprivation-weighted water consumption, in m3 world-equivalent deprived. Core EN 15804+A2 impact indicator."@en ;
+                                 rdfs:label "WDP - Water (user) deprivation potential"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "WDP"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" ;
+                                 <https://w3id.org/eudpp#unitAsString> "m3 world-eq deprived"@en ;
+                                 :relatesToLCAIndicator <https://w3id.org/eudpp#ind_EF_waterUse> .
+
+
+###  https://w3id.org/eudpp#independentExternalReview
+<https://w3id.org/eudpp#independentExternalReview> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/eudpp#TypeOfReview> ;
+                                                   rdfs:comment "Reviewer independent of the organisations involved. Acceptable for EN 15804+A2 compliance."@en ;
+                                                   rdfs:label "Independent external review"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#independentInternalReview
+<https://w3id.org/eudpp#independentInternalReview> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/eudpp#TypeOfReview> ;
+                                                   rdfs:comment "Reviewer not involved in the work but belonging to the same organisation or legally linked organisation. Acceptable only for generic data per InData."@en ;
+                                                   rdfs:label "Independent internal review"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#independentReviewPanel
+<https://w3id.org/eudpp#independentReviewPanel> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/eudpp#TypeOfReview> ;
+                                                rdfs:comment "Panel of at least three independent internal or external reviewers, chaired by an independent external reviewer."@en ;
+                                                rdfs:label "Independent review panel"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#ionisingRadiationEcosystems
+<https://w3id.org/eudpp#ionisingRadiationEcosystems> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                     <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                                     rdfs:comment "Ionising radiation on ecosystems. Note: EN 15804+A2 does not mandate an ecosystems-level ionising-radiation indicator (only IRP for human health). This impact category is retained for ILCD completeness; no EN 15804+A2 indicator individual maps to it."@en ;
+                                                     rdfs:label "Ionising radiation, ecosystems"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#ionisingRadiationHumanHealth
+<https://w3id.org/eudpp#ionisingRadiationHumanHealth> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                      <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ;
+                                                      rdfs:label "Ionising radiation, human health"@en ;
+                                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#landUseSoilQuality
+<https://w3id.org/eudpp#landUseSoilQuality> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                            <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ,
+                                                                                  <https://w3id.org/eudpp#aopNaturalResources> ;
+                                            rdfs:label "Land use / soil quality"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#licenseFee
+<https://w3id.org/eudpp#licenseFee> rdf:type owl:NamedIndividual ,
+                                             <https://w3id.org/eudpp#LicenseType> ;
+                                    rdfs:comment "The study is accessible for a license fee."@en ;
+                                    rdfs:label "License fee"@en ;
+                                    <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#licenseOther
+<https://w3id.org/eudpp#licenseOther> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/eudpp#LicenseType> ;
+                                      rdfs:comment "Other licensing conditions apply; see accessRestrictions for details."@en ;
+                                      rdfs:label "Other license"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#marineEcotoxicity
+<https://w3id.org/eudpp#marineEcotoxicity> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                           <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                           rdfs:label "Marine ecotoxicity"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#methodology_CML2002
+<https://w3id.org/eudpp#methodology_CML2002> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/eudpp#LCAMethodology> ;
+                                             <https://w3id.org/eudpp#methodologyVersion> "2002" ;
+                                             rdfs:comment "CML-IA (Institute of Environmental Sciences, Leiden University) baseline 2002 methodology. Used by EN 15804+A1 (predecessor of +A2)."@en ;
+                                             rdfs:label "CML 2002"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "CML 2002"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#methodology_EF3_0
+<https://w3id.org/eudpp#methodology_EF3_0> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#LCAMethodology> ;
+                                           <https://w3id.org/eudpp#methodologyVersion> "3.0" ;
+                                           rdfs:comment "European Commission Environmental Footprint method, version 3.0. Predecessor of EF 3.1; some characterisation factors differ."@en ;
+                                           rdfs:label "Environmental Footprint 3.0"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "EF 3.0"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#methodology_EF3_1
+<https://w3id.org/eudpp#methodology_EF3_1> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#LCAMethodology> ;
+                                           <https://w3id.org/eudpp#methodologyVersion> "3.1" ;
+                                           rdfs:comment "European Commission Environmental Footprint method, version 3.1. Mandated by EN 15804+A2 as the characterisation basis for the 13 core and 6 with-caveat impact indicators."@en ;
+                                           rdfs:label "Environmental Footprint 3.1"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "EF 3.1"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#methodology_EN15804InventoryRules
+<https://w3id.org/eudpp#methodology_EN15804InventoryRules> rdf:type owl:NamedIndividual ,
+                                                                    <https://w3id.org/eudpp#LCAMethodology> ;
+                                                           <https://w3id.org/eudpp#methodologyVersion> "A2:2019" ;
+                                                           rdfs:comment "Inventory calculation rules defined by EN 15804+A2 itself for the 18 resource-use / waste / output-flow inventory indicators (PERE, PERM, ... EEE, EET). This \"methodology\" is inventory-level rather than characterised; it is distinguished here from EF 3.1 because the inventory indicators do not use EF characterisation factors."@en ;
+                                                           rdfs:label "EN 15804+A2 inventory calculation rules"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "EN 15804+A2 inventory"@en ;
+                                                           <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#methodology_IPCC_AR6
+<https://w3id.org/eudpp#methodology_IPCC_AR6> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/eudpp#LCAMethodology> ;
+                                              <https://w3id.org/eudpp#methodologyVersion> "AR6 2021" ;
+                                              rdfs:comment "IPCC Sixth Assessment Report (2021) global-warming-potential characterisation factors, 100-year time horizon."@en ;
+                                              rdfs:label "IPCC AR6 (GWP)"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#altLabel> "IPCC AR6"@en ;
+                                              <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#methodology_ReCiPe2016
+<https://w3id.org/eudpp#methodology_ReCiPe2016> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/eudpp#LCAMethodology> ;
+                                                <https://w3id.org/eudpp#methodologyVersion> "2016" ;
+                                                rdfs:comment "ReCiPe methodology version 2016 (midpoint and endpoint). Not used by EN 15804+A2 but frequently used for non-construction-products LCAs."@en ;
+                                                rdfs:label "ReCiPe 2016"@en ;
+                                                <http://www.w3.org/2004/02/skos/core#altLabel> "ReCiPe 2016"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#moduleD
+<https://w3id.org/eudpp#moduleD> rdf:type owl:NamedIndividual ,
+                                          <https://w3id.org/eudpp#LifeCycleModule> ;
+                                 rdfs:label "D - Benefits and loads beyond the system boundary"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#altLabel> "D"@en ;
+                                 <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension" .
+
+
+###  https://w3id.org/eudpp#notCompliant
+<https://w3id.org/eudpp#notCompliant> rdf:type owl:NamedIndividual ,
+                                               <https://w3id.org/eudpp#ComplianceStatus> ;
+                                      rdfs:comment "The EPD study is declared not compliant with the referenced compliance system."@en ;
+                                      rdfs:label "Not compliant"@en ;
+                                      <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#notReviewed
+<https://w3id.org/eudpp#notReviewed> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/eudpp#TypeOfReview> ;
+                                     rdfs:comment "The dataset has not been reviewed."@en ;
+                                     rdfs:label "Not reviewed"@en ;
+                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#ozoneDepletion
+<https://w3id.org/eudpp#ozoneDepletion> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                        <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ,
+                                                                              <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                        rdfs:label "Ozone depletion"@en ;
+                                        <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#partiallyCompliant
+<https://w3id.org/eudpp#partiallyCompliant> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/eudpp#ComplianceStatus> ;
+                                            rdfs:comment "The EPD study is declared partially compliant with the referenced compliance system; deviations should be documented on the associated review or in accessRestrictions."@en ;
+                                            rdfs:label "Partially compliant"@en ;
+                                            <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology extension" .
+
+
+###  https://w3id.org/eudpp#photochemicalOzoneFormation
+<https://w3id.org/eudpp#photochemicalOzoneFormation> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                     <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ,
+                                                                                           <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                                     rdfs:label "Photochemical ozone formation"@en ;
+                                                     <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#resourceUseFossil
+<https://w3id.org/eudpp#resourceUseFossil> rdf:type owl:NamedIndividual ,
+                                                    <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                           <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalResources> ;
+                                           rdfs:label "Resource use, fossil"@en ;
+                                           <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#resourceUseMineralsMetals
+<https://w3id.org/eudpp#resourceUseMineralsMetals> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                   <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalResources> ;
+                                                   rdfs:label "Resource use, minerals and metals"@en ;
+                                                   <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#respiratoryInorganics
+<https://w3id.org/eudpp#respiratoryInorganics> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                               <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopHumanHealth> ;
+                                               rdfs:label "Respiratory inorganics / particulate matter"@en ;
+                                               <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#terrestrialEcotoxicity
+<https://w3id.org/eudpp#terrestrialEcotoxicity> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                                <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalEnvironment> ;
+                                                rdfs:label "Terrestrial ecotoxicity"@en ;
+                                                <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  https://w3id.org/eudpp#waterUseDeprivation
+<https://w3id.org/eudpp#waterUseDeprivation> rdf:type owl:NamedIndividual ,
+                                                      <https://w3id.org/eudpp#LCIAImpactCategory> ;
+                                             <https://w3id.org/eudpp#addressesAoP> <https://w3id.org/eudpp#aopNaturalResources> ;
+                                             rdfs:label "Water use / water deprivation"@en ;
+                                             <https://w3id.org/eudpp#sourceVocabulary> "ILCD base" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
