@@ -12,7 +12,7 @@
      xmlns:eudpp="https://w3id.org/eudpp#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/eudpp/LCA">
-        <owl:versionIRI rdf:resource="https://w3id.org/eudpp/LCA/3.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/eudpp/LCA/3.1"/>
         <terms:created>2026-10-5</terms:created>
         <terms:creator xml:lang="en">Fatima Danash and Marc-Andree Wolf</terms:creator>
         <terms:description xml:lang="en">LCA (Life Cycle Assessment) module of an EU DPP (Digital Product Passport) core ontology proposal of the CIRPASS-2 European project.
@@ -22,17 +22,18 @@ This module covers the environmental-performance metadata that a DPP is required
 
 DEPENDENCIES
 This module has dependencies to the following EU DPP Core Ontology (CO) modules: ACTOR and P_DPP via CON.</terms:description>
-        <terms:issued>2026-10-15</terms:issued>
+        <terms:issued xml:lang="en">2026-10-19</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
         <terms:title xml:lang="en">LCA module of the CIRPASS-2 EU DPP Core Ontology</terms:title>
         <vann:preferredNamespacePrefix>eudpp</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/eudpp#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">The LCA module of the EU DPP core ontology, version 3.0</rdfs:comment>
+        <rdfs:comment xml:lang="en">The LCA module of the EU DPP core ontology, version 3.1</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP LCA</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://indatawg.github.io/ILCD-EPD-Data-Format/"/>
         <rdfs:seeAlso rdf:resource="https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:65243"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</owl:versionInfo>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/lcanet/ia#"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -286,6 +287,19 @@ Possible values: &quot;LCA ontology&quot; (introduced by this ontology, no direc
 Cardinality: at most 1 per indicator individual.&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">computed by method</rdfs:label>
         <eudpp:sourceVocabulary xml:lang="en">LCA ontology</eudpp:sourceVocabulary>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#declaresManufacturerRecord -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#declaresManufacturerRecord">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#LCAStudy"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#ManufacturerRecord"/>
+        <rdfs:comment xml:lang="en">Links an LCA study to a manufacturer record documenting the manufacturers whose data is included in the study.</rdfs:comment>
+        <rdfs:label xml:lang="en">declares Manufacturer Record</rdfs:label>
+        <eudpp:sourceVocabulary xml:lang="en">ILCD+EPD extension: Corresponds to the element epd24:manufacturers/epd24:manufacturer</eudpp:sourceVocabulary>
     </owl:ObjectProperty>
     
 
@@ -816,6 +830,18 @@ The two indicators are not equivalent — EN15804 indicators are EPD-specific re
         <rdfs:comment xml:lang="en">Version of the characterisation model used (e.g. &quot;IPCC AR6 2021&quot; vs &quot;IPCC AR5 2013&quot;, which give different GWP100 values).</rdfs:comment>
         <rdfs:label xml:lang="en">model version</rdfs:label>
         <eudpp:sourceVocabulary xml:lang="en">LCA ontology</eudpp:sourceVocabulary>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#providesLCAData -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/eudpp#providesLCAData">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ManufacturerRecord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Indicates whether the manufacturer identified in this record directly provided primary LCA data for the study. Set to true for the reference manufacturer; may be false for manufacturers listed for traceability only.</rdfs:comment>
+        <rdfs:label xml:lang="en">provides LCA data</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1471,6 +1497,18 @@ Commonly associated with the EN 15804+A2 land use indicator (LU), which is chara
 Note that moduleA1A3 (aggregated product stage) is an alternative reporting form of A1+A2+A3; an EPD that reports A1-A3 should not additionally report A1, A2, A3 separately for the same indicator/scenario.</rdfs:comment>
         <rdfs:label xml:lang="en">Life Cycle Module</rdfs:label>
         <eudpp:sourceVocabulary xml:lang="en">ILCD+EPD extension</eudpp:sourceVocabulary>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ManufacturerRecord -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ManufacturerRecord">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A container provenance entity (prov:Entity) documenting the involvement of a manufacturer (and optionally a data provider) in a specific LCA study, including the facility concerned and whether primary LCA data was provided.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturer Record</rdfs:label>
+        <eudpp:sourceVocabulary xml:lang="en">ILCD+EPD extension: Corresponds to the element epd24:manufacturer inside epd24:manufacturers.</eudpp:sourceVocabulary>
     </owl:Class>
     
 

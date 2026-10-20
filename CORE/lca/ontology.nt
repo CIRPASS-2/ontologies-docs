@@ -1,19 +1,20 @@
 <https://w3id.org/eudpp/LCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/eudpp/LCA> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/LCA/3.0> .
+<https://w3id.org/eudpp/LCA> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/eudpp/LCA/3.1> .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/created> "2026-10-5" .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/creator> "Fatima Danash and Marc-Andree Wolf"@en .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/description> "LCA (Life Cycle Assessment) module of an EU DPP (Digital Product Passport) core ontology proposal of the CIRPASS-2 European project.\n\nSCOPE\nThis module covers the environmental-performance metadata that a DPP is required to carry under ESPR. It supports both (a) general LCA studies of any product, expressed via eudpp:LCAStudy, and (b) Environmental Product Declarations (EPDs) conforming to EN 15804+A2 with EF 3.1 characterisation, expressed via eudpp:EPDStudy (a subclass of LCAStudy). The controlled vocabulary of named individuals (impact indicators, inventory indicators, lifecycle modules, characterisation methods) follows EN 15804+A2 and EF 3.1. The module aligns structurally with the ILCD+EPD v1.3 data format (https://indatawg.github.io/ILCD-EPD-Data-Format/) and extends it with richer OWL semantics.It also relates to LCAnet/IA module (https://w3id.org/lcanet/ia#).\n\nDEPENDENCIES\nThis module has dependencies to the following EU DPP Core Ontology (CO) modules: ACTOR and P_DPP via CON."@en .
-<https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/issued> "2026-10-15" .
+<https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/issued> "2026-10-19"@en .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
 <https://w3id.org/eudpp/LCA> <http://purl.org/dc/terms/title> "LCA module of the CIRPASS-2 EU DPP Core Ontology"@en .
 <https://w3id.org/eudpp/LCA> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eudpp" .
 <https://w3id.org/eudpp/LCA> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp#" .
-<https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#comment> "The LCA module of the EU DPP core ontology, version 3.0"@en .
+<https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#comment> "The LCA module of the EU DPP core ontology, version 3.1"@en .
 <https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP LCA"@en .
 <https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://indatawg.github.io/ILCD-EPD-Data-Format/> .
 <https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:65243> .
-<https://w3id.org/eudpp/LCA> <http://www.w3.org/2002/07/owl#versionInfo> "3.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/eudpp/LCA> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/lcanet/ia#> .
+<https://w3id.org/eudpp/LCA> <http://www.w3.org/2002/07/owl#versionInfo> "3.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -147,6 +148,14 @@
 <https://w3id.org/eudpp#computedByMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from an LCAIndicator individual to the IndicatorMethod instance that describes how this indicator is computed — its impact model, impact category, methodology reference, reference report, and ILCD method metadata. \nCardinality: at most 1 per indicator individual.\""@en .
 <https://w3id.org/eudpp#computedByMethod> <http://www.w3.org/2000/01/rdf-schema#label> "computed by method"@en .
 <https://w3id.org/eudpp#computedByMethod> <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+# 
+# https://w3id.org/eudpp#declaresManufacturerRecord
+<https://w3id.org/eudpp#declaresManufacturerRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#declaresManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#LCAStudy> .
+<https://w3id.org/eudpp#declaresManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ManufacturerRecord> .
+<https://w3id.org/eudpp#declaresManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an LCA study to a manufacturer record documenting the manufacturers whose data is included in the study."@en .
+<https://w3id.org/eudpp#declaresManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#label> "declares Manufacturer Record"@en .
+<https://w3id.org/eudpp#declaresManufacturerRecord> <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element epd24:manufacturers/epd24:manufacturer"@en .
 # 
 # https://w3id.org/eudpp#followsPCR
 <https://w3id.org/eudpp#followsPCR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -477,6 +486,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#modelVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the characterisation model used (e.g. \"IPCC AR6 2021\" vs \"IPCC AR5 2013\", which give different GWP100 values)."@en .
 <https://w3id.org/eudpp#modelVersion> <http://www.w3.org/2000/01/rdf-schema#label> "model version"@en .
 <https://w3id.org/eudpp#modelVersion> <https://w3id.org/eudpp#sourceVocabulary> "LCA ontology"@en .
+# 
+# https://w3id.org/eudpp#providesLCAData
+<https://w3id.org/eudpp#providesLCAData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#providesLCAData> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ManufacturerRecord> .
+<https://w3id.org/eudpp#providesLCAData> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/eudpp#providesLCAData> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the manufacturer identified in this record directly provided primary LCA data for the study. Set to true for the reference manufacturer; may be false for manufacturers listed for traceability only."@en .
+<https://w3id.org/eudpp#providesLCAData> <http://www.w3.org/2000/01/rdf-schema#label> "provides LCA data"@en .
 # 
 # https://w3id.org/eudpp#referenceYear
 <https://w3id.org/eudpp#referenceYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -990,6 +1006,13 @@ _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/eudpp#LifeCycleModule> <http://www.w3.org/2000/01/rdf-schema#comment> "A modelled life-cycle module per EN 15804+A2 (product stage A1-A3, construction A4-A5, use stage B1-B7, end-of-life C1-C4, benefits/loads D). Enumeration of 18 named individuals. \nNote that moduleA1A3 (aggregated product stage) is an alternative reporting form of A1+A2+A3; an EPD that reports A1-A3 should not additionally report A1, A2, A3 separately for the same indicator/scenario."@en .
 <https://w3id.org/eudpp#LifeCycleModule> <http://www.w3.org/2000/01/rdf-schema#label> "Life Cycle Module"@en .
 <https://w3id.org/eudpp#LifeCycleModule> <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension"@en .
+# 
+# https://w3id.org/eudpp#ManufacturerRecord
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A container provenance entity (prov:Entity) documenting the involvement of a manufacturer (and optionally a data provider) in a specific LCA study, including the facility concerned and whether primary LCA data was provided."@en .
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer Record"@en .
+<https://w3id.org/eudpp#ManufacturerRecord> <https://w3id.org/eudpp#sourceVocabulary> "ILCD+EPD extension: Corresponds to the element epd24:manufacturer inside epd24:manufacturers."@en .
 # 
 # https://w3id.org/eudpp#MaterialFootprint
 <https://w3id.org/eudpp#MaterialFootprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

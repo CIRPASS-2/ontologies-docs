@@ -7,7 +7,7 @@
       "en" : "LCA module of the CIRPASS-2 EU DPP Core Ontology"
     },
     "iri" : "https://w3id.org/eudpp/LCA",
-    "version" : "3.0",
+    "version" : "3.1",
     "author" : [ "Fatima Danash and Marc-Andree Wolf" ],
     "description" : {
       "en" : "LCA (Life Cycle Assessment) module of an EU DPP (Digital Product Passport) core ontology proposal of the CIRPASS-2 European project.\n\nSCOPE\nThis module covers the environmental-performance metadata that a DPP is required to carry under ESPR. It supports both (a) general LCA studies of any product, expressed via eudpp:LCAStudy, and (b) Environmental Product Declarations (EPDs) conforming to EN 15804+A2 with EF 3.1 characterisation, expressed via eudpp:EPDStudy (a subclass of LCAStudy). The controlled vocabulary of named individuals (impact indicators, inventory indicators, lifecycle modules, characterisation methods) follows EN 15804+A2 and EF 3.1. The module aligns structurally with the ILCD+EPD v1.3 data format (https://indatawg.github.io/ILCD-EPD-Data-Format/) and extends it with richer OWL semantics.It also relates to LCAnet/IA module (https://w3id.org/lcanet/ia#).\n\nDEPENDENCIES\nThis module has dependencies to the following EU DPP Core Ontology (CO) modules: ACTOR and P_DPP via CON."
@@ -16,19 +16,19 @@
       "en" : "EU DPP LCA"
     },
     "comments" : {
-      "en" : "The LCA module of the EU DPP core ontology, version 3.0"
+      "en" : "The LCA module of the EU DPP core ontology, version 3.1"
     },
     "other" : {
       "license" : [ {
         "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
-      }, {
-        "identifier" : "license",
         "language" : "undefined",
         "value" : "https://www.apache.org/licenses/LICENSE-2.0",
         "type" : "iri"
+      }, {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -57,13 +57,13 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "3.0",
+        "value" : "3.1",
         "type" : "label"
       } ],
       "issued" : [ {
         "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-10-15",
+        "language" : "en",
+        "value" : "2026-10-19",
         "type" : "label"
       } ],
       "title" : [ {
@@ -75,12 +75,17 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:65243",
+        "value" : "https://indatawg.github.io/ILCD-EPD-Data-Format/",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://indatawg.github.io/ILCD-EPD-Data-Format/",
+        "value" : "https://w3id.org/lcanet/ia#",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.cen.eu/dyn/www/f?p=204:110:0::::FSP_PROJECT:65243",
         "type" : "iri"
       } ]
     }
@@ -90,35 +95,41 @@
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
+    "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "18",
     "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
     "id" : "47",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "48",
     "type" : "owl:Thing"
   }, {
-    "id" : "49",
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
     "type" : "rdfs:Literal"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "53",
     "type" : "rdfs:Datatype"
@@ -126,13 +137,10 @@
     "id" : "54",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "46",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "55",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "52",
+    "id" : "51",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "57",
@@ -141,142 +149,145 @@
     "id" : "59",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "62",
+    "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "68",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "107",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "87",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
+    "id" : "75",
     "type" : "owl:Class"
   }, {
-    "id" : "99",
-    "type" : "owl:Class"
-  }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "93",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "65",
+    "id" : "111",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "118",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "126",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "120",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "128",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "116",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "96",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "90",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "105",
-    "type" : "owl:Class"
-  }, {
-    "id" : "130",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "15",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "13",
+    "id" : "82",
     "type" : "owl:Class"
   }, {
     "id" : "94",
     "type" : "owl:Class"
   }, {
-    "id" : "95",
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "86",
     "type" : "owl:Class"
   }, {
     "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "91",
+    "type" : "owl:Class"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -314,9 +325,9 @@
     "label" : {
       "IRI-based" : "Activity"
     },
-    "subClasses" : [ "5" ],
+    "subClasses" : [ "4" ],
     "attributes" : [ "external" ],
-    "id" : "4"
+    "id" : "3"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -324,9 +335,9 @@
     "label" : {
       "IRI-based" : "Concept"
     },
-    "subClasses" : [ "10", "11" ],
+    "subClasses" : [ "9", "10" ],
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "8"
   }, {
     "iri" : "https://w3id.org/eudpp#EnvironmentalFootprintScore",
     "baseIri" : "https://w3id.org/eudpp",
@@ -388,8 +399,8 @@
       "en" : "An aggregated single-score indicator computed as the normalised and weighted sum of a set of impact-category results. \nHolds one named individual eudpp:ind_EF_singleScore representing the EU Environmental Footprint single score (PEF score). The applied normalisation factors and weighting set are not modelled here as properties; they are determined by the active EF / PEF methodology version, which is resolvable via the study's eudpp:hasComplianceDeclaration link to a eudpp:ComplianceSystem source. \nResults computed for an EnvironmentalFootprintScore individual are eudpp:LCIAResult instances."
     },
     "attributes" : [ "external" ],
-    "id" : "12",
-    "superClasses" : [ "13" ]
+    "id" : "11",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/eudpp#EnvironmentalFootprintScoreResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -410,8 +421,8 @@
       "en" : "A normalized and weighted aggregate LCA result expressing the overall environmental performance of a product system as a single dimensionless score, computed by applying the Product Environmental Footprint (PEF) method (Recommendation (EU) 2021/2279). \nAggregates the characterised results of all 16 EF 3.1 impact categories through normalization and weighting factors.\nInstances of this class quantify the EF single score indicator (ind_EF_singleScore, an EnvironmentalFootprintScore individual) via quantifiesIndicator."
     },
     "attributes" : [ "external" ],
-    "id" : "17",
-    "superClasses" : [ "18" ]
+    "id" : "16",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Entity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -419,9 +430,16 @@
     "label" : {
       "IRI-based" : "Entity"
     },
-    "subClasses" : [ "1", "20" ],
+    "subClasses" : [ "19", "1", "20" ],
     "attributes" : [ "external" ],
-    "id" : "19"
+    "id" : "18"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "https://w3id.org/eudpp#ComplianceDeclaration",
     "baseIri" : "https://w3id.org/eudpp",
@@ -443,7 +461,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "20",
-    "superClasses" : [ "19" ]
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LCIAResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -460,66 +478,66 @@
       "IRI-based" : "LCIAResult",
       "en" : "LCIA Result"
     },
-    "subClasses" : [ "28" ],
+    "subClasses" : [ "32" ],
     "comment" : {
       "en" : "A characterised LCA result quantifying one LCIA indicator (an EN15804ImpactIndicator or an LCIAImpactIndicator ) for a product system. Each instance is linked to exactly one indicator individual via quantifiesIndicator, and carries its numerical value per life-cycle module via hasLCAModuleValue."
     },
     "attributes" : [ "external" ],
-    "id" : "29",
-    "superClasses" : [ "18" ]
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "47",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
+    "id" : "33",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "48",
+    "id" : "47",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "49",
+    "id" : "48",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "53",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#gYear",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "54",
+    "id" : "52",
     "label" : {
       "IRI-based" : "gYear"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "46",
+    "id" : "53",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "boolean"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "55",
+    "id" : "54",
     "label" : {
       "IRI-based" : "date"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "52",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
     "label" : {
       "IRI-based" : "string"
     }
@@ -545,12 +563,12 @@
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "LCAnet: relates to the element MaterialFootprint (https://w3id.org/lcanet/ia#MaterialFootprint) of the IA module.",
+        "value" : "ESPR Art 2 (26) https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
         "type" : "label"
       }, {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "ESPR Art 2 (26) https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "LCAnet: relates to the element MaterialFootprint (https://w3id.org/lcanet/ia#MaterialFootprint) of the IA module.",
         "type" : "label"
       } ]
     },
@@ -562,8 +580,8 @@
       "en" : "An InventoryIndicatorResult that \"refers to the total amount of raw materials extracted to meet final consumption demands\" (ESPR Art. 2(26)).\n\nModelled as an inventory-level result rather than a characterised LCIA result, as it aggregates raw material extraction flows without applying characterisation factors.\nNo single EN 15804+A2 inventory indicator individual is pinned via quantifiesIndicator; the link is left to individual instances, as material footprint spans multiple EN 15804+A2 resource use inventory indicators (PERE, PENRE, SM, RSF, NRSF, etc.)."
     },
     "attributes" : [ "external" ],
-    "id" : "62",
-    "superClasses" : [ "63" ]
+    "id" : "63",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/eudpp#BackgroundDatabase",
     "baseIri" : "https://w3id.org/eudpp",
@@ -584,7 +602,7 @@
       "en" : "Source representing a background LCI database used for the LCA modelling (e.g. ecoinvent, GaBi/Sphera, Okobaudat)."
     },
     "attributes" : [ "external" ],
-    "id" : "3",
+    "id" : "65",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/eudpp#ComplianceStatus",
@@ -661,8 +679,8 @@
       "en" : "Level of compliance declared by a ComplianceDeclaration relative to its compliance system. Enumeration of 3 named individuals (fullyCompliant, partiallyCompliant, notCompliant)."
     },
     "attributes" : [ "external" ],
-    "id" : "11",
-    "superClasses" : [ "9" ]
+    "id" : "10",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/eudpp#CarbonFootprint",
     "baseIri" : "https://w3id.org/eudpp",
@@ -688,8 +706,8 @@
       "en" : "An LCIAResult that \"means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category of climate change\". (ESPR Art 2 25))\n \nIt quantifies the global warming potential of a product over a 100-year time horizon.\nInstances of this class quantify either the EN 15804+A2 individual \"GWP-total - Global Warming Potential (total)\" (ind_GWPtotal, an EN15804ImpactIndicator) or the EF 3.1 \"Climate Change EF\" indicator (ind_EF_climateChange, an LCIAImpactIndicator), depending on the reporting framework of the EPD or LCA study."
     },
     "attributes" : [ "external" ],
-    "id" : "28",
-    "superClasses" : [ "29" ]
+    "id" : "32",
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LCAMethod",
     "baseIri" : "https://w3id.org/eudpp",
@@ -721,7 +739,7 @@
       "en" : "A life-cycle assessement method that produces values for one indicator from an inventory of elementary flows. \nCovers both (a) characterised LCIA methods (which apply characterisation factors to compute a midpoint impact result), and (b) inventory aggregation methods (which sum / aggregate inventory flows to produce an inventory-indicator result, e.g. the EN 15804+A2 inventory indicators FW, HWD, PERE etc. defined as inventory-level by the standard's calculation rules)."
     },
     "attributes" : [ "external" ],
-    "id" : "51"
+    "id" : "50"
   }, {
     "iri" : "http://spdx.org/rdf/terms#License",
     "baseIri" : "http://spdx.org/rdf/terms",
@@ -729,9 +747,9 @@
     "label" : {
       "IRI-based" : "License"
     },
-    "subClasses" : [ "34" ],
+    "subClasses" : [ "25" ],
     "attributes" : [ "external" ],
-    "id" : "35"
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/eudpp#LCAModuleValue",
     "baseIri" : "https://w3id.org/eudpp",
@@ -752,7 +770,7 @@
       "en" : "One numerical LCA-result value (impact or inventory-indicator) for a specific EN 15804+A2 life-cycle module (A1-A3, A4, ..., D) and optionally a specific scenario. \nIt carries eudpp:amount (the numeric value), eudpp:forLifeCycleModule, optionally eudpp:forScenario, and eudpp:isDeclared (boolean: true if the module is declared with this value; false if the module is explicitly not declared for this indicator)."
     },
     "attributes" : [ "external" ],
-    "id" : "7"
+    "id" : "6"
   }, {
     "iri" : "https://w3id.org/eudpp#EPDDocument",
     "baseIri" : "https://w3id.org/eudpp",
@@ -779,8 +797,35 @@
       "en" : "Source representing the published PDF or HTML EPD document itself (as distinct from the ILCD+EPD machine-readable EPDStudy)."
     },
     "attributes" : [ "external" ],
-    "id" : "22",
+    "id" : "87",
     "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#LCAStudy",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "LCAnet: relates to the element LcaModel (https://w3id.org/lcanet/core#LcaModel) of the Core module, which represents an LCA instance.",
+        "type" : "label"
+      }, {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "LCA ontology",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LCAStudy",
+      "en" : "LCA Study"
+    },
+    "subClasses" : [ "22" ],
+    "comment" : {
+      "en" : "A life-cycle assessment study of a product, conducted per ISO 14040/14044, producing one or more LCA results. The general study container, applicable to any product whether or not the study follows EN 15804+A2. \nCarries study-level metadata (UUID, dataset version, name, reference year, license, copyright, ILCD format version, compliance declarations, manufacturer records, reviews, references to data sources / background databases / PEFCR, etc.). \nCross-module link from a product to this class is provided by the Connector property eudpp:hasLCAStudy."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/eudpp#LCIAImpactIndicator",
     "baseIri" : "https://w3id.org/eudpp",
@@ -789,12 +834,12 @@
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "LCA ontology",
+        "value" : "LCAnet: relates to the element ImpactCategoryIndicator (https://w3id.org/lcanet/ia#ImpactCategoryIndicator) of the IA module.",
         "type" : "label"
       }, {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "LCAnet: relates to the element ImpactCategoryIndicator (https://w3id.org/lcanet/ia#ImpactCategoryIndicator) of the IA module.",
+        "value" : "LCA ontology",
         "type" : "label"
       } ]
     },
@@ -875,42 +920,6 @@
         "en" : "Acidification EF"
       }
     }, {
-      "iri" : "https://w3id.org/eudpp#ind_EF_resourceUseMineralsMetals",
-      "baseIri" : "https://w3id.org/eudpp",
-      "annotations" : {
-        "sourceVocabulary" : [ {
-          "identifier" : "sourceVocabulary",
-          "language" : "undefined",
-          "value" : "LCA ontology extension",
-          "type" : "label"
-        } ],
-        "assessesImpactCategory" : [ {
-          "identifier" : "assessesImpactCategory",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp#resourceUseMineralsMetals",
-          "type" : "iri"
-        } ],
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Resource use, minerals and metals",
-          "type" : "label"
-        } ],
-        "unitAsString" : [ {
-          "identifier" : "unitAsString",
-          "language" : "en",
-          "value" : "kg Sb-eq",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Abiotic resource depletion (ADP) of mineral and metal resources, in kg Sb-equivalent. EF 3.1 / PEF impact category."
-      },
-      "labels" : {
-        "IRI-based" : "ind_EF_resourceUseMineralsMetals",
-        "en" : "Resource use, minerals and metals EF"
-      }
-    }, {
       "iri" : "https://w3id.org/eudpp#ind_EF_humanToxicityCancer",
       "baseIri" : "https://w3id.org/eudpp",
       "annotations" : {
@@ -945,6 +954,42 @@
       "labels" : {
         "IRI-based" : "ind_EF_humanToxicityCancer",
         "en" : "Human toxicity, cancer"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp#ind_EF_resourceUseMineralsMetals",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceVocabulary" : [ {
+          "identifier" : "sourceVocabulary",
+          "language" : "undefined",
+          "value" : "LCA ontology extension",
+          "type" : "label"
+        } ],
+        "assessesImpactCategory" : [ {
+          "identifier" : "assessesImpactCategory",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#resourceUseMineralsMetals",
+          "type" : "iri"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Resource use, minerals and metals",
+          "type" : "label"
+        } ],
+        "unitAsString" : [ {
+          "identifier" : "unitAsString",
+          "language" : "en",
+          "value" : "kg Sb-eq",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Abiotic resource depletion (ADP) of mineral and metal resources, in kg Sb-equivalent. EF 3.1 / PEF impact category."
+      },
+      "labels" : {
+        "IRI-based" : "ind_EF_resourceUseMineralsMetals",
+        "en" : "Resource use, minerals and metals EF"
       }
     }, {
       "iri" : "https://w3id.org/eudpp#ind_EF_eutrophicationMarine",
@@ -1181,12 +1226,12 @@
         "altLabel" : [ {
           "identifier" : "altLabel",
           "language" : "en",
-          "value" : "Climate change",
+          "value" : "Carbon footprint",
           "type" : "label"
         }, {
           "identifier" : "altLabel",
           "language" : "en",
-          "value" : "Carbon footprint",
+          "value" : "Climate change",
           "type" : "label"
         } ],
         "unitAsString" : [ {
@@ -1388,35 +1433,8 @@
       "en" : "A characterised impact indicator outside the EN 15804+A2 selection — direct subclass of eudpp:LCAIndicator, sibling of eudpp:EN15804Indicator. Holds the 16 official EF 3.1 / PEF impact category indicators as named individuals (Andreasi Bassi et al., JRC, 2023). \nThese are the impact indicators used by general LCA studies (eudpp:LCAStudy) following the EU Environmental Footprint method, distinct from the EN 15804+A2 set used by EPDStudy. \nThe two sets overlap conceptually — both have e.g. a \"Climate change\" indicator with kg CO2-eq — but differ operationally: EN 15804+A2 splits Climate change into four sub-indicators (total, fossil, biogenic, luluc) and selects 6 \"with caveats\" indicators with EN-specific reporting rules; EF 3.1 keeps Climate change as one indicator and presents 16 categories at one aggregation level."
     },
     "attributes" : [ "external" ],
-    "id" : "68",
-    "superClasses" : [ "13" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp#LCAStudy",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
-      "sourceVocabulary" : [ {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "LCA ontology",
-        "type" : "label"
-      }, {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "LCAnet: relates to the element LcaModel (https://w3id.org/lcanet/core#LcaModel) of the Core module, which represents an LCA instance.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "LCAStudy",
-      "en" : "LCA Study"
-    },
-    "subClasses" : [ "32" ],
-    "comment" : {
-      "en" : "A life-cycle assessment study of a product, conducted per ISO 14040/14044, producing one or more LCA results. The general study container, applicable to any product whether or not the study follows EN 15804+A2. \nCarries study-level metadata (UUID, dataset version, name, reference year, license, copyright, ILCD format version, compliance declarations, manufacturer records, reviews, references to data sources / background databases / PEFCR, etc.). \nCross-module link from a product to this class is provided by the Connector property eudpp:hasLCAStudy."
-    },
-    "attributes" : [ "external" ],
-    "id" : "25"
+    "id" : "75",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "https://w3id.org/eudpp#Source",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1433,13 +1451,13 @@
       "IRI-based" : "Source",
       "en" : "Source"
     },
-    "subClasses" : [ "0", "22", "3", "93", "94", "95", "96" ],
+    "subClasses" : [ "0", "87", "65", "99", "100", "101", "102" ],
     "comment" : {
       "en" : "A bibliographic or documentary source referenced from an LCA study, EPD study or LCIA Method. Abstract superclass; concrete source instances typically use one of the more specific subclasses (PCR, LCAMethodReport, BackgroundDatabase, ComplianceSystem, ReviewReport, EPDDocument)."
     },
     "attributes" : [ "external" ],
     "id" : "1",
-    "superClasses" : [ "19" ]
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/eudpp#WaterConsumptionResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1460,8 +1478,8 @@
       "en" : "An LCA inventory indicator result quantifying the net consumption of fresh water resources in a product system. \nThis class is typically associated with the EN 15804+A2 inventory indicator “Use of net fresh water” (FW), though no formal quantifiesIndicator restriction is imposed to allow for future indicator additions or revised indicator frameworks."
     },
     "attributes" : [ "external" ],
-    "id" : "83",
-    "superClasses" : [ "63" ]
+    "id" : "80",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LicenseType",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1573,8 +1591,8 @@
       "en" : "License applicable to access and use of the LCA / EPD study. A closed enumeration."
     },
     "attributes" : [ "external" ],
-    "id" : "34",
-    "superClasses" : [ "35" ]
+    "id" : "25",
+    "superClasses" : [ "26" ]
   }, {
     "iri" : "https://w3id.org/eudpp#Review",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1601,8 +1619,8 @@
       "en" : "A verification / critical review performed on an LCA study or EPD study."
     },
     "attributes" : [ "external" ],
-    "id" : "5",
-    "superClasses" : [ "4" ]
+    "id" : "4",
+    "superClasses" : [ "3" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LifeCycleModule",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2002,7 +2020,7 @@
       "en" : "A modelled life-cycle module per EN 15804+A2 (product stage A1-A3, construction A4-A5, use stage B1-B7, end-of-life C1-C4, benefits/loads D). Enumeration of 18 named individuals. \nNote that moduleA1A3 (aggregated product stage) is an alternative reporting form of A1+A2+A3; an EPD that reports A1-A3 should not additionally report A1, A2, A3 separately for the same indicator/scenario."
     },
     "attributes" : [ "external" ],
-    "id" : "8"
+    "id" : "7"
   }, {
     "iri" : "https://w3id.org/eudpp#EN15804IndicatorGroup",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2132,7 +2150,7 @@
       "en" : "Grouping of the EN 15804+A2 indicators based on the printed standard's tables: core impact (Table 3), impact indicators with caveats (Table 4), resource use (Table 5 resource use), waste categories (Table 5 waste), output flows valorisation (Table 5 output flows), exported energy (Table 5 output flows). Enumeration of 6 named individuals."
     },
     "attributes" : [ "external" ],
-    "id" : "107"
+    "id" : "111"
   }, {
     "iri" : "https://w3id.org/eudpp#TypeOfReview",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2262,8 +2280,8 @@
       "en" : "Kind of critical-review/verification performed on a dataset. Enumeration matching ILCD TypeOfReviewValues."
     },
     "attributes" : [ "external" ],
-    "id" : "10",
-    "superClasses" : [ "9" ]
+    "id" : "9",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/eudpp#SustainableRenewableMaterialsUseResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2284,8 +2302,8 @@
       "en" : "An LCA inventory indicator result quantifying the use of renewable secondary material and fuel inputs in a product system. \nCommonly associated with the EN 15804+A2 inventory indicators “Use of renewable secondary fuels” (RSF) or “Use of non-renewable secondary fuels” (NRSF), though no formal quantifiesIndicator restriction is imposed, as the scope of renewable material inputs may evolve."
     },
     "attributes" : [ "external" ],
-    "id" : "85",
-    "superClasses" : [ "63" ]
+    "id" : "82",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LCAMethodology",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2456,7 +2474,7 @@
       "en" : "A named, versioned LCA methodology (a coherent set of LCA methods sharing principles and a set of characterisation factors), to which one or more Method instances belong. \nEach individual SHOULD carry a skos:altLabel giving a short code (e.g. \"EF 3.1\") and eudpp:methodologyVersion giving the version identifier."
     },
     "attributes" : [ "external" ],
-    "id" : "87"
+    "id" : "94"
   }, {
     "iri" : "https://w3id.org/eudpp#AreaOfProtection",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2553,7 +2571,7 @@
       "en" : "Damage area addressed by an LCIA method via the LCIA Impact Category class using the addressesAoP object property. A closed enumeration of 5 individuals."
     },
     "attributes" : [ "external" ],
-    "id" : "66"
+    "id" : "68"
   }, {
     "iri" : "https://w3id.org/eudpp#LandUseResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -2574,8 +2592,30 @@
       "en" : "An LCA result quantifying impacts associated with land occupation and transformation in a product system. \nCommonly associated with the EN 15804+A2 land use indicator (LU), which is characterised under EF 3.1. No formal quantifiesIndicator restriction is imposed; note that LU sits at the boundary between inventory and impact in EN 15804 and may be refined in future ontology versions."
     },
     "attributes" : [ "external" ],
-    "id" : "76",
-    "superClasses" : [ "63" ]
+    "id" : "84",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#ManufacturerRecord",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "ILCD+EPD extension: Corresponds to the element epd24:manufacturer inside epd24:manufacturers.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ManufacturerRecord",
+      "en" : "Manufacturer Record"
+    },
+    "comment" : {
+      "en" : "A container provenance entity (prov:Entity) documenting the involvement of a manufacturer (and optionally a data provider) in a specific LCA study, including the facility concerned and whether primary LCA data was provided."
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/eudpp#EN15804ImpactIndicator",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3043,12 +3083,12 @@
         "altLabel" : [ {
           "identifier" : "altLabel",
           "language" : "en",
-          "value" : "GWP-total",
+          "value" : "Carbon footprint",
           "type" : "label"
         }, {
           "identifier" : "altLabel",
           "language" : "en",
-          "value" : "Carbon footprint",
+          "value" : "GWP-total",
           "type" : "label"
         } ],
         "unitAsString" : [ {
@@ -3286,8 +3326,8 @@
       "en" : "An EN 15804+A2 characterised impact indicator (core set of 13 or the 6 additional \"with caveats\" indicators). Characterised via the EF 3.1 characterisation models. Results computed for this indicator are eudpp:LCIAResult instances."
     },
     "attributes" : [ "external" ],
-    "id" : "99",
-    "superClasses" : [ "72" ]
+    "id" : "89",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LCAResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3315,12 +3355,12 @@
       "IRI-based" : "LCAResult",
       "en" : "LCA Result"
     },
-    "subClasses" : [ "17", "29", "63" ],
+    "subClasses" : [ "16", "33", "64" ],
     "comment" : {
       "en" : "Abstract class for any LCA computation output of a study. Has three subclasses: \neudpp:LCIAResult (characterised impact result) which applies characterisation factors of an LCIA method, eudpp:InventoryIndicatorResult (aggregated inventory-indicator result) whcih is a sum/aggregation over the inventory without characterisation, and eudpp:EnvironmentalFootprintScoreResult which represents the aggregated EF single score result. \n\nIn the regulatory sense of ESPR Art. 2(24), some characterized individuals of LCAResult constitute environmental footprints — quantifications of environmental impacts of a product throughout its life cycle.Other LCAResult instances, however, fall outside the strict ESPR definition. For this reason, LCAResult is linked to the ESPR \"Environmental Footprint\" concept via skos:broadMatch rather than owl:equivalentClass."
     },
     "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/eudpp#EnergyConsumptionResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3341,8 +3381,8 @@
       "en" : "An LCA inventory indicator result quantifying the consumption of primary energy resources — renewable and non-renewable — in a product system. \nCommonly associated with the EN 15804+A2 primary energy indicators (e.g. PERE, PERM, PERT, PENRE, PENRM, PENRT), though no formal quantifiesIndicator restriction is imposed, as energy consumption may span multiple indicators depending on the study scope."
     },
     "attributes" : [ "external" ],
-    "id" : "78",
-    "superClasses" : [ "63" ]
+    "id" : "86",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/eudpp#RecycledMaterialsUseResult",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3363,8 +3403,8 @@
       "en" : "An LCA inventory indicator result quantifying the use of secondary (recycled) material inputs in a product system. \nCommonly associated with the EN 15804+A2 inventory indicator “Use of secondary material” (SM), though no formal quantifiesIndicator restriction is imposed."
     },
     "attributes" : [ "external" ],
-    "id" : "80",
-    "superClasses" : [ "63" ]
+    "id" : "70",
+    "superClasses" : [ "64" ]
   }, {
     "iri" : "https://w3id.org/eudpp#ReviewReport",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3391,7 +3431,7 @@
       "en" : "Source holding the complete critical-review / verification report referenced from a Review."
     },
     "attributes" : [ "external" ],
-    "id" : "93",
+    "id" : "99",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/eudpp#EPDStudy",
@@ -3420,8 +3460,8 @@
       "en" : "An LCA study that conforms to EN 15804+A2 with EF 3.1 characterisation, i.e. an Environmental Product Declaration. Inherits all study-level metadata from eudpp:LCAStudy (compliance declarations, manufacturer records, reviews, LCA results, etc.) and adds EPD-specific properties: ILCD+EPD format version (eudpp:epdFormatVersion), registration number, expiry date, reference to the published EPD document (eudpp:EPDDocument via referenceToOriginalEPD), reference to the applicable Product Category Rules (eudpp:PCR via referenceToPCR). EN 15804+A2 module values per LCAResult are used to populate per-life-cycle-module values. Replaces v1.9.4's mixed structure and v1.9.5's eudpp:EPDDataSet."
     },
     "attributes" : [ "external" ],
-    "id" : "32",
-    "superClasses" : [ "25" ]
+    "id" : "22",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://w3id.org/eudpp#EN15804Indicator",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3438,20 +3478,43 @@
       "IRI-based" : "EN15804Indicator",
       "en" : "EN 15804 Indicator"
     },
-    "subClasses" : [ "105", "99" ],
+    "subClasses" : [ "91", "89" ],
     "comment" : {
       "en" : "An indicator defined by EN 15804+A2 (core impact, impact with caveats, resource use, waste output, or output-flow indicator). \nSubclass of the abstract eudpp:LCAIndicator parent. \nNote: an EN15804Indicator individual is the indicator definition; a result computed for that indicator is an eudpp:LCAResult instance (LCIAResult or InventoryIndicatorResult sibling)."
     },
     "attributes" : [ "external" ],
-    "id" : "72",
-    "superClasses" : [ "13" ]
+    "id" : "77",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#double",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "16",
+    "id" : "15",
     "label" : {
       "IRI-based" : "double"
     }
+  }, {
+    "iri" : "https://w3id.org/eudpp#InventoryIndicatorResult",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "ILCD+EPD extension",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "InventoryIndicatorResult",
+      "en" : "Inventory Indicator Result"
+    },
+    "subClasses" : [ "82", "80", "86", "84", "63", "70" ],
+    "comment" : {
+      "en" : "A specific LCA result representing an aggregated inventory-indicator result computed for an EN 15804+A2 inventory indicator (Table 5: resource use, waste categories, output flows). \nImportant disambiguation: this class represents the AGGREGATED inventory-indicator value (e.g. total kg of HWD across A1-A3 for one product), as printed in EN 15804+A2 EPD tables and computed by a Method instance. It is NOT the raw flow-level life-cycle inventory (LCI) result of a process (which would be a list of elementary-flow exchanges with amounts and units, and is out of scope for this DPP-oriented LCA module)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "17" ]
   }, {
     "iri" : "https://w3id.org/eudpp#LCIAImpactCategory",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3460,12 +3523,12 @@
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "ILCD base: matches the LCIAImpactCategoryValues.",
+        "value" : "LCAnet: relates to the element ImpactCategory (https://w3id.org/lcanet/ia#ImpactCategory) of the IA module.",
         "type" : "label"
       }, {
         "identifier" : "sourceVocabulary",
         "language" : "en",
-        "value" : "LCAnet: relates to the element ImpactCategory (https://w3id.org/lcanet/ia#ImpactCategory) of the IA module.",
+        "value" : "ILCD base: matches the LCIAImpactCategoryValues.",
         "type" : "label"
       } ]
     },
@@ -3721,62 +3784,39 @@
       "en" : "A mid-point impact category that an LCAMethod addresses. A closed enumeration."
     },
     "attributes" : [ "external" ],
-    "id" : "65"
-  }, {
-    "iri" : "https://w3id.org/eudpp#InventoryIndicatorResult",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
-      "sourceVocabulary" : [ {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "ILCD+EPD extension",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "InventoryIndicatorResult",
-      "en" : "Inventory Indicator Result"
-    },
-    "subClasses" : [ "85", "83", "78", "76", "62", "80" ],
-    "comment" : {
-      "en" : "A specific LCA result representing an aggregated inventory-indicator result computed for an EN 15804+A2 inventory indicator (Table 5: resource use, waste categories, output flows). \nImportant disambiguation: this class represents the AGGREGATED inventory-indicator value (e.g. total kg of HWD across A1-A3 for one product), as printed in EN 15804+A2 EPD tables and computed by a Method instance. It is NOT the raw flow-level life-cycle inventory (LCI) result of a process (which would be a list of elementary-flow exchanges with amounts and units, and is out of scope for this DPP-oriented LCA module)."
-    },
-    "attributes" : [ "external" ],
-    "id" : "63",
-    "superClasses" : [ "18" ]
+    "id" : "67"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "118",
+    "id" : "122",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "126",
+    "id" : "130",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "120",
+    "id" : "124",
     "label" : {
       "IRI-based" : "date"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "128",
+    "id" : "132",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "116",
+    "id" : "120",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -3806,19 +3846,19 @@
       "en" : "Source that documents a life-cycle impact assessment (LCIA) method (e.g. the EF 3.1 method description)."
     },
     "attributes" : [ "external" ],
-    "id" : "96",
+    "id" : "102",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "26",
+    "id" : "28",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "90",
+    "id" : "96",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -4383,42 +4423,20 @@
       "en" : "An EN 15804+A2 inventory-level indicator (resource use, waste disposed, or output flow for valorisation / exported energy). Not characterised; value is an aggregated inventory quantity. Results computed for this indicator are eudpp:InventoryIndicatorResult instances."
     },
     "attributes" : [ "external" ],
-    "id" : "105",
-    "superClasses" : [ "72" ]
+    "id" : "91",
+    "superClasses" : [ "77" ]
   }, {
     "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
     "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
-    "id" : "130",
+    "id" : "134",
     "label" : {
       "IRI-based" : "langString"
     }
   }, {
     "instances" : 0,
-    "union" : [ "18", "7" ],
+    "union" : [ "17", "6" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "15"
-  }, {
-    "iri" : "https://w3id.org/eudpp#LCAIndicator",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
-      "sourceVocabulary" : [ {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "LCA ontology",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "LCAIndicator",
-      "en" : "LCA Indicator"
-    },
-    "subClasses" : [ "72", "68", "12" ],
-    "comment" : {
-      "en" : "Abstract umbrella class for an indicator definition (impact or inventory category) that an eudpp:Method calculates values for. \nEach instance identifies exactly one method under which it is computed; this constraint is formalised as owl:maxCardinality 1 on eudpp:computedByMethod. \nNote: an indicator individual is the indicator DEFINITION (e.g. \"FW – Net use of fresh water, in m3\"); a numerical value computed for that indicator on a specific study is an eudpp:LCAResult instance (LCIAResult or InventoryIndicatorResult)."
-    },
-    "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "14"
   }, {
     "iri" : "https://w3id.org/eudpp#PCR",
     "baseIri" : "https://w3id.org/eudpp",
@@ -4445,8 +4463,30 @@
       "en" : "Source that is a Product Category Rules document (EN 15804+A2 Table 2 Line 1). Used in EN 15804+A2 EPDStudy via eudpp:referenceToPCR."
     },
     "attributes" : [ "external" ],
-    "id" : "94",
+    "id" : "100",
     "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#LCAIndicator",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "LCA ontology",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LCAIndicator",
+      "en" : "LCA Indicator"
+    },
+    "subClasses" : [ "77", "75", "11" ],
+    "comment" : {
+      "en" : "Abstract umbrella class for an indicator definition (impact or inventory category) that an eudpp:Method calculates values for. \nEach instance identifies exactly one method under which it is computed; this constraint is formalised as owl:maxCardinality 1 on eudpp:computedByMethod. \nNote: an indicator individual is the indicator DEFINITION (e.g. \"FW – Net use of fresh water, in m3\"); a numerical value computed for that indicator on a specific study is an eudpp:LCAResult instance (LCIAResult or InventoryIndicatorResult)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
   }, {
     "iri" : "https://w3id.org/eudpp#ComplianceSystem",
     "baseIri" : "https://w3id.org/eudpp",
@@ -4467,7 +4507,7 @@
       "en" : "A standard or programme against which an LCA or EPD study is declared compliant, such as ISO 14040/14044, ISO 14025, ISO 14067, ISO 21930, EN 15804+A2, PEFCR programmes, or a specific programme operator's scheme."
     },
     "attributes" : [ "external" ],
-    "id" : "95",
+    "id" : "101",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/eudpp#ImpactModel",
@@ -4494,28 +4534,28 @@
       "en" : "The characterisation model underlying an LCIA method (e.g. IPCC AR6 2021 for GWP). It carries a model name (eudpp:modelName), optional version (eudpp:modelVersion), and optional bibliographic source (eudpp:referenceToModelSource)."
     },
     "attributes" : [ "external" ],
-    "id" : "70"
+    "id" : "72"
   } ],
   "property" : [ {
     "id" : "2",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "6",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "14",
+    "id" : "13",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "23",
+    "id" : "24",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "27",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "27",
+    "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "30",
@@ -4524,13 +4564,13 @@
     "id" : "31",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "33",
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "36",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "37",
     "type" : "owl:objectProperty"
   }, {
     "id" : "39",
@@ -4540,18 +4580,18 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "41",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "42",
+    "id" : "43",
     "type" : "owl:objectProperty"
   }, {
     "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "45",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "50",
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "56",
@@ -4561,31 +4601,31 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "60",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "64",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "67",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "69",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "71",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "73",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "38",
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "75",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "77",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "79",
     "type" : "rdfs:SubClassOf"
@@ -4593,53 +4633,50 @@
     "id" : "81",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "82",
+    "id" : "83",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "84",
+    "id" : "85",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "86",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "88",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "89",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "91",
-    "type" : "owl:objectProperty"
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "92",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "97",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "98",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "100",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "101",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "102",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
+    "id" : "98",
     "type" : "owl:objectProperty"
   }, {
     "id" : "103",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "104",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "106",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "108",
     "type" : "rdfs:SubClassOf"
@@ -4648,28 +4685,31 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "110",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "111",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "112",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "113",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "43",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "114",
     "type" : "owl:objectProperty"
   }, {
     "id" : "115",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "117",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "119",
     "type" : "owl:datatypeProperty"
@@ -4677,41 +4717,35 @@
     "id" : "121",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "122",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "123",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "124",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "126",
     "type" : "owl:objectProperty"
   }, {
     "id" : "127",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "129",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "131",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "132",
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "131",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "133",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "134",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "135",
     "type" : "owl:objectProperty"
   }, {
     "id" : "136",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "137",
     "type" : "owl:datatypeProperty"
@@ -4719,24 +4753,39 @@
     "id" : "138",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "61",
+    "id" : "139",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "139",
+    "id" : "140",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "140",
+    "id" : "143",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "145",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
     "range" : "1",
-    "domain" : "3",
+    "domain" : "0",
     "attributes" : [ "anonymous", "object" ],
     "id" : "2"
   }, {
     "iri" : "https://w3id.org/eudpp#forLifeCycleModule",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "8",
+    "range" : "7",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4749,16 +4798,16 @@
       "IRI-based" : "forLifeCycleModule",
       "en" : "for life-cycle module"
     },
-    "domain" : "7",
+    "domain" : "6",
     "comment" : {
       "en" : "Link from an LCAModuleValue to the Life-cycle module it refers to."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "6"
+    "id" : "5"
   }, {
     "iri" : "https://w3id.org/eudpp#amount",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "16",
+    "range" : "15",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4772,26 +4821,26 @@
       "en" : "amount"
     },
     "cardinality" : "1",
-    "domain" : "15",
+    "domain" : "14",
     "comment" : {
       "en" : "Numerical value of an LCA result or an LCIAModuleValue."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "14"
+    "id" : "13"
   }, {
-    "range" : "1",
+    "range" : "23",
     "domain" : "22",
     "attributes" : [ "anonymous", "object" ],
     "id" : "21"
   }, {
-    "range" : "1",
-    "domain" : "0",
+    "range" : "26",
+    "domain" : "25",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "23"
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/eudpp#ilcdFormatVersion",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "26",
+    "range" : "28",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4804,41 +4853,41 @@
       "IRI-based" : "ilcdFormatVersion",
       "en" : "ILCD format version"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "ILCD schema version used by the source serialisation of this study (e.g. '1.1')."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "24"
-  }, {
-    "range" : "29",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "27"
   }, {
-    "range" : "19",
-    "domain" : "20",
+    "range" : "18",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "18",
+    "domain" : "19",
     "attributes" : [ "anonymous", "object" ],
     "id" : "30"
   }, {
-    "range" : "25",
+    "range" : "33",
     "domain" : "32",
     "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
-    "range" : "35",
-    "domain" : "34",
+    "range" : "18",
+    "domain" : "20",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "33"
+    "id" : "34"
   }, {
-    "range" : "9",
-    "domain" : "10",
+    "range" : "3",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "36"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/eudpp#hasLCIAResult",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "29",
+    "range" : "33",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4851,28 +4900,23 @@
       "IRI-based" : "hasLCIAResult",
       "en" : "has LCIA result"
     },
-    "superproperty" : [ "38" ],
-    "domain" : "25",
+    "superproperty" : [ "37" ],
+    "domain" : "23",
     "comment" : {
       "en" : "Sub-property of eudpp:hasLCAResult; range narrowed to eudpp:LCIAResult."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "37"
+    "id" : "36"
   }, {
-    "range" : "4",
-    "domain" : "5",
+    "range" : "8",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
-    "range" : "19",
-    "domain" : "1",
+    "range" : "8",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "40"
-  }, {
-    "range" : "9",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "41"
   }, {
     "iri" : "https://w3id.org/eudpp#hasExternalSource",
     "baseIri" : "https://w3id.org/eudpp",
@@ -4889,17 +4933,17 @@
       "IRI-based" : "hasExternalSource",
       "en" : "has external source"
     },
-    "domain" : "25",
-    "subproperty" : [ "43" ],
+    "domain" : "23",
+    "subproperty" : [ "42" ],
     "comment" : {
       "en" : "Link from an LCAStudy to a background source. It can be a (a) documentation (e.g. an LCA project report, safety data sheet, or explanatory material) - covering the ILCD+EPD element referenceToExternalDocumentation on dataSetInformation, (b) databases or, (c)  literature sources used for modelling."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "42"
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToComplianceStatus",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "11",
+    "range" : "10",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4917,11 +4961,11 @@
       "en" : "Level of compliance declared by a ComplianceDeclaration (fully compliant, partially compliant, or not compliant)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "44"
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/eudpp#uuid",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "46",
+    "range" : "45",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4934,16 +4978,38 @@
       "IRI-based" : "uuid",
       "en" : "UUID"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "The Universally Unique Identifier of this LCA / EPD study, as mandated by ILCD+EPD as the primary persistent identifier. Once a study is created and a UUID is generated, the UUID stays the same forever; any change increments eudpp:dataSetVersion. String formatted as an RFC 4122 UUID (36 characters, hyphenated)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "45"
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/eudpp#declaresManufacturerRecord",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "19",
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "ILCD+EPD extension: Corresponds to the element epd24:manufacturers/epd24:manufacturer",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "declaresManufacturerRecord",
+      "en" : "declares Manufacturer Record"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Links an LCA study to a manufacturer record documenting the manufacturers whose data is included in the study."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/eudpp#methodVersion",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "52",
+    "range" : "51",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4956,16 +5022,16 @@
       "IRI-based" : "methodVersion",
       "en" : "method version"
     },
-    "domain" : "51",
+    "domain" : "50",
     "comment" : {
       "en" : "Version of the specific LCIA or Inventory method instance (where applicable). Captures method-instance-level versioning, distinct from methodology-level versioning (eudpp:methodologyVersion on LCAMethodology)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "50"
+    "id" : "49"
   }, {
     "iri" : "https://w3id.org/eudpp#hasPerModuleValue",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "7",
+    "range" : "6",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -4978,7 +5044,7 @@
       "IRI-based" : "hasPerModuleValue",
       "en" : "has per module value"
     },
-    "domain" : "18",
+    "domain" : "17",
     "comment" : {
       "en" : "Link from an LCAResult (LCIAResult or InventoryIndicatorResult) to one of its per-module (and optionally per-scenario) numerical values."
     },
@@ -4987,7 +5053,7 @@
   }, {
     "iri" : "https://w3id.org/eudpp#hasLicenseType",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "34",
+    "range" : "25",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5000,12 +5066,17 @@
       "IRI-based" : "hasLicenseType",
       "en" : "has license type"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "License applicable to the LCA / EPD study."
     },
     "attributes" : [ "object", "external" ],
     "id" : "58"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToExternalSource",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5022,17 +5093,17 @@
       "IRI-based" : "referenceToExternalSource",
       "en" : "reference to external source"
     },
-    "domain" : "51",
-    "subproperty" : [ "61" ],
+    "domain" : "50",
+    "subproperty" : [ "62" ],
     "comment" : {
       "en" : "Link from a Method to the external documentation describing the method."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "60"
+    "id" : "61"
   }, {
     "iri" : "https://w3id.org/eudpp#addressesAoP",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "66",
+    "range" : "68",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5045,21 +5116,21 @@
       "IRI-based" : "addressesAoP",
       "en" : "addresses AoP"
     },
-    "domain" : "65",
+    "domain" : "67",
     "comment" : {
       "en" : "Link between an LCIAImpactCategory and the Area(s)-of-protection it addresses.\n1..n cardinality: a single impact category can address several Areas of Protection — for example, ozone depletion affects both Natural Environment and Human Health."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "64"
+    "id" : "66"
   }, {
-    "range" : "13",
-    "domain" : "68",
+    "range" : "64",
+    "domain" : "70",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "67"
+    "id" : "69"
   }, {
     "iri" : "https://w3id.org/eudpp#hasImpactModel",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "70",
+    "range" : "72",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5072,26 +5143,31 @@
       "IRI-based" : "hasImpactModel",
       "en" : "has impact model"
     },
-    "domain" : "51",
+    "domain" : "50",
     "comment" : {
       "en" : "Link from an Method to its characterisation-model block (where applicable; inventory-only methods may not have one)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "69"
-  }, {
-    "range" : "13",
-    "domain" : "72",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
-    "range" : "13",
-    "domain" : "12",
+    "range" : "64",
+    "domain" : "63",
     "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
+    "range" : "12",
+    "domain" : "75",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "74"
+  }, {
+    "range" : "12",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "76"
+  }, {
     "iri" : "https://w3id.org/eudpp#hasLCAResult",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "18",
+    "range" : "17",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5104,43 +5180,65 @@
       "IRI-based" : "hasLCAResult",
       "en" : "has LCA result"
     },
-    "domain" : "25",
-    "subproperty" : [ "74", "37" ],
+    "domain" : "23",
+    "subproperty" : [ "78", "36" ],
     "comment" : {
       "en" : "Link from an LCAStudy (or its subclass EPDStudy) to one of its LCA results. Range is the abstract eudpp:LCAResult; sub-properties eudpp:hasLCIAResult and eudpp:hasInventoryResult narrow the result to the corresponding sibling subclass. Querying for eudpp:hasLCAResult retrieves both kinds of results in one go."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "38"
+    "id" : "37"
   }, {
-    "range" : "63",
-    "domain" : "76",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "75"
-  }, {
-    "range" : "63",
-    "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "77"
-  }, {
-    "range" : "63",
+    "range" : "64",
     "domain" : "80",
     "attributes" : [ "anonymous", "object" ],
     "id" : "79"
   }, {
-    "range" : "63",
-    "domain" : "62",
+    "range" : "64",
+    "domain" : "82",
     "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
-    "range" : "63",
-    "domain" : "83",
+    "range" : "64",
+    "domain" : "84",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "82"
+    "id" : "83"
   }, {
-    "range" : "63",
-    "domain" : "85",
+    "range" : "64",
+    "domain" : "86",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "84"
+    "id" : "85"
+  }, {
+    "range" : "77",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "77",
+    "domain" : "91",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/eudpp#reviewDate",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "54",
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "LCA ontology",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "reviewDate",
+      "en" : "review date"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Date on which the review was completed. Important for DPP consumers to assess whether the review is still current."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "92"
   }, {
     "iri" : "https://w3id.org/eudpp#methodologyVersion",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5157,38 +5255,16 @@
       "IRI-based" : "methodologyVersion",
       "en" : "methodology version"
     },
-    "domain" : "87",
+    "domain" : "94",
     "comment" : {
       "en" : "Version identifier of an LCAMethodology individual (e.g. \"3.1\" for EF 3.1, \"2002\" for CML 2002)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "86"
-  }, {
-    "iri" : "https://w3id.org/eudpp#reviewDate",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "55",
-    "annotations" : {
-      "sourceVocabulary" : [ {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "LCA ontology",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "reviewDate",
-      "en" : "review date"
-    },
-    "domain" : "5",
-    "comment" : {
-      "en" : "Date on which the review was completed. Important for DPP consumers to assess whether the review is still current."
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "88"
+    "id" : "93"
   }, {
     "iri" : "https://w3id.org/eudpp#isDeclared",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "90",
+    "range" : "96",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5202,16 +5278,16 @@
       "en" : "is declared"
     },
     "cardinality" : "1",
-    "domain" : "7",
+    "domain" : "6",
     "comment" : {
       "en" : "True if this module value is declared in the study (has a numerical amount), false if the module is explicitly marked as not declared (ND / MND) for this indicator/scenario. Absence of the LCIAModuleValue triple altogether means the module was not in scope of the study (MNA - module not applicable)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "89"
+    "id" : "95"
   }, {
     "iri" : "https://w3id.org/eudpp#belongsToMethodology",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "87",
+    "range" : "94",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5229,16 +5305,16 @@
       "IRI-based" : "belongsToMethodology",
       "en" : "belongs to methodology"
     },
-    "domain" : "51",
+    "domain" : "50",
     "comment" : {
       "en" : "Link from a Method to one or several LCAMethodology individuals it belongs to (e.g. eudpp:methodology_EF3_1). Cardinality 1..n: a single method can be classified into more than one methodology (for example, when two methodologies share the same characterisation factors for one indicator)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "91"
+    "id" : "97"
   }, {
     "iri" : "https://w3id.org/eudpp#quantifiesIndicator",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "13",
+    "range" : "12",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5251,12 +5327,12 @@
       "IRI-based" : "quantifiesIndicator",
       "en" : "quantifies indicator"
     },
-    "domain" : "18",
+    "domain" : "17",
     "comment" : {
       "en" : "Link from an LCAResult (LCIAResult or InventoryIndicatorResult) to the LCAIndicator individual that this result quantifies. \nThis is the primary semantic identity of a result: a result is a quantification of an indicator, not of a method. \nCardinality: exactly 1 per result instance.\nRange: LCAIndicator (covers both EN15804Indicator individuals and non-EN-15804 indicators)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "92"
+    "id" : "98"
   }, {
     "iri" : "https://w3id.org/eudpp#modelVersion",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5273,32 +5349,55 @@
       "IRI-based" : "modelVersion",
       "en" : "model version"
     },
-    "domain" : "70",
+    "domain" : "72",
     "comment" : {
       "en" : "Version of the characterisation model used (e.g. \"IPCC AR6 2021\" vs \"IPCC AR5 2013\", which give different GWP100 values)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "97"
+    "id" : "103"
   }, {
-    "range" : "72",
-    "domain" : "99",
+    "range" : "17",
+    "domain" : "64",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "98"
+    "id" : "104"
   }, {
     "iri" : "http://purl.org/dc/terms/hasVersion",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "49",
+    "range" : "38",
     "label" : {
       "IRI-based" : "hasVersion"
     },
-    "domain" : "48",
+    "domain" : "47",
     "attributes" : [ "datatype", "external" ],
-    "id" : "100"
+    "id" : "105"
   }, {
-    "range" : "18",
-    "domain" : "29",
+    "range" : "1",
+    "domain" : "102",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "101"
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasInventoryIndicatorResult",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "64",
+    "annotations" : {
+      "sourceVocabulary" : [ {
+        "identifier" : "sourceVocabulary",
+        "language" : "en",
+        "value" : "ILCD+EPD extension: Corresponds to the element LCIAResults/LCIAResult when the indicator is an EN 15804+A2 inventory indicator (resource use, waste, output flows).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInventoryIndicatorResult",
+      "en" : "has inventory indicator result"
+    },
+    "superproperty" : [ "37" ],
+    "domain" : "23",
+    "comment" : {
+      "en" : "Sub-property of eudpp:hasLCAResult; range narrowed to eudpp:InventoryIndicatorResult."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "78"
   }, {
     "iri" : "https://w3id.org/eudpp#hasComplianceDeclaration",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5315,64 +5414,41 @@
       "IRI-based" : "hasComplianceDeclaration",
       "en" : "has compliance declaration"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Link from an LCAStudy (or its subclass EPDStudy) to a ComplianceDeclaration. Compliance can be declared against any standard relevant to the study type (ISO 14040/14044, ISO 14025, ISO 14067, ISO 21930, EN 15804+A2, PEFCR-specific rules, etc.)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "102"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasInventoryIndicatorResult",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "63",
-    "annotations" : {
-      "sourceVocabulary" : [ {
-        "identifier" : "sourceVocabulary",
-        "language" : "en",
-        "value" : "ILCD+EPD extension: Corresponds to the element LCIAResults/LCIAResult when the indicator is an EN 15804+A2 inventory indicator (resource use, waste, output flows).",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasInventoryIndicatorResult",
-      "en" : "has inventory indicator result"
-    },
-    "superproperty" : [ "38" ],
-    "domain" : "25",
-    "comment" : {
-      "en" : "Sub-property of eudpp:hasLCAResult; range narrowed to eudpp:InventoryIndicatorResult."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "74"
-  }, {
-    "range" : "18",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "103"
-  }, {
-    "range" : "72",
-    "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "104"
-  }, {
-    "range" : "18",
-    "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "106"
+    "id" : "107"
   }, {
     "range" : "1",
-    "domain" : "94",
+    "domain" : "101",
     "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
-    "range" : "1",
-    "domain" : "93",
+    "range" : "17",
+    "domain" : "33",
     "attributes" : [ "anonymous", "object" ],
     "id" : "109"
   }, {
+    "range" : "17",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "range" : "1",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "range" : "1",
+    "domain" : "87",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "113"
+  }, {
     "iri" : "https://w3id.org/eudpp#computedByMethod",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "51",
+    "range" : "50",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5385,26 +5461,26 @@
       "IRI-based" : "computedByMethod",
       "en" : "computed by method"
     },
-    "domain" : "13",
+    "domain" : "12",
     "comment" : {
       "en" : "Link from an LCAIndicator individual to the IndicatorMethod instance that describes how this indicator is computed — its impact model, impact category, methodology reference, reference report, and ILCD method metadata. \nCardinality: at most 1 per indicator individual.\""
     },
     "attributes" : [ "object", "external" ],
-    "id" : "110"
+    "id" : "114"
   }, {
     "range" : "1",
-    "domain" : "96",
+    "domain" : "100",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "111"
+    "id" : "115"
   }, {
     "range" : "1",
-    "domain" : "95",
+    "domain" : "99",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "112"
+    "id" : "116"
   }, {
     "iri" : "https://w3id.org/eudpp#hasImpactCategory",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "65",
+    "range" : "67",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5422,16 +5498,16 @@
       "IRI-based" : "hasImpactCategory",
       "en" : "has impact category"
     },
-    "domain" : "51",
+    "domain" : "50",
     "comment" : {
       "en" : "Impact category addressed by the Method."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "113"
+    "id" : "117"
   }, {
     "iri" : "https://w3id.org/eudpp#hasReferenceToBackgroundDatabase",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "3",
+    "range" : "65",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5444,17 +5520,17 @@
       "IRI-based" : "hasReferenceToBackgroundDatabase",
       "en" : "has reference to background database"
     },
-    "superproperty" : [ "42" ],
-    "domain" : "25",
+    "superproperty" : [ "41" ],
+    "domain" : "23",
     "comment" : {
       "en" : "Link from an LCAStudy to a background LCI database used for the modelling (1..n). Sub-property of eudpp:hasExternalSource."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "43"
+    "id" : "42"
   }, {
     "iri" : "https://w3id.org/eudpp#assessesImpactCategory",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "65",
+    "range" : "67",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5467,16 +5543,16 @@
       "IRI-based" : "assessesImpactCategory",
       "en" : "assesses impact category"
     },
-    "domain" : "68",
+    "domain" : "75",
     "comment" : {
       "en" : "Link from an LCIA impact indicator to the mid-point impact category it characterises. Multiple indicators may assess the same category (e.g. Eutrophication, freshwater and Eutrophication, marine both relate to Eutrophication). This property expresses a conceptual classification link, not equivalence."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "114"
+    "id" : "118"
   }, {
     "iri" : "https://w3id.org/eudpp#hasCopyright",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "116",
+    "range" : "120",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5489,16 +5565,16 @@
       "IRI-based" : "hasCopyright",
       "en" : "has copyright"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "True if a copyright applies to the LCA / EPD study, false otherwise."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "115"
+    "id" : "119"
   }, {
     "iri" : "https://w3id.org/eudpp#dataSetVersion",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "118",
+    "range" : "122",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5511,16 +5587,16 @@
       "IRI-based" : "dataSetVersion",
       "en" : "data set version"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Version number of this LCA / EPD study instance, independent of the ontology version. Format: major.minor.sub-minor (e.g. \"02.00.011\")."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "117"
+    "id" : "121"
   }, {
     "iri" : "https://w3id.org/eudpp#expiryDate",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "120",
+    "range" : "124",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5533,26 +5609,26 @@
       "IRI-based" : "expiryDate",
       "en" : "expiry date"
     },
-    "domain" : "32",
+    "domain" : "22",
     "comment" : {
       "en" : "Date on which the EPD's validity expires. EN 15804+A2 EPDs are typically valid for five years from publication."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "119"
+    "id" : "123"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "47",
+    "range" : "48",
     "label" : {
       "IRI-based" : "identifier"
     },
-    "domain" : "48",
+    "domain" : "47",
     "attributes" : [ "datatype", "external" ],
-    "id" : "121"
+    "id" : "125"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToCompleteReviewReport",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "93",
+    "range" : "99",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5565,16 +5641,16 @@
       "IRI-based" : "referenceToCompleteReviewReport",
       "en" : "reference to complete review report"
     },
-    "domain" : "5",
+    "domain" : "4",
     "comment" : {
       "en" : "Link from a Review to the full review report."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "122"
+    "id" : "126"
   }, {
     "iri" : "https://w3id.org/eudpp#relatesToLCAIndicator",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "68",
+    "range" : "75",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5587,16 +5663,16 @@
       "IRI-based" : "relatesToLCAIndicator",
       "en" : "relates to LCA indicator"
     },
-    "domain" : "99",
+    "domain" : "89",
     "comment" : {
       "en" : "Relates an EN15804 impact indicator to the conceptually corresponding EF 3.1 / PEF LCIA impact indicator. \nThe two indicators are not equivalent — EN15804 indicators are EPD-specific reporting slots defined by EN15804+A2, while LCIA impact indicators follow the broader EF 3.1 characterisation framework. This property records a conceptual correspondence without implying any equivalence."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "123"
+    "id" : "127"
   }, {
     "iri" : "https://w3id.org/eudpp#includesMethod",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "51",
+    "range" : "50",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5609,16 +5685,16 @@
       "IRI-based" : "includesMethod",
       "en" : "includes method"
     },
-    "domain" : "51",
+    "domain" : "50",
     "comment" : {
       "en" : "Link from a Method (a collection of methods sharing a methodology such as \"EF 3.1\") to each of the individual-indicator method instances it aggregates."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "124"
+    "id" : "128"
   }, {
     "iri" : "https://w3id.org/eudpp#followsPCR",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "94",
+    "range" : "100",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5631,16 +5707,16 @@
       "IRI-based" : "followsPCR",
       "en" : "follows PCR"
     },
-    "domain" : "32",
+    "domain" : "22",
     "comment" : {
       "en" : "Link from an EPDStudy to the Product Category Rules document(s) it follows (1..n)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "125"
+    "id" : "129"
   }, {
     "iri" : "https://w3id.org/eudpp#registrationNumber",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "53",
+    "range" : "55",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5653,16 +5729,16 @@
       "IRI-based" : "registrationNumber",
       "en" : "registration number"
     },
-    "domain" : "32",
+    "domain" : "22",
     "comment" : {
       "en" : "Identifying number issued by the EPD programme operator (typically visible on the EPD document). Distinct from the dataset UUID."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "127"
+    "id" : "131"
   }, {
     "iri" : "https://w3id.org/eudpp#accessRestrictions",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "130",
+    "range" : "134",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5675,16 +5751,16 @@
       "IRI-based" : "accessRestrictions",
       "en" : "access restrictions"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Human-readable description of access and use restrictions for the LCA / EPD study (equivalent to dcterms:accessRights)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "129"
+    "id" : "133"
   }, {
     "iri" : "https://w3id.org/eudpp#hasReview",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "5",
+    "range" : "4",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5697,16 +5773,16 @@
       "IRI-based" : "hasReview",
       "en" : "has review"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Link from an LCAStudy to a critical-review / verification record."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "131"
+    "id" : "135"
   }, {
     "iri" : "https://w3id.org/eudpp#forScenario",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "128",
+    "range" : "132",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5720,12 +5796,26 @@
       "en" : "for scenario"
     },
     "maxCardinality" : "1",
-    "domain" : "7",
+    "domain" : "6",
     "comment" : {
       "en" : "Identifier of the scenario this LCIAModuleValue applies to (free-text label matching the EPD's scenario declaration)."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "132"
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/eudpp#providesLCAData",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "providesLCAData",
+      "en" : "provides LCA data"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Indicates whether the manufacturer identified in this record directly provided primary LCA data for the study. Set to true for the reference manufacturer; may be false for manufacturers listed for traceability only."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "137"
   }, {
     "iri" : "https://w3id.org/eudpp#followsPEFCR",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5742,16 +5832,16 @@
       "IRI-based" : "followsPEFCR",
       "en" : "follows PEFCR"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Link from an LCAStudy to a Product Environmental Footprint Category Rules document (1..n)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "133"
+    "id" : "138"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToComplianceSystem",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "95",
+    "range" : "101",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5769,11 +5859,11 @@
       "en" : "Link from a ComplianceDeclaration to the standard or programme it references (EN 15804+A2, ISO 14025, ISO 21930, etc.)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "134"
+    "id" : "139"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToOriginalEPD",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "22",
+    "range" : "87",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5786,16 +5876,16 @@
       "IRI-based" : "referenceToOriginalEPD",
       "en" : "reference to original EPD"
     },
-    "domain" : "32",
+    "domain" : "22",
     "comment" : {
       "en" : "Link from the machine-readable EPDStudy to the published EPD document (typically PDF)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "135"
+    "id" : "140"
   }, {
     "iri" : "https://w3id.org/eudpp#belongsToEn15804Group",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "107",
+    "range" : "111",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5808,16 +5898,16 @@
       "IRI-based" : "belongsToEn15804Group",
       "en" : "belongs to EN 15804 indicator group"
     },
-    "domain" : "72",
+    "domain" : "77",
     "comment" : {
       "en" : "Link from an EN15804Indicator individual to the indicator EN15804IndicatorGroup it belongs to (core impact, with-caveats, resource use, waste, valorisation, exported energy)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "136"
+    "id" : "141"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceYear",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "54",
+    "range" : "52",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5830,12 +5920,12 @@
       "IRI-based" : "referenceYear",
       "en" : "reference year"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "Start year of the time period for which the study is valid."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "137"
+    "id" : "142"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToModelSource",
     "baseIri" : "https://w3id.org/eudpp",
@@ -5852,16 +5942,16 @@
       "IRI-based" : "referenceToModelSource",
       "en" : "reference to model source"
     },
-    "domain" : "70",
+    "domain" : "72",
     "comment" : {
       "en" : "Link from an ImpactModel to the bibliographic source(s) describing the characterisation model."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "138"
+    "id" : "143"
   }, {
     "iri" : "https://w3id.org/eudpp#referenceToLCAMethodReport",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "96",
+    "range" : "102",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5874,17 +5964,17 @@
       "IRI-based" : "referenceToLCAMethodReport",
       "en" : "reference to LCA method report"
     },
-    "superproperty" : [ "60" ],
-    "domain" : "51",
+    "superproperty" : [ "61" ],
+    "domain" : "50",
     "comment" : {
       "en" : "Link from a Method to the formal LCIA method report (e.g. the EF 3.1 method description)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "61"
+    "id" : "62"
   }, {
     "iri" : "https://w3id.org/eudpp#epdFormatVersion",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "126",
+    "range" : "130",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5897,16 +5987,16 @@
       "IRI-based" : "epdFormatVersion",
       "en" : "EPD format version"
     },
-    "domain" : "32",
+    "domain" : "22",
     "comment" : {
       "en" : "Version tag of the ILCD+EPD format used (e.g. \"1.3\")."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "139"
+    "id" : "144"
   }, {
     "iri" : "https://w3id.org/eudpp#hasTypeOfReview",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "10",
+    "range" : "9",
     "annotations" : {
       "sourceVocabulary" : [ {
         "identifier" : "sourceVocabulary",
@@ -5919,11 +6009,11 @@
       "IRI-based" : "hasTypeOfReview",
       "en" : "has type of review"
     },
-    "domain" : "5",
+    "domain" : "4",
     "comment" : {
       "en" : "The kind of review performed (independent external, accredited third party, etc.)."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "140"
+    "id" : "145"
   } ]
 }

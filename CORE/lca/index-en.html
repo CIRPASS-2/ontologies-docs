@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp#","name":"LCA module of the CIRPASS-2 EU DPP Core Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp#", "dateReleased":"2026-10-5", "version":"3.0", "author":[{"@type":"Person","name":"Fatima Danash and Marc-Andree Wolf"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp#","name":"LCA module of the CIRPASS-2 EU DPP Core Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp#", "dateReleased":"2026-10-5", "version":"3.1", "author":[{"@type":"Person","name":"Fatima Danash and Marc-Andree Wolf"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -71,13 +71,13 @@ $(function(){
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/eudpp/LCA/3.0">https://w3id.org/eudpp/LCA/3.0</a></dd>
+<dd><a href="https://w3id.org/eudpp/LCA/3.1">https://w3id.org/eudpp/LCA/3.1</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/eudpp#">https://w3id.org/eudpp#</a></dd>
 <dt>Revision:</dt>
-<dd>3.0</dd>
+<dd>3.1</dd>
 <dt>Issued on:</dt>
-<dd>2026-10-15</dd>
+<dd>2026-10-19</dd>
 <dt>Authors:</dt>
 <dd>Fatima Danash and Marc-Andree Wolf</dd>
 
@@ -87,7 +87,7 @@ $(function(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-This%20ontology%20is%20licensed%20under%20the%20Apache%20License,%20Version%202.0.%20In%20case%20of%20dispute%20over%20Apache%202.0%20applicability,%20or%20in%20case%20considering%20the%20ontology%20as%20a%20document,%20this%20ontology%20document%20is%20to%20be%20considered%20licensed%20under%20the%20Creative%20Commons%20Attribution%204.0%20International%20(CC%20BY%204.0).-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Fatima Danash and Marc-Andree Wolf. LCA module of the CIRPASS-2 EU DPP Core Ontology. Revision: 3.0.</dd>
+<dd>Fatima Danash and Marc-Andree Wolf. LCA module of the CIRPASS-2 EU DPP Core Ontology. Revision: 3.1. Retrieved from: https://w3id.org/eudpp/LCA/3.1</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -231,6 +231,9 @@ This ontology has the following classes and properties.</span>
       <a href="#LifeCycleModule" title="https://w3id.org/eudpp#LifeCycleModule">Life Cycle Module</a>
    </li>
    <li>
+      <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a>
+   </li>
+   <li>
       <a href="#MaterialFootprint" title="https://w3id.org/eudpp#MaterialFootprint">Material Footprint</a>
    </li>
    <li>
@@ -279,6 +282,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#computedByMethod" title="https://w3id.org/eudpp#computedByMethod">computed by method</a>
+   </li>
+   <li>
+      <a href="#declaresManufacturerRecord"
+         title="https://w3id.org/eudpp#declaresManufacturerRecord">declares Manufacturer Record</a>
    </li>
    <li>
       <a href="#followsPCR" title="https://w3id.org/eudpp#followsPCR">follows PCR</a>
@@ -399,6 +406,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#modelVersion" title="https://w3id.org/eudpp#modelVersion">model version</a>
+   </li>
+   <li>
+      <a href="#providesLCAData" title="https://w3id.org/eudpp#providesLCAData">provides LCA data</a>
    </li>
    <li>
       <a href="#referenceYear" title="https://w3id.org/eudpp#referenceYear">reference year</a>
@@ -888,7 +898,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">EU DPP LCA: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">The LCA module of the EU DPP core ontology, version 3.0</span></div>
+<span class="markdown">The LCA module of the EU DPP core ontology, version 3.1</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -927,6 +937,7 @@ This section provides details for each class and property defined by EU DPP LCA.
   <li><a href="#LCIAResult" title="https://w3id.org/eudpp#LCIAResult">LCIA Result</a></li>
   <li><a href="#LicenseType" title="https://w3id.org/eudpp#LicenseType">License Type</a></li>
   <li><a href="#LifeCycleModule" title="https://w3id.org/eudpp#LifeCycleModule">Life Cycle Module</a></li>
+  <li><a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a></li>
   <li><a href="#MaterialFootprint" title="https://w3id.org/eudpp#MaterialFootprint">Material Footprint</a></li>
   <li><a href="#PCR" title="https://w3id.org/eudpp#PCR">Product Category Rules (PCR)</a></li>
   <li><a href="#PEFCR" title="https://w3id.org/eudpp#PEFCR">Product Environmental Footprint Category Rules (PEFCR)</a></li>
@@ -1492,7 +1503,7 @@ This section provides details for each class and property defined by EU DPP LCA.
     is in domain of
    </dt>
    <dd>
-    <a href="#ilcdFormatVersion" title="https://w3id.org/eudpp#ilcdFormatVersion">ILCD format version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#uuid" title="https://w3id.org/eudpp#uuid">UUID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#accessRestrictions" title="https://w3id.org/eudpp#accessRestrictions">access restrictions</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dataSetVersion" title="https://w3id.org/eudpp#dataSetVersion">data set version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#followsPEFCR" title="https://w3id.org/eudpp#followsPEFCR">follows PEFCR</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCAResult" title="https://w3id.org/eudpp#hasLCAResult">has LCA result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCIAResult" title="https://w3id.org/eudpp#hasLCIAResult">has LCIA result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasComplianceDeclaration" title="https://w3id.org/eudpp#hasComplianceDeclaration">has compliance declaration</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCopyright" title="https://w3id.org/eudpp#hasCopyright">has copyright</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExternalSource" title="https://w3id.org/eudpp#hasExternalSource">has external source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInventoryIndicatorResult" title="https://w3id.org/eudpp#hasInventoryIndicatorResult">has inventory indicator result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicenseType" title="https://w3id.org/eudpp#hasLicenseType">has license type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferenceToBackgroundDatabase" title="https://w3id.org/eudpp#hasReferenceToBackgroundDatabase">has reference to background database</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReview" title="https://w3id.org/eudpp#hasReview">has review</a> <sup class="type-op" title="object property">op</sup>, <a href="#referenceYear" title="https://w3id.org/eudpp#referenceYear">reference year</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#ilcdFormatVersion" title="https://w3id.org/eudpp#ilcdFormatVersion">ILCD format version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#uuid" title="https://w3id.org/eudpp#uuid">UUID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#accessRestrictions" title="https://w3id.org/eudpp#accessRestrictions">access restrictions</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dataSetVersion" title="https://w3id.org/eudpp#dataSetVersion">data set version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#declaresManufacturerRecord" title="https://w3id.org/eudpp#declaresManufacturerRecord">declares Manufacturer Record</a> <sup class="type-op" title="object property">op</sup>, <a href="#followsPEFCR" title="https://w3id.org/eudpp#followsPEFCR">follows PEFCR</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCAResult" title="https://w3id.org/eudpp#hasLCAResult">has LCA result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCIAResult" title="https://w3id.org/eudpp#hasLCIAResult">has LCIA result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasComplianceDeclaration" title="https://w3id.org/eudpp#hasComplianceDeclaration">has compliance declaration</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCopyright" title="https://w3id.org/eudpp#hasCopyright">has copyright</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExternalSource" title="https://w3id.org/eudpp#hasExternalSource">has external source</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInventoryIndicatorResult" title="https://w3id.org/eudpp#hasInventoryIndicatorResult">has inventory indicator result</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicenseType" title="https://w3id.org/eudpp#hasLicenseType">has license type</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferenceToBackgroundDatabase" title="https://w3id.org/eudpp#hasReferenceToBackgroundDatabase">has reference to background database</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReview" title="https://w3id.org/eudpp#hasReview">has review</a> <sup class="type-op" title="object property">op</sup>, <a href="#referenceYear" title="https://w3id.org/eudpp#referenceYear">reference year</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
   </dl>
  </div>
@@ -1667,6 +1678,33 @@ This section provides details for each class and property defined by EU DPP LCA.
    </dt>
    <dd>
     <a href="#en15804moduleA1" title="https://w3id.org/eudpp#en15804moduleA1">A1 - Raw material extraction and supply</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleA1A3" title="https://w3id.org/eudpp#en15804moduleA1A3">A1-A3 - Product stage (aggregated)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleA2" title="https://w3id.org/eudpp#en15804moduleA2">A2 - Transport to manufacturer</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleA3" title="https://w3id.org/eudpp#en15804moduleA3">A3 - Manufacturing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleA4" title="https://w3id.org/eudpp#en15804moduleA4">A4 - Transport to building site</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleA5" title="https://w3id.org/eudpp#en15804moduleA5">A5 - Construction / installation</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB1" title="https://w3id.org/eudpp#en15804moduleB1">B1 - Use</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB2" title="https://w3id.org/eudpp#en15804moduleB2">B2 - Maintenance</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB3" title="https://w3id.org/eudpp#en15804moduleB3">B3 - Repair</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB4" title="https://w3id.org/eudpp#en15804moduleB4">B4 - Replacement</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB5" title="https://w3id.org/eudpp#en15804moduleB5">B5 - Refurbishment</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB6" title="https://w3id.org/eudpp#en15804moduleB6">B6 - Operational energy use</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleB7" title="https://w3id.org/eudpp#en15804moduleB7">B7 - Operational water use</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleC1" title="https://w3id.org/eudpp#en15804moduleC1">C1 - Deconstruction / demolition</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleC2" title="https://w3id.org/eudpp#en15804moduleC2">C2 - Transport to waste processing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleC3" title="https://w3id.org/eudpp#en15804moduleC3">C3 - Waste processing</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#en15804moduleC4" title="https://w3id.org/eudpp#en15804moduleC4">C4 - Disposal</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#moduleD" title="https://w3id.org/eudpp#moduleD">D - Benefits and loads beyond the system boundary</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ManufacturerRecord">
+  <h3>Manufacturer Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ManufacturerRecord</p>
+  <div class="comment">
+   <span class="markdown">A container provenance entity (prov:Entity) documenting the involvement of a manufacturer (and optionally a data provider) in a specific LCA study, including the facility concerned and whether primary LCA data was provided.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#providesLCAData" title="https://w3id.org/eudpp#providesLCAData">provides LCA data</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#declaresManufacturerRecord" title="https://w3id.org/eudpp#declaresManufacturerRecord">declares Manufacturer Record</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1888,6 +1926,7 @@ This section provides details for each class and property defined by EU DPP LCA.
   <li><a href="#belongsToEn15804Group" title="https://w3id.org/eudpp#belongsToEn15804Group">belongs to EN 15804 indicator group</a></li>
   <li><a href="#belongsToMethodology" title="https://w3id.org/eudpp#belongsToMethodology">belongs to methodology</a></li>
   <li><a href="#computedByMethod" title="https://w3id.org/eudpp#computedByMethod">computed by method</a></li>
+  <li><a href="#declaresManufacturerRecord" title="https://w3id.org/eudpp#declaresManufacturerRecord">declares Manufacturer Record</a></li>
   <li><a href="#followsPCR" title="https://w3id.org/eudpp#followsPCR">follows PCR</a></li>
   <li><a href="#followsPEFCR" title="https://w3id.org/eudpp#followsPEFCR">follows PEFCR</a></li>
   <li><a href="#forLifeCycleModule" title="https://w3id.org/eudpp#forLifeCycleModule">for life-cycle module</a></li>
@@ -2025,6 +2064,29 @@ This section provides details for each class and property defined by EU DPP LCA.
     </dt>
     <dd>
      <a href="#LCAMethod" title="https://w3id.org/eudpp#LCAMethod">LCA Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="declaresManufacturerRecord">
+  <h3>declares Manufacturer Record<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#declaresManufacturerRecord</p>
+  <div class="comment">
+   <span class="markdown">Links an LCA study to a manufacturer record documenting the manufacturers whose data is included in the study.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#LCAStudy" title="https://w3id.org/eudpp#LCAStudy">LCA Study</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2661,6 +2723,7 @@ This section provides details for each class and property defined by EU DPP LCA.
   <li><a href="#methodVersion" title="https://w3id.org/eudpp#methodVersion">method version</a></li>
   <li><a href="#methodologyVersion" title="https://w3id.org/eudpp#methodologyVersion">methodology version</a></li>
   <li><a href="#modelVersion" title="https://w3id.org/eudpp#modelVersion">model version</a></li>
+  <li><a href="#providesLCAData" title="https://w3id.org/eudpp#providesLCAData">provides LCA data</a></li>
   <li><a href="#referenceYear" title="https://w3id.org/eudpp#referenceYear">reference year</a></li>
   <li><a href="#registrationNumber" title="https://w3id.org/eudpp#registrationNumber">registration number</a></li>
   <li><a href="#reviewDate" title="https://w3id.org/eudpp#reviewDate">review date</a></li>
@@ -2974,6 +3037,29 @@ This section provides details for each class and property defined by EU DPP LCA.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="providesLCAData">
+  <h3>provides LCA data<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#providesLCAData</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether the manufacturer identified in this record directly provided primary LCA data for the study. Set to true for the reference manufacturer; may be false for manufacturers listed for traceability only.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
     </dd>
    </dl>
   </div>
