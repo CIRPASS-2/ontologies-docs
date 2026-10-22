@@ -4,14 +4,14 @@
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Riina Maigre"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/description> "Connector (Bridge) module that only defines object properties between modules. The connector contains only object properties that have domain and range specified in different modules. \n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
-<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-10-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-10-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/title> "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#comment> "The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP CORE CON"@en .
-<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.2.0" .
+<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.4.0" .
 # 
 # 
 # #################################################################
@@ -152,7 +152,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#DPP> .
 <https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#DPPIdentifier> .
-<https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/2000/01/rdf-schema#comment> "Realisation for the Unique identifier of an instance of the digital product passport.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPIdentifier is modelled in the EU DPP CO IDENT module." .
+<https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/2000/01/rdf-schema#comment> "Realisation for the Unique identifier of an instance of the digital product passport.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPIdentifier is modelled in the EU DPP CO IDENT module."@en .
 <https://w3id.org/eudpp#hasDigitalProductPassportId> <http://www.w3.org/2000/01/rdf-schema#label> "has digital product passport id"@en .
 # 
 # https://w3id.org/eudpp#hasEUDeclarationOfConformity
@@ -194,12 +194,28 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasLCAStudy> <http://www.w3.org/2000/01/rdf-schema#comment> "A product has a LCA Study -- a measurable outcome of a life cycle assessment, representing the quantified effect of a product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nLCAStudy is modelled in the EU DPP CO LCA module."@en .
 <https://w3id.org/eudpp#hasLCAStudy> <http://www.w3.org/2000/01/rdf-schema#label> "has LCA study"@en .
 # 
+# https://w3id.org/eudpp#hasLCAVerifier
+<https://w3id.org/eudpp#hasLCAVerifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Review> .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://purl.org/dc/terms/references> "ISO 14025:2026, 9 and 10.4; ISO 14025:2006, 3.8 and 3.9; ISO 14044:2006, 6; EN 15804:2012+A2:2019, 7.1, Table 2" .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://purl.org/dc/terms/source> "https://www.iso.org/standard/87610.html" .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a review to the independent, third-party actor responsible for validating the Life Cycle Assessment (LCA) or Environmental Product Declaration (EPD).\n\nVerifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted]\n\nReview is modelled in the EU DPP CO LCA module. \nActor is modelled in the EU DPP CO ACTOR module."@en .
+<https://w3id.org/eudpp#hasLCAVerifier> <http://www.w3.org/2000/01/rdf-schema#label> "has LCA verifier"@en .
+# 
 # https://w3id.org/eudpp#hasManufacturer
 <https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
 <https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "A product has a manufacturer (Actor from ACTOR module).\n\nProduct is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer"@en .
+# 
+# https://w3id.org/eudpp#hasManufacturingSite
+<https://w3id.org/eudpp#hasManufacturingSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasManufacturingSite> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ManufacturerRecord> .
+<https://w3id.org/eudpp#hasManufacturingSite> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Facility> .
+<https://w3id.org/eudpp#hasManufacturingSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a manufacturer record to the facility it applies to, e.g., a production site covered by an LCA study or EPD. ILCD+EPD v1.3: manufacturer/sites/site.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nFacility is modelled in the EU DPP CO ACTOR module.\n        "@en .
+<https://w3id.org/eudpp#hasManufacturingSite> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturing site"@en .
 # 
 # https://w3id.org/eudpp#hasMaterial
 <https://w3id.org/eudpp#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -263,7 +279,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Facility> .
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#FacilityIdentifier> .
-<https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://purl.org/dc/terms/references> "ESPR Art 2 (33)"@en .
+<https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://purl.org/dc/terms/references> "ESPR Art 2 (33)" .
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking a Facility to its unique facility identifier.\nFacility is modelled in the EU DPP CO ACTOR module.\nFacilityIdentifier is modelled in the EU DPP CO IDENT module."@en .
 <https://w3id.org/eudpp#hasUniqueFacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has unique facility identifier"@en .
@@ -272,7 +288,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ActorIdentifier> .
-<https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://purl.org/dc/terms/references> "ESPR Art 2 (31)"@en .
+<https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://purl.org/dc/terms/references> "ESPR Art 2 (31)" .
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Linking an Actor to their unique operator identifier. \nActor is modelled in the EU DPP CO ACTOR module.\nActorIdentifier is modelled in the EU DPP CO IDENT module."@en .
 <https://w3id.org/eudpp#hasUniqueOperatorIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has unique operator identifier"@en .
@@ -283,6 +299,20 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasUniqueProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ProductIdentifier> .
 <https://w3id.org/eudpp#hasUniqueProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Realisation of the uniqueProductIdentifier.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductIdentifier is modelled in the EU DPP CO IDENT module."@en .
 <https://w3id.org/eudpp#hasUniqueProductIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has unique product identifier"@en .
+# 
+# https://w3id.org/eudpp#identifiesDataProvider
+<https://w3id.org/eudpp#identifiesDataProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#identifiesDataProvider> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ManufacturerRecord> .
+<https://w3id.org/eudpp#identifiesDataProvider> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
+<https://w3id.org/eudpp#identifiesDataProvider> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the entity that supplied or submitted the inventory data for this record, which may be different from the manufacturer (e.g., an industry association, a consultant, or a consortium lead for an average EPD).\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "@en .
+<https://w3id.org/eudpp#identifiesDataProvider> <http://www.w3.org/2000/01/rdf-schema#label> "identifies data provider"@en .
+# 
+# https://w3id.org/eudpp#identifiesManufacturer
+<https://w3id.org/eudpp#identifiesManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#identifiesManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ManufacturerRecord> .
+<https://w3id.org/eudpp#identifiesManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
+<https://w3id.org/eudpp#identifiesManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the specific economic operator or manufacturing company whose production process and product are represented by this manufacturer record.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "@en .
+<https://w3id.org/eudpp#identifiesManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "identifies manufacturer"@en .
 # 
 # https://w3id.org/eudpp#inContextOfDPP
 <https://w3id.org/eudpp#inContextOfDPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -471,6 +501,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#DocumentFormattedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#DocumentFormattedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
 # 
+# https://w3id.org/eudpp#EPDStudy
+<https://w3id.org/eudpp#EPDStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#EPDStudy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
+# 
 # https://w3id.org/eudpp#ESPREvent
 <https://w3id.org/eudpp#ESPREvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#ESPREvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
@@ -488,9 +522,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#FacilityIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/IDENT> .
 # 
+# https://w3id.org/eudpp#LCAModuleValue
+<https://w3id.org/eudpp#LCAModuleValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#LCAModuleValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp#LCAModuleValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
+# 
+# https://w3id.org/eudpp#LCAResult
+<https://w3id.org/eudpp#LCAResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#LCAResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#QuantitativeProperty> .
+<https://w3id.org/eudpp#LCAResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
+# 
 # https://w3id.org/eudpp#LCAStudy
 <https://w3id.org/eudpp#LCAStudy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#LCAStudy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
+# 
+# https://w3id.org/eudpp#ManufacturerRecord
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ManufacturerRecord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
 # 
 # https://w3id.org/eudpp#MaterialIdentifier
 <https://w3id.org/eudpp#MaterialIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -515,6 +563,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/eudpp#ProductStatus
 <https://w3id.org/eudpp#ProductStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#ProductStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/eudpp/EVENT" .
+# 
+# https://w3id.org/eudpp#QuantitativeProperty
+<https://w3id.org/eudpp#QuantitativeProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#QuantitativeProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/P_DPP> .
+# 
+# https://w3id.org/eudpp#Review
+<https://w3id.org/eudpp#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#Review> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/LCA> .
 # 
 # https://w3id.org/eudpp#Substance
 <https://w3id.org/eudpp#Substance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

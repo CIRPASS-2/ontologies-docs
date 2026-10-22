@@ -18,7 +18,7 @@
 --
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-09</terms:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-20</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
@@ -26,7 +26,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
         <vann:preferredNamespacePrefix>con</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CORE CON</rdfs:label>
-        <owl:versionInfo>2.2.0</owl:versionInfo>
+        <owl:versionInfo>2.4.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -304,7 +304,7 @@ SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasDigitalProductPassportId">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#DPP"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#DPPIdentifier"/>
-        <rdfs:comment>Realisation for the Unique identifier of an instance of the digital product passport.
+        <rdfs:comment xml:lang="en">Realisation for the Unique identifier of an instance of the digital product passport.
 
 DPP is modelled in the EU DPP CO P_DPP module.
 DPPIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
@@ -392,6 +392,25 @@ LCAStudy is modelled in the EU DPP CO LCA module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#hasLCAVerifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasLCAVerifier">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#Review"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
+        <terms:references>ISO 14025:2026, 9 and 10.4; ISO 14025:2006, 3.8 and 3.9; ISO 14044:2006, 6; EN 15804:2012+A2:2019, 7.1, Table 2</terms:references>
+        <terms:source>https://www.iso.org/standard/87610.html</terms:source>
+        <rdfs:comment xml:lang="en">Links a review to the independent, third-party actor responsible for validating the Life Cycle Assessment (LCA) or Environmental Product Declaration (EPD).
+
+Verifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted]
+
+Review is modelled in the EU DPP CO LCA module. 
+Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
+        <rdfs:label xml:lang="en">has LCA verifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/eudpp#hasManufacturer -->
 
 
@@ -403,6 +422,22 @@ LCAStudy is modelled in the EU DPP CO LCA module.</rdfs:comment>
 Product is modelled in the EU DPP CO P_DPP module.
 Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#hasManufacturingSite -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasManufacturingSite">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ManufacturerRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Facility"/>
+        <rdfs:comment xml:lang="en">Links a manufacturer record to the facility it applies to, e.g., a production site covered by an LCA study or EPD. ILCD+EPD v1.3: manufacturer/sites/site.
+
+ManufacturerRecord is modelled in the EU DPP CO LCA module.
+Facility is modelled in the EU DPP CO ACTOR module.
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturing site</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -530,7 +565,7 @@ SubstancePresence is modelled in the EU DPP CO IDENT module.</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#Facility"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#FacilityIdentifier"/>
-        <terms:references xml:lang="en">ESPR Art 2 (33)</terms:references>
+        <terms:references>ESPR Art 2 (33)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
         <rdfs:comment xml:lang="en">Linking a Facility to its unique facility identifier.
 Facility is modelled in the EU DPP CO ACTOR module.
@@ -546,7 +581,7 @@ FacilityIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#Actor"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#ActorIdentifier"/>
-        <terms:references xml:lang="en">ESPR Art 2 (31)</terms:references>
+        <terms:references>ESPR Art 2 (31)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
         <rdfs:comment xml:lang="en">Linking an Actor to their unique operator identifier. 
 Actor is modelled in the EU DPP CO ACTOR module.
@@ -567,6 +602,38 @@ ActorIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
 Product is modelled in the EU DPP CO P_DPP module.
 ProductIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
         <rdfs:label xml:lang="en">has unique product identifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifiesDataProvider -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#identifiesDataProvider">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ManufacturerRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
+        <rdfs:comment xml:lang="en">Identifies the entity that supplied or submitted the inventory data for this record, which may be different from the manufacturer (e.g., an industry association, a consultant, or a consortium lead for an average EPD).
+
+ManufacturerRecord is modelled in the EU DPP CO LCA module.
+Actor is modelled in the EU DPP CO ACTOR module.
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">identifies data provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/eudpp#identifiesManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#identifiesManufacturer">
+        <rdfs:domain rdf:resource="https://w3id.org/eudpp#ManufacturerRecord"/>
+        <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
+        <rdfs:comment xml:lang="en">Identifies the specific economic operator or manufacturing company whose production process and product are represented by this manufacturer record.
+
+ManufacturerRecord is modelled in the EU DPP CO LCA module.
+Actor is modelled in the EU DPP CO ACTOR module.
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">identifies manufacturer</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -956,6 +1023,15 @@ Product is modelled in the EU DPP CO P_DPP module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#EPDStudy -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#EPDStudy">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/eudpp#ESPREvent -->
 
 
@@ -993,10 +1069,39 @@ Product is modelled in the EU DPP CO P_DPP module.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/eudpp#LCAModuleValue -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#LCAModuleValue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#LCAResult -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#LCAResult">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/eudpp#LCAStudy -->
 
 
     <owl:Class rdf:about="https://w3id.org/eudpp#LCAStudy">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#ManufacturerRecord -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#ManufacturerRecord">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
     </owl:Class>
     
@@ -1052,6 +1157,24 @@ Product is modelled in the EU DPP CO P_DPP module.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/eudpp#ProductStatus">
         <rdfs:isDefinedBy>https://w3id.org/eudpp/EVENT</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#QuantitativeProperty -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#QuantitativeProperty">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/P_DPP"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/eudpp#Review -->
+
+
+    <owl:Class rdf:about="https://w3id.org/eudpp#Review">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/LCA"/>
     </owl:Class>
     
 

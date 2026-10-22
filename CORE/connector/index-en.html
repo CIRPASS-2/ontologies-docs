@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/CON","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/CON","name":"The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/CON", "dateReleased":"2026-10-09", "dateCreated":"2025-02-27", "version":"2.2.0", "author":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Elio Hbeich"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/CON","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/CON","name":"The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/CON", "dateReleased":"2026-10-20", "dateCreated":"2025-02-27", "version":"2.4.0", "author":[{"@type":"Person","name":"Riina Maigre"},{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Elio Hbeich"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -66,15 +66,15 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.</h1>
-<h2>Release: 2026-10-09</h2>
+<h2>Release: 2026-10-20</h2>
 <p class="created-on"><small>Created on: 2025-02-27</small></p>
 
 
 <dl>
 <dt>Revision:</dt>
-<dd>2.2.0</dd>
+<dd>2.4.0</dd>
 <dt>Issued on:</dt>
-<dd>2026-10-09</dd>
+<dd>2026-10-20</dd>
 <dt>Authors:</dt>
 <dd>Riina Maigre</dd><dd>Tarmo Robal</dd>
 
@@ -83,7 +83,7 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Riina Maigre, Tarmo Robal. The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.. Revision: 2.2.0.</dd>
+<dd>Riina Maigre, Tarmo Robal. The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.. Revision: 2.4.0.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -103,156 +103,188 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">
+      <a href="#Actor" title="https://w3id.org/eudpp#Actor">
          <span>Actor</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">
+      <a href="#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">
          <span>Actor Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">
+      <a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">
          <span>Actor Role Assignment</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment"
+      <a href="#AuthorisedRepresentativeRoleAssignment"
          title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">
          <span>Authorised Representative Role Assignment</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      <a href="#ConcentrationOfSubstanceOfConcern"
          title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">
          <span>Concentration Of Substance Of Concern</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ConformityAssessmentModule"
+      <a href="#ConformityAssessmentModule"
          title="https://w3id.org/eudpp#ConformityAssessmentModule">
          <span>Conformity Assessment Module</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">
+      <a href="#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">
          <span>Conformity Certificate</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">
+      <a href="#DPP" title="https://w3id.org/eudpp#DPP">
          <span>D P P</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DPPEvent" title="https://w3id.org/eudpp#DPPEvent">
+      <a href="#DPPEvent" title="https://w3id.org/eudpp#DPPEvent">
          <span>D P P Event</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord">
+      <a href="#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord">
          <span>D P P Event Record</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">
+      <a href="#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">
          <span>D P P Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction">
+      <a href="#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction">
          <span>Digital Instruction</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#DocumentFormattedProperty" title="https://w3id.org/eudpp#DocumentFormattedProperty">
+      <a href="#DocumentFormattedProperty"
+         title="https://w3id.org/eudpp#DocumentFormattedProperty">
          <span>Document Formatted Property</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">
+      <a href="#EPDStudy" title="https://w3id.org/eudpp#EPDStudy">
+         <span>E P D Study</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">
          <span>E S P R Event</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">
+      <a href="#EUDeclarationOfConformity"
+         title="https://w3id.org/eudpp#EUDeclarationOfConformity">
          <span>E U Declaration Of Conformity</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">
+      <a href="#Facility" title="https://w3id.org/eudpp#Facility">
          <span>Facility</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">
+      <a href="#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">
          <span>Facility Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#LCAStudy" title="https://w3id.org/eudpp#LCAStudy">
+      <a href="#LCAModuleValue" title="https://w3id.org/eudpp#LCAModuleValue">
+         <span>L C A Module Value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LCAResult" title="https://w3id.org/eudpp#LCAResult">
+         <span>L C A Result</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LCAStudy" title="https://w3id.org/eudpp#LCAStudy">
          <span>L C A Study</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">
+      <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">
+         <span>Manufacturer Record</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">
          <span>Material Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">
+      <a href="#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">
          <span>Material Of Composition</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">
+      <a href="#Product" title="https://w3id.org/eudpp#Product">
          <span>Product</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">
+      <a href="#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">
          <span>Product Event</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">
+      <a href="#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">
          <span>Product Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#ProductStatus" title="https://w3id.org/eudpp#ProductStatus">
+      <a href="#ProductStatus" title="https://w3id.org/eudpp#ProductStatus">
          <span>Product Status</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance">
+      <a href="#QuantitativeProperty" title="https://w3id.org/eudpp#QuantitativeProperty">
+         <span>Quantitative Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Review" title="https://w3id.org/eudpp#Review">
+         <span>Review</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Substance" title="https://w3id.org/eudpp#Substance">
          <span>Substance</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">
+      <a href="#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">
          <span>Substance Identifier</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#SubstanceManagementInstruction"
+      <a href="#SubstanceManagementInstruction"
          title="https://w3id.org/eudpp#SubstanceManagementInstruction">
          <span>Substance Management Instruction</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">
+      <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">
          <span>Substance Of Concern</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">
+      <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">
          <span>Substance Presence</span>
       </a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation"
+      <a href="#UnionHarmonisationLegislation"
          title="https://w3id.org/eudpp#UnionHarmonisationLegislation">
          <span>Union Harmonisation Legislation</span>
       </a>
@@ -261,137 +293,149 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://w3id.org/eudpp#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a>
+      <a href="#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a>
+      <a href="#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a>
+      <a href="#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern"
+      <a href="#containsSubstanceOfConcern"
          title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a>
+      <a href="#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasAuthorisedRepresentative"
+      <a href="#hasAuthorisedRepresentative"
          title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a>
+      <a href="#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a>
+      <a href="#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasDigitalProductPassportId"
+      <a href="#hasDigitalProductPassportId"
          title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a>
+      <a href="#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity"
+      <a href="#hasEUDeclarationOfConformity"
          title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a>
+      <a href="#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a>
+      <a href="#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a>
+      <a href="#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a>
+      <a href="#hasLCAVerifier" title="https://w3id.org/eudpp#hasLCAVerifier">has LCA verifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a>
+      <a href="#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a>
+      <a href="#hasManufacturingSite" title="https://w3id.org/eudpp#hasManufacturingSite">has manufacturing site</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a>
+      <a href="#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a>
+      <a href="#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasResponsibleManufacturer"
+      <a href="#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a>
+   </li>
+   <li>
+      <a href="#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a>
+   </li>
+   <li>
+      <a href="#hasResponsibleManufacturer"
          title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a>
+      <a href="#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a>
+      <a href="#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasUniqueFacilityIdentifier"
+      <a href="#hasUniqueFacilityIdentifier"
          title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasUniqueOperatorIdentifier"
+      <a href="#hasUniqueOperatorIdentifier"
          title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier"
+      <a href="#hasUniqueProductIdentifier"
          title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a>
+      <a href="#identifiesDataProvider" title="https://w3id.org/eudpp#identifiesDataProvider">identifies data provider</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a>
+      <a href="#identifiesManufacturer" title="https://w3id.org/eudpp#identifiesManufacturer">identifies manufacturer</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isActorRoleAssignmentForEvent"
+      <a href="#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a>
+   </li>
+   <li>
+      <a href="#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a>
+   </li>
+   <li>
+      <a href="#isActorRoleAssignmentForEvent"
          title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a>
+      <a href="#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a>
+      <a href="#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a>
+      <a href="#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a>
+      <a href="#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a>
+      <a href="#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a>
+      <a href="#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a>
+      <a href="#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a>
+      <a href="#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#performedAssessmentAccordingTo"
+      <a href="#performedAssessmentAccordingTo"
          title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a>
+      <a href="#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a>
+      <a href="#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a>
+      <a href="#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#representsManufacturerForProduct"
+      <a href="#representsManufacturerForProduct"
          title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
@@ -469,38 +513,44 @@ This section provides details for each class and property defined by EU DPP CORE
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor"> <span>Actor</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier"> <span>Actor Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment"> <span>Actor Role Assignment</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment"> <span>Authorised Representative Role Assignment</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"> <span>Concentration Of Substance Of Concern</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule"> <span>Conformity Assessment Module</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate"> <span>Conformity Certificate</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP"> <span>D P P</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DPPEvent" title="https://w3id.org/eudpp#DPPEvent"> <span>D P P Event</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord"> <span>D P P Event Record</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier"> <span>D P P Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction"> <span>Digital Instruction</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#DocumentFormattedProperty" title="https://w3id.org/eudpp#DocumentFormattedProperty"> <span>Document Formatted Property</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ESPREvent" title="https://w3id.org/eudpp#ESPREvent"> <span>E S P R Event</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity"> <span>E U Declaration Of Conformity</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility"> <span>Facility</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier"> <span>Facility Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#LCAStudy" title="https://w3id.org/eudpp#LCAStudy"> <span>L C A Study</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier"> <span>Material Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition"> <span>Material Of Composition</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product"> <span>Product</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ProductEvent" title="https://w3id.org/eudpp#ProductEvent"> <span>Product Event</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier"> <span>Product Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#ProductStatus" title="https://w3id.org/eudpp#ProductStatus"> <span>Product Status</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance"> <span>Substance</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier"> <span>Substance Identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction"> <span>Substance Management Instruction</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern"> <span>Substance Of Concern</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence"> <span>Substance Presence</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation"> <span>Union Harmonisation Legislation</span> </a></li>
+  <li><a href="#Actor" title="https://w3id.org/eudpp#Actor"> <span>Actor</span> </a></li>
+  <li><a href="#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier"> <span>Actor Identifier</span> </a></li>
+  <li><a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment"> <span>Actor Role Assignment</span> </a></li>
+  <li><a href="#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment"> <span>Authorised Representative Role Assignment</span> </a></li>
+  <li><a href="#ConcentrationOfSubstanceOfConcern" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"> <span>Concentration Of Substance Of Concern</span> </a></li>
+  <li><a href="#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule"> <span>Conformity Assessment Module</span> </a></li>
+  <li><a href="#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate"> <span>Conformity Certificate</span> </a></li>
+  <li><a href="#DPP" title="https://w3id.org/eudpp#DPP"> <span>D P P</span> </a></li>
+  <li><a href="#DPPEvent" title="https://w3id.org/eudpp#DPPEvent"> <span>D P P Event</span> </a></li>
+  <li><a href="#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord"> <span>D P P Event Record</span> </a></li>
+  <li><a href="#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier"> <span>D P P Identifier</span> </a></li>
+  <li><a href="#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction"> <span>Digital Instruction</span> </a></li>
+  <li><a href="#DocumentFormattedProperty" title="https://w3id.org/eudpp#DocumentFormattedProperty"> <span>Document Formatted Property</span> </a></li>
+  <li><a href="#EPDStudy" title="https://w3id.org/eudpp#EPDStudy"> <span>E P D Study</span> </a></li>
+  <li><a href="#ESPREvent" title="https://w3id.org/eudpp#ESPREvent"> <span>E S P R Event</span> </a></li>
+  <li><a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity"> <span>E U Declaration Of Conformity</span> </a></li>
+  <li><a href="#Facility" title="https://w3id.org/eudpp#Facility"> <span>Facility</span> </a></li>
+  <li><a href="#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier"> <span>Facility Identifier</span> </a></li>
+  <li><a href="#LCAModuleValue" title="https://w3id.org/eudpp#LCAModuleValue"> <span>L C A Module Value</span> </a></li>
+  <li><a href="#LCAResult" title="https://w3id.org/eudpp#LCAResult"> <span>L C A Result</span> </a></li>
+  <li><a href="#LCAStudy" title="https://w3id.org/eudpp#LCAStudy"> <span>L C A Study</span> </a></li>
+  <li><a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord"> <span>Manufacturer Record</span> </a></li>
+  <li><a href="#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier"> <span>Material Identifier</span> </a></li>
+  <li><a href="#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition"> <span>Material Of Composition</span> </a></li>
+  <li><a href="#Product" title="https://w3id.org/eudpp#Product"> <span>Product</span> </a></li>
+  <li><a href="#ProductEvent" title="https://w3id.org/eudpp#ProductEvent"> <span>Product Event</span> </a></li>
+  <li><a href="#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier"> <span>Product Identifier</span> </a></li>
+  <li><a href="#ProductStatus" title="https://w3id.org/eudpp#ProductStatus"> <span>Product Status</span> </a></li>
+  <li><a href="#QuantitativeProperty" title="https://w3id.org/eudpp#QuantitativeProperty"> <span>Quantitative Property</span> </a></li>
+  <li><a href="#Review" title="https://w3id.org/eudpp#Review"> <span>Review</span> </a></li>
+  <li><a href="#Substance" title="https://w3id.org/eudpp#Substance"> <span>Substance</span> </a></li>
+  <li><a href="#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier"> <span>Substance Identifier</span> </a></li>
+  <li><a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction"> <span>Substance Management Instruction</span> </a></li>
+  <li><a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern"> <span>Substance Of Concern</span> </a></li>
+  <li><a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence"> <span>Substance Presence</span> </a></li>
+  <li><a href="#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation"> <span>Union Harmonisation Legislation</span> </a></li>
  </ul>
- <div class="entity" id="https://w3id.org/eudpp#Actor">
+ <div class="entity" id="https://w3id.org/eudpp#Actor"><span id="Actor"></span>
   <h3>Actor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#Actor</p>
   <dl class="definedBy">
@@ -516,17 +566,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCAVerifier" title="https://w3id.org/eudpp#hasLCAVerifier">has LCA verifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#identifiesDataProvider" title="https://w3id.org/eudpp#identifiesDataProvider">identifies data provider</a> <sup class="type-op" title="object property">op</sup>, <a href="#identifiesManufacturer" title="https://w3id.org/eudpp#identifiesManufacturer">identifies manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ActorIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#ActorIdentifier"><span id="ActorIdentifier"></span>
   <h3>Actor Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ActorIdentifier</p>
   <dl class="definedBy">
@@ -542,11 +592,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ActorRoleAssignment">
+ <div class="entity" id="https://w3id.org/eudpp#ActorRoleAssignment"><span id="ActorRoleAssignment"></span>
   <h3>Actor Role Assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ActorRoleAssignment</p>
   <dl class="definedBy">
@@ -562,17 +612,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a> <sup class="type-op" title="object property">op</sup>, <a href="#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">
+ <div class="entity" id="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment"><span id="AuthorisedRepresentativeRoleAssignment"></span>
   <h3>Authorised Representative Role Assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment</p>
   <dl class="definedBy">
@@ -588,11 +638,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">
+ <div class="entity" id="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"><span id="ConcentrationOfSubstanceOfConcern"></span>
   <h3>Concentration Of Substance Of Concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern</p>
   <dl class="definedBy">
@@ -608,11 +658,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ConformityAssessmentModule">
+ <div class="entity" id="https://w3id.org/eudpp#ConformityAssessmentModule"><span id="ConformityAssessmentModule"></span>
   <h3>Conformity Assessment Module<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ConformityAssessmentModule</p>
   <dl class="definedBy">
@@ -628,11 +678,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ConformityCertificate">
+ <div class="entity" id="https://w3id.org/eudpp#ConformityCertificate"><span id="ConformityCertificate"></span>
   <h3>Conformity Certificate<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ConformityCertificate</p>
   <dl class="definedBy">
@@ -648,11 +698,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DPP">
+ <div class="entity" id="https://w3id.org/eudpp#DPP"><span id="DPP"></span>
   <h3>D P P<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DPP</p>
   <dl class="definedBy">
@@ -668,17 +718,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a> <sup class="type-op" title="object property">op</sup>, <a href="#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DPPEvent">
+ <div class="entity" id="https://w3id.org/eudpp#DPPEvent"><span id="DPPEvent"></span>
   <h3>D P P Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DPPEvent</p>
   <dl class="definedBy">
@@ -694,11 +744,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DPPEventRecord">
+ <div class="entity" id="https://w3id.org/eudpp#DPPEventRecord"><span id="DPPEventRecord"></span>
   <h3>D P P Event Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DPPEventRecord</p>
   <dl class="definedBy">
@@ -714,11 +764,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DPPIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#DPPIdentifier"><span id="DPPIdentifier"></span>
   <h3>D P P Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DPPIdentifier</p>
   <dl class="definedBy">
@@ -734,11 +784,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DigitalInstruction">
+ <div class="entity" id="https://w3id.org/eudpp#DigitalInstruction"><span id="DigitalInstruction"></span>
   <h3>Digital Instruction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DigitalInstruction</p>
   <dl class="definedBy">
@@ -754,11 +804,11 @@ This section provides details for each class and property defined by EU DPP CORE
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance Management Instruction</a> <sup class="type-c" title="class">c</sup>
+    <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance Management Instruction</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#DocumentFormattedProperty">
+ <div class="entity" id="https://w3id.org/eudpp#DocumentFormattedProperty"><span id="DocumentFormattedProperty"></span>
   <h3>Document Formatted Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#DocumentFormattedProperty</p>
   <dl class="definedBy">
@@ -774,11 +824,23 @@ This section provides details for each class and property defined by EU DPP CORE
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+    <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ESPREvent">
+ <div class="entity" id="https://w3id.org/eudpp#EPDStudy"><span id="EPDStudy"></span>
+  <h3>E P D Study<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#EPDStudy</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/LCA">https://w3id.org/eudpp/LCA</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#ESPREvent"><span id="ESPREvent"></span>
   <h3>E S P R Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ESPREvent</p>
   <dl class="definedBy">
@@ -794,17 +856,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#EUDeclarationOfConformity">
+ <div class="entity" id="https://w3id.org/eudpp#EUDeclarationOfConformity"><span id="EUDeclarationOfConformity"></span>
   <h3>E U Declaration Of Conformity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#EUDeclarationOfConformity</p>
   <dl class="definedBy">
@@ -820,23 +882,23 @@ This section provides details for each class and property defined by EU DPP CORE
     has super-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#DocumentFormattedProperty" title="https://w3id.org/eudpp#DocumentFormattedProperty">Document Formatted Property</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DocumentFormattedProperty" title="https://w3id.org/eudpp#DocumentFormattedProperty">Document Formatted Property</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#Facility">
+ <div class="entity" id="https://w3id.org/eudpp#Facility"><span id="Facility"></span>
   <h3>Facility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#Facility</p>
   <dl class="definedBy">
@@ -852,17 +914,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManufacturingSite" title="https://w3id.org/eudpp#hasManufacturingSite">has manufacturing site</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#FacilityIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#FacilityIdentifier"><span id="FacilityIdentifier"></span>
   <h3>Facility Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#FacilityIdentifier</p>
   <dl class="definedBy">
@@ -878,11 +940,51 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#LCAStudy">
+ <div class="entity" id="https://w3id.org/eudpp#LCAModuleValue"><span id="LCAModuleValue"></span>
+  <h3>L C A Module Value<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#LCAModuleValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/LCA">https://w3id.org/eudpp/LCA</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#QuantitativeProperty" title="https://w3id.org/eudpp#QuantitativeProperty">Quantitative Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#LCAResult"><span id="LCAResult"></span>
+  <h3>L C A Result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#LCAResult</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/LCA">https://w3id.org/eudpp/LCA</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#QuantitativeProperty" title="https://w3id.org/eudpp#QuantitativeProperty">Quantitative Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#LCAStudy"><span id="LCAStudy"></span>
   <h3>L C A Study<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#LCAStudy</p>
   <dl class="definedBy">
@@ -898,11 +1000,31 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#MaterialIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#ManufacturerRecord"><span id="ManufacturerRecord"></span>
+  <h3>Manufacturer Record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ManufacturerRecord</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/LCA">https://w3id.org/eudpp/LCA</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasManufacturingSite" title="https://w3id.org/eudpp#hasManufacturingSite">has manufacturing site</a> <sup class="type-op" title="object property">op</sup>, <a href="#identifiesDataProvider" title="https://w3id.org/eudpp#identifiesDataProvider">identifies data provider</a> <sup class="type-op" title="object property">op</sup>, <a href="#identifiesManufacturer" title="https://w3id.org/eudpp#identifiesManufacturer">identifies manufacturer</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#MaterialIdentifier"><span id="MaterialIdentifier"></span>
   <h3>Material Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#MaterialIdentifier</p>
   <dl class="definedBy">
@@ -918,11 +1040,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#MaterialOfComposition">
+ <div class="entity" id="https://w3id.org/eudpp#MaterialOfComposition"><span id="MaterialOfComposition"></span>
   <h3>Material Of Composition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#MaterialOfComposition</p>
   <dl class="definedBy">
@@ -938,17 +1060,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#Product">
+ <div class="entity" id="https://w3id.org/eudpp#Product"><span id="Product"></span>
   <h3>Product<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#Product</p>
   <dl class="definedBy">
@@ -964,17 +1086,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a> <sup class="type-op" title="object property">op</sup>, <a href="#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a> <sup class="type-op" title="object property">op</sup>, <a href="#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>, <a href="#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ProductEvent">
+ <div class="entity" id="https://w3id.org/eudpp#ProductEvent"><span id="ProductEvent"></span>
   <h3>Product Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ProductEvent</p>
   <dl class="definedBy">
@@ -990,11 +1112,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ProductIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#ProductIdentifier"><span id="ProductIdentifier"></span>
   <h3>Product Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ProductIdentifier</p>
   <dl class="definedBy">
@@ -1010,11 +1132,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#ProductStatus">
+ <div class="entity" id="https://w3id.org/eudpp#ProductStatus"><span id="ProductStatus"></span>
   <h3>Product Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#ProductStatus</p>
   <dl class="definedBy">
@@ -1030,11 +1152,51 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#Substance">
+ <div class="entity" id="https://w3id.org/eudpp#QuantitativeProperty"><span id="QuantitativeProperty"></span>
+  <h3>Quantitative Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#QuantitativeProperty</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/P_DPP">https://w3id.org/eudpp/P_DPP</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#LCAModuleValue" title="https://w3id.org/eudpp#LCAModuleValue">L C A Module Value</a> <sup class="type-c" title="class">c</sup>, <a href="#LCAResult" title="https://w3id.org/eudpp#LCAResult">L C A Result</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#Review"><span id="Review"></span>
+  <h3>Review<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#Review</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/LCA">https://w3id.org/eudpp/LCA</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasLCAVerifier" title="https://w3id.org/eudpp#hasLCAVerifier">has LCA verifier</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#Substance"><span id="Substance"></span>
   <h3>Substance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#Substance</p>
   <dl class="definedBy">
@@ -1050,11 +1212,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#SubstanceIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceIdentifier"><span id="SubstanceIdentifier"></span>
   <h3>Substance Identifier<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceIdentifier</p>
   <dl class="definedBy">
@@ -1070,11 +1232,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#SubstanceManagementInstruction">
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceManagementInstruction"><span id="SubstanceManagementInstruction"></span>
   <h3>Substance Management Instruction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceManagementInstruction</p>
   <dl class="definedBy">
@@ -1090,11 +1252,11 @@ This section provides details for each class and property defined by EU DPP CORE
     has super-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction">Digital Instruction</a> <sup class="type-c" title="class">c</sup>
+    <a href="#DigitalInstruction" title="https://w3id.org/eudpp#DigitalInstruction">Digital Instruction</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#SubstanceOfConcern">
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceOfConcern"><span id="SubstanceOfConcern"></span>
   <h3>Substance Of Concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceOfConcern</p>
   <dl class="definedBy">
@@ -1110,11 +1272,11 @@ This section provides details for each class and property defined by EU DPP CORE
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#SubstancePresence">
+ <div class="entity" id="https://w3id.org/eudpp#SubstancePresence"><span id="SubstancePresence"></span>
   <h3>Substance Presence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstancePresence</p>
   <dl class="definedBy">
@@ -1130,17 +1292,17 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a> <sup class="type-op" title="object property">op</sup>, <a href="#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#UnionHarmonisationLegislation">
+ <div class="entity" id="https://w3id.org/eudpp#UnionHarmonisationLegislation"><span id="UnionHarmonisationLegislation"></span>
   <h3>Union Harmonisation Legislation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#UnionHarmonisationLegislation</p>
   <dl class="definedBy">
@@ -1156,62 +1318,66 @@ This section provides details for each class and property defined by EU DPP CORE
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a></li>
-  <li><a href="#https://w3id.org/eudpp#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a></li>
-  <li><a href="#https://w3id.org/eudpp#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a></li>
-  <li><a href="#https://w3id.org/eudpp#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a></li>
-  <li><a href="#https://w3id.org/eudpp#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a></li>
-  <li><a href="#https://w3id.org/eudpp#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a></li>
-  <li><a href="#https://w3id.org/eudpp#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a></li>
-  <li><a href="#https://w3id.org/eudpp#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a></li>
-  <li><a href="#https://w3id.org/eudpp#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a></li>
-  <li><a href="#https://w3id.org/eudpp#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a></li>
-  <li><a href="#https://w3id.org/eudpp#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a></li>
-  <li><a href="#https://w3id.org/eudpp#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a></li>
-  <li><a href="#https://w3id.org/eudpp#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a></li>
-  <li><a href="#https://w3id.org/eudpp#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a></li>
-  <li><a href="#https://w3id.org/eudpp#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a></li>
-  <li><a href="#https://w3id.org/eudpp#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a></li>
-  <li><a href="#https://w3id.org/eudpp#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a></li>
-  <li><a href="#https://w3id.org/eudpp#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a></li>
-  <li><a href="#https://w3id.org/eudpp#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a></li>
-  <li><a href="#https://w3id.org/eudpp#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a></li>
+  <li><a href="#concernsDPP" title="https://w3id.org/eudpp#concernsDPP">concerns DPP</a></li>
+  <li><a href="#concernsProduct" title="https://w3id.org/eudpp#concernsProduct">concerns product</a></li>
+  <li><a href="#conformityAttestedBy" title="https://w3id.org/eudpp#conformityAttestedBy">conformity attested by</a></li>
+  <li><a href="#containsSubstanceOfConcern" title="https://w3id.org/eudpp#containsSubstanceOfConcern">contains substance of concern</a></li>
+  <li><a href="#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a></li>
+  <li><a href="#hasAuthorisedRepresentative" title="https://w3id.org/eudpp#hasAuthorisedRepresentative">has authorised representative</a></li>
+  <li><a href="#hasBackUpCopyHost" title="https://w3id.org/eudpp#hasBackUpCopyHost">has back-up-copy host</a></li>
+  <li><a href="#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">has concentration</a></li>
+  <li><a href="#hasDigitalProductPassportId" title="https://w3id.org/eudpp#hasDigitalProductPassportId">has digital product passport id</a></li>
+  <li><a href="#hasEconomicOperator" title="https://w3id.org/eudpp#hasEconomicOperator">has economic operator</a></li>
+  <li><a href="#hasEUDeclarationOfConformity" title="https://w3id.org/eudpp#hasEUDeclarationOfConformity">has EU Declaration of Conformity</a></li>
+  <li><a href="#hasFacility" title="https://w3id.org/eudpp#hasFacility">has facility</a></li>
+  <li><a href="#hasIssuer" title="https://w3id.org/eudpp#hasIssuer">has issuer</a></li>
+  <li><a href="#hasLCAStudy" title="https://w3id.org/eudpp#hasLCAStudy">has LCA study</a></li>
+  <li><a href="#hasLCAVerifier" title="https://w3id.org/eudpp#hasLCAVerifier">has LCA verifier</a></li>
+  <li><a href="#hasManufacturer" title="https://w3id.org/eudpp#hasManufacturer">has manufacturer</a></li>
+  <li><a href="#hasManufacturingSite" title="https://w3id.org/eudpp#hasManufacturingSite">has manufacturing site</a></li>
+  <li><a href="#hasMaterial" title="https://w3id.org/eudpp#hasMaterial">has material</a></li>
+  <li><a href="#hasMaterialIdentifier" title="https://w3id.org/eudpp#hasMaterialIdentifier">has material identifier</a></li>
+  <li><a href="#hasNotifiedBody" title="https://w3id.org/eudpp#hasNotifiedBody">has notified body</a></li>
+  <li><a href="#hasProductStatus" title="https://w3id.org/eudpp#hasProductStatus">has product status</a></li>
+  <li><a href="#hasResponsibleManufacturer" title="https://w3id.org/eudpp#hasResponsibleManufacturer">has responsible manufacturer</a></li>
+  <li><a href="#hasSubstanceIdentifier" title="https://w3id.org/eudpp#hasSubstanceIdentifier">has substance identifier</a></li>
+  <li><a href="#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a></li>
+  <li><a href="#hasUniqueFacilityIdentifier" title="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">has unique facility identifier</a></li>
+  <li><a href="#hasUniqueOperatorIdentifier" title="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">has unique operator identifier</a></li>
+  <li><a href="#hasUniqueProductIdentifier" title="https://w3id.org/eudpp#hasUniqueProductIdentifier">has unique product identifier</a></li>
+  <li><a href="#identifiesDataProvider" title="https://w3id.org/eudpp#identifiesDataProvider">identifies data provider</a></li>
+  <li><a href="#identifiesManufacturer" title="https://w3id.org/eudpp#identifiesManufacturer">identifies manufacturer</a></li>
+  <li><a href="#inContextOfDPP" title="https://w3id.org/eudpp#inContextOfDPP">in context of DPP</a></li>
+  <li><a href="#inContextOfProduct" title="https://w3id.org/eudpp#inContextOfProduct">in context of product</a></li>
+  <li><a href="#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a></li>
+  <li><a href="#isConformWith" title="https://w3id.org/eudpp#isConformWith">is conform with</a></li>
+  <li><a href="#isConnectedTo" title="https://w3id.org/eudpp#isConnectedTo">is connected to</a></li>
+  <li><a href="#isLocatedInProduct" title="https://w3id.org/eudpp#isLocatedInProduct">is located in product</a></li>
+  <li><a href="#isNotifiedFor" title="https://w3id.org/eudpp#isNotifiedFor">is notified for</a></li>
+  <li><a href="#isSignedBy" title="https://w3id.org/eudpp#isSignedBy">is signed by</a></li>
+  <li><a href="#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a></li>
+  <li><a href="#isIssuedBy" title="https://w3id.org/eudpp#isIssuedBy">issued by</a></li>
+  <li><a href="#issuesCertificate" title="https://w3id.org/eudpp#issuesCertificate">issues certificate</a></li>
+  <li><a href="#performedAssessmentAccordingTo" title="https://w3id.org/eudpp#performedAssessmentAccordingTo">performed assessment according to</a></li>
+  <li><a href="#performedAt" title="https://w3id.org/eudpp#performedAt">performed at</a></li>
+  <li><a href="#performedBy" title="https://w3id.org/eudpp#performedBy">performed by</a></li>
+  <li><a href="#recordedBy" title="https://w3id.org/eudpp#recordedBy">recorded by</a></li>
+  <li><a href="#representsManufacturerForProduct" title="https://w3id.org/eudpp#representsManufacturerForProduct">represents manufacturer for product</a></li>
  </ul>
- <div class="entity" id="https://w3id.org/eudpp#concernsDPP">
+ <div class="entity" id="https://w3id.org/eudpp#concernsDPP"><span id="concernsDPP"></span>
   <h3>concerns DPP<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#concernsDPP</p>
   <div class="comment">
@@ -1223,18 +1389,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPPEvent" title="https://w3id.org/eudpp#DPPEvent">D P P Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPPEvent" title="https://w3id.org/eudpp#DPPEvent">D P P Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#concernsProduct">
+ <div class="entity" id="https://w3id.org/eudpp#concernsProduct"><span id="concernsProduct"></span>
   <h3>concerns product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#concernsProduct</p>
   <div class="comment">
@@ -1246,18 +1412,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#conformityAttestedBy">
+ <div class="entity" id="https://w3id.org/eudpp#conformityAttestedBy"><span id="conformityAttestedBy"></span>
   <h3>conformity attested by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#conformityAttestedBy</p>
   <div class="comment">
@@ -1277,18 +1443,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonisation Legislation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonisation Legislation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#containsSubstanceOfConcern">
+ <div class="entity" id="https://w3id.org/eudpp#containsSubstanceOfConcern"><span id="containsSubstanceOfConcern"></span>
   <h3>contains substance of concern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#containsSubstanceOfConcern</p>
   <div class="comment">
@@ -1300,18 +1466,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasActorRoleAssignment">
+ <div class="entity" id="https://w3id.org/eudpp#hasActorRoleAssignment"><span id="hasActorRoleAssignment"></span>
   <h3>has actor role assignment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasActorRoleAssignment</p>
   <div class="comment">
@@ -1323,24 +1489,24 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">E S P R Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">E S P R Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isActorRoleAssignmentForEvent" title="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">is actor role assignment for event</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasAuthorisedRepresentative">
+ <div class="entity" id="https://w3id.org/eudpp#hasAuthorisedRepresentative"><span id="hasAuthorisedRepresentative"></span>
   <h3>has authorised representative<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasAuthorisedRepresentative</p>
   <div class="comment">
@@ -1363,18 +1529,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasBackUpCopyHost">
+ <div class="entity" id="https://w3id.org/eudpp#hasBackUpCopyHost"><span id="hasBackUpCopyHost"></span>
   <h3>has back-up-copy host<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasBackUpCopyHost</p>
   <div class="comment">
@@ -1394,18 +1560,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasConcentration">
+ <div class="entity" id="https://w3id.org/eudpp#hasConcentration"><span id="hasConcentration"></span>
   <h3>has concentration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasConcentration</p>
   <div class="comment">
@@ -1417,18 +1583,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">Concentration Of Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ConcentrationOfSubstanceOfConcern" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">Concentration Of Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasDigitalProductPassportId">
+ <div class="entity" id="https://w3id.org/eudpp#hasDigitalProductPassportId"><span id="hasDigitalProductPassportId"></span>
   <h3>has digital product passport id<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasDigitalProductPassportId</p>
   <div class="comment">
@@ -1440,18 +1606,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">D P P Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPPIdentifier" title="https://w3id.org/eudpp#DPPIdentifier">D P P Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasEconomicOperator">
+ <div class="entity" id="https://w3id.org/eudpp#hasEconomicOperator"><span id="hasEconomicOperator"></span>
   <h3>has economic operator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasEconomicOperator</p>
   <div class="comment">
@@ -1463,18 +1629,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasEUDeclarationOfConformity">
+ <div class="entity" id="https://w3id.org/eudpp#hasEUDeclarationOfConformity"><span id="hasEUDeclarationOfConformity"></span>
   <h3>has EU Declaration of Conformity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasEUDeclarationOfConformity</p>
   <div class="comment">
@@ -1497,18 +1663,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasFacility">
+ <div class="entity" id="https://w3id.org/eudpp#hasFacility"><span id="hasFacility"></span>
   <h3>has facility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasFacility</p>
   <div class="comment">
@@ -1520,18 +1686,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasIssuer">
+ <div class="entity" id="https://w3id.org/eudpp#hasIssuer"><span id="hasIssuer"></span>
   <h3>has issuer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasIssuer</p>
   <div class="comment">
@@ -1543,18 +1709,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasLCAStudy">
+ <div class="entity" id="https://w3id.org/eudpp#hasLCAStudy"><span id="hasLCAStudy"></span>
   <h3>has LCA study<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasLCAStudy</p>
   <div class="comment">
@@ -1566,18 +1732,49 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#LCAStudy" title="https://w3id.org/eudpp#LCAStudy">L C A Study</a> <sup class="type-c" title="class">c</sup>
+     <a href="#LCAStudy" title="https://w3id.org/eudpp#LCAStudy">L C A Study</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasManufacturer">
+ <div class="entity" id="https://w3id.org/eudpp#hasLCAVerifier"><span id="hasLCAVerifier"></span>
+  <h3>has LCA verifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasLCAVerifier</p>
+  <div class="comment">
+   <span class="markdown">Links a review to the independent, third-party actor responsible for validating the Life Cycle Assessment (LCA) or Environmental Product Declaration (EPD). Verifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted] Review is modelled in the EU DPP CO LCA module. Actor is modelled in the EU DPP CO ACTOR module.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    https://www.iso.org/standard/87610.html
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Review" title="https://w3id.org/eudpp#Review">Review</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasManufacturer"><span id="hasManufacturer"></span>
   <h3>has manufacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasManufacturer</p>
   <div class="comment">
@@ -1589,18 +1786,41 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasMaterial">
+ <div class="entity" id="https://w3id.org/eudpp#hasManufacturingSite"><span id="hasManufacturingSite"></span>
+  <h3>has manufacturing site<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasManufacturingSite</p>
+  <div class="comment">
+   <span class="markdown">Links a manufacturer record to the facility it applies to, e.g., a production site covered by an LCA study or EPD. ILCD+EPD v1.3: manufacturer/sites/site. ManufacturerRecord is modelled in the EU DPP CO LCA module. Facility is modelled in the EU DPP CO ACTOR module. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasMaterial"><span id="hasMaterial"></span>
   <h3>has material<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasMaterial</p>
   <div class="comment">
@@ -1612,18 +1832,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup>
+     <a href="#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasMaterialIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#hasMaterialIdentifier"><span id="hasMaterialIdentifier"></span>
   <h3>has material identifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasMaterialIdentifier</p>
   <div class="comment">
@@ -1635,18 +1855,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup>
+     <a href="#MaterialOfComposition" title="https://w3id.org/eudpp#MaterialOfComposition">Material Of Composition</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#MaterialIdentifier" title="https://w3id.org/eudpp#MaterialIdentifier">Material Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasNotifiedBody">
+ <div class="entity" id="https://w3id.org/eudpp#hasNotifiedBody"><span id="hasNotifiedBody"></span>
   <h3>has notified body<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasNotifiedBody</p>
   <div class="comment">
@@ -1669,18 +1889,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasProductStatus">
+ <div class="entity" id="https://w3id.org/eudpp#hasProductStatus"><span id="hasProductStatus"></span>
   <h3>has product status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasProductStatus</p>
   <div class="comment">
@@ -1692,18 +1912,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ProductStatus" title="https://w3id.org/eudpp#ProductStatus">Product Status</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ProductStatus" title="https://w3id.org/eudpp#ProductStatus">Product Status</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasResponsibleManufacturer">
+ <div class="entity" id="https://w3id.org/eudpp#hasResponsibleManufacturer"><span id="hasResponsibleManufacturer"></span>
   <h3>has responsible manufacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasResponsibleManufacturer</p>
   <div class="comment">
@@ -1726,18 +1946,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasSubstanceIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#hasSubstanceIdentifier"><span id="hasSubstanceIdentifier"></span>
   <h3>has substance identifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasSubstanceIdentifier</p>
   <div class="comment">
@@ -1749,18 +1969,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">Substance Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstanceIdentifier" title="https://w3id.org/eudpp#SubstanceIdentifier">Substance Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasSubstancePresence">
+ <div class="entity" id="https://w3id.org/eudpp#hasSubstancePresence"><span id="hasSubstancePresence"></span>
   <h3>has substance presence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasSubstancePresence</p>
   <div class="comment">
@@ -1772,24 +1992,24 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isSubstancePresenceOf" title="https://w3id.org/eudpp#isSubstancePresenceOf">is substance presence of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasUniqueFacilityIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#hasUniqueFacilityIdentifier"><span id="hasUniqueFacilityIdentifier"></span>
   <h3>has unique facility identifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasUniqueFacilityIdentifier</p>
   <div class="comment">
@@ -1809,18 +2029,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#FacilityIdentifier" title="https://w3id.org/eudpp#FacilityIdentifier">Facility Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasUniqueOperatorIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#hasUniqueOperatorIdentifier"><span id="hasUniqueOperatorIdentifier"></span>
   <h3>has unique operator identifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasUniqueOperatorIdentifier</p>
   <div class="comment">
@@ -1840,18 +2060,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ActorIdentifier" title="https://w3id.org/eudpp#ActorIdentifier">Actor Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasUniqueProductIdentifier">
+ <div class="entity" id="https://w3id.org/eudpp#hasUniqueProductIdentifier"><span id="hasUniqueProductIdentifier"></span>
   <h3>has unique product identifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#hasUniqueProductIdentifier</p>
   <div class="comment">
@@ -1863,18 +2083,64 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product Identifier</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ProductIdentifier" title="https://w3id.org/eudpp#ProductIdentifier">Product Identifier</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#inContextOfDPP">
+ <div class="entity" id="https://w3id.org/eudpp#identifiesDataProvider"><span id="identifiesDataProvider"></span>
+  <h3>identifies data provider<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#identifiesDataProvider</p>
+  <div class="comment">
+   <span class="markdown">Identifies the entity that supplied or submitted the inventory data for this record, which may be different from the manufacturer (e.g., an industry association, a consultant, or a consortium lead for an average EPD). ManufacturerRecord is modelled in the EU DPP CO LCA module. Actor is modelled in the EU DPP CO ACTOR module. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#identifiesManufacturer"><span id="identifiesManufacturer"></span>
+  <h3>identifies manufacturer<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#identifiesManufacturer</p>
+  <div class="comment">
+   <span class="markdown">Identifies the specific economic operator or manufacturing company whose production process and product are represented by this manufacturer record. ManufacturerRecord is modelled in the EU DPP CO LCA module. Actor is modelled in the EU DPP CO ACTOR module. </span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ManufacturerRecord" title="https://w3id.org/eudpp#ManufacturerRecord">Manufacturer Record</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#inContextOfDPP"><span id="inContextOfDPP"></span>
   <h3>in context of DPP<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#inContextOfDPP</p>
   <div class="comment">
@@ -1886,18 +2152,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#inContextOfProduct">
+ <div class="entity" id="https://w3id.org/eudpp#inContextOfProduct"><span id="inContextOfProduct"></span>
   <h3>in context of product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#inContextOfProduct</p>
   <div class="comment">
@@ -1909,18 +2175,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isActorRoleAssignmentForEvent">
+ <div class="entity" id="https://w3id.org/eudpp#isActorRoleAssignmentForEvent"><span id="isActorRoleAssignmentForEvent"></span>
   <h3>is actor role assignment for event<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isActorRoleAssignmentForEvent</p>
   <div class="comment">
@@ -1932,24 +2198,24 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ActorRoleAssignment" title="https://w3id.org/eudpp#ActorRoleAssignment">Actor Role Assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">E S P R Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ESPREvent" title="https://w3id.org/eudpp#ESPREvent">E S P R Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasActorRoleAssignment" title="https://w3id.org/eudpp#hasActorRoleAssignment">has actor role assignment</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isConformWith">
+ <div class="entity" id="https://w3id.org/eudpp#isConformWith"><span id="isConformWith"></span>
   <h3>is conform with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isConformWith</p>
   <div class="comment">
@@ -1961,12 +2227,12 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isConnectedTo">
+ <div class="entity" id="https://w3id.org/eudpp#isConnectedTo"><span id="isConnectedTo"></span>
   <h3>is connected to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isConnectedTo</p>
   <div class="comment">
@@ -1978,18 +2244,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPP" title="https://w3id.org/eudpp#DPP">D P P</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isLocatedInProduct">
+ <div class="entity" id="https://w3id.org/eudpp#isLocatedInProduct"><span id="isLocatedInProduct"></span>
   <h3>is located in product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isLocatedInProduct</p>
   <div class="comment">
@@ -2001,18 +2267,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isNotifiedFor">
+ <div class="entity" id="https://w3id.org/eudpp#isNotifiedFor"><span id="isNotifiedFor"></span>
   <h3>is notified for<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isNotifiedFor</p>
   <div class="comment">
@@ -2035,18 +2301,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonisation Legislation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#UnionHarmonisationLegislation" title="https://w3id.org/eudpp#UnionHarmonisationLegislation">Union Harmonisation Legislation</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isSignedBy">
+ <div class="entity" id="https://w3id.org/eudpp#isSignedBy"><span id="isSignedBy"></span>
   <h3>is signed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isSignedBy</p>
   <div class="comment">
@@ -2066,18 +2332,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isSubstancePresenceOf">
+ <div class="entity" id="https://w3id.org/eudpp#isSubstancePresenceOf"><span id="isSubstancePresenceOf"></span>
   <h3>is substance presence of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isSubstancePresenceOf</p>
   <div class="comment">
@@ -2089,24 +2355,24 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance Presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasSubstancePresence" title="https://w3id.org/eudpp#hasSubstancePresence">has substance presence</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#isIssuedBy">
+ <div class="entity" id="https://w3id.org/eudpp#isIssuedBy"><span id="isIssuedBy"></span>
   <h3>issued by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#isIssuedBy</p>
   <div class="comment">
@@ -2126,18 +2392,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
+     <a href="#EUDeclarationOfConformity" title="https://w3id.org/eudpp#EUDeclarationOfConformity">E U Declaration Of Conformity</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#issuesCertificate">
+ <div class="entity" id="https://w3id.org/eudpp#issuesCertificate"><span id="issuesCertificate"></span>
   <h3>issues certificate<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#issuesCertificate</p>
   <div class="comment">
@@ -2157,18 +2423,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ConformityCertificate" title="https://w3id.org/eudpp#ConformityCertificate">Conformity Certificate</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#performedAssessmentAccordingTo">
+ <div class="entity" id="https://w3id.org/eudpp#performedAssessmentAccordingTo"><span id="performedAssessmentAccordingTo"></span>
   <h3>performed assessment according to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#performedAssessmentAccordingTo</p>
   <div class="comment">
@@ -2188,18 +2454,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ConformityAssessmentModule" title="https://w3id.org/eudpp#ConformityAssessmentModule">Conformity Assessment Module</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#performedAt">
+ <div class="entity" id="https://w3id.org/eudpp#performedAt"><span id="performedAt"></span>
   <h3>performed at<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#performedAt</p>
   <div class="comment">
@@ -2211,18 +2477,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Facility" title="https://w3id.org/eudpp#Facility">Facility</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#performedBy">
+ <div class="entity" id="https://w3id.org/eudpp#performedBy"><span id="performedBy"></span>
   <h3>performed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#performedBy</p>
   <div class="comment">
@@ -2234,18 +2500,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ProductEvent" title="https://w3id.org/eudpp#ProductEvent">Product Event</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#recordedBy">
+ <div class="entity" id="https://w3id.org/eudpp#recordedBy"><span id="recordedBy"></span>
   <h3>recorded by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#recordedBy</p>
   <div class="comment">
@@ -2257,18 +2523,18 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord">D P P Event Record</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DPPEventRecord" title="https://w3id.org/eudpp#DPPEventRecord">D P P Event Record</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Actor" title="https://w3id.org/eudpp#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#representsManufacturerForProduct">
+ <div class="entity" id="https://w3id.org/eudpp#representsManufacturerForProduct"><span id="representsManufacturerForProduct"></span>
   <h3>represents manufacturer for product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#representsManufacturerForProduct</p>
   <div class="comment">
@@ -2280,13 +2546,13 @@ This section provides details for each class and property defined by EU DPP CORE
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised Representative Role Assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#AuthorisedRepresentativeRoleAssignment" title="https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment">Authorised Representative Role Assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Product" title="https://w3id.org/eudpp#Product">Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

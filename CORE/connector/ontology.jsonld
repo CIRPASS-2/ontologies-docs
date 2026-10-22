@@ -123,6 +123,12 @@
     "@id" : "https://w3id.org/eudpp/P_DPP"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#EPDStudy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/LCA"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#ESPREvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -150,7 +156,31 @@
     "@id" : "https://w3id.org/eudpp/IDENT"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#LCAModuleValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/LCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#LCAResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/LCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#LCAStudy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/LCA"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ManufacturerRecord",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/eudpp/LCA"
@@ -190,6 +220,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@value" : "https://w3id.org/eudpp/EVENT"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#QuantitativeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/P_DPP"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#Review",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/LCA"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#Substance",
@@ -395,6 +437,7 @@
   "@id" : "https://w3id.org/eudpp#hasDigitalProductPassportId",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Realisation for the Unique identifier of an instance of the digital product passport.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPIdentifier is modelled in the EU DPP CO IDENT module."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -503,6 +546,29 @@
     "@id" : "https://w3id.org/eudpp#LCAStudy"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp#hasLCAVerifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ISO 14025:2026, 9 and 10.4; ISO 14025:2006, 3.8 and 3.9; ISO 14044:2006, 6; EN 15804:2012+A2:2019, 7.1, Table 2"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "https://www.iso.org/standard/87610.html"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a review to the independent, third-party actor responsible for validating the Life Cycle Assessment (LCA) or Environmental Product Declaration (EPD).\n\nVerifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted]\n\nReview is modelled in the EU DPP CO LCA module. \nActor is modelled in the EU DPP CO ACTOR module."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has LCA verifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Actor"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp#hasManufacturer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -518,6 +584,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#Actor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#hasManufacturingSite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a manufacturer record to the facility it applies to, e.g., a production site covered by an LCA study or EPD. ILCD+EPD v1.3: manufacturer/sites/site.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nFacility is modelled in the EU DPP CO ACTOR module.\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#ManufacturerRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has manufacturing site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Facility"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasMaterial",
@@ -665,7 +748,6 @@
   "@id" : "https://w3id.org/eudpp#hasUniqueFacilityIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/references" : [ {
-    "@language" : "en",
     "@value" : "ESPR Art 2 (33)"
   } ],
   "http://purl.org/dc/terms/source" : [ {
@@ -689,7 +771,6 @@
   "@id" : "https://w3id.org/eudpp#hasUniqueOperatorIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/references" : [ {
-    "@language" : "en",
     "@value" : "ESPR Art 2 (31)"
   } ],
   "http://purl.org/dc/terms/source" : [ {
@@ -725,6 +806,40 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/eudpp#ProductIdentifier"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifiesDataProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the entity that supplied or submitted the inventory data for this record, which may be different from the manufacturer (e.g., an industry association, a consultant, or a consortium lead for an average EPD).\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#ManufacturerRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifies data provider"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Actor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifiesManufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifies the specific economic operator or manufacturing company whose production process and product are represented by this manufacturer record.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp#ManufacturerRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifies manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/eudpp#Actor"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp#inContextOfDPP",
@@ -1061,7 +1176,7 @@
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-10-09"
+    "@value" : "2026-10-20"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://www.apache.org/licenses/LICENSE-2.0"
@@ -1085,6 +1200,6 @@
     "@value" : "EU DPP CORE CON"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2.2.0"
+    "@value" : "2.4.0"
   } ]
 } ]

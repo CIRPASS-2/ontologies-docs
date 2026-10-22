@@ -34,17 +34,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
+        "value" : "Theodor Chirvasuta",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
         "value" : "Riina Maigre",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "en",
         "value" : "Tarmo Robal",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Theodor Chirvasuta",
         "type" : "label"
       } ],
       "created" : [ {
@@ -77,16 +77,16 @@
         "value" : "https://doi.org/10.5281/zenodo.15270342",
         "type" : "iri"
       } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-09-23",
-        "type" : "label"
-      } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "EU DPP Core Ontology Event Module",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-09-23",
         "type" : "label"
       } ]
     }
@@ -186,13 +186,13 @@
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -237,16 +237,16 @@
     "id" : "56",
     "type" : "owl:unionOf"
   }, {
-    "id" : "67",
+    "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
-    "type" : "owl:Class"
-  }, {
-    "id" : "50",
+    "id" : "87",
     "type" : "owl:Class"
   }, {
     "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
     "type" : "owl:Class"
   }, {
     "id" : "120",
@@ -477,7 +477,7 @@
   }, {
     "instances" : 0,
     "union" : [ "20", "38" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "37"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
@@ -524,7 +524,7 @@
   }, {
     "instances" : 0,
     "union" : [ "49", "36", "50" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/eudpp#RepairEvent",
@@ -557,12 +557,12 @@
   }, {
     "instances" : 0,
     "union" : [ "49", "36", "4", "50" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "52"
   }, {
     "instances" : 0,
     "union" : [ "49", "4" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "53"
   }, {
     "iri" : "https://ref.gs1.org/cbv/SDT",
@@ -643,13 +643,22 @@
       "IRI-based" : "DPPEvent",
       "en" : "DPP Event"
     },
-    "subClasses" : [ "66", "67", "1" ],
+    "subClasses" : [ "67", "68", "1" ],
     "comment" : {
       "en" : "An ESPR-level event concept representing an event that affects the existence, content, accessibility, update, correction, or governance of a DPP. A DPPEvent captures the passport-facing semantics of the occurrence and is modelled as distinct from the product event that may trigger it."
     },
     "attributes" : [ "external" ],
     "id" : "15",
     "superClasses" : [ "64" ]
+  }, {
+    "iri" : "https://ref.gs1.org/cbv/BTT",
+    "baseIri" : "https://ref.gs1.org/cbv",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BTT"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/eudpp#PuttingIntoServiceEvent",
     "baseIri" : "https://w3id.org/eudpp",
@@ -679,15 +688,6 @@
     "id" : "61",
     "superClasses" : [ "23" ]
   }, {
-    "iri" : "https://ref.gs1.org/cbv/BTT",
-    "baseIri" : "https://ref.gs1.org/cbv",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "BTT"
-    },
-    "attributes" : [ "external" ],
-    "id" : "43"
-  }, {
     "iri" : "https://w3id.org/eudpp#DPPCreationEvent",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
@@ -699,7 +699,7 @@
       "en" : "An event corresponding to the creation or initial issuance of a Digital Product Passport."
     },
     "attributes" : [ "external" ],
-    "id" : "66",
+    "id" : "67",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "https://w3id.org/eudpp#DPPEventRecord",
@@ -981,7 +981,7 @@
   }, {
     "instances" : 0,
     "union" : [ "36", "50" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "111"
   }, {
     "iri" : "https://ref.gs1.org/cbv/Disp",
@@ -995,12 +995,12 @@
   }, {
     "instances" : 0,
     "union" : [ "36", "50" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "95"
   }, {
     "instances" : 0,
     "union" : [ "49", "4" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "56"
   }, {
     "iri" : "https://w3id.org/eudpp#DPPArchivalEvent",
@@ -1014,7 +1014,7 @@
       "en" : "An event corresponding to the archival or end-of-active-life management of a Digital Product Passport."
     },
     "attributes" : [ "external" ],
-    "id" : "67",
+    "id" : "68",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "https://ref.gs1.org/epcis/Transformation",
@@ -1042,7 +1042,21 @@
       "en" : "A transformation business processes that takes a longer period of time than a single TransformationEvent, so is associated with a series of such events.\nWhen events share the same Transformation, the meaning is that the inputs to any of those events may have contributed in some way to each of the outputs in any of those same events."
     },
     "attributes" : [ "external" ],
-    "id" : "88"
+    "id" : "87"
+  }, {
+    "iri" : "https://w3id.org/eudpp#DPPUpdateEvent",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DPPUpdateEvent",
+      "en" : "DPP Update Event"
+    },
+    "comment" : {
+      "en" : "An event corresponding to an update of the content of a Digital Product Passport."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://ref.gs1.org/epcis/AggregationEvent",
     "baseIri" : "https://ref.gs1.org/epcis",
@@ -1077,20 +1091,6 @@
     "attributes" : [ "external" ],
     "id" : "50",
     "superClasses" : [ "5" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp#DPPUpdateEvent",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DPPUpdateEvent",
-      "en" : "DPP Update Event"
-    },
-    "comment" : {
-      "en" : "An event corresponding to an update of the content of a Digital Product Passport."
-    },
-    "attributes" : [ "external" ],
-    "id" : "1",
-    "superClasses" : [ "15" ]
   }, {
     "iri" : "https://ref.gs1.org/cbv/BizStep",
     "baseIri" : "https://ref.gs1.org/cbv",
@@ -1284,7 +1284,7 @@
     "id" : "65",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "68",
+    "id" : "66",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "69",
@@ -1329,7 +1329,7 @@
     "id" : "86",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "87",
+    "id" : "88",
     "type" : "owl:objectProperty"
   }, {
     "id" : "89",
@@ -1443,7 +1443,7 @@
     "comment" : {
       "en" : "Indicates the URI identifying the system, application, or audit log in which the DPP event record is maintained."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "6"
   }, {
     "iri" : "https://ref.gs1.org/epcis/sourceList",
@@ -1583,7 +1583,7 @@
     "comment" : {
       "en" : "The date and time at which the EPCIS Capturing Applications asserts the event occurred."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "17"
   }, {
     "iri" : "https://ref.gs1.org/epcis/eventTimeZoneOffset",
@@ -1623,7 +1623,7 @@
     "comment" : {
       "en" : "The time zone offset in effect at the time and place the event occurred, expressed as an offset from UTC. The value of this field SHALL be a string consisting of the character '+' or the character '-', followed by two digits whose value is within the range 00 through 14 (inclusive), followed by a colon character ':', followed by two digits whose value is within the range 00 through 59 (inclusive), except that if the value of the first two digits is 14, the value of the second two digits must be 00. For example, the value +05:30 specifies that where the event occurred, local time was five hours and 30 minutes later than UTC (that is, midnight UTC was 5:30am local time)."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "29"
   }, {
     "iri" : "https://w3id.org/eudpp#recordsDPPEvent",
@@ -1687,7 +1687,7 @@
     "comment" : {
       "en" : "Indicates the human-readable name of the system, application, or audit log in which the DPP event record is maintained."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "35"
   }, {
     "iri" : "https://ref.gs1.org/epcis/bizTransactionType",
@@ -1770,12 +1770,12 @@
       "jsonldLabel" : [ {
         "identifier" : "jsonldLabel",
         "language" : "undefined",
-        "value" : "destination",
+        "value" : "source",
         "type" : "label"
       }, {
         "identifier" : "jsonldLabel",
         "language" : "undefined",
-        "value" : "source",
+        "value" : "destination",
         "type" : "label"
       } ],
       "domainIncludes" : [ {
@@ -1815,12 +1815,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/ObjectEvent",
+        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
+        "value" : "https://ref.gs1.org/epcis/ObjectEvent",
         "type" : "iri"
       } ]
     },
@@ -1860,12 +1860,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
+        "value" : "https://ref.gs1.org/epcis/ObjectEvent",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/ObjectEvent",
+        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
         "type" : "iri"
       } ]
     },
@@ -1916,22 +1916,22 @@
   }, {
     "range" : "23",
     "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "60"
   }, {
     "range" : "23",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
     "range" : "64",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "63"
   }, {
     "range" : "64",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "65"
   }, {
     "iri" : "https://w3id.org/eudpp#dppEventRecordedAt",
@@ -1946,27 +1946,27 @@
     "comment" : {
       "en" : "The date and time at which the technical record of a DPP event was created in an information system or audit trail."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "68"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "66"
   }, {
     "range" : "23",
     "domain" : "70",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   }, {
     "range" : "23",
     "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
     "range" : "23",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
     "range" : "23",
     "domain" : "75",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
     "iri" : "https://ref.gs1.org/epcis/parentID",
@@ -1988,12 +1988,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
+        "value" : "https://ref.gs1.org/epcis/AssociationEvent",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/AssociationEvent",
+        "value" : "https://ref.gs1.org/epcis/TransactionEvent",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -2015,12 +2015,12 @@
   }, {
     "range" : "23",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "77"
   }, {
     "range" : "23",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "78"
   }, {
     "iri" : "https://ref.gs1.org/epcis/bizLocation",
@@ -2059,28 +2059,68 @@
   }, {
     "range" : "72",
     "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "80"
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "82"
   }, {
     "range" : "5",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "83"
   }, {
     "range" : "5",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
     "range" : "5",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "85"
+  }, {
+    "iri" : "https://ref.gs1.org/epcis/transformationID",
+    "baseIri" : "https://ref.gs1.org/epcis",
+    "range" : "87",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://ref.gs1.org/epcis/",
+        "type" : "iri"
+      } ],
+      "term_status" : [ {
+        "identifier" : "term_status",
+        "language" : "undefined",
+        "value" : "stable",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "https://ref.gs1.org/epcis/Transformation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "https://ref.gs1.org/epcis/TransformationEvent",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "transformationID",
+      "undefined" : "transformationID"
+    },
+    "domain" : "34",
+    "comment" : {
+      "en" : "(Optional) Associates several TransformationEvents with a longer-running Transformation process, therefore linking them together."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
   }, {
     "iri" : "https://ref.gs1.org/epcis/outputQuantityList",
     "baseIri" : "https://ref.gs1.org/epcis",
@@ -2120,66 +2160,26 @@
       "en" : "(Optional) An unordered list of one or more QuantityElements identifying (at the class level) objects that were outputs from the transformation. See below for constraints on when outputQuantityList may be omitted."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "86"
-  }, {
-    "iri" : "https://ref.gs1.org/epcis/transformationID",
-    "baseIri" : "https://ref.gs1.org/epcis",
-    "range" : "88",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/",
-        "type" : "iri"
-      } ],
-      "term_status" : [ {
-        "identifier" : "term_status",
-        "language" : "undefined",
-        "value" : "stable",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/Transformation",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/TransformationEvent",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "transformationID",
-      "undefined" : "transformationID"
-    },
-    "domain" : "34",
-    "comment" : {
-      "en" : "(Optional) Associates several TransformationEvents with a longer-running Transformation process, therefore linking them together."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "87"
+    "id" : "88"
   }, {
     "range" : "15",
-    "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "89"
   }, {
     "range" : "15",
-    "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
     "range" : "5",
     "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
     "range" : "15",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
     "iri" : "https://ref.gs1.org/epcis/bizTransactionList",
@@ -2292,6 +2292,11 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "https://ref.gs1.org/epcis/AssociationEvent",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "https://ref.gs1.org/epcis/AggregationEvent",
         "type" : "iri"
       }, {
@@ -2304,11 +2309,6 @@
         "language" : "undefined",
         "value" : "https://ref.gs1.org/epcis/ObjectEvent",
         "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "https://ref.gs1.org/epcis/AssociationEvent",
-        "type" : "iri"
       } ]
     },
     "label" : {
@@ -2319,7 +2319,7 @@
     "comment" : {
       "en" : "How this event relates to the lifecycle of the EPCs named in this event."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "96"
   }, {
     "iri" : "https://ref.gs1.org/epcis/quantity",
@@ -2359,7 +2359,7 @@
     "comment" : {
       "en" : "A number that specifies how many or how much of the specified EPCClass is denoted by this QuantityElement."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "97"
   }, {
     "iri" : "https://ref.gs1.org/epcis/disposition",
@@ -2444,7 +2444,7 @@
     "comment" : {
       "en" : "(Optional) Unit of measure by which the specified value(s) of the property specified by type should be interpreted.  If there is no value, minValue, maxValue, averageValue or percValue field present, uom SHALL be omitted.  When a uom field is present, its value SHALL be the 2- or 3-character code for a physical unit specified in the 'Common Code' column of UN/CEFACT Recommendation'20 [CEFACT20].   Note: GS1 provides a tool containing a machine-readable file which enables the automatic conversion between quantitative values expressed using UN/CEFACT common codes. [https://ref.gs1.org/tools/UnitConverterUNECERec20]"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "100"
   }, {
     "iri" : "https://ref.gs1.org/epcis/recordTime",
@@ -2484,7 +2484,7 @@
     "comment" : {
       "en" : "(Optional) The date and time at which this event was recorded by an EPCIS Repository. This field SHALL be ignored when an event is presented to the EPCIS Capture Interface, and SHALL be present when an event is retrieved through the EPCIS Query Interfaces. The recordTime does not describe anything about the real-world event, but is rather a bookkeeping mechanism that plays a role in the interpretation of standing queries"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "101"
   }, {
     "iri" : "https://ref.gs1.org/epcis/outputEPCList",
@@ -2596,13 +2596,13 @@
     "id" : "105"
   }, {
     "range" : "1",
-    "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "106"
   }, {
     "range" : "1",
-    "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
     "iri" : "https://w3id.org/eudpp#isTriggeredByProductEvent",
@@ -2621,12 +2621,12 @@
   }, {
     "range" : "23",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "109"
   }, {
     "range" : "7",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "110"
   }, {
     "iri" : "https://w3id.org/eudpp#isTriggeredByProductEvent",
@@ -2684,12 +2684,12 @@
   }, {
     "range" : "7",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
-    "range" : "66",
-    "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "67",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
     "iri" : "https://ref.gs1.org/epcis/inputQuantityList",
@@ -2744,7 +2744,7 @@
     "comment" : {
       "en" : "A unique identifier assigned to a DPP event record."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "116"
   }, {
     "iri" : "https://w3id.org/eudpp#hasProductEvent",

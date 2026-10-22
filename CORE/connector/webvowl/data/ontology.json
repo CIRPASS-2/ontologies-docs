@@ -7,7 +7,7 @@
       "en" : "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/CON",
-    "version" : "2.2.0",
+    "version" : "2.4.0",
     "author" : [ "Riina Maigre", "Tarmo Robal" ],
     "description" : {
       "en" : "Connector (Bridge) module that only defines object properties between modules. The connector contains only object properties that have domain and range specified in different modules. \n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
@@ -62,13 +62,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2.2.0",
-        "type" : "label"
-      } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-10-09",
+        "value" : "2.4.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -76,12 +70,18 @@
         "language" : "en",
         "value" : "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.",
         "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-20",
+        "type" : "label"
       } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -90,49 +90,61 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "25",
     "type" : "owl:Class"
   }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
     "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
     "type" : "owl:Class"
   }, {
     "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "49",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -141,40 +153,46 @@
     "id" : "13",
     "type" : "owl:unionOf"
   }, {
-    "id" : "26",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "59",
+    "id" : "71",
     "type" : "owl:Thing"
   }, {
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
+    "id" : "48",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -193,8 +211,8 @@
       "IRI-based" : "EUDeclarationOfConformity"
     },
     "attributes" : [ "external" ],
-    "id" : "5",
-    "superClasses" : [ "6" ]
+    "id" : "6",
+    "superClasses" : [ "7" ]
   }, {
     "iri" : "https://w3id.org/eudpp#SubstanceIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -245,7 +263,7 @@
       "IRI-based" : "DPPEventRecord"
     },
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/eudpp#Facility",
     "baseIri" : "https://w3id.org/eudpp",
@@ -264,6 +282,24 @@
     "attributes" : [ "external" ],
     "id" : "10"
   }, {
+    "iri" : "https://w3id.org/eudpp#QuantitativeProperty",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/P_DPP",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "QuantitativeProperty"
+    },
+    "subClasses" : [ "22", "23" ],
+    "attributes" : [ "external" ],
+    "id" : "21"
+  }, {
     "iri" : "https://w3id.org/eudpp#DocumentFormattedProperty",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
@@ -278,9 +314,9 @@
     "label" : {
       "IRI-based" : "DocumentFormattedProperty"
     },
-    "subClasses" : [ "5" ],
+    "subClasses" : [ "6" ],
     "attributes" : [ "external" ],
-    "id" : "6"
+    "id" : "7"
   }, {
     "iri" : "https://w3id.org/eudpp#ConformityAssessmentModule",
     "baseIri" : "https://w3id.org/eudpp",
@@ -297,7 +333,24 @@
       "IRI-based" : "ConformityAssessmentModule"
     },
     "attributes" : [ "external" ],
-    "id" : "20"
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/eudpp#ManufacturerRecord",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/LCA",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ManufacturerRecord"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp#AuthorisedRepresentativeRoleAssignment",
     "baseIri" : "https://w3id.org/eudpp",
@@ -331,8 +384,26 @@
       "IRI-based" : "SubstanceManagementInstruction"
     },
     "attributes" : [ "external" ],
-    "id" : "25",
-    "superClasses" : [ "26" ]
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#LCAResult",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/LCA",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LCAResult"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "https://w3id.org/eudpp#UnionHarmonisationLegislation",
     "baseIri" : "https://w3id.org/eudpp",
@@ -349,7 +420,7 @@
       "IRI-based" : "UnionHarmonisationLegislation"
     },
     "attributes" : [ "external" ],
-    "id" : "22"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/eudpp#ConformityCertificate",
     "baseIri" : "https://w3id.org/eudpp",
@@ -366,7 +437,7 @@
       "IRI-based" : "ConformityCertificate"
     },
     "attributes" : [ "external" ],
-    "id" : "38"
+    "id" : "44"
   }, {
     "iri" : "https://w3id.org/eudpp#Substance",
     "baseIri" : "https://w3id.org/eudpp",
@@ -383,7 +454,7 @@
       "IRI-based" : "Substance"
     },
     "attributes" : [ "external" ],
-    "id" : "41"
+    "id" : "50"
   }, {
     "iri" : "https://w3id.org/eudpp#SubstancePresence",
     "baseIri" : "https://w3id.org/eudpp",
@@ -400,7 +471,7 @@
       "IRI-based" : "SubstancePresence"
     },
     "attributes" : [ "external" ],
-    "id" : "43"
+    "id" : "52"
   }, {
     "iri" : "https://w3id.org/eudpp#MaterialIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -417,7 +488,7 @@
       "IRI-based" : "MaterialIdentifier"
     },
     "attributes" : [ "external" ],
-    "id" : "46"
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/eudpp#ProductEvent",
     "baseIri" : "https://w3id.org/eudpp",
@@ -434,7 +505,7 @@
       "IRI-based" : "ProductEvent"
     },
     "attributes" : [ "external" ],
-    "id" : "30"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/eudpp#ProductStatus",
     "baseIri" : "https://w3id.org/eudpp",
@@ -451,7 +522,24 @@
       "IRI-based" : "ProductStatus"
     },
     "attributes" : [ "external" ],
-    "id" : "49"
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/eudpp#EPDStudy",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/LCA",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EPDStudy"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59"
   }, {
     "iri" : "https://w3id.org/eudpp#FacilityIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -468,7 +556,7 @@
       "IRI-based" : "FacilityIdentifier"
     },
     "attributes" : [ "external" ],
-    "id" : "53"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/eudpp#ActorIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -485,7 +573,7 @@
       "IRI-based" : "ActorIdentifier"
     },
     "attributes" : [ "external" ],
-    "id" : "40"
+    "id" : "46"
   }, {
     "iri" : "https://w3id.org/eudpp#SubstanceOfConcern",
     "baseIri" : "https://w3id.org/eudpp",
@@ -505,8 +593,8 @@
     "id" : "14"
   }, {
     "instances" : 0,
-    "union" : [ "51", "1" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "61", "1" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/eudpp#DigitalInstruction",
@@ -523,13 +611,13 @@
     "label" : {
       "IRI-based" : "DigitalInstruction"
     },
-    "subClasses" : [ "25" ],
+    "subClasses" : [ "31" ],
     "attributes" : [ "external" ],
-    "id" : "26"
+    "id" : "32"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "59",
+    "id" : "71",
     "label" : {
       "undefined" : "Thing"
     }
@@ -566,7 +654,25 @@
       "IRI-based" : "DPPEvent"
     },
     "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "20"
+  }, {
+    "iri" : "https://w3id.org/eudpp#LCAModuleValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/LCA",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LCAModuleValue"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern",
     "baseIri" : "https://w3id.org/eudpp",
@@ -583,7 +689,7 @@
       "IRI-based" : "ConcentrationOfSubstanceOfConcern"
     },
     "attributes" : [ "external" ],
-    "id" : "63"
+    "id" : "76"
   }, {
     "iri" : "https://w3id.org/eudpp#ProductIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -600,7 +706,7 @@
       "IRI-based" : "ProductIdentifier"
     },
     "attributes" : [ "external" ],
-    "id" : "28"
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/eudpp#ActorRoleAssignment",
     "baseIri" : "https://w3id.org/eudpp",
@@ -617,7 +723,7 @@
       "IRI-based" : "ActorRoleAssignment"
     },
     "attributes" : [ "external" ],
-    "id" : "32"
+    "id" : "38"
   }, {
     "iri" : "https://w3id.org/eudpp#LCAStudy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -634,7 +740,41 @@
       "IRI-based" : "LCAStudy"
     },
     "attributes" : [ "external" ],
-    "id" : "66"
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/eudpp#DPPIdentifier",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/IDENT",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DPPIdentifier"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/eudpp#MaterialOfComposition",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/MAT",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MaterialOfComposition"
+    },
+    "attributes" : [ "external" ],
+    "id" : "61"
   }, {
     "iri" : "https://w3id.org/eudpp#Product",
     "baseIri" : "https://w3id.org/eudpp",
@@ -653,39 +793,22 @@
     "attributes" : [ "external" ],
     "id" : "1"
   }, {
-    "iri" : "https://w3id.org/eudpp#DPPIdentifier",
+    "iri" : "https://w3id.org/eudpp#Review",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/IDENT",
-        "type" : "label"
+        "value" : "https://w3id.org/eudpp/LCA",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "DPPIdentifier"
+      "IRI-based" : "Review"
     },
     "attributes" : [ "external" ],
-    "id" : "24"
-  }, {
-    "iri" : "https://w3id.org/eudpp#MaterialOfComposition",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/MAT",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MaterialOfComposition"
-    },
-    "attributes" : [ "external" ],
-    "id" : "51"
+    "id" : "40"
   }, {
     "iri" : "https://w3id.org/eudpp#ESPREvent",
     "baseIri" : "https://w3id.org/eudpp",
@@ -702,7 +825,7 @@
       "IRI-based" : "ESPREvent"
     },
     "attributes" : [ "external" ],
-    "id" : "36"
+    "id" : "48"
   } ],
   "property" : [ {
     "id" : "0",
@@ -711,7 +834,7 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "7",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "8",
@@ -720,43 +843,46 @@
     "id" : "12",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "16",
+    "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "17",
+    "id" : "18",
     "type" : "owl:objectProperty"
   }, {
     "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "21",
+    "id" : "24",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "23",
+    "id" : "26",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "27",
+    "id" : "28",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "29",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "31",
+    "id" : "30",
     "type" : "owl:objectProperty"
   }, {
     "id" : "33",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
+    "id" : "37",
     "type" : "owl:objectProperty"
   }, {
     "id" : "39",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
     "type" : "owl:objectProperty"
   }, {
     "id" : "45",
@@ -765,23 +891,11 @@
     "id" : "47",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "48",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "50",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "52",
+    "id" : "51",
     "type" : "owl:objectProperty"
   }, {
     "id" : "54",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "55",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "56",
     "type" : "owl:objectProperty"
@@ -789,40 +903,34 @@
     "id" : "57",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "58",
+    "id" : "53",
     "type" : "owl:objectProperty"
   }, {
     "id" : "60",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "61",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "62",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "37",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "64",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
     "type" : "owl:objectProperty"
   }, {
     "id" : "67",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "68",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "69",
     "type" : "owl:objectProperty"
   }, {
     "id" : "70",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "71",
     "type" : "owl:objectProperty"
   }, {
     "id" : "72",
@@ -832,6 +940,39 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
@@ -846,7 +987,7 @@
     "comment" : {
       "en" : "A product has a manufacturer (Actor from ACTOR module).\n\nProduct is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/eudpp#representsManufacturerForProduct",
@@ -860,7 +1001,7 @@
     "comment" : {
       "en" : "Indicates which product(s) the authorised representative's mandate covers.\n\nAuthorisedRepresentativeRoleAssignment is modelled in the EU DPP CO ACTOR module.\nProduct is modelled in the EU DPP CO P_DPP module."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/eudpp#hasResponsibleManufacturer",
@@ -870,23 +1011,23 @@
       "references" : [ {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "ESPR Annex V (2,9)",
+        "value" : "Decision No 768/2008/EC Annex I Art R1 (3)",
         "type" : "label"
       }, {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "Decision No 768/2008/EC Annex I Art R1 (3)",
+        "value" : "ESPR Annex V (2,9)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V",
         "type" : "label"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V",
+        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
         "type" : "label"
       } ]
     },
@@ -894,12 +1035,12 @@
       "IRI-based" : "hasResponsibleManufacturer",
       "en" : "has responsible manufacturer"
     },
-    "domain" : "5",
+    "domain" : "6",
     "comment" : {
       "en" : "Defines the natural or legal person responsible for the EU declaration of conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "7"
+    "attributes" : [ "object", "external" ],
+    "id" : "5"
   }, {
     "iri" : "https://w3id.org/eudpp#isConnectedTo",
     "baseIri" : "https://w3id.org/eudpp",
@@ -912,7 +1053,7 @@
     "comment" : {
       "en" : "A DPP is connected to a facility.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nFacility is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/eudpp#containsSubstanceOfConcern",
@@ -926,8 +1067,22 @@
     "comment" : {
       "en" : "Linking the product to a substance of concern the product contains.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstance of concern is modelled in the EU DPP CO SOC module."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/eudpp#identifiesDataProvider",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "identifiesDataProvider",
+      "en" : "identifies data provider"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Identifies the entity that supplied or submitted the inventory data for this record, which may be different from the manufacturer (e.g., an industry association, a consultant, or a consortium lead for an average EPD).\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/eudpp#hasFacility",
     "baseIri" : "https://w3id.org/eudpp",
@@ -940,8 +1095,8 @@
     "comment" : {
       "en" : "Links a product to a facility.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nFacility is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "16"
+    "attributes" : [ "object", "external" ],
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/eudpp#concernsDPP",
     "baseIri" : "https://w3id.org/eudpp",
@@ -950,16 +1105,16 @@
       "IRI-based" : "concernsDPP",
       "en" : "concerns DPP"
     },
-    "domain" : "18",
+    "domain" : "20",
     "comment" : {
       "en" : "Links a DPP event to the Digital Product Passport whose content, state, or accessibility is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPEvent is modelled in the EU DPP CO EVENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "17"
+    "attributes" : [ "object", "external" ],
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/eudpp#performedAssessmentAccordingTo",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "20",
+    "range" : "25",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
@@ -982,8 +1137,8 @@
     "comment" : {
       "en" : "Specifies conformity assess procedure/cerfication scheme performed by the notified body.\n\n\nConformityAssessmentModule is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "19"
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
   }, {
     "iri" : "https://w3id.org/eudpp#conformityAttestedBy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1006,30 +1161,44 @@
       "IRI-based" : "conformityAttestedBy",
       "en" : "conformity attested by"
     },
-    "domain" : "22",
+    "domain" : "27",
     "comment" : {
       "en" : "Specifies the notified body that attest the product's conformity with Union harmonisation legislation. \n\nUnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "21"
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/eudpp#hasDigitalProductPassportId",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "24",
+    "range" : "29",
     "label" : {
       "IRI-based" : "hasDigitalProductPassportId",
       "en" : "has digital product passport id"
     },
     "domain" : "9",
     "comment" : {
-      "undefined" : "Realisation for the Unique identifier of an instance of the digital product passport.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPIdentifier is modelled in the EU DPP CO IDENT module."
+      "en" : "Realisation for the Unique identifier of an instance of the digital product passport.\n\nDPP is modelled in the EU DPP CO P_DPP module.\nDPPIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "23"
+    "attributes" : [ "object", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasManufacturingSite",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasManufacturingSite",
+      "en" : "has manufacturing site"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Links a manufacturer record to the facility it applies to, e.g., a production site covered by an LCA study or EPD. ILCD+EPD v1.3: manufacturer/sites/site.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nFacility is modelled in the EU DPP CO ACTOR module.\n        "
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/eudpp#hasUniqueProductIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "28",
+    "range" : "34",
     "label" : {
       "IRI-based" : "hasUniqueProductIdentifier",
       "en" : "has unique product identifier"
@@ -1038,8 +1207,8 @@
     "comment" : {
       "en" : "Realisation of the uniqueProductIdentifier.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "27"
+    "attributes" : [ "object", "external" ],
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/eudpp#performedBy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1056,12 +1225,12 @@
       "IRI-based" : "performedBy",
       "en" : "performed by"
     },
-    "domain" : "30",
+    "domain" : "36",
     "comment" : {
       "en" : "Links a product event to the actor that performed, carried out, or was operationally responsible for the event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "29"
+    "attributes" : [ "object", "external" ],
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/eudpp#inContextOfProduct",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1070,12 +1239,40 @@
       "IRI-based" : "inContextOfProduct",
       "en" : "in context of product"
     },
-    "domain" : "32",
+    "domain" : "38",
     "comment" : {
       "en" : "Relates the actor role assignment to a specific product (from P_DPP module).\n\nActorRoleAssignment is modelled in the EU DPP CO ACTOR module.\nProduct is modelled in the EU DPP CO P_DPP module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "31"
+    "attributes" : [ "object", "external" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasLCAVerifier",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "2",
+    "annotations" : {
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "undefined",
+        "value" : "ISO 14025:2026, 9 and 10.4; ISO 14025:2006, 3.8 and 3.9; ISO 14044:2006, 6; EN 15804:2012+A2:2019, 7.1, Table 2",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.iso.org/standard/87610.html",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasLCAVerifier",
+      "en" : "has LCA verifier"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Links a review to the independent, third-party actor responsible for validating the Life Cycle Assessment (LCA) or Environmental Product Declaration (EPD).\n\nVerifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted]\n\nReview is modelled in the EU DPP CO LCA module. \nActor is modelled in the EU DPP CO ACTOR module."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/eudpp#hasBackUpCopyHost",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1102,8 +1299,8 @@
     "comment" : {
       "en" : "The reference of the digital product passport service provider hosting the back-up copy of the digital product passport [ESPR Annex III].\n\nDPP is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "33"
+    "attributes" : [ "object", "external" ],
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/eudpp#hasNotifiedBody",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1112,23 +1309,23 @@
       "references" : [ {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "Decision No 768/2008/EC Annex I Chapter R4",
+        "value" : "ESPR Chapter IX",
         "type" : "label"
       }, {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "ESPR Chapter IX",
+        "value" : "Decision No 768/2008/EC Annex I Chapter R4",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#cpt_IX",
         "type" : "label"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#cpt_IX",
+        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
         "type" : "label"
       } ]
     },
@@ -1136,35 +1333,34 @@
       "IRI-based" : "hasNotifiedBody",
       "en" : "has notified body"
     },
-    "domain" : "5",
+    "domain" : "6",
     "comment" : {
       "en" : "Specifies the conformity assessment body notified in accordance with ESPR Chapter IX\t\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "34"
+    "attributes" : [ "object", "external" ],
+    "id" : "42"
   }, {
-    "iri" : "https://w3id.org/eudpp#hasActorRoleAssignment",
-    "inverse" : "37",
+    "iri" : "https://w3id.org/eudpp#identifiesManufacturer",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "32",
+    "range" : "2",
     "label" : {
-      "IRI-based" : "hasActorRoleAssignment",
-      "en" : "has actor role assignment"
+      "IRI-based" : "identifiesManufacturer",
+      "en" : "identifies manufacturer"
     },
-    "domain" : "36",
+    "domain" : "16",
     "comment" : {
-      "en" : "Links an event to an actor-role assignment that is valid in the context of that event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nESPREvent is modelled in the EU DPP CO EVENT module.\nActorRoleAssignment is modelled in the EU DPP CO ACTOR module."
+      "en" : "Identifies the specific economic operator or manufacturing company whose production process and product are represented by this manufacturer record.\n\nManufacturerRecord is modelled in the EU DPP CO LCA module.\nActor is modelled in the EU DPP CO ACTOR module.\n        "
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "35"
+    "attributes" : [ "object", "external" ],
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/eudpp#hasUniqueOperatorIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "40",
+    "range" : "46",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
-        "language" : "en",
+        "language" : "undefined",
         "value" : "ESPR Art 2 (31)",
         "type" : "label"
       } ],
@@ -1183,13 +1379,28 @@
     "comment" : {
       "en" : "Linking an Actor to their unique operator identifier. \nActor is modelled in the EU DPP CO ACTOR module.\nActorIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "39"
+    "attributes" : [ "object", "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasActorRoleAssignment",
+    "inverse" : "49",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasActorRoleAssignment",
+      "en" : "has actor role assignment"
+    },
+    "domain" : "48",
+    "comment" : {
+      "en" : "Links an event to an actor-role assignment that is valid in the context of that event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nESPREvent is modelled in the EU DPP CO EVENT module.\nActorRoleAssignment is modelled in the EU DPP CO ACTOR module."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "47"
   }, {
     "iri" : "https://w3id.org/eudpp#hasSubstancePresence",
-    "inverse" : "44",
+    "inverse" : "53",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "43",
+    "range" : "52",
     "label" : {
       "IRI-based" : "hasSubstancePresence",
       "en" : "has substance presence"
@@ -1198,8 +1409,8 @@
     "comment" : {
       "en" : "Relation from Product to contextual SubstancePresence.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "42"
+    "attributes" : [ "object", "external" ],
+    "id" : "51"
   }, {
     "iri" : "https://w3id.org/eudpp#hasEconomicOperator",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1212,12 +1423,12 @@
     "comment" : {
       "en" : "Linking the product to the economic operator (Actor from ACTOR module).\n\nProduct is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "45"
+    "attributes" : [ "object", "external" ],
+    "id" : "54"
   }, {
     "iri" : "https://w3id.org/eudpp#issuesCertificate",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "38",
+    "range" : "44",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
@@ -1240,8 +1451,8 @@
     "comment" : {
       "en" : "Specifies conformity assessment certificate issued for a certification.\n\n\nConformityCertificate is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "47"
+    "attributes" : [ "object", "external" ],
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/eudpp#concernsProduct",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1250,12 +1461,12 @@
       "IRI-based" : "concernsProduct",
       "en" : "concerns product"
     },
-    "domain" : "30",
+    "domain" : "36",
     "comment" : {
       "en" : "Links a product event to the product whose state, condition, or lifecycle is affected by the event. This is a cross-module relation between EVENT and P_DPP and is therefore managed in the Connector/mapping layer.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductEvent is modelled in the EU DPP CO EVENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "48"
+    "attributes" : [ "object", "external" ],
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/eudpp#isSubstancePresenceOf",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1264,34 +1475,34 @@
       "IRI-based" : "isSubstancePresenceOf",
       "en" : "is substance presence of"
     },
-    "domain" : "43",
+    "domain" : "52",
     "comment" : {
       "en" : "Inverse relation from SubstancePresence to Product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "44"
+    "attributes" : [ "object", "external" ],
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/eudpp#hasMaterialIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "46",
+    "range" : "55",
     "label" : {
       "IRI-based" : "hasMaterialIdentifier",
       "en" : "has material identifier"
     },
-    "domain" : "51",
+    "domain" : "61",
     "comment" : {
       "en" : "Realisation of thematerial indetifier as \"Product parameters: identification of  ... materials [ESPR Annex I c)]\"\n\nMaterialOfComposition is modelled in the EU DPP CO MAT module.\nMaterialIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "50"
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
   }, {
     "iri" : "https://w3id.org/eudpp#hasUniqueFacilityIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "53",
+    "range" : "63",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
-        "language" : "en",
+        "language" : "undefined",
         "value" : "ESPR Art 2 (33)",
         "type" : "label"
       } ],
@@ -1310,18 +1521,18 @@
     "comment" : {
       "en" : "Linking a Facility to its unique facility identifier.\nFacility is modelled in the EU DPP CO ACTOR module.\nFacilityIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "52"
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
   }, {
-    "range" : "6",
-    "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "54"
+    "range" : "21",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
   }, {
-    "range" : "26",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "55"
+    "range" : "21",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "65"
   }, {
     "iri" : "https://w3id.org/eudpp#performedAt",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1343,12 +1554,22 @@
       "IRI-based" : "performedAt",
       "en" : "performed at"
     },
-    "domain" : "30",
+    "domain" : "36",
     "comment" : {
       "en" : "Links a product event to the facility where the event was performed or operationally occurred. This is a cross-module relation between EVENT and ACTOR/Facility and is therefore managed in the Connector/mapping layer.\n\nProductEvent is modelled in the EU DPP CO EVENT module.\nFacility is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "56"
+    "attributes" : [ "object", "external" ],
+    "id" : "66"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
   }, {
     "iri" : "https://w3id.org/eudpp#isIssuedBy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1371,12 +1592,12 @@
       "IRI-based" : "isIssuedBy",
       "en" : "issued by"
     },
-    "domain" : "5",
+    "domain" : "6",
     "comment" : {
       "en" : "Specifies the natural or legal person issuing the Declaration of Conformity; ESPR Annex V, paragraph 3 requirement: \"This declaration of conformity is issued under the sole responsibility of the manufacturer:\"\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "57"
+    "attributes" : [ "object", "external" ],
+    "id" : "69"
   }, {
     "iri" : "https://w3id.org/eudpp#hasAuthorisedRepresentative",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1396,12 +1617,12 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V",
+        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
         "type" : "label"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V",
         "type" : "label"
       } ]
     },
@@ -1409,12 +1630,12 @@
       "IRI-based" : "hasAuthorisedRepresentative",
       "en" : "has authorised representative"
     },
-    "domain" : "5",
+    "domain" : "6",
     "comment" : {
       "en" : "Specifies the natural or legal person established within the Union who has received a written mandate from a manufacturer to act on his behalf in relation to the Declaration of Conformity.\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module.\n\nSource: \nDecision No 768/2008/EC Annex I Art R1 (4)\nhttps://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I\n\nESPR Annex V (2,9)\nhttps://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V"
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "58"
+    "attributes" : [ "object", "external" ],
+    "id" : "70"
   }, {
     "iri" : "https://w3id.org/eudpp#hasSubstanceIdentifier",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1423,16 +1644,16 @@
       "IRI-based" : "hasSubstanceIdentifier",
       "en" : "has substance identifier"
     },
-    "domain" : "41",
+    "domain" : "50",
     "comment" : {
       "en" : "Substance to an IDENT-owned SubstanceIdentifier link.\n\nSubstance is modelled in the EU DPP CO SOC module.\nSubstanceIdentifier is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "60"
+    "attributes" : [ "object", "external" ],
+    "id" : "72"
   }, {
     "iri" : "https://w3id.org/eudpp#isConformWith",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "59",
+    "range" : "71",
     "label" : {
       "IRI-based" : "isConformWith",
       "en" : "is conform with"
@@ -1441,8 +1662,8 @@
     "comment" : {
       "en" : "Specifies Union Harminised Lagislation for which conformity of the product is stated."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "61"
+    "attributes" : [ "object", "external" ],
+    "id" : "73"
   }, {
     "iri" : "https://w3id.org/eudpp#recordedBy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1451,30 +1672,30 @@
       "IRI-based" : "recordedBy",
       "en" : "recorded by"
     },
-    "domain" : "15",
+    "domain" : "17",
     "comment" : {
       "en" : "Links a DPP event record to the actor that created the technical record of the logged DPP-side event. This is a cross-module relation between EVENT and ACTOR and is therefore managed in the Connector/mapping layer.\n\nDPPEventRecord is modelled in the EU DPP CO EVENT module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "62"
+    "attributes" : [ "object", "external" ],
+    "id" : "74"
   }, {
     "iri" : "https://w3id.org/eudpp#isActorRoleAssignmentForEvent",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "36",
+    "range" : "48",
     "label" : {
       "IRI-based" : "isActorRoleAssignmentForEvent",
       "en" : "is actor role assignment for event"
     },
-    "domain" : "32",
+    "domain" : "38",
     "comment" : {
       "en" : "Links an actor-role assignment to the event context in which the role assignment applies. This is the inverse of evt:hasActorRoleAssignment and is managed in the Connector/mapping layer.\n\nESPREvent is modelled in the EU DPP CO EVENT module.\nActorRoleAssignment is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "37"
+    "attributes" : [ "object", "external" ],
+    "id" : "49"
   }, {
     "iri" : "https://w3id.org/eudpp#hasMaterial",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "51",
+    "range" : "61",
     "label" : {
       "IRI-based" : "hasMaterial",
       "en" : "has material"
@@ -1483,12 +1704,12 @@
     "comment" : {
       "en" : "Linking the Product to a MaterialOfComposition.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nMaterialOfComposition is modelled in the EU DPP CO MAT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "64"
+    "attributes" : [ "object", "external" ],
+    "id" : "75"
   }, {
     "iri" : "https://w3id.org/eudpp#hasProductStatus",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "49",
+    "range" : "58",
     "label" : {
       "IRI-based" : "hasProductStatus",
       "en" : "has product status"
@@ -1497,8 +1718,8 @@
     "comment" : {
       "en" : "Links a Product to its current lifecycle status, as declared in its DPP.\nIt gives the current status only; the history of changes is represented with the events. \nProduct status is distinct from DPP status (#dppStatus), i.e., the status of the passport.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nProductStatus is modelled in the EU DPP CO EVENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "65"
+    "attributes" : [ "object", "external" ],
+    "id" : "77"
   }, {
     "iri" : "https://w3id.org/eudpp#inContextOfDPP",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1507,12 +1728,12 @@
       "IRI-based" : "inContextOfDPP",
       "en" : "in context of DPP"
     },
-    "domain" : "32",
+    "domain" : "38",
     "comment" : {
       "en" : "Relates the actor role assignment to a specific Digital Product Passport instance (from P_DPP module).\n\nActorRoleAssignment is modelled in the EU DPP CO ACTOR module.\nDPP is modelled in the EU DPP CO P_DPP module.\n        "
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "67"
+    "attributes" : [ "object", "external" ],
+    "id" : "79"
   }, {
     "iri" : "https://w3id.org/eudpp#isLocatedInProduct",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1521,12 +1742,12 @@
       "IRI-based" : "isLocatedInProduct",
       "en" : "is located in product"
     },
-    "domain" : "43",
+    "domain" : "52",
     "comment" : {
       "en" : "Location of a substance presence in a product, component or spare part, connection between substance presence and product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "68"
+    "attributes" : [ "object", "external" ],
+    "id" : "80"
   }, {
     "iri" : "https://w3id.org/eudpp#hasIssuer",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1539,8 +1760,8 @@
     "comment" : {
       "en" : "Linking DPP with its issuer (Actor from ACTOR module).\n\nDPP is modelled in the EU DPP CO P_DPP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "69"
+    "attributes" : [ "object", "external" ],
+    "id" : "81"
   }, {
     "iri" : "https://w3id.org/eudpp#isSignedBy",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1563,16 +1784,16 @@
       "IRI-based" : "isSignedBy",
       "en" : "is signed by"
     },
-    "domain" : "5",
+    "domain" : "6",
     "comment" : {
       "en" : "Specifies the natural or legal person signying the Declaration of Conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "70"
+    "attributes" : [ "object", "external" ],
+    "id" : "82"
   }, {
     "iri" : "https://w3id.org/eudpp#hasLCAStudy",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "66",
+    "range" : "78",
     "label" : {
       "IRI-based" : "hasLCAStudy",
       "en" : "has LCA study"
@@ -1581,33 +1802,33 @@
     "comment" : {
       "en" : "A product has a LCA Study -- a measurable outcome of a life cycle assessment, representing the quantified effect of a product.\n\nProduct is modelled in the EU DPP CO P_DPP module.\nLCAStudy is modelled in the EU DPP CO LCA module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "71"
+    "attributes" : [ "object", "external" ],
+    "id" : "83"
   }, {
     "iri" : "https://w3id.org/eudpp#isNotifiedFor",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "22",
+    "range" : "27",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "Decision No 768/2008/EC Annex I Art R23 (3)",
+        "value" : "ESPR Article 56 (3)",
         "type" : "label"
       }, {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "ESPR Article 56 (3)",
+        "value" : "Decision No 768/2008/EC Annex I Art R23 (3)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_56",
         "type" : "label"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_56",
+        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
         "type" : "label"
       } ]
     },
@@ -1619,33 +1840,33 @@
     "comment" : {
       "en" : "Specifies the conformity assessment activities, the conformity assessment module or modules and product or products concerned and the relevant attestation of competence\t\n\nUnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "72"
+    "attributes" : [ "object", "external" ],
+    "id" : "84"
   }, {
     "iri" : "https://w3id.org/eudpp#hasEUDeclarationOfConformity",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "5",
+    "range" : "6",
     "annotations" : {
       "references" : [ {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "ESPR Art 44",
+        "value" : "Decision No 768/2008/EC Annex I Art R10",
         "type" : "label"
       }, {
         "identifier" : "references",
         "language" : "undefined",
-        "value" : "Decision No 768/2008/EC Annex I Art R10",
+        "value" : "ESPR Art 44",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_44",
         "type" : "label"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#art_44",
+        "value" : "https://eur-lex.europa.eu/eli/dec/2008/768(1)/oj#anx_I",
         "type" : "label"
       } ]
     },
@@ -1657,21 +1878,21 @@
     "comment" : {
       "en" : "Specifies the EU declaration of conformity issued for the product.\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nProduct is modelled in the EU DPP CO P_DPP module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "73"
+    "attributes" : [ "object", "external" ],
+    "id" : "85"
   }, {
     "iri" : "https://w3id.org/eudpp#hasConcentration",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "63",
+    "range" : "76",
     "label" : {
       "IRI-based" : "hasConcentration",
       "en" : "has concentration"
     },
-    "domain" : "43",
+    "domain" : "52",
     "comment" : {
       "en" : "Links a substance presence to concentration information. A concentration is contextual to the structural location identified by the associated SubstancePresence. \n\nDifferent product, component, or spare-part locations requiring different concentrations should normally use distinct SubstancePresence records. \n\nExact, maximum, and range representations remain distinguished by the existing P_DPP/SOC concentration model.\n\nConcentrationOfSubstanceOfConcern is modelled in the EU DPP CO P_DPP module.\nSubstancePresence is modelled in the EU DPP CO IDENT module."
     },
-    "attributes" : [ "external", "object" ],
-    "id" : "74"
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
   } ]
 }

@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/SOC","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/SOC","name":"The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/SOC", "dateReleased":"2026-04-30", "dateCreated":"2025-02-27", "version":"2.0.0", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Hele-Mai Haav"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/SOC","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/SOC","name":"The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.", "headline":"Document describing the ontology https://w3id.org/eudpp/SOC", "dateReleased":"2026-10-15", "dateCreated":"2025-02-27", "version":"2.2.0", "author":[{"@type":"Person","name":"Tarmo Robal"}], "contributor":[{"@type":"Person","name":"Elio Hbeich"},{"@type":"Person","name":"Hele-Mai Haav"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -66,24 +66,24 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.</h1>
-<h2>Release: 2026-04-30</h2>
+<h2>Release: 2026-10-15</h2>
 <p class="created-on"><small>Created on: 2025-02-27</small></p>
 
 
 <dl>
 <dt>Revision:</dt>
-<dd>2.0.0</dd>
+<dd>2.2.0</dd>
 <dt>Issued on:</dt>
-<dd>2026-04-30</dd>
+<dd>2026-10-15</dd>
 <dt>Authors:</dt>
 <dd>Tarmo Robal</dd>
 
 <dt>Contributors:</dt>
-<dd>Hele-Mai Haav</dd>
+<dd>Elio Hbeich</dd><dd>Hele-Mai Haav</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="Apache 2.0" /></a></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Tarmo Robal. The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 2.0.0.</dd>
+<dd>Tarmo Robal. The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.. Revision: 2.2.0.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -103,64 +103,117 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://w3id.org/eudpp#Concentration" title="https://w3id.org/eudpp#Concentration">Concentration of the substance of concern</a>
+      <a href="#ConcentrationRange" title="https://w3id.org/eudpp#ConcentrationRange">Concentration range</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance">Substance</a>
+      <a href="#MaximumConcentration" title="https://w3id.org/eudpp#MaximumConcentration">Maximum concentration</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a>
+      <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#Threshold" title="https://w3id.org/eudpp#Threshold">Threshold of substance of concern</a>
+      <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a>
+   </li>
+   <li>
+      <a href="#SubstanceManagementInstruction"
+         title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a>
+   </li>
+   <li>
+      <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a>
+   </li>
+   <li>
+      <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">Has concentration</a>
+      <a href="#concernsSubstance" title="https://w3id.org/eudpp#concernsSubstance">Concerns substance</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasLifeCycleStage" title="https://w3id.org/eudpp#hasLifeCycleStage">Has life cycle stage</a>
+      <a href="#hasApplicableQualification"
+         title="https://w3id.org/eudpp#hasApplicableQualification">has applicable qualification</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasThreshold" title="https://w3id.org/eudpp#hasThreshold">Has threshold</a>
+      <a href="#hasDisassemblyInstruction" title="https://w3id.org/eudpp#hasDisassemblyInstruction">Has disassembly instruction</a>
+   </li>
+   <li>
+      <a href="#hasEndOfLifeManagementInstruction"
+         title="https://w3id.org/eudpp#hasEndOfLifeManagementInstruction">Has end-of-life management instruction</a>
+   </li>
+   <li>
+      <a href="#hasPreparationForReuseInstruction"
+         title="https://w3id.org/eudpp#hasPreparationForReuseInstruction">Has preparation-for-reuse instruction</a>
+   </li>
+   <li>
+      <a href="#hasQualificationAssertion" title="https://w3id.org/eudpp#hasQualificationAssertion">has qualification assertion</a>
+   </li>
+   <li>
+      <a href="#hasRecyclingInstruction" title="https://w3id.org/eudpp#hasRecyclingInstruction">Has recycling instruction</a>
+   </li>
+   <li>
+      <a href="#hasReuseInstruction" title="https://w3id.org/eudpp#hasReuseInstruction">Has reuse instruction</a>
+   </li>
+   <li>
+      <a href="#hasSafeUseInstruction" title="https://w3id.org/eudpp#hasSafeUseInstruction">Has safe-use instruction</a>
+   </li>
+   <li>
+      <a href="#hasSoCCriterion" title="https://w3id.org/eudpp#hasSoCCriterion">has SoC criterion</a>
+   </li>
+   <li>
+      <a href="#qualifiesSubstance" title="https://w3id.org/eudpp#qualifiesSubstance">qualifies substance</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#https://w3id.org/eudpp#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a>
+      <a href="#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#nameCAS" title="https://w3id.org/eudpp#nameCAS">CAS name</a>
+      <a href="#casName" title="https://w3id.org/eudpp#casName">CAS name</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#numberCAS" title="https://w3id.org/eudpp#numberCAS">CAS number</a>
+      <a href="#casNumber" title="https://w3id.org/eudpp#casNumber">CAS number</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#numberEC" title="https://w3id.org/eudpp#numberEC">EC number</a>
+      <a href="#ecNumber" title="https://w3id.org/eudpp#ecNumber">EC number</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasImpactOnEnvironment" title="https://w3id.org/eudpp#hasImpactOnEnvironment">Has impact on environment</a>
+      <a href="#echaNumber" title="https://w3id.org/eudpp#echaNumber">ECHA number</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#hasImpactOnHumanHealth" title="https://w3id.org/eudpp#hasImpactOnHumanHealth">Has impact on human health</a>
+      <a href="#internationalName" title="https://w3id.org/eudpp#internationalName">International name</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#nameIUPAC" title="https://w3id.org/eudpp#nameIUPAC">IUPAC name</a>
+      <a href="#iupacName" title="https://w3id.org/eudpp#iupacName">IUPAC name</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#substanceLocation" title="https://w3id.org/eudpp#substanceLocation">Location of substance</a>
+      <a href="#substanceLocationDescription"
+         title="https://w3id.org/eudpp#substanceLocationDescription">Location description</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a>
+      <a href="#maximumNumericalValue" title="https://w3id.org/eudpp#maximumNumericalValue">Maximum numerical value</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a>
+      <a href="#minimumNumericalValue" title="https://w3id.org/eudpp#minimumNumericalValue">Minimum numerical value</a>
    </li>
    <li>
-      <a href="#https://w3id.org/eudpp#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a>
+      <a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a>
+   </li>
+   <li>
+      <a href="#qualificationNote" title="https://w3id.org/eudpp#qualificationNote">qualification note</a>
+   </li>
+   <li>
+      <a href="#qualificationValidFrom" title="https://w3id.org/eudpp#qualificationValidFrom">qualification valid from</a>
+   </li>
+   <li>
+      <a href="#qualificationValidUntil" title="https://w3id.org/eudpp#qualificationValidUntil">qualification valid until</a>
+   </li>
+   <li>
+      <a href="#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a>
+   </li>
+   <li>
+      <a href="#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -181,18 +234,18 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
          <span>description</span>
       </a>
    </li>
    <li>
-      <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">
-         <span>identifier</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/eudpp#isMandatory" title="https://w3id.org/eudpp#isMandatory">
-         <span>is Mandatory</span>
+      <a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">
+         <span>in Scheme</span>
       </a>
    </li>
    <li>
@@ -203,6 +256,16 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
          <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">
+         <span>notation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel">
+         <span>pref Label</span>
       </a>
    </li>
    <li>
@@ -217,14 +280,48 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#scopeNote" title="http://www.w3.org/2004/02/skos/core#scopeNote">
+         <span>scope Note</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
          <span>source</span>
       </a>
    </li>
    <li>
+      <a href="#sourceStatus" title="https://w3id.org/eudpp#sourceStatus">source status</a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
          <span>title</span>
       </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf">
+         <span>top Concept Of</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#CriterionA" title="https://w3id.org/eudpp#CriterionA">Criterion (a)</a>
+   </li>
+   <li>
+      <a href="#CriterionB" title="https://w3id.org/eudpp#CriterionB">Criterion (b)</a>
+   </li>
+   <li>
+      <a href="#CriterionC" title="https://w3id.org/eudpp#CriterionC">Criterion (c)</a>
+   </li>
+   <li>
+      <a href="#CriterionD" title="https://w3id.org/eudpp#CriterionD">Criterion (d)</a>
+   </li>
+   <li>
+      <a href="#massFractionUnit" title="https://w3id.org/eudpp#massFractionUnit">mass fraction unit</a>
+   </li>
+   <li>
+      <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
@@ -242,72 +339,34 @@ This section provides details for each class and property defined by EU DPP SOC.
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#Concentration" title="https://w3id.org/eudpp#Concentration">Concentration of the substance of concern</a></li>
-  <li><a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance">Substance</a></li>
-  <li><a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a></li>
-  <li><a href="#https://w3id.org/eudpp#Threshold" title="https://w3id.org/eudpp#Threshold">Threshold of substance of concern</a></li>
+  <li><a href="#ConcentrationRange" title="https://w3id.org/eudpp#ConcentrationRange">Concentration range</a></li>
+  <li><a href="#MaximumConcentration" title="https://w3id.org/eudpp#MaximumConcentration">Maximum concentration</a></li>
+  <li><a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a></li>
+  <li><a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a></li>
+  <li><a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a></li>
+  <li><a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a></li>
+  <li><a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a></li>
  </ul>
- <div class="entity" id="https://w3id.org/eudpp#Concentration">
-  <h3>Concentration of the substance of concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#Concentration</p>
+ <div class="entity" id="https://w3id.org/eudpp#ConcentrationRange"><span id="ConcentrationRange"></span>
+  <h3>Concentration range<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ConcentrationRange</p>
   <div class="comment">
-   <span class="markdown">The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)</span>
+   <span class="markdown">A concentration reported as an interval with a minimum and a maximum numerical value. The measurement unit is provided through dpp:hasMeasurementUnit.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">Has concentration</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#Substance">
-  <h3>Substance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#Substance</p>
-  <div class="comment">
-   <span class="markdown">Means a chemical element and its compounds in the natural state or obtained by any manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; ESPR Art 2, Regulation (EC) No 1907/2006</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Source
-   </dt>
-   <dd>
-    http://data.europa.eu/eli/reg/2006/1907/oj
-   </dd>
-   <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#SubstanceOfConcern">
-  <h3>Substance of concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceOfConcern</p>
-  <div class="comment">
-   <span class="markdown">means a substance that:(a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present [ESPR Art 2(10)]</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Source
-   </dt>
-   <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <dl class="description">
@@ -315,28 +374,162 @@ This section provides details for each class and property defined by EU DPP SOC.
     has super-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern" target="_blank" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">Concentration Of Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#nameCAS" title="https://w3id.org/eudpp#nameCAS">CAS name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#numberCAS" title="https://w3id.org/eudpp#numberCAS">CAS number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#numberEC" title="https://w3id.org/eudpp#numberEC">EC number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">Has concentration</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasImpactOnEnvironment" title="https://w3id.org/eudpp#hasImpactOnEnvironment">Has impact on environment</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasImpactOnHumanHealth" title="https://w3id.org/eudpp#hasImpactOnHumanHealth">Has impact on human health</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#hasLifeCycleStage" title="https://w3id.org/eudpp#hasLifeCycleStage">Has life cycle stage</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#hasThreshold" title="https://w3id.org/eudpp#hasThreshold">Has threshold</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/eudpp#nameIUPAC" title="https://w3id.org/eudpp#nameIUPAC">IUPAC name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#substanceLocation" title="https://w3id.org/eudpp#substanceLocation">Location of substance</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#maximumNumericalValue" title="https://w3id.org/eudpp#maximumNumericalValue">Maximum numerical value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#minimumNumericalValue" title="https://w3id.org/eudpp#minimumNumericalValue">Minimum numerical value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#MaximumConcentration" title="https://w3id.org/eudpp#MaximumConcentration">Maximum concentration</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#Threshold">
-  <h3>Threshold of substance of concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#Threshold</p>
+ <div class="entity" id="https://w3id.org/eudpp#MaximumConcentration"><span id="MaximumConcentration"></span>
+  <h3>Maximum concentration<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#MaximumConcentration</p>
   <div class="comment">
-   <span class="markdown">Relevant threshold of Substance of Concern. By default, information on all substances of concern present in a product, above the relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]</span>
+   <span class="markdown">A concentration reported as a maximum value. The inherited dpp:numericalValue denotes the upper bound, and dpp:hasMeasurementUnit supplies its unit.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern" target="_blank" title="https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern">Concentration Of Substance Of Concern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ConcentrationRange" title="https://w3id.org/eudpp#ConcentrationRange">Concentration range</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SoCQualificationAssertion"><span id="SoCQualificationAssertion"></span>
+  <h3>SoC qualification assertion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SoCQualificationAssertion</p>
+  <div class="comment">
+   <span class="markdown">A documented, explicit assertion that a substance satisfies one or more non-exclusive qualification criteria in ESPR Article 2(27). For criterion (d), the applicable product context is represented by a dpp:SubstancePresence linked through dpp:hasApplicableQualification. This modelling construct records asserted qualification evidence; it does not infer legal status.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2006/1907/oj">http://data.europa.eu/eli/reg/2006/1907/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2008/1272/oj">http://data.europa.eu/eli/reg/2008/1272/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2019/1021/oj">http://data.europa.eu/eli/reg/2019/1021/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasSoCCriterion" title="https://w3id.org/eudpp#hasSoCCriterion">has SoC criterion</a> <sup class="type-op" title="object property">op</sup>, <a href="#qualificationNote" title="https://w3id.org/eudpp#qualificationNote">qualification note</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#qualificationValidFrom" title="https://w3id.org/eudpp#qualificationValidFrom">qualification valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#qualificationValidUntil" title="https://w3id.org/eudpp#qualificationValidUntil">qualification valid until</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#qualifiesSubstance" title="https://w3id.org/eudpp#qualifiesSubstance">qualifies substance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasApplicableQualification" title="https://w3id.org/eudpp#hasApplicableQualification">has applicable qualification</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasQualificationAssertion" title="https://w3id.org/eudpp#hasQualificationAssertion">has qualification assertion</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#Substance"><span id="Substance"></span>
+  <h3>Substance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#Substance</p>
+  <div class="comment">
+   <span class="markdown">A chemical substance used as the generic superclass for substance identity and naming information. In this SOC module it primarily supports the modelling of dpp:SubstanceOfConcern; its presence does not make SOC a general-purpose substance-reporting module.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2006/1907/oj">http://data.europa.eu/eli/reg/2006/1907/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#casName" title="https://w3id.org/eudpp#casName">CAS name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#casNumber" title="https://w3id.org/eudpp#casNumber">CAS number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#ecNumber" title="https://w3id.org/eudpp#ecNumber">EC number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#echaNumber" title="https://w3id.org/eudpp#echaNumber">ECHA number</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#iupacName" title="https://w3id.org/eudpp#iupacName">IUPAC name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#internationalName" title="https://w3id.org/eudpp#internationalName">International name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceManagementInstruction"><span id="SubstanceManagementInstruction"></span>
+  <h3>Substance management instruction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceManagementInstruction</p>
+  <div class="comment">
+   <span class="markdown">An instruction concerning the management of a substance of concern in its SubstancePresence context, including safe use, disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management. This domain-specific modelling abstraction supports the information elements in ESPR Article 7(5)(d)-(e); it is not a term defined by the Regulation and does not determine legal obligations or applicability.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <dl class="description">
@@ -344,29 +537,119 @@ This section provides details for each class and property defined by EU DPP SOC.
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp#hasThreshold" title="https://w3id.org/eudpp#hasThreshold">Has threshold</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDisassemblyInstruction" title="https://w3id.org/eudpp#hasDisassemblyInstruction">Has disassembly instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEndOfLifeManagementInstruction" title="https://w3id.org/eudpp#hasEndOfLifeManagementInstruction">Has end-of-life management instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreparationForReuseInstruction" title="https://w3id.org/eudpp#hasPreparationForReuseInstruction">Has preparation-for-reuse instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecyclingInstruction" title="https://w3id.org/eudpp#hasRecyclingInstruction">Has recycling instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReuseInstruction" title="https://w3id.org/eudpp#hasReuseInstruction">Has reuse instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSafeUseInstruction" title="https://w3id.org/eudpp#hasSafeUseInstruction">Has safe-use instruction</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SubstanceOfConcern"><span id="SubstanceOfConcern"></span>
+  <h3>Substance of concern<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstanceOfConcern</p>
+  <div class="comment">
+   <span class="markdown">A substance that: (a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasQualificationAssertion" title="https://w3id.org/eudpp#hasQualificationAssertion">has qualification assertion</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#concernsSubstance" title="https://w3id.org/eudpp#concernsSubstance">Concerns substance</a> <sup class="type-op" title="object property">op</sup>, <a href="#qualifiesSubstance" title="https://w3id.org/eudpp#qualifiesSubstance">qualifies substance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SubstancePresence"><span id="SubstancePresence"></span>
+  <h3>Substance presence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SubstancePresence</p>
+  <div class="comment">
+   <span class="markdown">A contextual relation entity representing the presence of a substance in relation to a product as placed on the market, including a product, component or spare part. It enables product-dependent location, concentration and instruction information to be represented without treating those data as intrinsic characteristics of the substance itself or classifying the presence as a product property. In the CORE profile the modelling pattern is one SubstancePresence per reported location when different locations require different concentrations; sector-specific extensions may provide explicit reference bases for several calculation perspectives. This class is an ontology modelling abstraction supporting ESPR Article 7(5), rather than a term explicitly defined by the Regulation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#concernsSubstance" title="https://w3id.org/eudpp#concernsSubstance">Concerns substance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDisassemblyInstruction" title="https://w3id.org/eudpp#hasDisassemblyInstruction">Has disassembly instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEndOfLifeManagementInstruction" title="https://w3id.org/eudpp#hasEndOfLifeManagementInstruction">Has end-of-life management instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreparationForReuseInstruction" title="https://w3id.org/eudpp#hasPreparationForReuseInstruction">Has preparation-for-reuse instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRecyclingInstruction" title="https://w3id.org/eudpp#hasRecyclingInstruction">Has recycling instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReuseInstruction" title="https://w3id.org/eudpp#hasReuseInstruction">Has reuse instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSafeUseInstruction" title="https://w3id.org/eudpp#hasSafeUseInstruction">Has safe-use instruction</a> <sup class="type-op" title="object property">op</sup>, <a href="#substanceLocationDescription" title="https://w3id.org/eudpp#substanceLocationDescription">Location description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasApplicableQualification" title="https://w3id.org/eudpp#hasApplicableQualification">has applicable qualification</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#hasConcentration" title="https://w3id.org/eudpp#hasConcentration">Has concentration</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasLifeCycleStage" title="https://w3id.org/eudpp#hasLifeCycleStage">Has life cycle stage</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasThreshold" title="https://w3id.org/eudpp#hasThreshold">Has threshold</a></li>
+  <li><a href="#concernsSubstance" title="https://w3id.org/eudpp#concernsSubstance">Concerns substance</a></li>
+  <li><a href="#hasApplicableQualification" title="https://w3id.org/eudpp#hasApplicableQualification">has applicable qualification</a></li>
+  <li><a href="#hasDisassemblyInstruction" title="https://w3id.org/eudpp#hasDisassemblyInstruction">Has disassembly instruction</a></li>
+  <li><a href="#hasEndOfLifeManagementInstruction" title="https://w3id.org/eudpp#hasEndOfLifeManagementInstruction">Has end-of-life management instruction</a></li>
+  <li><a href="#hasPreparationForReuseInstruction" title="https://w3id.org/eudpp#hasPreparationForReuseInstruction">Has preparation-for-reuse instruction</a></li>
+  <li><a href="#hasQualificationAssertion" title="https://w3id.org/eudpp#hasQualificationAssertion">has qualification assertion</a></li>
+  <li><a href="#hasRecyclingInstruction" title="https://w3id.org/eudpp#hasRecyclingInstruction">Has recycling instruction</a></li>
+  <li><a href="#hasReuseInstruction" title="https://w3id.org/eudpp#hasReuseInstruction">Has reuse instruction</a></li>
+  <li><a href="#hasSafeUseInstruction" title="https://w3id.org/eudpp#hasSafeUseInstruction">Has safe-use instruction</a></li>
+  <li><a href="#hasSoCCriterion" title="https://w3id.org/eudpp#hasSoCCriterion">has SoC criterion</a></li>
+  <li><a href="#qualifiesSubstance" title="https://w3id.org/eudpp#qualifiesSubstance">qualifies substance</a></li>
  </ul>
- <div class="entity" id="https://w3id.org/eudpp#hasConcentration">
-  <h3>Has concentration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasConcentration</p>
+ <div class="entity" id="https://w3id.org/eudpp#concernsSubstance"><span id="concernsSubstance"></span>
+  <h3>Concerns substance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#concernsSubstance</p>
   <div class="comment">
-   <span class="markdown">Defines the the concentration, maximum concentration or concentration range of the substances of concern, at the level of the product, its relevant components, or spare parts; ESPR Art 7(5)</span>
+   <span class="markdown">Links a reported SubstancePresence to the SubstanceOfConcern involved. dpp:Substance remains the superclass used for generic substance identity and naming properties, but the SOC reporting relation itself is intentionally restricted to dpp:SubstanceOfConcern.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -375,29 +658,37 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Concentration" title="https://w3id.org/eudpp#Concentration">Concentration of the substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasLifeCycleStage">
-  <h3>Has life cycle stage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasLifeCycleStage</p>
+ <div class="entity" id="https://w3id.org/eudpp#hasApplicableQualification"><span id="hasApplicableQualification"></span>
+  <h3>has applicable qualification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasApplicableQualification</p>
   <div class="comment">
-   <span class="markdown">Describes the life cycle stage during which the Substance of Concern occurs for product (used during production, resulting being in product, in waste); ESPR Annex I (f). Known issue: Range is some type of an Event, not yet present in the EU DPP CO.</span>
+   <span class="markdown">Links a SubstancePresence to an applicable qualification assertion; criterion (d) context is presence-scoped.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -406,38 +697,376 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#hasThreshold">
-  <h3>Has threshold<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasThreshold</p>
-  <div class="comment">
-   <span class="markdown">Describes relevant threshold of Substance of Concern. By default, information on all substances of concern present in a product, above the relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Source
-   </dt>
-   <dd>
-    https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#Threshold" title="https://w3id.org/eudpp#Threshold">Threshold of substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasDisassemblyInstruction"><span id="hasDisassemblyInstruction"></span>
+  <h3>Has disassembly instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasDisassemblyInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to information relevant for disassembly.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasEndOfLifeManagementInstruction"><span id="hasEndOfLifeManagementInstruction"></span>
+  <h3>Has end-of-life management instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasEndOfLifeManagementInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to information relevant for environmentally sound management of the product at end-of-life.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasPreparationForReuseInstruction"><span id="hasPreparationForReuseInstruction"></span>
+  <h3>Has preparation-for-reuse instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasPreparationForReuseInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to information relevant for preparation for reuse.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasQualificationAssertion"><span id="hasQualificationAssertion"></span>
+  <h3>has qualification assertion<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasQualificationAssertion</p>
+  <div class="comment">
+   <span class="markdown">Links a substance of concern to a documented qualification assertion.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#qualifiesSubstance" title="https://w3id.org/eudpp#qualifiesSubstance">qualifies substance</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasRecyclingInstruction"><span id="hasRecyclingInstruction"></span>
+  <h3>Has recycling instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasRecyclingInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to information relevant for recycling.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasReuseInstruction"><span id="hasReuseInstruction"></span>
+  <h3>Has reuse instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasReuseInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to information relevant for reuse.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasSafeUseInstruction"><span id="hasSafeUseInstruction"></span>
+  <h3>Has safe-use instruction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasSafeUseInstruction</p>
+  <div class="comment">
+   <span class="markdown">Links a substance presence to relevant instructions for the safe use of the product.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceManagementInstruction" title="https://w3id.org/eudpp#SubstanceManagementInstruction">Substance management instruction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#hasSoCCriterion"><span id="hasSoCCriterion"></span>
+  <h3>has SoC criterion<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasSoCCriterion</p>
+  <div class="comment">
+   <span class="markdown">Links a qualification assertion to one or more non-exclusive criteria (a)-(d).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#qualifiesSubstance"><span id="qualifiesSubstance"></span>
+  <h3>qualifies substance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#qualifiesSubstance</p>
+  <div class="comment">
+   <span class="markdown">Links a qualification assertion to the substance of concern that it positively qualifies.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasQualificationAssertion" title="https://w3id.org/eudpp#hasQualificationAssertion">has qualification assertion</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -445,37 +1074,58 @@ This section provides details for each class and property defined by EU DPP SOC.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/eudpp#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a></li>
-  <li><a href="#https://w3id.org/eudpp#nameCAS" title="https://w3id.org/eudpp#nameCAS">CAS name</a></li>
-  <li><a href="#https://w3id.org/eudpp#numberCAS" title="https://w3id.org/eudpp#numberCAS">CAS number</a></li>
-  <li><a href="#https://w3id.org/eudpp#numberEC" title="https://w3id.org/eudpp#numberEC">EC number</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasImpactOnEnvironment" title="https://w3id.org/eudpp#hasImpactOnEnvironment">Has impact on environment</a></li>
-  <li><a href="#https://w3id.org/eudpp#hasImpactOnHumanHealth" title="https://w3id.org/eudpp#hasImpactOnHumanHealth">Has impact on human health</a></li>
-  <li><a href="#https://w3id.org/eudpp#nameIUPAC" title="https://w3id.org/eudpp#nameIUPAC">IUPAC name</a></li>
-  <li><a href="#https://w3id.org/eudpp#substanceLocation" title="https://w3id.org/eudpp#substanceLocation">Location of substance</a></li>
-  <li><a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a></li>
-  <li><a href="#https://w3id.org/eudpp#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a></li>
-  <li><a href="#https://w3id.org/eudpp#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a></li>
+  <li><a href="#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a></li>
+  <li><a href="#casName" title="https://w3id.org/eudpp#casName">CAS name</a></li>
+  <li><a href="#casNumber" title="https://w3id.org/eudpp#casNumber">CAS number</a></li>
+  <li><a href="#ecNumber" title="https://w3id.org/eudpp#ecNumber">EC number</a></li>
+  <li><a href="#echaNumber" title="https://w3id.org/eudpp#echaNumber">ECHA number</a></li>
+  <li><a href="#internationalName" title="https://w3id.org/eudpp#internationalName">International name</a></li>
+  <li><a href="#iupacName" title="https://w3id.org/eudpp#iupacName">IUPAC name</a></li>
+  <li><a href="#substanceLocationDescription" title="https://w3id.org/eudpp#substanceLocationDescription">Location description</a></li>
+  <li><a href="#maximumNumericalValue" title="https://w3id.org/eudpp#maximumNumericalValue">Maximum numerical value</a></li>
+  <li><a href="#minimumNumericalValue" title="https://w3id.org/eudpp#minimumNumericalValue">Minimum numerical value</a></li>
+  <li><a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a></li>
+  <li><a href="#qualificationNote" title="https://w3id.org/eudpp#qualificationNote">qualification note</a></li>
+  <li><a href="#qualificationValidFrom" title="https://w3id.org/eudpp#qualificationValidFrom">qualification valid from</a></li>
+  <li><a href="#qualificationValidUntil" title="https://w3id.org/eudpp#qualificationValidUntil">qualification valid until</a></li>
+  <li><a href="#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a></li>
+  <li><a href="#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a></li>
  </ul>
- <div class="entity" id="https://w3id.org/eudpp#abbreviation">
+ <div class="entity" id="https://w3id.org/eudpp#abbreviation"><span id="abbreviation"></span>
   <h3>Abbreviation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#abbreviation</p>
   <div class="comment">
-   <span class="markdown">The abbreviation used for the Substance of Concern; [ESPR Article 7(5)]</span>
+   <span class="markdown">An abbreviation used for the substance.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
      has super-properties
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -486,18 +1136,26 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#nameCAS">
+ <div class="entity" id="https://w3id.org/eudpp#casName"><span id="casName"></span>
   <h3>CAS name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#nameCAS</p>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#casName</p>
   <div class="comment">
-   <span class="markdown">The Chemical Abstract Service (CAS) name, if available; [ESPR Article 7(5)]</span>
+   <span class="markdown">The Chemical Abstracts Service name of the substance, when available.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -506,7 +1164,7 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -517,18 +1175,26 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#numberCAS">
+ <div class="entity" id="https://w3id.org/eudpp#casNumber"><span id="casNumber"></span>
   <h3>CAS number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#numberCAS</p>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#casNumber</p>
   <div class="comment">
-   <span class="markdown">The Chemical Abstract Service (CAS) number, if available; [ESPR Article 7(5)]</span>
+   <span class="markdown">The Chemical Abstracts Service registry number of the substance, when available.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -537,7 +1203,7 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -548,18 +1214,26 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#numberEC">
+ <div class="entity" id="https://w3id.org/eudpp#ecNumber"><span id="ecNumber"></span>
   <h3>EC number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#numberEC</p>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#ecNumber</p>
   <div class="comment">
-   <span class="markdown">European Community (EC) number, as indicated in the European Inventory of Existing Commercial Chemical Substances (EINECS), the European List of Notified Chemical Substances (ELINCS) or the No Longer Polymer (NLP) list or the number assigned by the European Chemicals Agency (ECHA), if available and appropriate [ESPR Article 7(5)]</span>
+   <span class="markdown">The European Community number indicated in EINECS, ELINCS or the No Longer Polymer list, when available and appropriate.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -568,7 +1242,7 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -579,18 +1253,26 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasImpactOnEnvironment">
-  <h3>Has impact on environment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasImpactOnEnvironment</p>
+ <div class="entity" id="https://w3id.org/eudpp#echaNumber"><span id="echaNumber"></span>
+  <h3>ECHA number<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#echaNumber</p>
   <div class="comment">
-   <span class="markdown">Describes the impacts of Substance of Concern on environment; ESPR Annex I (f)</span>
+   <span class="markdown">A number assigned to the substance by the European Chemicals Agency, when available and appropriate.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -599,7 +1281,7 @@ This section provides details for each class and property defined by EU DPP SOC.
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -610,111 +1292,26 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#hasImpactOnHumanHealth">
-  <h3>Has impact on human health<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#hasImpactOnHumanHealth</p>
+ <div class="entity" id="https://w3id.org/eudpp#internationalName"><span id="internationalName"></span>
+  <h3>International name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#internationalName</p>
   <div class="comment">
-   <span class="markdown">Describes the impacts of Substance of Concern on human health; ESPR Annex I (f)</span>
+   <span class="markdown">An internationally recognised name for the substance, used when an IUPAC name is not available.</span>
   </div>
   <dl class="definedBy">
    <dt>
-    Source
+    Is defined by
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
    </dd>
   </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#nameIUPAC">
-  <h3>IUPAC name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#nameIUPAC</p>
-  <div class="comment">
-   <span class="markdown">Name in the International Union of Pure and Applied Chemistry (IUPAC) nomenclature, or another international name when IUPAC name is not available [ESPR Article 7(5)]</span>
-  </div>
   <dl class="definedBy">
    <dt>
     Source
    </dt>
    <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#substanceLocation">
-  <h3>Location of substance<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#substanceLocation</p>
-  <div class="comment">
-   <span class="markdown">Location of the substance in the product; ESPR Art 7(5)</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Source
-   </dt>
-   <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#otherName">
-  <h3>Other names<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#otherName</p>
-  <div class="comment">
-   <span class="markdown">Other names, including usual name, trade name, abbreviation; [ESPR Article 7(5)]</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Source
-   </dt>
-   <dd>
-    https://eur-lex.europa.eu/eli/reg/2024/1781/oj
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
    </dd>
   </dl>
   <div class="description">
@@ -723,13 +1320,13 @@ This section provides details for each class and property defined by EU DPP SOC.
      has sub-properties
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#iupacName" title="https://w3id.org/eudpp#iupacName">IUPAC name</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -740,25 +1337,341 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#tradeName">
+ <div class="entity" id="https://w3id.org/eudpp#iupacName"><span id="iupacName"></span>
+  <h3>IUPAC name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#iupacName</p>
+  <div class="comment">
+   <span class="markdown">The name of the substance in the International Union of Pure and Applied Chemistry nomenclature.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#internationalName" title="https://w3id.org/eudpp#internationalName">International name</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#substanceLocationDescription"><span id="substanceLocationDescription"></span>
+  <h3>Location description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#substanceLocationDescription</p>
+  <div class="comment">
+   <span class="markdown">A textual description of the location of the substance within the product, used where the location cannot be represented solely by linking to a product, component or spare part.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SubstancePresence" title="https://w3id.org/eudpp#SubstancePresence">Substance presence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#maximumNumericalValue"><span id="maximumNumericalValue"></span>
+  <h3>Maximum numerical value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#maximumNumericalValue</p>
+  <div class="comment">
+   <span class="markdown">The upper bound of a concentration range.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ConcentrationRange" title="https://w3id.org/eudpp#ConcentrationRange">Concentration range</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#minimumNumericalValue"><span id="minimumNumericalValue"></span>
+  <h3>Minimum numerical value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#minimumNumericalValue</p>
+  <div class="comment">
+   <span class="markdown">The lower bound of a concentration range.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ConcentrationRange" title="https://w3id.org/eudpp#ConcentrationRange">Concentration range</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#otherName"><span id="otherName"></span>
+  <h3>Other name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#otherName</p>
+  <div class="comment">
+   <span class="markdown">Another name used for the substance, including a usual name, trade name or abbreviation.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#abbreviation" title="https://w3id.org/eudpp#abbreviation">Abbreviation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#tradeName" title="https://w3id.org/eudpp#tradeName">Trade name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usualName" title="https://w3id.org/eudpp#usualName">Usual name</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#qualificationNote"><span id="qualificationNote"></span>
+  <h3>qualification note<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#qualificationNote</p>
+  <div class="comment">
+   <span class="markdown">Additional explanation or limitation of the qualification assertion.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#qualificationValidFrom"><span id="qualificationValidFrom"></span>
+  <h3>qualification valid from<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#qualificationValidFrom</p>
+  <div class="comment">
+   <span class="markdown">First date on which the qualification assertion is considered valid.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#qualificationValidUntil"><span id="qualificationValidUntil"></span>
+  <h3>qualification valid until<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#qualificationValidUntil</p>
+  <div class="comment">
+   <span class="markdown">Last date on which the qualification assertion is considered valid, when bounded.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SoCQualificationAssertion" title="https://w3id.org/eudpp#SoCQualificationAssertion">SoC qualification assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#tradeName"><span id="tradeName"></span>
   <h3>Trade name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#tradeName</p>
   <div class="comment">
-   <span class="markdown">The trade name under which the Substance of Concern is known; [ESPR Article 7(5)]</span>
+   <span class="markdown">A trade name under which the substance is known.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
      has super-properties
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -769,25 +1682,41 @@ This section provides details for each class and property defined by EU DPP SOC.
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp#usualName">
+ <div class="entity" id="https://w3id.org/eudpp#usualName"><span id="usualName"></span>
   <h3>Usual name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp#usualName</p>
   <div class="comment">
-   <span class="markdown">The usual name under which the Substance of Concern is known; [ESPR Article 7(5)]</span>
+   <span class="markdown">A usual name under which the substance is known.</span>
   </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
   <div class="description">
    <dl>
     <dt>
      has super-properties
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#otherName" title="https://w3id.org/eudpp#otherName">Other names</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#otherName" title="https://w3id.org/eudpp#otherName">Other name</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/eudpp#SubstanceOfConcern" title="https://w3id.org/eudpp#SubstanceOfConcern">Substance of concern</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Substance" title="https://w3id.org/eudpp#Substance">Substance</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -804,15 +1733,20 @@ This section provides details for each class and property defined by EU DPP SOC.
   <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
-  <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier"> <span>identifier</span> </a></li>
-  <li><a href="#https://w3id.org/eudpp#isMandatory" title="https://w3id.org/eudpp#isMandatory"> <span>is Mandatory</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#prefLabel" title="http://www.w3.org/2004/02/skos/core#prefLabel"> <span>pref Label</span> </a></li>
   <li><a href="#http://purl.org/vocab/vann#preferredNamespacePrefix" title="http://purl.org/vocab/vann#preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/references" title="http://purl.org/dc/terms/references"> <span>references</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#scopeNote" title="http://www.w3.org/2004/02/skos/core#scopeNote"> <span>scope Note</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#sourceStatus" title="https://w3id.org/eudpp#sourceStatus">source status</a></li>
   <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#topConceptOf" title="http://www.w3.org/2004/02/skos/core#topConceptOf"> <span>top Concept Of</span> </a></li>
  </ul>
  <div class="entity" id="http://purl.org/dc/terms/contributor">
   <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
@@ -826,17 +1760,17 @@ This section provides details for each class and property defined by EU DPP SOC.
   <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
  </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
  <div class="entity" id="http://purl.org/dc/terms/description">
   <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
  </div>
- <div class="entity" id="http://purl.org/dc/terms/identifier">
-  <h3>identifier<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
- </div>
- <div class="entity" id="https://w3id.org/eudpp#isMandatory">
-  <h3>is Mandatory<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp#isMandatory</p>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#inScheme">
+  <h3>in Scheme<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
  </div>
  <div class="entity" id="http://purl.org/dc/terms/issued">
   <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
@@ -846,6 +1780,14 @@ This section provides details for each class and property defined by EU DPP SOC.
   <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
  </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+  <h3>notation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#prefLabel">
+  <h3>pref Label<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#prefLabel</p>
+ </div>
  <div class="entity" id="http://purl.org/vocab/vann#preferredNamespacePrefix">
   <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/vocab/vann#preferredNamespacePrefix</p>
@@ -854,13 +1796,408 @@ This section provides details for each class and property defined by EU DPP SOC.
   <h3>references<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/references</p>
  </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#scopeNote">
+  <h3>scope Note<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#scopeNote</p>
+ </div>
  <div class="entity" id="http://purl.org/dc/terms/source">
   <h3>source<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
  </div>
+ <div class="entity" id="https://w3id.org/eudpp#sourceStatus"><span id="sourceStatus"></span>
+  <h3>source status<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#sourceStatus</p>
+  <div class="comment">
+   <span class="markdown">Annotation property used to state the epistemic or normative status of the source for an ontology resource, for example direct legal definition, explicit legal information element, ESPR-grounded modelling abstraction, or JRC draft proposal. It is intentionally distinct from dcterms:provenance, which is reserved for ownership and custody history.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/">https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/</a>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="http://purl.org/dc/terms/title">
   <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#topConceptOf">
+  <h3>top Concept Of<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#topConceptOf</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#CriterionA" title="https://w3id.org/eudpp#CriterionA">Criterion (a)</a></li>
+  <li><a href="#CriterionB" title="https://w3id.org/eudpp#CriterionB">Criterion (b)</a></li>
+  <li><a href="#CriterionC" title="https://w3id.org/eudpp#CriterionC">Criterion (c)</a></li>
+  <li><a href="#CriterionD" title="https://w3id.org/eudpp#CriterionD">Criterion (d)</a></li>
+  <li><a href="#massFractionUnit" title="https://w3id.org/eudpp#massFractionUnit">mass fraction unit</a></li>
+  <li><a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/eudpp#CriterionA"><span id="CriterionA"></span>
+  <h3>Criterion (a)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CriterionA</p>
+  <div class="comment">
+   <span class="markdown">The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1).</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2006/1907/oj">http://data.europa.eu/eli/reg/2006/1907/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Article 2(27)(a); REACH Articles 57 and 59(1)."@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2006/1907/oj" target="_blank" title="http://data.europa.eu/eli/reg/2006/1907/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1)."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"a"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criterion (a)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(a)."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#CriterionB"><span id="CriterionB"></span>
+  <h3>Criterion (b)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CriterionB</p>
+  <div class="comment">
+   <span class="markdown">The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b).</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2008/1272/oj">http://data.europa.eu/eli/reg/2008/1272/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Article 2(27)(b); CLP Annex VI Part 3."@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2008/1272/oj" target="_blank" title="http://data.europa.eu/eli/reg/2008/1272/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b)."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"b"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criterion (b)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(b)."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#CriterionC"><span id="CriterionC"></span>
+  <h3>Criterion (c)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CriterionC</p>
+  <div class="comment">
+   <span class="markdown">The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2019/1021/oj">http://data.europa.eu/eli/reg/2019/1021/oj</a>
+   </dd>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Article 2(27)(c); Regulation (EU) 2019/1021."@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2019/1021/oj" target="_blank" title="http://data.europa.eu/eli/reg/2019/1021/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"c"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criterion (c)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(c)."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#CriterionD"><span id="CriterionD"></span>
+  <h3>Criterion (d)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#CriterionD</p>
+  <div class="comment">
+   <span class="markdown">The substance negatively affects reuse and recycling of materials in the product in which it is present.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The substance negatively affects reuse and recycling of materials in the product in which it is present.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ESPR Article 2(27)(d)."@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The substance negatively affects reuse and recycling of materials in the product in which it is present."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"d"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criterion (d)"@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criterion (d) is product-context dependent. The context is represented by linking the relevant dpp:SubstancePresence to the qualification assertion through dpp:hasApplicableQualification."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#SoCCriterionScheme" title="https://w3id.org/eudpp#SoCCriterionScheme">SoC criterion scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(d); product context is represented through SubstancePresence."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#massFractionUnit"><span id="massFractionUnit"></span>
+  <h3>mass fraction unit<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#massFractionUnit</p>
+  <div class="comment">
+   <span class="markdown">Project-managed measurement-unit convention for dimensionless mass fraction expressed as a decimal ratio of masses. Use dpp:numericalValue "0.001"^^xsd:decimal for 0.1 % by mass. This avoids encoding "w/w" in the unit symbol and may be replaced by an official SI Digital Framework PID if one becomes available.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://physics.nist.gov/cuu/Units/checklist.html">https://physics.nist.gov/cuu/Units/checklist.html</a>
+   </dd>
+   <dd>
+    <a href="https://si-digital-framework.org/">https://si-digital-framework.org/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="https://si-digital-framework.org/SI#MeasurementUnit" target="_blank" title="https://si-digital-framework.org/SI#MeasurementUnit">Measurement Unit</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/references" target="_blank" title="http://purl.org/dc/terms/references">references</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"SI style convention: percent denotes the number 0.01; mass fraction values should be represented as decimal ratios in data."@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://physics.nist.gov/cuu/Units/checklist.html" target="_blank" title="https://physics.nist.gov/cuu/Units/checklist.html">checklist.html</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://si-digital-framework.org/" target="_blank" title="https://si-digital-framework.org/">https://si-digital-framework.org/</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Implementation measurement-unit convention; not a named SI Digital Framework unit PID."@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#SoCCriterionScheme"><span id="SoCCriterionScheme"></span>
+  <h3>SoC criterion scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#SoCCriterionScheme</p>
+  <div class="comment">
+   <span class="markdown">Legal qualification criteria corresponding to points (a)-(d) of ESPR Article 2(27). A substance may satisfy more than one criterion.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/SOC">https://w3id.org/eudpp/SOC</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="http://data.europa.eu/eli/reg/2024/1781/oj">http://data.europa.eu/eli/reg/2024/1781/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="http://data.europa.eu/eli/reg/2024/1781/oj" target="_blank" title="http://data.europa.eu/eli/reg/2024/1781/oj">oj</a> <sup class="type-ep" title="external property">ep</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#sourceStatus" target="_blank" title="https://w3id.org/eudpp#sourceStatus">source status</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Controlled vocabulary representing the four legal qualification branches of ESPR Article 2(27)."@en</span>
+   </dd>
+  </dl>
  </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -868,6 +2205,8 @@ This section provides details for each class and property defined by EU DPP SOC.
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
 <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
 </div>
 </div>
 </div>

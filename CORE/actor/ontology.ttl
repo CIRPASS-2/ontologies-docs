@@ -16,10 +16,8 @@
 DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology modules: CON, P_DPP, EVENT.  
 
 For more information, see 
-Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
-
-	"""@en ;
-                                <http://purl.org/dc/terms/issued> "2026-10-12"^^xsd:date ;
+Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342"""@en ;
+                                <http://purl.org/dc/terms/issued> "2026-10-20"^^xsd:date ;
                                 <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                    """This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
@@ -27,7 +25,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "act" ;
                                 rdfs:comment "The Actor module of an EU DPP core ontology proposed by the CIRPASS-2 European project."@en ;
                                 rdfs:label "EU DPP CO ACTOR"@en ;
-                                owl:versionInfo "2.1.3" .
+                                owl:versionInfo "2.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -569,8 +567,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                 <https://w3id.org/eudpp#Role> ;
                                        <http://purl.org/dc/terms/references> "ESPR Art 12 (4a)"@en ;
                                        <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
-                                       rdfs:comment "Issuing agency is a legal persons that provide unique identifiers and data carriers Art 12 (4a). Under specific conditions, economic operators may perform the functions associated with an Issuing Agency; [ESPR Art 12 (4b)]"@en ;
+                                       rdfs:comment "Issuing agency is a legal person that provides unique identifiers and data carriers Art 12 (4a). Under specific conditions, economic operators may perform the functions associated with an Issuing Agency; [ESPR Art 12 (4b)]"@en ;
                                        rdfs:label "Issuing Agency"@en .
+
+
+###  https://w3id.org/eudpp#lcaVerifier
+<https://w3id.org/eudpp#lcaVerifier> rdf:type owl:NamedIndividual ,
+                                              <https://w3id.org/eudpp#Role> ;
+                                     <http://purl.org/dc/terms/references> "ISO 14025:2026, 9 and 10.4; ISO 14025:2006, 3.8 and 3.9; ISO 14044:2006, 6; EN 15804:2012+A2:2019, 7.1, Table 2"@en ;
+                                     <http://purl.org/dc/terms/source> "https://www.iso.org/standard/87610.html" ;
+                                     rdfs:comment "Verifier means a person or organisation that carries out the independent verification of an EPD or LCA study, i.e. confirms through objective evidence that the specified requirements are fulfilled, e.g. the PCR and EN 15804+A2. It also covers the critical reviewer of an LCA study and the verifier of a PEF study. Independent verification may be internal or external; EPDs for business-to-consumer communication require third-party verification, also comparative assertions under ISO 14040 and any comparisons under the European Commission’s ILCD Handbook. The type of verification is recorded on the Review (TypeOfReview). ILCD: reviewer (1-3-20-87); [ISO 14025:2006, 3.8, adapted]"@en ;
+                                     rdfs:label "LCA or EPD verifier"@en .
 
 
 ###  https://w3id.org/eudpp#manufacturer
@@ -596,7 +603,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                <https://w3id.org/eudpp#ConformityAssessmentRole> ;
                                       <http://purl.org/dc/terms/references> "ESPR Art 2 (53)"@en ;
                                       <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
-                                      rdfs:comment "Notified body means a conformity assessment body notified in accordance with Chapter IX.; [ESPR Art 2 (53)]"@en ;
+                                      rdfs:comment "Notified body means a conformity assessment body notified in accordance with Chapter IX; [ESPR Art 2 (53)]"@en ;
                                       rdfs:label "Notified Body"@en .
 
 

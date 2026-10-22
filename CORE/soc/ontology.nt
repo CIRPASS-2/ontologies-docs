@@ -1,16 +1,17 @@
 <https://w3id.org/eudpp/SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/contributor> "Hele-Mai Haav"@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/created> "2025-02-27"@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/description> "MODULE: SOC\nSubstances of Concern module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP.  \n\nThe third iteration of the Substances of Concern module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe information requirements laid out in ESPR Art 7(2) and Art 7(5) for products require the information requirements to make it possible to track the substances of concern, throughout the life cycle of the products concerned. These information requirements for specific product groups are specified in the delegated acts adopted pursuant to Art 4 of ESPR.\n\t\nThis module addresses only the information requirements referred and stated in the ESPR. \n=====================================\nCONTEXT: \nRegulation (EC) No 1907/2006  Art 3(1) defines Substance: means a chemical element and its compounds in the natural state or obtained by\nany manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; \n\n------------------------------------------------------------------- \nKnown issues:\n - hasLifeCycleStage misses range (Event).\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
-<https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/issued> "2026-04-30"@en .
+<https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/issued> "2026-10-15"@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/dc/terms/title> "The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/SOC> <http://purl.org/vocab/vann#preferredNamespacePrefix> "soc" .
 <https://w3id.org/eudpp/SOC> <http://www.w3.org/2000/01/rdf-schema#comment> "Third iteration of the Substances of Concern module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/SOC> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP SOC"@en .
-<https://w3id.org/eudpp/SOC> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
+<https://w3id.org/eudpp/SOC> <http://www.w3.org/2002/07/owl#versionInfo> "2.2.0" .
 # 
 # 
 # #################################################################
@@ -32,9 +33,6 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -53,8 +51,31 @@
 # http://purl.org/vocab/vann#preferredNamespacePrefix
 <http://purl.org/vocab/vann#preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://w3id.org/eudpp#isMandatory
-<https://w3id.org/eudpp#isMandatory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/eudpp#sourceStatus
+<https://w3id.org/eudpp#sourceStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/eudpp#sourceStatus> <http://purl.org/dc/terms/references> "Introduced to avoid using dcterms:provenance for epistemic source-status annotations."@en .
+<https://w3id.org/eudpp#sourceStatus> <http://purl.org/dc/terms/source> <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/terms/provenance/> .
+<https://w3id.org/eudpp#sourceStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotation property used to state the epistemic or normative status of the source for an ontology resource, for example direct legal definition, explicit legal information element, ESPR-grounded modelling abstraction, or JRC draft proposal. It is intentionally distinct from dcterms:provenance, which is reserved for ownership and custody history."@en .
+<https://w3id.org/eudpp#sourceStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#sourceStatus> <http://www.w3.org/2000/01/rdf-schema#label> "source status"@en .
 # 
 # 
 # 
@@ -77,31 +98,128 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/eudpp#hasConcentration
-<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Concentration> .
-<https://w3id.org/eudpp#hasConcentration> <http://purl.org/dc/terms/references> "ESPR Art 7(5)"@en .
-<https://w3id.org/eudpp#hasConcentration> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the the concentration, maximum concentration or concentration range of the substances of concern, at the level of the product, its relevant components, or spare parts; ESPR Art 7(5)"@en .
-<https://w3id.org/eudpp#hasConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "Has concentration"@en .
+# https://w3id.org/eudpp#concernsSubstance
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#concernsSubstance> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)"@en .
+<https://w3id.org/eudpp#concernsSubstance> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reported SubstancePresence to the SubstanceOfConcern involved. dpp:Substance remains the superclass used for generic substance identity and naming properties, but the SOC reporting relation itself is intentionally restricted to dpp:SubstanceOfConcern."@en .
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#concernsSubstance> <http://www.w3.org/2000/01/rdf-schema#label> "Concerns substance"@en .
+<https://w3id.org/eudpp#concernsSubstance> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
 # 
-# https://w3id.org/eudpp#hasLifeCycleStage
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://purl.org/dc/terms/references> "ESPR Annex I (f)"@en .
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the life cycle stage during which the Substance of Concern occurs for product (used during production, resulting being in product, in waste); ESPR Annex I (f).\n\nKnown issue: Range is some type of an Event, not yet present in the EU DPP CO."@en .
-<https://w3id.org/eudpp#hasLifeCycleStage> <http://www.w3.org/2000/01/rdf-schema#label> "Has life cycle stage"@en .
+# https://w3id.org/eudpp#hasApplicableQualification
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://purl.org/dc/terms/references> "ESPR Articles 2(27) and 7(5)."@en .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a SubstancePresence to an applicable qualification assertion; criterion (d) context is presence-scoped."@en .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasApplicableQualification> <http://www.w3.org/2000/01/rdf-schema#label> "has applicable qualification"@en .
+<https://w3id.org/eudpp#hasApplicableQualification> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded contextual relation connecting a SubstancePresence to the qualification assertion applicable in that product-specific presence context."@en .
 # 
-# https://w3id.org/eudpp#hasThreshold
-<https://w3id.org/eudpp#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/eudpp#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Threshold> .
-<https://w3id.org/eudpp#hasThreshold> <http://purl.org/dc/terms/references> "ESPR FAQ 10.115, p59"@en .
-<https://w3id.org/eudpp#hasThreshold> <http://purl.org/dc/terms/source> "https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details" .
-<https://w3id.org/eudpp#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes relevant threshold of Substance of Concern.\n\nBy default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"@en .
-<https://w3id.org/eudpp#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#label> "Has threshold"@en .
+# https://w3id.org/eudpp#hasDisassemblyInstruction
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(e)."@en .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to information relevant for disassembly."@en .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has disassembly instruction"@en .
+<https://w3id.org/eudpp#hasDisassemblyInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasEndOfLifeManagementInstruction
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(e)."@en .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to information relevant for environmentally sound management of the product at end-of-life."@en .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has end-of-life management instruction"@en .
+<https://w3id.org/eudpp#hasEndOfLifeManagementInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasPreparationForReuseInstruction
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(e)."@en .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to information relevant for preparation for reuse."@en .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has preparation-for-reuse instruction"@en .
+<https://w3id.org/eudpp#hasPreparationForReuseInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasQualificationAssertion
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://purl.org/dc/terms/references> "ESPR Article 2(27)."@en .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance of concern to a documented qualification assertion."@en .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "has qualification assertion"@en .
+<https://w3id.org/eudpp#hasQualificationAssertion> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded modelling relation connecting a SubstanceOfConcern to an explicit Article 2(27) qualification assertion."@en .
+# 
+# https://w3id.org/eudpp#hasRecyclingInstruction
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(e)."@en .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to information relevant for recycling."@en .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has recycling instruction"@en .
+<https://w3id.org/eudpp#hasRecyclingInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasReuseInstruction
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(e)."@en .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to information relevant for reuse."@en .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasReuseInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has reuse instruction"@en .
+<https://w3id.org/eudpp#hasReuseInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasSafeUseInstruction
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceManagementInstruction> .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(d)."@en .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a substance presence to relevant instructions for the safe use of the product."@en .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Has safe-use instruction"@en .
+<https://w3id.org/eudpp#hasSafeUseInstruction> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#hasSoCCriterion
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://purl.org/dc/terms/references> "ESPR Article 2(27)."@en .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a qualification assertion to one or more non-exclusive criteria (a)-(d)."@en .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#hasSoCCriterion> <http://www.w3.org/2000/01/rdf-schema#label> "has SoC criterion"@en .
+<https://w3id.org/eudpp#hasSoCCriterion> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded modelling relation connecting a qualification assertion to one or more Article 2(27) qualification criteria."@en .
+# 
+# https://w3id.org/eudpp#qualifiesSubstance
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/eudpp#hasQualificationAssertion> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://purl.org/dc/terms/references> "ESPR Article 2(27)."@en .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a qualification assertion to the substance of concern that it positively qualifies."@en .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#qualifiesSubstance> <http://www.w3.org/2000/01/rdf-schema#label> "qualifies substance"@en .
+<https://w3id.org/eudpp#qualifiesSubstance> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded modelling relation connecting an explicit qualification assertion to the SubstanceOfConcern it qualifies."@en .
 # 
 # 
 # 
@@ -115,99 +233,179 @@
 # https://w3id.org/eudpp#abbreviation
 <https://w3id.org/eudpp#abbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#otherName> .
-<https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
 <https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#comment> "The abbreviation used for the Substance of Concern; [ESPR Article 7(5)]"@en .
+<https://w3id.org/eudpp#abbreviation> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(ii)"@en .
+<https://w3id.org/eudpp#abbreviation> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#comment> "An abbreviation used for the substance."@en .
+<https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
 <https://w3id.org/eudpp#abbreviation> <http://www.w3.org/2000/01/rdf-schema#label> "Abbreviation"@en .
+<https://w3id.org/eudpp#abbreviation> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#hasImpactOnEnvironment
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://purl.org/dc/terms/references> "ESPR Annex I (f)"@en .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the impacts of Substance of Concern on environment; ESPR Annex I (f)"@en .
-<https://w3id.org/eudpp#hasImpactOnEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Has impact on environment"@en .
+# https://w3id.org/eudpp#casName
+<https://w3id.org/eudpp#casName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#casName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#casName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#casName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(iv)"@en .
+<https://w3id.org/eudpp#casName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#casName> <http://www.w3.org/2000/01/rdf-schema#comment> "The Chemical Abstracts Service name of the substance, when available."@en .
+<https://w3id.org/eudpp#casName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#casName> <http://www.w3.org/2000/01/rdf-schema#label> "CAS name"@en .
+<https://w3id.org/eudpp#casName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#hasImpactOnHumanHealth
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://purl.org/dc/terms/references> "ESPR Annex I (f)"@en .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the impacts of Substance of Concern on human health; ESPR Annex I (f)"@en .
-<https://w3id.org/eudpp#hasImpactOnHumanHealth> <http://www.w3.org/2000/01/rdf-schema#label> "Has impact on human health"@en .
+# https://w3id.org/eudpp#casNumber
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#casNumber> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(iv)"@en .
+<https://w3id.org/eudpp#casNumber> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The Chemical Abstracts Service registry number of the substance, when available."@en .
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#casNumber> <http://www.w3.org/2000/01/rdf-schema#label> "CAS number"@en .
+<https://w3id.org/eudpp#casNumber> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#nameCAS
-<https://w3id.org/eudpp#nameCAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#nameCAS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#nameCAS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#nameCAS> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#nameCAS> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#nameCAS> <http://www.w3.org/2000/01/rdf-schema#comment> "The Chemical Abstract Service (CAS) name, if available; [ESPR Article 7(5)]"@en .
-<https://w3id.org/eudpp#nameCAS> <http://www.w3.org/2000/01/rdf-schema#label> "CAS name"@en .
+# https://w3id.org/eudpp#ecNumber
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#ecNumber> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(iii)"@en .
+<https://w3id.org/eudpp#ecNumber> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The European Community number indicated in EINECS, ELINCS or the No Longer Polymer list, when available and appropriate."@en .
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#ecNumber> <http://www.w3.org/2000/01/rdf-schema#label> "EC number"@en .
+<https://w3id.org/eudpp#ecNumber> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#nameIUPAC
-<https://w3id.org/eudpp#nameIUPAC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#nameIUPAC> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#nameIUPAC> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#nameIUPAC> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#nameIUPAC> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#nameIUPAC> <http://www.w3.org/2000/01/rdf-schema#comment> "Name in the International Union of Pure and Applied Chemistry (IUPAC) nomenclature, or another international name when IUPAC name is not available [ESPR Article 7(5)]"@en .
-<https://w3id.org/eudpp#nameIUPAC> <http://www.w3.org/2000/01/rdf-schema#label> "IUPAC name"@en .
+# https://w3id.org/eudpp#echaNumber
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#echaNumber> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(iii)"@en .
+<https://w3id.org/eudpp#echaNumber> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A number assigned to the substance by the European Chemicals Agency, when available and appropriate."@en .
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#echaNumber> <http://www.w3.org/2000/01/rdf-schema#label> "ECHA number"@en .
+<https://w3id.org/eudpp#echaNumber> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#numberCAS
-<https://w3id.org/eudpp#numberCAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#numberCAS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#numberCAS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#numberCAS> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#numberCAS> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#numberCAS> <http://www.w3.org/2000/01/rdf-schema#comment> "The Chemical Abstract Service (CAS) number, if available; [ESPR Article 7(5)]"@en .
-<https://w3id.org/eudpp#numberCAS> <http://www.w3.org/2000/01/rdf-schema#label> "CAS number"@en .
+# https://w3id.org/eudpp#internationalName
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#internationalName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(i)"@en .
+<https://w3id.org/eudpp#internationalName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/2000/01/rdf-schema#comment> "An internationally recognised name for the substance, used when an IUPAC name is not available."@en .
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#internationalName> <http://www.w3.org/2000/01/rdf-schema#label> "International name"@en .
+<https://w3id.org/eudpp#internationalName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#numberEC
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#numberEC> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#numberEC> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/2000/01/rdf-schema#comment> "European Community (EC) number, as indicated in the European Inventory of Existing Commercial Chemical Substances (EINECS), the European List of Notified Chemical Substances (ELINCS) or the No Longer Polymer (NLP) list or the number assigned by the European Chemicals Agency (ECHA), if available and appropriate [ESPR Article 7(5)]"@en .
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/2000/01/rdf-schema#comment> "EXAMPLES:\n\nMercurous Oxide\nEC Number: 239-934-0\nCAS Number: 15829-53-5" .
-<https://w3id.org/eudpp#numberEC> <http://www.w3.org/2000/01/rdf-schema#label> "EC number"@en .
+# https://w3id.org/eudpp#iupacName
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#internationalName> .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#iupacName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(i)"@en .
+<https://w3id.org/eudpp#iupacName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the substance in the International Union of Pure and Applied Chemistry nomenclature."@en .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#iupacName> <http://www.w3.org/2000/01/rdf-schema#label> "IUPAC name"@en .
+<https://w3id.org/eudpp#iupacName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#maximumNumericalValue
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ConcentrationRange> .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(c)"@en .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The upper bound of a concentration range."@en .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#maximumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum numerical value"@en .
+<https://w3id.org/eudpp#maximumNumericalValue> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
+# 
+# https://w3id.org/eudpp#minimumNumericalValue
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#ConcentrationRange> .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(c)"@en .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The lower bound of a concentration range."@en .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#minimumNumericalValue> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum numerical value"@en .
+<https://w3id.org/eudpp#minimumNumericalValue> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
 # 
 # https://w3id.org/eudpp#otherName
 <https://w3id.org/eudpp#otherName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
 <https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#otherName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#otherName> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#comment> "Other names, including usual name, trade name, abbreviation; [ESPR Article 7(5)]"@en .
-<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#label> "Other names"@en .
+<https://w3id.org/eudpp#otherName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(ii)"@en .
+<https://w3id.org/eudpp#otherName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#comment> "Another name used for the substance, including a usual name, trade name or abbreviation."@en .
+<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#otherName> <http://www.w3.org/2000/01/rdf-schema#label> "Other name"@en .
+<https://w3id.org/eudpp#otherName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
-# https://w3id.org/eudpp#substanceLocation
-<https://w3id.org/eudpp#substanceLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/eudpp#substanceLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
-<https://w3id.org/eudpp#substanceLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#substanceLocation> <http://purl.org/dc/terms/references> "ESPR Article 7(5)"@en .
-<https://w3id.org/eudpp#substanceLocation> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#substanceLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of the substance in the product; ESPR Art 7(5)"@en .
-<https://w3id.org/eudpp#substanceLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Location of substance"@en .
+# https://w3id.org/eudpp#qualificationNote
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#qualificationNote> <http://purl.org/dc/terms/references> "Qualification assertion metadata."@en .
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional explanation or limitation of the qualification assertion."@en .
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#qualificationNote> <http://www.w3.org/2000/01/rdf-schema#label> "qualification note"@en .
+<https://w3id.org/eudpp#qualificationNote> <https://w3id.org/eudpp#sourceStatus> "Modelling metadata for an explicit SoC qualification assertion."@en .
+# 
+# https://w3id.org/eudpp#qualificationValidFrom
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://purl.org/dc/terms/references> "Versioned qualification metadata."@en .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "First date on which the qualification assertion is considered valid."@en .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#qualificationValidFrom> <http://www.w3.org/2000/01/rdf-schema#label> "qualification valid from"@en .
+<https://w3id.org/eudpp#qualificationValidFrom> <https://w3id.org/eudpp#sourceStatus> "Modelling metadata for the temporal validity of an explicit SoC qualification assertion."@en .
+# 
+# https://w3id.org/eudpp#qualificationValidUntil
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SoCQualificationAssertion> .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://purl.org/dc/terms/references> "Versioned qualification metadata."@en .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "Last date on which the qualification assertion is considered valid, when bounded."@en .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#qualificationValidUntil> <http://www.w3.org/2000/01/rdf-schema#label> "qualification valid until"@en .
+<https://w3id.org/eudpp#qualificationValidUntil> <https://w3id.org/eudpp#sourceStatus> "Modelling metadata for the temporal validity of an explicit SoC qualification assertion."@en .
+# 
+# https://w3id.org/eudpp#substanceLocationDescription
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstancePresence> .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(b)"@en .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual description of the location of the substance within the product, used where the location cannot be represented solely by linking to a product, component or spare part."@en .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#substanceLocationDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Location description"@en .
+<https://w3id.org/eudpp#substanceLocationDescription> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
 # 
 # https://w3id.org/eudpp#tradeName
 <https://w3id.org/eudpp#tradeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#otherName> .
-<https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
 <https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#comment> "The trade name under which the Substance of Concern is known; [ESPR Article 7(5)]"@en .
+<https://w3id.org/eudpp#tradeName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(ii)"@en .
+<https://w3id.org/eudpp#tradeName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#comment> "A trade name under which the substance is known."@en .
+<https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
 <https://w3id.org/eudpp#tradeName> <http://www.w3.org/2000/01/rdf-schema#label> "Trade name"@en .
+<https://w3id.org/eudpp#tradeName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
 # https://w3id.org/eudpp#usualName
 <https://w3id.org/eudpp#usualName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#otherName> .
-<https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#SubstanceOfConcern> .
+<https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Substance> .
 <https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#comment> "The usual name under which the Substance of Concern is known; [ESPR Article 7(5)]"@en .
+<https://w3id.org/eudpp#usualName> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)(ii)"@en .
+<https://w3id.org/eudpp#usualName> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#comment> "A usual name under which the substance is known."@en .
+<https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
 <https://w3id.org/eudpp#usualName> <http://www.w3.org/2000/01/rdf-schema#label> "Usual name"@en .
+<https://w3id.org/eudpp#usualName> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
 # 
 # 
 # 
@@ -218,35 +416,174 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/eudpp#Concentration
-<https://w3id.org/eudpp#Concentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp#Concentration> <http://purl.org/dc/terms/references> "ESPR Art 7(5)"@en .
-<https://w3id.org/eudpp#Concentration> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#Concentration> <http://www.w3.org/2000/01/rdf-schema#comment> "The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)"@en .
-<https://w3id.org/eudpp#Concentration> <http://www.w3.org/2000/01/rdf-schema#label> "Concentration of the substance of concern"@en .
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://si-digital-framework.org/SI#MeasurementUnit
+<https://si-digital-framework.org/SI#MeasurementUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern
+<https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eudpp#ConcentrationRange
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> .
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/eudpp#MaximumConcentration> .
+<https://w3id.org/eudpp#ConcentrationRange> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(c)"@en .
+<https://w3id.org/eudpp#ConcentrationRange> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/2000/01/rdf-schema#comment> "A concentration reported as an interval with a minimum and a maximum numerical value. The measurement unit is provided through dpp:hasMeasurementUnit."@en .
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#ConcentrationRange> <http://www.w3.org/2000/01/rdf-schema#label> "Concentration range"@en .
+<https://w3id.org/eudpp#ConcentrationRange> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#MaximumConcentration
+<https://w3id.org/eudpp#MaximumConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#MaximumConcentration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern> .
+<https://w3id.org/eudpp#MaximumConcentration> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(c)"@en .
+<https://w3id.org/eudpp#MaximumConcentration> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#MaximumConcentration> <http://www.w3.org/2000/01/rdf-schema#comment> "A concentration reported as a maximum value. The inherited dpp:numericalValue denotes the upper bound, and dpp:hasMeasurementUnit supplies its unit."@en .
+<https://w3id.org/eudpp#MaximumConcentration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#MaximumConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum concentration"@en .
+<https://w3id.org/eudpp#MaximumConcentration> <https://w3id.org/eudpp#sourceStatus> "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct."@en .
+# 
+# https://w3id.org/eudpp#SoCQualificationAssertion
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://purl.org/dc/terms/references> "ESPR Article 2(27)."@en .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2006/1907/oj> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2008/1272/oj> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2019/1021/oj> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#comment> "A documented, explicit assertion that a substance satisfies one or more non-exclusive qualification criteria in ESPR Article 2(27). For criterion (d), the applicable product context is represented by a dpp:SubstancePresence linked through dpp:hasApplicableQualification. This modelling construct records asserted qualification evidence; it does not infer legal status."@en .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <http://www.w3.org/2000/01/rdf-schema#label> "SoC qualification assertion"@en .
+<https://w3id.org/eudpp#SoCQualificationAssertion> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded modelling construct for recording an explicit Article 2(27) qualification; the assertion is not itself a legal term and the ontology does not infer legal status."@en .
 # 
 # https://w3id.org/eudpp#Substance
 <https://w3id.org/eudpp#Substance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/references> "ESPR Art 2"@en .
-<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/references> "Regulation (EC) No 1907/2006"@en .
-<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/source> "http://data.europa.eu/eli/reg/2006/1907/oj" .
-<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#Substance> <http://www.w3.org/2000/01/rdf-schema#comment> "Means a chemical element and its compounds in the natural state or obtained by any manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; ESPR Art 2, Regulation (EC) No 1907/2006"@en .
+<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/references> "REACH Article 3(1)"@en .
+<https://w3id.org/eudpp#Substance> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2006/1907/oj> .
+<https://w3id.org/eudpp#Substance> <http://www.w3.org/2000/01/rdf-schema#comment> "A chemical substance used as the generic superclass for substance identity and naming information. In this SOC module it primarily supports the modelling of dpp:SubstanceOfConcern; its presence does not make SOC a general-purpose substance-reporting module."@en .
+<https://w3id.org/eudpp#Substance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
 <https://w3id.org/eudpp#Substance> <http://www.w3.org/2000/01/rdf-schema#label> "Substance"@en .
+<https://w3id.org/eudpp#Substance> <https://w3id.org/eudpp#sourceStatus> "direct legal definition reproduced from the cited legislation."@en .
+# 
+# https://w3id.org/eudpp#SubstanceManagementInstruction
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(d)-(e)"@en .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "An instruction concerning the management of a substance of concern in its SubstancePresence context, including safe use, disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management. This domain-specific modelling abstraction supports the information elements in ESPR Article 7(5)(d)-(e); it is not a term defined by the Regulation and does not determine legal obligations or applicability."@en .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Substance management instruction"@en .
+<https://w3id.org/eudpp#SubstanceManagementInstruction> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
 # 
 # https://w3id.org/eudpp#SubstanceOfConcern
 <https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#Substance> .
-<https://w3id.org/eudpp#SubstanceOfConcern> <http://purl.org/dc/terms/references> "ESPR Art 2(10)"@en .
-<https://w3id.org/eudpp#SubstanceOfConcern> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
-<https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#comment> "means a substance that:(a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present [ESPR Art 2(10)]"@en .
+<https://w3id.org/eudpp#SubstanceOfConcern> <http://purl.org/dc/terms/references> "ESPR Article 2(27)"@en .
+<https://w3id.org/eudpp#SubstanceOfConcern> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#comment> "A substance that: (a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present."@en .
+<https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
 <https://w3id.org/eudpp#SubstanceOfConcern> <http://www.w3.org/2000/01/rdf-schema#label> "Substance of concern"@en .
+<https://w3id.org/eudpp#SubstanceOfConcern> <https://w3id.org/eudpp#sourceStatus> "direct legal definition reproduced from the cited legislation."@en .
 # 
-# https://w3id.org/eudpp#Threshold
-<https://w3id.org/eudpp#Threshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/eudpp#Threshold> <http://purl.org/dc/terms/references> "ESPR FAQ 10.115, p59"@en .
-<https://w3id.org/eudpp#Threshold> <http://purl.org/dc/terms/source> "https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details" .
-<https://w3id.org/eudpp#Threshold> <http://www.w3.org/2000/01/rdf-schema#comment> "Relevant threshold of Substance of Concern.\n\nBy default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"@en .
-<https://w3id.org/eudpp#Threshold> <http://www.w3.org/2000/01/rdf-schema#label> "Threshold of substance of concern"@en .
+# https://w3id.org/eudpp#SubstancePresence
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/eudpp#SubstancePresence> <http://purl.org/dc/terms/references> "ESPR Article 7(5)(a)–(e)"@en .
+<https://w3id.org/eudpp#SubstancePresence> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/2000/01/rdf-schema#comment> "A contextual relation entity representing the presence of a substance in relation to a product as placed on the market, including a product, component or spare part. It enables product-dependent location, concentration and instruction information to be represented without treating those data as intrinsic characteristics of the substance itself or classifying the presence as a product property. In the CORE profile the modelling pattern is one SubstancePresence per reported location when different locations require different concentrations; sector-specific extensions may provide explicit reference bases for several calculation perspectives. This class is an ontology modelling abstraction supporting ESPR Article 7(5), rather than a term explicitly defined by the Regulation."@en .
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#SubstancePresence> <http://www.w3.org/2000/01/rdf-schema#label> "Substance presence"@en .
+<https://w3id.org/eudpp#SubstancePresence> <https://w3id.org/eudpp#sourceStatus> "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/eudpp#CriterionA
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp#CriterionA> <http://purl.org/dc/terms/references> "ESPR Article 2(27)(a); REACH Articles 57 and 59(1)."@en .
+<https://w3id.org/eudpp#CriterionA> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2006/1907/oj> .
+<https://w3id.org/eudpp#CriterionA> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1)."@en .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2004/02/skos/core#definition> "The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1)."@en .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2004/02/skos/core#notation> "a" .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2004/02/skos/core#prefLabel> "Criterion (a)"@en .
+<https://w3id.org/eudpp#CriterionA> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionA> <https://w3id.org/eudpp#sourceStatus> "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(a)."@en .
+# 
+# https://w3id.org/eudpp#CriterionB
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp#CriterionB> <http://purl.org/dc/terms/references> "ESPR Article 2(27)(b); CLP Annex VI Part 3."@en .
+<https://w3id.org/eudpp#CriterionB> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2008/1272/oj> .
+<https://w3id.org/eudpp#CriterionB> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b)."@en .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2004/02/skos/core#definition> "The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b)."@en .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2004/02/skos/core#notation> "b" .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2004/02/skos/core#prefLabel> "Criterion (b)"@en .
+<https://w3id.org/eudpp#CriterionB> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionB> <https://w3id.org/eudpp#sourceStatus> "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(b)."@en .
+# 
+# https://w3id.org/eudpp#CriterionC
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp#CriterionC> <http://purl.org/dc/terms/references> "ESPR Article 2(27)(c); Regulation (EU) 2019/1021."@en .
+<https://w3id.org/eudpp#CriterionC> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2019/1021/oj> .
+<https://w3id.org/eudpp#CriterionC> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants."@en .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2004/02/skos/core#definition> "The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants."@en .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2004/02/skos/core#notation> "c" .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Criterion (c)"@en .
+<https://w3id.org/eudpp#CriterionC> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionC> <https://w3id.org/eudpp#sourceStatus> "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(c)."@en .
+# 
+# https://w3id.org/eudpp#CriterionD
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/eudpp#CriterionD> <http://purl.org/dc/terms/references> "ESPR Article 2(27)(d)."@en .
+<https://w3id.org/eudpp#CriterionD> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2000/01/rdf-schema#comment> "The substance negatively affects reuse and recycling of materials in the product in which it is present."@en .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#definition> "The substance negatively affects reuse and recycling of materials in the product in which it is present."@en .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#notation> "d" .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#prefLabel> "Criterion (d)"@en .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#scopeNote> "Criterion (d) is product-context dependent. The context is represented by linking the relevant dpp:SubstancePresence to the qualification assertion through dpp:hasApplicableQualification."@en .
+<https://w3id.org/eudpp#CriterionD> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/eudpp#SoCCriterionScheme> .
+<https://w3id.org/eudpp#CriterionD> <https://w3id.org/eudpp#sourceStatus> "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(d); product context is represented through SubstancePresence."@en .
+# 
+# https://w3id.org/eudpp#SoCCriterionScheme
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://purl.org/dc/terms/source> <http://data.europa.eu/eli/reg/2024/1781/oj> .
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal qualification criteria corresponding to points (a)-(d) of ESPR Article 2(27). A substance may satisfy more than one criterion."@en .
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#SoCCriterionScheme> <http://www.w3.org/2000/01/rdf-schema#label> "SoC criterion scheme"@en .
+<https://w3id.org/eudpp#SoCCriterionScheme> <https://w3id.org/eudpp#sourceStatus> "Controlled vocabulary representing the four legal qualification branches of ESPR Article 2(27)."@en .
+# 
+# https://w3id.org/eudpp#massFractionUnit
+<https://w3id.org/eudpp#massFractionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/eudpp#massFractionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://si-digital-framework.org/SI#MeasurementUnit> .
+<https://w3id.org/eudpp#massFractionUnit> <http://purl.org/dc/terms/references> "SI style convention: percent denotes the number 0.01; mass fraction values should be represented as decimal ratios in data."@en .
+<https://w3id.org/eudpp#massFractionUnit> <http://purl.org/dc/terms/source> <https://physics.nist.gov/cuu/Units/checklist.html> .
+<https://w3id.org/eudpp#massFractionUnit> <http://purl.org/dc/terms/source> <https://si-digital-framework.org/> .
+<https://w3id.org/eudpp#massFractionUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Project-managed measurement-unit convention for dimensionless mass fraction expressed as a decimal ratio of masses. Use dpp:numericalValue \"0.001\"^^xsd:decimal for 0.1 % by mass. This avoids encoding \"w/w\" in the unit symbol and may be replaced by an official SI Digital Framework PID if one becomes available."@en .
+<https://w3id.org/eudpp#massFractionUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/eudpp/SOC> .
+<https://w3id.org/eudpp#massFractionUnit> <http://www.w3.org/2000/01/rdf-schema#label> "mass fraction unit"@en .
+<https://w3id.org/eudpp#massFractionUnit> <https://w3id.org/eudpp#sourceStatus> "Implementation measurement-unit convention; not a named SI Digital Framework unit PID."@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

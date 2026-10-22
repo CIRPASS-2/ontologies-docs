@@ -21,14 +21,14 @@
     "other" : {
       "license" : [ {
         "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
-      }, {
-        "identifier" : "license",
         "language" : "undefined",
         "value" : "https://www.apache.org/licenses/LICENSE-2.0",
         "type" : "iri"
+      }, {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -302,10 +302,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "23",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "24",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/eudpp#isCriticalRawMaterial",
@@ -333,7 +333,7 @@
     "comment" : {
       "en" : "Product parameters: use or content of recycled materials and recovery of materials, including critical raw materials; [ESPR Annex I h)]"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "0"
   }, {
     "iri" : "https://w3id.org/eudpp#materialRecycledContent",
@@ -347,7 +347,7 @@
     "comment" : {
       "en" : "Percentage of recycled content"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/eudpp#materialPercentage",
@@ -361,7 +361,7 @@
     "comment" : {
       "en" : "Material percentage in a Product, e.g., mass fraction (percentage by weight)."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "5"
   }, {
     "iri" : "https://w3id.org/eudpp#materialTypeScheme",
@@ -375,7 +375,7 @@
     "comment" : {
       "en" : "Reference system (e.g. ISO 11224, EU Textile Regulation 1007/2011 Annex I)"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/eudpp#materialRecycledContentType",
@@ -389,7 +389,7 @@
     "comment" : {
       "en" : "Specifies the origin of recycled content: pre-consumer (manufacturing waste) or post-consumer (end-of-life waste), as required by regulatory differentiation."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp#materialComponent",
@@ -403,7 +403,7 @@
     "comment" : {
       "en" : "The specific part of the Product this material belongs to. Description. \nFor example, in case of a textile product: [Main, Lining, Filling]."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "18"
   }, {
     "iri" : "https://w3id.org/eudpp#materialComponentLabel",
@@ -417,7 +417,7 @@
     "comment" : {
       "en" : "Optional human-readable label identifying the role or part of the product associated with the material component (e.g. outer layer, lining, filling, casing).\n\nNote: not defined by ESPR, requested by sectors (textile)"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "19"
   }, {
     "iri" : "https://w3id.org/eudpp#hasMaterialType",
@@ -431,7 +431,7 @@
     "comment" : {
       "en" : "Links material to its type in some classification system used by the sector."
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "20"
   }, {
     "iri" : "https://w3id.org/eudpp#materialIsRecyclable",
@@ -459,7 +459,7 @@
     "comment" : {
       "en" : "Product parameters: design for recycling, ease and quality of recycling as expressed through use of easily recyclable materials [ESPR Art 5 (1n), Annex I d)]"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "21"
   }, {
     "iri" : "https://w3id.org/eudpp#materialTypeValue",
@@ -473,22 +473,8 @@
     "comment" : {
       "en" : "Code or label in the chosen nomenclature (specified by #materialTypeScheme)."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "22"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasMaterialOrigin",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "hasMaterialOrigin",
-      "en" : "has material origin"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "Assigns material origin to material used for product"
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "23"
   }, {
     "iri" : "https://w3id.org/eudpp#materialIsSustainableRenewable",
     "baseIri" : "https://w3id.org/eudpp",
@@ -515,7 +501,21 @@
     "comment" : {
       "en" : "Product parameters: use or content of sustainable renewable materials; [ESPR Annex I i)]"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasMaterialOrigin",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasMaterialOrigin",
+      "en" : "has material origin"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Assigns material origin to material used for product"
+    },
+    "attributes" : [ "object", "external" ],
     "id" : "24"
   } ]
 }

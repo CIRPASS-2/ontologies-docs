@@ -2,12 +2,12 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/eudpp" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://si-digital-framework.org/SI", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/eudpp", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "en" : "The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/SOC",
-    "version" : "2.0.0",
+    "version" : "2.2.0",
     "author" : [ "Tarmo Robal" ],
     "description" : {
       "en" : "MODULE: SOC\nSubstances of Concern module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP.  \n\nThe third iteration of the Substances of Concern module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe information requirements laid out in ESPR Art 7(2) and Art 7(5) for products require the information requirements to make it possible to track the substances of concern, throughout the life cycle of the products concerned. These information requirements for specific product groups are specified in the delegated acts adopted pursuant to Art 4 of ESPR.\n\t\nThis module addresses only the information requirements referred and stated in the ESPR. \n=====================================\nCONTEXT: \nRegulation (EC) No 1907/2006  Art 3(1) defines Substance: means a chemical element and its compounds in the natural state or obtained by\nany manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; \n\n------------------------------------------------------------------- \nKnown issues:\n - hasLifeCycleStage misses range (Event).\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
@@ -21,14 +21,14 @@
     "other" : {
       "license" : [ {
         "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
-      }, {
-        "identifier" : "license",
         "language" : "undefined",
         "value" : "https://www.apache.org/licenses/LICENSE-2.0",
         "type" : "iri"
+      }, {
+        "identifier" : "license",
+        "language" : "en",
+        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -40,6 +40,11 @@
         "identifier" : "contributor",
         "language" : "en",
         "value" : "Hele-Mai Haav",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Elio Hbeich",
         "type" : "label"
       } ],
       "created" : [ {
@@ -57,7 +62,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2.0.0",
+        "value" : "2.2.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -69,7 +74,7 @@
       "issued" : [ {
         "identifier" : "issued",
         "language" : "en",
-        "value" : "2026-04-30",
+        "value" : "2026-10-15",
         "type" : "label"
       } ]
     }
@@ -77,64 +82,719 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "3",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "4",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "5",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:Class"
   }, {
     "id" : "6",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "2",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "9",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:Class"
   }, {
     "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "11",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
     "id" : "13",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "14",
+    "id" : "30",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "15",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "8",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "21",
     "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "19",
-    "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/eudpp#CriterionC",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(c).",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Article 2(27)(c); Regulation (EU) 2019/1021.",
+          "type" : "label"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "c",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Criterion (c)",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2019/1021/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance is regulated under Regulation (EU) 2019/1021 on persistent organic pollutants."
+      },
+      "labels" : {
+        "IRI-based" : "CriterionC"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp#CriterionD",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(d); product context is represented through SubstancePresence.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Article 2(27)(d).",
+          "type" : "label"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "d",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Criterion (d)",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "The substance negatively affects reuse and recycling of materials in the product in which it is present.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "Criterion (d) is product-context dependent. The context is represented by linking the relevant dpp:SubstancePresence to the qualification assertion through dpp:hasApplicableQualification.",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance negatively affects reuse and recycling of materials in the product in which it is present."
+      },
+      "labels" : {
+        "IRI-based" : "CriterionD"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp#CriterionA",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(a).",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Article 2(27)(a); REACH Articles 57 and 59(1).",
+          "type" : "label"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "a",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Criterion (a)",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1).",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance meets the relevant REACH Article 57 criteria and has been identified under Article 59(1)."
+      },
+      "labels" : {
+        "IRI-based" : "CriterionA"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp#CriterionB",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Legal qualification criterion represented as a SKOS concept corresponding to ESPR Article 2(27)(b).",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Article 2(27)(b); CLP Annex VI Part 3.",
+          "type" : "label"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "b",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Criterion (b)",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b).",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2008/1272/oj",
+          "type" : "iri"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The substance has a harmonised CLP Annex VI Part 3 classification in one of the hazard classes or categories listed by ESPR Article 2(27)(b)."
+      },
+      "labels" : {
+        "IRI-based" : "CriterionB"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/eudpp#MaximumConcentration",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(c)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MaximumConcentration",
+      "en" : "Maximum concentration"
+    },
+    "comment" : {
+      "en" : "A concentration reported as a maximum value. The inherited dpp:numericalValue denotes the upper bound, and dpp:hasMeasurementUnit supplies its unit."
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#SubstanceManagementInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(d)-(e)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SubstanceManagementInstruction",
+      "en" : "Substance management instruction"
+    },
+    "comment" : {
+      "en" : "An instruction concerning the management of a substance of concern in its SubstancePresence context, including safe use, disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management. This domain-specific modelling abstraction supports the information elements in ESPR Article 7(5)(d)-(e); it is not a term defined by the Regulation and does not determine legal obligations or applicability."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/eudpp#SoCCriterionScheme",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Controlled vocabulary representing the four legal qualification branches of ESPR Article 2(27).",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Legal qualification criteria corresponding to points (a)-(d) of ESPR Article 2(27). A substance may satisfy more than one criterion."
+      },
+      "labels" : {
+        "IRI-based" : "SoCCriterionScheme",
+        "en" : "SoC criterion scheme"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/eudpp#ConcentrationRange",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(c)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConcentrationRange",
+      "en" : "Concentration range"
+    },
+    "comment" : {
+      "en" : "A concentration reported as an interval with a minimum and a maximum numerical value. The measurement unit is provided through dpp:hasMeasurementUnit."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp#Substance",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "direct legal definition reproduced from the cited legislation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "REACH Article 3(1)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Substance",
+      "en" : "Substance"
+    },
+    "subClasses" : [ "17" ],
+    "comment" : {
+      "en" : "A chemical substance used as the generic superclass for substance identity and naming information. In this SOC module it primarily supports the modelling of dpp:SubstanceOfConcern; its presence does not make SOC a general-purpose substance-reporting module."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "3",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/eudpp#SubstancePresence",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)–(e)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SubstancePresence",
+      "en" : "Substance presence"
+    },
+    "comment" : {
+      "en" : "A contextual relation entity representing the presence of a substance in relation to a product as placed on the market, including a product, component or spare part. It enables product-dependent location, concentration and instruction information to be represented without treating those data as intrinsic characteristics of the substance itself or classifying the presence as a product property. In the CORE profile the modelling pattern is one SubstancePresence per reported location when different locations require different concentrations; sector-specific extensions may provide explicit reference bases for several calculation perspectives. This class is an ontology modelling abstraction supporting ESPR Article 7(5), rather than a term explicitly defined by the Regulation."
+    },
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "https://si-digital-framework.org/SI#MeasurementUnit",
+    "baseIri" : "https://si-digital-framework.org/SI",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeasurementUnit"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/eudpp#massFractionUnit",
+      "baseIri" : "https://w3id.org/eudpp",
+      "annotations" : {
+        "sourceStatus" : [ {
+          "identifier" : "sourceStatus",
+          "language" : "en",
+          "value" : "Implementation measurement-unit convention; not a named SI Digital Framework unit PID.",
+          "type" : "label"
+        } ],
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/SOC",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "SI style convention: percent denotes the number 0.01; mass fraction values should be represented as decimal ratios in data.",
+          "type" : "label"
+        } ],
+        "source" : [ {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://physics.nist.gov/cuu/Units/checklist.html",
+          "type" : "iri"
+        }, {
+          "identifier" : "source",
+          "language" : "undefined",
+          "value" : "https://si-digital-framework.org/",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "Project-managed measurement-unit convention for dimensionless mass fraction expressed as a decimal ratio of masses. Use dpp:numericalValue \"0.001\"^^xsd:decimal for 0.1 % by mass. This avoids encoding \"w/w\" in the unit symbol and may be replaced by an official SI Digital Framework PID if one becomes available."
+      },
+      "labels" : {
+        "IRI-based" : "massFractionUnit",
+        "en" : "mass fraction unit"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "4",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "40",
     "label" : {
       "IRI-based" : "string"
     }
@@ -148,7 +808,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "6",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
     "label" : {
       "IRI-based" : "string"
     }
@@ -162,60 +829,45 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "32",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://w3id.org/eudpp#Concentration",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Art 7(5)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Concentration",
-      "en" : "Concentration of the substance of concern"
-    },
-    "comment" : {
-      "en" : "The concentration of the substances of concern, at the level of the product, its relevant components, or spare parts ESPR Art 7(5)"
-    },
-    "attributes" : [ "external" ],
-    "id" : "10"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "42",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "decimal"
     }
   }, {
     "iri" : "https://w3id.org/eudpp#SubstanceOfConcern",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "direct legal definition reproduced from the cited legislation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Art 2(10)",
+        "value" : "ESPR Article 2(27)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -223,24 +875,17 @@
       "en" : "Substance of concern"
     },
     "comment" : {
-      "en" : "means a substance that:(a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present [ESPR Art 2(10)]"
+      "en" : "A substance that: (a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present."
     },
     "attributes" : [ "external" ],
-    "id" : "1",
-    "superClasses" : [ "12" ]
+    "id" : "17",
+    "superClasses" : [ "1" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "13",
+    "id" : "43",
     "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
-    "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -250,486 +895,1246 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://w3id.org/eudpp#Threshold",
+    "iri" : "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern",
+    "baseIri" : "https://w3id.org/eudpp",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConcentrationOfSubstanceOfConcern"
+    },
+    "subClasses" : [ "6", "24" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/eudpp#SoCQualificationAssertion",
     "baseIri" : "https://w3id.org/eudpp",
     "instances" : 0,
     "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
         "language" : "en",
-        "value" : "ESPR FAQ 10.115, p59",
+        "value" : "ESPR-grounded modelling construct for recording an explicit Article 2(27) qualification; the assertion is not itself a legal term and the ontology does not infer legal status.",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Threshold",
-      "en" : "Threshold of substance of concern"
-    },
-    "comment" : {
-      "en" : "Relevant threshold of Substance of Concern.\n\nBy default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"
-    },
-    "attributes" : [ "external" ],
-    "id" : "8"
-  }, {
-    "iri" : "https://w3id.org/eudpp#Substance",
-    "baseIri" : "https://w3id.org/eudpp",
-    "instances" : 0,
-    "annotations" : {
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "Regulation (EC) No 1907/2006",
-        "type" : "label"
-      }, {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Art 2",
+        "value" : "ESPR Article 2(27).",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
-        "type" : "label"
+        "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2008/1272/oj",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2019/1021/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "Substance",
-      "en" : "Substance"
+      "IRI-based" : "SoCQualificationAssertion",
+      "en" : "SoC qualification assertion"
     },
-    "subClasses" : [ "1" ],
     "comment" : {
-      "en" : "Means a chemical element and its compounds in the natural state or obtained by any manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; ESPR Art 2, Regulation (EC) No 1907/2006"
+      "en" : "A documented, explicit assertion that a substance satisfies one or more non-exclusive qualification criteria in ESPR Article 2(27). For criterion (d), the applicable product context is represented by a dpp:SubstancePresence linked through dpp:hasApplicableQualification. This modelling construct records asserted qualification evidence; it does not infer legal status."
     },
     "attributes" : [ "external" ],
-    "id" : "12"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "23",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "19",
-    "label" : {
-      "undefined" : "Thing"
-    }
+    "id" : "21"
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "7",
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "16",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "17",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "18",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "20",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "21",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "22",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "24",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "25",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "26",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "27",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "28",
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "29",
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "30",
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "57",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://w3id.org/eudpp#numberEC",
+    "iri" : "https://w3id.org/eudpp#internationalName",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "2",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Article 7(5)",
+        "value" : "ESPR Article 7(5)(a)(i)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "numberEC",
-      "en" : "EC number"
+      "IRI-based" : "internationalName",
+      "en" : "International name"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "European Community (EC) number, as indicated in the European Inventory of Existing Commercial Chemical Substances (EINECS), the European List of Notified Chemical Substances (ELINCS) or the No Longer Polymer (NLP) list or the number assigned by the European Chemicals Agency (ECHA), if available and appropriate [ESPR Article 7(5)]",
-      "undefined" : "EXAMPLES:\n\nMercurous Oxide\nEC Number: 239-934-0\nCAS Number: 15829-53-5"
+      "en" : "An internationally recognised name for the substance, used when an IUPAC name is not available."
     },
     "attributes" : [ "external", "datatype" ],
     "id" : "0"
   }, {
-    "iri" : "https://w3id.org/eudpp#hasThreshold",
+    "iri" : "https://w3id.org/eudpp#casNumber",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "8",
+    "range" : "5",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR FAQ 10.115, p59",
+        "value" : "ESPR Article 7(5)(a)(iv)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://circabc.europa.eu/ui/group/418195ae-4919-45fa-a959-3b695c9aab28/library/25c48e7c-9ce3-41cb-96ac-d2942a8a29d6/details",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasThreshold",
-      "en" : "Has threshold"
+      "IRI-based" : "casNumber",
+      "en" : "CAS number"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Describes relevant threshold of Substance of Concern.\n\nBy default, information on all substances of concern present in a product, above the  relevant thresholds, should be included in the DPP [ESPR FAQ 10.115, p59]"
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "7"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasImpactOnEnvironment",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "15",
-    "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Annex I (f)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasImpactOnEnvironment",
-      "en" : "Has impact on environment"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "Describes the impacts of Substance of Concern on environment; ESPR Annex I (f)"
+      "en" : "The Chemical Abstracts Service registry number of the substance, when available."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "16"
+    "id" : "4"
   }, {
-    "iri" : "https://w3id.org/eudpp#otherName",
+    "iri" : "https://w3id.org/eudpp#hasRecyclingInstruction",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "9",
+    "range" : "10",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Article 7(5)",
+        "value" : "ESPR Article 7(5)(e).",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "otherName",
-      "en" : "Other names"
+      "IRI-based" : "hasRecyclingInstruction",
+      "en" : "Has recycling instruction"
     },
-    "domain" : "1",
+    "domain" : "9",
     "comment" : {
-      "en" : "Other names, including usual name, trade name, abbreviation; [ESPR Article 7(5)]"
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "17"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasLifeCycleStage",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "19",
-    "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Annex I (f)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasLifeCycleStage",
-      "en" : "Has life cycle stage"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "Describes the life cycle stage during which the Substance of Concern occurs for product (used during production, resulting being in product, in waste); ESPR Annex I (f).\n\nKnown issue: Range is some type of an Event, not yet present in the EU DPP CO."
+      "en" : "Links a substance presence to information relevant for recycling."
     },
     "attributes" : [ "external", "object" ],
-    "id" : "18"
+    "id" : "8"
   }, {
     "iri" : "https://w3id.org/eudpp#tradeName",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "13",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(ii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "tradeName",
       "en" : "Trade name"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "The trade name under which the Substance of Concern is known; [ESPR Article 7(5)]"
+      "en" : "A trade name under which the substance is known."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "20"
+    "id" : "12"
   }, {
     "iri" : "https://w3id.org/eudpp#abbreviation",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "14",
+    "range" : "15",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(ii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "abbreviation",
       "en" : "Abbreviation"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "The abbreviation used for the Substance of Concern; [ESPR Article 7(5)]"
+      "en" : "An abbreviation used for the substance."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "21"
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/eudpp#concernsSubstance",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "17",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "concernsSubstance",
+      "en" : "Concerns substance"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a reported SubstancePresence to the SubstanceOfConcern involved. dpp:Substance remains the superclass used for generic substance identity and naming properties, but the SOC reporting relation itself is intentionally restricted to dpp:SubstanceOfConcern."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp#usualName",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "23",
+    "range" : "19",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(ii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "usualName",
       "en" : "Usual name"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "The usual name under which the Substance of Concern is known; [ESPR Article 7(5)]"
+      "en" : "A usual name under which the substance is known."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "22"
+    "id" : "18"
   }, {
-    "iri" : "https://w3id.org/eudpp#hasImpactOnHumanHealth",
+    "iri" : "https://w3id.org/eudpp#hasQualificationAssertion",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "3",
+    "range" : "21",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded modelling relation connecting a SubstanceOfConcern to an explicit Article 2(27) qualification assertion.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Annex I (f)",
+        "value" : "ESPR Article 2(27).",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasImpactOnHumanHealth",
-      "en" : "Has impact on human health"
+      "IRI-based" : "hasQualificationAssertion",
+      "en" : "has qualification assertion"
     },
-    "domain" : "1",
+    "domain" : "17",
     "comment" : {
-      "en" : "Describes the impacts of Substance of Concern on human health; ESPR Annex I (f)"
+      "en" : "Links a substance of concern to a documented qualification assertion."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "24"
+    "attributes" : [ "external", "object" ],
+    "id" : "20"
   }, {
-    "iri" : "https://w3id.org/eudpp#nameCAS",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "4",
-    "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Article 7(5)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "nameCAS",
-      "en" : "CAS name"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "The Chemical Abstract Service (CAS) name, if available; [ESPR Article 7(5)]"
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "25"
-  }, {
-    "iri" : "https://w3id.org/eudpp#numberCAS",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "6",
-    "annotations" : {
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Article 7(5)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "numberCAS",
-      "en" : "CAS number"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "The Chemical Abstract Service (CAS) number, if available; [ESPR Article 7(5)]"
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "26"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasConcentration",
+    "iri" : "https://w3id.org/eudpp#hasEndOfLifeManagementInstruction",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "10",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Art 7(5)",
+        "value" : "ESPR Article 7(5)(e).",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasConcentration",
-      "en" : "Has concentration"
+      "IRI-based" : "hasEndOfLifeManagementInstruction",
+      "en" : "Has end-of-life management instruction"
     },
-    "domain" : "1",
+    "domain" : "9",
     "comment" : {
-      "en" : "Defines the the concentration, maximum concentration or concentration range of the substances of concern, at the level of the product, its relevant components, or spare parts; ESPR Art 7(5)"
+      "en" : "Links a substance presence to information relevant for environmentally sound management of the product at end-of-life."
     },
     "attributes" : [ "external", "object" ],
-    "id" : "27"
+    "id" : "22"
   }, {
-    "range" : "12",
-    "domain" : "1",
+    "range" : "7",
+    "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
+    "id" : "23"
   }, {
-    "iri" : "https://w3id.org/eudpp#nameIUPAC",
+    "range" : "1",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "7",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/eudpp#iupacName",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "5",
+    "range" : "32",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Article 7(5)",
+        "value" : "ESPR Article 7(5)(a)(i)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "label"
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "nameIUPAC",
+      "IRI-based" : "iupacName",
       "en" : "IUPAC name"
     },
     "domain" : "1",
     "comment" : {
-      "en" : "Name in the International Union of Pure and Applied Chemistry (IUPAC) nomenclature, or another international name when IUPAC name is not available [ESPR Article 7(5)]"
+      "en" : "The name of the substance in the International Union of Pure and Applied Chemistry nomenclature."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "29"
+    "id" : "31"
   }, {
-    "iri" : "https://w3id.org/eudpp#substanceLocation",
+    "iri" : "https://w3id.org/eudpp#echaNumber",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "11",
+    "range" : "36",
     "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
       "references" : [ {
         "identifier" : "references",
         "language" : "en",
-        "value" : "ESPR Article 7(5)",
+        "value" : "ESPR Article 7(5)(a)(iii)",
         "type" : "label"
       } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2024/1781/oj",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "echaNumber",
+      "en" : "ECHA number"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A number assigned to the substance by the European Chemicals Agency, when available and appropriate."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasDisassemblyInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "10",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(e).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDisassemblyInstruction",
+      "en" : "Has disassembly instruction"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a substance presence to information relevant for disassembly."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/eudpp#qualifiesSubstance",
+    "inverse" : "20",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "17",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded modelling relation connecting an explicit qualification assertion to the SubstanceOfConcern it qualifies.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 2(27).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "qualifiesSubstance",
+      "en" : "qualifies substance"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Links a qualification assertion to the substance of concern that it positively qualifies."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasSoCCriterion",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "3",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded modelling relation connecting a qualification assertion to one or more Article 2(27) qualification criteria.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 2(27).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSoCCriterion",
+      "en" : "has SoC criterion"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Links a qualification assertion to one or more non-exclusive criteria (a)-(d)."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/eudpp#maximumNumericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "42",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(c)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "maximumNumericalValue",
+      "en" : "Maximum numerical value"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The upper bound of a concentration range."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasReuseInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "10",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(e).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasReuseInstruction",
+      "en" : "Has reuse instruction"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a substance presence to information relevant for reuse."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "45"
+  }, {
+    "range" : "6",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasApplicableQualification",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "21",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded contextual relation connecting a SubstancePresence to the qualification assertion applicable in that product-specific presence context.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Articles 2(27) and 7(5).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasApplicableQualification",
+      "en" : "has applicable qualification"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a SubstancePresence to an applicable qualification assertion; criterion (d) context is presence-scoped."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasSafeUseInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "10",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(d).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSafeUseInstruction",
+      "en" : "Has safe-use instruction"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a substance presence to relevant instructions for the safe use of the product."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "https://w3id.org/eudpp#otherName",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "30",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(ii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "otherName",
+      "en" : "Other name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Another name used for the substance, including a usual name, trade name or abbreviation."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/eudpp#casName",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "40",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(iv)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "casName",
+      "en" : "CAS name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The Chemical Abstracts Service name of the substance, when available."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasPreparationForReuseInstruction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "10",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(e).",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasPreparationForReuseInstruction",
+      "en" : "Has preparation-for-reuse instruction"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a substance presence to information relevant for preparation for reuse."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/eudpp#substanceLocationDescription",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "27",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(b)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "substanceLocationDescription",
+      "en" : "Location description"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "A textual description of the location of the substance within the product, used where the location cannot be represented solely by linking to a product, component or spare part."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/eudpp#ecNumber",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "41",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(iii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ecNumber",
+      "en" : "EC number"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The European Community number indicated in EINECS, ELINCS or the No Longer Polymer list, when available and appropriate."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/eudpp#qualificationNote",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "34",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "Modelling metadata for an explicit SoC qualification assertion.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "Qualification assertion metadata.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "substanceLocation",
-      "en" : "Location of substance"
+      "IRI-based" : "qualificationNote",
+      "en" : "qualification note"
     },
-    "domain" : "1",
+    "domain" : "21",
     "comment" : {
-      "en" : "Location of the substance in the product; ESPR Art 7(5)"
+      "en" : "Additional explanation or limitation of the qualification assertion."
     },
     "attributes" : [ "external", "datatype" ],
-    "id" : "30"
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/eudpp#qualificationValidFrom",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "33",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "Modelling metadata for the temporal validity of an explicit SoC qualification assertion.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "Versioned qualification metadata.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "qualificationValidFrom",
+      "en" : "qualification valid from"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "First date on which the qualification assertion is considered valid."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/eudpp#minimumNumericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "43",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "ESPR-grounded ontology modelling abstraction; this RDF resource is not itself a term defined by the Regulation.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(c)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "minimumNumericalValue",
+      "en" : "Minimum numerical value"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The lower bound of a concentration range."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/eudpp#qualificationValidUntil",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "28",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "Modelling metadata for the temporal validity of an explicit SoC qualification assertion.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "Versioned qualification metadata.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "qualificationValidUntil",
+      "en" : "qualification valid until"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Last date on which the qualification assertion is considered valid, when bounded."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "57"
   } ]
 }

@@ -25,8 +25,9 @@ DEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontolog
 For more information, see 
 Maigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342
 
+=======================
 </terms:description>
-        <terms:issued>2026-10-02</terms:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-16</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
 In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
@@ -34,7 +35,7 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
         <vann:preferredNamespacePrefix>dpp</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The Product and DPP module of an EU DPP core ontology proposed by the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CO P_DPP</rdfs:label>
-        <owl:versionInfo>2.1.0</owl:versionInfo>
+        <owl:versionInfo>2.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -757,23 +758,6 @@ si:MeasurementUnit class is reused</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/eudpp#CarbonFootprint -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#CarbonFootprint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#EnvironmentalFootprint"/>
-        <terms:references xml:lang="en">ESPR Art 2 (25)</terms:references>
-        <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
-        <rdfs:comment xml:lang="en">Carbon footprint
-means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category
-of climate change. (ESPR Art 2 25))
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Carbon footprint</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/eudpp#CircularEconomyIndicator -->
 
 
@@ -919,19 +903,6 @@ This class description needs to be extended/specialised according to the corresp
     
 
 
-    <!-- https://w3id.org/eudpp#EnergyConsumption -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#EnergyConsumption">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ResourceConsumption"/>
-        <rdfs:comment xml:lang="en">Energy consumption of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Energy consumption</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/eudpp#EnvironmentalEmission -->
 
 
@@ -943,30 +914,6 @@ This class description needs to be extended/specialised according to the corresp
 This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
         <rdfs:label xml:lang="en">Environmental emission</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://dictionary.cambridge.org/dictionary/english/emission"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/eudpp#EnvironmentalFootprint -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#EnvironmentalFootprint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
-        <terms:references xml:lang="en">ESPR Art 2 (24)</terms:references>
-        <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
-        <rdfs:comment xml:lang="en">Environmental footprint
-means a quantification of the environmental impacts resulting from a product throughout its life
-cycle, whether in relation to a single environmental impact category or an aggregated set of impact
-categories based on the Product Environmental Footprint method established by Recommendation
-(EU) 2 021/2279 or other scientific methods developed by international organisations, widely tested
-in collaboration with different industry sectors and adopted or implemented by the Commission in
-other Union law. (ESPR Art 2 (24)).
-
-Product parameters list ESPR Annex I
-(m) The environmental footprint of the product, expressed as a quantification;
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Environmental footprint</rdfs:label>
     </owl:Class>
     
 
@@ -1009,19 +956,6 @@ This class description needs to be extended/specialised according to the corresp
     
 
 
-    <!-- https://w3id.org/eudpp#LandUse -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#LandUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ResourceConsumption"/>
-        <rdfs:comment xml:lang="en">Land use of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Land use</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/eudpp#Length -->
 
 
@@ -1029,22 +963,6 @@ This class description needs to be extended/specialised according to the corresp
         <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ProductDimension"/>
         <rdfs:comment xml:lang="en">Length of the product</rdfs:comment>
         <rdfs:label xml:lang="en">Length</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/eudpp#MaterialFootprint -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#MaterialFootprint">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#EnvironmentalFootprint"/>
-        <terms:references xml:lang="en">ESPR Art 2 (26)</terms:references>
-        <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj</terms:source>
-        <rdfs:comment xml:lang="en">Material footprint
-refers to the total amount of raw materials extracted to meet final consumption demands. (ESPR Art 2 (26))
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Material footprint</rdfs:label>
     </owl:Class>
     
 
@@ -1218,19 +1136,6 @@ This class description needs to be extended/specialised according to the corresp
     
 
 
-    <!-- https://w3id.org/eudpp#RecycledMaterialsUse -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#RecycledMaterialsUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ResourceConsumption"/>
-        <rdfs:comment xml:lang="en">Recycled materials use of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Recycled materials use</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/eudpp#RecyclingCollectionRate -->
 
 
@@ -1273,32 +1178,6 @@ This class description needs to be extended/specialised according to the corresp
     
 
 
-    <!-- https://w3id.org/eudpp#ResourceConsumption -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#ResourceConsumption">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#QuantitativeProperty"/>
-        <rdfs:comment xml:lang="en">Resource consumption of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Resource consumption</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/eudpp#SustainableRenewableMaterialsUse -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#SustainableRenewableMaterialsUse">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ResourceConsumption"/>
-        <rdfs:comment xml:lang="en">Sustainable renewable materials use of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Sustainable renewable materials use</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern -->
 
 
@@ -1334,19 +1213,6 @@ By default, information on all substances of concern present in a product, above
 
 This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
         <rdfs:label xml:lang="en">Waste generation amount</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/eudpp#WaterConsumption -->
-
-
-    <owl:Class rdf:about="https://w3id.org/eudpp#WaterConsumption">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#ResourceConsumption"/>
-        <rdfs:comment xml:lang="en">Water consumption of the product.
-
-This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards.</rdfs:comment>
-        <rdfs:label xml:lang="en">Water consumption</rdfs:label>
     </owl:Class>
     
 
