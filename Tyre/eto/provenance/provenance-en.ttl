@@ -2,6 +2,12 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/eudpp/eto/0.1> a prov:Entity;
+<https://w3id.org/eudpp/eto/0.2.0> a prov:Entity;
+	 dc:title "Example Tyre Ontology (ETO)";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-04-30";
 .
+:agent0 a prov:Agent; foaf:name "Quang-Duy Nguyen".
+:agent1 a prov:Agent; foaf:name "Nader Jelassi".

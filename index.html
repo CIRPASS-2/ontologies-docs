@@ -9,7 +9,7 @@
     specStatus: "base",
     shortName: "cirpass2-dpp-ontologies",
     subtitle: "Architecture, modules and sectoral extensions",
-    publishDate: "2026-10-21",
+    publishDate: "2026-10-22",
     latestVersion: "https://cirpass-2.github.io/ontologies-docs/",
     // ReSpec requires an editor; the editor is also among the authors, so the Editor line is hidden below.
     editors: [{ name: "Nader Jelassi", company: "Coexya" }],
@@ -477,9 +477,10 @@
         <code>eudpp:Property</code>, <code>eudpp:Durability</code> and <code>eudpp:ProductEvent</code>; battery chemistry
         specialises <code>eudpp:MaterialOfComposition</code>. Category concepts are <code>eudpp:ClassificationCode</code>
         values; chemistry and metal concepts are <code>eudpp:MaterialType</code> values.</td></tr>
-      <tr><td><a href="Tyre/eto/index-en.html">Tyre</a></td><td>Imports the modules it reuses.</td>
+      <tr><td><a href="Tyre/eto/index-en.html">Tyre</a></td><td>Refers to CORE terms by IRI; no import.</td>
         <td>The tyre class specialises <code>eudpp:Product</code>; tyre characteristics specialise
-        <code>eudpp:QuantitativeProperty</code> or <code>eudpp:ProductDimension</code>.</td></tr>
+        <code>eudpp:QuantitativeProperty</code> or <code>eudpp:ProductDimension</code>. Identifier schemes are
+        <code>eudpp:ProductIdentifierScheme</code> values; tyre classes are <code>eudpp:ClassificationCode</code> values.</td></tr>
       <tr><td><a href="Textile/textile-ontology/index-en.html">Textile</a></td><td>Imports MIREOT extracts of the CORE modules.</td>
         <td>Textile product classes specialise <code>eudpp:Product</code>; processes, repairs and recycling operations
         are linked to <code>eudpp:ProductEvent</code>. The extracts (<code>textile-dpp-mireot</code>,
@@ -539,7 +540,8 @@
     </p>
     <p>
       Its use case involves two roles, the manufacturer and the retreader. Tyre characteristics are grouped into
-      dimensions, markings and labelling information.
+      dimensions, markings, labelling information and specifications. Version 0.2.0 refers to CORE terms by IRI,
+      without import, and adds the fields of the European Product Registry for Energy Labelling (EPREL).
     </p>
   </section>
 
@@ -616,7 +618,7 @@
         <td>Battery modules, P_DPP, MAT</td></tr>
       <tr><td>Tyre retreading (example)</td>
         <td>Who retreaded a tyre, and what are its load index and speed symbol after retreading?</td>
-        <td>ETO</td></tr>
+        <td>ETO, ACTOR, CONNECTOR</td></tr>
       <tr><td>Textile composition</td>
         <td>What is the fibre composition of a textile product?</td>
         <td>Textile core</td></tr>

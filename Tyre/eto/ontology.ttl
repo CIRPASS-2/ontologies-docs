@@ -7,15 +7,80 @@
 @base <https://w3id.org/eudpp/eto#> .
 
 <https://w3id.org/eudpp/eto> rdf:type owl:Ontology ;
-                              owl:versionIRI <https://w3id.org/eudpp/eto/0.1> ;
-                              owl:imports <https://w3id.org/eudpp/ACTOR> ,
-                                          <https://w3id.org/eudpp/CONNECTOR> ,
-                                          <https://w3id.org/eudpp/LCA> ,
-                                          <https://w3id.org/eudpp/P_DPP> ,
-                                          <https://w3id.org/eudpp/SOC> ;
-                              <http://purl.org/dc/terms/description> "Example Tyre Ontology (ETO) is an examplar ontology for the tyre sector." ;
+                              owl:versionIRI <https://w3id.org/eudpp/eto/0.2.0> ;
+                              <http://purl.org/dc/terms/contributor> "Nader Jelassi"@en ;
+                              <http://purl.org/dc/terms/created> "2026-04-30"^^xsd:date ;
+                              <http://purl.org/dc/terms/creator> "Quang-Duy Nguyen"@en ;
+                              <http://purl.org/dc/terms/description> "Example Tyre Ontology (ETO) is an exemplar ontology for the tyre sector. It specialises the EU DPP Core Ontology (CORE), whose terms it references by their IRIs."@en ;
+                              <http://purl.org/dc/terms/issued> "2026-04-30"^^xsd:date ;
+                              <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ;
+                              <http://purl.org/dc/terms/modified> "2026-10-22"^^xsd:date ;
+                              <http://purl.org/dc/terms/title> "Example Tyre Ontology (ETO)"@en ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "eto" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/eto#" ;
+                              rdfs:comment "Developed against the CIRPASS-2 CORE ontology as of 12 October 2026: core v2.0.7, P_DPP v2.1.0, IDENT v1.2.0, CON v2.2.0, ACTOR v2.1.3, EVENT v1.0.0, SOC v2.0.0. Checked against the CORE of 21 October 2026: core v2.1.0, P_DPP v2.2.0, IDENT v1.2.0, CON v2.4.0, ACTOR v2.2.0, EVENT v1.0.0, SOC v2.2.0. The CORE is referenced by IRI, without owl:imports: load the CORE files together with this file for reasoning or validation."@en ;
                               rdfs:label "Example Tyre Ontology"@en ;
-                              owl:versionInfo 0.1 .
+                              owl:versionInfo "Version 0.2.0 DRAFT"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Object Properties
@@ -25,74 +90,66 @@
 <https://w3id.org/eudpp#hasManufacturer> rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/eudpp/eto#hasRetreader
-:hasRetreader rdf:type owl:ObjectProperty ;
-              rdfs:label "A product has a retreader (Actor from ACTOR module)." ,
-                         "has retreader" .
+###  https://w3id.org/eudpp#hasMeasurementUnit
+<https://w3id.org/eudpp#hasMeasurementUnit> rdf:type owl:ObjectProperty .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://w3id.org/eudpp#GTIN
-<https://w3id.org/eudpp#GTIN> rdf:type owl:DatatypeProperty .
+###  https://w3id.org/eudpp#codeValue
+<https://w3id.org/eudpp#codeValue> rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/eudpp/eto#DOTTINFactoryCode
-:DOTTINFactoryCode rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :Tyre ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "DOT TIN (Tire Identification Number) for US Market - Plant code (NHTSA Part 574)2 or 3 digits. From April 2025, only 3 digits" ;
-                   rdfs:label "DOT TIN Factory Code" .
+###  https://w3id.org/eudpp#description
+<https://w3id.org/eudpp#description> rdf:type owl:DatatypeProperty .
 
 
-###  https://w3id.org/eudpp/eto#DOTTINOptionalCode
-:DOTTINOptionalCode rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/eudpp#identifierExampleValue
+<https://w3id.org/eudpp#identifierExampleValue> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/eudpp#identifierSchemeIssuer
+<https://w3id.org/eudpp#identifierSchemeIssuer> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/eudpp#manufacturingDate
+<https://w3id.org/eudpp#manufacturingDate> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/eudpp#numericalValue
+<https://w3id.org/eudpp#numericalValue> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/eudpp/eto#availableInAllEUEEACountries
+:availableInAllEUEEACountries rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :Tyre ;
+                              rdfs:range xsd:boolean ;
+                              <http://purl.org/dc/terms/references> "EPREL field availabilityInEUEEACountries" ;
+                              rdfs:comment "Whether the tyre type is available in all EU and EEA countries. If not, eto:availableInCountry gives the countries where it is available." ;
+                              rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                              rdfs:label "available in all EU/EEA countries" .
+
+
+###  https://w3id.org/eudpp/eto#availableInCountry
+:availableInCountry rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Tyre ;
                     rdfs:range xsd:string ;
-                    rdfs:comment "DOT TIN - tire optional code" ;
-                    rdfs:label "DOT TIN Optional Code" .
-
-
-###  https://w3id.org/eudpp/eto#DOTTINSizeCode
-:DOTTINSizeCode rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Tyre ;
-                rdfs:range xsd:string ;
-                rdfs:comment "DOT TIN - Tire size code" ;
-                rdfs:label "DOT TIN Size Code" .
-
-
-###  https://w3id.org/eudpp/eto#DOTTINWeekYear
-:DOTTINWeekYear rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Tyre ;
-                rdfs:range xsd:string ;
-                rdfs:comment "DOT TIN (Tire Identification Number) for US Market - Production Date Week/Year (WWYY)" ;
-                rdfs:label "DOT TIN Week Year" .
-
-
-###  https://w3id.org/eudpp/eto#SGTIN
-:SGTIN rdf:type owl:DatatypeProperty ;
-       rdfs:subPropertyOf <https://w3id.org/eudpp#GTIN> ;
-       rdfs:domain :Tyre ;
-       rdfs:range xsd:string ;
-       rdfs:comment "Unique Item Identifier - SGTIN-96 following Pure identity EPC URN (GS1 EPCIS) format" ;
-       rdfs:label "SGTIN" .
+                    <http://purl.org/dc/terms/references> "EPREL fields modelAvailabilityInEUEEACountries and modelAvailabilityInOtherCountries" ;
+                    rdfs:comment "Two-letter code of a country where the tyre type is available, as in EPREL: ISO 3166-1 alpha-2, except EL for Greece and XI for Northern Ireland. One value per country." ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                    rdfs:label "available in country" .
 
 
 ###  https://w3id.org/eudpp/eto#commercialNameLongDescription
 :commercialNameLongDescription rdf:type owl:DatatypeProperty ;
-                               rdfs:subPropertyOf <https://w3id.org/eudpp#productName> ;
+                               rdfs:subPropertyOf <https://w3id.org/eudpp#description> ;
                                rdfs:domain :Tyre ;
                                rdfs:range xsd:string ;
-                               rdfs:comment "Marketing text / Commercial name of the product" ;
+                               rdfs:comment "Long commercial description of the tyre, combining its size, service description and commercial name (e.g. 195/65 R 17 87H Dakota Spring)." ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                rdfs:label "commercial name long description" .
-
-
-###  https://w3id.org/eudpp/eto#eanCode
-:eanCode rdf:type owl:DatatypeProperty ;
-         rdfs:comment "European Article number according to GS1 standard" ;
-         rdfs:label "EAN Code" .
 
 
 ###  https://w3id.org/eudpp/eto#hasValue
@@ -100,223 +157,253 @@
           rdfs:domain <https://w3id.org/eudpp#QuantitativeProperty> ;
           rdfs:range [ rdf:type rdfs:Datatype ;
                        owl:unionOf ( xsd:boolean
-                                     xsd:double
+                                     xsd:date
                                      xsd:integer
                                      xsd:string
                                    )
                      ] ;
-          rdfs:comment "Property has value" ;
+          <http://purl.org/dc/terms/references> "ETO specification document, coverage table (Step 2.4)" ;
+          rdfs:comment "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue." ;
+          rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
           rdfs:label "has value" .
 
 
-###  https://w3id.org/eudpp/eto#upcCode
-:upcCode rdf:type owl:DatatypeProperty ;
-         rdfs:comment "(Private) Universal Product code according to GS1 standard" ;
-         rdfs:label "UPC Code" .
+###  https://w3id.org/eudpp/eto#onMarketEndDate
+:onMarketEndDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Tyre ;
+                 rdfs:range xsd:date ;
+                 <http://purl.org/dc/terms/references> "EPREL field onMarketEndDate" ;
+                 rdfs:comment "Date from which the supplier no longer places the tyre type on the Union market. The first placing on the market is recorded with a eudpp:PlacingOnMarketEvent." ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                 rdfs:label "on-market end date" .
+
+
+###  https://w3id.org/eudpp/eto#productionEndWeek
+:productionEndWeek rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Tyre ;
+                   rdfs:range xsd:string ;
+                   <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (j); EPREL fields dateEndProductionWeek and dateEndProductionYear" ;
+                   rdfs:comment "Week and year in which the production of the tyre type ended, once known, written as an ISO 8601 week (e.g. 2025-W52)." ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                   rdfs:label "production end week" .
+
+
+###  https://w3id.org/eudpp/eto#productionStartWeek
+:productionStartWeek rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Tyre ;
+                     rdfs:range xsd:string ;
+                     <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (i); EPREL fields dateStartProductionWeek and dateStartProductionYear" ;
+                     rdfs:comment "Week and year in which the production of the tyre type started, written as an ISO 8601 week (e.g. 2021-W10). The regulation gives two digits for the week and two digits for the year." ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                     rdfs:label "production start week" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
+###  https://si-digital-framework.org/SI#MeasurementUnit
+<https://si-digital-framework.org/SI#MeasurementUnit> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Actor
+<https://w3id.org/eudpp#Actor> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#ClassificationCode
+<https://w3id.org/eudpp#ClassificationCode> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#Product
+<https://w3id.org/eudpp#Product> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#ProductDimension
+<https://w3id.org/eudpp#ProductDimension> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#ProductIdentifierScheme
+<https://w3id.org/eudpp#ProductIdentifierScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/eudpp#QuantitativeProperty
+<https://w3id.org/eudpp#QuantitativeProperty> rdf:type owl:Class .
+
+
 ###  https://w3id.org/eudpp/eto#AcousticInternalStructure
 :AcousticInternalStructure rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :hasValue ;
-                                                 owl:allValuesFrom xsd:string
-                                               ] ;
-                           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasValue ;
+                                             owl:allValuesFrom xsd:boolean
+                                           ] ;
                            rdfs:comment "It indicates the presence of an internal structure with specific characteristics added to a “conventional” tyre with the aim to reduce the tyre cavity noise (not necessarily external rolling noise) (TRUE/FALSE)" ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                            rdfs:label "Acoustic Internal Structure" .
 
 
 ###  https://w3id.org/eudpp/eto#AmountOfActualRepairs
 :AmountOfActualRepairs rdf:type owl:Class ;
-                       owl:equivalentClass [ rdf:type owl:Restriction ;
-                                             owl:onProperty :hasValue ;
-                                             owl:allValuesFrom xsd:integer
-                                           ] ;
-                       rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                       rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                         owl:allValuesFrom xsd:integer
+                                       ] ;
                        rdfs:comment "An incremental counter to record the number of repairs/patch occurred during the tyre's life - starting with zero" ;
+                       rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                        rdfs:label "Amount Of Actual Repairs" .
 
 
 ###  https://w3id.org/eudpp/eto#AspectRatio
 :AspectRatio rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasValue ;
-                                   owl:allValuesFrom xsd:double
-                                 ] ;
-             rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
-             rdfs:comment "Aspect ratio" ;
+             rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                               owl:allValuesFrom xsd:decimal
+                             ] ;
+             rdfs:comment "Nominal aspect ratio: one hundred times the ratio of the nominal section height to the nominal section width of the tyre (e.g. 65 in 195/65 R 17)." ;
+             rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
              rdfs:label "Aspect Ratio" .
-
-
-###  https://w3id.org/eudpp/eto#BirthDate
-:BirthDate rdf:type owl:Class ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasValue ;
-                                 owl:allValuesFrom xsd:string
-                               ] ;
-           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-           rdfs:comment "Date when the tyre is born following ISO-8601 format \"YYYY-MM-DD\"" ;
-           rdfs:label "Birth Date" .
-
-
-###  https://w3id.org/eudpp/eto#CountryOfOrigin
-:CountryOfOrigin rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasValue ;
-                                       owl:allValuesFrom xsd:string
-                                     ] ;
-                 rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                 rdfs:comment "Country of origin (ISO 3166-1 alpha-3)" ;
-                 rdfs:label "Country Of Origin" .
 
 
 ###  https://w3id.org/eudpp/eto#DateOfELTCollection
 :DateOfELTCollection rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasValue ;
-                                           owl:allValuesFrom xsd:string
-                                         ] ;
-                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                     rdfs:comment "Date when the ELT has been collected by the used tyre collector (DD/MM/YY)" ;
+                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasValue ;
+                                       owl:allValuesFrom xsd:date
+                                     ] ;
+                     rdfs:comment "Date when the ELT has been collected by the used tyre collector." ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                      rdfs:label "Date Of ELT Collection" .
 
 
 ###  https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination
 :ELTRecyclingChannelDestination rdf:type owl:Class ;
-                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :hasValue ;
-                                                      owl:allValuesFrom xsd:string
-                                                    ] ;
-                                rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                                rdfs:comment "Country of deconstruction (ISO 3166-1 alpha-3) of the used tyre" ;
+                                rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasValue ;
+                                                  owl:allValuesFrom xsd:string
+                                                ] ;
+                                rdfs:comment "Recycling channel category to which the used tyre has been sent (e.g. cement, pyrolysis)." ;
+                                rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                 rdfs:label "ELT Recycling Channel Destination" .
 
 
 ###  https://w3id.org/eudpp/eto#ELTRecyclingDate
 :ELTRecyclingDate rdf:type owl:Class ;
-                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty :hasValue ;
-                                        owl:allValuesFrom xsd:string
-                                      ] ;
-                  rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                  rdfs:comment "Date when the ELT has been deconstructed (DD/MM/YY)" ;
+                  rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasValue ;
+                                    owl:allValuesFrom xsd:date
+                                  ] ;
+                  rdfs:comment "Date when the ELT has been deconstructed." ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                   rdfs:label "ELT Recycling Date" .
 
 
 ###  https://w3id.org/eudpp/eto#ELTReuseStatus
 :ELTReuseStatus rdf:type owl:Class ;
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasValue ;
-                                      owl:allValuesFrom xsd:boolean
-                                    ] ;
-                rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasValue ;
+                                  owl:allValuesFrom xsd:boolean
+                                ] ;
                 rdfs:comment "Indicates whether the ELT has been sent back to the market because partly worn out or to be sent to a retreader" ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                 rdfs:label "ELT Reuse Status" .
 
 
 ###  https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl
 :EPRELRecordReferenceUrl rdf:type owl:Class ;
-                         owl:equivalentClass [ rdf:type owl:Restriction ;
-                                               owl:onProperty :hasValue ;
-                                               owl:allValuesFrom xsd:string
-                                             ] ;
-                         rdfs:subClassOf :ProductLabelling ;
-                         rdfs:comment "URL to the EPREL record of the tire" ;
+                         rdfs:subClassOf :ProductLabelling ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasValue ;
+                                           owl:allValuesFrom xsd:string
+                                         ] ;
+                         <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 5(1) and Annex VII (product database)" ;
+                         rdfs:comment "URL of the record of the tyre type in the European Product Registry for Energy Labelling (EPREL)." ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                          rdfs:label "EPREL Record Reference Url" .
-
-
-###  https://w3id.org/eudpp/eto#ExtraLoad
-:ExtraLoad rdf:type owl:Class ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasValue ;
-                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:boolean
-                               ] ;
-           rdfs:subClassOf :ProductSpecification ;
-           rdfs:comment "Extra Load symbol - to be associated to the load index if needed." ;
-           rdfs:label "Extra Load" .
 
 
 ###  https://w3id.org/eudpp/eto#GeometricalTyreSize
 :GeometricalTyreSize rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasValue ;
-                                           owl:allValuesFrom xsd:string
-                                         ] ;
-                     rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
-                     rdfs:comment "Tyre size designation" ;
+                     rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasValue ;
+                                       owl:allValuesFrom xsd:string
+                                     ] ;
+                     <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (c); UN Regulation No 30" ;
+                     rdfs:comment "Tyre size designation as marked on the sidewall (e.g. 195/65 R 17)." ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                      rdfs:label "Geometrical Tyre Size" .
 
 
-###  https://w3id.org/eudpp/eto#HLPC
-:HLPC rdf:type owl:Class ;
-      owl:equivalentClass [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasValue ;
-                            owl:allValuesFrom xsd:boolean
-                          ] ;
-      rdfs:subClassOf :ProductSpecification ;
-      rdfs:comment "Indicates if the tire meets the UN R.30 definition of High Load (HL), values according to ETRTO standard" ;
-      rdfs:label "HLPC" .
-
-
-###  https://w3id.org/eudpp/eto#HighLoad
-:HighLoad rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasValue ;
-                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onDataRange xsd:boolean
-                              ] ;
-          rdfs:subClassOf :ProductSpecification ;
-          rdfs:comment "High Load symbol - to be associated to the load index if needed." ;
-          rdfs:label "High Load" .
+###  https://w3id.org/eudpp/eto#IceGripMarking
+:IceGripMarking rdf:type owl:Class ;
+                rdfs:subClassOf :ProductMarking ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasValue ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:boolean
+                                ] ;
+                <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (h); EPREL field iceTyre" ;
+                rdfs:comment "Indication of whether the tyre is an ice grip tyre (true or false)." ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                rdfs:label "Ice Grip Marking" ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "Ice grip tyre" .
 
 
 ###  https://w3id.org/eudpp/eto#LabelPictureUrl
 :LabelPictureUrl rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasValue ;
-                                       owl:allValuesFrom xsd:string
-                                     ] ;
-                 rdfs:subClassOf :ProductLabelling ;
-                 rdfs:comment "URL to the label picture" ;
+                 rdfs:subClassOf :ProductLabelling ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasValue ;
+                                   owl:allValuesFrom xsd:string
+                                 ] ;
+                 <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex II (tyre label)" ;
+                 rdfs:comment "URL of an image of the EU tyre label of the tyre." ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                  rdfs:label "Label Picture Url" .
 
 
 ###  https://w3id.org/eudpp/eto#LabellingReferenceRegulation
 :LabellingReferenceRegulation rdf:type owl:Class ;
-                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :hasValue ;
-                                                    owl:allValuesFrom xsd:string
-                                                  ] ;
-                              rdfs:subClassOf :ProductLabelling ;
-                              rdfs:comment "Regulation to which the labelling level of the tire for wet, noise and rolling resist    ance is given" ;
+                              rdfs:subClassOf :ProductLabelling ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasValue ;
+                                                owl:allValuesFrom xsd:string
+                                              ] ;
+                              <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740" ;
+                              rdfs:comment "Regulation under which the label classes of the tyre (fuel efficiency, wet grip, external rolling noise) are given, e.g. Regulation (EU) 2020/740." ;
+                              rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                               rdfs:label "Labelling Reference Regulation" .
 
 
 ###  https://w3id.org/eudpp/eto#LoadIndex
 :LoadIndex rdf:type owl:Class ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasValue ;
-                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                 owl:onDataRange xsd:integer
-                               ] ;
-           rdfs:subClassOf :ProductSpecification ;
-           rdfs:comment "Load index is a integer number refererenced by the load weight that tyre can carry." ;
+           rdfs:subClassOf :ProductSpecification ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:integer
+                           ] ;
+           <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (c); UN Regulations No 30 and No 54" ;
+           rdfs:comment "Load capacity index: number associated with the maximum load the tyre can carry at the speed indicated by its speed symbol." ;
+           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
            rdfs:label "Load Index" .
 
 
 ###  https://w3id.org/eudpp/eto#LoadIndexAfterRET
 :LoadIndexAfterRET rdf:type owl:Class ;
-                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasValue ;
-                                         owl:allValuesFrom xsd:integer
-                                       ] ;
-                   rdfs:subClassOf :ProductSpecification ;
+                   rdfs:subClassOf :ProductSpecification ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                     owl:allValuesFrom xsd:integer
+                                   ] ;
                    rdfs:comment "Load index after Retreading" ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                    rdfs:label "Load Index After RET" .
 
 
@@ -324,13 +411,15 @@
 :LoadIndexDualFitmentAfterRET rdf:type owl:Class ;
                               rdfs:subClassOf :LoadIndexAfterRET ;
                               rdfs:comment "Load index for dual fitment after Retreading" ;
+                              rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                               rdfs:label "Load Index Dual Fitment After RET" .
 
 
 ###  https://w3id.org/eudpp/eto#LoadIndexForDualFitment
 :LoadIndexForDualFitment rdf:type owl:Class ;
                          rdfs:subClassOf :LoadIndex ;
-                         rdfs:comment "Load index for dual fitment" ;
+                         rdfs:comment "Load capacity index of the tyre when fitted in dual (twin) configuration, as marked on commercial vehicle tyres." ;
+                         rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                          rdfs:label "Load Index For Dual Fitment" .
 
 
@@ -338,6 +427,7 @@
 :LoadIndexForSupplementaryServiceCondition rdf:type owl:Class ;
                                            rdfs:subClassOf :LoadIndex ;
                                            rdfs:comment "For commercial tyres, speed adjusted load" ;
+                                           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                            rdfs:label "Load Index For Supplementary Service Condition" .
 
 
@@ -345,373 +435,495 @@
 :LoadIndexForSupplementaryServiceConditionDualFitment rdf:type owl:Class ;
                                                       rdfs:subClassOf :LoadIndex ;
                                                       rdfs:comment "For commercial tyres, speed adjusted load for dual fitment" ;
+                                                      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                                       rdfs:label "Load Index For Supplementary Service Condition Dual Fitment" .
+
+
+###  https://w3id.org/eudpp/eto#LoadVersion
+:LoadVersion rdf:type owl:Class ;
+             rdfs:subClassOf :ProductSpecification ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasValue ;
+                               owl:allValuesFrom xsd:string
+                             ] ;
+             <http://purl.org/dc/terms/references> "EPREL field loadCapacityIndicator" ;
+             rdfs:comment "Load version of the tyre: LL (light load), SL (standard load), XL (extra load) or HL (high load)." ;
+             rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+             rdfs:label "Load Version" .
 
 
 ###  https://w3id.org/eudpp/eto#MudAndSnow
 :MudAndSnow rdf:type owl:Class ;
-            owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasValue ;
-                                  owl:allValuesFrom xsd:boolean
-                                ] ;
-            rdfs:subClassOf :ProductMarking ;
+            rdfs:subClassOf :ProductMarking ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasValue ;
+                              owl:allValuesFrom xsd:boolean
+                            ] ;
             rdfs:comment "Mud and Snow (M+S) marking" ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
             rdfs:label "Mud And Snow" .
 
 
 ###  https://w3id.org/eudpp/eto#NoiseClass
 :NoiseClass rdf:type owl:Class ;
-            owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasValue ;
-                                  owl:allValuesFrom xsd:string
-                                ] ;
-            rdfs:subClassOf :ProductLabelling ;
-            rdfs:comment "Labelling noise class" ;
+            rdfs:subClassOf :ProductLabelling ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasValue ;
+                              owl:allValuesFrom xsd:string
+                            ] ;
+            <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex I and Annex III (f)" ;
+            rdfs:comment "External rolling noise class of the tyre (A, B or C), as shown on the EU tyre label." ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
             rdfs:label "Noise Class" .
 
 
 ###  https://w3id.org/eudpp/eto#NoisePerformance
 :NoisePerformance rdf:type owl:Class ;
-                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty :hasValue ;
-                                        owl:allValuesFrom xsd:integer
-                                      ] ;
-                  rdfs:subClassOf :ProductLabelling ;
-                  rdfs:comment "Labelling noise performance" ;
+                  rdfs:subClassOf :ProductLabelling ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                    owl:allValuesFrom xsd:integer
+                                  ] ;
+                  <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (f)" ;
+                  rdfs:comment "External rolling noise value of the tyre, in decibels (dB), as shown on the EU tyre label." ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                   rdfs:label "Noise Performance" .
 
 
 ###  https://w3id.org/eudpp/eto#PlaceOfELTCollection
 :PlaceOfELTCollection rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                            owl:onProperty :hasValue ;
-                                            owl:allValuesFrom xsd:string
-                                          ] ;
-                      rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                      rdfs:comment "Country of collection (ISO 3166-1 alpha-3) of the used tyre" ;
+                      rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValue ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ;
+                      rdfs:comment "Country of collection (ISO 3166-1 alpha-2) of the used tyre" ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                       rdfs:label "Place Of ELT Collection" .
 
 
 ###  https://w3id.org/eudpp/eto#PlaceOfELTRecycling
 :PlaceOfELTRecycling rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasValue ;
-                                           owl:allValuesFrom xsd:string
-                                         ] ;
-                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                     rdfs:comment "Indicates to which recycling channel category the used tyre has been sent (Cement , Pyrolisis, etc.)" ;
+                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasValue ;
+                                       owl:allValuesFrom xsd:string
+                                     ] ;
+                     rdfs:comment "Country of deconstruction (ISO 3166-1 alpha-2) of the used tyre." ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                      rdfs:label "Place Of ELT Recycling" .
 
 
 ###  https://w3id.org/eudpp/eto#ProductLabelling
 :ProductLabelling rdf:type owl:Class ;
                   rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                  rdfs:comment "Labelling-related property" ;
+                  <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex II (tyre label); ETO specification document, FR2" ;
+                  rdfs:comment "Group of tyre properties corresponding to the EU tyre label and its registration (e.g. wet grip class, EPREL record)." ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                   rdfs:label "Product Labelling" .
 
 
 ###  https://w3id.org/eudpp/eto#ProductMarking
 :ProductMarking rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                rdfs:comment "Marking-related property" ;
+                <http://purl.org/dc/terms/references> "ETO specification document, FR2" ;
+                rdfs:comment "Group of tyre properties corresponding to markings on the tyre sidewall (e.g. M+S, 3PMSF, size prefix)." ;
+                rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                 rdfs:label "Product Marking" .
 
 
 ###  https://w3id.org/eudpp/eto#ProductSpecification
 :ProductSpecification rdf:type owl:Class ;
                       rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                      rdfs:comment "Specification-related property" ;
+                      rdfs:comment "Group of tyre properties describing its technical specification (e.g. load index, speed symbol, structure)." ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                       rdfs:label "Product Specification" .
 
 
 ###  https://w3id.org/eudpp/eto#Regrooved
 :Regrooved rdf:type owl:Class ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasValue ;
-                                 owl:allValuesFrom xsd:boolean
-                               ] ;
-           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasValue ;
+                             owl:allValuesFrom xsd:boolean
+                           ] ;
+           <http://purl.org/dc/terms/references> "UN Regulation No 54 (regrooving)" ;
            rdfs:comment "Indicates whether the tyre has been regrooved according to ECE R54 definition" ;
+           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
            rdfs:label "Regrooved" .
 
 
 ###  https://w3id.org/eudpp/eto#RegulationsComplianceCode
 :RegulationsComplianceCode rdf:type owl:Class ;
-                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :hasValue ;
-                                                 owl:allValuesFrom xsd:integer
-                                               ] ;
-                           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                           rdfs:comment "Code that indicates compliance of tire to specific international legal market requirement based on PRICAT standard" ;
+                           rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasValue ;
+                                             owl:allValuesFrom xsd:integer
+                                           ] ;
+                           <http://purl.org/dc/terms/references> "PRICAT standard" ;
+                           rdfs:comment "Code that indicates compliance of the tyre with specific international legal market requirements, based on the PRICAT standard." ;
+                           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                            rdfs:label "Regulations Compliance Code" .
 
 
 ###  https://w3id.org/eudpp/eto#RegulationsComplianceMarkings
 :RegulationsComplianceMarkings rdf:type owl:Class ;
-                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :hasValue ;
-                                                     owl:allValuesFrom xsd:string
-                                                   ] ;
-                               rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                               rdfs:comment "Code description : lists the regulations to which the tire is compliant." ;
+                               rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasValue ;
+                                                 owl:allValuesFrom xsd:string
+                                               ] ;
+                               <http://purl.org/dc/terms/references> "PRICAT standard" ;
+                               rdfs:comment "Code description: lists the regulations with which the tyre is compliant." ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                rdfs:label "Regulations Compliance Markings" .
 
 
 ###  https://w3id.org/eudpp/eto#RemainingTreadDepth
 :RemainingTreadDepth rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
-                                           owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasValue ;
-                                           owl:allValuesFrom xsd:double
-                                         ] ;
-                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                     rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
+                                       owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                       owl:allValuesFrom xsd:decimal
+                                     ] ;
                      rdfs:comment "In millimeters, the remaining tread depth of the used tyre at the moment of deconstruction" ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                      rdfs:label "Remaining Tread Depth" .
 
 
 ###  https://w3id.org/eudpp/eto#RetreadingCycle
 :RetreadingCycle rdf:type owl:Class ;
-                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasValue ;
-                                       owl:allValuesFrom xsd:integer
-                                     ] ;
-                 rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-                 rdfs:label "An incremental counter to record the number of retreading operations occurred during the tyre's life - starting with zero" ,
-                            "Retreading Cycle" .
+                 rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                   owl:allValuesFrom xsd:integer
+                                 ] ;
+                 rdfs:comment "Incremental counter of the retreading operations performed during the tyre's life, starting at zero. The retreader is recorded with an eudpp:ActorRoleAssignment (eudpp:hasActor, eudpp:hasRole eudpp:remanufacturer, eudpp:inContextOfProduct)." ;
+                 rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                 rdfs:label "Retreading Cycle" .
 
 
 ###  https://w3id.org/eudpp/eto#RimCode
 :RimCode rdf:type owl:Class ;
-         owl:equivalentClass [ rdf:type owl:Restriction ;
-                               owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
-                               owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasValue ;
-                               owl:allValuesFrom xsd:double
-                             ] ;
-         rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
+         rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
+                           owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                           owl:allValuesFrom xsd:decimal
+                         ] ;
          rdfs:comment "Rim diameter in millimeters or inches" ;
+         rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
          rdfs:label "Rim Code" .
 
 
 ###  https://w3id.org/eudpp/eto#RollingResistanceClass
 :RollingResistanceClass rdf:type owl:Class ;
-                        owl:equivalentClass [ rdf:type owl:Restriction ;
-                                              owl:onProperty :hasValue ;
-                                              owl:allValuesFrom xsd:string
-                                            ] ;
-                        rdfs:subClassOf :ProductLabelling ;
-                        rdfs:comment "Labelling rolling resistance class" ;
+                        rdfs:subClassOf :ProductLabelling ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasValue ;
+                                          owl:allValuesFrom xsd:string
+                                        ] ;
+                        <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex I and Annex III (d)" ;
+                        rdfs:comment "Fuel efficiency class of the tyre (A to E), based on its rolling resistance coefficient, as shown on the EU tyre label." ;
+                        rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                         rdfs:label "Rolling Resistance Class" .
-
-
-###  https://w3id.org/eudpp/eto#SVHCPresence
-:SVHCPresence rdf:type owl:Class ;
-              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasValue ;
-                                    owl:allValuesFrom xsd:string
-                                  ] ;
-              rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
-              rdfs:comment "SVHC designation (ECHA std) and presence % in weight of the article - EU REACH regulation" ;
-              rdfs:label "SVHC Presence" .
 
 
 ###  https://w3id.org/eudpp/eto#Sealant
 :Sealant rdf:type owl:Class ;
-         owl:equivalentClass [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasValue ;
-                               owl:allValuesFrom xsd:boolean
-                             ] ;
-         rdfs:subClassOf :ProductSpecification ;
+         rdfs:subClassOf :ProductSpecification ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasValue ;
+                           owl:allValuesFrom xsd:boolean
+                         ] ;
          rdfs:comment "Indicates whether the tyre is equipped with a puncture sealant" ;
+         rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
          rdfs:label "Sealant" .
 
 
 ###  https://w3id.org/eudpp/eto#SectionWidth
 :SectionWidth rdf:type owl:Class ;
-              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                    owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
-                                    owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasValue ;
-                                    owl:allValuesFrom xsd:double
-                                  ] ;
-              rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
+              rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/eudpp#hasMeasurementUnit> ;
+                                owl:allValuesFrom <https://si-digital-framework.org/SI#MeasurementUnit>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <https://w3id.org/eudpp#numericalValue> ;
+                                owl:allValuesFrom xsd:decimal
+                              ] ;
               rdfs:comment "Nominal section width of the tyre in millimeters" ;
+              rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
               rdfs:label "Section Width" .
 
 
 ###  https://w3id.org/eudpp/eto#SectionWidthCode
 :SectionWidthCode rdf:type owl:Class ;
-                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty :hasValue ;
-                                        owl:allValuesFrom xsd:string
-                                      ] ;
-                  rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ;
+                  rdfs:subClassOf <https://w3id.org/eudpp#ProductDimension> ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasValue ;
+                                    owl:allValuesFrom xsd:string
+                                  ] ;
                   rdfs:comment "Nominal section width of the tyre defined by a code (CV tyre)" ;
+                  rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                   rdfs:label "Section Width Code" .
+
+
+###  https://w3id.org/eudpp/eto#SevereSnowMarking
+:SevereSnowMarking rdf:type owl:Class ;
+                   rdfs:subClassOf :ProductMarking ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasValue ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:boolean
+                                   ] ;
+                   <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (g); UN Regulation No 117" ;
+                   rdfs:comment "Three-peak-mountain snowflake (3PMSF) marking: indicates a tyre for use in severe snow conditions." ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                   rdfs:label "Severe Snow Marking" ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "3PMSF" .
 
 
 ###  https://w3id.org/eudpp/eto#SizePrefix
 :SizePrefix rdf:type owl:Class ;
-            owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasValue ;
-                                  owl:allValuesFrom xsd:string
-                                ] ;
-            rdfs:subClassOf :ProductMarking ;
+            rdfs:subClassOf :ProductMarking ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasValue ;
+                              owl:allValuesFrom xsd:string
+                            ] ;
+            <http://purl.org/dc/terms/references> "ETRTO Standards Manual, G9" ;
             rdfs:comment "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)" ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
             rdfs:label "Size Prefix" .
 
 
 ###  https://w3id.org/eudpp/eto#SizeSuffix
 :SizeSuffix rdf:type owl:Class ;
-            owl:equivalentClass [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasValue ;
-                                  owl:allValuesFrom xsd:string
-                                ] ;
-            rdfs:subClassOf :ProductMarking ;
+            rdfs:subClassOf :ProductMarking ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasValue ;
+                              owl:allValuesFrom xsd:string
+                            ] ;
+            <http://purl.org/dc/terms/references> "ETRTO Standards Manual, G9 to G13" ;
             rdfs:comment "Part of identification marking for light truck tyres (see G9 - G13 ETRTO Std Manual)" ;
+            rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
             rdfs:label "Size Suffix" .
 
 
 ###  https://w3id.org/eudpp/eto#SpeedSymbol
 :SpeedSymbol rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasValue ;
-                                   owl:allValuesFrom xsd:string
-                                 ] ;
-             rdfs:subClassOf :ProductSpecification ;
-             rdfs:comment "Speed symbol" ;
+             rdfs:subClassOf :ProductSpecification ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasValue ;
+                               owl:allValuesFrom xsd:string
+                             ] ;
+             <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex III (c); UN Regulations No 30 and No 54" ;
+             rdfs:comment "Speed category symbol: letter indicating the maximum speed at which the tyre can carry the load corresponding to its load index (e.g. H = 210 km/h)." ;
+             rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
              rdfs:label "Speed Symbol" .
 
 
 ###  https://w3id.org/eudpp/eto#SpeedSymbolAfterRET
 :SpeedSymbolAfterRET rdf:type owl:Class ;
-                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasValue ;
-                                           owl:allValuesFrom xsd:string
-                                         ] ;
-                     rdfs:subClassOf :ProductSpecification ;
+                     rdfs:subClassOf :ProductSpecification ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasValue ;
+                                       owl:allValuesFrom xsd:string
+                                     ] ;
                      rdfs:comment "Speed symbol after retreading" ;
+                     rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                      rdfs:label "Speed Symbol After RET" .
 
 
 ###  https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition
 :SpeedSymbolForSupplementaryServiceCondition rdf:type owl:Class ;
-                                             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasValue ;
-                                                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                   owl:onDataRange xsd:string
-                                                                 ] ;
-                                             rdfs:subClassOf :SpeedSymbol ;
+                                             rdfs:subClassOf :SpeedSymbol ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasValue ;
+                                                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                               owl:onDataRange xsd:string
+                                                             ] ;
                                              rdfs:comment "For commercial tyres, load adjusted speed" ;
+                                             rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                                              rdfs:label "Speed Symbol For Supplementary Service Condition" .
 
 
 ###  https://w3id.org/eudpp/eto#Structure
 :Structure rdf:type owl:Class ;
-           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasValue ;
-                                 owl:allValuesFrom xsd:string
-                               ] ;
-           rdfs:subClassOf :ProductSpecification ;
+           rdfs:subClassOf :ProductSpecification ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasValue ;
+                             owl:allValuesFrom xsd:string
+                           ] ;
            rdfs:comment "Structure of the tyre. Radial (R) or Bias (B)" ;
+           rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
            rdfs:label "Structure" .
 
 
 ###  https://w3id.org/eudpp/eto#StructureWordMarking
 :StructureWordMarking rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                            owl:onProperty :hasValue ;
-                                            owl:allValuesFrom xsd:string
-                                          ] ;
-                      rdfs:subClassOf :ProductSpecification ;
+                      rdfs:subClassOf :ProductSpecification ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValue ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ;
                       rdfs:comment "Tyre construction word marked on the sidewall" ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                       rdfs:label "Structure Word Marking" .
 
 
 ###  https://w3id.org/eudpp/eto#TmsContainerPresence
 :TmsContainerPresence rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                            owl:onProperty :hasValue ;
-                                            owl:allValuesFrom xsd:boolean
-                                          ] ;
-                      rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                      rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasValue ;
+                                        owl:allValuesFrom xsd:boolean
+                                      ] ;
                       rdfs:comment "Indicates whether a rubber container for the Sensor is present on the tyre updated at each tyre inspection" ;
+                      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                       rdfs:label "Tms Container Presence" .
 
 
 ###  https://w3id.org/eudpp/eto#TmsSensorPresence
 :TmsSensorPresence rdf:type owl:Class ;
-                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasValue ;
-                                         owl:allValuesFrom xsd:boolean
-                                       ] ;
-                   rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ;
+                   rdfs:subClassOf <https://w3id.org/eudpp#QuantitativeProperty> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasValue ;
+                                     owl:allValuesFrom xsd:boolean
+                                   ] ;
                    rdfs:comment "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection" ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                    rdfs:label "Tms Sensor Presence" .
 
 
 ###  https://w3id.org/eudpp/eto#TubeCharacteristic
 :TubeCharacteristic rdf:type owl:Class ;
-                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasValue ;
-                                          owl:allValuesFrom xsd:string
-                                        ] ;
-                    rdfs:subClassOf :ProductSpecification ;
+                    rdfs:subClassOf :ProductSpecification ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasValue ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ;
                     rdfs:comment "It indicates tubeless or tube type tyres" ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
                     rdfs:label "Tube Characteristic" .
 
 
 ###  https://w3id.org/eudpp/eto#Tyre
 :Tyre rdf:type owl:Class ;
-      owl:equivalentClass [ rdf:type owl:Restriction ;
-                            owl:onProperty <https://w3id.org/eudpp#hasManufacturer> ;
-                            owl:allValuesFrom <https://w3id.org/eudpp#Actor>
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :DOTTINFactoryCode ;
-                            owl:allValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :DOTTINWeekYear ;
-                            owl:allValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :SGTIN ;
-                            owl:allValuesFrom xsd:string
-                          ] ;
-      rdfs:subClassOf <https://w3id.org/eudpp#Product> ;
-      rdfs:comment "Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Dictionary Cambride]" ;
+      rdfs:subClassOf <https://w3id.org/eudpp#Product> ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://w3id.org/eudpp#hasManufacturer> ;
+                        owl:allValuesFrom <https://w3id.org/eudpp#Actor>
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty <https://w3id.org/eudpp#manufacturingDate> ;
+                        owl:allValuesFrom xsd:date
+                      ] ;
+      <http://purl.org/dc/terms/references> "ETO specification document, FR1" ;
+      rdfs:comment "Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Cambridge Dictionary]." ;
+      rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
       rdfs:label "Tyre" .
 
 
 ###  https://w3id.org/eudpp/eto#WetClass
 :WetClass rdf:type owl:Class ;
-          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty :hasValue ;
-                                owl:allValuesFrom xsd:string
-                              ] ;
-          rdfs:subClassOf :ProductLabelling ;
-          rdfs:comment "Labelling wet class" ;
+          rdfs:subClassOf :ProductLabelling ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasValue ;
+                            owl:allValuesFrom xsd:string
+                          ] ;
+          <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Annex I and Annex III (e)" ;
+          rdfs:comment "Wet grip class of the tyre (A to E), as shown on the EU tyre label." ;
+          rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
           rdfs:label "Wet Class" .
 
 
-###  https://w3id.org/eudpp/eto#3PMSF
-<https://w3id.org/eudpp/eto#3PMSF> rdf:type owl:Class ;
-                                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :hasValue ;
-                                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                         owl:onDataRange xsd:boolean
-                                                       ] ;
-                                   rdfs:subClassOf :ProductMarking ;
-                                   rdfs:comment "3PMSF marking - Indicates tyres designed for use in severe snow conditions." ;
-                                   rdfs:label "3PMSF" .
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/eudpp/eto#C1
+:C1 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/eudpp#ClassificationCode> ;
+    <https://w3id.org/eudpp#codeValue> "C1" ;
+    <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass" ;
+    rdfs:comment "Tyre class C1: tyres designed primarily for passenger cars. Value of eudpp:hasProductGroup for a tyre." ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+    rdfs:label "C1" .
+
+
+###  https://w3id.org/eudpp/eto#C2
+:C2 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/eudpp#ClassificationCode> ;
+    <https://w3id.org/eudpp#codeValue> "C2" ;
+    <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass" ;
+    rdfs:comment "Tyre class C2: tyres designed primarily for light commercial vehicles. Value of eudpp:hasProductGroup for a tyre." ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+    rdfs:label "C2" .
+
+
+###  https://w3id.org/eudpp/eto#C3
+:C3 rdf:type owl:NamedIndividual ,
+             <https://w3id.org/eudpp#ClassificationCode> ;
+    <https://w3id.org/eudpp#codeValue> "C3" ;
+    <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass" ;
+    rdfs:comment "Tyre class C3: tyres designed primarily for heavy-duty vehicles, such as trucks and buses. Value of eudpp:hasProductGroup for a tyre." ;
+    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+    rdfs:label "C3" .
+
+
+###  https://w3id.org/eudpp/eto#DOTTIN
+:DOTTIN rdf:type owl:NamedIndividual ,
+                 <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+        <https://w3id.org/eudpp#identifierExampleValue> "B3 8U 005X 1020" ;
+        <https://w3id.org/eudpp#identifierSchemeIssuer> "U.S. Department of Transportation (NHTSA)" ;
+        <http://purl.org/dc/terms/references> "49 CFR Part 574, § 574.5 (Tire identification requirements)" ;
+        rdfs:comment "Tire Identification Number required on tyres for the US market: plant code (2 or 3 characters, only 3 from April 2025), tyre size code, optional manufacturer code and date code (week and year of manufacture, WWYY). Used with granularity eudpp:batch." ;
+        rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+        rdfs:label "DOT TIN" ;
+        <http://www.w3.org/2004/02/skos/core#altLabel> "Tire Identification Number" .
+
+
+###  https://w3id.org/eudpp/eto#EPREL
+:EPREL rdf:type owl:NamedIndividual ,
+                <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+       <https://w3id.org/eudpp#identifierExampleValue> "2872477" ;
+       <https://w3id.org/eudpp#identifierSchemeIssuer> "European Commission" ;
+       <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 5(1); EPREL field eprelRegistrationNumber" ;
+       rdfs:comment "Scheme of the registration numbers that the European Product Registry for Energy Labelling (EPREL) gives to the product models registered by their suppliers. Used with granularity eudpp:model. The public EPREL record URL is built from the number. Local scheme: the CORE IDENT module has no EPREL scheme." ;
+       rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+       rdfs:label "EPREL registration number" ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "European Product Registry for Energy Labelling" .
+
+
+###  https://w3id.org/eudpp/eto#SGTIN
+:SGTIN rdf:type owl:NamedIndividual ,
+                <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+       <https://w3id.org/eudpp#identifierExampleValue> "urn:epc:id:sgtin:012345.0987654.123456789" ;
+       <https://w3id.org/eudpp#identifierSchemeIssuer> "GS1" ;
+       <http://purl.org/dc/terms/references> "GS1 EPC Tag Data Standard (SGTIN)" ;
+       rdfs:comment "Serialised GTIN: a GTIN combined with a serial number, identifying one individual trade item; here in the EPC pure identity URN form (urn:epc:id:sgtin:...). Used with granularity eudpp:item. Local scheme until the CORE IDENT module provides one." ;
+       rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+       rdfs:label "SGTIN" ;
+       <http://www.w3.org/2004/02/skos/core#altLabel> "Serialised Global Trade Item Number" .
+
+
+###  https://w3id.org/eudpp/eto#TyreTypeIdentifier
+:TyreTypeIdentifier rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/eudpp#ProductIdentifierScheme> ;
+                    <https://w3id.org/eudpp#identifierExampleValue> "E-PLUS01S-02" ;
+                    <https://w3id.org/eudpp#identifierSchemeIssuer> "Tyre supplier" ;
+                    <http://purl.org/dc/terms/references> "Regulation (EU) 2020/740, Article 3(23); EPREL field modelIdentifier" ;
+                    rdfs:comment "Scheme of tyre type identifiers: codes, usually alphanumeric, which distinguish a specific tyre type from other tyre types that have the same trade name or the same trademark as that of the supplier. Used with granularity eudpp:model." ;
+                    rdfs:isDefinedBy <https://w3id.org/eudpp/eto> ;
+                    rdfs:label "Tyre Type Identifier" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

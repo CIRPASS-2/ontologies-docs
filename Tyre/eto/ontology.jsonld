@@ -5,7 +5,7 @@
     "@list" : [ {
       "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
     }, {
-      "@id" : "http://www.w3.org/2001/XMLSchema#double"
+      "@id" : "http://www.w3.org/2001/XMLSchema#date"
     }, {
       "@id" : "http://www.w3.org/2001/XMLSchema#integer"
     }, {
@@ -25,7 +25,7 @@
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -34,7 +34,7 @@
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -52,7 +52,7 @@
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -60,8 +60,12 @@
 }, {
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -69,12 +73,8 @@
 }, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -91,24 +91,24 @@
 }, {
   "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid20",
@@ -123,7 +123,7 @@
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -131,12 +131,8 @@
 }, {
   "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -148,13 +144,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -172,7 +168,7 @@
   "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -181,7 +177,7 @@
   "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -199,28 +195,28 @@
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "https://si-digital-framework.org/SI#MeasurementUnit"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#hasMeasurementUnit"
   } ]
 }, {
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid32",
@@ -235,16 +231,16 @@
   "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -253,28 +249,28 @@
   "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://si-digital-framework.org/SI#MeasurementUnit"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp#hasMeasurementUnit"
   } ]
 }, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
-  } ]
-}, {
   "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid38",
@@ -288,7 +284,11 @@
 }, {
   "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
@@ -298,16 +298,16 @@
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://si-digital-framework.org/SI#MeasurementUnit"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasMeasurementUnit"
+    "@id" : "https://w3id.org/eudpp/eto#hasValue"
   } ]
 }, {
   "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -333,7 +333,11 @@
 }, {
   "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
@@ -360,12 +364,8 @@
 }, {
   "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -374,7 +374,7 @@
   "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -392,19 +392,19 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "https://w3id.org/eudpp#Actor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#hasManufacturer"
   } ]
 }, {
   "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#manufacturingDate"
   } ]
 }, {
   "@id" : "_:genid52",
@@ -416,68 +416,10 @@
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
   } ]
 }, {
-  "@id" : "_:genid53",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/eudpp#Actor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp#hasManufacturer"
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#DOTTINFactoryCode"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#DOTTINWeekYear"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#SGTIN"
-  } ]
-}, {
-  "@id" : "_:genid57",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
-  } ]
-}, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
-  } ]
-}, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
@@ -489,74 +431,164 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#hasValue"
+    "@id" : "https://w3id.org/eudpp#numericalValue"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/eudpp/eto#hasValue"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp#GTIN",
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/references",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://si-digital-framework.org/SI#MeasurementUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ClassificationCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#Product",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ProductDimension",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#QuantitativeProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#codeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://w3id.org/eudpp#hasManufacturer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
+  "@id" : "https://w3id.org/eudpp#hasMeasurementUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifierExampleValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#identifierSchemeIssuer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#manufacturingDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/eudpp#numericalValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
   "@id" : "https://w3id.org/eudpp/eto",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@language" : "en",
+    "@value" : "Nader Jelassi"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-30"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "en",
+    "@value" : "Quang-Duy Nguyen"
+  } ],
   "http://purl.org/dc/terms/description" : [ {
-    "@value" : "Example Tyre Ontology (ETO) is an examplar ontology for the tyre sector."
+    "@language" : "en",
+    "@value" : "Example Tyre Ontology (ETO) is an exemplar ontology for the tyre sector. It specialises the EU DPP Core Ontology (CORE), whose terms it references by their IRIs."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-30"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://www.apache.org/licenses/LICENSE-2.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-22"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Example Tyre Ontology (ETO)"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "eto"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/eudpp/eto#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Developed against the CIRPASS-2 CORE ontology as of 12 October 2026: core v2.0.7, P_DPP v2.1.0, IDENT v1.2.0, CON v2.2.0, ACTOR v2.1.3, EVENT v1.0.0, SOC v2.0.0. Checked against the CORE of 21 October 2026: core v2.1.0, P_DPP v2.2.0, IDENT v1.2.0, CON v2.4.0, ACTOR v2.2.0, EVENT v1.0.0, SOC v2.2.0. The CORE is referenced by IRI, without owl:imports: load the CORE files together with this file for reasoning or validation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Example Tyre Ontology"
   } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/eudpp/ACTOR"
-  }, {
-    "@id" : "https://w3id.org/eudpp/CONNECTOR"
-  }, {
-    "@id" : "https://w3id.org/eudpp/LCA"
-  }, {
-    "@id" : "https://w3id.org/eudpp/P_DPP"
-  }, {
-    "@id" : "https://w3id.org/eudpp/SOC"
-  } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/eudpp/eto/0.1"
+    "@id" : "https://w3id.org/eudpp/eto/0.2.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.1"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#3PMSF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "3PMSF marking - Indicates tyres designed for use in severe snow conditions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "3PMSF"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid58"
+    "@language" : "en",
+    "@value" : "Version 0.2.0 DRAFT"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#AcousticInternalStructure",
@@ -564,13 +596,15 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "It indicates the presence of an internal structure with specific characteristics added to a “conventional” tyre with the aim to reduce the tyre cavity noise (not necessarily external rolling noise) (TRUE/FALSE)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Acoustic Internal Structure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+  }, {
     "@id" : "_:genid6"
   } ]
 }, {
@@ -579,164 +613,174 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An incremental counter to record the number of repairs/patch occurred during the tyre's life - starting with zero"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Amount Of Actual Repairs"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+  }, {
     "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#AspectRatio",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Aspect ratio"
+    "@value" : "Nominal aspect ratio: one hundred times the ratio of the nominal section height to the nominal section width of the tyre (e.g. 65 in 195/65 R 17)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Aspect Ratio"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ProductDimension"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+  }, {
     "@id" : "_:genid8"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#BirthDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/eudpp/eto#C1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ClassificationCode"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Date when the tyre is born following ISO-8601 format \"YYYY-MM-DD\""
+    "@value" : "Tyre class C1: tyres designed primarily for passenger cars. Value of eudpp:hasProductGroup for a tyre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Birth Date"
+    "@value" : "C1"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid9"
+  "https://w3id.org/eudpp#codeValue" : [ {
+    "@value" : "C1"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#CountryOfOrigin",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@id" : "https://w3id.org/eudpp/eto#C2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ClassificationCode"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Country of origin (ISO 3166-1 alpha-3)"
+    "@value" : "Tyre class C2: tyres designed primarily for light commercial vehicles. Value of eudpp:hasProductGroup for a tyre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Country Of Origin"
+    "@value" : "C2"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid10"
+  "https://w3id.org/eudpp#codeValue" : [ {
+    "@value" : "C2"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#DOTTINFactoryCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DOT TIN (Tire Identification Number) for US Market - Plant code (NHTSA Part 574)2 or 3 digits. From April 2025, only 3 digits"
+  "@id" : "https://w3id.org/eudpp/eto#C3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 3(1); EPREL field tyreClass"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ClassificationCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tyre class C3: tyres designed primarily for heavy-duty vehicles, such as trucks and buses. Value of eudpp:hasProductGroup for a tyre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DOT TIN Factory Code"
+    "@value" : "C3"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "https://w3id.org/eudpp#codeValue" : [ {
+    "@value" : "C3"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#DOTTINOptionalCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DOT TIN - tire optional code"
+  "@id" : "https://w3id.org/eudpp/eto#DOTTIN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "49 CFR Part 574, § 574.5 (Tire identification requirements)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Tire Identification Number required on tyres for the US market: plant code (2 or 3 characters, only 3 from April 2025), tyre size code, optional manufacturer code and date code (week and year of manufacture, WWYY). Used with granularity eudpp:batch."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DOT TIN Optional Code"
+    "@value" : "DOT TIN"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#DOTTINSizeCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DOT TIN - Tire size code"
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Tire Identification Number"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "B3 8U 005X 1020"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DOT TIN Size Code"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#DOTTINWeekYear",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "DOT TIN (Tire Identification Number) for US Market - Production Date Week/Year (WWYY)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#Tyre"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DOT TIN Week Year"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "https://w3id.org/eudpp#identifierSchemeIssuer" : [ {
+    "@value" : "U.S. Department of Transportation (NHTSA)"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#DateOfELTCollection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Date when the ELT has been collected by the used tyre collector (DD/MM/YY)"
+    "@value" : "Date when the ELT has been collected by the used tyre collector."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Date Of ELT Collection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#ELTRecyclingChannelDestination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Country of deconstruction (ISO 3166-1 alpha-3) of the used tyre"
+    "@value" : "Recycling channel category to which the used tyre has been sent (e.g. cement, pyrolysis)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ELT Recycling Channel Destination"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#ELTRecyclingDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Date when the ELT has been deconstructed (DD/MM/YY)"
+    "@value" : "Date when the ELT has been deconstructed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ELT Recycling Date"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#ELTReuseStatus",
@@ -744,134 +788,166 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates whether the ELT has been sent back to the market because partly worn out or to be sent to a retreader"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ELT Reuse Status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
+  }, {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#EPREL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 5(1); EPREL field eprelRegistrationNumber"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid14"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Scheme of the registration numbers that the European Product Registry for Energy Labelling (EPREL) gives to the product models registered by their suppliers. Used with granularity eudpp:model. The public EPREL record URL is built from the number. Local scheme: the CORE IDENT module has no EPREL scheme."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EPREL registration number"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "European Product Registry for Energy Labelling"
+  } ],
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "2872477"
+  } ],
+  "https://w3id.org/eudpp#identifierSchemeIssuer" : [ {
+    "@value" : "European Commission"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 5(1) and Annex VII (product database)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "URL to the EPREL record of the tire"
+    "@value" : "URL of the record of the tyre type in the European Product Registry for Energy Labelling (EPREL)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "EPREL Record Reference Url"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid15"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#ExtraLoad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Extra Load symbol - to be associated to the load index if needed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Extra Load"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#GeometricalTyreSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (c); UN Regulation No 30"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Tyre size designation"
+    "@value" : "Tyre size designation as marked on the sidewall (e.g. 195/65 R 17)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Geometrical Tyre Size"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ProductDimension"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid14"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#HLPC",
+  "@id" : "https://w3id.org/eudpp/eto#IceGripMarking",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (h); EPREL field iceTyre"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates if the tire meets the UN R.30 definition of High Load (HL), values according to ETRTO standard"
+    "@value" : "Indication of whether the tyre is an ice grip tyre (true or false)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "HLPC"
+    "@value" : "Ice Grip Marking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
+    "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
+  }, {
+    "@id" : "_:genid15"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid18"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#HighLoad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "High Load symbol - to be associated to the load index if needed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "High Load"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid19"
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Ice grip tyre"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#LabelPictureUrl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex II (tyre label)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "URL to the label picture"
+    "@value" : "URL of an image of the EU tyre label of the tyre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Label Picture Url"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#LabellingReferenceRegulation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Regulation to which the labelling level of the tire for wet, noise and rolling resist    ance is given"
+    "@value" : "Regulation under which the label classes of the tyre (fuel efficiency, wet grip, external rolling noise) are given, e.g. Regulation (EU) 2020/740."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Labelling Reference Regulation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#LoadIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (c); UN Regulations No 30 and No 54"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load index is a integer number refererenced by the load weight that tyre can carry."
+    "@value" : "Load capacity index: number associated with the maximum load the tyre can carry at the speed indicated by its speed symbol."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#LoadIndexAfterRET",
@@ -879,20 +955,25 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Load index after Retreading"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index After RET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid19"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#LoadIndexDualFitmentAfterRET",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Load index for dual fitment after Retreading"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index Dual Fitment After RET"
@@ -904,7 +985,10 @@
   "@id" : "https://w3id.org/eudpp/eto#LoadIndexForDualFitment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Load index for dual fitment"
+    "@value" : "Load capacity index of the tyre when fitted in dual (twin) configuration, as marked on commercial vehicle tyres."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index For Dual Fitment"
@@ -918,6 +1002,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "For commercial tyres, speed adjusted load"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index For Supplementary Service Condition"
   } ],
@@ -930,6 +1017,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "For commercial tyres, speed adjusted load for dual fitment"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Load Index For Supplementary Service Condition Dual Fitment"
   } ],
@@ -937,85 +1027,127 @@
     "@id" : "https://w3id.org/eudpp/eto#LoadIndex"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp/eto#LoadVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "EPREL field loadCapacityIndicator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Load version of the tyre: LL (light load), SL (standard load), XL (extra load) or HL (high load)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load Version"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
+  }, {
+    "@id" : "_:genid20"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp/eto#MudAndSnow",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Mud and Snow (M+S) marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Mud And Snow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#NoiseClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex I and Annex III (f)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Labelling noise class"
+    "@value" : "External rolling noise class of the tyre (A, B or C), as shown on the EU tyre label."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Noise Class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#NoisePerformance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (f)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Labelling noise performance"
+    "@value" : "External rolling noise value of the tyre, in decibels (dB), as shown on the EU tyre label."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Noise Performance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#PlaceOfELTCollection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Country of collection (ISO 3166-1 alpha-3) of the used tyre"
+    "@value" : "Country of collection (ISO 3166-1 alpha-2) of the used tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Place Of ELT Collection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid27"
+  }, {
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#PlaceOfELTRecycling",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Indicates to which recycling channel category the used tyre has been sent (Cement , Pyrolisis, etc.)"
+    "@value" : "Country of deconstruction (ISO 3166-1 alpha-2) of the used tyre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Place Of ELT Recycling"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#ProductLabelling",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex II (tyre label); ETO specification document, FR2"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Labelling-related property"
+    "@value" : "Group of tyre properties corresponding to the EU tyre label and its registration (e.g. wet grip class, EPREL record)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Product Labelling"
@@ -1026,8 +1158,14 @@
 }, {
   "@id" : "https://w3id.org/eudpp/eto#ProductMarking",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ETO specification document, FR2"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Marking-related property"
+    "@value" : "Group of tyre properties corresponding to markings on the tyre sidewall (e.g. M+S, 3PMSF, size prefix)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Product Marking"
@@ -1039,7 +1177,10 @@
   "@id" : "https://w3id.org/eudpp/eto#ProductSpecification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Specification-related property"
+    "@value" : "Group of tyre properties describing its technical specification (e.g. load index, speed symbol, structure)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Product Specification"
@@ -1050,47 +1191,62 @@
 }, {
   "@id" : "https://w3id.org/eudpp/eto#Regrooved",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "UN Regulation No 54 (regrooving)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates whether the tyre has been regrooved according to ECE R54 definition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Regrooved"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid26"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RegulationsComplianceCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "PRICAT standard"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Code that indicates compliance of tire to specific international legal market requirement based on PRICAT standard"
+    "@value" : "Code that indicates compliance of the tyre with specific international legal market requirements, based on the PRICAT standard."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Regulations Compliance Code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RegulationsComplianceMarkings",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "PRICAT standard"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Code description : lists the regulations to which the tire is compliant."
+    "@value" : "Code description: lists the regulations with which the tyre is compliant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Regulations Compliance Markings"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RemainingTreadDepth",
@@ -1098,30 +1254,35 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "In millimeters, the remaining tread depth of the used tyre at the moment of deconstruction"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Remaining Tread Depth"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid32"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RetreadingCycle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Incremental counter of the retreading operations performed during the tyre's life, starting at zero. The retreader is recorded with an eudpp:ActorRoleAssignment (eudpp:hasActor, eudpp:hasRole eudpp:remanufacturer, eudpp:inContextOfProduct)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "An incremental counter to record the number of retreading operations occurred during the tyre's life - starting with zero"
-  }, {
     "@value" : "Retreading Cycle"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RimCode",
@@ -1129,64 +1290,65 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Rim diameter in millimeters or inches"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Rim Code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ProductDimension"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#RollingResistanceClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex I and Annex III (d)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Labelling rolling resistance class"
+    "@value" : "Fuel efficiency class of the tyre (A to E), based on its rolling resistance coefficient, as shown on the EU tyre label."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Rolling Resistance Class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SGTIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Unique Item Identifier - SGTIN-96 following Pure identity EPC URN (GS1 EPCIS) format"
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "GS1 EPC Tag Data Standard (SGTIN)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Serialised GTIN: a GTIN combined with a serial number, identifying one individual trade item; here in the EPC pure identity URN form (urn:epc:id:sgtin:...). Used with granularity eudpp:item. Local scheme until the CORE IDENT module provides one."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "SGTIN"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Serialised Global Trade Item Number"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/eudpp#GTIN"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#SVHCPresence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "SVHC designation (ECHA std) and presence % in weight of the article - EU REACH regulation"
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "urn:epc:id:sgtin:012345.0987654.123456789"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "SVHC Presence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid38"
+  "https://w3id.org/eudpp#identifierSchemeIssuer" : [ {
+    "@value" : "GS1"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#Sealant",
@@ -1194,14 +1356,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates whether the tyre is equipped with a puncture sealant"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Sealant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid35"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SectionWidth",
@@ -1209,16 +1373,18 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Nominal section width of the tyre in millimeters"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Section Width"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ProductDimension"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid40"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SectionWidthCode",
@@ -1226,59 +1392,99 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Nominal section width of the tyre defined by a code (CV tyre)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Section Width Code"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#ProductDimension"
+  }, {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#SevereSnowMarking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (g); UN Regulation No 117"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid42"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Three-peak-mountain snowflake (3PMSF) marking: indicates a tyre for use in severe snow conditions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Severe Snow Marking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
+  }, {
+    "@id" : "_:genid39"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "3PMSF"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SizePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ETRTO Standards Manual, G9"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Size Prefix"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SizeSuffix",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ETRTO Standards Manual, G9 to G13"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Part of identification marking for light truck tyres (see G9 - G13 ETRTO Std Manual)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Size Suffix"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductMarking"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid44"
+  }, {
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SpeedSymbol",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (c); UN Regulations No 30 and No 54"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Speed symbol"
+    "@value" : "Speed category symbol: letter indicating the maximum speed at which the tyre can carry the load corresponding to its load index (e.g. H = 210 km/h)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Speed Symbol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SpeedSymbolAfterRET",
@@ -1286,14 +1492,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Speed symbol after retreading"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Speed Symbol After RET"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#SpeedSymbolForSupplementaryServiceCondition",
@@ -1301,14 +1509,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "For commercial tyres, load adjusted speed"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Speed Symbol For Supplementary Service Condition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#SpeedSymbol"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid47"
+  }, {
+    "@id" : "_:genid44"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#Structure",
@@ -1316,14 +1526,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Structure of the tyre. Radial (R) or Bias (B)"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Structure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid45"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#StructureWordMarking",
@@ -1331,14 +1543,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Tyre construction word marked on the sidewall"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Structure Word Marking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#TmsContainerPresence",
@@ -1346,14 +1560,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates whether a rubber container for the Sensor is present on the tyre updated at each tyre inspection"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tms Container Presence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid50"
+  }, {
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#TmsSensorPresence",
@@ -1361,14 +1577,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tms Sensor Presence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid51"
+  }, {
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#TubeCharacteristic",
@@ -1376,59 +1594,136 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "It indicates tubeless or tube type tyres"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tube Characteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductSpecification"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid52"
+  }, {
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#Tyre",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ETO specification document, FR1"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Dictionary Cambride]"
+    "@value" : "Tyre is a thick rubber ring, often filled with air, that is fitted around the outer edge of the wheel of a vehicle, allowing the vehicle to stick to the road surface and to travel over the ground more easily [Cambridge Dictionary]."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Tyre"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp#Product"
+  }, {
+    "@id" : "_:genid50"
+  }, {
+    "@id" : "_:genid51"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#TyreTypeIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Article 3(23); EPREL field modelIdentifier"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid53"
-  }, {
-    "@id" : "_:genid54"
-  }, {
-    "@id" : "_:genid55"
-  }, {
-    "@id" : "_:genid56"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/eudpp#ProductIdentifierScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Scheme of tyre type identifiers: codes, usually alphanumeric, which distinguish a specific tyre type from other tyre types that have the same trade name or the same trademark as that of the supplier. Used with granularity eudpp:model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tyre Type Identifier"
+  } ],
+  "https://w3id.org/eudpp#identifierExampleValue" : [ {
+    "@value" : "E-PLUS01S-02"
+  } ],
+  "https://w3id.org/eudpp#identifierSchemeIssuer" : [ {
+    "@value" : "Tyre supplier"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#WetClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex I and Annex III (e)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Labelling wet class"
+    "@value" : "Wet grip class of the tyre (A to E), as shown on the EU tyre label."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Wet Class"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/eudpp/eto#ProductLabelling"
+  }, {
+    "@id" : "_:genid52"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#availableInAllEUEEACountries",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "EPREL field availabilityInEUEEACountries"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid57"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Whether the tyre type is available in all EU and EEA countries. If not, eto:availableInCountry gives the countries where it is available."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "available in all EU/EEA countries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#availableInCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "EPREL fields modelAvailabilityInEUEEACountries and modelAvailabilityInOtherCountries"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Two-letter code of a country where the tyre type is available, as in EPREL: ISO 3166-1 alpha-2, except EL for Greece and XI for Northern Ireland. One value per country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "available in country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#commercialNameLongDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Marketing text / Commercial name of the product"
+    "@value" : "Long commercial description of the tyre, combining its size, service description and commercial name (e.g. 195/65 R 17 87H Dakota Spring)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "commercial name long description"
@@ -1437,33 +1732,22 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/eudpp#productName"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#eanCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "European Article number according to GS1 standard"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "EAN Code"
-  } ]
-}, {
-  "@id" : "https://w3id.org/eudpp/eto#hasRetreader",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "A product has a retreader (Actor from ACTOR module)."
-  }, {
-    "@value" : "has retreader"
+    "@id" : "https://w3id.org/eudpp#description"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/eto#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "ETO specification document, coverage table (Step 2.4)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Property has value"
+    "@value" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp#QuantitativeProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has value"
@@ -1472,12 +1756,66 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "https://w3id.org/eudpp/eto#upcCode",
+  "@id" : "https://w3id.org/eudpp/eto#onMarketEndDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "EPREL field onMarketEndDate"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "(Private) Universal Product code according to GS1 standard"
+    "@value" : "Date from which the supplier no longer places the tyre type on the Union market. The first placing on the market is recorded with a eudpp:PlacingOnMarketEvent."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "UPC Code"
+    "@value" : "on-market end date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#productionEndWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (j); EPREL fields dateEndProductionWeek and dateEndProductionYear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Week and year in which the production of the tyre type ended, once known, written as an ISO 8601 week (e.g. 2025-W52)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "production end week"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/eto#productionStartWeek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@value" : "Regulation (EU) 2020/740, Annex III (i); EPREL fields dateStartProductionWeek and dateStartProductionYear"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Week and year in which the production of the tyre type started, written as an ISO 8601 week (e.g. 2021-W10). The regulation gives two digits for the week and two digits for the year."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/eto#Tyre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/eto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "production start week"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 } ]
