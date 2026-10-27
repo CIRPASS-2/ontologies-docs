@@ -1,0 +1,66 @@
+@prefix evt: <https://w3id.org/eudpp#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+evt:RefurbishmentEvent a owl:Class ;
+    rdfs:label "Refurbishment"@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    dcterms:source "Regulation (EU) 2024/1781; Art 2(18)"@en ;
+    rdfs:comment "Actions carried out to prepare, clean, test, service and, where necessary, repair a product or a discarded product in order to restore its performance or functionality within the intended use and range of performance originally conceived at the design stage at the time of the placing of the product on the market. ESPR Art 2(18)."@en ;
+    rdfs:subClassOf evt:ProductEvent .
+
+evt:RemanufacturingEvent a owl:Class ;
+    rdfs:label "Remanufacturing"@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    dcterms:source "Regulation (EU) 2024/1781; Art 2(16)"@en ;
+    rdfs:comment "Actions through which a new product is produced from objects that are waste, products or components and through which at least one change is made that substantially affects the safety, performance, purpose or type of the product. ESPR Art 2(16)."@en ;
+    rdfs:subClassOf evt:ProductEvent .
+
+evt:RepairEvent a owl:Class ;
+    rdfs:label "Repair"@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    dcterms:source "Regulation (EU) 2024/1781; Art 2(20)"@en ;
+    rdfs:comment "Actions taken to return a defective product or waste to a condition where it fulfils its intended purpose. ESPR Art 2(20)."@en ;
+    rdfs:subClassOf evt:ProductEvent .
+
+evt:UpgradingEvent a owl:Class ;
+    rdfs:label "Upgrading"@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    dcterms:source "Regulation (EU) 2024/1781; Art 2(17)"@en ;
+    rdfs:comment "Actions carried out to enhance the functionality, performance, capacity, safety or aesthetics of a product. ESPR Art 2(17)."@en ;
+    rdfs:subClassOf evt:ProductEvent .
+
+<https://w3id.org/eudpp/textile-event-mireot> a owl:Ontology ;
+    rdfs:label "Textile MIREOT subset of the EU DPP Event ontology"@en ;
+    dcterms:description "Bounded Textile-scoped MIREOT subset of Event terms and supporting axioms required by the CIRPASS Textile Ontology."@en ;
+    dcterms:issued "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:references "External source ontology version 0.1.0 DRAFT."@en ;
+    dcterms:source <https://w3id.org/eudpp/EVENT> ;
+    dcterms:title "Textile MIREOT subset of the EU DPP Event ontology"@en ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-event-mireot/1.1.2> ;
+    owl:versionInfo "Version 1.1.2" .
+
+evt:ESPREvent a owl:Class ;
+    rdfs:label "ESPR Event"@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    dcterms:source "Regulation (EU) 2024/1781; lifecycle-event-oriented abstraction introduced for modelling purposes."@en ;
+    rdfs:comment "Abstract superclass introduced for modelling purposes. Used to represent the regulatory or business semantics of an event relevant in the ESPR context and concerning either a product or its DPP, independently of its technical journalisation."@en .
+
+evt:concernsProduct a owl:ObjectProperty ;
+    rdfs:label "concerns product"@en ;
+    rdfs:comment "Links a product event to the product whose state, condition, or lifecycle is affected by the event."@en ;
+    rdfs:domain evt:ProductEvent ;
+    rdfs:range evt:Product .
+
+evt:ProductEvent a owl:Class ;
+    rdfs:label "Product Event"@en ;
+    rdfs:comment "An ESPR-level event concept representing an event that affects the state, condition, use, circulation, transformation, maintenance, or end-of-life status of a product. A ProductEvent captures the product-facing semantics of the occurrence and is distinct from any DPP-side event that may be triggered to record or reflect it."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass evt:Product ;
+            owl:onProperty evt:concernsProduct ],
+        evt:ESPREvent .
+

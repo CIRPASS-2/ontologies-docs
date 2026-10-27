@@ -1,0 +1,53 @@
+{
+  "accepted": {
+    "CE6": {
+      "conforms": true,
+      "results": []
+    },
+    "CE7": {
+      "conforms": false,
+      "results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#DenominatorPartMembership"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#LocationPartMembership"
+        }
+      ]
+    },
+    "CE8": {
+      "conforms": false,
+      "results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#LocationPartMembership"
+        }
+      ]
+    }
+  },
+  "corrected": {
+    "CE6": {
+      "conforms": false,
+      "results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationOwnership"
+        }
+      ]
+    },
+    "CE7": {
+      "conforms": true,
+      "results": []
+    },
+    "CE8": {
+      "conforms": true,
+      "results": []
+    }
+  }
+}

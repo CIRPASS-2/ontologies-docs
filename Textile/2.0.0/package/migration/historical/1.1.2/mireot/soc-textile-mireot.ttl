@@ -1,0 +1,667 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qudt:Unit a owl:Class .
+
+soc:AlertConcentrationThreshold a owl:Class ;
+    rdfs:label "Alert concentration threshold"@en ;
+    rdfs:comment "This class represents circularity-driven threshold values such as c_alert for SoC type (d)."@en ;
+    rdfs:subClassOf soc:RegulatoryThreshold ;
+    skos:definition "A threshold value above which a substance should trigger alert-based handling, such as disposal instead of recycling."@en .
+
+soc:BelowThreshold a owl:NamedIndividual,
+        soc:ThresholdEvaluationResult ;
+    rdfs:label "below threshold"@en ;
+    skos:definition "Evaluation result indicating that the reported concentration is below the applicable threshold."@en .
+
+soc:MaterialGroup a owl:Class ;
+    rdfs:label "material group"@en ;
+    rdfs:comment "This class remains product-sector neutral. Sector-specific material group subclasses, such as textile material groups or hard component material groups, should be defined in product-specific modules."@en ;
+    rdfs:subClassOf soc:ProductPart ;
+    skos:definition "A material or material grouping within a product, used as a structural unit for reporting or calculating substance concentration."@en .
+
+soc:MaterialGroupMassBasis a owl:NamedIndividual,
+        soc:ConcentrationReferenceBasis ;
+    rdfs:label "material group mass basis"@en .
+
+soc:MaterialLevel a owl:NamedIndividual,
+        soc:ReportingLevel ;
+    rdfs:label "Material level"@en ;
+    skos:definition "Reporting level corresponding to a material or material group within a product structure."@en .
+
+soc:NonExemptionThreshold a owl:Class ;
+    rdfs:label "Non-exemption threshold"@en ;
+    rdfs:comment "This class represents thresholds used to determine when exemptions are not allowed, such as the 0.1% w/w threshold for certain substances."@en ;
+    rdfs:subClassOf soc:RegulatoryThreshold ;
+    skos:definition "A threshold value above which an information element may not be exempted."@en .
+
+soc:ProductComponent a owl:Class ;
+    rdfs:label "Product component"@en ;
+    rdfs:subClassOf soc:ProductPart ;
+    skos:definition "A component or assembled element of a product that may be relevant for substance location, concentration reporting, or instructions."@en .
+
+soc:RecyclingInstructionType a owl:NamedIndividual,
+        soc:InstructionType ;
+    rdfs:label "recycling"@en ;
+    rdfs:comment "Instruction related to the recycling of the product in relation to the substance."@en .
+
+soc:SafeUseInstructionType a owl:NamedIndividual,
+        soc:InstructionType ;
+    rdfs:label "safe-use"@en ;
+    rdfs:comment "Instruction related to the safe use of the product in relation to the substance."@en .
+
+soc:SoCTypeAQualification a owl:Class ;
+    rdfs:label "SoC type (a) qualification"@en ;
+    rdfs:comment "Qualification based on the SVHC Candidate List."@en ;
+    rdfs:subClassOf soc:SubstanceOfConcernQualification ;
+    skos:definition "Qualification assigned to a substance meeting REACH Article 57 criteria and identified under Article 59(1) (SVHC)."@en .
+
+soc:TrackingThreshold a owl:Class ;
+    rdfs:label "Tracking threshold"@en ;
+    rdfs:comment "This class represents thresholds used to determine whether a substance of concern must be tracked or reported in the DPP context."@en ;
+    rdfs:subClassOf soc:RegulatoryThreshold ;
+    skos:definition "A threshold value above which a substance of concern must be tracked or reported."@en .
+
+soc:analyticalMethod a owl:DatatypeProperty ;
+    rdfs:label "analytical method"@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range xsd:string ;
+    skos:definition "Textual description of the analytical method used to determine or verify the concentration."@en .
+
+soc:evaluationNote a owl:DatatypeProperty ;
+    rdfs:label "evaluation note"@en ;
+    rdfs:domain soc:ThresholdEvaluation ;
+    rdfs:range xsd:string ;
+    skos:definition "Additional explanatory note associated with a threshold evaluation."@en .
+
+soc:hasApplicableRegulatoryThreshold a owl:ObjectProperty ;
+    rdfs:label "has applicable regulatory threshold"@en ;
+    rdfs:comment "This property indicates which regulatory thresholds are relevant for interpreting a reported concentration. It does not by itself express whether the threshold is met, exceeded, or violated."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:RegulatoryThreshold ;
+    owl:inverseOf soc:isApplicableRegulatoryThresholdFor ;
+    skos:definition "Links a concentration information object to a regulatory threshold that is applicable for its interpretation."@en .
+
+soc:hasConcentrationReportingLevel a owl:ObjectProperty ;
+    rdfs:label "has concentration reporting level"@en ;
+    rdfs:comment "This property expresses whether the concentration is reported at product, component, material, or spare-part level."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:ReportingLevel ;
+    skos:definition "Indicates the reporting granularity at which the concentration is described."@en .
+
+soc:hasInstructionType a owl:ObjectProperty ;
+    rdfs:label "has instruction type"@en ;
+    rdfs:comment "This property expresses whether the instruction concerns safe use, repair, reuse, disassembly, or recycling."@en ;
+    rdfs:domain soc:InstructionInformation ;
+    rdfs:range soc:InstructionType ;
+    skos:definition "Indicates the declared type of instruction represented by an instruction information object."@en .
+
+soc:hasPresenceContext a owl:ObjectProperty ;
+    rdfs:label "has presence context"@en ;
+    rdfs:comment "Inverse of hasProduct. Links a product to a substance presence context associated with it."@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range soc:SubstancePresenceContext ;
+    owl:inverseOf soc:hasProduct .
+
+soc:hasThresholdEvaluation a owl:ObjectProperty ;
+    rdfs:label "has threshold evaluation"@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range soc:ThresholdEvaluation ;
+    owl:inverseOf soc:isThresholdEvaluationOf ;
+    skos:definition "Links a substance presence context to a threshold evaluation associated with it."@en .
+
+soc:instructionContent a owl:DatatypeProperty ;
+    rdfs:label "instruction content"@en ;
+    rdfs:comment "Free-text guidance attached to a substance presence context. The ESPR does not define a controlled vocabulary or formal structure for instruction content."@en ;
+    rdfs:domain soc:InstructionInformation ;
+    rdfs:range xsd:string ;
+    skos:definition "Textual content of an instruction related to a substance present in a product."@en .
+
+soc:isConcentrationInformationOf a owl:ObjectProperty ;
+    rdfs:label "is concentration information of"@en ;
+    rdfs:comment "Inverse of hasConcentrationInformation."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:SubstancePresenceContext ;
+    owl:inverseOf soc:hasConcentrationInformation .
+
+soc:isConcentrationReferenceBasisOf a owl:ObjectProperty ;
+    rdfs:label "is concentration reference basis of"@en ;
+    rdfs:domain soc:ConcentrationReferenceBasis ;
+    rdfs:range soc:ConcentrationInformation ;
+    owl:inverseOf soc:hasConcentrationReferenceBasis ;
+    skos:definition "Links a concentration reference basis to the concentration information that uses it."@en .
+
+soc:isInstructionInformationOf a owl:ObjectProperty ;
+    rdfs:label "is instruction information of"@en ;
+    rdfs:comment "Inverse of hasInstructionInformation."@en ;
+    rdfs:domain soc:InstructionInformation ;
+    rdfs:range soc:SubstancePresenceContext ;
+    owl:inverseOf soc:hasInstructionInformation .
+
+soc:isLocationInformationOf a owl:ObjectProperty ;
+    rdfs:label "is location information of"@en ;
+    rdfs:comment "Inverse of hasLocationInformation."@en ;
+    rdfs:domain soc:LocationInformation ;
+    rdfs:range soc:SubstancePresenceContext ;
+    owl:inverseOf soc:hasLocationInformation .
+
+soc:isPartOfProduct a owl:ObjectProperty ;
+    rdfs:label "is part of product"@en ;
+    rdfs:comment "This property expresses structural inclusion of a part within a product."@en ;
+    rdfs:domain soc:ProductPart ;
+    rdfs:range dpp:Product ;
+    owl:inverseOf soc:hasPart ;
+    skos:definition "Links a product part to the product of which it is a part."@en .
+
+soc:isPresentThroughContext a owl:ObjectProperty ;
+    rdfs:label "is present through context"@en ;
+    rdfs:comment "Inverse of hasSubstance."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range soc:SubstancePresenceContext ;
+    owl:inverseOf soc:hasSubstance .
+
+soc:isQualifiedByProductGroupList a owl:ObjectProperty ;
+    rdfs:label "is qualified by product-group list"@en ;
+    rdfs:comment "Links a SoC type (d) qualification to the product-group-specific external list or delegated act used as qualification basis."@en ;
+    rdfs:domain soc:SoCTypeDQualification ;
+    rdfs:range soc:ProductGroupSpecificSoCList ;
+    rdfs:subPropertyOf soc:hasRegulatoryBasis .
+
+soc:isQuantitativeValueOfThreshold a owl:ObjectProperty ;
+    rdfs:label "is quantitative value of threshold"@en ;
+    rdfs:domain soc:QuantitativeValue ;
+    rdfs:range soc:RegulatoryThreshold ;
+    owl:inverseOf soc:hasThresholdQuantitativeValue ;
+    skos:definition "Links a quantitative value to the regulatory threshold it quantifies."@en .
+
+soc:isUnitOf a owl:ObjectProperty ;
+    rdfs:label "is unit of"@en ;
+    rdfs:domain soc:Unit ;
+    rdfs:range soc:QuantitativeValue ;
+    owl:inverseOf soc:hasUnit ;
+    skos:definition "Links a unit to a quantitative value expressed using that unit."@en .
+
+soc:locationDescriptor a owl:DatatypeProperty ;
+    rdfs:label "location descriptor"@en ;
+    rdfs:comment "Free-text description used because the JRC and ESPR do not define a controlled vocabulary or formal spatial model for location. This textual description may complement a structured reference to a product part."@en ;
+    rdfs:domain soc:LocationInformation ;
+    rdfs:range xsd:string ;
+    skos:definition "Textual description of where the substance is located within the product."@en .
+
+soc:lowerBound a owl:DatatypeProperty ;
+    rdfs:label "lower bound"@en ;
+    rdfs:domain soc:RangeQuantitativeValue ;
+    rdfs:range xsd:decimal ;
+    skos:definition "Lower bound of a quantitative range."@en .
+
+soc:maximumValue a owl:DatatypeProperty ;
+    rdfs:label "maximum value"@en ;
+    rdfs:domain soc:MaximumQuantitativeValue ;
+    rdfs:range xsd:decimal ;
+    skos:definition "Single upper-bound numerical value used for a maximum quantitative value."@en .
+
+soc:numericValue a owl:DatatypeProperty ;
+    rdfs:label "numeric value"@en ;
+    rdfs:domain soc:ExactQuantitativeValue ;
+    rdfs:range xsd:decimal ;
+    skos:definition "Single numerical value used for an exact quantitative value."@en .
+
+soc:qualificationSource a owl:DatatypeProperty ;
+    rdfs:label "qualification source"@en ;
+    rdfs:domain soc:RegulatoryQualification ;
+    rdfs:range xsd:string ;
+    skos:definition "Textual reference to the legal or regulatory source on which a qualification is based."@en .
+
+soc:qualifiesSubstance a owl:ObjectProperty ;
+    rdfs:label "qualifies substance"@en ;
+    rdfs:comment "Inverse of hasQualification."@en ;
+    rdfs:domain soc:RegulatoryQualification ;
+    rdfs:range soc:Substance ;
+    owl:inverseOf soc:hasQualification .
+
+soc:refersToProductPartForConcentration a owl:ObjectProperty ;
+    rdfs:label "refers to product part for concentration"@en ;
+    rdfs:comment "Optional property used when the reported concentration refers to a specific part of the product rather than to the whole product."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:ProductPart ;
+    skos:definition "Links a concentration information object to the product part to which the reported concentration refers."@en .
+
+soc:refersToProductPartForLocation a owl:ObjectProperty ;
+    rdfs:label "refers to product part for location"@en ;
+    rdfs:comment "Optional property used when the reported location refers to a specific part of the product rather than to the whole product."@en ;
+    rdfs:domain soc:LocationInformation ;
+    rdfs:range soc:ProductPart ;
+    skos:definition "Links a location information object to the product part to which the reported location refers."@en .
+
+soc:iupacName a owl:DatatypeProperty ;
+    rdfs:label "IUPAC name"@en ;
+    skos:definition "IUPAC or other international name of the substance."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Name in the International Union of Pure and Applied Chemistry (IUPAC) nomenclature, or another international name when IUPAC name is not available [ESPR Article 7(5)]."@en ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:otherName a owl:DatatypeProperty ;
+    rdfs:label "other name"@en ;
+    skos:definition "Usual, trade or abbreviated names of the substance."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Other names, including usual name, trade name, abbreviation [ESPR Article 7(5)]."@en ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:abbreviation a owl:DatatypeProperty ;
+    rdfs:subPropertyOf soc:otherName ;
+    rdfs:label "abbreviation"@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "An abbreviation used for the substance."@en ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:tradeName a owl:DatatypeProperty ;
+    rdfs:subPropertyOf soc:otherName ;
+    rdfs:label "trade name"@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A trade name under which the substance is known."@en ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:usualName a owl:DatatypeProperty ;
+    rdfs:subPropertyOf soc:otherName ;
+    rdfs:label "usual name"@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A usual name under which the substance is known."@en ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:ecNumber a owl:DatatypeProperty ;
+    rdfs:label "EC number"@en ;
+    skos:definition "European Community number of the substance, where available and appropriate."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string .
+
+soc:echaNumber a owl:DatatypeProperty ;
+    rdfs:label "ECHA number"@en ;
+    skos:definition "Identifier assigned by ECHA, where available and appropriate."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string .
+
+soc:casName a owl:DatatypeProperty ;
+    rdfs:label "CAS name"@en ;
+    skos:definition "The Chemical Abstract Service (CAS) name, if available."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:casNumber a owl:DatatypeProperty ;
+    rdfs:label "CAS number"@en ;
+    skos:definition "The Chemical Abstract Service (CAS) number, if available."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    dcterms:source "ESPR Article 7(5)."@en ;
+    dcterms:identifier "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" .
+
+soc:substanceIdentifier a owl:DatatypeProperty ;
+    rdfs:label "substance identifier"@en ;
+    rdfs:comment "Functional interoperability property used for cross-checking against SVHC, CLP, POPs or other external references."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range xsd:string ;
+    skos:definition "Identifier used to match a substance against regulatory lists."@en .
+
+soc:thresholdNote a owl:DatatypeProperty ;
+    rdfs:label "threshold note"@en ;
+    rdfs:domain soc:RegulatoryThreshold ;
+    rdfs:range xsd:string ;
+    skos:definition "Additional explanatory note associated with a regulatory threshold."@en .
+
+soc:upperBound a owl:DatatypeProperty ;
+    rdfs:label "upper bound"@en ;
+    rdfs:domain soc:RangeQuantitativeValue ;
+    rdfs:range xsd:decimal ;
+    skos:definition "Upper bound of a quantitative range."@en .
+
+<https://w3id.org/eudpp/textile-soc-mireot> a owl:Ontology ;
+    rdfs:label "Textile MIREOT subset of the EU DPP Substances of Concern ontology"@en ;
+    dcterms:description "Bounded Textile-scoped MIREOT subset of Substances of Concern terms and supporting axioms required by the CIRPASS Textile Ontology."@en ;
+    dcterms:issued "2026-07-16"^^xsd:date ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:references "External source ontology version 0.1.2 DRAFT."@en ;
+    dcterms:source <https://w3id.org/eudpp/soc> ;
+    dcterms:title "Textile MIREOT subset of the EU DPP Substances of Concern ontology"@en ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-soc-mireot/1.1.3> ;
+    owl:versionInfo "Version 1.1.3" .
+
+soc:ExactQuantitativeValue a owl:Class ;
+    rdfs:label "Exact quantitative value"@en ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    skos:definition "A quantitative expression represented by a single exact numerical value and a unit."@en .
+
+soc:MaximumQuantitativeValue a owl:Class ;
+    rdfs:label "Maximum quantitative value"@en ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    skos:definition "A quantitative expression represented by a single upper-bound numerical value and a unit."@en .
+
+soc:ProductGroupSpecificSoCList a owl:Class ;
+    rdfs:label "Product-group specific SoC list"@en ;
+    rdfs:comment "External regulatory specification used to determine SoC type (d) qualification. This reference may be documented with identifiers, source, version, date, and product-category applicability information."@en ;
+    rdfs:subClassOf soc:ExternalRegulatoryReference ;
+    skos:definition "List of substances hindering reuse or recycling for a given product group."@en .
+
+soc:SoCTypeDQualification a owl:Class ;
+    rdfs:label "SoC type (d) qualification"@en ;
+    rdfs:comment "Circularity-driven qualification. Product-group dependent."@en ;
+    rdfs:subClassOf soc:SubstanceOfConcernQualification ;
+    skos:definition "Qualification assigned to a substance that hinders reuse or recycling, as determined in product-group-specific delegated acts."@en .
+
+soc:SubstanceOfConcernPresenceContext a owl:Class ;
+    rdfs:label "substance of concern presence context"@en ;
+    rdfs:comment "This class specialises SubstancePresenceContext for cases where the reported substance presence is relevant under the ESPR substances-of-concern framework. It keeps generic substance presence separate from legally qualified SoC presence."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:SubstanceOfConcernQualification ;
+            owl:onProperty soc:hasApplicableQualification ],
+        soc:SubstancePresenceContext ;
+    skos:definition "A substance presence context in which the substance present in the product is associated with an applicable substance-of-concern qualification."@en .
+
+soc:evaluatesAgainstThreshold a owl:ObjectProperty ;
+    rdfs:label "evaluates against threshold"@en ;
+    rdfs:domain soc:ThresholdEvaluation ;
+    rdfs:range soc:RegulatoryThreshold ;
+    owl:inverseOf soc:isThresholdUsedInEvaluation ;
+    skos:definition "Links a threshold evaluation to the regulatory threshold used for the comparison."@en .
+
+soc:evaluatesConcentrationInformation a owl:ObjectProperty ;
+    rdfs:label "evaluates concentration information"@en ;
+    rdfs:domain soc:ThresholdEvaluation ;
+    rdfs:range soc:ConcentrationInformation ;
+    owl:inverseOf soc:isEvaluatedByThresholdEvaluation ;
+    skos:definition "Links a threshold evaluation to the concentration information being evaluated."@en .
+
+soc:hasApplicableQualification a owl:ObjectProperty ;
+    rdfs:label "has applicable qualification"@en ;
+    rdfs:comment "This property expresses the qualification that is applicable in a given product-related context. It complements soc:hasSoCQualification, which links a substance identity to a regulatory qualification independently of a specific product occurrence. The contextual link is particularly relevant when the qualification depends on product group, delegated acts, recycling or reuse relevance, or other context-dependent regulatory criteria."@en ;
+    rdfs:domain soc:SubstanceOfConcernPresenceContext ;
+    rdfs:range soc:SubstanceOfConcernQualification ;
+    skos:definition "Links a substance-of-concern presence context to the substance-of-concern qualification that is applicable for the substance in that product context."@en .
+
+soc:hasConcentrationInformation a owl:ObjectProperty ;
+    rdfs:label "has concentration information"@en ;
+    rdfs:comment "This property attaches contextual concentration information to a substance presence context. Multiple concentration information objects may be attached when different reporting granularities or different product parts are involved."@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range soc:ConcentrationInformation ;
+    skos:definition "Links a substance presence context to a concentration information object."@en .
+
+soc:hasConcentrationReferenceBasis a owl:ObjectProperty ;
+    rdfs:label "has concentration reference basis"@en ;
+    rdfs:comment "This property clarifies the denominator or reference scope of the reported concentration. It is important because the regulatory interpretation of a concentration may differ depending on whether it is calculated against the final product, an article, a product part, or a material group."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:ConcentrationReferenceBasis ;
+    skos:definition "Links a concentration information object to the reference basis used for calculating or reporting the concentration."@en .
+
+soc:hasInstructionInformation a owl:ObjectProperty ;
+    rdfs:label "has instruction information"@en ;
+    rdfs:comment "This property attaches contextual instruction information to a substance presence context."@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range soc:InstructionInformation ;
+    skos:definition "Links a substance presence context to an instruction information object."@en .
+
+soc:hasLocationInformation a owl:ObjectProperty ;
+    rdfs:label "has location information"@en ;
+    rdfs:comment "This property attaches contextual location information to a substance presence context."@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range soc:LocationInformation ;
+    skos:definition "Links a substance presence context to a location information object."@en .
+
+soc:hasPart a owl:ObjectProperty ;
+    rdfs:label "has part"@en ;
+    rdfs:comment "Inverse of isPartOfProduct."@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range soc:ProductPart ;
+    skos:definition "Links a product to one of its parts."@en .
+
+soc:hasQualification a owl:ObjectProperty ;
+    rdfs:label "has qualification"@en ;
+    rdfs:comment "Generic property used to separate substance identity from regulatory status."@en ;
+    rdfs:domain soc:Substance ;
+    rdfs:range soc:RegulatoryQualification ;
+    skos:definition "Links a substance to a regulatory qualification attributed to it."@en .
+
+soc:hasRegulatoryBasis a owl:ObjectProperty ;
+    rdfs:label "has regulatory basis"@en ;
+    rdfs:comment "Generic property linking a qualification to its supporting external legal or classificatory basis."@en ;
+    rdfs:domain soc:RegulatoryQualification ;
+    rdfs:range soc:ExternalRegulatoryReference ;
+    owl:inverseOf soc:isRegulatoryBasisFor ;
+    skos:definition "Links a regulatory qualification to the external regulatory reference on which it is based."@en .
+
+soc:hasThresholdEvaluationResult a owl:ObjectProperty ;
+    rdfs:label "has threshold evaluation result"@en ;
+    rdfs:domain soc:ThresholdEvaluation ;
+    rdfs:range soc:ThresholdEvaluationResult ;
+    skos:definition "Links a threshold evaluation to its result."@en .
+
+soc:hasThresholdQuantitativeValue a owl:ObjectProperty ;
+    rdfs:label "has threshold quantitative value"@en ;
+    rdfs:comment "This property links a regulatory threshold to an exact, maximum, or range quantitative value."@en ;
+    rdfs:domain soc:RegulatoryThreshold ;
+    rdfs:range soc:QuantitativeValue ;
+    skos:definition "Links a regulatory threshold to its quantitative expression."@en .
+
+soc:isApplicableRegulatoryThresholdFor a owl:ObjectProperty ;
+    rdfs:label "is applicable regulatory threshold for"@en ;
+    rdfs:comment "Inverse of hasApplicableRegulatoryThreshold."@en ;
+    rdfs:domain soc:RegulatoryThreshold ;
+    rdfs:range soc:ConcentrationInformation ;
+    skos:definition "Links a regulatory threshold to a concentration information object for which it is applicable."@en .
+
+soc:isEvaluatedByThresholdEvaluation a owl:ObjectProperty ;
+    rdfs:label "is evaluated by threshold evaluation"@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:ThresholdEvaluation ;
+    skos:definition "Links a concentration information object to a threshold evaluation in which it is evaluated."@en .
+
+soc:isQuantitativeValueOfConcentration a owl:ObjectProperty ;
+    rdfs:label "is quantitative value of concentration"@en ;
+    rdfs:domain soc:QuantitativeValue ;
+    rdfs:range soc:ConcentrationInformation ;
+    owl:inverseOf soc:hasQuantitativeValue ;
+    skos:definition "Links a quantitative value to the concentration information it quantifies."@en .
+
+soc:isRegulatoryBasisFor a owl:ObjectProperty ;
+    rdfs:label "is regulatory basis for"@en ;
+    rdfs:comment "Inverse of hasRegulatoryBasis."@en ;
+    rdfs:domain soc:ExternalRegulatoryReference ;
+    rdfs:range soc:RegulatoryQualification ;
+    skos:definition "Links an external regulatory reference to the qualification for which it serves as regulatory basis."@en .
+
+soc:isThresholdEvaluationOf a owl:ObjectProperty ;
+    rdfs:label "is threshold evaluation of"@en ;
+    rdfs:domain soc:ThresholdEvaluation ;
+    rdfs:range soc:SubstancePresenceContext ;
+    skos:definition "Links a threshold evaluation to the substance presence context to which it belongs."@en .
+
+soc:isThresholdUsedInEvaluation a owl:ObjectProperty ;
+    rdfs:label "is threshold used in evaluation"@en ;
+    rdfs:domain soc:RegulatoryThreshold ;
+    rdfs:range soc:ThresholdEvaluation ;
+    skos:definition "Links a regulatory threshold to a threshold evaluation in which it is used."@en .
+
+soc:InstructionType a owl:Class ;
+    rdfs:label "Instruction type"@en ;
+    rdfs:comment "This class represents the kind of instruction expressed in the DPP information element."@en ;
+    skos:definition "Declared type of instruction according to the relevant lifecycle-related activity addressed by the information element."@en .
+
+soc:RangeQuantitativeValue a owl:Class ;
+    rdfs:label "Range quantitative value"@en ;
+    rdfs:subClassOf soc:QuantitativeValue ;
+    skos:definition "A quantitative expression represented by a lower bound, an upper bound, and a unit."@en .
+
+soc:ReportingLevel a owl:Class ;
+    rdfs:label "reporting level"@en ;
+    rdfs:comment "Reporting level indicates the declared granularity of an information item, such as product level, component level, material level, or spare-part level. It does not by itself identify the concrete product part concerned, nor does it define the mass reference basis used for concentration calculation."@en ;
+    skos:definition "Declared level of granularity at which a substance-related information item is reported."@en .
+
+soc:Situation a owl:Class ;
+    rdfs:label "Situation"@en ;
+    rdfs:comment "Generic superclass introduced for modelling contextual situations. It is not tied to a specific regulatory domain."@en ;
+    skos:definition "A contextualised state of affairs or configuration in which entities stand in a meaningful relation under specific conditions."@en .
+
+soc:hasProduct a owl:ObjectProperty ;
+    rdfs:label "has product"@en ;
+    rdfs:comment "Links a substance presence context to the product in which the substance is present."@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range dpp:Product .
+
+soc:hasQuantitativeValue a owl:ObjectProperty ;
+    rdfs:label "has quantitative value"@en ;
+    rdfs:comment "This property links concentration information to an exact, maximum, or range quantitative value."@en ;
+    rdfs:domain soc:ConcentrationInformation ;
+    rdfs:range soc:QuantitativeValue ;
+    owl:inverseOf soc:isQuantitativeValueOfConcentration ;
+    skos:definition "Links a concentration information object to its quantitative expression."@en .
+
+soc:hasSubstance a owl:ObjectProperty ;
+    rdfs:label "has substance"@en ;
+    rdfs:comment "Links a substance presence context to the substance that is present in the product."@en ;
+    rdfs:domain soc:SubstancePresenceContext ;
+    rdfs:range soc:Substance .
+
+soc:hasUnit a owl:ObjectProperty ;
+    rdfs:label "has unit"@en ;
+    rdfs:domain soc:QuantitativeValue ;
+    rdfs:range soc:Unit ;
+    skos:definition "Links a quantitative value to the unit in which it is expressed."@en .
+
+soc:ConcentrationReferenceBasis a owl:Class ;
+    rdfs:label "concentration reference basis"@en ;
+    rdfs:comment "ConcentrationReferenceBasis represents the denominator or reference scope used for concentration calculation, such as the final product mass, an article mass, a product part mass, or a material group mass. It is distinct from the reporting level and from the concrete product part to which the information may refer."@en ;
+    skos:definition "Reference basis against which a substance concentration is calculated or reported."@en .
+
+soc:ExternalRegulatoryReference a owl:Class ;
+    rdfs:label "External regulatory reference"@en ;
+    rdfs:comment "This class represents external documentary or classificatory references used to justify or determine a regulatory qualification."@en ;
+    skos:definition "An external regulatory list, classification, or specification used as the basis for a regulatory qualification."@en .
+
+soc:ThresholdEvaluationResult a owl:Class ;
+    rdfs:label "Threshold evaluation result"@en ;
+    rdfs:comment "This class is used as a controlled vocabulary for the outcome of threshold evaluation."@en ;
+    skos:definition "Controlled result value produced by a threshold evaluation."@en .
+
+soc:Unit a owl:Class ;
+    rdfs:label "unit"@en ;
+    rdfs:comment "This class reuses QUDT units for expressing quantitative values in the SoC module."@en ;
+    rdfs:subClassOf qudt:Unit ;
+    skos:definition "Unit used to express a quantitative value."@en .
+
+soc:InstructionInformation a owl:Class ;
+    rdfs:label "Instruction information"@en ;
+    rdfs:comment "Information object attached to a SubstancePresenceContext in order to represent SoC-related instructions, such as safe use, repair, reuse, disassembly, or recycling. This class is intentionally extensible: beyond a basic type and textual content, it may later carry conditions of application, targeted product parts, precautions, recommended actions, forbidden actions, or end-of-life handling guidance."@en ;
+    skos:definition "A contextual prescriptive information object describing how a product, product part, or substance-related situation should be handled in the presence of a substance of concern."@en .
+
+soc:LocationInformation a owl:Class ;
+    rdfs:label "Location information"@en ;
+    rdfs:comment "Information object attached to a SubstancePresenceContext in order to describe the reported location of the substance within the product. This class does not imply a formal spatial model."@en ;
+    skos:definition "Contextual qualitative information describing where a substance is located within a product."@en .
+
+soc:SubstanceOfConcernQualification a owl:Class ;
+    rdfs:label "Substance of Concern qualification"@en ;
+    rdfs:comment "This is a legal qualification layer, not a purely chemical category."@en ;
+    rdfs:subClassOf soc:RegulatoryQualification ;
+    skos:definition "A regulatory qualification indicating that a substance is considered a substance of concern under Article 2(27) ESPR."@en .
+
+dpp:Product a owl:Class ;
+    rdfs:label "Product"@en .
+
+soc:ProductPart a owl:Class ;
+    rdfs:label "product part"@en ;
+    rdfs:comment "ProductPart identifies a concrete or declared subdivision of a product. It may be used to specify where a substance is located, to which part a concentration value refers, or to which part an instruction applies. It should not be confused with the reporting level or with the mass reference basis used for concentration calculation."@en ;
+    skos:definition "A part, portion, internal element, layer, zone, material group, component, or structural subdivision of a product that may serve as the target of SoC-related reporting."@en .
+
+soc:RegulatoryQualification a owl:Class ;
+    rdfs:label "Regulatory qualification"@en ;
+    rdfs:comment "Generic superclass introduced to separate domain identity from legal qualification."@en ;
+    skos:definition "A regulatory status or qualification attributed to an entity under a legal or policy framework."@en .
+
+soc:Substance a owl:Class ;
+    rdfs:label "Substance"@en ;
+    rdfs:comment "This class represents the identity layer. It is product-agnostic and should not be confused with its legal status as a substance of concern."@en ;
+    skos:definition "An identified substance considered independently of any specific product occurrence or regulatory qualification."@en .
+
+soc:ThresholdEvaluation a owl:Class ;
+    rdfs:label "Threshold evaluation"@en ;
+    rdfs:comment "This class represents the evaluative layer between measurement and regulatory consequence. It does not replace ConcentrationInformation or RegulatoryThreshold; it records the result of applying a threshold rule to a concentration value in a given substance presence context."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:ConcentrationInformation ;
+            owl:onProperty soc:evaluatesConcentrationInformation ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:RegulatoryThreshold ;
+            owl:onProperty soc:evaluatesAgainstThreshold ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:ThresholdEvaluationResult ;
+            owl:onProperty soc:hasThresholdEvaluationResult ],
+        soc:Situation ;
+    skos:definition "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold."@en .
+
+soc:QuantitativeValue a owl:Class ;
+    rdfs:label "Quantitative value"@en ;
+    rdfs:comment "Generic superclass for quantitative expressions used in the SoC module, including concentration information and regulatory thresholds."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:Unit ;
+            owl:onProperty soc:hasUnit ] ;
+    skos:definition "A quantitative expression consisting of one or more numerical values and a unit."@en .
+
+soc:RegulatoryThreshold a owl:Class ;
+    rdfs:label "Regulatory threshold"@en ;
+    rdfs:comment "This class represents threshold values that are distinct from reported concentration values. A regulatory threshold is used as a reference for legal or technical interpretation."@en ;
+    skos:definition "A regulatory or technical threshold value used to interpret or govern the reporting, tracking, exemption, or end-of-life handling of a substance of concern."@en .
+
+soc:SubstancePresenceContext a owl:Class ;
+    rdfs:label "Substance Presence Context"@en ;
+    rdfs:comment "Contextual situation used as the authoritative pivot for attaching DPP information related to the presence of a substance in a product, such as location information, concentration information and instruction information."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:Substance ;
+            owl:onProperty soc:hasSubstance ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass dpp:Product ;
+            owl:onProperty soc:hasProduct ],
+        soc:Situation ;
+    skos:definition "A contextualised situation in which a given substance is present in a given product."@en .
+
+soc:ConcentrationInformation a owl:Class ;
+    rdfs:label "Concentration information"@en ;
+    rdfs:comment "Information object attached to a SubstancePresenceContext in order to represent an exact value, a maximum value, or a concentration range. A concentration information object may describe concentration at the level of the whole product or at the level of a specific product part."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass soc:QuantitativeValue ;
+            owl:onProperty soc:hasQuantitativeValue ] ;
+    skos:definition "Contextual quantitative information describing the reported concentration of a substance present in a product."@en .
+
+soc:SVHCCandidateList a owl:Class ;
+    rdfs:subClassOf soc:ExternalRegulatoryReference ;
+    rdfs:label "SVHC Candidate List"@en ;
+    skos:definition "List of substances identified under REACH Article 59."@en ;
+    rdfs:comment "External regulatory reference used to determine SoC type (a) qualification. This reference may be documented with identifiers, source, version, and date information."@en .
+
+soc:isQualifiedBySVHCList a owl:ObjectProperty ;
+    rdfs:subPropertyOf soc:hasRegulatoryBasis ;
+    rdfs:label "is qualified by SVHC list"@en ;
+    rdfs:comment "Links a SoC type (a) qualification to the external SVHC Candidate List used as qualification basis."@en ;
+    rdfs:domain soc:SoCTypeAQualification ;
+    rdfs:range soc:SVHCCandidateList .

@@ -1,0 +1,691 @@
+{
+  "accepted_commit": "5bac1a2cba2332b3e5ad7d45d305fbb786ee59f2",
+  "resources": [
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#AlertConcentrationThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#AlertConcentrationThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A threshold value above which a substance should trigger alert-based handling, such as disposal instead of recycling.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents circularity-driven threshold values such as c_alert for SoC type (d).",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#BelowThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#BelowThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Evaluation result indicating that the reported concentration is below the applicable threshold.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ConcentrationReferenceBasis",
+      "source_resource": "https://w3id.org/eudpp/soc#ConcentrationReferenceBasis",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Reference basis against which a substance concentration is calculated or reported.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "ConcentrationReferenceBasis represents the denominator or reference scope used for concentration calculation, such as the final product mass, an article mass, a product part mass, or a material group mass. It is distinct from the reporting level and from the concrete product part to which the information may refer.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference",
+      "source_resource": "https://w3id.org/eudpp/soc#ExternalRegulatoryReference",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "An external regulatory list, classification, or specification used as the basis for a regulatory qualification.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents external documentary or classificatory references used to justify or determine a regulatory qualification.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#InstructionType",
+      "source_resource": "https://w3id.org/eudpp/soc#InstructionType",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Declared type of instruction according to the relevant lifecycle-related activity addressed by the information element.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents the kind of instruction expressed in the DPP information element.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#LocationInformation",
+      "source_resource": "https://w3id.org/eudpp/soc#LocationInformation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Contextual qualitative information describing where a substance is located within a product.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Information object attached to a SubstancePresenceContext in order to describe the reported location of the substance within the product. This class does not imply a formal spatial model.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#MaterialGroup",
+      "source_resource": "https://w3id.org/eudpp/soc#MaterialGroup",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A material or material grouping within a product, used as a structural unit for reporting or calculating substance concentration.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class remains product-sector neutral. Sector-specific material group subclasses, such as textile material groups or hard component material groups, should be defined in product-specific modules.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#MaterialLevel",
+      "source_resource": "https://w3id.org/eudpp/soc#MaterialLevel",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Reporting level corresponding to a material or material group within a product structure.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#NonExemptionThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#NonExemptionThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A threshold value above which an information element may not be exempted.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents thresholds used to determine when exemptions are not allowed, such as the 0.1% w/w threshold for certain substances.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ProductGroupSpecificSoCList",
+      "source_resource": "https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "List of substances hindering reuse or recycling for a given product group.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "External regulatory specification used to determine SoC type (d) qualification. This reference may be documented with identifiers, source, version, date, and product-category applicability information.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#RecyclingInstructionType",
+      "source_resource": "https://w3id.org/eudpp/soc#RecyclingInstructionType",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Instruction related to the recycling of the product in relation to the substance.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ReportingLevel",
+      "source_resource": "https://w3id.org/eudpp/soc#ReportingLevel",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Declared level of granularity at which a substance-related information item is reported.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Reporting level indicates the declared granularity of an information item, such as product level, component level, material level, or spare-part level. It does not by itself identify the concrete product part concerned, nor does it define the mass reference basis used for concentration calculation.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#SVHCCandidateList",
+      "source_resource": "https://w3id.org/eudpp/soc#SVHCCandidateList",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "List of substances identified under REACH Article 59.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "External regulatory reference used to determine SoC type (a) qualification. This reference may be documented with identifiers, source, version, and date information.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#SafeUseInstructionType",
+      "source_resource": "https://w3id.org/eudpp/soc#SafeUseInstructionType",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Instruction related to the safe use of the product in relation to the substance.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#Situation",
+      "source_resource": "https://w3id.org/eudpp/soc#Situation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A contextualised state of affairs or configuration in which entities stand in a meaningful relation under specific conditions.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Generic superclass introduced for modelling contextual situations. It is not tied to a specific regulatory domain.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation",
+      "source_resource": "https://w3id.org/eudpp/soc#ThresholdEvaluation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents the evaluative layer between measurement and regulatory consequence. It does not replace ConcentrationInformation or RegulatoryThreshold; it records the result of applying a threshold rule to a concentration value in a given substance presence context.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult",
+      "source_resource": "https://w3id.org/eudpp/soc#ThresholdEvaluationResult",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Controlled result value produced by a threshold evaluation.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class is used as a controlled vocabulary for the outcome of threshold evaluation.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#TrackingThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#TrackingThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "A threshold value above which a substance of concern must be tracked or reported.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This class represents thresholds used to determine whether a substance of concern must be tracked or reported in the DPP context.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#analyticalMethod",
+      "source_resource": "https://w3id.org/eudpp/soc#analyticalMethod",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Textual description of the analytical method used to determine or verify the concentration.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#evaluatesAgainstThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#evaluatesAgainstThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a threshold evaluation to the regulatory threshold used for the comparison.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
+      "source_resource": "https://w3id.org/eudpp/soc#evaluatesConcentrationInformation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a threshold evaluation to the concentration information being evaluated.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#evaluationNote",
+      "source_resource": "https://w3id.org/eudpp/soc#evaluationNote",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Additional explanatory note associated with a threshold evaluation.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasApplicableRegulatoryThreshold",
+      "source_resource": "https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a concentration information object to a regulatory threshold that is applicable for its interpretation.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property indicates which regulatory thresholds are relevant for interpreting a reported concentration. It does not by itself express whether the threshold is met, exceeded, or violated.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasConcentrationReferenceBasis",
+      "source_resource": "https://w3id.org/eudpp/soc#hasConcentrationReferenceBasis",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a concentration information object to the reference basis used for calculating or reporting the concentration.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property clarifies the denominator or reference scope of the reported concentration. It is important because the regulatory interpretation of a concentration may differ depending on whether it is calculated against the final product, an article, a product part, or a material group.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasConcentrationReportingLevel",
+      "source_resource": "https://w3id.org/eudpp/soc#hasConcentrationReportingLevel",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Indicates the reporting granularity at which the concentration is described.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property expresses whether the concentration is reported at product, component, material, or spare-part level.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasInstructionType",
+      "source_resource": "https://w3id.org/eudpp/soc#hasInstructionType",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Indicates the declared type of instruction represented by an instruction information object.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property expresses whether the instruction concerns safe use, repair, reuse, disassembly, or recycling.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasLocationInformation",
+      "source_resource": "https://w3id.org/eudpp/soc#hasLocationInformation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a substance presence context to a location information object.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property attaches contextual location information to a substance presence context.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasPart",
+      "source_resource": "https://w3id.org/eudpp/soc#hasPart",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a product to one of its parts.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Inverse of isPartOfProduct.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasRegulatoryBasis",
+      "source_resource": "https://w3id.org/eudpp/soc#hasRegulatoryBasis",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a regulatory qualification to the external regulatory reference on which it is based.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Generic property linking a qualification to its supporting external legal or classificatory basis.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluation",
+      "source_resource": "https://w3id.org/eudpp/soc#hasThresholdEvaluation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a substance presence context to a threshold evaluation associated with it.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
+      "source_resource": "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a threshold evaluation to its result.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
+      "source_resource": "https://w3id.org/eudpp/soc#hasThresholdQuantitativeValue",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a regulatory threshold to its quantitative expression.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property links a regulatory threshold to an exact, maximum, or range quantitative value.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#instructionContent",
+      "source_resource": "https://w3id.org/eudpp/soc#instructionContent",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Textual content of an instruction related to a substance present in a product.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Free-text guidance attached to a substance presence context. The ESPR does not define a controlled vocabulary or formal structure for instruction content.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#isPartOfProduct",
+      "source_resource": "https://w3id.org/eudpp/soc#isPartOfProduct",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a product part to the product of which it is a part.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "This property expresses structural inclusion of a part within a product.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#isQualifiedByProductGroupList",
+      "source_resource": "https://w3id.org/eudpp/soc#isQualifiedByProductGroupList",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Links a SoC type (d) qualification to the product-group-specific external list or delegated act used as qualification basis.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#isQualifiedBySVHCList",
+      "source_resource": "https://w3id.org/eudpp/soc#isQualifiedBySVHCList",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Links a SoC type (a) qualification to the external SVHC Candidate List used as qualification basis.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#locationDescriptor",
+      "source_resource": "https://w3id.org/eudpp/soc#locationDescriptor",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Textual description of where the substance is located within the product.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Free-text description used because the JRC and ESPR do not define a controlled vocabulary or formal spatial model for location. This textual description may complement a structured reference to a product part.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#qualificationSource",
+      "source_resource": "https://w3id.org/eudpp/soc#qualificationSource",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Textual reference to the legal or regulatory source on which a qualification is based.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#refersToProductPartForConcentration",
+      "source_resource": "https://w3id.org/eudpp/soc#refersToProductPartForConcentration",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a concentration information object to the product part to which the reported concentration refers.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Optional property used when the reported concentration refers to a specific part of the product rather than to the whole product.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#refersToProductPartForLocation",
+      "source_resource": "https://w3id.org/eudpp/soc#refersToProductPartForLocation",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Links a location information object to the product part to which the reported location refers.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Optional property used when the reported location refers to a specific part of the product rather than to the whole product.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#substanceIdentifier",
+      "source_resource": "https://w3id.org/eudpp/soc#substanceIdentifier",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Identifier used to match a substance against regulatory lists.",
+          "language": "en"
+        },
+        {
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+          "text": "Functional interoperability property used for cross-checking against SVHC, CLP, POPs or other external references.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    },
+    {
+      "resource_iri": "https://w3id.org/eudpp/textile-soc#thresholdNote",
+      "source_resource": "https://w3id.org/eudpp/soc#thresholdNote",
+      "matching_statements": [
+        {
+          "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+          "text": "Additional explanatory note associated with a regulatory threshold.",
+          "language": "en"
+        }
+      ],
+      "before_source": "https://w3id.org/eudpp/textile-ontology",
+      "before_category": "projectDecision"
+    }
+  ]
+}

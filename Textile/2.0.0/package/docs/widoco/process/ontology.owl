@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:txtcon="https://w3id.org/eudpp/textile-connector#"
+   xmlns:txtprc="https://w3id.org/eudpp/textile-process#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CuttingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Confectioning parameter relevant to cutting operations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Cutting parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ConfectioningParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#IroningProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Confectioning or care-related process applying heat and pressure to shape, smooth or finish textile products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Ironing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ConfectioningProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasTextualValue">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Relates a process parameter setting to a free-text value when no controlled concept is available.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has textual value</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process value pattern, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#MechanicalFinishingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Finishing process using mechanical treatment to modify physical properties, surface behaviour, handle or appearance of textile materials or products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Mechanical finishing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Mechanical finishing can provide or modify physical properties such as handle, surface behaviour and structural performance. Links to observed durability parameters should be asserted only when the specific performance effect is known.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricStructuralCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#usesChemicalSubstance">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or execution to a specific textile chemical substance used in the process. This does not imply that the substance remains in the final product or is a substance of concern.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb2d80a7c011dcd25a67d657f9c6f01adcebd0cbb38da40c472352cce695ffee26a"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">uses chemical substance</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#NonwovenManufacturingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing process producing nonwoven textile structures by bonding or entangling fibres or filaments.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Nonwoven manufacturing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasProcessParameter">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type to a process parameter or target specification relevant to that process type. Concrete executions use txtprc:hasProcessParameterSetting.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has process parameter</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">concrete value belongs to a parameter setting.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DryingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care process involving drying of a textile product, including tumble drying or line drying.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Drying process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Drying conditions may influence dimensional stability and wrinkling, depending on temperature and drying method.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#DimensionalStability"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#Wrinkling"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#MachineryCharacteristic">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter or equipment characteristic describing machinery quality, configuration or components relevant to textile processing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Machinery characteristic</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">High quality machinery and components are modelled as contributing to consistent yarns and mechanical-related yarn performance.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#LiquorRatio">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Dyeing-process parameter expressing the relation between the quantity of treatment liquor and the mass of dry textile material. The reporting basis and unit must be stated explicitly.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Liquor ratio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#DyeingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">The JRC example uses litres of water per kilogram of textile material; it should not automatically be treated as a dimensionless ratio.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.6.1, printed pages 144-145, lines 4001-4031.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ProcessParameterSetting">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A concrete value or selected category assigned to a process parameter for a specific process execution.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Process parameter setting</rdfs:label>
+    <txtcon:sourceLocator xml:lang="en">docs/decisions/TXT-DEC-009.md</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningLimit">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter expressing the range of yarn counts achievable from a given fibre using a specific spinning system; it depends on the number and thickness of fibres or filaments twisted together.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning limit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Table 180 reports that spinning limit increases proportionally with the increase of fibre length, fibre strength and fibre fineness. These dependencies are represented as weak influence annotations, not as OWL causal axioms.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningMethodParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">When the selected method is represented directly as a controlled value on a spinning process, use txtprc:hasSpinningMethod with a txtprc:SpinningMethodConcept. This class is retained only when the method must be treated explicitly as a process parameter.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning method parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">The selected spinning method provides different levels of yarn evenness, softness and strength. Specific methods are represented as SKOS concepts.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnSoftness"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasProcessMethod">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or concrete execution to a controlled SKOS concept identifying the selected process method.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb192ffd76820a3a8b1bb05a52864fc8b5d8008715965c14d0696123ad2065f77f3"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has process method</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#ProcessMethodConcept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FixationCondition">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Dyeing or printing parameter describing conditions used to fix a dye, pigment, print or finish to the textile material.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fixation condition</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#DyeingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DefectControl">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter or quality-control practice aimed at preventing or detecting defects during textile processing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Defect control</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Defect control is modelled as supporting improved product performance by preventing imperfections in yarn and fabric.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+    <txtcon:typicallyReducesLikelihoodOf rdf:resource="https://w3id.org/eudpp/textile-durability#FabricBreakdown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#WeavingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing process in which two sets of yarns are interlaced at right angles on a loom.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Weaving process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Weaving is generally used for relatively more rigid and stronger fabrics, depending on yarns, weave pattern and product application.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#FabricStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricRigidity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CareMethodConcept">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">SKOS concept used as a controlled value for a textile care method.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Care method concept</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessMethodConcept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FinishingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile process applied to modify appearance, handle, function or physical properties of textile materials or products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Finishing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FabricManufacturingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Manufacturing process transforming yarns, fibres or filaments into fabric structures.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fabric manufacturing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PrintingBinderUse">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The binder substance or chemical role should be represented in TEXTILE_ASSOCIATED_MATERIALS. This parameter only records the process-use aspect.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Printing binder use</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#PrintingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CellulosicChemicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Chemical recycling process for cellulosic textile feedstock, producing cellulosic pulp or another recovered cellulosic feedstock.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Cellulosic chemical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#MaintenanceAndRepairProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">This class groups processes that are related to lifetime extension but are not assessment indicators. Product lifetime itself is represented in TEXTILE_INDICATOR.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Maintenance and repair process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DyeConcentration">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Dyeing parameter describing the concentration of dye or colourant used in a dyeing process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Dye concentration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#DyeingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 12.3, printed page 227, lines 6506-6516.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#rotorOpenEndSpinning">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodConcept"/>
+    <rdfs:comment xml:lang="en">Spinning method associated with bulkier yarns and reduced strength compared with ring spinning in the JRC discussion.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Rotor open-end spinning</rdfs:label>
+    <skos:altLabel xml:lang="en">Open-end spinning</skos:altLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <skos:notation>SPIN_ROTOR_OPEN_END</skos:notation>
+    <skos:prefLabel xml:lang="en">Rotor open-end spinning</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#knittingMethod">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodConcept"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing method based on knitting.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Knitting</rdfs:label>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <skos:notation>FABRIC_METHOD_KNITTING</skos:notation>
+    <skos:prefLabel xml:lang="en">Knitting</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb11632545a6b402e5e68e3ce79a5f8a3e4a7593768adddd7424f8debb8cc2e459a">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#appliesTo">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or concrete process execution to a textile product to which it applies, including a product used as a component of another product.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb1e4c470cd5695671379b2f719ea69fdecbe43980c6e42fda42054cceea01bb9ed"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">applies to</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process participation pattern; domain motivation from JRC Section 3.3.1, Table 8</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CuttingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Confectioning process in which textile materials are cut into components or pattern pieces.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Cutting process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ConfectioningProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Precision of cuts is modelled as influenced by the cutting process and relevant to final appearance and physical durability.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#CutPrecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#WeavePatternSpecification">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process target specification stating the weave pattern to be produced.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Weave pattern specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricConstructionParameter"/>
+    <txtcon:modellingNote xml:lang="en">The JRC identifies weave pattern as one of the weaving parameters affecting fabric characteristics. The relation is represented as weak influence annotations rather than as deterministic OWL axioms.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">The process-side target remains distinct from the resulting characteristic represented in Textile Structure.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">Weave pattern is a fabric construction parameter that may affect visual appearance, permeability, drape and handle. The relation is represented as weak influence because the direction depends on the specific weave and yarns.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricAppearance"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricBreathability"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricDrape"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricHandle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DyeingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Wet processing process used to impart colour to textile fibres, yarns, fabrics or finished products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Dyeing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#WetProcessingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Dyeing gives colour-related characteristics, while colour fastness depends on dye type, fibre type, process conditions and finishing.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#ColourFastness"/>
+    <txtprc:typicallyUsesChemicalFunction rdf:resource="https://w3id.org/eudpp/textile-associated-materials-codelists#dye"/>
+    <txtprc:typicallyUsesChemicalUseCategory rdf:resource="https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#InputYarnCountSpecification">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process target or input specification stating the yarn count or yarn linear-density class selected for fabric manufacturing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Input yarn count specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricConstructionParameter"/>
+    <txtcon:modellingNote xml:lang="en">The JRC identifies yarn count as one of the weaving parameters affecting fabric characteristics. The exact target characteristic depends on fabric construction, yarn type and end use; therefore only weak influence annotations are used.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">The process-side target remains distinct from the resulting characteristic represented in Textile Structure.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">Yarn count is identified by the JRC as a fabric manufacturing parameter affecting fabric characteristics. A broad weak influence target is used here because the specific effect depends on yarn type, fabric construction and end use.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FabricManufacturingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">This superclass covers process-side parameters used during fabric manufacturing. It should not be used to represent the resulting structural characteristics of the fabric as a product object.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fabric manufacturing parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TextileCareInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Product instruction describing recommended textile care operations or conditions, such as washing temperature and cycle, detergent use, drying, ironing, bleaching or professional cleaning.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Textile care instruction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DocumentFormattedProperty"/>
+    <txtcon:modellingNote xml:lang="en">The instruction is product information. User compliance with that instruction is represented separately as a Textile Context observation.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#YarnManufacturingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Manufacturing process transforming fibres or filaments into yarns.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Yarn manufacturing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process">
+    <dcterms:bibliographicCitation xml:lang="en">EU DPP Textile Process Ontology. Version 2.0.0 candidate.</dcterms:bibliographicCitation>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</dcterms:created>
+    <dcterms:creator xml:lang="en">Andreas Schneider</dcterms:creator>
+    <dcterms:creator xml:lang="en">BOUGACHA Racem</dcterms:creator>
+    <dcterms:creator xml:lang="en">Elio Hbeich</dcterms:creator>
+    <dcterms:creator xml:lang="en">Ivo Ladenius</dcterms:creator>
+    <dcterms:creator xml:lang="en">Jan Merckx</dcterms:creator>
+    <dcterms:creator xml:lang="en">Piero de Sabbata</dcterms:creator>
+    <dcterms:description xml:lang="en">Ontology module for textile process types, concrete process executions, process parameters, target specifications and parameter settings across manufacturing, care, repair and end-of-life stages.</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-06</dcterms:issued>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-27</dcterms:modified>
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf"/>
+    <dcterms:title xml:lang="en">EU DPP Textile Process Ontology</dcterms:title>
+    <vann:preferredNamespacePrefix>txtprc</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>https://w3id.org/eudpp/textile-process#</vann:preferredNamespaceUri>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment xml:lang="en">The module separates process types from concrete executions, parameter types from concrete settings, and process controls from target product specifications. Product characteristics and assessment results remain in their dedicated modules.</rdfs:comment>
+    <rdfs:label xml:lang="en">EU DPP Textile Process Ontology</rdfs:label>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-associated-materials"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-connector"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-core"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-dpp-mireot"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-durability"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-event-mireot"/>
+    <owl:imports rdf:resource="https://w3id.org/eudpp/textile-structure"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/eudpp/textile-process/1.1.2"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/eudpp/textile-process/2.0.0"/>
+    <owl:versionInfo>Version 2.0.0 candidate</owl:versionInfo>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, pages 27-29, Table 8, lines 536-547. JRC Section 9.2.1.1, pages 110-111, lines 2889-2910, Figure 22. JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248. JRC Section 9.2.3.2-9.2.3.3, pages 129-130, lines 3466-3483; Annex 13.10.1.5, pages 473-474, lines 11273-11326. JRC Section 3.3.1, page 29, Table 8, line 547; Annex 13.10.1, pages 481-482, lines 11685-11730.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#ontologyModule"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasQuantitativeValue">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a concrete process parameter setting to a quantitative value containing a number, a measurement unit and, when useful, a quantity kind.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has quantitative value</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-connector#QuantitativeValue"/>
+    <txtcon:sourceLocator xml:lang="en">docs/decisions/TXT-DEC-003.md</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ConfectioningProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Manufacturing process transforming fabrics and components into finished textile apparel or textile articles, including cutting, sewing and make-up operations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Confectioning process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#airJetSpinning">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodConcept"/>
+    <rdfs:comment xml:lang="en">Spinning method associated in the JRC discussion with highly uniform and smooth yarns, but less durable yarns for yarn strength.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Air-jet spinning</rdfs:label>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <skos:notation>SPIN_AIR_JET</skos:notation>
+    <skos:prefLabel xml:lang="en">Air-jet spinning</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PrintingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile process applying colour, patterns or markings to textile materials or products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Printing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#WetProcessingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Printing gives colour-related characteristics and may influence colour fastness depending on process and material choices.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#ColourFastness"/>
+    <txtprc:typicallyUsesChemicalFunction rdf:resource="https://w3id.org/eudpp/textile-associated-materials-codelists#pigment"/>
+    <txtprc:typicallyUsesChemicalUseCategory rdf:resource="https://w3id.org/eudpp/textile-associated-materials-codelists#performanceChemical"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasCategoricalValue">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a process parameter setting to a controlled SKOS concept used as its categorical value.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has categorical value</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process value pattern: controlled categorical values are represented as SKOS concepts rather than free text</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PolycottonThermoChemicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Chemical or thermo-chemical recycling process for polycotton blends, producing cellulosic pulp, polyester fibres, polymers or monomers depending on the applied technique.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Polycotton thermo-chemical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TextileProcessExecution">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A concrete occurrence of a textile process applied to one or more products, including products serving an intermediate or component role, materials or components.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Textile process execution</rdfs:label>
+    <txtcon:sourceLocator xml:lang="en">docs/decisions/TXT-DEC-008.md</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodConcept">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">SKOS concept used as a controlled value for a fabric manufacturing method.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fabric manufacturing method concept</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessMethodConcept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#KnittingPatternSpecification">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process target specification stating the knitting structure or pattern to be produced.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Knitting pattern specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricConstructionParameter"/>
+    <txtcon:modellingNote xml:lang="en">Knitting pattern is kept as a process-side construction parameter. Its relation to fabric elasticity and drape depends on the knitting structure and yarn choice.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">The process-side target remains distinct from the resulting characteristic represented in Textile Structure.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricDrape"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricElasticity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningMethodScheme">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:comment xml:lang="en">Controlled vocabulary of spinning methods relevant to yarn manufacturing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning method scheme</rdfs:label>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#airJetSpinning"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#ringSpinning"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#rotorOpenEndSpinning"/>
+    <skos:prefLabel xml:lang="en">Spinning method scheme</skos:prefLabel>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#isRepresentedByProductEvent">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Links a concrete textile process execution to the product event that records or represents it.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">is represented by product event</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+    <txtcon:modellingNote xml:lang="en">This bridge does not assert that a process execution is itself an event. It links the execution to an event resource that records or represents it.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DryingTemperature">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care parameter describing drying temperature used during care.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Drying temperature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CareParameter"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TextileProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A type of process involved in manufacturing, transforming, using, caring for, repairing, reusing, recycling or treating a textile product, including a product used as a component of another product.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Textile process</rdfs:label>
+    <txtcon:modellingNote xml:lang="en">The JRC describes process families across lifecycle stages; the ontology introduces a common superclass.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1acdce270cb3387087efda101ffdbc1f9322e726a1130ae677ef7b51cc1c95262">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="cb1319908c0727a410ccd35b456f933ea5f8ecd167f342bb9fe8bd6a5f578069e26"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#WetProcessingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile manufacturing process involving liquid media, chemical treatment, washing, dyeing, printing or finishing operations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Wet processing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DigitalTextileEndOfLifeInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile end-of-life instruction supplied in digital form, for example through a Digital Product Passport or a linked digital resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Digital textile end-of-life instruction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DigitalInstruction"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileEndOfLifeInstruction"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.3.8, printed page 359, lines 9662-9688; JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2183-2192; JRC DPP Study, Section 7.3, printed page 49, end-of-life treatment information data point.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CoatingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Finishing process applying a coating layer or functional surface treatment to a textile material or product.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Coating process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#parameterOfProcess">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a process parameter or target specification to the textile process type that it configures or specifies.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">parameter of process</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eudpp/textile-process#hasProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">Inverse of the corrected hasProcessParameter pattern</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#weavingMethod">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodConcept"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing method based on weaving.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Weaving</rdfs:label>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <skos:notation>FABRIC_METHOD_WEAVING</skos:notation>
+    <skos:prefLabel xml:lang="en">Weaving</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DyeingTemperature">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Dyeing parameter describing the temperature used during a dyeing process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Dyeing temperature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#DyeingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.6.1, printed pages 144-145, lines 4001-4031; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specific spinning techniques such as ring spinning, rotor open-end spinning and air-jet spinning are represented as SKOS concepts in the spinning method scheme.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#YarnManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasProcessExecution">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile product, including a product used as a component of another product, to a concrete process execution applied to it or recorded in its lifecycle.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has process execution</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process execution pattern; domain motivation from JRC Section 3.3.1, Table 8</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TargetFabricMassPerUnitArea">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process target specification stating the intended mass of fabric per unit surface area.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Target fabric mass per unit area</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricConstructionParameter"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind: quantities:SUDE (surface density).</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">Fabric weight is represented here as a process-side target or parameter. The influence annotations point to structure-side fabric characteristics rather than merging both concepts.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">The process-side target remains distinct from the resulting characteristic represented in Textile Structure.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">This class is not declared equivalent to txtstr:FabricMassPerUnitArea, because this module represents the process-side parameter or target setting, whereas TEXTILE_STRUCTURE represents the resulting fabric characteristic.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricBreathability"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricDrape"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricInsulation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#HumidityControl">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter describing control of humidity during textile manufacturing, processing or care.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Humidity control</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Proper humidity control can prevent static electricity, material processing issues, equipment damage and fabric shrinkage.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CareParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to textile care, including washing, drying, ironing, bleaching, cleaning or storage conditions.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Care parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1d1b1960636caec6eaddf0a517c3101a6c666a4a1f6558d3bf239a13edb0286bd">
+    <rdf:first rdf:resource="https://w3id.org/eudpp#MaterialOfComposition"/>
+    <rdf:rest rdf:nodeID="cb22ab5c3e091c3f8570a255409f74f0d16899268ebc487074082625efb1e28937a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb22ab5c3e091c3f8570a255409f74f0d16899268ebc487074082625efb1e28937a">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalSubstance"/>
+    <rdf:rest rdf:nodeID="cb7c543b6609a1bebd7387c0e49f3b95e0b01a246a940f82b02af5066c3bc21a71"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Recycling process using chemical transformation to recover material from textile products or textile waste.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Chemical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#RecyclingProcess"/>
+    <txtcon:modellingNote xml:lang="en">This class represents a recycling process type. Product recyclability, barriers, compatibility and recyclability assessment belong to the Textile Recyclability module.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FabricConstructionParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process-side parameter describing how a fabric construction is specified or controlled during manufacturing. The resulting observable construction characteristics are represented in TEXTILE_STRUCTURE.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fabric construction parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessTargetSpecification"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">This superclass separates fabric-construction process parameters from broader fabric manufacturing parameters and clarifies their relation to fabric-level structural characteristics.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#LandfillingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">End-of-life process involving disposal of textile products or textile waste in landfill.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Landfilling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#EndOfLifeProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#UseAndCareProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process occurring during the use or care phase of a textile product, including wearing, washing, drying, cleaning, ironing and storage-related care.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Use and care process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SewingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Confectioning parameter relevant to sewing operations and seam formation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Sewing parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ConfectioningParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ThermoMechanicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Recycling process in which thermoplastic textile polymers are remelted or otherwise thermally and mechanically reprocessed into granulate or fibre material.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Thermo-mechanical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#RecyclingProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ConfectioningParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to garment making, cutting, sewing, assembly or make-up operations.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Confectioning parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#executesProcessType">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a concrete textile process execution to the textile process type that it instantiates.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">executes process type</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <txtcon:sourceLocator xml:lang="en">docs/decisions/TXT-DEC-007.md</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningProductivity">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter expressing the finest yarn count producible from a given fibre while maintaining acceptable performance and minimising end-breakage rates.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning productivity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Table 180 reports that spinning productivity increases with the increase of fibre length, fibre strength and fibre fineness. These dependencies are represented as weak influence annotations, not as OWL causal axioms.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Annex 13.10.2, Table 179, printed page 489; table caption at line 11877.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to spinning or yarn manufacturing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:comment xml:lang="en">Controlled vocabulary of fabric manufacturing methods.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fabric manufacturing method scheme</rdfs:label>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#knittingMethod"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#nonwovenMethod"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/eudpp/textile-process#weavingMethod"/>
+    <skos:prefLabel xml:lang="en">Fabric manufacturing method scheme</skos:prefLabel>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#producesOutput">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or execution to a textile product produced as an output, including a product that may subsequently be used as a component of another product.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb16c0581fe57b49781ba87178e42f7f039ba2cc6000ace02fc8684fee8fcc039a8"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">produces output</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PrintingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to textile printing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Printing parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#WashingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care process involving laundering or washing of a textile product.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Washing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Washing conditions may influence colour fastness and dimensional stability during use and care.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#ColourFastness"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#DimensionalStability"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2d80a7c011dcd25a67d657f9c6f01adcebd0cbb38da40c472352cce695ffee26a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb22009d16b4740188b177511b9c43e134657d5034004ddd529dd5ac227309e9eb6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ChemicalFinishingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Finishing process using chemical substances or treatments to confer or modify functional properties of textile materials or products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Chemical finishing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Chemical finishing can provide functional properties such as water repellency, flame retardancy, antimicrobial effects or UV protection. The exact relation should be asserted through the chemical role represented in TEXTILE_ASSOCIATED_MATERIALS and through specific durability parameters when known.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningTension">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Spinning parameter describing tension during spinning.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning tension</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Controlling optimal spinning tension is important for yarn strength and uniformity; uneven tension can cause breakages during subsequent processing.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasSpinningMethod">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a spinning process type or concrete execution to a controlled spinning-method concept.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb22bd012d742256512653d0cf3fe6e379b012107e412a64f22e6bcb3c1e7c04c1c"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has spinning method</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodConcept"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp/textile-process#hasProcessMethod"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#EndOfLifeProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process occurring at or after the end of the use phase of a textile product, including reuse, recycling, incineration or landfilling.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">End-of-life process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.1.14, printed pages 481-482, lines 11685-11730; JRC Preparatory Study, Section 3.3.1, printed page 29, lines 547-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PyrolysisGasificationRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Thermo-chemical process producing syngas or pyrolysis oil that may be used as feedstock for material production. Use of the output as fuel is energy recovery and is not represented as recycling.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Pyrolysis or gasification recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ProcessMethodConcept">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">SKOS concept used as a controlled value for a textile process method or technique.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Process method concept</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasCareInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile product to product-specific care instructions.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has care instruction</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileCareInstruction"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp#hasProperty"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2144-2173; JRC Preparatory Study, Section 13.7.2.8, printed page 404, lines 10440-10458.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TemperatureControl">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter describing control of temperature during textile manufacturing, processing or care.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Temperature control</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">Temperature control is modelled as a process parameter influencing yarn processing quality and mechanical-related characteristics.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SewingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Confectioning process joining textile parts or components using stitches or seams.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Sewing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ConfectioningProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Sewing process characteristics influence seam strength and final product durability.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#SeamStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#SewingCharacteristic"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#typicallyUsesChemicalFunction">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">Weak annotation relation indicating that a textile process type typically uses a chemical function represented in Textile Associated Materials.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">typically uses chemical function</rdfs:label>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CoatingAdditiveUse">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">The additive substance or chemical role should be represented in TEXTILE_ASSOCIATED_MATERIALS. This parameter only records the process-use aspect.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Coating additive use</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CoatingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ringSpinning">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodConcept"/>
+    <rdfs:comment xml:lang="en">Spinning method associated with fine and strong yarns due to good fibre control, orientation and alignment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Ring spinning</rdfs:label>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <skos:notation>SPIN_RING</skos:notation>
+    <skos:prefLabel xml:lang="en">Ring spinning</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TwistNumber">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Spinning parameter describing the number of twists inserted into a yarn.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Twist number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">The number of twists is treated as a process parameter closely related to twist level. Its effects are context-dependent and mediated by fibre characteristics.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnSoftness"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CleaningProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care process involving domestic laundering, professional cleaning, dry cleaning or wet cleaning of a textile product.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Cleaning process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasFabricManufacturingMethod">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a fabric manufacturing process type or concrete execution to a controlled fabric-manufacturing-method concept.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb1c56a1d3e4a3cb1b0180214b70feec1db00f540602e83b2e2bafaf6d75989537a"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has fabric manufacturing method</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodConcept"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp/textile-process#hasProcessMethod"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ProcessTargetSpecification">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process-side specification stating a target product or intermediate-product characteristic to be achieved by a process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Process target specification</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:modellingNote xml:lang="en">A target specification is not the resulting measured product characteristic.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">motivated by JRC Table 182.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#IroningTemperature">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care parameter describing ironing temperature.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Ironing temperature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CareParameter"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#StorageProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Use-phase or care-related process involving storage of a textile product under specified or unspecified conditions.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Storage process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Storage conditions such as excessive humidity or direct sunlight may affect textile durability. Detailed environmental conditions are represented in the Textile Context module.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#ColourFastness"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#FabricBreakdown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SyntheticFibreChemicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Chemical recycling process for synthetic textile feedstock such as polyester or polyamide 6, producing recovered monomers, oligomers or polymers.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Synthetic-fibre chemical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ChemicalRecyclingProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 9.2.5.1, Table 50, printed pages 137-138; table caption at line 3774; supporting discussion on printed page 139, lines 3782-3804.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#concernsProduct">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a concrete textile process execution to the textile product that it concerns, including a product used as a component of another product.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">concerns product</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eudpp/textile-process#hasProcessExecution"/>
+    <txtcon:sourceLocator xml:lang="en">clearer replacement for the ambiguous local name concerns.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasEndOfLifeInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile product to product-specific instructions for its end-of-life handling.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has end-of-life instruction</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileEndOfLifeInstruction"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/eudpp#hasProperty"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 13.3.8, printed page 359, lines 9662-9688; JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2183-2192; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546; JRC DPP Study, Section 7.3, printed page 49, end-of-life treatment information data point.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedRelation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1c56a1d3e4a3cb1b0180214b70feec1db00f540602e83b2e2bafaf6d75989537a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb2611744d4a84483d71df6a01f8a48d7fc37cd9274a543d1925b543a4e3c643ebd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ReuseProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">End-of-life or post-use process enabling a textile product to be used again without major material transformation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Reuse process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#EndOfLifeProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#RepairProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Repair can extend the usable lifetime of a textile product, but this module does not import TEXTILE_INDICATOR. Links from repair to product lifetime indicators should be handled in TEXTILE_INDICATOR or in a cross-module relation layer.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Repair process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#MaintenanceAndRepairProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Repair can extend the usable lifetime of a textile product. Product lifetime indicators are represented in TEXTILE_INDICATOR, and any formal link should be handled there or in a cross-module relation layer.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">This class represents a repair activity or process type. Repairability capability, repair service information and repairability assessment belong to Textile Repairability.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.3.2, printed page 129, lines 3466-3476; JRC Preparatory Study, Section 9.2.3.3, printed pages 129-130, lines 3477-3484; JRC Preparatory Study, Section 13.10.1.5, printed pages 473-474, lines 11273-11326.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#UseWearProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Use-phase process corresponding to wearing, using or exposing a textile product during its intended use.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Use or wear process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#UseAndCareProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#WashingTemperature">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care parameter describing the temperature used in a washing process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Washing temperature</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CareParameter"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind for a Celsius temperature value: quantities:TEMC; expected unit: units:degreeCelsius.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb14739f69e36243337207e33605b3edb52c705f6820d8be9078b610bbce04ab88a">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#RecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">End-of-life process that transforms textile products, textile waste or recovered textile materials into reusable fibre or material feedstock.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#EndOfLifeProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 13.10.1.14, printed pages 481-482, lines 11685-11730; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#settingForProcessParameter">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a concrete process parameter setting to the parameter type or target specification that it instantiates.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">setting for process parameter</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#hasProcessParameterSetting">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a concrete process execution to a concrete parameter setting used in that execution.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">has process parameter setting</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process parameter/method modelling pattern; domain motivation from JRC Table 8 and Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#CoatingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to textile coating or surface treatment.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Coating parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb22bd012d742256512653d0cf3fe6e379b012107e412a64f22e6bcb3c1e7c04c1c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb23dcfa03c93ec129229db88bc38c74ade39c2bcfc827da36b11e09cbf205fae37"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#YarnConditioning">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Spinning or post-spinning parameter corresponding to yarn conditioning, such as steaming, that may enhance flexibility, strength or evenness.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Yarn conditioning</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <skos:altLabel xml:lang="en">Conditioning</skos:altLabel>
+    <skos:altLabel xml:lang="en">Steaming</skos:altLabel>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Proper yarn conditioning can enhance flexibility, strength and evenness.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnElasticity"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnUniformity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinSpeed">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care parameter describing spin speed used in laundering.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spin speed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CareParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningMethodConcept">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">SKOS concept used as a controlled value for a spinning method.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning method concept</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessMethodConcept"/>
+    <txtcon:sourceLocator xml:lang="en">Textile Process modelling pattern for controlled process methods; domain motivation from JRC Section 3.3.1, Table 8 and Annex Table 181</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FinishingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to textile finishing, including chemical and mechanical finishing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Finishing parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#nonwovenMethod">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodConcept"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing method based on nonwoven production techniques.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Nonwoven manufacturing</rdfs:label>
+    <skos:inScheme rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <skos:notation>FABRIC_METHOD_NONWOVEN</skos:notation>
+    <skos:prefLabel xml:lang="en">Nonwoven manufacturing</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingMethodScheme"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, Table 8, printed pages 27-29; table caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#directExtraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb22009d16b4740188b177511b9c43e134657d5034004ddd529dd5ac227309e9eb6">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb11632545a6b402e5e68e3ce79a5f8a3e4a7593768adddd7424f8debb8cc2e459a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#KnittingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Fabric manufacturing process in which yarns are interlooped using needles to form fabric on knitting machines.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Knitting process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Knitting is generally used for relatively more elastic fabrics, depending on yarns, knitting pattern and product application.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricElasticity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb23c14a97509d4da9569bd0baa5c88b1e6898eab84dfd089e9b59ce35e4ad161d7">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#ProcessMethodConcept"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#LaminatingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Finishing or assembly process joining textile materials with layers or membranes.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Laminating process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#representsProcessExecution">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Links a product event to the textile process execution it records or represents.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/eudpp#ProductEvent"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">represents process execution</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/eudpp/textile-process#isRepresentedByProductEvent"/>
+    <txtcon:modellingNote xml:lang="en">This bridge does not assert that a process execution is itself an event. It links the execution to an event resource that records or represents it.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SpinningSpeed">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Spinning parameter describing the speed of spinning.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Spinning speed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Higher spinning speeds can cause breakages and may negatively influence yarn strength depending on process conditions.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1e4c470cd5695671379b2f719ea69fdecbe43980c6e42fda42054cceea01bb9ed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb149f800b066568e25d5509b344edabdd369f7d3acad927bbf0c33e6a3cdb0e60f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb12194590e6f084ed2e1651bccd9a655d1756ba257fd25b4835ccca77640949238">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb149f800b066568e25d5509b344edabdd369f7d3acad927bbf0c33e6a3cdb0e60f">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb14739f69e36243337207e33605b3edb52c705f6820d8be9078b610bbce04ab88a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-structure#FibreFineness">
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningLimit"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningProductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb16e1d2375830254887fdc06f341653e0721742a85f12f40348a13c3264789744e">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:nodeID="cb1c7fe47e93ae36f3266d42a43c4ea46ec6556e54687e649ea7b1ac94d8341c8f6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TargetFabricDensity">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process target specification stating the intended thread or loop density of the resulting fabric.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Target fabric density</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FabricConstructionParameter"/>
+    <txtcon:modellingNote xml:lang="en">Fabric density is related to thread count or loop density. Its effects on breathability, handle and appearance are mediated by fabric type and construction.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">The process-side target remains distinct from the resulting characteristic represented in Textile Structure.</txtcon:modellingNote>
+    <txtcon:modellingNote xml:lang="en">This class is not declared equivalent to txtstr:ThreadCount. FabricDensity is process-side and may cover thread density, loop density or related construction-density settings; ThreadCount is the structure-side fabric characteristic currently represented in TEXTILE_STRUCTURE.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 493-495, lines 11902-11920; JRC Preparatory Study, relevant section, Table 182, printed page 302; caption line 9114.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricAppearance"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricBreathability"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#FabricHandle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TextileEndOfLifeInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2026-05/Textiles_DPP_20260513.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Product instruction supporting appropriate end-of-life handling of a textile product, including collection, sorting, preparation for reuse, material separation, recycling or another stated waste-management route.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Textile end-of-life instruction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DocumentFormattedProperty"/>
+    <txtcon:modellingNote xml:lang="en">This class represents general product instructions. Substance-triggered lifecycle instructions remain represented through the SoC instruction model and should not be duplicated here.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 13.3.8, printed page 359, lines 9662-9688; JRC Preparatory Study, Section 6.3.3, printed page 86, lines 2183-2192; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546; JRC DPP Study, Section 7.3, printed page 49, end-of-life treatment information data point.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FibrePreparationProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Manufacturing process preparing fibres for yarn manufacturing or textile production.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Fibre preparation process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DyeingParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter relevant to textile dyeing.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Dyeing parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingParameter"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessControlParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#SeamConstructionParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Sewing parameter describing seam type, stitch, thread, construction or other seam-related configuration.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Seam construction parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SewingParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#usesChemicalUseCategory">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or execution to the use category of a chemical used in that process, such as process chemical or performance chemical.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb2d80a7c011dcd25a67d657f9c6f01adcebd0cbb38da40c472352cce695ffee26a"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">uses chemical use category</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept"/>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#FinishingTreatmentParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Process parameter describing a finishing treatment type, intensity, duration or configuration.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Finishing treatment parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#FinishingParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1517c9e0b2776158feecb9be8b0ea3c6346ca33b639d27f6adfbd979c9e3a3170">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-core#TextileProduct"/>
+    <rdf:rest rdf:nodeID="cb1d1b1960636caec6eaddf0a517c3101a6c666a4a1f6558d3bf239a13edb0286bd"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DigitalTextileCareInstruction">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile care instruction supplied in a digital form, for example through a Digital Product Passport or a linked digital resource.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Digital textile care instruction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp#DigitalInstruction"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileCareInstruction"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 6.3.2, printed page 85, lines 2153-2173.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#PackagingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">PackagingProcess is included so that packaging material can be used as an input in a process context without treating packaging material as an input to ordinary textile manufacturing processes.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Packaging process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#reconstructedEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#supportingEvidence"/>
+    <txtcon:sourceLocator xml:lang="en">Textile ontology project process-modelling decision; domain evidence: JRC Table 8, printed pages 27-29, caption line 546; Table 168, printed page 459, caption line 10991; Annex 13.11.9, printed page 512, lines 12384-12387.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#usesInput">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or execution to a textile product, including a product serving an intermediate or component role, or to a material of composition, chemical substance, non-textile component or packaging material used as an input.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb1aca516aa683c67134c8bcc61480222797ad36ff5f44737687646c3224ee5ad2b"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">uses input</rdfs:label>
+    <rdfs:range rdf:nodeID="cb1b29e0bf8aae5d275c8392d054318b2a16802727d46667349aaa0d82ec838cf56"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TextileManufacturingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Textile process involved in the manufacturing or transformation of textile fibres, yarns, fabrics, assemblies or finished textile products.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Textile manufacturing process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.1.1, printed page 110, lines 2889-2910; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#TwistLevel">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Spinning parameter describing the degree or level of twist inserted into a yarn.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Twist level</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#SpinningParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Twist level may enhance yarn tenacity and pilling resistance, diminish yarn softness and elasticity, and increase spirality. Yarn strength increases with twist to a peak and may then decrease.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 13.10.2, printed pages 492-493, lines 11889-11901; JRC Preparatory Study, relevant section, Table 181, printed page 302; caption line 9113.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-durability#PillingResistance"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnElasticity"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnSoftness"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-structure#YarnStrength"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ProcessControlParameter">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A process parameter that controls, configures or monitors the execution conditions of a textile process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Process control parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <txtcon:sourceLocator xml:lang="en">motivated by JRC Table 181 and care-process parameters.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb192ffd76820a3a8b1bb05a52864fc8b5d8008715965c14d0696123ad2065f77f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb164298d81f13fd3b9d3be3d15f80dc41b51a4522374704a21f191aedf082a0768"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#ProcessParameter">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A semantic type for a configurable process condition, method choice, control variable or target specification relevant to a textile process.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Process parameter</rdfs:label>
+    <txtcon:sourceLocator xml:lang="en">domain motivation from JRC Annex 13.10.2, pages 492-493, Table 181, lines 11889-11901. JRC Annex 13.10.2, pages 493-495, Table 182, lines 11902-11920. JRC Section 9.2.2.2, pages 125-126, lines 3296-3327; Annex 13.7.2, pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#DyeingTime">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Dyeing parameter describing the duration of a dyeing process or dyeing step.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Dyeing time</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#DyeingParameter"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#explicitEvidence"/>
+    <txtcon:evidenceStatus rdf:resource="https://w3id.org/eudpp/textile-connector#stronglyImpliedEvidence"/>
+    <txtcon:modellingNote xml:lang="en">Expected SI quantity kind: quantities:TIME. Units such as units:second or units:minute may be used.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 9.2.6.1, printed pages 144-145, lines 4001-4031; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#modellingAbstraction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#IncinerationProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">End-of-life process involving combustion of textile products or textile waste.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Incineration process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#EndOfLifeProcess"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Section 3.3.1, Table 8, printed pages 27-29; table caption at line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#MechanicalRecyclingProcess">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Recycling process mechanically transforming textile products or textile waste into reusable fibres or materials.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Mechanical recycling process</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#RecyclingProcess"/>
+    <txtcon:modellingNote xml:lang="en">This class represents a recycling process type. Product recyclability, barriers, compatibility and recyclability assessment belong to the Textile Recyclability module.</txtcon:modellingNote>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 3.3.1, printed pages 27, 29, lines 536-547; JRC Preparatory Study, Section 3.3.1, Table 8, printed page 27; caption line 546.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#usesChemicalFunction">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relates a textile process type or execution to the technical function of a chemical used in that process.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="cb2d80a7c011dcd25a67d657f9c6f01adcebd0cbb38da40c472352cce695ffee26a"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">uses chemical function</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept"/>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2611744d4a84483d71df6a01f8a48d7fc37cd9274a543d1925b543a4e3c643ebd">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#FabricManufacturingProcess"/>
+    <rdf:rest rdf:nodeID="cb17a0bf22122c67e060c9f3d1084fed87715d09c7917ca6c5435b2815527a2b0fc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb15a43c9e10d511571faa1727fc827ff29d62a64cfc2708fa3c4ad692b93dc9c76">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1319908c0727a410ccd35b456f933ea5f8ecd167f342bb9fe8bd6a5f578069e26">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb16e1d2375830254887fdc06f341653e0721742a85f12f40348a13c3264789744e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb164298d81f13fd3b9d3be3d15f80dc41b51a4522374704a21f191aedf082a0768">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb12194590e6f084ed2e1651bccd9a655d1756ba257fd25b4835ccca77640949238"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb23dcfa03c93ec129229db88bc38c74ade39c2bcfc827da36b11e09cbf205fae37">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#SpinningProcess"/>
+    <rdf:rest rdf:nodeID="cb1646a86fd77e0b29f62dee8d2b6dc09461b4a963fda36b18befcd790f34ac6fc1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#StorageConditionParameter">
+    <dcterms:source rdf:resource="https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Care parameter describing storage-related conditions, such as humidity, sunlight exposure, folding or hanging.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">Storage condition parameter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/eudpp/textile-process#CareParameter"/>
+    <txtcon:sourceLocator xml:lang="en">JRC Preparatory Study, Section 9.2.2.2, printed page 125, lines 3296-3327; JRC Preparatory Study, Section 13.7.2, printed pages 394-395, lines 10227-10248.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#adaptedDefinition"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb20f67adf540f68c9dbe3ebbc907a772b91708fa5b10ae8f6e1f6534bd582164e6">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb15a43c9e10d511571faa1727fc827ff29d62a64cfc2708fa3c4ad692b93dc9c76"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-structure#FibreLength">
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningLimit"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningProductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-structure#FibreStrength">
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningLimit"/>
+    <txtcon:typicalInfluenceOn rdf:resource="https://w3id.org/eudpp/textile-process#SpinningProductivity"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1cdb50949823881e24e2d74a2335b7bf1a013bb4377f8f075c42c5c7c9460d0eb">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1c7fe47e93ae36f3266d42a43c4ea46ec6556e54687e649ea7b1ac94d8341c8f6">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameter"/>
+    <rdf:rest rdf:nodeID="cb2342a4e5e20265b542e52e7931268a4e4a49fb06fd0ad2831c5780526babc608a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1aca516aa683c67134c8bcc61480222797ad36ff5f44737687646c3224ee5ad2b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb1e090ea8010676e6c163ae534c2528e27f3f3c7c906157033b9ad31f1a8ee1389"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb243551341bbddb8055f53a422a8db258b6ce5b0b082434f479cb85530e9320e64">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb17a0bf22122c67e060c9f3d1084fed87715d09c7917ca6c5435b2815527a2b0fc">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb16c0581fe57b49781ba87178e42f7f039ba2cc6000ace02fc8684fee8fcc039a8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb20f67adf540f68c9dbe3ebbc907a772b91708fa5b10ae8f6e1f6534bd582164e6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1646a86fd77e0b29f62dee8d2b6dc09461b4a963fda36b18befcd790f34ac6fc1">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcessExecution"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1e090ea8010676e6c163ae534c2528e27f3f3c7c906157033b9ad31f1a8ee1389">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#TextileProcess"/>
+    <rdf:rest rdf:nodeID="cb1cdb50949823881e24e2d74a2335b7bf1a013bb4377f8f075c42c5c7c9460d0eb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2342a4e5e20265b542e52e7931268a4e4a49fb06fd0ad2831c5780526babc608a">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-process#ProcessParameterSetting"/>
+    <rdf:rest rdf:nodeID="cb23c14a97509d4da9569bd0baa5c88b1e6898eab84dfd089e9b59ce35e4ad161d7"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/eudpp/textile-process#typicallyUsesChemicalUseCategory">
+    <dcterms:source rdf:resource="https://w3id.org/eudpp/textile-ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+    <rdfs:comment xml:lang="en">Weak annotation relation indicating that a textile process type typically uses a chemical from a use category represented in Textile Associated Materials.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/eudpp/textile-process"/>
+    <rdfs:label xml:lang="en">typically uses chemical use category</rdfs:label>
+    <txtcon:sourceLocator xml:lang="en">CIRPASS Textile Ontology modelling specification, version 1.1.0.</txtcon:sourceLocator>
+    <txtcon:sourceType rdf:resource="https://w3id.org/eudpp/textile-connector#projectDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb1b29e0bf8aae5d275c8392d054318b2a16802727d46667349aaa0d82ec838cf56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="cb1517c9e0b2776158feecb9be8b0ea3c6346ca33b639d27f6adfbd979c9e3a3170"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb7c543b6609a1bebd7387c0e49f3b95e0b01a246a940f82b02af5066c3bc21a71">
+    <rdf:first rdf:resource="https://w3id.org/eudpp/textile-associated-materials#NonTextileComponent"/>
+    <rdf:rest rdf:nodeID="cb243551341bbddb8055f53a422a8db258b6ce5b0b082434f479cb85530e9320e64"/>
+  </rdf:Description>
+</rdf:RDF>

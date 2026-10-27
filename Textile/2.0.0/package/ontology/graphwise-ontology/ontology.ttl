@@ -1,0 +1,403 @@
+@prefix cycAnnot: <http://sw.cyc.com/CycAnnotations_v1#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix csw: <http://semantic-web.at/ontologies/csw.owl#> .
+@prefix freebase: <http://rdf.freebase.com/ns/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix cyc: <http://sw.cyc.com/concept/> .
+@prefix tags: <http://www.holygoat.co.uk/owl/redwood/0.1/tags/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix opencyc: <http://sw.opencyc.org/concept/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ctag: <http://commontag.org/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix swc: <http://schema.semantic-web.at/ppt/> .
+
+<https://w3id.org/eudpp/> a owl:Ontology;
+  swc:ResourceSeparator "/";
+  swc:identifier "";
+  swc:BaseUrl "https://w3id.org/eudpp/";
+  swc:visible "PUBLIC";
+  dcterms:creator <https://orcid.org/0000-0003-3340-5963>, <https://orcid.org/0000-0001-8766-4069>,
+    <https://orcid.org/0000-0002-3244-5341>, <https://orcid.org/0000-0001-7508-7428>;
+  dcterms:created "2026-03-02"^^xsd:date;
+  dcterms:contributor <https://dpp.graphwise.ai/user/2c777237-8596-496e-9524-dd00dc645dd0>;
+  dcterms:modified "2026-03-04T14:13:51.024Z"^^xsd:dateTime;
+  swc:hasLanguagePreference <urn:ddfe0312827244cdba84c5eafdf0c1d7419>, <urn:ddfe0312827244cdba84c5eafdf0c1d7418>;
+  swc:containsCustomType <https://w3id.org/eudpp/Role>, <https://w3id.org/eudpp/IdentifierScheme>,
+    <https://w3id.org/eudpp/Entity>, <https://w3id.org/eudpp/ClassificationScheme>, <https://w3id.org/eudpp/Facility>,
+    <https://w3id.org/eudpp/Product>, <https://w3id.org/eudpp/Agent>, <https://w3id.org/eudpp/ProductAgentRelationOrEvent>,
+    <https://w3id.org/eudpp/Country>, <https://w3id.org/eudpp/Classification>, <https://w3id.org/eudpp/Identifier>;
+  swc:containsDirectedProperty <https://w3id.org/eudpp/role>, <https://w3id.org/eudpp/identifier>,
+    <https://w3id.org/eudpp/appliesTo>, <https://w3id.org/eudpp/ownerOrOperator>, <https://w3id.org/eudpp/jurisdiction>,
+    <https://w3id.org/eudpp/product>, <https://w3id.org/eudpp/country>, <https://w3id.org/eudpp/appliesToCountryOfDestination>,
+    <https://w3id.org/eudpp/classificationScheme>, <https://w3id.org/eudpp/classification>,
+    <https://w3id.org/eudpp/appliesToCountryOfOrigin>, <https://w3id.org/eudpp/agent>,
+    <https://w3id.org/eudpp/identifierScheme>, <https://w3id.org/eudpp/facility>;
+  swc:containsAttributeProperty <https://w3id.org/eudpp/agency>, <https://w3id.org/eudpp/emailAddress>,
+    <https://w3id.org/eudpp/date>, <https://w3id.org/eudpp/mandatorinessLevel>, <https://w3id.org/eudpp/isPreferred>,
+    <https://w3id.org/eudpp/code>, <https://w3id.org/eudpp/codePattern>, <https://w3id.org/eudpp/issuedOn>,
+    <https://w3id.org/eudpp/webLinkPattern>, <https://w3id.org/eudpp/expiresOn>, <https://w3id.org/eudpp/name>,
+    <https://w3id.org/eudpp/postalAddress>, <https://w3id.org/eudpp/phoneNumber>;
+  owl:versionInfo "0.1";
+  dcterms:title "EU Digital Product Passport Ontology";
+  dcterms:description "Core constructs to support Textile Digital Product Passports: agents, facilities, products, identifiers & schemes, classifications & schemes, and product-agent role relations/events."@en;
+  rdfs:label "EU Digital Product Passport Ontology" .
+
+<urn:ddfe0312827244cdba84c5eafdf0c1d7419> a swc:LanguagePreference;
+  swc:languagePreferenceValue "en";
+  swc:languagePreferencePriority "1"^^xsd:int .
+
+<urn:ddfe0312827244cdba84c5eafdf0c1d7418> a swc:LanguagePreference;
+  swc:languagePreferenceValue "mis";
+  swc:languagePreferencePriority "0"^^xsd:int .
+
+<https://w3id.org/eudpp/Role> a owl:Class;
+  rdfs:subClassOf skos:Concept;
+  rdfs:comment "Nomenclature of economic operator roles in relation to a product, as per ESPR (e.g., manufacturer, importer, Tier1 economic operator, distributor, recycler, repairer). Intended to be used as a SKOS Concept."@en;
+  rdfs:label "Role"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/IdentifierScheme> a owl:Class;
+  rdfs:comment "A system or scheme defining identifier values (e.g., GS1 GLN, EU VAT, national company register). Includes optional web link patterns to create resolvable URLs."@en;
+  rdfs:label "Identifier Scheme"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/Entity> a owl:Class;
+  rdfs:comment "Superclass for core DPP-described entities in this ontology."@en;
+  rdfs:label "Entity"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/ClassificationScheme> a owl:Class;
+  rdfs:comment "A system defining classification codes (e.g., WCO HS, EU CN, GS1 GPC, EU NACE). Also indicates the kind of entity it applies to."@en;
+  rdfs:label "Classification Scheme"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/Facility> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/eudpp/Entity>, <https://schema.org/Place>;
+  rdfs:comment "A physical facility such as a plant, warehouse, store, office, etc. Facilities can be owned or operated by an Agent."@en;
+  rdfs:label "Facility"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://schema.org/Place> a rdfs:Class .
+
+<https://w3id.org/eudpp/Product> a owl:Class;
+  rdfs:subClassOf skos:Concept, <https://w3id.org/eudpp/Entity>, <https://schema.org/Product>,
+    <http://schema.org/Product>;
+  rdfs:comment "A product described by a DPP. Identifiers and classifications can be attached to it. Product-to-agent links are expressed via ProductAgentRelationOrEvent."@en;
+  rdfs:label "Product"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://schema.org/Product> a rdfs:Class .
+
+<http://schema.org/Product> a owl:Class, rdfs:Class, owl:Thing;
+  rdfs:subClassOf <http://schema.org/Thing>;
+  rdfs:label "Product" .
+
+<http://schema.org/Thing> a owl:Class, owl:Thing;
+  rdfs:label "Thing" .
+
+<https://w3id.org/eudpp/Agent> a owl:Class;
+  rdfs:subClassOf <https://schema.org/Organization>, <https://w3id.org/eudpp/Entity>;
+  rdfs:comment "An organization or person involved in the value chain (economic operator). Intended as a reusable class linked from product DPPs."@en;
+  rdfs:label "Agent"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://schema.org/Organization> a rdfs:Class .
+
+<https://w3id.org/eudpp/ProductAgentRelationOrEvent> a owl:Class;
+  rdfs:comment "A statement that a Product is related to an Agent or Facility in a specified Role. If a date is present it can be interpreted as an event; if absent as a relation."@en;
+  rdfs:label "Product-Agent Relation or Event"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/Country> a owl:Class;
+  rdfs:subClassOf <https://w3id.org/eudpp/Entity>, <https://schema.org/Country>, <http://dbpedia.org/ontology/Country>;
+  rdfs:comment "A nation state recognized by the EU Digital Product Passport system."@en;
+  rdfs:label "Country"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://schema.org/Country> a rdfs:Class .
+
+<http://dbpedia.org/ontology/Country> a rdfs:Class .
+
+<https://w3id.org/eudpp/Classification> a owl:Class;
+  rdfs:comment "A classification assignment for an entity, consisting of a code/value and a reference to a ClassificationScheme, optionally with a human-readable name. Unlike Identifier, many entities can have the same Classification."@en;
+  rdfs:label "Classification"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/Identifier> a owl:Class;
+  rdfs:subClassOf <http://www.w3.org/ns/adms#Identifier>;
+  rdfs:comment "A (usually) unique identifier of an entity, consisting of a literal identifier value and a reference to an IdentifierScheme. Optional issuance and expiry dates support registrations and certificates. Expected to be unique per scheme and entity"@en;
+  rdfs:label "Identifier"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<http://www.w3.org/ns/adms#Identifier> a rdfs:Class .
+
+<https://w3id.org/eudpp/role> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/ProductAgentRelationOrEvent>;
+  rdfs:range <https://w3id.org/eudpp/Role>;
+  rdfs:label "role"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/identifier> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range <https://w3id.org/eudpp/Identifier>;
+  rdfs:comment "Associates an entity with one or more Identifier resources, enabling multiple identifiers (e.g., GLN and EORI) to be recorded simultaneously."@en;
+  rdfs:label "identifier"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/appliesTo> a owl:ObjectProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7405;
+  rdfs:range owl:Class;
+  rdfs:comment "Indicates what kind of entity a scheme applies to (e.g., Product, Agent, Facility, Certificate). Range is a class (owl:Class)."@en;
+  rdfs:label "applies to"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7405 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7406 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7406 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7407 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7407 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/ownerOrOperator> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Facility>;
+  rdfs:range <https://w3id.org/eudpp/Agent>;
+  rdfs:comment "Links a Facility to an Agent that owns or operates it."@en;
+  rdfs:label "owner or operator"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/jurisdiction> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/IdentifierScheme>;
+  rdfs:range <https://w3id.org/eudpp/Country>;
+  rdfs:comment "Jurisdiction in which a scheme is officially issued/valid (e.g., country, state)."@en;
+  rdfs:label "jurisdiction"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/product> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/ProductAgentRelationOrEvent>;
+  rdfs:range <https://w3id.org/eudpp/Product>;
+  rdfs:comment "Links the passport or standard to a specific product concept from the EUDPP thesaurus."@en;
+  rdfs:label "product"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/country> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range <https://w3id.org/eudpp/Country>;
+  rdfs:comment "Country associated with an Agent or Facility (e.g., establishment or address country). Range is a SKOS Concept representing a country code list."@en;
+  rdfs:label "country"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/appliesToCountryOfDestination> a owl:ObjectProperty;
+  rdfs:range <https://w3id.org/eudpp/Country>;
+  rdfs:comment "Links a standard, a product passport, or something else to the destination country resource in which the product is sold."@en;
+  rdfs:label "applies to country of destination"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/classificationScheme> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Classification>;
+  rdfs:range <https://w3id.org/eudpp/ClassificationScheme>;
+  rdfs:label "classification scheme"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/classification> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range <https://w3id.org/eudpp/Classification>;
+  rdfs:comment "Associates an entity with one or more Classification assignments."@en;
+  rdfs:label "classification"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/appliesToCountryOfOrigin> a owl:ObjectProperty;
+  rdfs:range <https://w3id.org/eudpp/Country>;
+  rdfs:comment "Links a standard, a product passport, or something else to the country of origin of the product."@en;
+  rdfs:label "applies to country of origin"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/agent> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/ProductAgentRelationOrEvent>;
+  rdfs:range <https://w3id.org/eudpp/Agent>;
+  rdfs:comment "The involved party (Agent, economic operator)"@en;
+  rdfs:label "agent"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/identifierScheme> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/Identifier>;
+  rdfs:range <https://w3id.org/eudpp/IdentifierScheme>;
+  rdfs:label "identifier scheme"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/facility> a owl:ObjectProperty;
+  rdfs:domain <https://w3id.org/eudpp/ProductAgentRelationOrEvent>;
+  rdfs:range <https://w3id.org/eudpp/Facility>;
+  rdfs:comment "The involved Facility. This only needs to be recorded to prove the product was manufactured at a facility that conforms to certifications/assessments, eg according to StandardsMap-listed assessment schemes"@en;
+  rdfs:label "facility"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/agency> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7399;
+  rdfs:range xsd:string;
+  rdfs:comment "Agency/authority that designs, issues or administers a scheme."@en;
+  rdfs:label "agency"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7399 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7400 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7400 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7401 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7401 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/emailAddress> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range xsd:string;
+  rdfs:label "email address"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/date> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/ProductAgentRelationOrEvent>;
+  rdfs:range xsd:date;
+  rdfs:comment "If present, the relation can be interpreted as an event occurring on this date."@en;
+  rdfs:label "date"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/mandatorinessLevel> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7408;
+  rdfs:range xsd:integer;
+  rdfs:comment "Level of mandatoriness/desirability (0..10) of the identifier/classification scheme for the given appliesTo class(es). Eg EUDPP products must have at least one DPP ID";
+  rdfs:label "mandatoriness level"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7408 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7409 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7409 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7410 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7410 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/isPreferred> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7411;
+  rdfs:range xsd:boolean;
+  rdfs:comment "Whether this mandatory identifier/classification scheme is preferred and its code is used in the Entity URL";
+  rdfs:label "is preferred"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7411 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7412 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7412 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7413 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7413 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/code> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7391;
+  rdfs:range xsd:string;
+  rdfs:comment "The code of an Identifier, Classification, IdentifierScheme, or ClassificationScheme."@en;
+  rdfs:label "code"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7391 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7392 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7392 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/Identifier>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7393 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7393 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/Classification>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7394 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7394 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7395 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7395 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/codePattern> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7396;
+  rdfs:range xsd:string;
+  rdfs:comment "A regexp that the identifier/classification code must conform to."@en;
+  rdfs:label "code pattern"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7396 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7397 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7397 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7398 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7398 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/issuedOn> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Identifier>;
+  rdfs:range xsd:date;
+  rdfs:label "issued on"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/webLinkPattern> a owl:DatatypeProperty;
+  rdfs:domain _:ddfe0312827244cdba84c5eafdf0c1d7402;
+  rdfs:range xsd:string;
+  rdfs:comment "A URL template/pattern into which a code (identifier/classification value) can be inserted to obtain a resolvable URL (e.g., https://example.org/id/{ident})."@en;
+  rdfs:label "web link pattern"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7402 a owl:Class;
+  owl:unionOf _:ddfe0312827244cdba84c5eafdf0c1d7403 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7403 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/IdentifierScheme>;
+  rdf:rest _:ddfe0312827244cdba84c5eafdf0c1d7404 .
+
+_:ddfe0312827244cdba84c5eafdf0c1d7404 a rdf:List;
+  rdf:first <https://w3id.org/eudpp/ClassificationScheme>;
+  rdf:rest rdf:nil .
+
+<https://w3id.org/eudpp/expiresOn> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Identifier>;
+  rdfs:range xsd:date;
+  rdfs:label "expires on"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/name> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range xsd:string;
+  rdfs:comment "Name of an entity (Agent, Facility, Product, etc.)."@en;
+  rdfs:label "name"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/postalAddress> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range xsd:string;
+  rdfs:comment "Postal address as free text. Detailed address modeling can be added later or aligned to schema:PostalAddress."@en;
+  rdfs:label "postal address"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .
+
+<https://w3id.org/eudpp/phoneNumber> a owl:DatatypeProperty;
+  rdfs:domain <https://w3id.org/eudpp/Entity>;
+  rdfs:range xsd:string;
+  rdfs:label "phone number"@en;
+  rdfs:isDefinedBy <https://w3id.org/eudpp/> .

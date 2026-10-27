@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "scenarios": [
+    {
+      "scenario_id": "R01",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R01-subclass-type.ttl",
+      "reasoning_profile": "RDFS",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/fabric",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp#Product"
+        ],
+        [
+          "https://example.org/textile-abox/reasoning/fabric",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-core#TextileProduct"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/fabric",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-core#Yarn"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    },
+    {
+      "scenario_id": "R02",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R02-domain-type.ttl",
+      "reasoning_profile": "RDFS",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/component",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-core#FibreCompositionComponent"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/component",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    },
+    {
+      "scenario_id": "R03",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R03-range-type.ttl",
+      "reasoning_profile": "RDFS",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/fractionValue",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/fractionValue",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "https://w3id.org/eudpp/textile-core#FibreCompositionComponent"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    },
+    {
+      "scenario_id": "R04",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R04-repair-subproperty.ttl",
+      "reasoning_profile": "RDFS",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/repairExecution",
+          "https://w3id.org/eudpp/textile-process#usesInput",
+          "https://example.org/textile-abox/reasoning/spareComponent"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/spareComponent",
+          "https://w3id.org/eudpp/textile-process#usesInput",
+          "https://example.org/textile-abox/reasoning/repairExecution"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    },
+    {
+      "scenario_id": "R05",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R05-assessment-inverse.ttl",
+      "reasoning_profile": "OWL-RL",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/result",
+          "https://w3id.org/eudpp/textile-assessment#resultOfAssessment",
+          "https://example.org/textile-abox/reasoning/assessment"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/result",
+          "https://w3id.org/eudpp/textile-assessment#producesResult",
+          "https://example.org/textile-abox/reasoning/assessment"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    },
+    {
+      "scenario_id": "R06",
+      "fixture_path": "tests/abox_corpus/fixtures/reasoning/R06-component-transitivity.ttl",
+      "reasoning_profile": "OWL-RL",
+      "ontology_modules": [
+        "ontology/textile-assessment.ttl",
+        "ontology/textile-associated-materials.ttl",
+        "ontology/textile-connector.ttl",
+        "ontology/textile-context.ttl",
+        "ontology/textile-core.ttl",
+        "ontology/textile-durability.ttl",
+        "ontology/textile-indicator.ttl",
+        "ontology/textile-ontology.ttl",
+        "ontology/textile-process.ttl",
+        "ontology/textile-recyclability.ttl",
+        "ontology/textile-repairability.ttl",
+        "ontology/textile-soc.ttl",
+        "ontology/textile-structure.ttl"
+      ],
+      "dependency_graphs": [
+        "mireot/actor-textile-mireot.ttl",
+        "mireot/dpp-textile-mireot.ttl",
+        "mireot/event-textile-mireot.ttl",
+        "mireot/mat-textile-mireot.ttl",
+        "mireot/si-textile-mireot.ttl",
+        "mireot/soc-textile-mireot.ttl",
+        "mireot/con-textile-mireot.ttl"
+      ],
+      "required_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/component-a",
+          "https://w3id.org/eudpp#isComponentOf",
+          "https://example.org/textile-abox/reasoning/product"
+        ]
+      ],
+      "forbidden_named_triples": [
+        [
+          "https://example.org/textile-abox/reasoning/product",
+          "https://w3id.org/eudpp#isComponentOf",
+          "https://example.org/textile-abox/reasoning/component-a"
+        ]
+      ],
+      "disjoint_type_pairs_checked": [
+        [
+          "https://w3id.org/eudpp/textile-assessment#DurabilityAssessment",
+          "https://w3id.org/eudpp/textile-repairability#RepairabilityAssessment"
+        ],
+        [
+          "https://w3id.org/eudpp/textile-assessment#MeasurementParameter",
+          "https://w3id.org/eudpp/textile-durability#ObservedPerformanceParameter"
+        ]
+      ],
+      "expected_disjoint_overlap_count": 0
+    }
+  ]
+}
