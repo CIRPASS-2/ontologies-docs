@@ -9,7 +9,7 @@
     specStatus: "base",
     shortName: "cirpass2-dpp-ontologies",
     subtitle: "Architecture, modules and sectoral extensions",
-    publishDate: "2026-10-22",
+    publishDate: "2026-10-26",
     latestVersion: "https://cirpass-2.github.io/ontologies-docs/",
     // ReSpec requires an editor; the editor is also among the authors, so the Editor line is hidden below.
     editors: [{ name: "Nader Jelassi", company: "Coexya" }],
@@ -52,6 +52,10 @@
         // The date under the title is the date of the last update of this page.
         const updated = document.querySelector("#w3c-state time.dt-published");
         if (updated) updated.before("Document updated on: ");
+        // The work-in-progress notice goes above the title.
+        const notice = document.getElementById("wip-notice");
+        const head = document.querySelector(".head");
+        if (notice && head) head.prepend(notice);
       },
     ],
     localBiblio: {
@@ -188,9 +192,17 @@
   p.ontology-pages { margin: 1.2em 0; padding: .8em 1em; background: #eaf0f4; border-left: 5px solid #005a9c;
                     font-size: 1.05em; }
   p.ontology-pages a { font-weight: 600; }
+  #wip-notice { margin: 0 0 1em; padding: .6em .9em; border: 1px solid #d9a400; border-left: 6px solid #d9a400;
+                border-radius: 4px; background: #fff8db; color: #3d2e00; font-size: 1rem; line-height: 1.45; }
+  #wip-notice a { color: #034575; }
 </style>
 </head>
 <body>
+
+<div id="wip-notice">
+  <strong>Work in progress.</strong> The ontologies described here may change at any time without notice.
+  See the <a href="#disclaimer">disclaimer</a>.
+</div>
 
 <p class="ontology-pages">
   <a href="ontologies.html">Browse the ontologies</a>: reference pages of the CORE, battery, tyre and textile
@@ -212,9 +224,9 @@
 <section id="sotd" class="override">
   <h2 id="disclaimer">Disclaimer</h2>
   <ol>
+    <li><strong>Work in progress.</strong> This project is under active development. The EU DPP Core Ontology (CORE), its modules and the sectoral ontologies described in this document may change at any time without notice. Information may be incomplete and is subject to change as further guidance from the European Commission is made available.</li>
     <li>All software and artifacts produced by the CIRPASS-2 consortium are designed for exploration and are provided for information purposes only. They should not be interpreted as being either complete, exhaustive, or normative. The CIRPASS-2 consortium partners are not liable for any damage that could result from making use of this information. Technical interpretations of the European Digital Product Passport system expressed in these artifacts are those of the author(s) only and do not necessarily reflect those of the European Union, European Commission, or the European Health and Digital Executive Agency (HADEA). Neither the European Union, the European Commission nor the granting authority can be held responsible for them. Technical interpretations of the European Digital Product Passport system expressed in these artifacts are those of the author(s) only and should not be interpreted as reflecting those of CEN-CENELEC JTC 24.</li>
     <li>The EU DPP Core Ontology (CORE), its modules and the sectoral ontologies described in this document, generated within the CIRPASS-2 project, do not represent an official ontology for the Digital Product Passport.</li>
-    <li>This project is under active development. Information may be incomplete and is subject to change as further guidance from the European Commission is made available.</li>
   </ol>
 </section>
 
