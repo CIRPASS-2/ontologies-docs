@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/eudpp/eto",
     "version" : "Version 0.2.0 DRAFT",
-    "author" : [ "Quang-Duy Nguyen" ],
+    "author" : [ "Nader Jelassi", "Quang-Duy Nguyen" ],
     "description" : {
       "en" : "Example Tyre Ontology (ETO) is an exemplar ontology for the tyre sector. It specialises the EU DPP Core Ontology (CORE), whose terms it references by their IRIs."
     },
@@ -16,7 +16,7 @@
       "en" : "Example Tyre Ontology"
     },
     "comments" : {
-      "en" : "Developed against the CIRPASS-2 CORE ontology as of 12 October 2026: core v2.0.7, P_DPP v2.1.0, IDENT v1.2.0, CON v2.2.0, ACTOR v2.1.3, EVENT v1.0.0, SOC v2.0.0. Checked against the CORE of 21 October 2026: core v2.1.0, P_DPP v2.2.0, IDENT v1.2.0, CON v2.4.0, ACTOR v2.2.0, EVENT v1.0.0, SOC v2.2.0. The CORE is referenced by IRI, without owl:imports: load the CORE files together with this file for reasoning or validation."
+      "en" : "Developed against the CIRPASS-2 CORE ontology as of 12 October 2026: core v2.0.7, P_DPP v2.1.0, IDENT v1.2.0, CON v2.2.0, ACTOR v2.1.3, EVENT v1.0.0, SOC v2.0.0. Checked against the CORE of 21 October 2026: core v2.1.0, P_DPP v2.2.0, IDENT v1.2.0, CON v2.4.0, ACTOR v2.2.0, EVENT v1.0.0, SOC v2.2.0. The CORE is referenced by IRI, without owl:imports: load the CORE files together with this file for reasoning or validation. Terms without dcterms:references were created for this ontology, most of them from non-public data of the CIRPASS-2 tyre pilot."
     },
     "other" : {
       "license" : [ {
@@ -28,13 +28,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Quang-Duy Nguyen",
-        "type" : "label"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "en",
         "value" : "Nader Jelassi",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Quang-Duy Nguyen",
         "type" : "label"
       } ],
       "created" : [ {
@@ -215,13 +214,13 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "141",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "142",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "145",
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "144",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "148",
@@ -320,10 +319,10 @@
     "id" : "178",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "34",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "152",
@@ -739,33 +738,6 @@
     "attributes" : [ "external" ],
     "id" : "65"
   }, {
-    "iri" : "https://w3id.org/eudpp/eto#SizePrefix",
-    "baseIri" : "https://w3id.org/eudpp/eto",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "undefined",
-        "value" : "ETRTO Standards Manual, G9",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "SizePrefix",
-      "undefined" : "Size Prefix"
-    },
-    "comment" : {
-      "undefined" : "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)"
-    },
-    "id" : "66",
-    "superClasses" : [ "25" ]
-  }, {
     "iri" : "https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl",
     "baseIri" : "https://w3id.org/eudpp/eto",
     "instances" : 0,
@@ -790,8 +762,35 @@
     "comment" : {
       "undefined" : "URL of the record of the tyre type in the European Product Registry for Energy Labelling (EPREL)."
     },
-    "id" : "67",
+    "id" : "66",
     "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/eto#SizePrefix",
+    "baseIri" : "https://w3id.org/eudpp/eto",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "undefined",
+        "value" : "ETRTO Standards Manual, G9",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SizePrefix",
+      "undefined" : "Size Prefix"
+    },
+    "comment" : {
+      "undefined" : "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)"
+    },
+    "id" : "67",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/eudpp/eto#ProductLabelling",
     "baseIri" : "https://w3id.org/eudpp/eto",
@@ -814,7 +813,7 @@
       "IRI-based" : "ProductLabelling",
       "undefined" : "Product Labelling"
     },
-    "subClasses" : [ "0", "68", "69", "67", "70", "64", "71" ],
+    "subClasses" : [ "0", "68", "69", "66", "70", "64", "71" ],
     "comment" : {
       "undefined" : "Group of tyre properties corresponding to the EU tyre label and its registration (e.g. wet grip class, EPREL record)."
     },
@@ -1269,21 +1268,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "141",
+    "id" : "142",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "142",
+    "id" : "141",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "145",
+    "id" : "144",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1714,27 +1713,6 @@
       "undefined" : "Literal"
     }
   }, {
-    "iri" : "https://w3id.org/eudpp/eto#TmsSensorPresence",
-    "baseIri" : "https://w3id.org/eudpp/eto",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "TmsSensorPresence",
-      "undefined" : "Tms Sensor Presence"
-    },
-    "comment" : {
-      "undefined" : "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection"
-    },
-    "id" : "34",
-    "superClasses" : [ "4" ]
-  }, {
     "iri" : "https://w3id.org/eudpp/eto#ProductMarking",
     "baseIri" : "https://w3id.org/eudpp/eto",
     "instances" : 0,
@@ -1756,11 +1734,32 @@
       "IRI-based" : "ProductMarking",
       "undefined" : "Product Marking"
     },
-    "subClasses" : [ "87", "89", "66", "24", "93" ],
+    "subClasses" : [ "87", "89", "67", "24", "93" ],
     "comment" : {
       "undefined" : "Group of tyre properties corresponding to markings on the tyre sidewall (e.g. M+S, 3PMSF, size prefix)."
     },
     "id" : "25",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/eto#TmsSensorPresence",
+    "baseIri" : "https://w3id.org/eudpp/eto",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TmsSensorPresence",
+      "undefined" : "Tms Sensor Presence"
+    },
+    "comment" : {
+      "undefined" : "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection"
+    },
+    "id" : "34",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -2418,7 +2417,7 @@
     "id" : "143",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "144",
+    "id" : "145",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "146",
@@ -2790,7 +2789,7 @@
     "id" : "88"
   }, {
     "range" : "25",
-    "domain" : "66",
+    "domain" : "67",
     "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
@@ -2827,7 +2826,7 @@
     "id" : "94"
   }, {
     "range" : "1",
-    "domain" : "67",
+    "domain" : "66",
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
@@ -2931,7 +2930,7 @@
       "IRI-based" : "numericalValue"
     },
     "domain" : "71",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "114"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -2959,7 +2958,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "117"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -2987,7 +2986,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "119"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3015,7 +3014,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "121"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3043,7 +3042,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "123"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
@@ -3053,7 +3052,7 @@
       "IRI-based" : "numericalValue"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "125"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3081,7 +3080,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "126"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3105,11 +3104,11 @@
       "IRI-based" : "hasValue",
       "undefined" : "has value"
     },
-    "domain" : "67",
+    "domain" : "66",
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "129"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3137,7 +3136,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "132"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3165,7 +3164,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "133"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3193,7 +3192,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3221,7 +3220,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "136"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3249,48 +3248,8 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "138"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "76",
-    "label" : {
-      "IRI-based" : "hasMeasurementUnit"
-    },
-    "domain" : "31",
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "140"
-  }, {
-    "iri" : "https://w3id.org/eudpp#numericalValue",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "142",
-    "label" : {
-      "IRI-based" : "numericalValue"
-    },
-    "domain" : "31",
-    "attributes" : [ "datatype", "external", "allValues" ],
-    "id" : "143"
-  }, {
-    "iri" : "https://w3id.org/eudpp#numericalValue",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "145",
-    "label" : {
-      "IRI-based" : "numericalValue"
-    },
-    "domain" : "40",
-    "attributes" : [ "datatype", "external", "allValues" ],
-    "id" : "144"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "76",
-    "label" : {
-      "IRI-based" : "hasMeasurementUnit"
-    },
-    "domain" : "40",
-    "attributes" : [ "external", "allValues", "object" ],
-    "id" : "146"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3298,8 +3257,48 @@
     "label" : {
       "IRI-based" : "numericalValue"
     },
+    "domain" : "31",
+    "attributes" : [ "allValues", "external", "datatype" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "31",
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/eudpp#numericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "144",
+    "label" : {
+      "IRI-based" : "numericalValue"
+    },
+    "domain" : "40",
+    "attributes" : [ "allValues", "external", "datatype" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://w3id.org/eudpp#numericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "142",
+    "label" : {
+      "IRI-based" : "numericalValue"
+    },
     "domain" : "36",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "40",
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "147"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3327,7 +3326,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "149"
   }, {
     "iri" : "https://w3id.org/eudpp#description",
@@ -3337,7 +3336,7 @@
       "IRI-based" : "description"
     },
     "domain" : "151",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "150"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3365,7 +3364,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "154"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3393,7 +3392,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "157"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierSchemeIssuer",
@@ -3403,7 +3402,7 @@
       "IRI-based" : "identifierSchemeIssuer"
     },
     "domain" : "151",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "158"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3431,7 +3430,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "160"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3459,7 +3458,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "162"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3487,7 +3486,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "164"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3515,7 +3514,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "166"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierExampleValue",
@@ -3525,7 +3524,7 @@
       "IRI-based" : "identifierExampleValue"
     },
     "domain" : "151",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "168"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3553,7 +3552,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "171"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3581,7 +3580,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "173"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3609,7 +3608,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "176"
   }, {
     "iri" : "https://w3id.org/eudpp#codeValue",
@@ -3619,7 +3618,7 @@
       "IRI-based" : "codeValue"
     },
     "domain" : "151",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "177"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3647,7 +3646,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "179"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3675,7 +3674,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "182"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3732,7 +3731,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "186"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3756,11 +3755,11 @@
       "IRI-based" : "hasValue",
       "undefined" : "has value"
     },
-    "domain" : "66",
+    "domain" : "67",
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "187"
   }, {
     "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
@@ -3770,7 +3769,7 @@
       "IRI-based" : "hasMeasurementUnit"
     },
     "domain" : "30",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "188"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
@@ -3780,7 +3779,7 @@
       "IRI-based" : "numericalValue"
     },
     "domain" : "30",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "190"
   }, {
     "range" : "20",
@@ -3805,7 +3804,7 @@
       "IRI-based" : "numericalValue"
     },
     "domain" : "32",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "194"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
@@ -3815,7 +3814,7 @@
       "IRI-based" : "numericalValue"
     },
     "domain" : "28",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "196"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3843,7 +3842,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "199"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3871,7 +3870,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "201"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3899,7 +3898,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "203"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3927,7 +3926,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "206"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3955,7 +3954,7 @@
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
-    "attributes" : [ "datatype", "allValues" ],
+    "attributes" : [ "allValues", "datatype" ],
     "id" : "209"
   }, {
     "iri" : "https://w3id.org/eudpp#manufacturingDate",
@@ -3965,7 +3964,7 @@
       "IRI-based" : "manufacturingDate"
     },
     "domain" : "8",
-    "attributes" : [ "datatype", "external", "allValues" ],
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "210"
   }, {
     "iri" : "https://w3id.org/eudpp#hasManufacturer",
@@ -3975,7 +3974,7 @@
       "IRI-based" : "hasManufacturer"
     },
     "domain" : "8",
-    "attributes" : [ "external", "allValues", "object" ],
+    "attributes" : [ "allValues", "external", "object" ],
     "id" : "211"
   } ]
 }
