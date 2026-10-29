@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>EU DPP Textile Ontology</title>
+
+  <style>
+    :root {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      color: #202124;
+      background: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 48px 32px 64px;
+    }
+
+    h1 {
+      color: #0c4f5d;
+      font-size: 2rem;
+      margin: 0 0 12px;
+    }
+
+    h2 {
+      color: #0c4f5d;
+      margin-top: 36px;
+    }
+
+    p {
+      line-height: 1.55;
+    }
+
+    .intro {
+      max-width: 960px;
+      margin-bottom: 8px;
+    }
+
+    .generation-info {
+      margin-top: 8px;
+      margin-bottom: 28px;
+      color: #444;
+    }
+
+    .network {
+      margin: 28px 0 34px;
+      padding: 20px 22px;
+      border-left: 4px solid #0c4f5d;
+      background: #f7f9f9;
+    }
+
+    .network h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .network p {
+      margin: 6px 0;
+    }
+
+    a {
+      color: #07566b;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 960px;
+    }
+
+    th,
+    td {
+      border: 1px solid #cfd8dc;
+      padding: 12px 10px;
+      vertical-align: top;
+    }
+
+    th {
+      text-align: left;
+      background: #f4f7f8;
+      color: #202124;
+      font-weight: 700;
+    }
+
+    td.number,
+    th.number {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    td.version {
+      white-space: nowrap;
+    }
+
+    .ontology-title {
+      display: inline-block;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .ontology-description {
+      margin: 0 0 6px;
+      line-height: 1.45;
+      font-size: 0.94rem;
+    }
+
+    .ontology-iri {
+      font-family: Consolas, "Liberation Mono", monospace;
+      font-size: 0.82rem;
+      overflow-wrap: anywhere;
+    }
+
+    .group-row th {
+      background: #eef3f4;
+      color: #4b5558;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 18px;
+      border-top: 1px solid #d8d8d8;
+      font-size: 0.88rem;
+      color: #555;
+    }
+
+    @media (max-width: 720px) {
+      main {
+        padding: 28px 18px 48px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+    @media print {
+
+  main {
+    max-width: none;
+    padding: 20px 24px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .network {
+    padding: 14px 16px;
+    margin: 20px 0 24px;
+  }
+
+  .table-wrapper {
+    overflow: visible;
+  }
+
+  table {
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 9.5pt;
+  }
+
+  th,
+  td {
+    padding: 7px 6px;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 42%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 8%;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 8%;
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 12%;
+  }
+
+  th:nth-child(5),
+  td:nth-child(5) {
+    width: 11%;
+  }
+
+  th:nth-child(6),
+  td:nth-child(6) {
+    width: 9%;
+  }
+
+  th:nth-child(7),
+  td:nth-child(7) {
+    width: 10%;
+  }
+
+  .ontology-description {
+    font-size: 8.7pt;
+    line-height: 1.35;
+  }
+
+  .ontology-iri {
+    font-size: 7.8pt;
+  }
+
+  a {
+    overflow-wrap: anywhere;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<main>
+
+  <h1>EU DPP Textile Ontology</h1>
+
+  <p class="intro">
+    <p class="intro">
+    Reference documentation of the CIRPASS-2 textile ontology network for textile Digital Product Passports. The ontology network is
+    developed for use with the EU DPP Core Ontology and is organised into specialised modules covering textile products, materials,
+    structure, processes, durability, assessment, contextual information, indicators, repairability, recyclability and
+    substances of concern. Each module page is generated from its canonical ontology file and includes an interactive WebVOWL graph.
+</p>
+  </p>
+
+  <p class="generation-info">
+    {{MODULE_COUNT}} module pages · generated with WIDOCO 1.4.25
+  </p>
+
+  <section class="network">
+
+    <h2>Ontology network</h2>
+
+    <p>
+      <strong>{{NETWORK_TITLE}}</strong> is the network-level entry point.
+      It imports the twelve textile ontology modules documented below.
+      It is an aggregation ontology and is not treated as a thirteenth
+      peer domain module.
+    </p>
+
+    <p>
+      <strong>Version:</strong> {{NETWORK_VERSION}}
+    </p>
+
+    <p>
+      <strong>Creators:</strong> {{NETWORK_CREATORS}}
+    </p>
+
+    <p>
+      <strong>IRI:</strong>
+      <a href="{{NETWORK_IRI}}">
+        {{NETWORK_IRI}}
+      </a>
+    </p>
+
+  </section>
+
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>Ontology</th>
+          <th>Version</th>
+          <th class="number">Classes</th>
+          <th class="number">Object properties</th>
+          <th class="number">Data properties</th>
+          <th class="number">Individuals</th>
+          <th>Graph</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr class="group-row">
+          <th colspan="7">Textile ontology modules</th>
+        </tr>
+
+        {{MODULE_ROWS}}
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <footer>
+    CIRPASS-2 · EU DPP Textile Ontology ·
+    Individual ontology specifications generated with WIDOCO.
+  </footer>
+
+</main>
+
+</body>
+</html>

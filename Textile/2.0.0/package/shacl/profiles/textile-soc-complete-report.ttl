@@ -1,0 +1,16 @@
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix txtsoc: <https://w3id.org/eudpp/textile-soc#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/eudpp/textile-shacl#CompleteTextilePresenceShape> a sh:NodeShape ;
+    sh:property <https://w3id.org/eudpp/textile-shacl#CompletePresenceConcentration> ;
+    sh:targetClass txtsoc:TextileSubstanceOfConcernPresenceContext .
+
+<https://w3id.org/eudpp/textile-shacl/soc/complete-report> a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-shacl/soc/complete-report/2.0.0> .
+
+<https://w3id.org/eudpp/textile-shacl#CompletePresenceConcentration> a sh:PropertyShape ;
+    sh:minCount 1 ;
+    sh:path dpp:hasConcentration .

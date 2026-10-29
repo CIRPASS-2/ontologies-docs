@@ -1,0 +1,5535 @@
+[
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#SVHCCandidateList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "External regulatory reference used to determine SoC type (a) qualification. This reference may be documented with identifiers, source, version, and date information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "SVHC Candidate List"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "List of substances identified under REACH Article 59."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#SVHCCandidateList"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SVHCCandidateList; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasInstructionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property expresses whether the instruction concerns safe use, repair, reuse, disassembly, or recycling."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstanceManagementInstruction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has instruction type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#InstructionType"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates the declared type of instruction represented by an instruction information object."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasInstructionType"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasConcentrationReferenceBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property clarifies the denominator or reference scope of the reported concentration. It is important because the regulatory interpretation of a concentration may differ depending on whether it is calculated against the final product, an article, a product part, or a material group."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has concentration reference basis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ConcentrationReferenceBasis"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a concentration information object to the reference basis used for calculating or reporting the concentration."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasConcentrationReferenceBasis"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasConcentrationReferenceBasis; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#refersToProductPartForThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "refersToProductPartForThreshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Identifies the structural product part to which a regulatory threshold comparison applies."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasTextileLocationType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a location information object to a controlled textile-specific location type."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#LocationInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has textile location type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 7(5)(b)."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#AboveThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AboveThreshold"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An evaluation result in which the complete concentration interval lies above the threshold interval."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdReferenceBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasThresholdReferenceBasis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ConcentrationReferenceBasis"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Records the reference basis applicable to a regulatory threshold comparison."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasPart",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Inverse of isPartOfProduct."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has part"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a product to one of its parts."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasPart"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasPart; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Controlled concept describing a textile-specific kind of product location used to qualify a substance location statement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile SoC location type concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class is used as a controlled vocabulary for the outcome of threshold evaluation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Threshold evaluation result"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Controlled result value produced by a threshold evaluation."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ThresholdEvaluationResult"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#isQualifiedBySVHCList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Links a SoC type (a) qualification to the external SVHC Candidate List used as qualification basis."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is qualified by SVHC list"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#SVHCCandidateList"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasRegulatoryBasis"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#isQualifiedBySVHCList"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isQualifiedBySVHCList; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is located in an adhesive, laminate, bonding film or other joining layer."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Adhesive or bonding layer location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_ADHESIVE_BONDING"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Adhesive or bonding layer location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#isPartOfProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property expresses structural inclusion of a part within a product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is part of product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a product part to the product of which it is a part."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#isPartOfProduct"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isPartOfProduct; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#relevantToTextileProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile substance occurrence to a textile process type that introduced, used, transformed or is affected by the substance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "relevant to textile process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-process#TextileProcess"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#InstructionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents the kind of instruction expressed in the DPP information element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Instruction type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Declared type of instruction according to the relevant lifecycle-related activity addressed by the information element."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#InstructionType"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#InstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#appliesToProduct",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "qualification applies to product"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Identifies the product to which a qualification assertion applies in this Textile reporting profile."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Qualification applicability in the Textile SoC profile. This differs from dpp:appliesToProduct, whose domain is DigitalProductPassport. Always use the txtsoc prefix for qualification scope."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#isQualifiedByProductGroupList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Links a SoC type (d) qualification to the product-group-specific external list or delegated act used as qualification basis."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileTypeDQualification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "is qualified by product-group list"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ProductGroupSpecificSoCList"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasRegulatoryBasis"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#isQualifiedByProductGroupList"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#isQualifiedByProductGroupList; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasLocationInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property attaches contextual location information to a substance presence context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstancePresence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has location information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#LocationInformation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a substance presence context to a location information object."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasLocationInformation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasLocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#upperBound",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#RangeThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "upperBound"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The upper bound of a Textile range threshold expression."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#productGroupApplicability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "productGroupApplicability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Text describing the product groups to which an external regulatory reference applies."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#MaterialGroup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class remains product-sector neutral. Sector-specific material group subclasses, such as textile material groups or hard component material groups, should be defined in product-specific modules."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "material group"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A material or material grouping within a product, used as a structural unit for reporting or calculating substance concentration."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#MaterialGroup"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialGroup; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is located in a fibre-composition material group, including a fibre-, yarn- or fabric-based part."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Fibre composition location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_FIBRE_COMPOSITION"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Fibre composition location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The product contains the substance but the more specific location within the textile product has not been determined or disclosed."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Unknown textile product location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_UNKNOWN"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Unknown textile product location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#locationDescriptor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Free-text description used because the JRC and ESPR do not define a controlled vocabulary or formal spatial model for location. This textual description may complement a structured reference to a product part."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#LocationInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "location descriptor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Textual description of where the substance is located within the product."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#locationDescriptor"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#locationDescriptor; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A versioned reference identifying the textile-product-group source that qualifies a substance under the product-group-specific type (d) criterion."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile product-group SoC reference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ProductGroupSpecificSoCList"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 2(27)(d)."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Textile-specific instruction information concerning safe use and lifecycle handling in the presence of a substance of concern, including disassembly, preparation for reuse, reuse, recycling and environmentally sound end-of-life management; repair guidance may be added as a textile/JRC extension."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile SoC handling information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstanceManagementInstruction"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.1, printed pages 219-220, lines 6205-6220."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasRegulatoryBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Generic property linking a qualification to its supporting external legal or classificatory basis."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has regulatory basis"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a regulatory qualification to the external regulatory reference on which it is based."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasRegulatoryBasis"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasRegulatoryBasis; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#RecyclingInstructionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#InstructionType"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Instruction related to the recycling of the product in relation to the substance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "recycling"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#RecyclingInstructionType"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#RecyclingInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileMaterialGroup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A fibre-, yarn- or fabric-based material grouping within a textile product that serves as a location or mass-reference unit for substance reporting."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile material group"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#MaterialGroup"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileRecyclingAlertThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A textile-sector alert concentration used to inform sorting, recycling or environmentally sound end-of-life handling when the substance may hinder circular treatment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile recycling alert threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#AlertConcentrationThreshold"
+      },
+      {
+        "@id": "_:cb20405a9abbdc2e425b8cd8ba90625de943ba5adad1a1baabd7b3f24bda9379b8f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 9.2.5.2, printed page 142, lines 3910-3927; Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb20405a9abbdc2e425b8cd8ba90625de943ba5adad1a1baabd7b3f24bda9379b8f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#evaluationNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "evaluation note"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Additional explanatory note associated with a threshold evaluation."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#evaluationNote"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluationNote; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasPresenceChemicalFunction",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile substance occurrence to the chemical function performed in that textile context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has presence chemical function"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalFunctionConcept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 3.3.2, printed pages 29-30, lines 584-593; JRC Preparatory Study, Section 12.3, printed page 226, lines 6437-6455."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents the evaluative layer between measurement and regulatory consequence. It does not replace ConcentrationInformation or RegulatoryThreshold; it records the result of applying a threshold rule to a concentration value in a given substance presence context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Threshold evaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#Situation"
+      },
+      {
+        "@id": "_:cb1eb99e7fd27619ae21df2a08a0eaa2028aae032f64209cebbaf08332cb9c8ecdd"
+      },
+      {
+        "@id": "_:cb2a7aecac87cf319a6bf7884658df09d5a429fff280fd5a95939624502d2864efc"
+      },
+      {
+        "@id": "_:cb325c2387e832c80df2e3ca45a76ad9404ca3e063e5b6d100cc8a93ae0860c4fa8"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A contextual regulatory evaluation in which a reported concentration is compared with an applicable regulatory threshold."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ThresholdEvaluation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1eb99e7fd27619ae21df2a08a0eaa2028aae032f64209cebbaf08332cb9c8ecdd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#evaluatesAgainstThreshold"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb2a7aecac87cf319a6bf7884658df09d5a429fff280fd5a95939624502d2864efc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb325c2387e832c80df2e3ca45a76ad9404ca3e063e5b6d100cc8a93ae0860c4fa8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ExactThresholdValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ExactThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      },
+      {
+        "@id": "_:cb21be622b3687262a3c0d1a36dcd4e901a283e9f2f021c4e6d4646cff1a430d61f"
+      },
+      {
+        "@id": "_:cb3799426b95012bf2a1d2108b6ceb0ef3b695aca0c5eb4be2ed3b01db1d8fb8252"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A Textile threshold expression represented by one exact decimal mass-ratio value."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb21be622b3687262a3c0d1a36dcd4e901a283e9f2f021c4e6d4646cff1a430d61f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#numericValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb3799426b95012bf2a1d2108b6ceb0ef3b695aca0c5eb4be2ed3b01db1d8fb8252",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdReportingLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "hasThresholdReportingLevel"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ReportingLevel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Records the reporting level applicable to a regulatory threshold comparison."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#analyticalMethod",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "analytical method"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Textual description of the analytical method used to determine or verify the concentration."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#analyticalMethod"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#analyticalMethod; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#referenceDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "referenceDate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A date recorded for an external regulatory reference."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#AlertConcentrationThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents circularity-driven threshold values such as c_alert for SoC type (d)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Alert concentration threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A threshold value above which a substance should trigger alert-based handling, such as disposal instead of recycling."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#AlertConcentrationThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#AlertConcentrationThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#wholeProductLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is reported as distributed throughout, or only locatable at the level of, the whole textile product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Whole textile product location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_WHOLE_PRODUCT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Whole textile product location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Controlled vocabulary of textile-specific location types used in substance location information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile SoC location type scheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#hasTopConcept": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#adhesiveOrBondingLayerLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#fibreCompositionLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#unknownTextileProductLocation"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#wholeProductLocation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Textile SoC location type scheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#evaluatesAgainstThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "evaluates against threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a threshold evaluation to the regulatory threshold used for the comparison."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#evaluatesAgainstThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesAgainstThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#thresholdNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "threshold note"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Additional explanatory note associated with a regulatory threshold."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#thresholdNote"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#thresholdNote; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#Situation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Generic superclass introduced for modelling contextual situations. It is not tied to a specific regulatory domain."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Situation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A contextualised state of affairs or configuration in which entities stand in a meaningful relation under specific conditions."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#Situation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#Situation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property links a regulatory threshold to an exact, maximum, or range quantitative value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has threshold quantitative value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a regulatory threshold to its quantitative expression."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasThresholdQuantitativeValue"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdQuantitativeValue; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#MaterialLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ReportingLevel"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Material level"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Reporting level corresponding to a material or material group within a product structure."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#MaterialLevel"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#MaterialLevel; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#RangeThresholdValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "RangeThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      },
+      {
+        "@id": "_:cb13f8101343aa4e50a1471898b9f11265203d606ed71d2a834ce0c41138069940c"
+      },
+      {
+        "@id": "_:cb1e17e115fe492c6812c3f4231e8d334a186bee132d00b0955f1558d7494abdb99"
+      },
+      {
+        "@id": "_:cb30beb149b10ee0876816c23de0fc8aeb0656fb88e873e23e99ac9ea4e283339a1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A Textile threshold expression represented by lower and upper decimal mass-ratio bounds."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb13f8101343aa4e50a1471898b9f11265203d606ed71d2a834ce0c41138069940c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#lowerBound"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1e17e115fe492c6812c3f4231e8d334a186bee132d00b0955f1558d7494abdb99",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#upperBound"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb30beb149b10ee0876816c23de0fc8aeb0656fb88e873e23e99ac9ea4e283339a1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#LocationInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Information object attached to a SubstancePresenceContext in order to describe the reported location of the substance within the product. This class does not imply a formal spatial model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Location information"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Contextual qualitative information describing where a substance is located within a product."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#LocationInformation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#LocationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#SafeUseInstructionType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#InstructionType"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Instruction related to the safe use of the product in relation to the substance."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "safe-use"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#SafeUseInstructionType"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#SafeUseInstructionType; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/bibliographicCitation": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Ontology - Textile Substances of Concern Module. Version 2.0.0 candidate."
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-07-09"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@language": "en",
+        "@value": "Andreas Schneider"
+      },
+      {
+        "@language": "en",
+        "@value": "BOUGACHA Racem"
+      },
+      {
+        "@language": "en",
+        "@value": "Elio Hbeich"
+      },
+      {
+        "@language": "en",
+        "@value": "Ivo Ladenius"
+      },
+      {
+        "@language": "en",
+        "@value": "Jan Merckx"
+      },
+      {
+        "@language": "en",
+        "@value": "Piero de Sabbata"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "Textile-sector specialisation of the EU DPP Substances of Concern ontology. It specialises substance presence, product location, concentration reporting, product-group qualification, thresholds and lifecycle handling for textile products."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-07-09"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-10-27"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "EU DPP Textile Ontology - Textile Substances of Concern Module"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "txtsoc"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@value": "https://w3id.org/eudpp/textile-soc#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This module does not classify every textile chemical as a substance of concern. It specialises the generic SoC presence-context model for textile products and attaches textile-specific information to the occurrence, not globally to the chemical identity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile substances of concern ontology"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-con-mireot"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-core"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-process"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc-mireot"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc/2.0.0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "Version 2.0.0 candidate"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasConcentrationReportingLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property expresses whether the concentration is reported at product, component, material, or spare-part level."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has concentration reporting level"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ReportingLevel"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Indicates the reporting granularity at which the concentration is described."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasConcentrationReportingLevel"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasConcentrationReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#BelowThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "below threshold"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Evaluation result indicating that the reported concentration is below the applicable threshold."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#BelowThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#BelowThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstancePresence"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has threshold evaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a substance presence context to a threshold evaluation associated with it."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasThresholdEvaluation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Concentration information for a substance present in a textile product, expressed at product, component, material-group or spare-part level as an exact value, maximum value or range."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile concentration information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      },
+      {
+        "@id": "_:cb253d71b91ca092150a02e1bfbd76bd4253149863e4cd822f2a180442df9fa6fda"
+      },
+      {
+        "@id": "_:cb471b70a660137461bc10eb0f933ef6e50234f05e91fb1db076a10c0ff4b26a32"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 7(5)(c)"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb253d71b91ca092150a02e1bfbd76bd4253149863e4cd822f2a180442df9fa6fda",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#hasMeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb471b70a660137461bc10eb0f933ef6e50234f05e91fb1db076a10c0ff4b26a32",
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1d83b80e15767147e702c7c6c4181f3bdac44f5fb46b5040c0447a11d2080a61e"
+          },
+          {
+            "@id": "_:cb8e4156f582d3d228947db38d8c7e06d3eb26b76940d30c6849e2a7486ea4631a"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1d83b80e15767147e702c7c6c4181f3bdac44f5fb46b5040c0447a11d2080a61e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#numericalValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb8e4156f582d3d228947db38d8c7e06d3eb26b76940d30c6849e2a7486ea4631a",
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "_:cb1a367352c44f53bc94b16935f1ee59d3dc91c2b465bff48ce09f872d1ba6e9d8c"
+          },
+          {
+            "@id": "_:cb26ecfa52d63734e35d94e7d34bf830e9aff3d837366aa1aebfded1d746a9d87d5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1a367352c44f53bc94b16935f1ee59d3dc91c2b465bff48ce09f872d1ba6e9d8c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#minimumNumericalValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb26ecfa52d63734e35d94e7d34bf830e9aff3d837366aa1aebfded1d746a9d87d5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#maximumNumericalValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasTextileHandlingInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile substance-of-concern presence context to textile-specific safe-use or lifecycle-handling information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has textile handling information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 7(5)(d)-(e)."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#nonTextileComponentLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is located in a non-textile component such as a button, zipper, buckle, rivet, sequin or other hard component."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Non-textile component location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_NON_TEXTILE_COMPONENT"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Non-textile component location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#lowerBound",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#RangeThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "lowerBound"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The lower bound of a Textile range threshold expression."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#maximumValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#MaximumThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "maximumValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The upper bound of a Textile maximum threshold expression."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#coatingOrFinishLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is located in a coating, finish or functional surface treatment applied to the textile product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Coating or finish location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_COATING_FINISH"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Coating or finish location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TrackingThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents thresholds used to determine whether a substance of concern must be tracked or reported in the DPP context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Tracking threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A threshold value above which a substance of concern must be tracked or reported."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#TrackingThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#TrackingThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "evaluates concentration information"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a threshold evaluation to the concentration information being evaluated."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#evaluatesConcentrationInformation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#evaluatesConcentrationInformation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileTypeDQualification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A product-group-specific type (d) qualification indicating that a substance hinders the reuse or recycling of a textile product or textile material stream."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile type (d) qualification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      },
+      {
+        "@id": "_:cb34ac603510675ecf3c9f7dd2073021a77f5d02b77234088c3b7ddd7c712c0c340"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.1, printed page 219, lines 6169-6170; Section 12.3.6, printed pages 238-239, lines 6634-6639; Section 12.3.11, printed page 246, lines 6815-6822."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb34ac603510675ecf3c9f7dd2073021a77f5d02b77234088c3b7ddd7c712c0c340",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#hasValue": [
+      {
+        "@id": "https://w3id.org/eudpp#CriterionD"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#hasSoCCriterion"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#referenceVersion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "referenceVersion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A version recorded for an external regulatory reference."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#printedOrDyedRegionLocation",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeConcept"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The substance is located in a printed, dyed or otherwise colour-treated region of the textile product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Printed or dyed region location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#notation": [
+      {
+        "@value": "LOC_PRINT_DYE"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+        "@language": "en",
+        "@value": "Printed or dyed region location"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#topConceptOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCLocationTypeScheme"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "ESPR Annex I; JRC Section 12.1, printed pages 219-220, lines 6203-6220; JRC Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents external documentary or classificatory references used to justify or determine a regulatory qualification."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "External regulatory reference"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An external regulatory list, classification, or specification used as the basis for a regulatory qualification."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ExternalRegulatoryReference"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ExternalRegulatoryReference; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ReportingLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Reporting level indicates the declared granularity of an information item, such as product level, component level, material level, or spare-part level. It does not by itself identify the concrete product part concerned, nor does it define the mass reference basis used for concentration calculation."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "reporting level"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Declared level of granularity at which a substance-related information item is reported."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ReportingLevel"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ReportingLevel; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#refersToProductPartForLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optional property used when the reported location refers to a specific part of the product rather than to the whole product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#LocationInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "refers to product part for location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a location information object to the product part to which the reported location refers."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#refersToProductPartForLocation"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForLocation; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasPresenceUseCategory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Classifies the textile chemical occurrence by whether it is associated with process use, intended performance use or unintended presence. The classification is attached to the occurrence rather than globally to the substance identity."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has presence use category"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileChemicalUseCategoryConcept"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 12.3, printed page 226, lines 6428-6455."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileTrackingThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A tracking or disclosure threshold applicable to a substance occurrence in a textile product or textile product group."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile tracking threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TrackingThreshold"
+      },
+      {
+        "@id": "_:cb219e68a4cde3292b57b15762b0c80e47589b4a633c48bf6906e56ac042c8be4a8"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.1, printed page 220, lines 6213-6220; Section 12.3.12, printed page 246, lines 6823-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb219e68a4cde3292b57b15762b0c80e47589b4a633c48bf6906e56ac042c8be4a8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has threshold evaluation result"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a threshold evaluation to its result."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasThresholdEvaluationResult"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasThresholdEvaluationResult; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#refersToProductPartForConcentration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Optional property used when the reported concentration refers to a specific part of the product rather than to the whole product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "refers to product part for concentration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-associated-materials#TextileProductPart"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a concentration information object to the product part to which the reported concentration refers."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#refersToProductPartForConcentration"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#refersToProductPartForConcentration; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#NonTextileComponentMaterialGroup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A material grouping associated with one or more non-textile components, used as a location or concentration reference unit without treating the component itself as a material group."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Non-textile component material group"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#MaterialGroup"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Preparatory Study, Section 12.3.12, printed page 246, lines 6847-6861."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#qualificationSource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "qualification source"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Textual reference to the legal or regulatory source on which a qualification is based."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#qualificationSource"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#qualificationSource; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#AtThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "AtThreshold"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An evaluation result in which exact concentration and exact threshold values are equal."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileFibreCompositionMaterialGroup",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://susproc.jrc.ec.europa.eu/product-bureau/sites/default/files/2025-12/Textile-Prep-Study_3rd-Milestone_20251212.pdf"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Bridge class for a fibre-composition component that is used as the material-group scope of a textile substance-of-concern presence context."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile fibre-composition material group"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-core#FibreCompositionComponent"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileMaterialGroup"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "This local bridge avoids globally reclassifying every Textile Core fibre-composition component as a SoC material group."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "JRC Section 12.3.12, printed page 246, lines 6847-6863."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A substance-of-concern presence context specialised for a textile product, textile material group or non-textile component."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Textile substance of concern presence context"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstancePresence"
+      },
+      {
+        "@id": "_:cb1de8046abfcad01ca391688ee5fafe6e0a8b7a4a4d62be8f4fa035a9e66ccc5c1"
+      },
+      {
+        "@id": "_:cb26fba854dc94f74a4719a254b9c1604bc303cdde7bed39ac81c21bd78989f533f"
+      },
+      {
+        "@id": "_:cb31a17760e882efa68270b968377b132ce07aea0d4bdd91e952345457a73437610"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 2(27) and Article 7(5); CORE SOC 2.2.0 SubstancePresence."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1de8046abfcad01ca391688ee5fafe6e0a8b7a4a4d62be8f4fa035a9e66ccc5c1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#concernsSubstance"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstanceOfConcern"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb26fba854dc94f74a4719a254b9c1604bc303cdde7bed39ac81c21bd78989f533f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#hasApplicableQualification"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp#SoCQualificationAssertion"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb31a17760e882efa68270b968377b132ce07aea0d4bdd91e952345457a73437610",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp#isSubstancePresenceOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp#Product"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#IndeterminateThresholdResult",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ThresholdEvaluationResult"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "IndeterminateThresholdResult"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An evaluation result in which the recorded intervals overlap without establishing an exact equality or a strictly lower or higher relation."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#MaterialGroupMassBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#NamedIndividual",
+      "https://w3id.org/eudpp/textile-soc#ConcentrationReferenceBasis"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "material group mass basis"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A concentration reference basis using the mass of the identified material reporting group as denominator."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#instructionContent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Free-text guidance attached to a substance presence context. The ESPR does not define a controlled vocabulary or formal structure for instruction content."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#SubstanceManagementInstruction"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "instruction content"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Textual content of an instruction related to a substance present in a product."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#instructionContent"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#instructionContent; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ProductGroupSpecificSoCList",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "External regulatory specification used to determine SoC type (d) qualification. This reference may be documented with identifiers, source, version, date, and product-category applicability information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Product-group specific SoC list"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "List of substances hindering reuse or recycling for a given product group."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ProductGroupSpecificSoCList; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#referenceIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#ExternalRegulatoryReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "referenceIdentifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An identifier recorded for an external regulatory reference."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#substanceIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Functional interoperability property used for cross-checking against SVHC, CLP, POPs or other external references."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#Substance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "substance identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Identifier used to match a substance against regulatory lists."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#substanceIdentifier"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#substanceIdentifier; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#NonExemptionThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This class represents thresholds used to determine when exemptions are not allowed, such as the 0.1% w/w threshold for certain substances."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Non-exemption threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      },
+      {
+        "@id": "_:cb1dc5890ba21bf7f7944de957d0510f9dcbf5f6fd1b34c910704b44cdcb3b65d01"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A threshold value above which an information element may not be exempted."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#NonExemptionThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#NonExemptionThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1dc5890ba21bf7f7944de957d0510f9dcbf5f6fd1b34c910704b44cdcb3b65d01",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasApplicableRegulatoryThreshold",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property indicates which regulatory thresholds are relevant for interpreting a reported concentration. It does not by itself express whether the threshold is met, exceeded, or violated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has applicable regulatory threshold"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp#ThresholdOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Links a concentration information object to a regulatory threshold that is applicable for its interpretation."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#hasApplicableRegulatoryThreshold; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#MaximumThresholdValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MaximumThresholdValue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#QuantitativeValue"
+      },
+      {
+        "@id": "_:cb26473714e718c0b80e5192a00eb323bd978edf978c4004049f6fdd28e5e0d250f"
+      },
+      {
+        "@id": "_:cb38d99361f289744588e4f3948b4e3cb65537cc300e0a722f7a905a9cd3580a833"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/eudpp#ConcentrationOfSubstanceOfConcern"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A Textile threshold expression represented by an upper bound on a decimal mass ratio."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#projectDecision"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb26473714e718c0b80e5192a00eb323bd978edf978c4004049f6fdd28e5e0d250f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#maximumValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb38d99361f289744588e4f3948b4e3cb65537cc300e0a722f7a905a9cd3580a833",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#hasMeasurementUnit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "https://si-digital-framework.org/SI#MeasurementUnit"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbb56c7c9b0751963ca43928a539dec044fa3caa55bb3ec2d9c3943b52cc4ce3a3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AllDisjointClasses"
+    ],
+    "http://www.w3.org/2002/07/owl#members": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/eudpp/textile-soc#TextileSubstanceOfConcernPresenceContext"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-soc#TextileConcentrationInformation"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference"
+          },
+          {
+            "@id": "https://w3id.org/eudpp/textile-soc#TextileSoCHandlingInformation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#ConcentrationReferenceBasis",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://w3id.org/eudpp/soc"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "ConcentrationReferenceBasis represents the denominator or reference scope used for concentration calculation, such as the final product mass, an article mass, a product part mass, or a material group mass. It is distinct from the reporting level and from the concrete product part to which the information may refer."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "concentration reference basis"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Reference basis against which a substance concentration is calculated or reported."
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "https://w3id.org/eudpp/soc#ConcentrationReferenceBasis"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#modellingNote": [
+      {
+        "@language": "en",
+        "@value": "Definition/comment adapted from historical SOC 0.1.2. Local namespace, scope and CORE alignment are Textile decisions documented in docs/decisions/TXT-DEC-010.md; no equivalence to the historical resource is asserted."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Historical SOC 0.1.2, https://w3id.org/eudpp/soc#ConcentrationReferenceBasis; local adaptation: docs/decisions/TXT-DEC-010.md"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#adaptedDefinition"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/eudpp/textile-soc#hasTextileProductGroupReference",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "http://data.europa.eu/eli/reg/2024/1781/oj"
+      },
+      {
+        "@id": "https://w3id.org/eudpp/textile-ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Relates a textile type (d) qualification to the versioned textile product-group reference supporting that qualification."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileTypeDQualification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "has textile product-group reference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#TextileProductGroupSoCReference"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-soc#hasRegulatoryBasis"
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceLocator": [
+      {
+        "@language": "en",
+        "@value": "Regulation (EU) 2024/1781, Article 2(27)(d)."
+      }
+    ],
+    "https://w3id.org/eudpp/textile-connector#sourceType": [
+      {
+        "@id": "https://w3id.org/eudpp/textile-connector#modellingAbstraction"
+      }
+    ]
+  }
+]
