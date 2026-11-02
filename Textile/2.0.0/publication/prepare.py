@@ -8,7 +8,8 @@ from rdflib.namespace import DCTERMS
 
 ROOT=Path(__file__).resolve().parents[3]
 DEST=ROOT/'Textile/2.0.0'
-SHA='a2bc2642627bf9223b1e39dc54a4e45c233e9232'
+SHA='e9cf8542d104fefccf339761d138fcf9c32bc904'
+UPDATE_BASE='9f859e801e8d64afdfee48c6a402522069996c35'
 BASE='5c76af4448093cdc9e57d2bb3bfdf1416b8876eb'
 PUBLIC='https://cirpass-2.github.io/ontologies-docs/'
 MODULES=('assessment','associated-materials','connector','context','core','durability','indicator','process','recyclability','repairability','soc','structure')
@@ -97,8 +98,16 @@ def update_portals():
     (ROOT/name).write_bytes(text.encode('utf8'))
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--source',type=Path,required=True);args=parser.parse_args()
-    source=args.source.resolve();assert git('rev-parse','HEAD').decode().strip()==BASE
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--source',type=Path,required=True);parser.add_argument('--update',action='store_true');args=parser.parse_args()
+    source=args.source.resolve();assert git('rev-parse','HEAD').decode().strip()==(UPDATE_BASE if args.update else BASE)
+    prior=json.loads((DEST/'publication/transfer-inventory.json').read_text('utf8')) if args.update else None
+    if prior:
+        assert prior['source_commit']=='a2bc2642627bf9223b1e39dc54a4e45c233e9232'
+        for row in prior['files']:
+            assert hashlib.sha256((ROOT/row['destination']).read_bytes()).hexdigest()==row['sha256'],row['destination']
+        for name in ('index.html','ontologies.html'):
+            assert (ROOT/name).read_bytes()==git('show',UPDATE_BASE+':'+name)
+
     assert git('branch','--show-current').decode().strip()=='docs/textile-2.0.0'
     tree=git('ls-tree','-r','--name-only',SHA,cwd=source).decode().splitlines()
     manifest=git('show',SHA+':PUBLICATION_MANIFEST.txt',cwd=source).decode('utf8')
@@ -120,11 +129,14 @@ def main():
     for path in needed:
         end=raw.index(b'\n',position);header=raw[position:end].split();assert header[1]==b'blob'
         size=int(header[2]);blobs[path]=raw[end+1:end+1+size];position=end+size+2
+    if prior:
+        assert {row['destination'] for row in prior['files']} <= {row[1] for row in mappings}
     rows=[]
     for src,dst,category in sorted(mappings,key=lambda row:row[1]):
         path=ROOT/dst;data=blobs[src];assert path.resolve().is_relative_to(DEST.resolve())
-        if path.exists():assert path.read_bytes()==data,'Refuse to overwrite different asset: '+dst
-        else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
+        if path.exists() and not args.update:assert path.read_bytes()==data,'Refuse to overwrite different asset: '+dst
+        if not path.exists() or path.read_bytes()!=data:
+            path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
         rows.append(dict(source=src,destination=dst,category=category,bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),expected_url=PUBLIC+quote(dst,safe='/')))
     contract=blobs['SHA256SUMS'].decode().splitlines()
     assert contract==[hashlib.sha256(blobs[path]).hexdigest()+'  '+path for path in sections['CURRENT_PACKAGE'] if path!='SHA256SUMS']
@@ -132,8 +144,9 @@ def main():
     (DEST/'.gitattributes').write_text('# Preserve committed source bytes, including historical references.\n* -text\n',encoding='utf8',newline='\n')
     counts={category:sum(row['category']==category for row in rows) for category in ('widoco','diagrams','CURRENT_PACKAGE','PRESERVED_REFERENCE_MATERIAL')}
     inventory=dict(source_repository='https://github.com/CIRPASS-2/ontologie-textiles',source_commit=SHA,source_pr='https://github.com/CIRPASS-2/ontologie-textiles/pull/19',documentation_baseline=BASE,pages_source=dict(branch='main',path='/',build_type='legacy'),expected_base_url=PUBLIC+'Textile/2.0.0/',counts=counts,transfer_files=len(rows),transfer_bytes=sum(row['bytes'] for row in rows),package_files=counts['CURRENT_PACKAGE']+counts['PRESERVED_REFERENCE_MATERIAL'],package_bytes=sum(row['bytes'] for row in rows if row['category'] in ('CURRENT_PACKAGE','PRESERVED_REFERENCE_MATERIAL')),files=rows)
+    if args.update:inventory['documentation_update_baseline']=UPDATE_BASE
     (DEST/'publication/transfer-inventory.json').write_text(json.dumps(inventory,indent=2)+'\n',encoding='utf8',newline='\n')
-    update_portals()
+    if not args.update:update_portals()
     print(json.dumps({key:value for key,value in inventory.items() if key!='files'},indent=2))
 
 if __name__=='__main__':main()

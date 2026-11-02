@@ -18,7 +18,8 @@ def test_exact_header_revision_and_catalogue_identity(row):
     graph=Graph().parse(ROOT/row['file']);ontology=URIRef(row['ontology_iri'])
     assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
     assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/2.0.0')}
-    assert semantic_digest(project(graph,ontology))==row['non_metadata_graph_sha256']
+    from migration.mat_alignment import without_alignment
+    assert semantic_digest(project(without_alignment(graph),ontology))==row['non_metadata_graph_sha256']
     assert set(REPORT['allowed_predicates'])==set(map(str,PREDICATES))
     for field in ('added','removed'):
         for subject,predicate,_ in Graph().parse(data='\n'.join(row[field]),format='turtle'):

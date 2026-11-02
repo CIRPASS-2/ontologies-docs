@@ -83,7 +83,7 @@ established from this repository; this record makes no claim about them.
 ## Remaining decisions
 
 - Identify the package/revision Nader received before diagnosing a distribution omission.
-- Ask CORE governance whether Textile fibre concepts should also be `dpp:MaterialType` instances before proposing a type-property alignment.
+- MAT type alignment resolved on 2026-11-02 by the owner-approved decision below.
 - Agree the recycled-content source, denominator and aggregation semantics with CORE/Battery owners before adoption.
 
 ### Pending SoC/EVENT upstream governance
@@ -107,3 +107,25 @@ it does not establish that the current SoC namespace is erroneous.
 All six MIREOT subsets, upstream dependencies, Connector, examples and SHACL
 remain unchanged by this review implementation. Provenance and namespace
 ownership are preserved.
+
+## Resolved MAT classification alignment ? 2026-11-02
+
+Nader Jelassi's [source PR #19 comment](https://github.com/CIRPASS-2/ontologie-textiles/pull/19)
+identified the missing bridge. Independent investigation against approved commit
+`a2bc2642627bf9223b1e39dc54a4e45c233e9232` and adopted MAT 1.1.0 supports
+both axioms, now owner-approved: `FibreTypeConcept` subclasses MAT `MaterialType`,
+and `hasFibreType` specializes MAT `hasMaterialType`.
+
+SKOS controlled concepts can also be instances of the OWL class MaterialType;
+they classify materials rather than represent physical fibre batches. The
+property subjects are FibreCompositionComponent entries, already subclasses
+of MaterialOfComposition. Inference adds MAT typing and classification edges
+without classifying the owning product as a material occurrence. The distinct
+product-to-entry relation hasFibreCompositionComponent is not aligned.
+
+This resolves the earlier open question; it does not retrospectively claim
+that the JRC citations prescribed these OWL bridges. CORE/MIREOT sources,
+fractions, controlled vocabularies and historical graphs are unchanged.
+RDFS and OWL RL regression coverage and exact graph differences are recorded
+in [MAT alignment evidence](https://github.com/CIRPASS-2/ontologie-textiles/blob/migration/october-2026-core-2.0.0/migration/MAT_ALIGNMENT.md). OWL RL checks
+do not constitute a complete OWL DL consistency proof.

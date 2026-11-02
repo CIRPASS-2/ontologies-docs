@@ -23,6 +23,8 @@ def test_all_thirteen_graphs_preserve_every_non_creator_triple():
             assert triple in graph
             graph.remove(triple)
         for triple in Graph().parse(data='\n'.join(change['removed']),format='turtle'):graph.add(triple)
+        from migration.mat_alignment import without_alignment
+        graph=without_alignment(graph)
         graph.remove((ontology,m.DC.creator,None))
         assert semantic_digest(graph)==row['non_creator_graph_sha256'],row['file']
         block=re.search(r'(?m)^    dcterms:creator [\s\S]*?;',path.read_text('utf8')).group()

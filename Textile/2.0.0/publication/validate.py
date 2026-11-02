@@ -18,6 +18,40 @@ PREFIX='/ontologies-docs/'
 MODULES=assembly.MODULES
 SECTIONS=('abstract','introduction','nstable','overview','description','references','crossref')
 
+def verify_repository_preservation(root, revision, scope='Textile/2.0.0/'):
+    """Preserve protected committed/index objects; permit checkout EOL conversion."""
+    def git(*args):
+        return subprocess.check_output(['git', *args], cwd=root)
+    def tree(ref):
+        result={}
+        for row in git('ls-tree','-rz','--full-tree',ref).split(b'\0'):
+            if not row: continue
+            metadata,path=row.split(b'\t',1)
+            name=path.decode('utf8')
+            if not name.startswith(scope):
+                mode,kind,oid=metadata.split()
+                result[name]=(mode,oid)
+        return result
+    expected=tree(revision)
+    assert tree('HEAD')==expected, 'Protected committed objects changed'
+    staged={}
+    for row in git('ls-files','--stage','-z').split(b'\0'):
+        if not row: continue
+        metadata,path=row.split(b'\t',1)
+        name=path.decode('utf8')
+        if not name.startswith(scope):
+            mode,oid,stage=metadata.split()
+            assert stage==b'0', 'Protected index conflict: '+name
+            staged[name]=(mode,oid)
+    assert staged==expected, 'Protected staged objects changed'
+    for command,label in [(('diff','--name-only','-z','--'),'unstaged'),
+                          (('ls-files','--others','--exclude-standard','-z'),'untracked')]:
+        changed=[p.decode('utf8') for p in git(*command).split(b'\0') if p]
+        forbidden=[name for name in changed if not name.startswith(scope)]
+        assert not forbidden, 'Protected '+label+' content changed: '+repr(forbidden)
+    return len(expected)
+
+
 class DOM(HTMLParser):
     def __init__(self,text):
         super().__init__();self.ids=Counter();self.links=[]
@@ -42,11 +76,11 @@ class Handler(SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 
 class Browser:
-    def __init__(self,executable,tools):
+    def __init__(self,executable,tools,temp_root=None):
         if tools:sys.path.insert(0,str(tools))
         import websocket
         self.websocket=websocket;self.counter=0
-        self.profile=tempfile.TemporaryDirectory(prefix='textile-docs-cdp-',ignore_cleanup_errors=True)
+        self.profile=tempfile.TemporaryDirectory(prefix='textile-docs-cdp-',dir=temp_root,ignore_cleanup_errors=True)
         args=[str(executable),'--headless','--disable-gpu','--no-first-run','--no-default-browser-check','--disable-extensions','--disable-background-networking','--no-proxy-server','--host-resolver-rules=MAP * ~NOTFOUND, EXCLUDE 127.0.0.1','--remote-debugging-port=0','--remote-allow-origins=http://localhost','--user-data-dir='+self.profile.name,'about:blank']
         self.process=subprocess.Popen(args,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
         portfile=Path(self.profile.name)/'DevToolsActivePort';deadline=time.monotonic()+25
@@ -122,9 +156,10 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--edge',type=Path,default=Path(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'))
     parser.add_argument('--browser-tools',type=Path)
+    parser.add_argument('--temp-root',type=Path)
     args=parser.parse_args()
     inventory=json.loads((PUBLICATION/'transfer-inventory.json').read_text('utf8'))
-    rows=inventory['files'];assert len(rows)==1290
+    rows=inventory['files'];assert len(rows)==1295==inventory['transfer_files']
     assert inventory['source_commit']==assembly.SHA and inventory['documentation_baseline']==assembly.BASE
     assert len({row['destination'] for row in rows})==len(rows)
     for row in rows:assert hashlib.sha256((ROOT/row['destination']).read_bytes()).hexdigest()==row['sha256'],row['destination']
@@ -132,6 +167,11 @@ def main():
     tracked=assembly.git('diff','--name-only',assembly.BASE).decode().splitlines()
     assert all(name in ('index.html','ontologies.html') or name.startswith('Textile/2.0.0/') for name in tracked),tracked
     original_files=assembly.git('ls-tree','-r','--name-only',assembly.BASE).decode().splitlines()
+    update_base=inventory['documentation_update_baseline']
+    prior_files=assembly.git('ls-tree','-r','--name-only',update_base).decode().splitlines()
+    protected=[name for name in prior_files if not name.startswith('Textile/2.0.0/')]
+    assert verify_repository_preservation(ROOT,update_base)==len(protected)
+    print('Documentation-update baseline files preserved outside Textile/2.0.0:',len(protected),flush=True)
     for page in ('index.html','ontologies.html'):
         before=assembly.baseline(page);after=(ROOT/page).read_text('utf8')
         assert assembly.outside_regions(before,page)==assembly.outside_regions(after,page),'Non-Textile portal change: '+page
@@ -180,7 +220,7 @@ def main():
         print('HTTP RDF isomorphism passed:',exports,'exports; 12 WebVOWL JSON graphs valid',flush=True)
         for page in ('index.html','ontologies.html','Textile/2.0.0/index.html'):
             doms[urlsplit(url(page)).path]=DOM(content(page).decode('utf8'))
-        browser=Browser(args.edge,args.browser_tools)
+        browser=Browser(args.edge,args.browser_tools,args.temp_root)
         for module in MODULES:
             canonical=Graph().parse(DEST/f'package/ontology/textile-{module}.ttl')
             namespace='https://w3id.org/eudpp/textile-'+module+'#'
@@ -219,7 +259,7 @@ def main():
                     if target.netloc==urlsplit(origin).netloc and target.path.startswith(PREFIX):content(unquote(target.path[len(PREFIX):]))
         legacy=[name for name in original_files if name.endswith('/index-en.html')]
         for name in legacy:content(name)
-        result=dict(status='passed',source_commit=assembly.SHA,documentation_baseline=assembly.BASE,
+        result=dict(status='passed',source_commit=assembly.SHA,documentation_baseline=assembly.BASE,documentation_update_baseline=update_base,protected_update_baseline_files=len(protected),preservation_comparison='Protected HEAD/index object IDs and modes equal baseline; unstaged content checked by Git; publication assets retain exact SHA-256 bytes',
                     expected_base_url=inventory['expected_base_url'],http_base_path=PREFIX,http_server='local loopback HTTP; directory listings disabled; exact case-sensitive paths enforced',
                     copied_files_verified=len(rows),copied_bytes=inventory['transfer_bytes'],package_files=inventory['package_files'],package_bytes=inventory['package_bytes'],
                     checksum_contract_files=structure['package_files'],sha256_contract_rows=structure['package_files']-1,
@@ -233,7 +273,7 @@ def main():
                     structural_validation=structure,http_transfer_results=http_results,
                     limitations=['External DNS was disabled in the browser to isolate copied local assets; external badges, citations, ReSpec delivery and optional remote ontology loading are not claimed verified.',
                                  'Loopback HTTP and the actual Pages base path were tested; production deployment, CDN MIME behavior and persistent w3id redirects remain separate post-deployment checks.',
-                                 'Canonical bytes and the 205-test source validation records are copied unchanged; the semantic regression suite was not rerun for this documentation-only transfer.'],
+                                 'Canonical bytes and the fresh 221-test source validation records are copied unchanged; source semantic validation passed before this documentation transfer.'],
                     deployment_performed=False,remote_branch_pushed=False,remote_pr_opened=False)
         (PUBLICATION/'validation-results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8',newline='\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ('http_transfer_results','browser_pages','structural_validation')},indent=2),flush=True)

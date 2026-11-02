@@ -1,6 +1,17 @@
+param([string[]]$OnlyModels = @())
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $diagramModels = @(
+    @{ Name='textile-core'; Title='Textile Core 2.0.0 - approved MAT classification alignment'; Rows=@(
+        @('TextileFibre / Yarn / Fabric','subClassOf','TextileProduct'),
+        @('TextileProduct','hasFibreCompositionComponent','FibreCompositionComponent'),
+        @('FibreCompositionComponent','subClassOf','CORE MaterialOfComposition'),
+        @('FibreCompositionComponent','hasFibreType','FibreTypeConcept'),
+        @('FibreTypeConcept','subClassOf','SKOS Concept AND CORE MaterialType'),
+        @('hasFibreType','subPropertyOf','CORE hasMaterialType'),
+        @('FibreCompositionComponent','hasFibreMassFraction','QuantitativeValue (0-1, units:one)'),
+        @('Product-to-entry relationship','remains distinct','No MAT type-property alignment')
+    )},
     @{ Name='textile-soc'; Title='Textile SoC - October 2026 CORE / 2.0.0 candidate'; Rows=@(
         @('TextileChemicalSubstance','subClassOf','CORE Substance'),
         @('Textile positive presence','subClassOf','CORE SubstancePresence'),
@@ -45,6 +56,12 @@ $diagramModels = @(
     )}
 )
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+if ($OnlyModels.Count -gt 0) {
+    foreach ($name in $OnlyModels) {
+        if ($name -notin $diagramModels.Name) { throw "Unknown diagram: $name" }
+    }
+    $diagramModels = @($diagramModels | Where-Object { $_.Name -in $OnlyModels })
+}
 foreach ($model in $diagramModels) {
     $canvasWidth = 1600
     $canvasHeight = 100 + 130 * $model.Rows.Count

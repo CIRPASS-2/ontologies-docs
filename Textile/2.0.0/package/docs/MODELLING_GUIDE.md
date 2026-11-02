@@ -32,10 +32,22 @@ links a product to a composition entry; it is not equivalent to
 `dpp:hasMaterialType`, which links a material occurrence to its classification.
 The MAT snapshot uses the `https://w3id.org/eudpp#` term namespace.
 
-`txt:hasFibreType` is a potential alignment candidate only if governance decides
-that Textile fibre concepts are also instances of `dpp:MaterialType`. Their
-current SKOS representation does not by itself establish or prohibit that
-additional classification. No such mapping is asserted.
+The owner-approved response to Nader Jelassi's [PR #19 review](https://github.com/CIRPASS-2/ontologie-textiles/pull/19)
+adds `txt:FibreTypeConcept rdfs:subClassOf dpp:MaterialType` and
+`txt:hasFibreType rdfs:subPropertyOf dpp:hasMaterialType`. Fibre concepts remain
+SKOS individuals and also instantiate MAT's class of sector material
+classifications. The property links a fibre composition entry, already a
+`dpp:MaterialOfComposition`, to its classification at the same conceptual level
+as MAT. RDFS/OWL inference therefore exposes every fibre concept as a MAT type
+and every fibre-type assertion as a MAT classification assertion; consumers
+without inference must materialize these consequences when needed.
+
+The product-to-entry relation `txt:hasFibreCompositionComponent` remains distinct
+and has no MAT type-property alignment. Physical `txt:TextileFibre` batches
+remain products. Composition fractions, units, schemes and existing constraints
+are preserved. These two OWL bridges are project modelling decisions supported
+by MAT definitions, not alignments prescribed by the JRC study. See the
+[alignment evidence](../migration/MAT_ALIGNMENT.md).
 
 `dpp:materialPercentage` carries a literal decimal percentage. Textile uses
 `txt:hasFibreMassFraction` to link to a structured `txtcon:QuantitativeValue`

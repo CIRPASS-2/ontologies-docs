@@ -1,100 +1,90 @@
-# Textile Ontology 2.0.0 documentation publication review
+# Textile 2.0.0 MAT alignment documentation update
 
-This is local preparation for a dedicated documentation PR. Nothing has been
-pushed, submitted as a remote PR, merged, tagged, released or deployed.
-
-Source: CIRPASS-2/ontologie-textiles at
-`a2bc2642627bf9223b1e39dc54a4e45c233e9232`,
+Source candidate: `e9cf8542d104fefccf339761d138fcf9c32bc904`, successfully pushed to
 [source PR #19](https://github.com/CIRPASS-2/ontologie-textiles/pull/19).
-Documentation baseline: `5c76af4448093cdc9e57d2bb3bfdf1416b8876eb`.
-Local documentation branch: `docs/textile-2.0.0`.
+This updates the existing [documentation PR #1](https://github.com/CIRPASS-2/ontologies-docs/pull/1)
+from documentation commit `9f859e801e8d64afdfee48c6a402522069996c35`.
 
-## Scope and bytes
+The only canonical RDF additions are the approved FibreTypeConcept subclass of
+CORE MaterialType and hasFibreType subproperty of CORE hasMaterialType.
+All 22 fibre concepts infer MAT typing. The source regression suite passed:
+221 tests, zero assertion failures, zero setup errors, 12 deprecation warnings.
+Both public validation modes passed. Source evidence is copied in the package.
 
-The committed-source transfer inventory records **1,290 exact file copies**:
-469 primary WIDOCO files, all 27 diagram files, 791 current-package members and
-three separately inventoried reference files. Their total uncompressed file
-content is **121,026,018 bytes**. The validation-ready package is **794 files**,
-**86,887,100 bytes**: 791 checksum-contract members plus the three attributed
-references. SHA256SUMS has 790 entries because it does not checksum itself.
-No ZIP was built, and these byte totals are not compressed archive sizes.
+## Exact committed transfer
 
-Every source asset was read from committed Git blobs at the approved SHA,
-never from the source working tree. The untracked source publication plan is
-excluded. The complete package keeps its original paths, manifest and checksums;
-it intentionally contains its own documentation and diagrams in addition to the
-primary Pages copies. All original licences, source notices and references remain.
-The version-local .gitattributes disables text normalization to preserve bytes.
+The transfer inventory records **1,295 exact file copies**,
+**120,716,465 bytes**, read from committed source Git blobs.
+There are 469 primary WIDOCO files,
+27 diagram files and 799 package files.
+The package checksum contract contains 796 members
+and 795 checksum entries; three separately
+inventoried reference files retain their source bytes.
 
-All added files are below `Textile/2.0.0/`. Outside that tree, only the Textile
-regions of `index.html` and `ontologies.html` change. All 1,117 other previously
-tracked files are preserved, including CORE, Battery, Tyre, legacy Textile,
-.nojekyll and LICENSE. All old portal Textile links remain. The original catalogue
-and its original generation-date/count label remain as a historical snapshot;
-the new Textile group explicitly distinguishes the added 2.0.0 pages.
-
-The portal separates the 2.0.0 candidate's October 2026 CORE alignment (including
-SOC 2.2.0) from independently published CORE documentation and historical Textile
-1.1.2. Seven direct package-MIREOT links avoid directory listings. Textile licensing
-and pending persistent-IRI coordination are explicit. No page claims that Textile
-w3id resolution is deployed.
-
-## Validation and expected URLs
-
-[Machine-readable results](validation-results.json) record actual loopback HTTP
-serving with the `/ontologies-docs/` prefix, directory indexes disabled and exact
-case-sensitive paths enforced. All 1,290 copied files must return HTTP 200 and the
-expected committed hash. The package structural validator and its original
-manifest/SHA-256 contract must pass. All 48 HTTP RDF exports must be graph-isomorphic
-to canonical sources.
-
-Headless Microsoft Edge is driven through Chrome DevTools Protocol. All twelve
-module pages must render, all 84 AJAX sections must return HTTP 200, every local
-annotation-property anchor must exist uniquely, and all twelve WebVOWL pages must
-load their local JSON and render SVG graph nodes. Empty namespace fragments remain
-empty exactly as committed; successful zero-byte HTTP responses are distinguished
-from failed loading. Rendered DOM links and fragment targets, local CSS URL targets,
-and all 37 prior sector landing pages are checked over HTTP.
-
-Expected deployment root (not deployed by this task):
+All changed files remain within `Textile/2.0.0/`. Root portals, navigation,
+historical Textile and CORE/Battery/Tyre documentation remain byte-identical to
+the previous documentation commit. The public base remains
 `https://cirpass-2.github.io/ontologies-docs/Textile/2.0.0/`.
-Each module is at `<module>/index-en.html`, its graph at
-`<module>/webvowl/index.html`, and downloads at `<module>/ontology.ttl`,
-`ontology.owl`, `ontology.nt` and `ontology.jsonld`. Diagrams are under `diagrams/`;
-the 794-file package is under `package/`. Every exact percent-encoded expected URL
-is included in [the transfer inventory](transfer-inventory.json).
 
-For a new local validation, from the documentation repository root, install
-`Textile/2.0.0/publication/requirements-browser.txt` in an isolated Python environment
-and run:
+The assembly tool's `--update` mode verifies every prior inventory hash before
+overwriting approved assets. The validator additionally compares every tracked
+file outside the versioned Textile tree with the previous documentation commit.
+
+## Validation
+
+Run the existing HTTP/browser validator with its pinned websocket dependency:
 
 ```powershell
-python -B Textile/2.0.0/publication/validate.py
+python -B Textile/2.0.0/publication/validate.py --browser-tools <dependency-directory> --temp-root <writable-directory>
 ```
 
-Edge's default Windows installation is used unless `--edge` is supplied. An
-isolated `websocket-client` installation can be supplied through `--browser-tools`.
-The validator serves only loopback HTTP and closes its isolated browser afterward.
-`prepare.py` is an assembly tool for a fresh branch based on the recorded docs
-baseline, not a command to regenerate approved source ontologies.
+The temporary-root option avoids the inaccessible system temporary storage
+encountered during source validation. It does not suppress any browser check.
+All 1,295 copied files must pass HTTP hashes; all twelve module pages, 84 AJAX
+sections and twelve rendered WebVOWL graphs must load. All 48 RDF exports must
+be isomorphic to canonical source graphs. Local links, CSS targets, legacy pages,
+source creators, version identities and package integrity remain checked.
+Exact results are recorded in `validation-results.json` after the run.
 
-External DNS is disabled in browser runs to isolate local publication assets.
-External badges, citations, ReSpec delivery, remote ontology loading and public
-resolver behavior are not claimed verified. Production Pages/CDN behavior and
-persistent-IRI routing need separately authorized post-deployment checks. The
-unchanged source's 205-test evidence is included; the semantic suite was not rerun
-for this byte-preserving documentation transfer.
+External DNS is disabled in browser tests. External badges, citations, ReSpec,
+remote ontology loading, production CDN behavior and persistent IRI resolution
+are outside these local checks. OWL RL tests are not a complete OWL DL proof.
+No merge, release, deployment or persistent redirect change is performed.
+The existing documentation branch push is owner-authorized after validation.
 
-## Approval boundary
+## Preservation contract and completed validation
 
-Authenticated read-only settings inspection confirmed legacy GitHub Pages from
-`main`, folder `/`, at `https://cirpass-2.github.io/ontologies-docs/`, with no CNAME.
-The remote main SHA was fetched rather than assumed. The only listed workflow is
-the existing dynamic pages-build-deployment workflow; it is not changed here.
-Merging into docs main would trigger publication. Source PR review/merge,
-documentation-branch push, remote documentation PR creation and any Pages
-publication require the owner's next authorization. Resolver deployment remains
-with the existing namespace maintainers. Existing CORE redirects are untouched.
+Repository preservation compares protected path names, modes and Git object IDs
+in HEAD and the index with the recorded baseline. Unauthorized committed or
+staged changes, additions, deletions and conflicts fail. Git also checks for
+unstaged content edits and unauthorized untracked files. Windows checkout EOL
+representation is separate from repository identity; no protected file is
+rewritten or normalized. All 1,119 protected repository entries are unchanged.
 
-[Prepared PR description](PR_DESCRIPTION.md). A local commit records this review;
-its SHA is reported to the owner separately, avoiding a self-referential hash.
+Textile publication integrity remains stricter at the byte level: all 1,295
+source-derived assets match exact Git blobs from source commit
+`e9cf8542d104fefccf339761d138fcf9c32bc904` and their SHA-256 hashes, both on disk
+and through HTTP. No byte normalization or asset exceptions are allowed.
+
+All 12 preservation regression cases pass across LF and CRLF checkouts. Controls
+reject genuine unstaged edits, staged edits even after restoring the working
+file, committed edits, staged additions and staged deletions.
+
+The complete HTTP/browser workflow passed: all twelve module pages, 84 AJAX
+sections, twelve rendered WebVOWL graphs, 48 graph-isomorphic RDF exports,
+1,295 HTTP hash checks, the 796-member manifest with 795 checksum rows, 7,192
+local DOM references and 6,446 fragments. Zero local link errors occurred; all
+37 historical/other-sector landing pages returned HTTP 200. Both MAT bridges
+are present in canonical Core RDF, WIDOCO HTML and WebVOWL relationship data.
+
+Remote source PR #19 was verified at the exact required source commit before
+preparing this documentation commit. All 43 changed files are restricted to
+`Textile/2.0.0/`; changed-files.txt is the exact reviewed list. Source ontologies,
+protected sectors, historical versions, root navigation, configuration and
+redirects are unchanged. validation-results.json records the pre-commit test
+snapshot; the final commit SHA and push result are reported separately.
+
+Technical validation is complete and the existing PR is ready for human review.
+No merge, release, tag, deployment or persistent resolver change is authorized
+or performed by this task. External DNS/CDN and public resolver behavior remain
+outside local validation. OWL RL validation is not a complete OWL DL proof.

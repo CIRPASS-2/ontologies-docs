@@ -1,7 +1,8 @@
 # Textile ontology diagrams
 
 SOC, Associated Materials, Recyclability and the network overview are regenerated
-for the 2.0.0 candidate. Other diagrams retain their accepted baseline bytes.
+for the 2.0.0 candidate. The Core diagram is regenerated for the approved
+MAT classification alignment. Other diagrams retain their accepted baseline bytes.
 Views are illustrative; Turtle remains the axiom authority.
 
 | Module | Classes | Object properties | Datatype properties | SKOS concepts | SKOS schemes |
