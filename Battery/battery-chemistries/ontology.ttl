@@ -17,13 +17,13 @@
                                               <http://purl.org/dc/terms/issued> "2026-08-18"^^xsd:date ;
                                               <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                                  "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en ;
-                                              <http://purl.org/dc/terms/modified> "2026-09-01"^^xsd:date ;
+                                              <http://purl.org/dc/terms/modified> "2026-10-06"^^xsd:date ;
                                               <http://purl.org/dc/terms/references> "BatteryPass-Ready Data Attribute Long List v1.3, attribute 39; draft labelling Implementing Act under Regulation (EU) 2023/1542"@en ;
                                               <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2023/1542/oj> ;
                                               <http://purl.org/dc/terms/title> "EU DPP Battery Chemistries Vocabulary"@en ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "batchem" ;
                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/battery-chemistries#" ;
-                                              rdfs:comment "Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). To be revisited when MAT v2 lands (ontologies-core#24, #25) and when the labelling Implementing Act is adopted."@en ;
+                                              rdfs:comment "Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). To be revisited when the labelling Implementing Act is adopted."@en ;
                                               rdfs:label "EU DPP Battery Chemistries Vocabulary"@en ;
                                               rdfs:seeAlso <https://w3id.org/eudpp/battery-materials> ;
                                               owl:versionInfo "Version 0.1.1 DRAFT"@en .
@@ -116,6 +116,10 @@
 <http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/eudpp#materialTypeScheme
+<https://w3id.org/eudpp#materialTypeScheme> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -151,7 +155,7 @@ xsd:date rdf:type rdfs:Datatype .
                         <http://purl.org/dc/terms/source> "Draft Implementing Act on the harmonised format and technical specifications for the labelling of batteries, under Regulation (EU) 2023/1542, Annex VI Part A (7). Not yet adopted; the ten terms of this scheme are the draft ones."@en ;
                         rdfs:isDefinedBy <https://w3id.org/eudpp/battery-chemistries> ;
                         rdfs:label "Battery chemistries per the draft labelling Implementing Act"@en ;
-                        <http://www.w3.org/2004/02/skos/core#editorialNote> "Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. CIRPASS-2/ontologies-core#25 introduces eudpp:materialTypeScheme on the MAT material type; once it exists, the ten individuals are to carry it, pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the value."@en ;
+                        <http://www.w3.org/2004/02/skos/core#editorialNote> "Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. The ten individuals carry eudpp:materialTypeScheme (MAT v1.1.0, CIRPASS-2/ontologies-core#25), pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the scheme."@en ;
                         <http://www.w3.org/2004/02/skos/core#hasTopConcept> :LiIonLCO ,
                                                                             :LiIonLFP ,
                                                                             :LiIonLMO ,
@@ -178,7 +182,8 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
           <http://www.w3.org/2004/02/skos/core#notation> "Li-ion LCO" ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium ion LCO"@en ;
-          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+          <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#LiIonLFP
@@ -193,7 +198,8 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
           <http://www.w3.org/2004/02/skos/core#notation> "Li-ion LFP" ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium ion LFP"@en ;
-          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+          <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#LiIonLMO
@@ -208,7 +214,8 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
           <http://www.w3.org/2004/02/skos/core#notation> "Li-ion LMO" ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium ion LMO"@en ;
-          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+          <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#LiIonNCA
@@ -223,7 +230,8 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
           <http://www.w3.org/2004/02/skos/core#notation> "Li-ion NCA" ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium ion NCA"@en ;
-          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+          <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#LiIonNMC
@@ -238,7 +246,8 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
           <http://www.w3.org/2004/02/skos/core#notation> "Li-ion NMC" ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium ion NMC"@en ;
-          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+          <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+          <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#LiMetal
@@ -252,7 +261,8 @@ xsd:date rdf:type rdfs:Datatype .
          <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
          <http://www.w3.org/2004/02/skos/core#notation> "Li-metal" ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Lithium metal"@en ;
-         <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+         <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+         <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#NaIon
@@ -266,7 +276,8 @@ xsd:date rdf:type rdfs:Datatype .
        <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
        <http://www.w3.org/2004/02/skos/core#notation> "Na-ion" ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "Sodium-ion"@en ;
-       <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+       <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+       <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#NiCd
@@ -280,7 +291,8 @@ xsd:date rdf:type rdfs:Datatype .
       <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
       <http://www.w3.org/2004/02/skos/core#notation> "Ni-Cd" ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nickel cadmium"@en ;
-      <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+      <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+      <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#NiMH
@@ -294,7 +306,8 @@ xsd:date rdf:type rdfs:Datatype .
       <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
       <http://www.w3.org/2004/02/skos/core#notation> "Ni-MH" ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Nickel metal hydride"@en ;
-      <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+      <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+      <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  https://w3id.org/eudpp/battery-chemistries#Pb
@@ -308,7 +321,8 @@ xsd:date rdf:type rdfs:Datatype .
     <http://www.w3.org/2004/02/skos/core#inScheme> :BatteryChemistryScheme ;
     <http://www.w3.org/2004/02/skos/core#notation> "Pb" ;
     <http://www.w3.org/2004/02/skos/core#prefLabel> "Lead acid"@en ;
-    <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme .
+    <http://www.w3.org/2004/02/skos/core#topConceptOf> :BatteryChemistryScheme ;
+    <https://w3id.org/eudpp#materialTypeScheme> "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"^^xsd:anyURI .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

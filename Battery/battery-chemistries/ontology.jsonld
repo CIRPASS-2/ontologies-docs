@@ -74,6 +74,9 @@
   "@id" : "https://w3id.org/eudpp#MaterialType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://w3id.org/eudpp#materialTypeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
@@ -111,7 +114,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-01"
+    "@value" : "2026-10-06"
   } ],
   "http://purl.org/dc/terms/references" : [ {
     "@language" : "en",
@@ -132,7 +135,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). To be revisited when MAT v2 lands (ontologies-core#24, #25) and when the labelling Implementing Act is adopted."
+    "@value" : "Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). To be revisited when the labelling Implementing Act is adopted."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -171,7 +174,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
     "@language" : "en",
-    "@value" : "Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. CIRPASS-2/ontologies-core#25 introduces eudpp:materialTypeScheme on the MAT material type; once it exists, the ten individuals are to carry it, pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the value."
+    "@value" : "Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. The ten individuals carry eudpp:materialTypeScheme (MAT v1.1.0, CIRPASS-2/ontologies-core#25), pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the scheme."
   } ],
   "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#LiIonLCO"
@@ -240,6 +243,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#LiIonLFP",
@@ -279,6 +286,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#LiIonLMO",
@@ -318,6 +329,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#LiIonNCA",
@@ -357,6 +372,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#LiIonNMC",
@@ -396,6 +415,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#LiMetal",
@@ -432,6 +455,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#NaIon",
@@ -468,6 +495,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#NiCd",
@@ -504,6 +535,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#NiMH",
@@ -540,6 +575,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-chemistries#Pb",
@@ -576,5 +615,9 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
     "@id" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
+  } ],
+  "https://w3id.org/eudpp#materialTypeScheme" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme"
   } ]
 } ]

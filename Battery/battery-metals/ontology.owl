@@ -8,6 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:eudpp="https://w3id.org/eudpp#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/eudpp/battery-metals">
         <owl:versionIRI rdf:resource="https://w3id.org/eudpp/battery-metals/0.1.0"/>
@@ -20,13 +21,13 @@
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-03</terms:issued>
         <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
         <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-03</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-06</terms:modified>
         <terms:references xml:lang="en">Regulation (EU) 2023/1542, Art. 8(1) and Annex XIII 2(a); BatteryPass-Ready Data Attribute Long List v1.3, attributes 48 to 54</terms:references>
         <terms:source rdf:resource="https://eur-lex.europa.eu/eli/reg/2023/1542/oj"/>
         <terms:title xml:lang="en">EU DPP Battery Metals Vocabulary</terms:title>
         <vann:preferredNamespacePrefix>batmet</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/eudpp/battery-metals#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). To be revisited when MAT v2 lands (ontologies-core#24, #25): #25 introduces eudpp:materialTypeScheme, to be added to these four concepts as it is to the ten chemistries, and recycledContentType, which splits pre- from post-consumer shares.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). The four concepts carry eudpp:materialTypeScheme, added to MAT by ontologies-core#25. MAT v1.1.0 also adds eudpp:materialRecycledContentType (pre-consumer, post-consumer, unknown); the battery profile keeps one total share per metal, as BatteryPass-Ready long list v2.0 and the Commission guidance of 15 August 2026 ask.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP Battery Metals Vocabulary</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://w3id.org/eudpp/battery-chemistries"/>
         <rdfs:seeAlso rdf:resource="https://w3id.org/eudpp/battery-materials"/>
@@ -194,6 +195,13 @@
     
 
 
+    <!-- https://w3id.org/eudpp#materialTypeScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/eudpp#materialTypeScheme"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -291,6 +299,7 @@
         <skos:prefLabel xml:lang="en">Cobalt</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Recycled share is measured on the cobalt present in active materials, recovered from battery manufacturing waste or post-consumer waste. Long list attributes 49 and 52.</skos:scopeNote>
         <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme"/>
+        <eudpp:materialTypeScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</eudpp:materialTypeScheme>
     </owl:NamedIndividual>
     
 
@@ -311,6 +320,7 @@
         <skos:prefLabel xml:lang="en">Lead</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Lead is the exception in Art. 8(1): the recycled share is measured on the lead present in THE BATTERY, not in active materials, and recovered from waste without the manufacturing / post-consumer split. Long list attribute 54, which has no pre- and post-consumer counterpart.</skos:scopeNote>
         <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme"/>
+        <eudpp:materialTypeScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</eudpp:materialTypeScheme>
     </owl:NamedIndividual>
     
 
@@ -330,6 +340,7 @@
         <skos:prefLabel xml:lang="en">Lithium</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Recycled share is measured on the lithium present in active materials, recovered from battery manufacturing waste or post-consumer waste. Long list attributes 50 and 53.</skos:scopeNote>
         <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme"/>
+        <eudpp:materialTypeScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</eudpp:materialTypeScheme>
     </owl:NamedIndividual>
     
 
@@ -349,6 +360,7 @@
         <skos:prefLabel xml:lang="en">Nickel</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Recycled share is measured on the nickel present in active materials, recovered from battery manufacturing waste or post-consumer waste. Long list attributes 48 and 51.</skos:scopeNote>
         <skos:topConceptOf rdf:resource="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme"/>
+        <eudpp:materialTypeScheme rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</eudpp:materialTypeScheme>
     </owl:NamedIndividual>
 </rdf:RDF>
 

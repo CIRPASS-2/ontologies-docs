@@ -60,7 +60,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
-    "@value" : "EU DPP Battery Performance Ontology. Draft version 0.3.0."
+    "@value" : "EU DPP Battery Performance Ontology. Draft version 0.4.0."
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@language" : "en",
@@ -93,11 +93,11 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-09-01"
+    "@value" : "2026-11-02"
   } ],
   "http://purl.org/dc/terms/references" : [ {
     "@language" : "en",
-    "@value" : "Regulation (EU) 2023/1542, Annex XIII; BatteryPass-Ready Data Attribute Long List v1.3"
+    "@value" : "Regulation (EU) 2023/1542, Annex XIII; BatteryPass-Ready Data Attribute Long List v1.3; Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026)"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@id" : "https://eur-lex.europa.eu/eli/reg/2023/1542/oj"
@@ -114,18 +114,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions."
+    "@value" : "Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "EU DPP Battery Performance Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/eudpp/battery-performance/0.3.0"
+    "@id" : "https://w3id.org/eudpp/battery-performance/0.4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 0.3.0 DRAFT"
+    "@value" : "Version 0.4.0 DRAFT"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-performance#AccidentEvent",
@@ -295,7 +295,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah)."
+    "@value" : "Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah). Version 3.2 of the Commission guidance separates the charge C-rate (data point 39) from the discharge C-rate (data point 40): use the subproperties chargeCRateOfCycleLifeTest and dischargeCRateOfCycleLifeTest."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
@@ -407,6 +407,33 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@language" : "en",
+    "@value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 39 (Regulation (EU) 2023/1542, Annex XIII (1p))"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Charge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 39 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "charge C-rate of relevant cycle-life test"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -453,6 +480,33 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@language" : "en",
+    "@value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 40 (Regulation (EU) 2023/1542, Annex XIII (1p))"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Discharge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 40 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "discharge C-rate of relevant cycle-life test"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest"
   } ]
 }, {
   "@id" : "https://w3id.org/eudpp/battery-performance#energyThroughput",
@@ -619,6 +673,36 @@
     "@id" : "https://w3id.org/eudpp#hasProperty"
   } ]
 }, {
+  "@id" : "https://w3id.org/eudpp/battery-performance#initialCellInternalResistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@language" : "en",
+    "@value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 38 (Regulation (EU) 2023/1542, Annex XIII (1o))"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Initial internal resistance at battery cell level: the cell value of data point 38 of the Commission guidance (internal battery cell resistance). Unit: ohm."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "initial internal resistance of battery cell"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#initialInternalResistance"
+  } ],
+  "https://w3id.org/eudpp/battery-performance#measurementUnit" : [ {
+    "@id" : "https://si-digital-framework.org/SI/units/ohm"
+  } ]
+}, {
   "@id" : "https://w3id.org/eudpp/battery-performance#initialInternalResistance",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/references" : [ {
@@ -627,7 +711,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm."
+    "@value" : "'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm. Version 3.2 of the Commission guidance gives the cell and pack values as two items of data point 38: use the subproperties initialCellInternalResistance and initialPackInternalResistance."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
@@ -641,6 +725,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "https://w3id.org/eudpp/battery-performance#measurementUnit" : [ {
+    "@id" : "https://si-digital-framework.org/SI/units/ohm"
+  } ]
+}, {
+  "@id" : "https://w3id.org/eudpp/battery-performance#initialPackInternalResistance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/references" : [ {
+    "@language" : "en",
+    "@value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 38 (Regulation (EU) 2023/1542, Annex XIII (1o))"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Initial internal resistance at battery pack level: the pack value of data point 38 of the Commission guidance (internal battery pack resistance). Unit: ohm."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#BatteryPerformance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "initial internal resistance of battery pack"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/eudpp/battery-performance#initialInternalResistance"
   } ],
   "https://w3id.org/eudpp/battery-performance#measurementUnit" : [ {
     "@id" : "https://si-digital-framework.org/SI/units/ohm"

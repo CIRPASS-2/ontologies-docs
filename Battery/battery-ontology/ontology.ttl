@@ -13,17 +13,17 @@
                                   <http://purl.org/dc/terms/created> "2026-07-07"^^xsd:date ;
                                   <http://purl.org/dc/terms/creator> "Marc-Andree Wolf"@en ,
                                                                      "Nader Jelassi"@en ;
-                                  <http://purl.org/dc/terms/description> "Sectoral ontology for battery Digital Product Passports under Regulation (EU) 2023/1542. This umbrella module declares the Battery product class; battery data is organised in nine companion modules: battery-performance (electrochemical performance, durability and in-use state), battery-materials (chemistry and material location), battery-labeling (labels and symbols), battery-categories (the five Art. 3(1) battery categories), battery-chemistries (the ten labelling chemistries), battery-locations (cathode, anode, electrolyte), battery-metals (the four metals whose recycled content Art. 8(1) requires), battery-statuses (the five Annex XIII 4(c) lifecycle statuses) and battery-extinguisher-classes; battery-cf-shapes carries the carbon footprint SHACL profile. It extends the CIRPASS-2 cross-sectoral CORE ontology by direct reference, following the approach of the Textile sector modules."@en ;
+                                  <http://purl.org/dc/terms/description> "Sectoral ontology for battery Digital Product Passports under Regulation (EU) 2023/1542. This umbrella module declares the Battery product class and the SafetyInstruction class; battery data is organised in nine companion modules: battery-performance (electrochemical performance, durability and in-use state), battery-materials (chemistry and material location), battery-labeling (labels and symbols), battery-categories (the five Art. 3(1) battery categories), battery-chemistries (the ten labelling chemistries), battery-locations (cathode, anode, electrolyte), battery-metals (the four metals whose recycled content Art. 8(1) requires), battery-statuses (the five Annex XIII 4(c) lifecycle statuses) and battery-extinguisher-classes; battery-cf-shapes carries the carbon footprint SHACL profile. It extends the CIRPASS-2 cross-sectoral CORE ontology by direct reference, following the approach of the Textile sector modules."@en ;
                                   <http://purl.org/dc/terms/issued> "2026-07-07"^^xsd:date ;
                                   <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                      "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en ;
-                                  <http://purl.org/dc/terms/modified> "2026-09-03"^^xsd:date ;
+                                  <http://purl.org/dc/terms/modified> "2026-10-06"^^xsd:date ;
                                   <http://purl.org/dc/terms/references> "Regulation (EU) 2023/1542 (Batteries Regulation)"@en ;
                                   <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2023/1542/oj> ;
                                   <http://purl.org/dc/terms/title> "EU DPP Battery Ontology"@en ;
                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "bat" ;
                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/battery#" ;
-                                  rdfs:comment "Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions."@en ;
+                                  rdfs:comment "Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions."@en ;
                                   rdfs:label "EU DPP Battery Ontology"@en ;
                                   rdfs:seeAlso <https://w3id.org/eudpp/battery-categories> ,
                                                <https://w3id.org/eudpp/battery-cf-shapes> ,
@@ -176,10 +176,11 @@ xsd:duration rdf:type rdfs:Datatype .
                 rdfs:range xsd:anyURI ;
                 <http://purl.org/dc/terms/references> "Regulation (EU) 2023/1542, Annex XIII 2(d)"@en ;
                 <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2023/1542/oj> ;
-                rdfs:comment "Link to the safety measures applicable to the battery. The document the URL points at is a digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP), and the correspondence is recorded here as rdfs:seeAlso. It is deliberately not a SKOS mapping: this is a datatype property carrying a URL, eudpp:DigitalInstruction is a class of documents, and an alignment between the two would not hold at audit. Re-expressing this property on a CORE document pattern is the subject of ontologies-battery#11 and is deferred until that pattern is settled."@en ;
+                rdfs:comment "Deprecated on 6 October 2026 and kept for existing data: the safety measures are now a bat:SafetyInstruction, subclass of eudpp:DigitalInstruction (P_DPP), reached through dpp:hasProperty with its URL on dpp:webLink (ontologies-core#45). Link to the safety measures applicable to the battery."@en ;
                 rdfs:isDefinedBy <https://w3id.org/eudpp/battery> ;
                 rdfs:label "safety measures"@en ;
-                rdfs:seeAlso <https://w3id.org/eudpp#DigitalInstruction> .
+                rdfs:seeAlso :SafetyInstruction ;
+                owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/eudpp/battery#testReportResults
@@ -213,6 +214,10 @@ xsd:duration rdf:type rdfs:Datatype .
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
+###  https://w3id.org/eudpp#DigitalInstruction
+<https://w3id.org/eudpp#DigitalInstruction> rdf:type owl:Class .
+
+
 ###  https://w3id.org/eudpp#Product
 <https://w3id.org/eudpp#Product> rdf:type owl:Class .
 
@@ -226,6 +231,16 @@ xsd:duration rdf:type rdfs:Datatype .
          rdfs:isDefinedBy <https://w3id.org/eudpp/battery> ;
          rdfs:label "Battery"@en ;
          rdfs:seeAlso <https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme> .
+
+
+###  https://w3id.org/eudpp/battery#SafetyInstruction
+:SafetyInstruction rdf:type owl:Class ;
+                   rdfs:subClassOf <https://w3id.org/eudpp#DigitalInstruction> ;
+                   <http://purl.org/dc/terms/references> "Regulation (EU) 2023/1542, Annex XIII 2(d); BatteryPass-Ready Data Attribute Long List v1.3, attribute 47"@en ;
+                   <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2023/1542/oj> ;
+                   rdfs:comment "Instruction manual giving the safety measures to be taken when handling the battery, including dismantling. A digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP): reached from the battery through dpp:hasProperty, with its URL on dpp:webLink. Declared here so that the safety measures can be told apart from the other instructions of a battery; replaces the datatype property bat:safetyMeasures (ontologies-core#45)."@en ;
+                   rdfs:isDefinedBy <https://w3id.org/eudpp/battery> ;
+                   rdfs:label "Safety instruction"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

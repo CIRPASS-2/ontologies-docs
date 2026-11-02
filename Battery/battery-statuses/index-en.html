@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery-statuses#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery-statuses#","name":"EU DPP Battery Statuses Vocabulary", "headline":"Document describing the ontology https://w3id.org/eudpp/battery-statuses#", "dateReleased":"2026-08-19", "dateCreated":"2026-08-19", "dateModified":"2026-09-01", "version":"Version 0.1.1 DRAFT", "author":[{"@type":"Person","name":"Marc-Andree Wolf"},{"@type":"Person","name":"Nader Jelassi"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery-statuses#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery-statuses#","name":"EU DPP Battery Statuses Vocabulary", "headline":"Document describing the ontology https://w3id.org/eudpp/battery-statuses#", "dateReleased":"2026-08-19", "dateCreated":"2026-08-19", "dateModified":"2026-10-06", "version":"Version 0.1.1 DRAFT", "author":[{"@type":"Person","name":"Nader Jelassi"},{"@type":"Person","name":"Marc-Andree Wolf"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -72,7 +72,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-09-01</dt>
+<dt>Modified on: 2026-10-06</dt>
 <dt>This version:</dt>
 <dd><a href="https://w3id.org/eudpp/battery-statuses/0.1.1">https://w3id.org/eudpp/battery-statuses/0.1.1</a></dd>
 <dt>Revision:</dt>
@@ -80,8 +80,7 @@ $(function(){
 <dt>Issued on:</dt>
 <dd>2026-08-19</dd>
 <dt>Authors:</dt>
-<dd>Marc-Andree Wolf</dd><dd>Nader Jelassi</dd>
-
+<dd>Nader Jelassi</dd><dd>Marc-Andree Wolf</dd>
 <dt>Contributors:</dt>
 <dd>Arnab Sinha</dd>
 
@@ -255,7 +254,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">EU DPP Battery Statuses Vocabulary: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions.</span></div>
+<span class="markdown">Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions.</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -428,7 +427,7 @@ This section provides details for each class and property defined by EU DPP Batt
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Battery lifecycle statuses per Annex XIII 4(c)"@en</span>
    </dd>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Closed list of five terms. The status is dynamic at individual-battery granularity: it is updated on placing on the market and on every status change. A new battery passport is issued when the battery has been remanufactured, repurposed or subjected to a treatment operation preparing for re-use or repurposing and is placed on the market again; the link back to the previous passport is carried by the CORE property dpp:linkToPreviousDPP, not by this vocabulary. Access to the battery status is restricted to persons with a legitimate interest — a conformance rule expressed in the SHACL shapes, not in this ontology."@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Closed list of five terms. The status is dynamic at individual-battery granularity: it is updated on placing on the market and on every status change. A new battery passport is issued when the battery has been remanufactured, repurposed or subjected to a treatment operation preparing for re-use or repurposing and is placed on the market again; the link back to the previous passport is carried by the CORE, not by this vocabulary: dpp:linkToPreviousDPP, and since P_DPP v2.1.0 the object properties linking a passport to its previous and next passports (ontologies-core#56). Access to the battery status is restricted to persons with a legitimate interest — a conformance rule expressed in the SHACL shapes, not in this ontology."@en</span>
    </dd>
   </dl>
  </div>

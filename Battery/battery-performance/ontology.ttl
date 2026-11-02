@@ -7,8 +7,8 @@
 @base <https://w3id.org/eudpp/battery-performance#> .
 
 <https://w3id.org/eudpp/battery-performance> rdf:type owl:Ontology ;
-                                              owl:versionIRI <https://w3id.org/eudpp/battery-performance/0.3.0> ;
-                                              <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Battery Performance Ontology. Draft version 0.3.0."@en ;
+                                              owl:versionIRI <https://w3id.org/eudpp/battery-performance/0.4.0> ;
+                                              <http://purl.org/dc/terms/bibliographicCitation> "EU DPP Battery Performance Ontology. Draft version 0.4.0."@en ;
                                               <http://purl.org/dc/terms/contributor> "Arnab Sinha"@en ;
                                               <http://purl.org/dc/terms/created> "2026-07-07"^^xsd:date ;
                                               <http://purl.org/dc/terms/creator> "Marc-Andree Wolf"@en ,
@@ -17,15 +17,15 @@
                                               <http://purl.org/dc/terms/issued> "2026-07-07"^^xsd:date ;
                                               <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
                                                                                  "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en ;
-                                              <http://purl.org/dc/terms/modified> "2026-09-01"^^xsd:date ;
-                                              <http://purl.org/dc/terms/references> "Regulation (EU) 2023/1542, Annex XIII; BatteryPass-Ready Data Attribute Long List v1.3"@en ;
+                                              <http://purl.org/dc/terms/modified> "2026-11-02"^^xsd:date ;
+                                              <http://purl.org/dc/terms/references> "Regulation (EU) 2023/1542, Annex XIII; BatteryPass-Ready Data Attribute Long List v1.3; Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026)"@en ;
                                               <http://purl.org/dc/terms/source> <https://eur-lex.europa.eu/eli/reg/2023/1542/oj> ;
                                               <http://purl.org/dc/terms/title> "EU DPP Battery Performance Ontology"@en ;
                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "batperf" ;
                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/eudpp/battery-performance#" ;
-                                              rdfs:comment "Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions."@en ;
+                                              rdfs:comment "Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions."@en ;
                                               rdfs:label "EU DPP Battery Performance Ontology"@en ;
-                                              owl:versionInfo "Version 0.3.0 DRAFT"@en .
+                                              owl:versionInfo "Version 0.4.0 DRAFT"@en .
 
 #################################################################
 #    Annotation properties
@@ -176,7 +176,7 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:domain :BatteryPerformance ;
                       rdfs:range xsd:decimal ;
                       <http://purl.org/dc/terms/references> "BatteryPass-Ready Data Attribute Long List v1.3, attribute 87"@en ;
-                      rdfs:comment "Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah)."@en ;
+                      rdfs:comment "Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah). Version 3.2 of the Commission guidance separates the charge C-rate (data point 39) from the discharge C-rate (data point 40): use the subproperties chargeCRateOfCycleLifeTest and dischargeCRateOfCycleLifeTest."@en ;
                       rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
                       rdfs:label "C-rate of relevant cycle-life test"@en .
 
@@ -221,6 +221,17 @@ xsd:date rdf:type rdfs:Datatype .
                               rdfs:label "certified usable battery energy"@en .
 
 
+###  https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest
+:chargeCRateOfCycleLifeTest rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :cRateOfCycleLifeTest ;
+                            rdfs:domain :BatteryPerformance ;
+                            rdfs:range xsd:decimal ;
+                            <http://purl.org/dc/terms/references> "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 39 (Regulation (EU) 2023/1542, Annex XIII (1p))"@en ;
+                            rdfs:comment "Charge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 39 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."@en ;
+                            rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
+                            rdfs:label "charge C-rate of relevant cycle-life test"@en .
+
+
 ###  https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate
 :currentSelfDischargeRate rdf:type owl:DatatypeProperty ;
                           rdfs:domain :BatteryStateRecord ;
@@ -239,6 +250,17 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:comment "The reference test for 'Expected lifetime: Number of charge-discharge cycles'."@en ;
                         rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
                         rdfs:label "cycle-life reference test"@en .
+
+
+###  https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest
+:dischargeCRateOfCycleLifeTest rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :cRateOfCycleLifeTest ;
+                               rdfs:domain :BatteryPerformance ;
+                               rdfs:range xsd:decimal ;
+                               <http://purl.org/dc/terms/references> "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 40 (Regulation (EU) 2023/1542, Annex XIII (1p))"@en ;
+                               rdfs:comment "Discharge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 40 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
+                               rdfs:label "discharge C-rate of relevant cycle-life test"@en .
 
 
 ###  https://w3id.org/eudpp/battery-performance#energyThroughput
@@ -271,15 +293,39 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:label "expected lifetime: number of charge-discharge cycles"@en .
 
 
+###  https://w3id.org/eudpp/battery-performance#initialCellInternalResistance
+:initialCellInternalResistance rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :initialInternalResistance ;
+                               rdfs:domain :BatteryPerformance ;
+                               rdfs:range xsd:decimal ;
+                               <http://purl.org/dc/terms/references> "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 38 (Regulation (EU) 2023/1542, Annex XIII (1o))"@en ;
+                               rdfs:comment "Initial internal resistance at battery cell level: the cell value of data point 38 of the Commission guidance (internal battery cell resistance). Unit: ohm."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
+                               rdfs:label "initial internal resistance of battery cell"@en ;
+                               :measurementUnit <https://si-digital-framework.org/SI/units/ohm> .
+
+
 ###  https://w3id.org/eudpp/battery-performance#initialInternalResistance
 :initialInternalResistance rdf:type owl:DatatypeProperty ;
                            rdfs:domain :BatteryPerformance ;
                            rdfs:range xsd:decimal ;
                            <http://purl.org/dc/terms/references> "BatteryPass-Ready Data Attribute Long List v1.3, attribute 81"@en ;
-                           rdfs:comment "'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm."@en ;
+                           rdfs:comment "'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm. Version 3.2 of the Commission guidance gives the cell and pack values as two items of data point 38: use the subproperties initialCellInternalResistance and initialPackInternalResistance."@en ;
                            rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
                            rdfs:label "initial internal resistance of battery cell and pack"@en ;
                            :measurementUnit <https://si-digital-framework.org/SI/units/ohm> .
+
+
+###  https://w3id.org/eudpp/battery-performance#initialPackInternalResistance
+:initialPackInternalResistance rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf :initialInternalResistance ;
+                               rdfs:domain :BatteryPerformance ;
+                               rdfs:range xsd:decimal ;
+                               <http://purl.org/dc/terms/references> "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 38 (Regulation (EU) 2023/1542, Annex XIII (1o))"@en ;
+                               rdfs:comment "Initial internal resistance at battery pack level: the pack value of data point 38 of the Commission guidance (internal battery pack resistance). Unit: ohm."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/eudpp/battery-performance> ;
+                               rdfs:label "initial internal resistance of battery pack"@en ;
+                               :measurementUnit <https://si-digital-framework.org/SI/units/ohm> .
 
 
 ###  https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency

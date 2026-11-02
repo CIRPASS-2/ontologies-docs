@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery#","name":"EU DPP Battery Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/battery#", "dateReleased":"2026-07-07", "dateCreated":"2026-07-07", "dateModified":"2026-09-03", "version":"Version 0.4.0 DRAFT", "author":[{"@type":"Person","name":"Marc-Andree Wolf"},{"@type":"Person","name":"Nader Jelassi"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery#","name":"EU DPP Battery Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/battery#", "dateReleased":"2026-07-07", "dateCreated":"2026-07-07", "dateModified":"2026-10-06", "version":"Version 0.4.0 DRAFT", "author":[{"@type":"Person","name":"Nader Jelassi"},{"@type":"Person","name":"Marc-Andree Wolf"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -72,7 +72,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-09-03</dt>
+<dt>Modified on: 2026-10-06</dt>
 <dt>This version:</dt>
 <dd><a href="https://w3id.org/eudpp/battery/0.4.0">https://w3id.org/eudpp/battery/0.4.0</a></dd>
 <dt>Revision:</dt>
@@ -80,8 +80,7 @@ $(function(){
 <dt>Issued on:</dt>
 <dd>2026-07-07</dd>
 <dt>Authors:</dt>
-<dd>Marc-Andree Wolf</dd><dd>Nader Jelassi</dd>
-
+<dd>Nader Jelassi</dd><dd>Marc-Andree Wolf</dd>
 <dt>Contributors:</dt>
 <dd>Arnab Sinha</dd>
 
@@ -142,6 +141,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/eudpp/battery-performance#BatteryStateRecord"
          title="https://w3id.org/eudpp/battery-performance#BatteryStateRecord">Battery State Record</a>
+   </li>
+   <li>
+      <a href="#SafetyInstruction"
+         title="https://w3id.org/eudpp/battery#SafetyInstruction">Safety instruction</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp/battery-performance#TemperatureExposure"
@@ -213,12 +216,20 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy">certified usable battery energy</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest"
+         title="https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest">charge C-rate of relevant cycle-life test</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate"
          title="https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate">current self-discharge rate</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest"
          title="https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest">cycle-life reference test</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest"
+         title="https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest">discharge C-rate of relevant cycle-life test</a>
    </li>
    <li>
       <a href="#dismantlingInformation"
@@ -256,8 +267,16 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/eudpp/battery-performance#accidentInformation">information on accidents</a>
    </li>
    <li>
+      <a href="#https://w3id.org/eudpp/battery-performance#initialCellInternalResistance"
+         title="https://w3id.org/eudpp/battery-performance#initialCellInternalResistance">initial internal resistance of battery cell</a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance"
          title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/eudpp/battery-performance#initialPackInternalResistance"
+         title="https://w3id.org/eudpp/battery-performance#initialPackInternalResistance">initial internal resistance of battery pack</a>
    </li>
    <li>
       <a href="#https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency"
@@ -475,6 +494,11 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#materialTypeScheme" title="https://w3id.org/eudpp#materialTypeScheme">
+         <span>material Type Scheme</span>
+      </a>
+   </li>
+   <li>
       <a href="#https://w3id.org/eudpp/battery-performance#measurementUnit"
          title="https://w3id.org/eudpp/battery-performance#measurementUnit">measurement unit</a>
    </li>
@@ -681,7 +705,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">EU DPP Battery Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions.</span></div>
+<span class="markdown">Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions.</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -698,6 +722,7 @@ This section provides details for each class and property defined by EU DPP Batt
   <li><a href="#https://w3id.org/eudpp/battery-materials#BatteryLocation" title="https://w3id.org/eudpp/battery-materials#BatteryLocation">Battery Location</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#BatteryPerformance" title="https://w3id.org/eudpp/battery-performance#BatteryPerformance">Battery Performance</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#BatteryStateRecord" title="https://w3id.org/eudpp/battery-performance#BatteryStateRecord">Battery State Record</a></li>
+  <li><a href="#SafetyInstruction" title="https://w3id.org/eudpp/battery#SafetyInstruction">Safety instruction</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#TemperatureExposure" title="https://w3id.org/eudpp/battery-performance#TemperatureExposure">Temperature Exposure</a></li>
  </ul>
  <div class="entity" id="https://w3id.org/eudpp/battery-performance#AccidentEvent">
@@ -927,7 +952,7 @@ This section provides details for each class and property defined by EU DPP Batt
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest">C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy" title="https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy">certified usable battery energy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest" title="https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest">cycle-life reference test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency" title="https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency">initial round trip energy efficiency</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate" title="https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate">initial self-discharge rate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#maximumPermittedBatteryPower" title="https://w3id.org/eudpp/battery-performance#maximumPermittedBatteryPower">maximum permitted battery power</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#maximumVoltage" title="https://w3id.org/eudpp/battery-performance#maximumVoltage">maximum voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#minimumVoltage" title="https://w3id.org/eudpp/battery-performance#minimumVoltage">minimum voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#nominalVoltage" title="https://w3id.org/eudpp/battery-performance#nominalVoltage">nominal voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#originalPowerCapability" title="https://w3id.org/eudpp/battery-performance#originalPowerCapability">original power capability</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#ratedCapacity" title="https://w3id.org/eudpp/battery-performance#ratedCapacity">rated capacity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#powerToEnergyRatio" title="https://w3id.org/eudpp/battery-performance#powerToEnergyRatio">ratio between nominal battery power and battery energy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyAt50PercentCycleLife" title="https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyAt50PercentCycleLife">round trip energy efficiency at 50% of cycle life</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest">C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy" title="https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy">certified usable battery energy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest">charge C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest" title="https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest">cycle-life reference test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest">discharge C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialCellInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialCellInternalResistance">initial internal resistance of battery cell</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialPackInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialPackInternalResistance">initial internal resistance of battery pack</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency" title="https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency">initial round trip energy efficiency</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate" title="https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate">initial self-discharge rate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#maximumPermittedBatteryPower" title="https://w3id.org/eudpp/battery-performance#maximumPermittedBatteryPower">maximum permitted battery power</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#maximumVoltage" title="https://w3id.org/eudpp/battery-performance#maximumVoltage">maximum voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#minimumVoltage" title="https://w3id.org/eudpp/battery-performance#minimumVoltage">minimum voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#nominalVoltage" title="https://w3id.org/eudpp/battery-performance#nominalVoltage">nominal voltage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#originalPowerCapability" title="https://w3id.org/eudpp/battery-performance#originalPowerCapability">original power capability</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#ratedCapacity" title="https://w3id.org/eudpp/battery-performance#ratedCapacity">rated capacity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#powerToEnergyRatio" title="https://w3id.org/eudpp/battery-performance#powerToEnergyRatio">ratio between nominal battery power and battery energy</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyAt50PercentCycleLife" title="https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyAt50PercentCycleLife">round trip energy efficiency at 50% of cycle life</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -977,6 +1002,37 @@ This section provides details for each class and property defined by EU DPP Batt
    </dt>
    <dd>
     <a href="#https://w3id.org/eudpp/battery-performance#hasBatteryStateRecord" title="https://w3id.org/eudpp/battery-performance#hasBatteryStateRecord">has battery state record</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyInstruction">
+  <h3>Safety instruction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery#SafetyInstruction</p>
+  <div class="comment">
+   <span class="markdown">Instruction manual giving the safety measures to be taken when handling the battery, including dismantling. A digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP): reached from the battery through dpp:hasProperty, with its URL on dpp:webLink. Declared here so that the safety measures can be told apart from the other instructions of a battery; replaces the datatype property bat:safetyMeasures (ontologies-core#45).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery">https://w3id.org/eudpp/battery</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj">https://eur-lex.europa.eu/eli/reg/2023/1542/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#DigitalInstruction" target="_blank" title="https://w3id.org/eudpp#DigitalInstruction">Digital Instruction</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1354,8 +1410,10 @@ This section provides details for each class and property defined by EU DPP Batt
   <li><a href="#https://w3id.org/eudpp/battery-performance#capacityThresholdForExhaustion" title="https://w3id.org/eudpp/battery-performance#capacityThresholdForExhaustion">capacity threshold for exhaustion</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#capacityThroughput" title="https://w3id.org/eudpp/battery-performance#capacityThroughput">capacity throughput</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy" title="https://w3id.org/eudpp/battery-performance#certifiedUsableBatteryEnergy">certified usable battery energy</a></li>
+  <li><a href="#https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest">charge C-rate of relevant cycle-life test</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate" title="https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate">current self-discharge rate</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest" title="https://w3id.org/eudpp/battery-performance#cycleLifeReferenceTest">cycle-life reference test</a></li>
+  <li><a href="#https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest">discharge C-rate of relevant cycle-life test</a></li>
   <li><a href="#dismantlingInformation" title="https://w3id.org/eudpp/battery#dismantlingInformation">dismantling information</a></li>
   <li><a href="#dueDiligenceAudit" title="https://w3id.org/eudpp/battery#dueDiligenceAudit">due diligence audit</a></li>
   <li><a href="#dueDiligenceReport" title="https://w3id.org/eudpp/battery#dueDiligenceReport">due diligence report</a></li>
@@ -1365,7 +1423,9 @@ This section provides details for each class and property defined by EU DPP Batt
   <li><a href="#https://w3id.org/eudpp/battery-performance#expectedLifetimeCalendarYears" title="https://w3id.org/eudpp/battery-performance#expectedLifetimeCalendarYears">expected lifetime in calendar years</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#expectedLifetimeCycles" title="https://w3id.org/eudpp/battery-performance#expectedLifetimeCycles">expected lifetime: number of charge-discharge cycles</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#accidentInformation" title="https://w3id.org/eudpp/battery-performance#accidentInformation">information on accidents</a></li>
+  <li><a href="#https://w3id.org/eudpp/battery-performance#initialCellInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialCellInternalResistance">initial internal resistance of battery cell</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a></li>
+  <li><a href="#https://w3id.org/eudpp/battery-performance#initialPackInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialPackInternalResistance">initial internal resistance of battery pack</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency" title="https://w3id.org/eudpp/battery-performance#initialRoundTripEnergyEfficiency">initial round trip energy efficiency</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate" title="https://w3id.org/eudpp/battery-performance#initialSelfDischargeRate">initial self-discharge rate</a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#internalResistanceIncrease" title="https://w3id.org/eudpp/battery-performance#internalResistanceIncrease">internal resistance increase of pack</a></li>
@@ -1446,7 +1506,7 @@ This section provides details for each class and property defined by EU DPP Batt
   <h3>C-rate of relevant cycle-life test<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest</p>
   <div class="comment">
-   <span class="markdown">Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah).</span>
+   <span class="markdown">Measurement parameter for 'Expected lifetime: Number of charge-discharge cycles': applied charge and discharge rate in terms of rated capacity (C-rate) of the relevant cycle-life reference test. Unit: ampere per ampere-hour (A/Ah). Version 3.2 of the Commission guidance separates the charge C-rate (data point 39) from the discharge C-rate (data point 40): use the subproperties chargeCRateOfCycleLifeTest and dischargeCRateOfCycleLifeTest.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1458,6 +1518,12 @@ This section provides details for each class and property defined by EU DPP Batt
   </dl>
   <div class="description">
    <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest">charge C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest">discharge C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
     <dt>
      has domain
     </dt>
@@ -1597,6 +1663,43 @@ This section provides details for each class and property defined by EU DPP Batt
    </dl>
   </div>
  </div>
+ <div class="entity" id="https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest">
+  <h3>charge C-rate of relevant cycle-life test<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest</p>
+  <div class="comment">
+   <span class="markdown">Charge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 39 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery-performance">https://w3id.org/eudpp/battery-performance</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest">C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#BatteryPerformance" title="https://w3id.org/eudpp/battery-performance#BatteryPerformance">Battery Performance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate">
   <h3>current self-discharge rate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#currentSelfDischargeRate</p>
@@ -1655,6 +1758,43 @@ This section provides details for each class and property defined by EU DPP Batt
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest">
+  <h3>discharge C-rate of relevant cycle-life test<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#dischargeCRateOfCycleLifeTest</p>
+  <div class="comment">
+   <span class="markdown">Discharge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 40 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery-performance">https://w3id.org/eudpp/battery-performance</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest" title="https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest">C-rate of relevant cycle-life test</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#BatteryPerformance" title="https://w3id.org/eudpp/battery-performance#BatteryPerformance">Battery Performance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
@@ -1962,11 +2102,11 @@ This section provides details for each class and property defined by EU DPP Batt
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/eudpp/battery-performance#initialInternalResistance">
-  <h3>initial internal resistance of battery cell and pack<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#initialInternalResistance</p>
+ <div class="entity" id="https://w3id.org/eudpp/battery-performance#initialCellInternalResistance">
+  <h3>initial internal resistance of battery cell<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#initialCellInternalResistance</p>
   <div class="comment">
-   <span class="markdown">'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm.</span>
+   <span class="markdown">Initial internal resistance at battery cell level: the cell value of data point 38 of the Commission guidance (internal battery cell resistance). Unit: ohm.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -1978,6 +2118,86 @@ This section provides details for each class and property defined by EU DPP Batt
   </dl>
   <div class="description">
    <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#BatteryPerformance" title="https://w3id.org/eudpp/battery-performance#BatteryPerformance">Battery Performance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/battery-performance#initialInternalResistance">
+  <h3>initial internal resistance of battery cell and pack<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#initialInternalResistance</p>
+  <div class="comment">
+   <span class="markdown">'Quotient of change of voltage of a battery by the corresponding change in discharge current under specified conditions' (IEV 482 03 36), at begin of life, for battery cell and pack (module recommended). Unit: ohm. Version 3.2 of the Commission guidance gives the cell and pack values as two items of data point 38: use the subproperties initialCellInternalResistance and initialPackInternalResistance.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery-performance">https://w3id.org/eudpp/battery-performance</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#initialCellInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialCellInternalResistance">initial internal resistance of battery cell</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/eudpp/battery-performance#initialPackInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialPackInternalResistance">initial internal resistance of battery pack</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#BatteryPerformance" title="https://w3id.org/eudpp/battery-performance#BatteryPerformance">Battery Performance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp/battery-performance#initialPackInternalResistance">
+  <h3>initial internal resistance of battery pack<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery-performance#initialPackInternalResistance</p>
+  <div class="comment">
+   <span class="markdown">Initial internal resistance at battery pack level: the pack value of data point 38 of the Commission guidance (internal battery pack resistance). Unit: ohm.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery-performance">https://w3id.org/eudpp/battery-performance</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/eudpp/battery-performance#initialInternalResistance" title="https://w3id.org/eudpp/battery-performance#initialInternalResistance">initial internal resistance of battery cell and pack</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
     <dt>
      has domain
     </dt>
@@ -2656,7 +2876,7 @@ This section provides details for each class and property defined by EU DPP Batt
   <h3>safety measures<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/battery#safetyMeasures</p>
   <div class="comment">
-   <span class="markdown">Link to the safety measures applicable to the battery. The document the URL points at is a digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP), and the correspondence is recorded here as rdfs:seeAlso. It is deliberately not a SKOS mapping: this is a datatype property carrying a URL, eudpp:DigitalInstruction is a class of documents, and an alignment between the two would not hold at audit. Re-expressing this property on a CORE document pattern is the subject of ontologies-battery#11 and is deferred until that pattern is settled.</span>
+   <span class="markdown">Deprecated on 6 October 2026 and kept for existing data: the safety measures are now a bat:SafetyInstruction, subclass of eudpp:DigitalInstruction (P_DPP), reached through dpp:hasProperty with its URL on dpp:webLink (ontologies-core#45). Link to the safety measures applicable to the battery.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -2672,6 +2892,14 @@ This section provides details for each class and property defined by EU DPP Batt
    </dt>
    <dd>
     <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj">https://eur-lex.europa.eu/eli/reg/2023/1542/oj</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
    </dd>
   </dl>
   <div class="description">
@@ -3158,6 +3386,7 @@ This section provides details for each class and property defined by EU DPP Batt
   <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme"> <span>in Scheme</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#materialTypeScheme" title="https://w3id.org/eudpp#materialTypeScheme"> <span>material Type Scheme</span> </a></li>
   <li><a href="#https://w3id.org/eudpp/battery-performance#measurementUnit" title="https://w3id.org/eudpp/battery-performance#measurementUnit">measurement unit</a></li>
   <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
@@ -3225,6 +3454,10 @@ This section provides details for each class and property defined by EU DPP Batt
  <div class="entity" id="http://purl.org/dc/terms/license">
   <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="https://w3id.org/eudpp#materialTypeScheme"><span id="materialTypeScheme"></span>
+  <h3>material Type Scheme<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp#materialTypeScheme</p>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-performance#measurementUnit">
   <h3>measurement unit<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
@@ -3430,7 +3663,7 @@ This section provides details for each class and property defined by EU DPP Batt
     editorial note
    </dt>
    <dd>
-    Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. CIRPASS-2/ontologies-core#25 introduces eudpp:materialTypeScheme on the MAT material type; once it exists, the ten individuals are to carry it, pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the value.
+    Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. The ten individuals carry eudpp:materialTypeScheme (MAT v1.1.0, CIRPASS-2/ontologies-core#25), pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the scheme.
    </dd>
   </dl>
   <dl class="definedBy">
@@ -3466,7 +3699,7 @@ This section provides details for each class and property defined by EU DPP Batt
     <a href="http://purl.org/dc/terms/source" target="_blank" title="http://purl.org/dc/terms/source">source</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Draft Implementing Act on the harmonised format and technical specifications for the labelling of batteries, under Regulation (EU) 2023/1542, Annex VI Part A (7). Not yet adopted; the ten terms of this scheme are the draft ones."@en</span>
    </dd>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. CIRPASS-2/ontologies-core#25 introduces eudpp:materialTypeScheme on the MAT material type; once it exists, the ten individuals are to carry it, pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the value."@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#editorialNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#editorialNote">editorial Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Re-check flag. The Implementing Act is still a draft: the ten terms and their notations are to be re-checked on adoption. The ten individuals carry eudpp:materialTypeScheme (MAT v1.1.0, CIRPASS-2/ontologies-core#25), pointing at batchem:BatteryChemistryScheme, so that the CORE mechanism and SKOS both carry the scheme."@en</span>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#hasTopConcept" target="_blank" title="http://www.w3.org/2004/02/skos/core#hasTopConcept">has Top Concept</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#LiIonLCO" title="https://w3id.org/eudpp/battery-chemistries#LiIonLCO">Lithium ion LCO</a> <sup class="type-ni" title="named individual">ni</sup>
@@ -3549,7 +3782,7 @@ This section provides details for each class and property defined by EU DPP Batt
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Battery lifecycle statuses per Annex XIII 4(c)"@en</span>
    </dd>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Closed list of five terms. The status is dynamic at individual-battery granularity: it is updated on placing on the market and on every status change. A new battery passport is issued when the battery has been remanufactured, repurposed or subjected to a treatment operation preparing for re-use or repurposing and is placed on the market again; the link back to the previous passport is carried by the CORE property dpp:linkToPreviousDPP, not by this vocabulary. Access to the battery status is restricted to persons with a legitimate interest — a conformance rule expressed in the SHACL shapes, not in this ontology."@en</span>
+    <a href="http://www.w3.org/2004/02/skos/core#scopeNote" target="_blank" title="http://www.w3.org/2004/02/skos/core#scopeNote">scope Note</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Closed list of five terms. The status is dynamic at individual-battery granularity: it is updated on placing on the market and on every status change. A new battery passport is issued when the battery has been remanufactured, repurposed or subjected to a treatment operation preparing for re-use or repurposing and is placed on the market again; the link back to the previous passport is carried by the CORE, not by this vocabulary: dpp:linkToPreviousDPP, and since P_DPP v2.1.0 the object properties linking a passport to its previous and next passports (ontologies-core#56). Access to the battery status is restricted to persons with a legitimate interest — a conformance rule expressed in the SHACL shapes, not in this ontology."@en</span>
    </dd>
   </dl>
  </div>
@@ -3723,6 +3956,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" title="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme">Battery metals subject to recycled content declaration, Art. 8(1)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" target="_blank">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</a>
    </dd>
   </dl>
  </div>
@@ -4244,6 +4480,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" title="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme">Battery metals subject to recycled content declaration, Art. 8(1)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" target="_blank">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#Pb">
@@ -4287,6 +4526,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>
@@ -4394,6 +4636,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" title="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme">Battery metals subject to recycled content declaration, Art. 8(1)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" target="_blank">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#LiIonLCO">
@@ -4440,6 +4685,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>
@@ -4488,6 +4736,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#LiIonLMO">
@@ -4534,6 +4785,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>
@@ -4582,6 +4836,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#LiIonNMC">
@@ -4629,6 +4886,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#LiMetal">
@@ -4672,6 +4932,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>
@@ -4720,6 +4983,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" title="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme">Battery metals subject to recycled content declaration, Art. 8(1)</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-metals#BatteryMetalScheme" target="_blank">https://w3id.org/eudpp/battery-metals#BatteryMetalScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#NiCd">
@@ -4764,6 +5030,9 @@ This section provides details for each class and property defined by EU DPP Batt
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="https://w3id.org/eudpp/battery-chemistries#NiMH">
@@ -4807,6 +5076,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>
@@ -5111,6 +5383,9 @@ This section provides details for each class and property defined by EU DPP Batt
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#topConceptOf" target="_blank" title="http://www.w3.org/2004/02/skos/core#topConceptOf">top Concept Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" title="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme">Battery chemistries per the draft labelling Implementing Act</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="https://w3id.org/eudpp#materialTypeScheme" target="_blank" title="https://w3id.org/eudpp#materialTypeScheme">material Type Scheme</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme" target="_blank">https://w3id.org/eudpp/battery-chemistries#BatteryChemistryScheme</a>
    </dd>
   </dl>
  </div>

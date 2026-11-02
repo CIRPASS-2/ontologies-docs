@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery#","name":"EU DPP Battery Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/battery#", "dateReleased":"2026-07-07", "dateCreated":"2026-07-07", "dateModified":"2026-09-03", "version":"Version 0.4.0 DRAFT", "author":[{"@type":"Person","name":"Marc-Andree Wolf"},{"@type":"Person","name":"Nader Jelassi"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/eudpp/battery#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/eudpp/battery#","name":"EU DPP Battery Ontology", "headline":"Document describing the ontology https://w3id.org/eudpp/battery#", "dateReleased":"2026-07-07", "dateCreated":"2026-07-07", "dateModified":"2026-10-06", "version":"Version 0.4.0 DRAFT", "author":[{"@type":"Person","name":"Nader Jelassi"},{"@type":"Person","name":"Marc-Andree Wolf"}], "contributor":[{"@type":"Person","name":"Arnab Sinha"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -72,7 +72,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-09-03</dt>
+<dt>Modified on: 2026-10-06</dt>
 <dt>This version:</dt>
 <dd><a href="https://w3id.org/eudpp/battery/0.4.0">https://w3id.org/eudpp/battery/0.4.0</a></dd>
 <dt>Revision:</dt>
@@ -80,8 +80,7 @@ $(function(){
 <dt>Issued on:</dt>
 <dd>2026-07-07</dd>
 <dt>Authors:</dt>
-<dd>Marc-Andree Wolf</dd><dd>Nader Jelassi</dd>
-
+<dd>Nader Jelassi</dd><dd>Marc-Andree Wolf</dd>
 <dt>Contributors:</dt>
 <dd>Arnab Sinha</dd>
 
@@ -114,6 +113,9 @@ This ontology has the following classes and properties.</span>
     class="hlist">
    <li>
       <a href="#Battery" title="https://w3id.org/eudpp/battery#Battery">Battery</a>
+   </li>
+   <li>
+      <a href="#SafetyInstruction" title="https://w3id.org/eudpp/battery#SafetyInstruction">Safety instruction</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -223,7 +225,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">EU DPP Battery Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">Developed against the CIRPASS-2 CORE ontology v2.0.5 (refresh of 25 August 2026; P_DPP v2.0.6 of 27 August 2026, MAT v1.0.2). External references are pinned to these versions.</span></div>
+<span class="markdown">Developed against the CIRPASS-2 CORE ontology of October 2026 (P_DPP v2.1.0, MAT v1.1.0). External references are pinned to these versions.</span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -233,6 +235,7 @@ This section provides details for each class and property defined by EU DPP Batt
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
   <li><a href="#Battery" title="https://w3id.org/eudpp/battery#Battery">Battery</a></li>
+  <li><a href="#SafetyInstruction" title="https://w3id.org/eudpp/battery#SafetyInstruction">Safety instruction</a></li>
  </ul>
  <div class="entity" id="Battery">
   <h3>Battery<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -268,6 +271,37 @@ This section provides details for each class and property defined by EU DPP Batt
    </dt>
    <dd>
     <a href="#dismantlingInformation" title="https://w3id.org/eudpp/battery#dismantlingInformation">dismantling information</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dueDiligenceAudit" title="https://w3id.org/eudpp/battery#dueDiligenceAudit">due diligence audit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dueDiligenceReport" title="https://w3id.org/eudpp/battery#dueDiligenceReport">due diligence report</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasBatteryStatus" title="https://w3id.org/eudpp/battery#hasBatteryStatus">has battery status</a> <sup class="type-op" title="object property">op</sup>, <a href="#safetyMeasures" title="https://w3id.org/eudpp/battery#safetyMeasures">safety measures</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#testReportResults" title="https://w3id.org/eudpp/battery#testReportResults">test report results</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#warrantyPeriod" title="https://w3id.org/eudpp/battery#warrantyPeriod">warranty period</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafetyInstruction">
+  <h3>Safety instruction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/eudpp/battery#SafetyInstruction</p>
+  <div class="comment">
+   <span class="markdown">Instruction manual giving the safety measures to be taken when handling the battery, including dismantling. A digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP): reached from the battery through dpp:hasProperty, with its URL on dpp:webLink. Declared here so that the safety measures can be told apart from the other instructions of a battery; replaces the datatype property bat:safetyMeasures (ontologies-core#45).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp/battery">https://w3id.org/eudpp/battery</a>
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Source
+   </dt>
+   <dd>
+    <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj">https://eur-lex.europa.eu/eli/reg/2023/1542/oj</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://w3id.org/eudpp#DigitalInstruction" target="_blank" title="https://w3id.org/eudpp#DigitalInstruction">Digital Instruction</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -486,7 +520,7 @@ This section provides details for each class and property defined by EU DPP Batt
   <h3>safety measures<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/eudpp/battery#safetyMeasures</p>
   <div class="comment">
-   <span class="markdown">Link to the safety measures applicable to the battery. The document the URL points at is a digital instruction in the sense of the cross-sectoral class eudpp:DigitalInstruction (P_DPP), and the correspondence is recorded here as rdfs:seeAlso. It is deliberately not a SKOS mapping: this is a datatype property carrying a URL, eudpp:DigitalInstruction is a class of documents, and an alignment between the two would not hold at audit. Re-expressing this property on a CORE document pattern is the subject of ontologies-battery#11 and is deferred until that pattern is settled.</span>
+   <span class="markdown">Deprecated on 6 October 2026 and kept for existing data: the safety measures are now a bat:SafetyInstruction, subclass of eudpp:DigitalInstruction (P_DPP), reached through dpp:hasProperty with its URL on dpp:webLink (ontologies-core#45). Link to the safety measures applicable to the battery.</span>
   </div>
   <dl class="definedBy">
    <dt>
@@ -502,6 +536,14 @@ This section provides details for each class and property defined by EU DPP Batt
    </dt>
    <dd>
     <a href="https://eur-lex.europa.eu/eli/reg/2023/1542/oj">https://eur-lex.europa.eu/eli/reg/2023/1542/oj</a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    Is deprecated
+   </dt>
+   <dd>
+    true
    </dd>
   </dl>
   <div class="description">
