@@ -1,11 +1,15 @@
-# Synchronize Textile 2.0.0 after approved MAT alignment
+# Synchronize the finalized Textile 2.0.0 candidate
 
-Publish the validated source candidate `e9cf8542d104fefccf339761d138fcf9c32bc904` from source PR #19.
-The two approved MAT bridges retain SKOS fibre concepts and the structured composition model.
+Copy source commit `3a77b6dc69cc8c1778e340f7afd1300639cb9378` from source PR #19, including the accepted
+corrections, exact-delta regression evidence, regenerated publication artifacts
+and final P1 changelog correction. P2 is not implemented.
 
-Copy 1,295 committed assets, including 48 equivalent RDF exports, all module pages, diagrams and package integrity records.
-Preserve root portals, public paths, historical Textile and all other sector documentation.
+Synchronize 1,299 committed assets and preserve all historical,
+other-sector and root-portal content outside `Textile/2.0.0/`.
 
-Source checks: 221 passed, zero failures/setup errors; both public validation modes passed.
-Documentation validation passed: 1,295 HTTP asset hashes, twelve rendered module/WebVOWL pages, 84 AJAX sections, 48 equivalent RDF exports, package integrity and zero local link errors. Twelve repository-preservation regressions also passed.
-See PUBLICATION_REVIEW.md and validation-results.json for results and limits. No deployment is performed.
+Validation: 232 source tests; both full publication modes; 12 preservation tests;
+1,299 HTTP hashes; 48 equivalent RDF exports; twelve rendered module
+pages and WebVOWL graphs; 84 AJAX sections; package integrity; zero local link errors.
+See PUBLICATION_REVIEW.md and validation-results.json for exact results.
+
+Update existing PR #1 only. No merge, tag, release, deployment or redirect change.

@@ -8,8 +8,8 @@ from rdflib.namespace import DCTERMS
 
 ROOT=Path(__file__).resolve().parents[3]
 DEST=ROOT/'Textile/2.0.0'
-SHA='e9cf8542d104fefccf339761d138fcf9c32bc904'
-UPDATE_BASE='9f859e801e8d64afdfee48c6a402522069996c35'
+SHA='3a77b6dc69cc8c1778e340f7afd1300639cb9378'
+UPDATE_BASE='74db33c0774101a18fc120c7dced9b2f27313b64'
 BASE='5c76af4448093cdc9e57d2bb3bfdf1416b8876eb'
 PUBLIC='https://cirpass-2.github.io/ontologies-docs/'
 MODULES=('assessment','associated-materials','connector','context','core','durability','indicator','process','recyclability','repairability','soc','structure')
@@ -102,7 +102,7 @@ def main():
     source=args.source.resolve();assert git('rev-parse','HEAD').decode().strip()==(UPDATE_BASE if args.update else BASE)
     prior=json.loads((DEST/'publication/transfer-inventory.json').read_text('utf8')) if args.update else None
     if prior:
-        assert prior['source_commit']=='a2bc2642627bf9223b1e39dc54a4e45c233e9232'
+        assert prior['source_commit']=='e9cf8542d104fefccf339761d138fcf9c32bc904'
         for row in prior['files']:
             assert hashlib.sha256((ROOT/row['destination']).read_bytes()).hexdigest()==row['sha256'],row['destination']
         for name in ('index.html','ontologies.html'):

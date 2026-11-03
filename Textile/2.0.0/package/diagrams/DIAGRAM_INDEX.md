@@ -9,7 +9,7 @@ Views are illustrative; Turtle remains the axiom authority.
 |---|---:|---:|---:|---:|---:|
 | textile-assessment | 30 | 26 | 1 | 5 | 1 |
 | textile-associated-materials | 8 | 7 | 0 | 42 | 4 |
-| textile-connector | 5 | 14 | 3 | 17 | 3 |
+| textile-connector | 5 | 13 | 3 | 17 | 3 |
 | textile-context | 3 | 6 | 1 | 31 | 1 |
 | textile-core | 16 | 8 | 0 | 40 | 3 |
 | textile-durability | 47 | 9 | 0 | 0 | 0 |

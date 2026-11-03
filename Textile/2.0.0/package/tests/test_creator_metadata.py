@@ -16,6 +16,8 @@ def test_all_thirteen_graphs_preserve_every_non_creator_triple():
         path=m.ROOT/row['file'];graph=m.parse(path);ontology=URIRef(row['ontology_iri'])
         assert set(graph.objects(ontology,m.DC.creator))=={Literal(name,lang='en') for name in row['creators_after']}
         assert set(row['creators_before'])=={'Elio Hbeich','BOUGACHA Racem'}
+        from migration.mat_alignment import restore_frozen_graph
+        graph=restore_frozen_graph(graph,row['file'])
         # Retain the original frozen creator proof by reversing only the exact
         # subsequent owner-approved header changes (independently checked below).
         change=revisions[row['file']]
@@ -23,8 +25,6 @@ def test_all_thirteen_graphs_preserve_every_non_creator_triple():
             assert triple in graph
             graph.remove(triple)
         for triple in Graph().parse(data='\n'.join(change['removed']),format='turtle'):graph.add(triple)
-        from migration.mat_alignment import without_alignment
-        graph=without_alignment(graph)
         graph.remove((ontology,m.DC.creator,None))
         assert semantic_digest(graph)==row['non_creator_graph_sha256'],row['file']
         block=re.search(r'(?m)^    dcterms:creator [\s\S]*?;',path.read_text('utf8')).group()

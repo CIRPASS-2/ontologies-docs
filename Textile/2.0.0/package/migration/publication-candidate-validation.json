@@ -1,0 +1,668 @@
+{
+  "candidate": "2.0.0",
+  "date": "2026-11-03",
+  "status": "All requested local validation gates passed; not committed or published.",
+  "source_baseline_commit": "e9cf8542d104fefccf339761d138fcf9c32bc904",
+  "canonical_source_semantics": {
+    "pre_mat_baseline_commit": "a2bc2642627bf9223b1e39dc54a4e45c233e9232",
+    "additions": 7,
+    "removals": 6,
+    "modules_checked": 13,
+    "canonical_files_changed_during_finalization": 0,
+    "unexpected_rdf_changes": 0,
+    "complete_delta_record": "migration/approved-candidate-results.json",
+    "inferred_fibre_material_types": 22,
+    "mat_bridges_preserved": true,
+    "skos_typing_and_composition_boundaries_preserved": true,
+    "six_creators_and_version_iris_preserved": true,
+    "protected_files_and_catalogue": 76
+  },
+  "pytest": {
+    "tests": 232,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 232,
+    "warnings": 12,
+    "warning_kind": "Existing rdflib JSON-LD ConjunctiveGraph deprecation",
+    "by_file": {
+      "tests.test_audit_corrections": {
+        "passed": 50
+      },
+      "tests.test_core_migration": {
+        "passed": 67
+      },
+      "tests.test_creator_metadata": {
+        "passed": 1
+      },
+      "tests.test_mat_alignment": {
+        "passed": 27
+      },
+      "tests.test_migration_publication": {
+        "passed": 13
+      },
+      "tests.test_public_package": {
+        "passed": 31
+      },
+      "tests.test_shacl_result_matching": {
+        "passed": 12
+      },
+      "tests.test_version_identities": {
+        "passed": 15
+      },
+      "tests.test_widoco_links": {
+        "passed": 16
+      }
+    }
+  },
+  "public_validation_modes": {
+    "default": {
+      "resource_count": 899,
+      "evidence_rows": 946,
+      "source_documents": 6,
+      "categories": {
+        "adaptedDefinition": 403,
+        "adaptedRelation": 27,
+        "directExtraction": 16,
+        "externalReuse": 1,
+        "modellingAbstraction": 378,
+        "projectDecision": 74
+      },
+      "modules": {
+        "textile-assessment": 59,
+        "textile-associated-materials": 61,
+        "textile-connector": 37,
+        "textile-context": 42,
+        "textile-core": 70,
+        "textile-durability": 58,
+        "textile-indicator": 36,
+        "textile-process": 130,
+        "textile-recyclability": 176,
+        "textile-repairability": 92,
+        "textile-soc": 85,
+        "textile-structure": 53
+      },
+      "locator_statuses": {
+        "PRESENT_NOT_REVERIFIED": 944,
+        "UNRESOLVED": 2
+      },
+      "traceability_statuses": {
+        "COMPLETE": 298,
+        "NO_EXTERNAL_SOURCE_REQUIRED": 236,
+        "PARTIAL": 365
+      },
+      "evidence_by_source": {
+        "EU-2024-1781": 17,
+        "HISTORICAL-SOC-0.1.2": 42,
+        "JRC-DPP-2026-05": 20,
+        "JRC-TEXTILE-2025-12": 861,
+        "TEXTILE-EVENT-MIREOT": 5,
+        "TEXTILE-MAT-MIREOT": 1
+      },
+      "zero_evidence": 301,
+      "one_evidence": 350,
+      "multiple_evidence": 248,
+      "max_evidence": 5,
+      "evidence_count_distribution": {
+        "0": 301,
+        "1": 350,
+        "2": 158,
+        "3": 82,
+        "4": 6,
+        "5": 2
+      },
+      "compound_citations": 326,
+      "resources_with_jrc_evidence": 549,
+      "current_import_closure_files": 20,
+      "package_files": 800,
+      "preserved_reference_files": 3,
+      "parsed_rdf_files": 171,
+      "public_adrs": 10,
+      "multiple_source_annotations": 152,
+      "structural_checks": "passed",
+      "widoco_links": {
+        "html_files": 121,
+        "assembled_pages": 37,
+        "ajax_sections": 84,
+        "reference_count": 12338,
+        "statuses": {
+          "application_route": 12,
+          "external_not_checked": 5405,
+          "ok": 6921
+        }
+      },
+      "examples_conformant": 11,
+      "shacl_scenarios": 16,
+      "reasoning_scenarios": 6,
+      "rdfs_negative_control": "passed"
+    },
+    "complete": {
+      "resource_count": 899,
+      "evidence_rows": 946,
+      "source_documents": 6,
+      "categories": {
+        "adaptedDefinition": 403,
+        "adaptedRelation": 27,
+        "directExtraction": 16,
+        "externalReuse": 1,
+        "modellingAbstraction": 378,
+        "projectDecision": 74
+      },
+      "modules": {
+        "textile-assessment": 59,
+        "textile-associated-materials": 61,
+        "textile-connector": 37,
+        "textile-context": 42,
+        "textile-core": 70,
+        "textile-durability": 58,
+        "textile-indicator": 36,
+        "textile-process": 130,
+        "textile-recyclability": 176,
+        "textile-repairability": 92,
+        "textile-soc": 85,
+        "textile-structure": 53
+      },
+      "locator_statuses": {
+        "PRESENT_NOT_REVERIFIED": 944,
+        "UNRESOLVED": 2
+      },
+      "traceability_statuses": {
+        "COMPLETE": 298,
+        "NO_EXTERNAL_SOURCE_REQUIRED": 236,
+        "PARTIAL": 365
+      },
+      "evidence_by_source": {
+        "EU-2024-1781": 17,
+        "HISTORICAL-SOC-0.1.2": 42,
+        "JRC-DPP-2026-05": 20,
+        "JRC-TEXTILE-2025-12": 861,
+        "TEXTILE-EVENT-MIREOT": 5,
+        "TEXTILE-MAT-MIREOT": 1
+      },
+      "zero_evidence": 301,
+      "one_evidence": 350,
+      "multiple_evidence": 248,
+      "max_evidence": 5,
+      "evidence_count_distribution": {
+        "0": 301,
+        "1": 350,
+        "2": 158,
+        "3": 82,
+        "4": 6,
+        "5": 2
+      },
+      "compound_citations": 326,
+      "resources_with_jrc_evidence": 549,
+      "current_import_closure_files": 20,
+      "package_files": 800,
+      "preserved_reference_files": 3,
+      "parsed_rdf_files": 171,
+      "public_adrs": 10,
+      "multiple_source_annotations": 152,
+      "structural_checks": "passed",
+      "widoco_links": {
+        "html_files": 121,
+        "assembled_pages": 37,
+        "ajax_sections": 84,
+        "reference_count": 12338,
+        "statuses": {
+          "application_route": 12,
+          "external_not_checked": 5405,
+          "ok": 6921
+        }
+      },
+      "examples_conformant": 11,
+      "shacl_scenarios": 16,
+      "reasoning_scenarios": 6,
+      "rdfs_negative_control": "passed"
+    }
+  },
+  "generated_documentation": {
+    "regenerated_modules": [
+      "associated-materials",
+      "connector",
+      "core"
+    ],
+    "workflow": "scripts/generate-widoco-docs.ps1",
+    "rdf_exports": [
+      {
+        "file": "docs/widoco/assessment/ontology.ttl",
+        "sha256": "764f429efb6e5c8136297b012f6b444eca76a6117e8caaddc9b204abfabcf706",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/assessment/ontology.owl",
+        "sha256": "a4cd24be45a5f5dbf38bca0bbcf6c2d387b51a51962da9c246c7568dc6bd1174",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/assessment/ontology.nt",
+        "sha256": "c0dd5568ebeca480f0b83e54488462aad26cc63c2b87748407f6ec6a6fc35372",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/assessment/ontology.jsonld",
+        "sha256": "bb779713b7706b007f7e6d62e05e32c1d6d4c83157b75a6a65460e85ddfba2d9",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/associated-materials/ontology.ttl",
+        "sha256": "4d5aef7cc4c56058fc4d53be54b11839c6fc0faf4e961f8c3b6c777586eb313c",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/associated-materials/ontology.owl",
+        "sha256": "f8a1da5aa9810a108c514e6cca11d30b52540efa490bb280354852fdfd10e7dd",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/associated-materials/ontology.nt",
+        "sha256": "41cd787b964a9d29e7afa7a9c5cec7db7a60ff0e55e89a7b3a92a5db52fc6452",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/associated-materials/ontology.jsonld",
+        "sha256": "33edc6197e9f1c99175154f64e3ca44661072f270409c3f264437d3c2b5c014e",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/connector/ontology.ttl",
+        "sha256": "e6d8beb6f1065df8e1ccbd8224e667b7e4110e15fa49717f3c828f73a4e8a991",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/connector/ontology.owl",
+        "sha256": "59ba03d2fa8ce754172b0dadcbb1d27bff2db9d043360f86bc8549dcb2e970ad",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/connector/ontology.nt",
+        "sha256": "afc9c02d4b5c9d3975b6ae0a0703cb33ec93ae1d7cacc8a652016f365b167476",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/connector/ontology.jsonld",
+        "sha256": "fb1ee9c82632b12f9efe305aa8b2fa79f34b919019b0f0655d4749103947879e",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/context/ontology.ttl",
+        "sha256": "6718a7b9695c7f274432bc19d8dd51bef6d51a0897f8831812782a4a8f671619",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/context/ontology.owl",
+        "sha256": "cee7fc68ddde5be03c3c4c4c47f1fef03f19ae79088e00f6bafea5c7296d4a67",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/context/ontology.nt",
+        "sha256": "96eca4abce05497ea69d93a3fb78cac71642674d18fcb4456f29093c3dcf3eae",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/context/ontology.jsonld",
+        "sha256": "20bcbb63ebdd9f06dfc8c713e8d3c4af98fd9a2bd380484a832d287619917047",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/core/ontology.ttl",
+        "sha256": "67ba9863a63882e9cfd298819cefd611e91a8353221236042acb240f26a40b28",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/core/ontology.owl",
+        "sha256": "e43fde2dc2c2eda5c7441a72f43b2d85c34f13687a1ff2c536f303b8f7637c06",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/core/ontology.nt",
+        "sha256": "2539da28e58cfce4cb4bdaaf82167b8b7dc0c03350da9648c81aee5b6e7c7378",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/core/ontology.jsonld",
+        "sha256": "83ab9e8a0386d2ff912ba516427e1540f997c5602b4795ec537cdf5021f78837",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/durability/ontology.ttl",
+        "sha256": "fc68bc463550cc6aa5dd9edc6007bbca1a5544a70641a26e701d494892843045",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/durability/ontology.owl",
+        "sha256": "d7a4c05c9a87c925274963489b5abc146824b81c2a8abd7f019865f1cea86fdb",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/durability/ontology.nt",
+        "sha256": "5c24fc2c6ffd6187320cb1f4b5d2454db0d44a8cc1bc40b43597dab10393d72d",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/durability/ontology.jsonld",
+        "sha256": "4cdd2c9acf83f782991f15ead879e73c0698da5209b472f35e20c29b32b85236",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/indicator/ontology.ttl",
+        "sha256": "ce9dafd9f4be6b6e8b7abd1f34184f61b9b4e1bf215a0d19fe08caf7beb139d7",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/indicator/ontology.owl",
+        "sha256": "259c65504bca747928deb7768994610fcbcabd2f8f9a214c78ebd3470a1de802",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/indicator/ontology.nt",
+        "sha256": "26e05aa05189e1a78c7c22de168cd57c0d72cadab8a3fd2a33059db8554da785",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/indicator/ontology.jsonld",
+        "sha256": "4642999f7955ce05c0a2db2506301b0c287cf935018435520a5cdf5a78e96e31",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/process/ontology.ttl",
+        "sha256": "36d5bbcb6c97a482715401e3b91421f6664bb9711a95688c39f9bd725f7e03f8",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/process/ontology.owl",
+        "sha256": "9448cf3b2fa878178991a4790a4ca69ab3e55c39cfc0dab7a6bff53b165b4896",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/process/ontology.nt",
+        "sha256": "5f54e7bec296a4bf542646a29d24602342df8d67114d715f7ba1cc739678c408",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/process/ontology.jsonld",
+        "sha256": "586acf6cbd8cb4aa8a03aa8cc93fa25b34eb8c8a4d21b4ac06185ccdb9cebf51",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/recyclability/ontology.ttl",
+        "sha256": "33245ca65c6e3ef1422148ab0b95c51e5f85f684c184964fb993698ed66991ca",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/recyclability/ontology.owl",
+        "sha256": "a81bea6d2cd2dfc61937ff8f44482924760fe17627fef45b1c995eaf9ec6b9d8",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/recyclability/ontology.nt",
+        "sha256": "b906635dd9b6d77af339203dc17800a5d1023bff312581d370015be1ee16d3d4",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/recyclability/ontology.jsonld",
+        "sha256": "6bba9c17e891db9509d2b393774c5556a16e314e29db098695340132aa7a79ff",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/repairability/ontology.ttl",
+        "sha256": "8a7b42ee5403414201e7a12316a544de75bfb30d58f53dc30dcc979db4ec345c",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/repairability/ontology.owl",
+        "sha256": "2f3b9a6b14826a108dba1cc86895dab3c026c4555d61d99cdc48f5b3af230512",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/repairability/ontology.nt",
+        "sha256": "aa0153a0b20636d951afa94507dd0082de54ed1c0c4b01a41fbbbec634b2ab49",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/repairability/ontology.jsonld",
+        "sha256": "3045f06c64f7cc966ca954c4f12061ff07a78c1f24f5b15de506b361a84e7280",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/soc/ontology.ttl",
+        "sha256": "c6444ecdb4967c247de62755a775f3b34ef19ed00112756d69e534656a184c07",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/soc/ontology.owl",
+        "sha256": "4fdf512a622719fc24597c837ec18d8cc00f67b86df56a983b3dc9ca95413825",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/soc/ontology.nt",
+        "sha256": "f402366ef606121acf7ec5c2c1b6c2c7da4b9e612a969e34b51daa42edba7347",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/soc/ontology.jsonld",
+        "sha256": "30d47961ca2ce7f8afd4f304ebe2e73823ff3b77c0e0b8a4faa9ebfdcf60a741",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/structure/ontology.ttl",
+        "sha256": "0483f59c9664791c708afa332a07a4b97fa637821d280facaee1d9ceb31c7a18",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/structure/ontology.owl",
+        "sha256": "56efa84803aba6756ce6533c35cc809e89225ac4f2577a7d9ac2e27e1105b775",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/structure/ontology.nt",
+        "sha256": "81562312824dfad2470df9acbf011885f13d084aa4af038fa695063c4ef4b839",
+        "graph_equivalent": true
+      },
+      {
+        "file": "docs/widoco/structure/ontology.jsonld",
+        "sha256": "80ff680096dae222267c28a334dde037082ab4abfdaaba01838654e2e9a2f7a1",
+        "graph_equivalent": true
+      }
+    ],
+    "ttl_downloads_byte_identical": 12,
+    "webvowl": [
+      {
+        "module": "associated-materials",
+        "canonical_metadata": true,
+        "local_classes_and_properties": 15,
+        "approved_notes_preserved": true
+      },
+      {
+        "module": "connector",
+        "canonical_metadata": true,
+        "local_classes_and_properties": 9,
+        "approved_notes_preserved": true
+      },
+      {
+        "module": "core",
+        "canonical_metadata": true,
+        "local_classes_and_properties": 24,
+        "approved_notes_preserved": true
+      }
+    ],
+    "http": {
+      "requests": 181,
+      "status_200": 181,
+      "responses_byte_equal_to_files": true
+    },
+    "widoco_links": {
+      "html_files": 121,
+      "assembled_pages": 37,
+      "ajax_sections": 84,
+      "reference_count": 12338,
+      "statuses": {
+        "application_route": 12,
+        "external_not_checked": 5405,
+        "ok": 6921
+      },
+      "errors": []
+    },
+    "markdown_file_references": {
+      "files": 53,
+      "references": 135,
+      "missing": []
+    },
+    "browser_javascript_execution": "Not rerun; local HTTP/static/AJAX-reference and WebVOWL-data checks performed.",
+    "derived_inventory_updates": [
+      {
+        "file": "diagrams/DIAGRAM_INDEX.md",
+        "scope": "Canonical type-count regeneration; only Connector object-property count 14 -> 13. No diagram image changes."
+      }
+    ]
+  },
+  "publication_integrity": {
+    "package_members": 800,
+    "sha256_rows": 799,
+    "manifest": "PUBLICATION_MANIFEST.txt",
+    "checksums": "SHA256SUMS",
+    "preserved_reference_members": 3,
+    "excluded_owner_plan": "migration/PUBLICATION_PLAN_2.0.0.md",
+    "final_structural_recheck": "passed",
+    "updated_existing_checksum_entries": 30,
+    "new_checksum_entries": 4,
+    "unchanged_checksum_entries": 765,
+    "updated_member_paths": [
+      "CHANGELOG.md",
+      "PUBLICATION_MANIFEST.txt",
+      "diagrams/DIAGRAM_INDEX.md",
+      "docs/MODELLING_GUIDE.md",
+      "docs/widoco/associated-materials/index-en.html",
+      "docs/widoco/associated-materials/ontology.jsonld",
+      "docs/widoco/associated-materials/ontology.nt",
+      "docs/widoco/associated-materials/ontology.owl",
+      "docs/widoco/associated-materials/ontology.ttl",
+      "docs/widoco/associated-materials/webvowl/data/ontology.json",
+      "docs/widoco/connector/index-en.html",
+      "docs/widoco/connector/ontology.jsonld",
+      "docs/widoco/connector/ontology.nt",
+      "docs/widoco/connector/ontology.owl",
+      "docs/widoco/connector/ontology.ttl",
+      "docs/widoco/connector/webvowl/data/ontology.json",
+      "docs/widoco/core/index-en.html",
+      "docs/widoco/core/ontology.jsonld",
+      "docs/widoco/core/ontology.nt",
+      "docs/widoco/core/ontology.owl",
+      "docs/widoco/core/ontology.ttl",
+      "docs/widoco/core/webvowl/data/ontology.json",
+      "docs/widoco/index.html",
+      "migration/mat_alignment.py",
+      "ontology/textile-associated-materials.ttl",
+      "ontology/textile-connector.ttl",
+      "ontology/textile-core.ttl",
+      "tests/test_creator_metadata.py",
+      "tests/test_mat_alignment.py",
+      "tests/test_version_identities.py"
+    ],
+    "new_member_paths": [
+      "migration/PUBLICATION_CANDIDATE_FINALIZATION.md",
+      "migration/approved-candidate-results.json",
+      "migration/publication-candidate-validation.json",
+      "migration/publication-failure-reconciliation.json"
+    ]
+  },
+  "known_reasoner_profile_limits": {
+    "basis": "Previous bounded diagnostic on the identical canonical source bytes; no additional ontology modelling in this finalization.",
+    "modular_profile_violation_occurrences": 208,
+    "distinct_affected_iris": 19,
+    "in_memory_union_occurrences": 47,
+    "merged_profile_violations": 0,
+    "serialized_added_declarations": 290,
+    "original_owl_axioms_removed": 0,
+    "hermit_ignoreUnsupportedDatatypes": true,
+    "hermit_consistent": true,
+    "hermit_unsatisfiable_named_classes": 0,
+    "strict_hermit": "UnsupportedDatatypeException for xsd:date; no strict-mode consistency result.",
+    "owl_rl": "Does not establish complete OWL DL consistency."
+  },
+  "remaining_limitations": [
+    "WIDOCO optional remote historical changelog could not fetch old Connector/Core version IRIs. Exact local RDF differences are recorded.",
+    "External HTTP references are inventoried rather than exhaustively checked.",
+    "Two pre-existing unresolved traceability locators remain unchanged."
+  ],
+  "files_changed_during_finalization": [
+    "PUBLICATION_MANIFEST.txt",
+    "SHA256SUMS",
+    "diagrams/DIAGRAM_INDEX.md",
+    "docs/MODELLING_GUIDE.md",
+    "docs/widoco/associated-materials/index-en.html",
+    "docs/widoco/associated-materials/ontology.jsonld",
+    "docs/widoco/associated-materials/ontology.nt",
+    "docs/widoco/associated-materials/ontology.owl",
+    "docs/widoco/associated-materials/ontology.ttl",
+    "docs/widoco/associated-materials/webvowl/data/ontology.json",
+    "docs/widoco/connector/index-en.html",
+    "docs/widoco/connector/ontology.jsonld",
+    "docs/widoco/connector/ontology.nt",
+    "docs/widoco/connector/ontology.owl",
+    "docs/widoco/connector/ontology.ttl",
+    "docs/widoco/connector/webvowl/data/ontology.json",
+    "docs/widoco/core/index-en.html",
+    "docs/widoco/core/ontology.jsonld",
+    "docs/widoco/core/ontology.nt",
+    "docs/widoco/core/ontology.owl",
+    "docs/widoco/core/ontology.ttl",
+    "docs/widoco/core/webvowl/data/ontology.json",
+    "docs/widoco/index.html",
+    "migration/PUBLICATION_CANDIDATE_FINALIZATION.md",
+    "migration/approved-candidate-results.json",
+    "migration/mat_alignment.py",
+    "migration/publication-candidate-validation.json",
+    "migration/publication-failure-reconciliation.json",
+    "tests/test_creator_metadata.py",
+    "tests/test_mat_alignment.py",
+    "tests/test_version_identities.py"
+  ],
+  "all_pending_publication_files_from_source_commit": [
+    "CHANGELOG.md",
+    "PUBLICATION_MANIFEST.txt",
+    "SHA256SUMS",
+    "diagrams/DIAGRAM_INDEX.md",
+    "docs/MODELLING_GUIDE.md",
+    "docs/widoco/associated-materials/index-en.html",
+    "docs/widoco/associated-materials/ontology.jsonld",
+    "docs/widoco/associated-materials/ontology.nt",
+    "docs/widoco/associated-materials/ontology.owl",
+    "docs/widoco/associated-materials/ontology.ttl",
+    "docs/widoco/associated-materials/webvowl/data/ontology.json",
+    "docs/widoco/connector/index-en.html",
+    "docs/widoco/connector/ontology.jsonld",
+    "docs/widoco/connector/ontology.nt",
+    "docs/widoco/connector/ontology.owl",
+    "docs/widoco/connector/ontology.ttl",
+    "docs/widoco/connector/webvowl/data/ontology.json",
+    "docs/widoco/core/index-en.html",
+    "docs/widoco/core/ontology.jsonld",
+    "docs/widoco/core/ontology.nt",
+    "docs/widoco/core/ontology.owl",
+    "docs/widoco/core/ontology.ttl",
+    "docs/widoco/core/webvowl/data/ontology.json",
+    "docs/widoco/index.html",
+    "migration/PUBLICATION_CANDIDATE_FINALIZATION.md",
+    "migration/approved-candidate-results.json",
+    "migration/mat_alignment.py",
+    "migration/publication-candidate-validation.json",
+    "migration/publication-failure-reconciliation.json",
+    "ontology/textile-associated-materials.ttl",
+    "ontology/textile-connector.ttl",
+    "ontology/textile-core.ttl",
+    "tests/test_creator_metadata.py",
+    "tests/test_mat_alignment.py",
+    "tests/test_version_identities.py"
+  ],
+  "governance": {
+    "committed": false,
+    "pushed": false,
+    "merged": false,
+    "tagged": false,
+    "released": false,
+    "published": false,
+    "human_review_required": true
+  }
+}

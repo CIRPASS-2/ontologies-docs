@@ -1,13 +1,16 @@
 # Changelog
 
-## CORE MAT classification alignment ? 2026-11-02
+## CORE MAT classification alignment - 2026-11-02
 
 Addressed Nader Jelassi's source PR #19 review: FibreTypeConcept now subclasses
 CORE MaterialType and hasFibreType specializes CORE hasMaterialType. These two
 project-approved OWL bridges preserve SKOS classifications, structured
 composition and product roles. No JRC-prescribed alignment is claimed.
+Removed the obsolete local skos:closeMatch declaration from Textile Connector
+and corrected the fibre-composition and PackagingMaterial modelling notes.
 Candidate version identities, six creators, CORE/MIREOT inputs and historical
-bytes remain unchanged. See [evidence](migration/MAT_ALIGNMENT.md).
+bytes remain unchanged. See the
+[finalization record](migration/PUBLICATION_CANDIDATE_FINALIZATION.md).
 
 ## Final creator metadata update - 2026-10-27
 

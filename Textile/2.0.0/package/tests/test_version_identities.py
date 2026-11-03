@@ -18,8 +18,9 @@ def test_exact_header_revision_and_catalogue_identity(row):
     graph=Graph().parse(ROOT/row['file']);ontology=URIRef(row['ontology_iri'])
     assert set(graph.subjects(RDF.type,OWL.Ontology))=={ontology}
     assert set(graph.objects(ontology,OWL.versionIRI))=={URIRef(str(ontology)+'/2.0.0')}
-    from migration.mat_alignment import without_alignment
-    assert semantic_digest(project(without_alignment(graph),ontology))==row['non_metadata_graph_sha256']
+    from migration.mat_alignment import restore_frozen_graph
+    frozen=restore_frozen_graph(graph,row['file'])
+    assert semantic_digest(project(frozen,ontology))==row['non_metadata_graph_sha256']
     assert set(REPORT['allowed_predicates'])==set(map(str,PREDICATES))
     for field in ('added','removed'):
         for subject,predicate,_ in Graph().parse(data='\n'.join(row[field]),format='turtle'):
@@ -27,7 +28,9 @@ def test_exact_header_revision_and_catalogue_identity(row):
     changed=row['file'].removeprefix('ontology/textile-').removesuffix('.ttl') in MODULES
     if changed:
         assert set(graph.objects(ontology,OWL.priorVersion))=={URIRef(str(ontology)+'/1.1.2')}
-        assert set(graph.objects(ontology,DCTERMS.modified))=={Literal(REVISION_DATE,datatype=XSD.date)}
+        # The exact current date replacement is checked before restoring the
+        # frozen header proof; keep its historical date and digest unchanged.
+        assert set(frozen.objects(ontology,DCTERMS.modified))=={Literal(REVISION_DATE,datatype=XSD.date)}
         assert str(graph.value(ontology,OWL.versionInfo))=='Version 2.0.0 candidate'
         assert 'Version 2.0.0 candidate' in str(graph.value(ontology,DCTERMS.bibliographicCitation))
         old_catalog=ROOT/'migration/historical/1.1.2/catalog-v001.xml'

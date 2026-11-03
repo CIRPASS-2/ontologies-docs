@@ -1,7 +1,8 @@
 """Approved MAT bridge: class-wide inference, property inference and boundaries."""
 import json
 import hashlib
-from rdflib import Graph, RDF, RDFS, SKOS, Namespace
+from rdflib import Graph, RDF, RDFS, SKOS, Namespace, OWL, Literal, URIRef
+from rdflib.namespace import DCTERMS, XSD
 from owlrl import DeductiveClosure, RDFS_Semantics, OWLRL_Semantics
 from pyshacl import validate
 import pytest
@@ -17,11 +18,53 @@ def model(request):
     return graph
 
 
-def test_exact_two_axioms_and_no_other_canonical_changes():
+def test_exact_approved_delta_and_no_other_canonical_changes():
     rows = m.canonical_differences()
     assert len(rows) == 13
-    assert sum(len(row['added']) for row in rows) == 2
-    assert not any(row['removed'] for row in rows)
+    assert sum(len(row['added']) for row in rows) == 7
+    assert sum(len(row['removed']) for row in rows) == 6
+
+
+@pytest.mark.parametrize('fault', [
+    'extra-class', 'extra-property', 'extra-subclass', 'remove-unrelated',
+    'wrong-date', 'wrong-note', 'missing-mat-class', 'missing-mat-property',
+    'creator-change', 'restore-closeMatch',
+])
+def test_exact_delta_rejects_unauthorized_changes(fault):
+    module = 'connector' if fault == 'restore-closeMatch' else 'core'
+    relative = f'ontology/textile-{module}.ttl'
+    graph = Graph().parse(m.ROOT / relative)
+    m.restore_frozen_graph(graph, relative)  # The unmodified candidate is accepted.
+    if fault == 'extra-class':
+        graph.add((EX.unauthorized, RDF.type, OWL.Class))
+    elif fault == 'extra-property':
+        graph.add((EX.unauthorized, RDF.type, OWL.ObjectProperty))
+    elif fault == 'extra-subclass':
+        graph.add((m.TXT.TextileProduct, RDFS.subClassOf, m.DPP.MaterialOfComposition))
+    elif fault == 'remove-unrelated':
+        graph.remove(next(graph.triples((None, RDF.type, SKOS.Concept))))
+    elif fault == 'wrong-date':
+        graph.set((URIRef('https://w3id.org/eudpp/textile-core'), DCTERMS.modified,
+                   Literal('2026-11-03', datatype=XSD.date)))
+    elif fault == 'wrong-note':
+        graph.set((m.TXT.hasFibreCompositionComponent,
+                   Namespace('https://w3id.org/eudpp/textile-connector#').modellingNote,
+                   Literal('Unapproved wording', lang='en')))
+    elif fault == 'missing-mat-class':
+        graph.remove((m.TXT.FibreTypeConcept, RDFS.subClassOf, m.DPP.MaterialType))
+    elif fault == 'missing-mat-property':
+        graph.remove((m.TXT.hasFibreType, RDFS.subPropertyOf, m.DPP.hasMaterialType))
+    elif fault == 'creator-change':
+        graph.add((URIRef('https://w3id.org/eudpp/textile-core'), DCTERMS.creator,
+                   Literal('Unapproved creator', lang='en')))
+    else:
+        graph.add((SKOS.closeMatch, RDF.type, OWL.AnnotationProperty))
+    with pytest.raises(AssertionError, match='Unauthorized canonical RDF difference'):
+        m.restore_frozen_graph(graph, relative)
+
+
+def test_frozen_external_inputs_catalogue_and_history_are_unchanged():
+    assert len(m.protected_hashes()) == 76
 
 
 def test_all_fibre_concepts_are_mat_material_types(model):

@@ -159,7 +159,7 @@ def main():
     parser.add_argument('--temp-root',type=Path)
     args=parser.parse_args()
     inventory=json.loads((PUBLICATION/'transfer-inventory.json').read_text('utf8'))
-    rows=inventory['files'];assert len(rows)==1295==inventory['transfer_files']
+    rows=inventory['files'];assert len(rows)==1299==inventory['transfer_files']
     assert inventory['source_commit']==assembly.SHA and inventory['documentation_baseline']==assembly.BASE
     assert len({row['destination'] for row in rows})==len(rows)
     for row in rows:assert hashlib.sha256((ROOT/row['destination']).read_bytes()).hexdigest()==row['sha256'],row['destination']
@@ -273,7 +273,7 @@ def main():
                     structural_validation=structure,http_transfer_results=http_results,
                     limitations=['External DNS was disabled in the browser to isolate copied local assets; external badges, citations, ReSpec delivery and optional remote ontology loading are not claimed verified.',
                                  'Loopback HTTP and the actual Pages base path were tested; production deployment, CDN MIME behavior and persistent w3id redirects remain separate post-deployment checks.',
-                                 'Canonical bytes and the fresh 221-test source validation records are copied unchanged; source semantic validation passed before this documentation transfer.'],
+                                 'Canonical bytes and the fresh 232-test source validation records are copied unchanged; source semantic validation passed before this documentation transfer.'],
                     deployment_performed=False,remote_branch_pushed=False,remote_pr_opened=False)
         (PUBLICATION/'validation-results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8',newline='\n')
         print(json.dumps({k:v for k,v in result.items() if k not in ('http_transfer_results','browser_pages','structural_validation')},indent=2),flush=True)
