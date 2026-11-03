@@ -7,7 +7,13 @@
 @base <https://w3id.org/eudpp/CON#> .
 
 <https://w3id.org/eudpp/CON> rdf:type owl:Ontology ;
-                              <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en ;
+                              <http://purl.org/dc/terms/bibliographicCitation> """
+        Maigre, R., Robal, T., Haav, H.M., 2026. Modular ontology design approach for an ESPR compliant digital product passport core ontology,in: Joint Proceedings of Baltic DB&IS Conference Forum and Doctoral Consortium 2026 co-located with 17th International Baltic Conference on Digital Business and Intelligent Systems (Baltic DB&IS 2026), CEUR-WS.org, Tartu, Estonia. pp. 115–126. URL: https://ceur-ws.org/Vol-4211/paper11.pdf. 
+        """@en ;
+                              <http://purl.org/dc/terms/contributor> "Daniel Hutzschenreuter"@en ,
+                                                                     "Elio Hbeich"@en ,
+                                                                     "Fatima Danash"@en ,
+                                                                     "Marc-Andree Wolf"@en ;
                               <http://purl.org/dc/terms/created> "2025-02-27"^^xsd:date ;
                               <http://purl.org/dc/terms/creator> "Riina Maigre"@en ,
                                                                  "Tarmo Robal"@en ;
@@ -16,19 +22,21 @@
 --
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user."""@en ;
-                              <http://purl.org/dc/terms/issued> "2026-10-20"^^xsd:date ;
-                              <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> ,
-                                                                 """This ontology is licensed under the Apache License, Version 2.0. 
-In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."""@en ;
+                              <http://purl.org/dc/terms/issued> "2026-10-30"^^xsd:date ;
+                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                               <http://purl.org/dc/terms/title> "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."@en ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" ;
                               rdfs:comment "The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en ;
                               rdfs:label "EU DPP CORE CON"@en ;
-                              owl:versionInfo "2.4.0" .
+                              owl:versionInfo "2.5.0" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
@@ -114,7 +122,7 @@ ProductEvent is modelled in the EU DPP CO EVENT module."""@en ;
                                               rdfs:range <https://w3id.org/eudpp#Actor> ;
                                               <http://purl.org/dc/terms/references> "ESPR Annex V (7)" ;
                                               <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" ;
-                                              rdfs:comment """Specifies the notified body that attest the product's conformity with Union harmonisation legislation. 
+                                              rdfs:comment """Specifies the notified body that attests the product's conformity with Union harmonisation legislation. 
 
 UnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.
 Actor is modelled in the EU DPP CO ACTOR module."""@en ;
@@ -321,7 +329,7 @@ MaterialOfComposition is modelled in the EU DPP CO MAT module."""@en ;
 <https://w3id.org/eudpp#hasMaterialIdentifier> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <https://w3id.org/eudpp#MaterialOfComposition> ;
                                                rdfs:range <https://w3id.org/eudpp#MaterialIdentifier> ;
-                                               rdfs:comment """Realisation of thematerial indetifier as \"Product parameters: identification of  ... materials [ESPR Annex I c)]\"
+                                               rdfs:comment """Realisation of the material identifier as \"Product parameters: identification of  ... materials [ESPR Annex I c)]\"
 
 MaterialOfComposition is modelled in the EU DPP CO MAT module.
 MaterialIdentifier is modelled in the EU DPP CO IDENT module."""@en ;
@@ -491,7 +499,7 @@ ActorRoleAssignment is modelled in the EU DPP CO ACTOR module."""@en ;
 ###  https://w3id.org/eudpp#isConformWith
 <https://w3id.org/eudpp#isConformWith> rdf:type owl:ObjectProperty ;
                                        rdfs:domain <https://w3id.org/eudpp#Product> ;
-                                       rdfs:comment "Specifies Union Harminised Lagislation for which conformity of the product is stated."@en ;
+                                       rdfs:comment "Specifies Union Harmonised Legislation for which conformity of the product is stated."@en ;
                                        rdfs:label "is conform with"@en .
 
 
@@ -552,7 +560,7 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                     rdfs:range <https://w3id.org/eudpp#Actor> ;
                                     <http://purl.org/dc/terms/references> "ESPR Annex V (9, 10)" ;
                                     <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" ;
-                                    rdfs:comment """Specifies the natural or legal person signying the Declaration of Conformity.
+                                    rdfs:comment """Specifies the natural or legal person signing the Declaration of Conformity.
 
 
 EUDeclarationOfConformity is modelled in the EU DPP CO COMP module.
@@ -591,7 +599,7 @@ Actor is modelled in the EU DPP CO ACTOR module."""@en ;
                                                         rdfs:range <https://w3id.org/eudpp#ConformityAssessmentModule> ;
                                                         <http://purl.org/dc/terms/references> "ESPR Annex V (7)" ;
                                                         <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" ;
-                                                        rdfs:comment """Specifies conformity assess procedure/cerfication scheme performed by the notified body.
+                                                        rdfs:comment """Specifies conformity assessment procedure/certification scheme performed by the notified body.
 
 
 ConformityAssessmentModule is modelled in the EU DPP CO COMP module.

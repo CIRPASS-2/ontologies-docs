@@ -1,17 +1,20 @@
 <https://w3id.org/eudpp/CON> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/bibliographicCitation> "\n        Maigre, R., Robal, T., Haav, H.M., 2026. Modular ontology design approach for an ESPR compliant digital product passport core ontology,in: Joint Proceedings of Baltic DB&IS Conference Forum and Doctoral Consortium 2026 co-located with 17th International Baltic Conference on Digital Business and Intelligent Systems (Baltic DB&IS 2026), CEUR-WS.org, Tartu, Estonia. pp. 115–126. URL: https://ceur-ws.org/Vol-4211/paper11.pdf. \n        "@en .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/contributor> "Daniel Hutzschenreuter"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/contributor> "Elio Hbeich"@en .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/contributor> "Fatima Danash"@en .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/contributor> "Marc-Andree Wolf"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/created> "2025-02-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Riina Maigre"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/creator> "Tarmo Robal"@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/description> "Connector (Bridge) module that only defines object properties between modules. The connector contains only object properties that have domain and range specified in different modules. \n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."@en .
-<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-10-20"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0> .
-<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0)."@en .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/issued> "2026-10-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/eudpp/CON> <http://purl.org/dc/terms/title> "The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#comment> "The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project."@en .
 <https://w3id.org/eudpp/CON> <http://www.w3.org/2000/01/rdf-schema#label> "EU DPP CORE CON"@en .
-<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.4.0" .
+<https://w3id.org/eudpp/CON> <http://www.w3.org/2002/07/owl#versionInfo> "2.5.0" .
 # 
 # 
 # #################################################################
@@ -20,6 +23,9 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -95,7 +101,7 @@
 <https://w3id.org/eudpp#conformityAttestedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#conformityAttestedBy> <http://purl.org/dc/terms/references> "ESPR Annex V (7)" .
 <https://w3id.org/eudpp#conformityAttestedBy> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" .
-<https://w3id.org/eudpp#conformityAttestedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the notified body that attest the product's conformity with Union harmonisation legislation. \n\nUnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
+<https://w3id.org/eudpp#conformityAttestedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the notified body that attests the product's conformity with Union harmonisation legislation. \n\nUnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#conformityAttestedBy> <http://www.w3.org/2000/01/rdf-schema#label> "conformity attested by"@en .
 # 
 # https://w3id.org/eudpp#containsSubstanceOfConcern
@@ -228,7 +234,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#MaterialOfComposition> .
 <https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#MaterialIdentifier> .
-<https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Realisation of thematerial indetifier as \"Product parameters: identification of  ... materials [ESPR Annex I c)]\"\n\nMaterialOfComposition is modelled in the EU DPP CO MAT module.\nMaterialIdentifier is modelled in the EU DPP CO IDENT module."@en .
+<https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Realisation of the material identifier as \"Product parameters: identification of  ... materials [ESPR Annex I c)]\"\n\nMaterialOfComposition is modelled in the EU DPP CO MAT module.\nMaterialIdentifier is modelled in the EU DPP CO IDENT module."@en .
 <https://w3id.org/eudpp#hasMaterialIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "has material identifier"@en .
 # 
 # https://w3id.org/eudpp#hasNotifiedBody
@@ -338,7 +344,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/eudpp#isConformWith
 <https://w3id.org/eudpp#isConformWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/eudpp#isConformWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/eudpp#Product> .
-<https://w3id.org/eudpp#isConformWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies Union Harminised Lagislation for which conformity of the product is stated."@en .
+<https://w3id.org/eudpp#isConformWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies Union Harmonised Legislation for which conformity of the product is stated."@en .
 <https://w3id.org/eudpp#isConformWith> <http://www.w3.org/2000/01/rdf-schema#label> "is conform with"@en .
 # 
 # https://w3id.org/eudpp#isConnectedTo
@@ -381,7 +387,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#Actor> .
 <https://w3id.org/eudpp#isSignedBy> <http://purl.org/dc/terms/references> "ESPR Annex V (9, 10)" .
 <https://w3id.org/eudpp#isSignedBy> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" .
-<https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the natural or legal person signying the Declaration of Conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
+<https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the natural or legal person signing the Declaration of Conformity.\n\n\nEUDeclarationOfConformity is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#isSignedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is signed by"@en .
 # 
 # https://w3id.org/eudpp#isSubstancePresenceOf
@@ -406,7 +412,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eudpp#ConformityAssessmentModule> .
 <https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://purl.org/dc/terms/references> "ESPR Annex V (7)" .
 <https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://purl.org/dc/terms/source> "https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V" .
-<https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies conformity assess procedure/cerfication scheme performed by the notified body.\n\n\nConformityAssessmentModule is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
+<https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies conformity assessment procedure/certification scheme performed by the notified body.\n\n\nConformityAssessmentModule is modelled in the EU DPP CO COMP module.\nActor is modelled in the EU DPP CO ACTOR module."@en .
 <https://w3id.org/eudpp#performedAssessmentAccordingTo> <http://www.w3.org/2000/01/rdf-schema#label> "performed assessment according to"@en .
 # 
 # https://w3id.org/eudpp#performedAt

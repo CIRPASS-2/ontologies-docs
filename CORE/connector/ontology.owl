@@ -9,7 +9,13 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/eudpp/CON">
+        <terms:bibliographicCitation xml:lang="en">
+        Maigre, R., Robal, T., Haav, H.M., 2026. Modular ontology design approach for an ESPR compliant digital product passport core ontology,in: Joint Proceedings of Baltic DB&amp;IS Conference Forum and Doctoral Consortium 2026 co-located with 17th International Baltic Conference on Digital Business and Intelligent Systems (Baltic DB&amp;IS 2026), CEUR-WS.org, Tartu, Estonia. pp. 115–126. URL: https://ceur-ws.org/Vol-4211/paper11.pdf. 
+        </terms:bibliographicCitation>
+        <terms:contributor xml:lang="en">Daniel Hutzschenreuter</terms:contributor>
         <terms:contributor xml:lang="en">Elio Hbeich</terms:contributor>
+        <terms:contributor xml:lang="en">Fatima Danash</terms:contributor>
+        <terms:contributor xml:lang="en">Marc-Andree Wolf</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-27</terms:created>
         <terms:creator xml:lang="en">Riina Maigre</terms:creator>
         <terms:creator xml:lang="en">Tarmo Robal</terms:creator>
@@ -18,15 +24,13 @@
 --
 THIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. 
 All liability for any damages arising from use or misuse of this vocabulary is with the user.</terms:description>
-        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-20</terms:issued>
-        <terms:license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0"/>
-        <terms:license xml:lang="en">This ontology is licensed under the Apache License, Version 2.0. 
-In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).</terms:license>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-30</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">The Connector module of the EU regulatory compliant Digital Product Passport Core Ontology (EU DPP CO) proposed by the CIRPASS-2 European project.</terms:title>
         <vann:preferredNamespacePrefix>con</vann:preferredNamespacePrefix>
         <rdfs:comment xml:lang="en">The CON module of the EU DPP core ontology proposal of the CIRPASS-2 European project.</rdfs:comment>
         <rdfs:label xml:lang="en">EU DPP CORE CON</rdfs:label>
-        <owl:versionInfo>2.4.0</owl:versionInfo>
+        <owl:versionInfo>2.5.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -40,6 +44,13 @@ In case of dispute over Apache 2.0 applicability, or in case considering the ont
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
     
 
 
@@ -189,7 +200,7 @@ ProductEvent is modelled in the EU DPP CO EVENT module.</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
         <terms:references>ESPR Annex V (7)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V</terms:source>
-        <rdfs:comment xml:lang="en">Specifies the notified body that attest the product&apos;s conformity with Union harmonisation legislation. 
+        <rdfs:comment xml:lang="en">Specifies the notified body that attests the product&apos;s conformity with Union harmonisation legislation. 
 
 UnionHarmonisationLegislation is modelled in the EU DPP CO COMP module.
 Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
@@ -463,7 +474,7 @@ MaterialOfComposition is modelled in the EU DPP CO MAT module.</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#hasMaterialIdentifier">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#MaterialOfComposition"/>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#MaterialIdentifier"/>
-        <rdfs:comment xml:lang="en">Realisation of thematerial indetifier as &quot;Product parameters: identification of  ... materials [ESPR Annex I c)]&quot;
+        <rdfs:comment xml:lang="en">Realisation of the material identifier as &quot;Product parameters: identification of  ... materials [ESPR Annex I c)]&quot;
 
 MaterialOfComposition is modelled in the EU DPP CO MAT module.
 MaterialIdentifier is modelled in the EU DPP CO IDENT module.</rdfs:comment>
@@ -689,7 +700,7 @@ ActorRoleAssignment is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/eudpp#isConformWith">
         <rdfs:domain rdf:resource="https://w3id.org/eudpp#Product"/>
-        <rdfs:comment xml:lang="en">Specifies Union Harminised Lagislation for which conformity of the product is stated.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies Union Harmonised Legislation for which conformity of the product is stated.</rdfs:comment>
         <rdfs:label xml:lang="en">is conform with</rdfs:label>
     </owl:ObjectProperty>
     
@@ -770,7 +781,7 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#Actor"/>
         <terms:references>ESPR Annex V (9, 10)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V</terms:source>
-        <rdfs:comment xml:lang="en">Specifies the natural or legal person signying the Declaration of Conformity.
+        <rdfs:comment xml:lang="en">Specifies the natural or legal person signing the Declaration of Conformity.
 
 
 EUDeclarationOfConformity is modelled in the EU DPP CO COMP module.
@@ -821,7 +832,7 @@ Actor is modelled in the EU DPP CO ACTOR module.</rdfs:comment>
         <rdfs:range rdf:resource="https://w3id.org/eudpp#ConformityAssessmentModule"/>
         <terms:references>ESPR Annex V (7)</terms:references>
         <terms:source>https://eur-lex.europa.eu/eli/reg/2024/1781/oj/#anx_%C2%A0V</terms:source>
-        <rdfs:comment xml:lang="en">Specifies conformity assess procedure/cerfication scheme performed by the notified body.
+        <rdfs:comment xml:lang="en">Specifies conformity assessment procedure/certification scheme performed by the notified body.
 
 
 ConformityAssessmentModule is modelled in the EU DPP CO COMP module.

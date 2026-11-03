@@ -7,10 +7,10 @@
       "en" : "Actors and roles module for an EU DPP core ontology proposed by CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/ACTOR",
-    "version" : "2.2.0",
+    "version" : "2.3.0",
     "author" : [ "Riina Maigre" ],
     "description" : {
-      "en" : "Actor module of an EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology modules: CON, P_DPP, EVENT.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342"
+      "en" : "Actor module of an EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology modules: CON, P_DPP, EVENT.  \n\nFor more information, see \nMaigre, R., Haav, H.-M., Robal, T., Wolf, M.-A., &amp; Danash, F. (2025). Ontology Requirements Specification for an EU DPP Core Ontology Proposal (1.1). CIRPASS-2 Consortium. https://doi.org/10.5281/zenodo.15270342\n---\nNote on the license: This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.\n---\n"
     },
     "labels" : {
       "en" : "EU DPP CO ACTOR"
@@ -22,13 +22,8 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
-      }, {
-        "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -39,12 +34,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Tarmo Robal",
+        "value" : "Hele-Mai Haav",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Hele-Mai Haav",
+        "value" : "Tarmo Robal",
         "type" : "label"
       } ],
       "created" : [ {
@@ -62,7 +57,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2.2.0",
+        "value" : "2.3.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -74,7 +69,7 @@
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
-        "value" : "2026-10-20",
+        "value" : "2026-10-30",
         "type" : "label"
       } ]
     }
@@ -383,7 +378,7 @@
       "en" : "Facility"
     },
     "comment" : {
-      "en" : "A Facility may be a place where specific activities occur. A production/manufacturing facility means a factory. The term may refer to any place that makes things, or plants that generate electricity."
+      "en" : "Business facilities are structures that provide services to a business. This can include space for employees, technology, equipment and inventory. Facilities can be used for business administration, operations or to provide services to customers."
     },
     "attributes" : [ "external" ],
     "id" : "11"
@@ -1142,11 +1137,11 @@
     "id" : "19",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "3",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "21",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "23",
     "type" : "rdfs:SubClassOf"
@@ -1267,7 +1262,7 @@
     "comment" : {
       "en" : "Links an Actor to its email address."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "8"
   }, {
     "iri" : "https://schema.org/url",
@@ -1289,7 +1284,7 @@
     "comment" : {
       "undefined" : "The official website or webpage of the actor."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/eudpp#hasRole",
@@ -1309,27 +1304,13 @@
   }, {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
     "range" : "7",
     "domain" : "20",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "19"
-  }, {
-    "iri" : "https://w3id.org/eudpp#representsManufacturer",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "representsManufacturer",
-      "en" : "represents manufacturer"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Used when the role is authorisedRepresentativeRole to indicate the manufacturer being represented."
-    },
-    "attributes" : [ "external", "object" ],
-    "id" : "3"
   }, {
     "iri" : "https://schema.org/telephone",
     "baseIri" : "https://schema.org",
@@ -1350,37 +1331,51 @@
     "comment" : {
       "en" : "Links an Actor to its phone."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/eudpp#representsManufacturer",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "representsManufacturer",
+      "en" : "represents manufacturer"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Used when the role is authorisedRepresentativeRole to indicate the manufacturer being represented."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "3"
   }, {
     "range" : "16",
     "domain" : "2",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "23"
   }, {
     "range" : "7",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "24"
   }, {
     "range" : "1",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
     "range" : "1",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "27"
   }, {
     "range" : "7",
     "domain" : "29",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
     "range" : "7",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
     "iri" : "https://schema.org/longitude",
@@ -1402,7 +1397,7 @@
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "31"
   }, {
     "iri" : "https://w3id.org/eudpp#registeredTradeName",
@@ -1416,7 +1411,7 @@
     "comment" : {
       "en" : "Trade name under which a legal person or business operates and is registered."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "33"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broader",
@@ -1440,7 +1435,7 @@
     "comment" : {
       "en" : "Name of an actor."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "36"
   }, {
     "iri" : "https://w3id.org/eudpp#usesFacility",
@@ -1468,7 +1463,7 @@
     "comment" : {
       "en" : "Optional human-readable name of the facility."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "39"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#related",
@@ -1492,7 +1487,7 @@
     "comment" : {
       "en" : "The date and time from which the actor role assignment is valid."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "42"
   }, {
     "iri" : "https://w3id.org/eudpp#isResidingIn",
@@ -1538,26 +1533,26 @@
     "attributes" : [ "external", "object" ],
     "id" : "51"
   }, {
-    "iri" : "https://schema.org/longitude",
+    "iri" : "https://schema.org/latitude",
     "baseIri" : "https://schema.org",
     "range" : "53",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://schema.org/longitude",
+        "value" : "https://schema.org/latitude",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "longitude",
-      "en" : "longitude"
+      "IRI-based" : "latitude",
+      "en" : "latitude"
     },
     "domain" : "45",
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "someValues", "datatype" ],
+    "attributes" : [ "datatype", "someValues", "external" ],
     "id" : "52"
   }, {
     "iri" : "https://schema.org/address",
@@ -1597,28 +1592,6 @@
     "attributes" : [ "external", "object", "allValues" ],
     "id" : "55"
   }, {
-    "iri" : "https://schema.org/address",
-    "baseIri" : "https://schema.org",
-    "range" : "44",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://schema.org/address",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "address",
-      "en" : "has address"
-    },
-    "domain" : "11",
-    "comment" : {
-      "en" : "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"
-    },
-    "attributes" : [ "external", "object", "allValues" ],
-    "id" : "56"
-  }, {
     "iri" : "https://schema.org/geo",
     "baseIri" : "https://schema.org",
     "range" : "45",
@@ -1639,11 +1612,33 @@
       "en" : "Links facility to its coordinates, represented as schema:geo."
     },
     "attributes" : [ "external", "object", "allValues" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://schema.org/address",
+    "baseIri" : "https://schema.org",
+    "range" : "44",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://schema.org/address",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "address",
+      "en" : "has address"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links an Actor or Facility to its postal address, represented as a schema:PostalAddress"
+    },
+    "attributes" : [ "external", "object", "allValues" ],
     "id" : "57"
   }, {
     "range" : "4",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "58"
   }, {
     "iri" : "https://w3id.org/eudpp#assignmentValidTo",
@@ -1657,29 +1652,29 @@
     "comment" : {
       "en" : "The date and time until which the actor role assignment is valid."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "59"
   }, {
-    "iri" : "https://schema.org/latitude",
+    "iri" : "https://schema.org/longitude",
     "baseIri" : "https://schema.org",
     "range" : "61",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "https://schema.org/latitude",
+        "value" : "https://schema.org/longitude",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "latitude",
-      "en" : "latitude"
+      "IRI-based" : "longitude",
+      "en" : "longitude"
     },
     "domain" : "45",
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "someValues", "datatype" ],
+    "attributes" : [ "datatype", "someValues", "external" ],
     "id" : "60"
   }, {
     "iri" : "https://schema.org/latitude",
@@ -1701,7 +1696,7 @@
     "comment" : {
       "en" : "Links facility to its coordinates. Part of schema:geo."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "62"
   }, {
     "iri" : "https://w3id.org/eudpp#isRoleOf",

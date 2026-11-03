@@ -69,12 +69,12 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       }, {
         "identifier" : "license",
         "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "value" : "This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -92,7 +92,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-10-06",
+        "value" : "2026-11-03",
         "type" : "label"
       } ],
       "bibliographicCitation" : [ {
@@ -155,16 +155,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "portable",
-          "type" : "label"
-        } ],
         "codeSet" : [ {
           "identifier" : "codeSet",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "portable",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -224,16 +224,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LMT",
-          "type" : "label"
-        } ],
         "codeSet" : [ {
           "identifier" : "codeSet",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LMT",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -335,22 +335,91 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "codeValue" : [ {
-          "identifier" : "codeValue",
-          "language" : "undefined",
-          "value" : "SLI",
-          "type" : "label"
-        } ],
         "scopeNote" : [ {
           "identifier" : "scopeNote",
           "language" : "en",
           "value" : "Out of scope of the battery passport.",
+          "type" : "label"
+        } ],
+        "codeValue" : [ {
+          "identifier" : "codeValue",
+          "language" : "undefined",
+          "value" : "SLI",
           "type" : "label"
         } ]
       },
       "labels" : {
         "IRI-based" : "SLIBattery",
         "en" : "Starting, lighting and ignition battery"
+      }
+    }, {
+      "iri" : "https://w3id.org/eudpp/battery-categories#IndustrialBattery",
+      "baseIri" : "https://w3id.org/eudpp/battery-categories",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/battery-categories",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "Regulation (EU) 2023/1542, Art. 3(1)(13)",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "industrial",
+          "type" : "label"
+        } ],
+        "codeSet" : [ {
+          "identifier" : "codeSet",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Industrial battery",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "a battery that is specifically designed for industrial uses, intended for industrial uses after having been subject to preparation for repurposing or repurposing, or any other battery that weighs more than 5 kg and that is neither an electric vehicle battery, an LMT battery, nor an SLI battery",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "iri"
+        } ],
+        "codeValue" : [ {
+          "identifier" : "codeValue",
+          "language" : "undefined",
+          "value" : "industrial",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "In scope of the battery passport above 2 kWh.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IndustrialBattery",
+        "en" : "Industrial battery"
       }
     }, {
       "iri" : "https://w3id.org/eudpp/battery-categories#ElectricVehicleBattery",
@@ -427,75 +496,6 @@
         "IRI-based" : "ElectricVehicleBattery",
         "en" : "Electric vehicle battery"
       }
-    }, {
-      "iri" : "https://w3id.org/eudpp/battery-categories#IndustrialBattery",
-      "baseIri" : "https://w3id.org/eudpp/battery-categories",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
-          "type" : "iri"
-        } ],
-        "references" : [ {
-          "identifier" : "references",
-          "language" : "en",
-          "value" : "Regulation (EU) 2023/1542, Art. 3(1)(13)",
-          "type" : "label"
-        } ],
-        "codeSet" : [ {
-          "identifier" : "codeSet",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "industrial",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Industrial battery",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "a battery that is specifically designed for industrial uses, intended for industrial uses after having been subject to preparation for repurposing or repurposing, or any other battery that weighs more than 5 kg and that is neither an electric vehicle battery, an LMT battery, nor an SLI battery",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
-          "type" : "iri"
-        } ],
-        "scopeNote" : [ {
-          "identifier" : "scopeNote",
-          "language" : "en",
-          "value" : "In scope of the battery passport above 2 kWh.",
-          "type" : "label"
-        } ],
-        "codeValue" : [ {
-          "identifier" : "codeValue",
-          "language" : "undefined",
-          "value" : "industrial",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "IndustrialBattery",
-        "en" : "Industrial battery"
-      }
     } ],
     "attributes" : [ "external" ],
     "id" : "0"
@@ -531,7 +531,7 @@
         "hasTopConcept" : [ {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#PortableBattery",
+          "value" : "https://w3id.org/eudpp/battery-categories#LMTBattery",
           "type" : "iri"
         }, {
           "identifier" : "hasTopConcept",
@@ -551,7 +551,7 @@
         }, {
           "identifier" : "hasTopConcept",
           "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#LMTBattery",
+          "value" : "https://w3id.org/eudpp/battery-categories#PortableBattery",
           "type" : "iri"
         } ],
         "source" : [ {
@@ -603,16 +603,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "portable",
-          "type" : "label"
-        } ],
         "codeSet" : [ {
           "identifier" : "codeSet",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "portable",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -672,16 +672,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "LMT",
-          "type" : "label"
-        } ],
         "codeSet" : [ {
           "identifier" : "codeSet",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "LMT",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -783,16 +783,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "codeValue" : [ {
-          "identifier" : "codeValue",
-          "language" : "undefined",
-          "value" : "SLI",
-          "type" : "label"
-        } ],
         "scopeNote" : [ {
           "identifier" : "scopeNote",
           "language" : "en",
           "value" : "Out of scope of the battery passport.",
+          "type" : "label"
+        } ],
+        "codeValue" : [ {
+          "identifier" : "codeValue",
+          "language" : "undefined",
+          "value" : "SLI",
           "type" : "label"
         } ]
       },
@@ -897,16 +897,16 @@
           "value" : "Regulation (EU) 2023/1542, Art. 3(1)(13)",
           "type" : "label"
         } ],
-        "codeSet" : [ {
-          "identifier" : "codeSet",
-          "language" : "undefined",
-          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
-          "type" : "label"
-        } ],
         "notation" : [ {
           "identifier" : "notation",
           "language" : "undefined",
           "value" : "industrial",
+          "type" : "label"
+        } ],
+        "codeSet" : [ {
+          "identifier" : "codeSet",
+          "language" : "undefined",
+          "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "label"
         } ],
         "prefLabel" : [ {
@@ -927,16 +927,16 @@
           "value" : "https://w3id.org/eudpp/battery-categories#BatteryCategoryScheme",
           "type" : "iri"
         } ],
-        "scopeNote" : [ {
-          "identifier" : "scopeNote",
-          "language" : "en",
-          "value" : "In scope of the battery passport above 2 kWh.",
-          "type" : "label"
-        } ],
         "codeValue" : [ {
           "identifier" : "codeValue",
           "language" : "undefined",
           "value" : "industrial",
+          "type" : "label"
+        } ],
+        "scopeNote" : [ {
+          "identifier" : "scopeNote",
+          "language" : "en",
+          "value" : "In scope of the battery passport above 2 kWh.",
           "type" : "label"
         } ]
       },

@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/eudpp/battery",
     "version" : "Version 0.4.0 DRAFT",
-    "author" : [ "Nader Jelassi", "Marc-Andree Wolf" ],
+    "author" : [ "Marc-Andree Wolf", "Nader Jelassi" ],
     "description" : {
       "en" : "Sectoral ontology for battery Digital Product Passports under Regulation (EU) 2023/1542. This umbrella module declares the Battery product class and the SafetyInstruction class; battery data is organised in nine companion modules: battery-performance (electrochemical performance, durability and in-use state), battery-materials (chemistry and material location), battery-labeling (labels and symbols), battery-categories (the five Art. 3(1) battery categories), battery-chemistries (the ten labelling chemistries), battery-locations (cathode, anode, electrolyte), battery-metals (the four metals whose recycled content Art. 8(1) requires), battery-statuses (the five Annex XIII 4(c) lifecycle statuses) and battery-extinguisher-classes; battery-cf-shapes carries the carbon footprint SHACL profile. It extends the CIRPASS-2 cross-sectoral CORE ontology by direct reference, following the approach of the Textile sector modules."
     },
@@ -22,12 +22,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Nader Jelassi",
+        "value" : "Marc-Andree Wolf",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Marc-Andree Wolf",
+        "value" : "Nader Jelassi",
         "type" : "label"
       } ],
       "references" : [ {
@@ -42,17 +42,17 @@
         "value" : "2026-07-07",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "en",
-        "value" : "Version 0.4.0 DRAFT",
-        "type" : "label"
-      } ],
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
         "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "Version 0.4.0 DRAFT",
+        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -63,32 +63,22 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-categories",
-        "type" : "iri"
-      }, {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-statuses",
-        "type" : "iri"
-      }, {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-performance",
-        "type" : "iri"
-      }, {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-labeling",
-        "type" : "iri"
-      }, {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-chemistries",
+        "value" : "https://w3id.org/eudpp/battery-cf-shapes",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/battery-extinguisher-classes",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-categories",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-metals",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
@@ -103,23 +93,33 @@
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-metals",
+        "value" : "https://w3id.org/eudpp/battery-performance",
         "type" : "iri"
       }, {
         "identifier" : "seeAlso",
         "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-cf-shapes",
+        "value" : "https://w3id.org/eudpp/battery-statuses",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-chemistries",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-labeling",
         "type" : "iri"
       } ],
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       }, {
         "identifier" : "license",
         "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "value" : "This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -137,19 +137,19 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-10-06",
-        "type" : "label"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "en",
-        "value" : "EU DPP Battery Ontology. Draft version 0.4.0.",
+        "value" : "2026-11-03",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/eudpp/battery#",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "en",
+        "value" : "EU DPP Battery Ontology. Draft version 0.4.0.",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -174,10 +174,10 @@
     "id" : "11",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "6",
+    "id" : "4",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "4",
+    "id" : "6",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "3",
@@ -257,14 +257,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "6",
+    "id" : "4",
     "label" : {
       "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "4",
+    "id" : "6",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -381,43 +381,9 @@
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://w3id.org/eudpp/battery#testReportResults",
-    "baseIri" : "https://w3id.org/eudpp/battery",
-    "range" : "4",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "Regulation (EU) 2023/1542, Annex XIII 3",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "testReportResults",
-      "en" : "test report results"
-    },
-    "domain" : "3",
-    "comment" : {
-      "en" : "Link to the test report results. Access is restricted to notified bodies, market surveillance authorities and the Commission; the restriction is expressed in the SHACL layer, not here. Migration to the CORE document pattern eudpp:Source (LCA module) is tracked in ontologies-battery#11 and deferred until the LCA module is integrated into the CORE; xsd:anyURI is the agreed interim."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "2"
-  }, {
     "iri" : "https://w3id.org/eudpp/battery#safetyMeasures",
     "baseIri" : "https://w3id.org/eudpp/battery",
-    "range" : "6",
+    "range" : "4",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -452,7 +418,41 @@
     "comment" : {
       "en" : "Deprecated on 6 October 2026 and kept for existing data: the safety measures are now a bat:SafetyInstruction, subclass of eudpp:DigitalInstruction (P_DPP), reached through dpp:hasProperty with its URL on dpp:webLink (ontologies-core#45). Link to the safety measures applicable to the battery."
     },
-    "attributes" : [ "datatype", "deprecated" ],
+    "attributes" : [ "deprecated", "datatype" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/eudpp/battery#testReportResults",
+    "baseIri" : "https://w3id.org/eudpp/battery",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "Regulation (EU) 2023/1542, Annex XIII 3",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://eur-lex.europa.eu/eli/reg/2023/1542/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "testReportResults",
+      "en" : "test report results"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Link to the test report results. Access is restricted to notified bodies, market surveillance authorities and the Commission; the restriction is expressed in the SHACL layer, not here. Migration to the CORE document pattern eudpp:Source (LCA module) is tracked in ontologies-battery#11 and deferred until the LCA module is integrated into the CORE; xsd:anyURI is the agreed interim."
+    },
+    "attributes" : [ "datatype" ],
     "id" : "5"
   }, {
     "iri" : "https://w3id.org/eudpp/battery#partNumber",

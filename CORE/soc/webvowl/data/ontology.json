@@ -7,8 +7,8 @@
       "en" : "The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/SOC",
-    "version" : "2.2.0",
-    "author" : [ "Tarmo Robal" ],
+    "version" : "2.3.0",
+    "author" : [ "Tarmo Robal", "Elio Hbeich" ],
     "description" : {
       "en" : "MODULE: SOC\nSubstances of Concern module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP.  \n\nThe third iteration of the Substances of Concern module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe information requirements laid out in ESPR Art 7(2) and Art 7(5) for products require the information requirements to make it possible to track the substances of concern, throughout the life cycle of the products concerned. These information requirements for specific product groups are specified in the delegated acts adopted pursuant to Art 4 of ESPR.\n\t\nThis module addresses only the information requirements referred and stated in the ESPR. \n=====================================\nCONTEXT: \nRegulation (EC) No 1907/2006  Art 3(1) defines Substance: means a chemical element and its compounds in the natural state or obtained by\nany manufacturing process, including any additive necessary to preserve its stability and any impurity deriving from the process used, but excluding any solvent which may be separated without affecting the stability of the substance or changing its composition; \n\n------------------------------------------------------------------- \nKnown issues:\n - hasLifeCycleStage misses range (Event).\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
     },
@@ -22,29 +22,24 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
-      }, {
-        "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
         "value" : "Tarmo Robal",
         "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Elio Hbeich",
+        "type" : "label"
       } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
         "value" : "Hele-Mai Haav",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Elio Hbeich",
         "type" : "label"
       } ],
       "created" : [ {
@@ -62,19 +57,19 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "2.2.0",
+        "value" : "2.3.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "en",
+        "value" : "2026-10-30",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Substance of Concern (SOC) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.",
-        "type" : "label"
-      } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "en",
-        "value" : "2026-10-15",
         "type" : "label"
       } ]
     }
@@ -147,13 +142,13 @@
     "id" : "42",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "17",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
     "id" : "43",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "15",
+    "id" : "17",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
@@ -185,17 +180,17 @@
           "value" : "https://w3id.org/eudpp/SOC",
           "type" : "iri"
         } ],
-        "references" : [ {
-          "identifier" : "references",
-          "language" : "en",
-          "value" : "ESPR Article 2(27)(c); Regulation (EU) 2019/1021.",
-          "type" : "label"
-        } ],
         "inScheme" : [ {
           "identifier" : "inScheme",
           "language" : "undefined",
           "value" : "https://w3id.org/eudpp#SoCCriterionScheme",
           "type" : "iri"
+        } ],
+        "references" : [ {
+          "identifier" : "references",
+          "language" : "en",
+          "value" : "ESPR Article 2(27)(c); Regulation (EU) 2019/1021.",
+          "type" : "label"
         } ],
         "notation" : [ {
           "identifier" : "notation",
@@ -359,12 +354,12 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -429,12 +424,12 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+          "value" : "http://data.europa.eu/eli/reg/2008/1272/oj",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "http://data.europa.eu/eli/reg/2008/1272/oj",
+          "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
           "type" : "iri"
         } ],
         "topConceptOf" : [ {
@@ -646,7 +641,7 @@
       "IRI-based" : "Substance",
       "en" : "Substance"
     },
-    "subClasses" : [ "17" ],
+    "subClasses" : [ "15" ],
     "comment" : {
       "en" : "A chemical substance used as the generic superclass for substance identity and naming information. In this SOC module it primarily supports the modelling of dpp:SubstanceOfConcern; its presence does not make SOC a general-purpose substance-reporting module."
     },
@@ -737,12 +732,12 @@
         "source" : [ {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://physics.nist.gov/cuu/Units/checklist.html",
+          "value" : "https://si-digital-framework.org/",
           "type" : "iri"
         }, {
           "identifier" : "source",
           "language" : "undefined",
-          "value" : "https://si-digital-framework.org/",
+          "value" : "https://physics.nist.gov/cuu/Units/checklist.html",
           "type" : "iri"
         } ]
       },
@@ -878,7 +873,7 @@
       "en" : "A substance that: (a) meets the criteria laid down in Article 57 of Regulation (EC) No 1907/2006 and is identified in accordance with Article 59(1) of that Regulation; (b) is classified in Part 3 of Annex VI to Regulation (EC) No 1272/2008 in one of the following hazard classes or hazard categories: (i) carcinogenicity categories 1 and 2; (ii) germ cell mutagenicity categories 1 and 2; (iii) reproductive toxicity categories 1 and 2; (iv) endocrine disruption for human health categories 1 and 2; (v) endocrine disruption for the environment categories 1 and 2; (vi) persistent, mobile and toxic or very persistent, very mobile properties; (vii) persistent, bioaccumulative and toxic or very persistent, very bioaccumulative properties; (viii) respiratory sensitisation category 1; (ix) skin sensitisation category 1; (x) hazardous to the aquatic environment — categories chronic 1 to 4; (xi) hazardous to the ozone layer; (xii) specific target organ toxicity — repeated exposure categories 1 and 2; (xiii) specific target organ toxicity — single exposure categories 1 and 2; (c) is regulated under Regulation (EU) 2019/1021; or (d) negatively affects the reuse and recycling of materials in the product in which it is present."
     },
     "attributes" : [ "external" ],
-    "id" : "17",
+    "id" : "15",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
@@ -890,7 +885,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "15",
+    "id" : "17",
     "label" : {
       "IRI-based" : "string"
     }
@@ -930,17 +925,17 @@
       "source" : [ {
         "identifier" : "source",
         "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
-        "type" : "iri"
-      }, {
-        "identifier" : "source",
-        "language" : "undefined",
         "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
         "language" : "undefined",
         "value" : "http://data.europa.eu/eli/reg/2008/1272/oj",
+        "type" : "iri"
+      }, {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2006/1907/oj",
         "type" : "iri"
       }, {
         "identifier" : "source",
@@ -973,10 +968,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "14",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "16",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "18",
     "type" : "owl:datatypeProperty"
@@ -1214,49 +1209,9 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "12"
   }, {
-    "iri" : "https://w3id.org/eudpp#abbreviation",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "15",
-    "annotations" : {
-      "sourceStatus" : [ {
-        "identifier" : "sourceStatus",
-        "language" : "en",
-        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/SOC",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "ESPR Article 7(5)(a)(ii)",
-        "type" : "label"
-      } ],
-      "source" : [ {
-        "identifier" : "source",
-        "language" : "undefined",
-        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "abbreviation",
-      "en" : "Abbreviation"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "An abbreviation used for the substance."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "14"
-  }, {
     "iri" : "https://w3id.org/eudpp#concernsSubstance",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "17",
+    "range" : "15",
     "annotations" : {
       "sourceStatus" : [ {
         "identifier" : "sourceStatus",
@@ -1292,6 +1247,46 @@
       "en" : "Links a reported SubstancePresence to the SubstanceOfConcern involved. dpp:Substance remains the superclass used for generic substance identity and naming properties, but the SOC reporting relation itself is intentionally restricted to dpp:SubstanceOfConcern."
     },
     "attributes" : [ "external", "object" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/eudpp#abbreviation",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "17",
+    "annotations" : {
+      "sourceStatus" : [ {
+        "identifier" : "sourceStatus",
+        "language" : "en",
+        "value" : "representation of an information element explicitly required by the cited ESPR provision; the RDF resource itself is an ontology modelling construct.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/SOC",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "ESPR Article 7(5)(a)(ii)",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "http://data.europa.eu/eli/reg/2024/1781/oj",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "abbreviation",
+      "en" : "Abbreviation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "An abbreviation used for the substance."
+    },
+    "attributes" : [ "external", "datatype" ],
     "id" : "16"
   }, {
     "iri" : "https://w3id.org/eudpp#usualName",
@@ -1367,7 +1362,7 @@
       "IRI-based" : "hasQualificationAssertion",
       "en" : "has qualification assertion"
     },
-    "domain" : "17",
+    "domain" : "15",
     "comment" : {
       "en" : "Links a substance of concern to a documented qualification assertion."
     },
@@ -1416,17 +1411,17 @@
   }, {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
   }, {
     "range" : "1",
-    "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "25"
   }, {
     "range" : "7",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/eudpp#iupacName",
@@ -1552,7 +1547,7 @@
     "iri" : "https://w3id.org/eudpp#qualifiesSubstance",
     "inverse" : "20",
     "baseIri" : "https://w3id.org/eudpp",
-    "range" : "17",
+    "range" : "15",
     "annotations" : {
       "sourceStatus" : [ {
         "identifier" : "sourceStatus",
@@ -1712,7 +1707,7 @@
   }, {
     "range" : "6",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "46"
   }, {
     "iri" : "https://w3id.org/eudpp#hasApplicableQualification",

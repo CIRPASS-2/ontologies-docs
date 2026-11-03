@@ -7,10 +7,10 @@
       "en" : "The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/IDENT",
-    "version" : "1.2.0",
+    "version" : "1.3.0",
     "author" : [ "Tarmo Robal" ],
     "description" : {
-      "en" : "MODULE: IDENT\nIdentifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe Identifier module proposes an universal approach for identifiers used in the EU DPP CO delivered by the CIRPASS-2 European Project.  \nThe module describes identifiers used for the project through aspects and scheme references, if appropriate, granularity is added.\n---\n\nDESIGN RESTRICTION: Specific modules of the EU DPP CO need to use the Connector to establish a link to the Identifiers module. The link needs to be establsihed to a subclass of aIdentifier class, e.g., Product hasUniqueProductIdentifier ProductIdentifier.\n---\n\nDEPENDENCIES: This module may have dependencies to all  EU DPP Core Ontology (CO) modules that use different types of identifiers, including: CON, P_DPP, SOC, ACTOR, ...  \n--\n\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
+      "en" : "MODULE: IDENT\nIdentifier module of the EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nThe Identifier module proposes an universal approach for identifiers used in the EU DPP CO delivered by the CIRPASS-2 European Project.  \nThe module describes identifiers used for the project through aspects and scheme references, if appropriate, granularity is added.\n---\n\nDESIGN RESTRICTION: Specific modules of the EU DPP CO need to use the Connector to establish a link to the Identifiers module. The link needs to be establsihed to a subclass of aIdentifier class, e.g., Product hasUniqueProductIdentifier ProductIdentifier.\n---\n\nDEPENDENCIES: This module may have dependencies to all  EU DPP Core Ontology (CO) modules that use different types of identifiers, including: CON, P_DPP, SOC, ACTOR, ...  \n---\n\n---\nNote on the license: This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.\n---\n\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
     },
     "labels" : {
       "en" : "EU DPP IDENT"
@@ -22,13 +22,8 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
-      }, {
-        "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -62,19 +57,19 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "1.2.0",
+        "value" : "1.3.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-30",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Identifier (IDENT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.",
-        "type" : "label"
-      } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-10-09",
         "type" : "label"
       } ]
     }
@@ -141,13 +136,13 @@
     "id" : "69",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "63",
+    "id" : "65",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "31",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "65",
+    "id" : "63",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "14",
@@ -248,7 +243,7 @@
       "iri" : "https://w3id.org/eudpp#EC",
       "baseIri" : "https://w3id.org/eudpp",
       "comment" : {
-        "en" : "The EC number is a seven-digit identifier typically written in the format XXX-XXX-X and used to identify chemical substances in European regulatory inventories.\n\nExample:\nSubstance: Ethanol\nEC number: 200-578-6"
+        "en" : "EC number is a unique identification number assigned to a chemical substance in the European Union. It is used to identify substances in regulatory databases, safety data sheets (SDSs), and chemical legislation."
       },
       "labels" : {
         "IRI-based" : "EC",
@@ -381,16 +376,16 @@
       "iri" : "https://w3id.org/eudpp#GTIN",
       "baseIri" : "https://w3id.org/eudpp",
       "annotations" : {
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "Global Trade Item Number",
-          "type" : "label"
-        } ],
         "definition" : [ {
           "identifier" : "definition",
           "language" : "en",
           "value" : "A globally unique identifier for trade items, defined by GS1, used to identify products at various packaging levels.",
+          "type" : "label"
+        } ],
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "Global Trade Item Number",
           "type" : "label"
         } ],
         "seeAlso" : [ {
@@ -579,7 +574,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#date",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "63",
+    "id" : "65",
     "label" : {
       "IRI-based" : "date"
     }
@@ -593,7 +588,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "65",
+    "id" : "63",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -655,7 +650,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "20",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "21",
     "type" : "owl:disjointWith"
@@ -664,7 +659,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "24",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "25",
     "type" : "owl:disjointWith"
@@ -742,7 +737,7 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "58",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "59",
     "type" : "owl:disjointWith"
@@ -760,7 +755,7 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "66",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "67",
     "type" : "owl:disjointWith"
@@ -784,10 +779,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "77",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "78",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "79",
     "type" : "rdfs:SubClassOf"
@@ -819,7 +814,7 @@
     "comment" : {
       "undefined" : "The scheme/standard the Identifier follows"
     },
-    "attributes" : [ "someValues", "external", "object" ],
+    "attributes" : [ "external", "someValues", "object" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierExampleValue",
@@ -833,7 +828,7 @@
     "comment" : {
       "en" : "Example value of the identifier"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/eudpp#hasScheme",
@@ -850,9 +845,9 @@
     "attributes" : [ "external", "object" ],
     "id" : "10"
   }, {
-    "range" : "0",
+    "range" : "1",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "12"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierMaxLength",
@@ -866,28 +861,43 @@
     "comment" : {
       "en" : "Maximum length of the identifier"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "13"
-  }, {
-    "range" : "5",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "15"
-  }, {
-    "range" : "4",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "16"
-  }, {
-    "range" : "0",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "18"
   }, {
     "range" : "11",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "15"
+  }, {
+    "range" : "0",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "4",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "19"
+  }, {
+    "range" : "1",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "20"
+  }, {
+    "range" : "11",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "5",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
   }, {
     "iri" : "https://w3id.org/eudpp#hasScheme",
     "baseIri" : "https://w3id.org/eudpp",
@@ -900,27 +910,12 @@
     "comment" : {
       "undefined" : "The scheme/standard the Identifier follows"
     },
-    "attributes" : [ "someValues", "external", "object" ],
-    "id" : "20"
+    "attributes" : [ "external", "someValues", "object" ],
+    "id" : "24"
   }, {
     "range" : "6",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
-  }, {
-    "range" : "11",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "23"
-  }, {
-    "range" : "1",
-    "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "24"
-  }, {
-    "range" : "5",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierSchemeVersion",
@@ -934,7 +929,7 @@
     "comment" : {
       "en" : "Reference standard version the instance schema refers to"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierExpiresOn",
@@ -948,118 +943,166 @@
     "comment" : {
       "en" : "Identifier expiration date"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "30"
+  }, {
+    "range" : "17",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
   }, {
     "range" : "1",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "32"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
   }, {
     "range" : "4",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "34"
-  }, {
-    "range" : "0",
-    "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "35"
   }, {
-    "range" : "17",
+    "range" : "33",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "36"
   }, {
-    "range" : "1",
+    "range" : "0",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "38"
   }, {
     "range" : "2",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
-    "range" : "17",
+    "range" : "0",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
-    "range" : "0",
+    "range" : "17",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
-    "range" : "5",
+    "range" : "22",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
-    "range" : "33",
+    "range" : "4",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
     "range" : "2",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "range" : "2",
     "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "50"
   }, {
     "range" : "7",
     "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "range" : "2",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "52"
   }, {
     "range" : "2",
     "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "53"
-  }, {
-    "range" : "1",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "54"
-  }, {
-    "range" : "0",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "55"
-  }, {
-    "range" : "17",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "56"
   }, {
     "range" : "37",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "4",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "0",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "33",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "57"
+  }, {
+    "range" : "17",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "6",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "5",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "11",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/eudpp#identifierMinLength",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "identifierMinLength",
+      "en" : "identifier minimum length"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Minimum length of the identifier"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/eudpp#identifierIssuedOn",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "identifierIssuedOn",
+      "en" : "identifier issued on"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Date of issuing the identifier"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "64"
   }, {
     "iri" : "https://w3id.org/eudpp#hasScheme",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1072,60 +1115,12 @@
     "comment" : {
       "undefined" : "The scheme/standard the Identifier follows"
     },
-    "attributes" : [ "someValues", "external", "object" ],
-    "id" : "58"
-  }, {
-    "range" : "6",
-    "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "59"
-  }, {
-    "range" : "11",
-    "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "60"
-  }, {
-    "range" : "22",
-    "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "61"
-  }, {
-    "iri" : "https://w3id.org/eudpp#identifierIssuedOn",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "63",
-    "label" : {
-      "IRI-based" : "identifierIssuedOn",
-      "en" : "identifier issued on"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Date of issuing the identifier"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "62"
-  }, {
-    "iri" : "https://w3id.org/eudpp#identifierMinLength",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "65",
-    "label" : {
-      "IRI-based" : "identifierMinLength",
-      "en" : "identifier minimum length"
-    },
-    "domain" : "7",
-    "comment" : {
-      "en" : "Minimum length of the identifier"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "64"
-  }, {
-    "range" : "33",
-    "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "external", "someValues", "object" ],
     "id" : "66"
   }, {
-    "range" : "4",
+    "range" : "1",
     "domain" : "40",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierPattern",
@@ -1139,33 +1134,47 @@
     "comment" : {
       "en" : "A pattern the identifier conforms to, given as a regular expression (regex)."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "68"
   }, {
     "range" : "7",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "70"
   }, {
     "range" : "7",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "71"
   }, {
     "range" : "7",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "72"
   }, {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "73"
   }, {
     "range" : "29",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/eudpp#identifierJurisdiction",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "identifierJurisdiction",
+      "en" : "identifier juristiction"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. \n\nFormat: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "77"
   }, {
     "iri" : "https://w3id.org/eudpp#hasGranularity",
     "baseIri" : "https://w3id.org/eudpp",
@@ -1179,25 +1188,11 @@
       "en" : "Defines the granularity of an identifier, if exists."
     },
     "attributes" : [ "external", "object" ],
-    "id" : "77"
-  }, {
-    "iri" : "https://w3id.org/eudpp#identifierJurisdiction",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "74",
-    "label" : {
-      "IRI-based" : "identifierJurisdiction",
-      "en" : "identifier juristiction"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "An optional property used to qualify the issuing country or territory required to disambiguate national registration numbers. \n\nFormat: ISO 3166-1 alpha-2, i.e., two-letter country code, such as FR for France, DE for Germany, EE for Estonia, etc."
-    },
-    "attributes" : [ "datatype", "external" ],
     "id" : "78"
   }, {
     "range" : "1",
     "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "79"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierValue",
@@ -1212,7 +1207,7 @@
     "comment" : {
       "en" : "The (unique) value of the identifier."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "80"
   }, {
     "iri" : "https://w3id.org/eudpp#identifierSchemeIssuer",
@@ -1226,17 +1221,17 @@
     "comment" : {
       "en" : "Issuer of the identifier scheme"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "82"
   }, {
     "range" : "11",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   }, {
-    "range" : "1",
+    "range" : "0",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "84"
   }, {
     "iri" : "https://w3id.org/eudpp#hasScheme",
@@ -1250,7 +1245,7 @@
     "comment" : {
       "undefined" : "The scheme/standard the Identifier follows"
     },
-    "attributes" : [ "someValues", "external", "object" ],
+    "attributes" : [ "external", "someValues", "object" ],
     "id" : "85"
   } ]
 }

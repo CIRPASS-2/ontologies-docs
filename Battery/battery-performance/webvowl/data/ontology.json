@@ -63,12 +63,12 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. In case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
+        "value" : "This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.",
         "type" : "label"
       }, {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -86,7 +86,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-11-02",
+        "value" : "2026-11-03",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -261,7 +261,7 @@
     "id" : "94",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "98",
+    "id" : "97",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "86",
@@ -746,7 +746,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "98",
+    "id" : "97",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -923,7 +923,7 @@
     "id" : "96",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "97",
+    "id" : "98",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "99",
@@ -2033,6 +2033,34 @@
     "attributes" : [ "datatype" ],
     "id" : "95"
   }, {
+    "iri" : "https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest",
+    "baseIri" : "https://w3id.org/eudpp/battery-performance",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-performance",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 39 (Regulation (EU) 2023/1542, Annex XIII (1p))",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "chargeCRateOfCycleLifeTest",
+      "en" : "charge C-rate of relevant cycle-life test"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Charge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 39 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
     "iri" : "https://w3id.org/eudpp/battery-performance#temperatureRangeIdleStateUpperBoundary",
     "baseIri" : "https://w3id.org/eudpp/battery-performance",
     "range" : "69",
@@ -2065,35 +2093,7 @@
       "en" : "The upper boundary of the surrounding temperature range. Unit: degree Celsius (°C)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "96"
-  }, {
-    "iri" : "https://w3id.org/eudpp/battery-performance#chargeCRateOfCycleLifeTest",
-    "baseIri" : "https://w3id.org/eudpp/battery-performance",
-    "range" : "98",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-performance",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "Guidance Document: Digital Batteries Passport – data points by category, version 3.2 (19 October 2026), data point 39 (Regulation (EU) 2023/1542, Annex XIII (1p))",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "chargeCRateOfCycleLifeTest",
-      "en" : "charge C-rate of relevant cycle-life test"
-    },
-    "domain" : "13",
-    "comment" : {
-      "en" : "Charge rate, in terms of rated capacity (C-rate), applied in the relevant cycle-life reference test: data point 39 of the Commission guidance. Unit: ampere per ampere-hour (A/Ah)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "97"
+    "id" : "98"
   }, {
     "iri" : "https://w3id.org/eudpp/battery-performance#timeSpentChargingInExtremeTemperaturesAboveBoundary",
     "baseIri" : "https://w3id.org/eudpp/battery-performance",
@@ -2375,7 +2375,7 @@
     },
     "domain" : "63",
     "subproperty" : [ "4", "101", "107", "84" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "7"
   }, {
     "iri" : "https://w3id.org/eudpp/battery-performance#cRateOfCycleLifeTest",
@@ -2406,34 +2406,6 @@
     "attributes" : [ "datatype" ],
     "id" : "109"
   }, {
-    "iri" : "https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyFade",
-    "baseIri" : "https://w3id.org/eudpp/battery-performance",
-    "range" : "81",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/battery-performance",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "en",
-        "value" : "BatteryPass-Ready Data Attribute Long List v1.3, attribute 77",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "roundTripEnergyEfficiencyFade",
-      "en" : "energy round trip efficiency fade"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "The decrease of round trip energy efficiency as percentage. Unit: percent (%)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "110"
-  }, {
     "iri" : "https://w3id.org/eudpp/battery-performance#selfDischargeRateEvolution",
     "baseIri" : "https://w3id.org/eudpp/battery-performance",
     "range" : "83",
@@ -2458,6 +2430,34 @@
     "domain" : "1",
     "comment" : {
       "en" : "The change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate. Unit: percent (%)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/eudpp/battery-performance#roundTripEnergyEfficiencyFade",
+    "baseIri" : "https://w3id.org/eudpp/battery-performance",
+    "range" : "81",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/battery-performance",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "en",
+        "value" : "BatteryPass-Ready Data Attribute Long List v1.3, attribute 77",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "roundTripEnergyEfficiencyFade",
+      "en" : "energy round trip efficiency fade"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The decrease of round trip energy efficiency as percentage. Unit: percent (%)."
     },
     "attributes" : [ "datatype" ],
     "id" : "111"

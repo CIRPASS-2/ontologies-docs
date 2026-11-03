@@ -22,7 +22,7 @@
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -51,19 +51,19 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-10-22",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto#",
+        "value" : "2026-11-03",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "en",
         "value" : "Version 0.2.0 DRAFT",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto#",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -184,10 +184,10 @@
     "id" : "124",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "78",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
     "id" : "128",
@@ -214,13 +214,13 @@
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "142",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "141",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "144",
+    "id" : "142",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "148",
@@ -319,10 +319,10 @@
     "id" : "178",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "25",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
     "id" : "152",
@@ -738,33 +738,6 @@
     "attributes" : [ "external" ],
     "id" : "65"
   }, {
-    "iri" : "https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl",
-    "baseIri" : "https://w3id.org/eudpp/eto",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto",
-        "type" : "iri"
-      } ],
-      "references" : [ {
-        "identifier" : "references",
-        "language" : "undefined",
-        "value" : "Regulation (EU) 2020/740, Article 5(1) and Annex VII (product database)",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EPRELRecordReferenceUrl",
-      "undefined" : "EPREL Record Reference Url"
-    },
-    "comment" : {
-      "undefined" : "URL of the record of the tyre type in the European Product Registry for Energy Labelling (EPREL)."
-    },
-    "id" : "66",
-    "superClasses" : [ "1" ]
-  }, {
     "iri" : "https://w3id.org/eudpp/eto#SizePrefix",
     "baseIri" : "https://w3id.org/eudpp/eto",
     "instances" : 0,
@@ -789,8 +762,35 @@
     "comment" : {
       "undefined" : "Part of identification marking of the tyre (see G9 ETRTO Std Manual, T = temporary, P = Passenger for TRA std, LT = light truck (alternative to C Marking of R54)"
     },
-    "id" : "67",
+    "id" : "66",
     "superClasses" : [ "25" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/eto#EPRELRecordReferenceUrl",
+    "baseIri" : "https://w3id.org/eudpp/eto",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto",
+        "type" : "iri"
+      } ],
+      "references" : [ {
+        "identifier" : "references",
+        "language" : "undefined",
+        "value" : "Regulation (EU) 2020/740, Article 5(1) and Annex VII (product database)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EPRELRecordReferenceUrl",
+      "undefined" : "EPREL Record Reference Url"
+    },
+    "comment" : {
+      "undefined" : "URL of the record of the tyre type in the European Product Registry for Energy Labelling (EPREL)."
+    },
+    "id" : "67",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/eudpp/eto#ProductLabelling",
     "baseIri" : "https://w3id.org/eudpp/eto",
@@ -813,7 +813,7 @@
       "IRI-based" : "ProductLabelling",
       "undefined" : "Product Labelling"
     },
-    "subClasses" : [ "0", "68", "69", "66", "70", "64", "71" ],
+    "subClasses" : [ "0", "68", "69", "67", "70", "64", "71" ],
     "comment" : {
       "undefined" : "Group of tyre properties corresponding to the EU tyre label and its registration (e.g. wet grip class, EPREL record)."
     },
@@ -1134,27 +1134,6 @@
       "IRI-based" : "integer"
     }
   }, {
-    "iri" : "https://w3id.org/eudpp/eto#LoadIndexForDualFitment",
-    "baseIri" : "https://w3id.org/eudpp/eto",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "LoadIndexForDualFitment",
-      "undefined" : "Load Index For Dual Fitment"
-    },
-    "comment" : {
-      "undefined" : "Load capacity index of the tyre when fitted in dual (twin) configuration, as marked on commercial vehicle tyres."
-    },
-    "id" : "78",
-    "superClasses" : [ "79" ]
-  }, {
     "iri" : "https://w3id.org/eudpp/eto#RetreadingCycle",
     "baseIri" : "https://w3id.org/eudpp/eto",
     "instances" : 0,
@@ -1175,6 +1154,27 @@
     },
     "id" : "36",
     "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/eudpp/eto#LoadIndexForDualFitment",
+    "baseIri" : "https://w3id.org/eudpp/eto",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LoadIndexForDualFitment",
+      "undefined" : "Load Index For Dual Fitment"
+    },
+    "comment" : {
+      "undefined" : "Load capacity index of the tyre when fitted in dual (twin) configuration, as marked on commercial vehicle tyres."
+    },
+    "id" : "78",
+    "superClasses" : [ "79" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1268,21 +1268,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "142",
+    "id" : "141",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "141",
+    "id" : "142",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "144",
+    "id" : "145",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1713,6 +1713,27 @@
       "undefined" : "Literal"
     }
   }, {
+    "iri" : "https://w3id.org/eudpp/eto#TmsSensorPresence",
+    "baseIri" : "https://w3id.org/eudpp/eto",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/eudpp/eto",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TmsSensorPresence",
+      "undefined" : "Tms Sensor Presence"
+    },
+    "comment" : {
+      "undefined" : "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection"
+    },
+    "id" : "34",
+    "superClasses" : [ "4" ]
+  }, {
     "iri" : "https://w3id.org/eudpp/eto#ProductMarking",
     "baseIri" : "https://w3id.org/eudpp/eto",
     "instances" : 0,
@@ -1734,32 +1755,11 @@
       "IRI-based" : "ProductMarking",
       "undefined" : "Product Marking"
     },
-    "subClasses" : [ "87", "89", "67", "24", "93" ],
+    "subClasses" : [ "87", "89", "66", "24", "93" ],
     "comment" : {
       "undefined" : "Group of tyre properties corresponding to markings on the tyre sidewall (e.g. M+S, 3PMSF, size prefix)."
     },
     "id" : "25",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "https://w3id.org/eudpp/eto#TmsSensorPresence",
-    "baseIri" : "https://w3id.org/eudpp/eto",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://w3id.org/eudpp/eto",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "TmsSensorPresence",
-      "undefined" : "Tms Sensor Presence"
-    },
-    "comment" : {
-      "undefined" : "Indicates whether an electronic Sensor is present on the tyre updated at each tyre inspection"
-    },
-    "id" : "34",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -2417,7 +2417,7 @@
     "id" : "143",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "145",
+    "id" : "144",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "146",
@@ -2789,7 +2789,7 @@
     "id" : "88"
   }, {
     "range" : "25",
-    "domain" : "67",
+    "domain" : "66",
     "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
@@ -2826,7 +2826,7 @@
     "id" : "94"
   }, {
     "range" : "1",
-    "domain" : "66",
+    "domain" : "67",
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
@@ -3104,7 +3104,7 @@
       "IRI-based" : "hasValue",
       "undefined" : "has value"
     },
-    "domain" : "66",
+    "domain" : "67",
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
@@ -3251,16 +3251,6 @@
     "attributes" : [ "allValues", "datatype" ],
     "id" : "138"
   }, {
-    "iri" : "https://w3id.org/eudpp#numericalValue",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "141",
-    "label" : {
-      "IRI-based" : "numericalValue"
-    },
-    "domain" : "31",
-    "attributes" : [ "allValues", "external", "datatype" ],
-    "id" : "140"
-  }, {
     "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "76",
@@ -3268,18 +3258,8 @@
       "IRI-based" : "hasMeasurementUnit"
     },
     "domain" : "31",
-    "attributes" : [ "allValues", "external", "object" ],
-    "id" : "143"
-  }, {
-    "iri" : "https://w3id.org/eudpp#numericalValue",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "144",
-    "label" : {
-      "IRI-based" : "numericalValue"
-    },
-    "domain" : "40",
-    "attributes" : [ "allValues", "external", "datatype" ],
-    "id" : "145"
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "140"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3287,9 +3267,19 @@
     "label" : {
       "IRI-based" : "numericalValue"
     },
-    "domain" : "36",
+    "domain" : "31",
     "attributes" : [ "allValues", "external", "datatype" ],
-    "id" : "146"
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/eudpp#numericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "numericalValue"
+    },
+    "domain" : "40",
+    "attributes" : [ "allValues", "external", "datatype" ],
+    "id" : "144"
   }, {
     "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3298,7 +3288,17 @@
       "IRI-based" : "hasMeasurementUnit"
     },
     "domain" : "40",
-    "attributes" : [ "allValues", "external", "object" ],
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/eudpp#numericalValue",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "141",
+    "label" : {
+      "IRI-based" : "numericalValue"
+    },
+    "domain" : "36",
+    "attributes" : [ "allValues", "external", "datatype" ],
     "id" : "147"
   }, {
     "iri" : "https://w3id.org/eudpp/eto#hasValue",
@@ -3755,22 +3755,12 @@
       "IRI-based" : "hasValue",
       "undefined" : "has value"
     },
-    "domain" : "67",
+    "domain" : "66",
     "comment" : {
       "undefined" : "Value of a tyre property that is not a quantity: text, code, Boolean flag or date. Quantities use eudpp:numericalValue."
     },
     "attributes" : [ "allValues", "datatype" ],
     "id" : "187"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "76",
-    "label" : {
-      "IRI-based" : "hasMeasurementUnit"
-    },
-    "domain" : "30",
-    "attributes" : [ "allValues", "external", "object" ],
-    "id" : "188"
   }, {
     "iri" : "https://w3id.org/eudpp#numericalValue",
     "baseIri" : "https://w3id.org/eudpp",
@@ -3780,6 +3770,16 @@
     },
     "domain" : "30",
     "attributes" : [ "allValues", "external", "datatype" ],
+    "id" : "188"
+  }, {
+    "iri" : "https://w3id.org/eudpp#hasMeasurementUnit",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "hasMeasurementUnit"
+    },
+    "domain" : "30",
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "190"
   }, {
     "range" : "20",
@@ -3974,7 +3974,7 @@
       "IRI-based" : "hasManufacturer"
     },
     "domain" : "8",
-    "attributes" : [ "allValues", "external", "object" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "211"
   } ]
 }

@@ -7,28 +7,23 @@
       "en" : "The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project."
     },
     "iri" : "https://w3id.org/eudpp/MAT",
-    "version" : "1.1.0",
+    "version" : "1.2.0",
     "author" : [ "Tarmo Robal" ],
     "description" : {
-      "en" : "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requiremetns regarding materials are given in ESPR Annex I. \n\n===============\nv1.1.0\n - add data prop. materialComponentLabel, materialTypeScheme, materialTypeValue, materialRecycledContentType.\n\n\n--\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
+      "en" : "MODULE: MATERIAL\nMaterial module of the  EU DPP core ontology proposal of the CIRPASS-2 European project.\n\nDEPENDENCIES:  This module has dependencies to the following EU DPP Core Ontology (CO) modules: CON, P_DPP, SOC.  \n\nUnder the ESPR, products must disclose what materials they contain, where those materials come from, whether they include substances of concern, and how those materials support durability, repairability, recyclability, and circularity.\nThe main requirements regarding materials are given in ESPR Annex I. \n\n---\nNote on the license: This ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0). In case of dispute over CC BY 4.0 applicability, or in case considering the ontology as a software or part of it, this ontology is to be considered licensed under the Apache License, Version 2.0.\n---\n\nTHIS DOCUMENT IS PROVIDED WITH NO WARRANTIES WHATSOEVER. \nAll liability for any damages arising from use or misuse of this vocabulary is with the user."
     },
     "labels" : {
       "en" : "EU DPP MAT"
     },
     "comments" : {
-      "en" : "First iteration of the Material module of the EU DPP core ontology proposal of the CIRPASS-2 European project."
+      "en" : "The Material module of the EU DPP core ontology proposal of the CIRPASS-2 European project."
     },
     "other" : {
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
-        "value" : "https://www.apache.org/licenses/LICENSE-2.0",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
-      }, {
-        "identifier" : "license",
-        "language" : "en",
-        "value" : "This ontology is licensed under the Apache License, Version 2.0. \nIn case of dispute over Apache 2.0 applicability, or in case considering the ontology as a document, this ontology document is to be considered licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).",
-        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -57,19 +52,19 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "1.1.0",
+        "value" : "1.2.0",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-30",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "en",
         "value" : "The Materials (MAT) module of the EU DPP core ontology proposed by the CIRPASS-2 European project.",
-        "type" : "label"
-      } ],
-      "issued" : [ {
-        "identifier" : "issued",
-        "language" : "undefined",
-        "value" : "2026-09-22",
         "type" : "label"
       } ]
     }
@@ -302,10 +297,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "23",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "24",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/eudpp#isCriticalRawMaterial",
@@ -431,7 +426,7 @@
     "comment" : {
       "en" : "Links material to its type in some classification system used by the sector."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "20"
   }, {
     "iri" : "https://w3id.org/eudpp#materialIsRecyclable",
@@ -476,6 +471,20 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "22"
   }, {
+    "iri" : "https://w3id.org/eudpp#hasMaterialOrigin",
+    "baseIri" : "https://w3id.org/eudpp",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasMaterialOrigin",
+      "en" : "has material origin"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Assigns material origin to material used for product"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "23"
+  }, {
     "iri" : "https://w3id.org/eudpp#materialIsSustainableRenewable",
     "baseIri" : "https://w3id.org/eudpp",
     "range" : "8",
@@ -502,20 +511,6 @@
       "en" : "Product parameters: use or content of sustainable renewable materials; [ESPR Annex I i)]"
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://w3id.org/eudpp#hasMaterialOrigin",
-    "baseIri" : "https://w3id.org/eudpp",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "hasMaterialOrigin",
-      "en" : "has material origin"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "Assigns material origin to material used for product"
-    },
-    "attributes" : [ "object", "external" ],
     "id" : "24"
   } ]
 }
