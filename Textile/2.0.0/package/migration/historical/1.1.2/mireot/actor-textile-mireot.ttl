@@ -1,0 +1,30 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpp:Actor a owl:Class ;
+    rdfs:label "Actor"@en ;
+    dcterms:references "CIRPASS-2 User Stories 3.1"@en ;
+    dcterms:source "https://zenodo.org/records/17979585" ;
+    rdfs:comment "Actor means a legal or natural person (e.g. John Doe, TNO). One actor can take on multiple roles; [CIRPASS-2 User Stories 3.1]"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom schema:PostalAddress ;
+            owl:onProperty schema:address ] .
+
+<https://w3id.org/eudpp/textile-actor-mireot> a owl:Ontology ;
+    rdfs:label "Textile Actor MIREOT subset"@en ;
+    dcterms:description "Bounded Textile-scoped MIREOT subset of ACTOR terms required by the CIRPASS Textile Ontology."@en ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:references "External source ontology version 2.0.0."@en ;
+    dcterms:source <https://w3id.org/eudpp/ACTOR> ;
+    dcterms:title "Textile Actor MIREOT subset"@en ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-actor-mireot/1.1.2> ;
+    owl:versionInfo "Version 1.1.2" .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:label "Has address"@en .
+
+schema:PostalAddress a owl:Class .

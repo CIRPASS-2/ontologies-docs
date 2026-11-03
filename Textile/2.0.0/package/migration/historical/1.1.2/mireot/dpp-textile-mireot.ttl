@@ -1,0 +1,151 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dpp: <https://w3id.org/eudpp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dpp:DigitalInstruction a owl:Class ;
+    rdfs:label "DigitalInstruction"@en ;
+    dcterms:references "ESPR Art 27(7)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment """Digital instructions
+mean instructions in digital format concerning the product (‘digital instructions’) in a language that can be easily understood. ESPR Art 27(7)
+Digital instructions are ensured by manufacturers. These should also ensured by importers. (ESPR Art 29(4))
+
+This class can be extended/specialised according to delegated acts or industry standards."""@en ;
+    rdfs:subClassOf dpp:DocumentFormattedProperty .
+
+dpp:Durability a owl:Class ;
+    rdfs:label "Durability"@en ;
+    dcterms:references "ESPR Art 2 (22)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment """Durability
+means the ability of a product to maintain over time its function and performance under specified conditions of use, maintenance and repair. (ESPR Art 2 (22))
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:subClassOf dpp:QualityIndicator .
+
+dpp:RecoverableRate a owl:Class ;
+    rdfs:label "Recoverable rate"@en ;
+    rdfs:comment "This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."@en ;
+    rdfs:subClassOf dpp:CircularEconomyIndicator .
+
+dpp:RecycledMaterialsUse a owl:Class ;
+    rdfs:label "Recycled materials use"@en ;
+    rdfs:comment """Recycled materials use of the product.
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:subClassOf dpp:ResourceConsumption .
+
+dpp:RecyclingRate a owl:Class ;
+    rdfs:label "Recycling rate"@en ;
+    rdfs:comment "This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."@en ;
+    rdfs:subClassOf dpp:CircularEconomyIndicator .
+
+dpp:hasProperty a owl:ObjectProperty ;
+    rdfs:label "Has property"@en ;
+    rdfs:comment """Product has a property that could be a document or some measurable properties (measurands).
+
+Linking the product to the property."""@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range dpp:Property .
+
+dpp:isComponentOf a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "Is component of"@en ;
+    dcterms:references "ESPR Art 2(2)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment """A product is a component of another product.
+
+‘component’ means a product intended to be incorporated into another product; [ESPR Art 2(2)]"""@en ;
+    rdfs:domain dpp:Product ;
+    rdfs:range dpp:Product .
+
+dpp:webLink a owl:DatatypeProperty ;
+    rdfs:label "Weblink"@en ;
+    rdfs:comment "Web link to an instruction document or video etc."@en ;
+    rdfs:domain dpp:DigitalInstruction ;
+    rdfs:range xsd:anyURI .
+
+<https://w3id.org/eudpp/textile-dpp-mireot> a owl:Ontology ;
+    rdfs:label "Textile DPP Core MIREOT subset"@en ;
+    dcterms:description "Bounded Textile-scoped MIREOT subset of DPP Core terms required by the CIRPASS Textile Ontology."@en ;
+    dcterms:modified "2026-07-24"^^xsd:date ;
+    dcterms:references "External source ontology version 2.0.0."@en ;
+    dcterms:source <https://w3id.org/eudpp/P_DPP> ;
+    dcterms:title "Textile DPP Core MIREOT subset"@en ;
+    owl:versionIRI <https://w3id.org/eudpp/textile-dpp-mireot/1.1.2> ;
+    owl:versionInfo "Version 1.1.2" .
+
+dpp:DocumentFormattedProperty a owl:Class ;
+    rdfs:label "Document"@en ;
+    rdfs:comment "The document class describes the semantic representation of any instance of a document that might be required to be included into a digital product passport instance."@en ;
+    rdfs:subClassOf dpp:Property .
+
+dpp:QualityIndicator a owl:Class ;
+    rdfs:label "Quality indicator"@en ;
+    rdfs:comment """Product characteristics like durability and reliability.
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:subClassOf dpp:QuantitativeProperty .
+
+dpp:ResourceConsumption a owl:Class ;
+    rdfs:label "Resource consumption"@en ;
+    rdfs:comment """Resource consumption of the product.
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:subClassOf dpp:QuantitativeProperty .
+
+dpp:CircularEconomyIndicator a owl:Class ;
+    rdfs:label "Circular Economy Indicator"@en ;
+    rdfs:comment """Circular Economy indicators are measures for relevant monitoring the transition to a circular economy and to measure the effects of new policy and trends.
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:seeAlso <https://environment.ec.europa.eu/strategy/circular-economy-action-plan_en> ;
+    rdfs:subClassOf dpp:QuantitativeProperty .
+
+dpp:Product a owl:Class ;
+    rdfs:label "Product"@en ;
+    dcterms:references "ESPR Art 2 (1)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment "Product means any physical goods that are placed on the market or put into service. ESPR Art 2 (1))"@en ;
+    skos:closeMatch <http://schema.org/Product> .
+
+dpp:Property a owl:Class ;
+    rdfs:label "Property"@en ;
+    rdfs:comment "A property of the product."@en .
+
+dpp:QuantitativeProperty a owl:Class ;
+    rdfs:label "Quantitative Property"@en ;
+    rdfs:comment "A property (respectively measurand of a property) of the product (model) that is expressed by a quantity value. A specific quantity."@en ;
+    rdfs:subClassOf dpp:Property .
+
+dpp:EnvironmentalFootprint a owl:Class ;
+    rdfs:subClassOf dpp:QuantitativeProperty ;
+    dcterms:references "ESPR Art 2 (24)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment """Environmental footprint
+means a quantification of the environmental impacts resulting from a product throughout its life
+cycle, whether in relation to a single environmental impact category or an aggregated set of impact
+categories based on the Product Environmental Footprint method established by Recommendation
+(EU) 2 021/2279 or other scientific methods developed by international organisations, widely tested
+in collaboration with different industry sectors and adopted or implemented by the Commission in
+other Union law. (ESPR Art 2 (24)).
+
+Product parameters list ESPR Annex I
+(m) The environmental footprint of the product, expressed as a quantification;
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:label "Environmental footprint"@en .
+
+dpp:CarbonFootprint a owl:Class ;
+    rdfs:subClassOf dpp:EnvironmentalFootprint ;
+    dcterms:references "ESPR Art 2 (25)"@en ;
+    dcterms:source "https://eur-lex.europa.eu/eli/reg/2024/1781/oj" ;
+    rdfs:comment """Carbon footprint
+means the sum of greenhouse gas emissions and greenhouse gas removals in a product system, expressed as CO equivalents and based on a life cycle assessment using the single impact category
+of climate change. (ESPR Art 2 25))
+
+This class description needs to be extended/specialised according to the corresponding delegated acts or/and industry standards."""@en ;
+    rdfs:label "Carbon footprint"@en .

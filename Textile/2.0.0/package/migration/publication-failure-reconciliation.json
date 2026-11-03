@@ -1,0 +1,462 @@
+{
+  "candidate": "2.0.0",
+  "date": "2026-11-03",
+  "pre_mat_baseline_commit": "a2bc2642627bf9223b1e39dc54a4e45c233e9232",
+  "source_publication_baseline_commit": "e9cf8542d104fefccf339761d138fcf9c32bc904",
+  "scope_gate": "Passed: exact per-module set equality; 7 additions and 6 removals; no unexpected RDF differences.",
+  "failures": [
+    {
+      "test": "tests/test_creator_metadata.py::test_all_thirteen_graphs_preserve_every_non_creator_triple",
+      "baseline_commit": "f527fc577bec246a25d9332df018be6a64ec9070",
+      "expectation": "Original non-creator digest after undoing the exact Option B header revisions and MAT axioms.",
+      "observed": [
+        {
+          "file": "ontology/textile-associated-materials.ttl",
+          "expected_digest": "11912e4c8e3c6615a306a5d9f9c55c6cca5817e9fc839d2de08cc8626defa213",
+          "observed_digest": "c9ea1d0fcd2ba997b3208022c3cbef764a3804894843698b05cbf38fab6f5263",
+          "observed_rdf_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          },
+          "missing_original_header_additions_before_reversal": []
+        },
+        {
+          "file": "ontology/textile-connector.ttl",
+          "expected_digest": "4efb7c3abffdd6307c31307e968375891896f4107a7bd6114da73286d3c20850",
+          "observed_digest": "06e35cd39f2bbee7ccdefa676c976b232f665c424757ddcea9a14edc4707f425",
+          "observed_rdf_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> ."
+            ]
+          },
+          "missing_original_header_additions_before_reversal": [
+            "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+          ]
+        },
+        {
+          "file": "ontology/textile-core.ttl",
+          "expected_digest": "044470f9f6152d58ab7745318eb8b39f9cf0e5681e30c212082d4822380541db",
+          "observed_digest": "c762429f1da585ce0257f4e55cb23fa3887b06937ddfbead9fa1c2f0874dda62",
+          "observed_rdf_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en ."
+            ]
+          },
+          "missing_original_header_additions_before_reversal": [
+            "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+          ]
+        }
+      ],
+      "within_approved_scope": true,
+      "resolution": "Verify exact current delta, restore the pre-MAT graph, then replay the original frozen creator proof. Frozen digest record unchanged."
+    },
+    {
+      "test": "tests/test_mat_alignment.py::test_exact_two_axioms_and_no_other_canonical_changes",
+      "baseline_commit": "a2bc2642627bf9223b1e39dc54a4e45c233e9232",
+      "expectation": {
+        "additions": 2,
+        "removals": 0
+      },
+      "observed": {
+        "additions": 7,
+        "removals": 6,
+        "canonical_graphs": [
+          {
+            "file": "ontology/textile-assessment.ttl",
+            "baseline_sha256": "764f429efb6e5c8136297b012f6b444eca76a6117e8caaddc9b204abfabcf706",
+            "candidate_sha256": "764f429efb6e5c8136297b012f6b444eca76a6117e8caaddc9b204abfabcf706",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-associated-materials.ttl",
+            "baseline_sha256": "2b07a8f44fe6b636f3b786687aedd9119230bd228ff8a6d149a80d07e9e66e38",
+            "candidate_sha256": "4d5aef7cc4c56058fc4d53be54b11839c6fc0faf4e961f8c3b6c777586eb313c",
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          },
+          {
+            "file": "ontology/textile-connector.ttl",
+            "baseline_sha256": "c59ec1f31cdef236c63dd80a282ab82220315e52b56d8292291800c672e8d283",
+            "candidate_sha256": "e6d8beb6f1065df8e1ccbd8224e667b7e4110e15fa49717f3c828f73a4e8a991",
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .",
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          },
+          {
+            "file": "ontology/textile-context.ttl",
+            "baseline_sha256": "6718a7b9695c7f274432bc19d8dd51bef6d51a0897f8831812782a4a8f671619",
+            "candidate_sha256": "6718a7b9695c7f274432bc19d8dd51bef6d51a0897f8831812782a4a8f671619",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-core.ttl",
+            "baseline_sha256": "183012211c2c746350b0b3124ebee41618d04bc2d1ff74db5254480cc3c313bf",
+            "candidate_sha256": "67ba9863a63882e9cfd298819cefd611e91a8353221236042acb240f26a40b28",
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#FibreTypeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eudpp#MaterialType> .",
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core#hasFibreType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eudpp#hasMaterialType> .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          },
+          {
+            "file": "ontology/textile-durability.ttl",
+            "baseline_sha256": "fc68bc463550cc6aa5dd9edc6007bbca1a5544a70641a26e701d494892843045",
+            "candidate_sha256": "fc68bc463550cc6aa5dd9edc6007bbca1a5544a70641a26e701d494892843045",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-indicator.ttl",
+            "baseline_sha256": "ce9dafd9f4be6b6e8b7abd1f34184f61b9b4e1bf215a0d19fe08caf7beb139d7",
+            "candidate_sha256": "ce9dafd9f4be6b6e8b7abd1f34184f61b9b4e1bf215a0d19fe08caf7beb139d7",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-ontology.ttl",
+            "baseline_sha256": "4b870908d91a97d4fff81dc596c595c082bba5a0b7afb255c5198fb440198718",
+            "candidate_sha256": "4b870908d91a97d4fff81dc596c595c082bba5a0b7afb255c5198fb440198718",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-process.ttl",
+            "baseline_sha256": "36d5bbcb6c97a482715401e3b91421f6664bb9711a95688c39f9bd725f7e03f8",
+            "candidate_sha256": "36d5bbcb6c97a482715401e3b91421f6664bb9711a95688c39f9bd725f7e03f8",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-recyclability.ttl",
+            "baseline_sha256": "33245ca65c6e3ef1422148ab0b95c51e5f85f684c184964fb993698ed66991ca",
+            "candidate_sha256": "33245ca65c6e3ef1422148ab0b95c51e5f85f684c184964fb993698ed66991ca",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-repairability.ttl",
+            "baseline_sha256": "8a7b42ee5403414201e7a12316a544de75bfb30d58f53dc30dcc979db4ec345c",
+            "candidate_sha256": "8a7b42ee5403414201e7a12316a544de75bfb30d58f53dc30dcc979db4ec345c",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-soc.ttl",
+            "baseline_sha256": "c6444ecdb4967c247de62755a775f3b34ef19ed00112756d69e534656a184c07",
+            "candidate_sha256": "c6444ecdb4967c247de62755a775f3b34ef19ed00112756d69e534656a184c07",
+            "added": [],
+            "removed": []
+          },
+          {
+            "file": "ontology/textile-structure.ttl",
+            "baseline_sha256": "0483f59c9664791c708afa332a07a4b97fa637821d280facaee1d9ceb31c7a18",
+            "candidate_sha256": "0483f59c9664791c708afa332a07a4b97fa637821d280facaee1d9ceb31c7a18",
+            "added": [],
+            "removed": []
+          }
+        ]
+      },
+      "within_approved_scope": true,
+      "resolution": "Retain the baseline; require equality with the explicitly enumerated 7 additions and 6 removals."
+    },
+    {
+      "test": "tests/test_migration_publication.py::test_widoco_downloads_match_canonical_graph[associated-materials]",
+      "baseline_commit": "e9cf8542d104fefccf339761d138fcf9c32bc904",
+      "expectation": "TTL byte-identical to canonical source; all four RDF formats graph-equivalent; existing creator/version/editorial checks retained.",
+      "observed": [
+        {
+          "file": "docs/widoco/associated-materials/ontology.ttl",
+          "recorded_export_sha256": "2b07a8f44fe6b636f3b786687aedd9119230bd228ff8a6d149a80d07e9e66e38",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/associated-materials/ontology.owl",
+          "recorded_export_sha256": "0afac63c38fb3ec422e644bac00249c0e1f6efd05e75b21838c038fd611e7186",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/associated-materials/ontology.nt",
+          "recorded_export_sha256": "986ab4dd23b057c87f299b132d1b20a21a8852d3ad310d0f8ec1b50660d6411b",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/associated-materials/ontology.jsonld",
+          "recorded_export_sha256": "04a812724117c12086db6677de9bdab0d9460455d312c22c0ddd97ae9d0e87fc",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en .",
+              "<https://w3id.org/eudpp/textile-associated-materials> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        }
+      ],
+      "within_approved_scope": true,
+      "resolution": "Regenerate with scripts/generate-widoco-docs.ps1; do not change the export regression test."
+    },
+    {
+      "test": "tests/test_migration_publication.py::test_widoco_downloads_match_canonical_graph[connector]",
+      "baseline_commit": "e9cf8542d104fefccf339761d138fcf9c32bc904",
+      "expectation": "TTL byte-identical to canonical source; all four RDF formats graph-equivalent; existing creator/version/editorial checks retained.",
+      "observed": [
+        {
+          "file": "docs/widoco/connector/ontology.ttl",
+          "recorded_export_sha256": "c59ec1f31cdef236c63dd80a282ab82220315e52b56d8292291800c672e8d283",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .",
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/connector/ontology.owl",
+          "recorded_export_sha256": "5dc90985bbc80cdccf57b7dff52cd68343056ad647d654704cf733abf1eb0ef2",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .",
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/connector/ontology.nt",
+          "recorded_export_sha256": "5a4a600e7395c78d2efcafcffd3a88864907ceb498506278387839714b91b00f",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .",
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/connector/ontology.jsonld",
+          "recorded_export_sha256": "66113614889207e136e6310ac7af653ead1da95110c025f3a6d0d689111a5efe",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .",
+              "<https://w3id.org/eudpp/textile-connector> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        }
+      ],
+      "within_approved_scope": true,
+      "resolution": "Regenerate with scripts/generate-widoco-docs.ps1; do not change the export regression test."
+    },
+    {
+      "test": "tests/test_migration_publication.py::test_widoco_downloads_match_canonical_graph[core]",
+      "baseline_commit": "e9cf8542d104fefccf339761d138fcf9c32bc904",
+      "expectation": "TTL byte-identical to canonical source; all four RDF formats graph-equivalent; existing creator/version/editorial checks retained.",
+      "observed": [
+        {
+          "file": "docs/widoco/core/ontology.ttl",
+          "recorded_export_sha256": "b117bdb5eda3158caecd4d3c6f353ad38c57510c717ecdf759e6cfb0fbca31b6",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/core/ontology.owl",
+          "recorded_export_sha256": "22d0c57eb4405279ec722cbc53703483e97494f330bdd674f70221d11660ea27",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/core/ontology.nt",
+          "recorded_export_sha256": "43d13aa593a0f4aa01c530f3d291b58512886723904a5ec0159877ddee09f397",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        },
+        {
+          "file": "docs/widoco/core/ontology.jsonld",
+          "recorded_export_sha256": "9fa4deb30e5191084788c2d388ab747731179f1fb1fdb1bc149d9f9e336b9efb",
+          "observed_canonical_delta": {
+            "added": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-11-02\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ],
+            "removed": [
+              "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en .",
+              "<https://w3id.org/eudpp/textile-core> <http://purl.org/dc/terms/modified> \"2026-10-27\"^^<http://www.w3.org/2001/XMLSchema#date> ."
+            ]
+          }
+        }
+      ],
+      "within_approved_scope": true,
+      "resolution": "Regenerate with scripts/generate-widoco-docs.ps1; do not change the export regression test."
+    },
+    {
+      "test": "tests/test_version_identities.py::test_exact_header_revision_and_catalogue_identity[ontology/textile-associated-materials.ttl]",
+      "baseline_commit": "ba6e12ef769d3849bde078ef4f1d32bdcf5e1af1",
+      "expectation": {
+        "non_metadata_graph_sha256": "c1c949d67722afefa34894be32bfab802490f1ffafd583e5ec549b4843350753",
+        "historical_revision_date": "2026-10-27",
+        "historical_date_assertion_applies": false
+      },
+      "observed": {
+        "non_metadata_graph_sha256": "e083b753217c32995f7587dc8673e41bae8deafd80d414dfd9c756e5104c0aa4",
+        "non_metadata_rdf_delta": {
+          "added": [
+            "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. Instances of a SKOS-based classification class can also instantiate an OWL material-classification class; the SKOS representation does not prevent such alignment. Packaging-specific class and type-property alignment remains a separate modelling decision requiring its own semantic assessment. No packaging alignment is introduced here.\"@en ."
+          ],
+          "removed": [
+            "<https://w3id.org/eudpp/textile-associated-materials#PackagingMaterial> <https://w3id.org/eudpp/textile-connector#modellingNote> \"PackagingMaterial is aligned as a subclass of dpp:MaterialOfComposition. The textile-specific type property remains separate because its range is a SKOS controlled concept, while dpp:hasMaterialType ranges over an OWL class.\"@en ."
+          ]
+        },
+        "current_modified_dates": [
+          "2026-11-02"
+        ]
+      },
+      "within_approved_scope": true,
+      "resolution": "Verify exact current delta before restoring the frozen graph for the unchanged header digest/date proof. Current identity/catalogue checks retained."
+    },
+    {
+      "test": "tests/test_version_identities.py::test_exact_header_revision_and_catalogue_identity[ontology/textile-connector.ttl]",
+      "baseline_commit": "ba6e12ef769d3849bde078ef4f1d32bdcf5e1af1",
+      "expectation": {
+        "non_metadata_graph_sha256": "b626ceb7bf0435801dcf60c257a007fee9b13dfc0a00ac792be84c93fb248b45",
+        "historical_revision_date": "2026-10-27",
+        "historical_date_assertion_applies": true
+      },
+      "observed": {
+        "non_metadata_graph_sha256": "78c34244e40df36634f6639a2679eb9112e94049f13d027861d15cc0e1a8bc05",
+        "non_metadata_rdf_delta": {
+          "added": [],
+          "removed": [
+            "<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> ."
+          ]
+        },
+        "current_modified_dates": [
+          "2026-11-02"
+        ]
+      },
+      "within_approved_scope": true,
+      "resolution": "Verify exact current delta before restoring the frozen graph for the unchanged header digest/date proof. Current identity/catalogue checks retained."
+    },
+    {
+      "test": "tests/test_version_identities.py::test_exact_header_revision_and_catalogue_identity[ontology/textile-core.ttl]",
+      "baseline_commit": "ba6e12ef769d3849bde078ef4f1d32bdcf5e1af1",
+      "expectation": {
+        "non_metadata_graph_sha256": "2c24005359938557f743a8b389996cf79c1378ff4d61dbd10f25a5f0eb9bda4f",
+        "historical_revision_date": "2026-10-27",
+        "historical_date_assertion_applies": true
+      },
+      "observed": {
+        "non_metadata_graph_sha256": "5081a0c7a03da31b0e1194fc2057e9038991029bc9683f508cc9f54ff430f2ee",
+        "non_metadata_rdf_delta": {
+          "added": [
+            "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because hasFibreCompositionComponent links a textile product to a structured composition entry, whereas dpp:hasMaterialType links a material-of-composition entry to a classification value. Their subject and object roles differ.\"@en ."
+          ],
+          "removed": [
+            "<https://w3id.org/eudpp/textile-core#hasFibreCompositionComponent> <https://w3id.org/eudpp/textile-connector#modellingNote> \"No subproperty alignment with dpp:hasMaterialType is asserted because the MAT property links a MaterialOfComposition to an OWL MaterialType, while this textile property links a TextileProduct to a structured FibreCompositionComponent that uses a SKOS fibre-type value.\"@en ."
+          ]
+        },
+        "current_modified_dates": [
+          "2026-11-02"
+        ]
+      },
+      "within_approved_scope": true,
+      "resolution": "Verify exact current delta before restoring the frozen graph for the unchanged header digest/date proof. Current identity/catalogue checks retained."
+    }
+  ],
+  "frozen_records_unchanged": [
+    "migration/creator-update-results.json",
+    "migration/version-identity-results.json",
+    "migration/mat-alignment-results.json"
+  ]
+}

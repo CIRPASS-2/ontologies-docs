@@ -1,0 +1,858 @@
+{
+  "schema_version": 2,
+  "validation_scope": "SoC structural profile only, plus complete-report where selected. Existing full-regression scenarios retain all shared profiles.",
+  "scenarios": [
+    {
+      "scenario_id": "M01-missing-product",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M01-missing-product.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#PresenceProduct",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#isSubstancePresenceOf",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M02-missing-substance",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M02-missing-substance.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#PresenceSubstance",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#concernsSubstance",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M03-missing-qualification",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M03-missing-qualification.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#PresenceQualification",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasApplicableQualification",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M04-missing-concentration-complete",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M04-missing-concentration-complete.ttl",
+      "complete_report": true,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#CompletePresenceConcentration",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasConcentration",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M04-partial-without-concentration",
+      "fixture_path": "tests/abox_corpus/fixtures/valid/M04-partial-without-concentration.ttl",
+      "complete_report": false,
+      "expected_conforms": true,
+      "expected_results": [],
+      "allowed_additional_results": false,
+      "result_count_min": 0,
+      "result_count_max": 0
+    },
+    {
+      "scenario_id": "M05-missing-exact-scalar",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M05-missing-exact-scalar.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/concentrationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ExactConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M06-missing-maximum-scalar",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M06-missing-maximum-scalar.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M07-missing-range-endpoint",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M07-missing-range-endpoint.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/rangeConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationMinimum",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#minimumNumericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M08-missing-unit",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M08-missing-unit.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/concentrationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationUnit",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasMeasurementUnit",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M09-unknown-unit",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M09-unknown-unit.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/concentrationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationUnit",
+          "constraint_component": "http://www.w3.org/ns/shacl#InConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasMeasurementUnit",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationUnitCompatibility"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 2,
+      "result_count_max": 2
+    },
+    {
+      "scenario_id": "M10-temperature-unit",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M10-temperature-unit.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/concentrationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationUnit",
+          "constraint_component": "http://www.w3.org/ns/shacl#InConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasMeasurementUnit",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationUnitCompatibility"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 2,
+      "result_count_max": 2
+    },
+    {
+      "scenario_id": "M11-inverted-concentration",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M11-inverted-concentration.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/rangeConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationRangeShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ConcentrationRangeOrder"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M12-inverted-threshold",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M12-inverted-threshold.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-abox/valid/reportedRange",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#RangeThresholdValueShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ThresholdRangeOrder"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M13-threshold-is-concentration",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M13-threshold-is-concentration.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/nonExemptionThreshold",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileRegulatoryThresholdShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ThresholdNotConcentration"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/nonExemptionThreshold",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationUnit",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasMeasurementUnit",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/nonExemptionThreshold",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ExactConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 3,
+      "result_count_max": 3
+    },
+    {
+      "scenario_id": "M14-maximum-wrong-carrier",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M14-maximum-wrong-carrier.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumNoMaximum",
+          "constraint_component": "http://www.w3.org/ns/shacl#MaxCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#maximumNumericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumConcentrationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#MaximumRangeDisjoint"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationMinimum",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#minimumNumericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 4,
+      "result_count_max": 4
+    },
+    {
+      "scenario_id": "M15-wrong-qualified-substance",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M15-wrong-qualified-substance.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextilePresenceShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#PresenceQualificationIdentity"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/otherPresence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextilePresenceShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#PresenceQualificationIdentity"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 2,
+      "result_count_max": 2
+    },
+    {
+      "scenario_id": "M16-criterion-d-other-product",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M16-criterion-d-other-product.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextilePresenceShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#CriterionDContext"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M17-material-group-product-location",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M17-material-group-product-location.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ProductLocationNotGroup"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M18-location-outside-structure",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M18-location-outside-structure.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#LocationPartMembership"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M19-denominator-outside-structure",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M19-denominator-outside-structure.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/presence",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileScopeShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#DenominatorPartMembership"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M20-no-qualification-source",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M20-no-qualification-source.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/typeAQualification",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileQualificationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#QualificationSourceRequired"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M21-no-structured-reference-identity",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M21-no-structured-reference-identity.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/reference",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileRegulatoryReferenceShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ReferenceIdentityRequired"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M22-no-location-type",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M22-no-location-type.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/locationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#LocationType",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#hasTextileLocationType",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M23-no-instruction-content",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M23-no-instruction-content.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/recyclingInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#InstructionText",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#instructionContent",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M24-no-threshold-expression",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M24-no-threshold-expression.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-abox/valid/trackingThreshold",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ThresholdExpression",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#hasThresholdQuantitativeValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M25-no-exact-threshold-scalar",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M25-no-exact-threshold-scalar.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdMassFraction",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ExactThresholdScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-connector#numericValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M26-no-maximum-threshold-scalar",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M26-no-maximum-threshold-scalar.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-abox/valid/maximumAllowed",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumThresholdScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#maximumValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M27-no-range-threshold-endpoint",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M27-no-range-threshold-endpoint.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-abox/valid/reportedRange",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ThresholdMinimum",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#lowerBound",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M28-no-evaluation-result",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M28-no-evaluation-result.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#EvaluationResult",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#hasThresholdEvaluationResult",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M29-incorrect-threshold-outcome",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M29-incorrect-threshold-outcome.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationIntervalOutcome"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M30-overlapping-intervals",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M30-overlapping-intervals.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationIntervalOutcome"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M31-compatible-overlap-indeterminate",
+      "fixture_path": "tests/abox_corpus/fixtures/valid/M31-compatible-overlap-indeterminate.ttl",
+      "complete_report": false,
+      "expected_conforms": true,
+      "expected_results": [],
+      "allowed_additional_results": false,
+      "result_count_min": 0,
+      "result_count_max": 0
+    },
+    {
+      "scenario_id": "M32-threshold-denominator-mismatch",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M32-threshold-denominator-mismatch.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationBasisCompatibility"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M33-missing-evaluation-input",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M33-missing-evaluation-input.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#EvaluationConcentration",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#evaluatesConcentrationInformation",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M34-missing-evaluation-threshold",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M34-missing-evaluation-threshold.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#EvaluationThreshold",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp/textile-soc#evaluatesAgainstThreshold",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M35-negative-concentration",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M35-negative-concentration.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/maximumConcentration",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#MaximumConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M36-threshold-expression-is-concentration",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M36-threshold-expression-is-concentration.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdMassFraction",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ExactThresholdValueShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ExactThresholdValueShapeNotConcentration"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdMassFraction",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ConcentrationUnit",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#hasMeasurementUnit",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdMassFraction",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#ExactConcentrationScalar",
+          "constraint_component": "http://www.w3.org/ns/shacl#MinCountConstraintComponent",
+          "result_path": "https://w3id.org/eudpp#numericalValue",
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 3,
+      "result_count_max": 3
+    },
+    {
+      "scenario_id": "M37-range-threshold-comparison",
+      "fixture_path": "tests/abox_corpus/fixtures/valid/M37-range-threshold-comparison.ttl",
+      "complete_report": false,
+      "expected_conforms": true,
+      "expected_results": [],
+      "allowed_additional_results": false,
+      "result_count_min": 0,
+      "result_count_max": 0
+    },
+    {
+      "scenario_id": "M38-maximum-threshold-overlap",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M38-maximum-threshold-overlap.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationIntervalOutcome"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 1,
+      "result_count_max": 1
+    },
+    {
+      "scenario_id": "M39-maximum-threshold-indeterminate",
+      "fixture_path": "tests/abox_corpus/fixtures/valid/M39-maximum-threshold-indeterminate.ttl",
+      "complete_report": false,
+      "expected_conforms": true,
+      "expected_results": [],
+      "allowed_additional_results": false,
+      "result_count_min": 0,
+      "result_count_max": 0
+    },
+    {
+      "scenario_id": "M40-evaluation-missing-scope",
+      "fixture_path": "tests/abox_corpus/fixtures/invalid/M40-evaluation-missing-scope.ttl",
+      "complete_report": false,
+      "expected_conforms": false,
+      "expected_results": [
+        {
+          "focus_node": "https://example.org/textile-soc/concentrationInformation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileConcentrationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#ConcentrationMaterialScope"
+        },
+        {
+          "focus_node": "https://example.org/textile-soc/thresholdEvaluation",
+          "source_shape": "https://w3id.org/eudpp/textile-shacl#TextileThresholdEvaluationShape",
+          "constraint_component": "http://www.w3.org/ns/shacl#SPARQLConstraintComponent",
+          "result_path": null,
+          "severity": "http://www.w3.org/ns/shacl#Violation",
+          "source_constraint_message_sha256": null,
+          "source_constraint": "https://w3id.org/eudpp/textile-shacl#EvaluationScopeRequired"
+        }
+      ],
+      "allowed_additional_results": false,
+      "result_count_min": 2,
+      "result_count_max": 2
+    }
+  ]
+}

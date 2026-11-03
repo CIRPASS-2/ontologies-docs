@@ -493,15 +493,7 @@
         <td>The tyre class specialises <code>eudpp:Product</code>; tyre characteristics specialise
         <code>eudpp:QuantitativeProperty</code> or <code>eudpp:ProductDimension</code>. Identifier schemes are
         <code>eudpp:ProductIdentifierScheme</code> values; tyre classes are <code>eudpp:ClassificationCode</code> values.</td></tr>
-      <tr><td><a href="Textile/textile-ontology/index-en.html">Textile</a></td><td>Imports MIREOT extracts of the CORE modules.</td>
-        <td>Textile product classes specialise <code>eudpp:Product</code>; processes, repairs and recycling operations
-        are linked to <code>eudpp:ProductEvent</code>. The extracts (<code>textile-dpp-mireot</code>,
-        <code>textile-mat-mireot</code>, <code>textile-actor-mireot</code>, <code>textile-event-mireot</code>,
-        <code>textile-soc-mireot</code>, <code>textile-si-mireot</code>) are published with the textile ontology and have
-        no page here: their terms are documented on the CORE pages, or come from the SI Digital Framework. The exception
-        is the substances of concern extract: the textile substances of concern module specialises a draft SOC module
-        with its own namespace, <code>https://w3id.org/eudpp/soc#</code>, which differs from the SOC module documented
-        here.</td></tr>
+      <tr><td><a href="Textile/2.0.0/index.html">Textile 2.0.0</a></td><td>Bounded October 2026 CORE MIREOT alignment.</td><td>Textile 2.0.0 aligns to the owner-adopted October 2026 CORE baseline, including SOC 2.2.0 in <code>https://w3id.org/eudpp#</code>. Its seven package-specific MIREOT resources (SOC, CON, P_DPP, EVENT, ACTOR, MAT and unchanged SI) are bounded subsets, distinct from the independently published CORE pages. Persistent Textile IRI resolution under <code>w3id.org/eudpp</code> is pending separate CIRPASS-2 and namespace-maintainer coordination; this documentation does not deploy redirects or content negotiation. <a href="Textile/2.0.0/package/docs/DEPENDENCIES.md">Package dependency sources and attribution</a>. <a href="Textile/textile-ontology/index-en.html">Historical Textile 1.1.2</a> remains available.</td></tr>
     </tbody>
   </table>
 
@@ -559,19 +551,29 @@
 
   <section id="textile">
     <h3>Textile</h3>
-    <p>
-      The textile ontology, version 1.1.2, is a network of twelve modules and an umbrella file that imports them all
-      (<a href="#tab-textile"></a>). It covers the textile product and its fibre composition, the processes it goes
-      through, and the durability, repairability and recyclability information expected in a textile passport.
-    </p>
-    <p>
-      A shared module, the textile connector, carries the patterns reused everywhere,
-      quantitative values, reference periods and provenance vocabularies, so that the other modules do not depend on
-      each other. Controlled value lists are SKOS concepts [[SKOS-REFERENCE]] declared in the module that uses them,
-      under a codelist namespace of their own.
-    </p>
+    <p><a href="Textile/2.0.0/index.html"><strong>Textile Ontology 2.0.0</strong></a> documents the validated source candidate in <a href="https://github.com/CIRPASS-2/ontologie-textiles/pull/19">source PR #19</a>. It retains twelve sector modules and an umbrella ontology, with distinct 2.0.0 version identities for all thirteen graphs.</p>
+    <p>Textile 2.0.0 aligns to the owner-adopted October 2026 CORE baseline, including SOC 2.2.0 in <code>https://w3id.org/eudpp#</code>. Its seven package-specific MIREOT resources (SOC, CON, P_DPP, EVENT, ACTOR, MAT and unchanged SI) are bounded subsets, distinct from the independently published CORE pages. Persistent Textile IRI resolution under <code>w3id.org/eudpp</code> is pending separate CIRPASS-2 and namespace-maintainer coordination; this documentation does not deploy redirects or content negotiation.</p>
+    <p><a href="Textile/2.0.0/package/catalog-v001.xml">Current package catalogue</a> &middot; Package-specific MIREOT Turtle: <a href="Textile/2.0.0/package/mireot/actor-textile-mireot.ttl">ACTOR</a>, <a href="Textile/2.0.0/package/mireot/con-textile-mireot.ttl">CON</a>, <a href="Textile/2.0.0/package/mireot/dpp-textile-mireot.ttl">P_DPP</a>, <a href="Textile/2.0.0/package/mireot/event-textile-mireot.ttl">EVENT</a>, <a href="Textile/2.0.0/package/mireot/mat-textile-mireot.ttl">MAT</a>, <a href="Textile/2.0.0/package/mireot/soc-textile-mireot.ttl">SOC</a>, <a href="Textile/2.0.0/package/mireot/si-textile-mireot.ttl">SI</a> &middot; <a href="Textile/2.0.0/package/docs/CORE_2026_MIGRATION.md">Migration guidance</a> &middot; <a href="Textile/2.0.0/package/LICENSE.md">Textile licence and source notices</a> &middot; <a href="Textile/2.0.0/package/docs/TEXTILE_IRI_RESOLVER_COORDINATION_2.0.0.md">Resolver coordination</a></p>
     <table class="data numbered" id="tab-textile">
-      <caption>Modules of the textile ontology.</caption>
+      <caption>Textile Ontology 2.0.0 module documentation.</caption>
+      <thead><tr><th>Module</th><th>Version</th><th>Scope</th></tr></thead><tbody>
+<tr><td><a href="Textile/2.0.0/assessment/index-en.html">Assessment</a></td><td>2.0.0 candidate</td><td>Textile assessment module.</td></tr>
+<tr><td><a href="Textile/2.0.0/associated-materials/index-en.html">Associated Materials</a></td><td>2.0.0 candidate</td><td>Textile associated materials module.</td></tr>
+<tr><td><a href="Textile/2.0.0/connector/index-en.html">Connector</a></td><td>2.0.0 candidate</td><td>Textile connector module.</td></tr>
+<tr><td><a href="Textile/2.0.0/context/index-en.html">Context</a></td><td>2.0.0 candidate</td><td>Textile context module.</td></tr>
+<tr><td><a href="Textile/2.0.0/core/index-en.html">Core</a></td><td>2.0.0 candidate</td><td>Textile core module.</td></tr>
+<tr><td><a href="Textile/2.0.0/durability/index-en.html">Durability</a></td><td>2.0.0 candidate</td><td>Textile durability module.</td></tr>
+<tr><td><a href="Textile/2.0.0/indicator/index-en.html">Indicator</a></td><td>2.0.0 candidate</td><td>Textile indicator module.</td></tr>
+<tr><td><a href="Textile/2.0.0/process/index-en.html">Process</a></td><td>2.0.0 candidate</td><td>Textile process module.</td></tr>
+<tr><td><a href="Textile/2.0.0/recyclability/index-en.html">Recyclability</a></td><td>2.0.0 candidate</td><td>Textile recyclability module.</td></tr>
+<tr><td><a href="Textile/2.0.0/repairability/index-en.html">Repairability</a></td><td>2.0.0 candidate</td><td>Textile repairability module.</td></tr>
+<tr><td><a href="Textile/2.0.0/soc/index-en.html">Soc</a></td><td>2.0.0 candidate</td><td>Textile soc module.</td></tr>
+<tr><td><a href="Textile/2.0.0/structure/index-en.html">Structure</a></td><td>2.0.0 candidate</td><td>Textile structure module.</td></tr>
+      </tbody></table>
+    <h4>Historical Textile 1.1.2</h4>
+    <p>The previous documentation and its complete-vocabulary reading view remain unchanged. <a href="Textile/textile-ontology/index-en.html">Open the historical umbrella page</a>. Reproducible historical ontology loading uses the separate <a href="Textile/2.0.0/package/migration/historical/1.1.2/catalog-v001.xml">preserved historical catalogue</a>; the legacy draft SOC namespace in those pages does not describe the current 2.0.0 model.</p>
+<table class="data numbered" id="tab-textile-1-1-2">
+      <caption>Historical Textile 1.1.2 modules (preserved).</caption>
       <thead><tr><th>Module</th><th>Prefix</th><th>Scope</th></tr></thead>
       <tbody>
         <tr><td><a href="Textile/textile-ontology-complete/index-en.html">Textile ontology (complete vocabulary)</a></td><td>&mdash;</td><td>The twelve modules merged into one page.</td></tr>
@@ -589,10 +591,7 @@
         <tr><td><a href="Textile/textile-soc/index-en.html">Substances of concern</a></td><td><code>txtsoc</code></td><td>Textile specialisation of the draft SOC module: presence, location in the product, concentration and thresholds.</td></tr>
       </tbody>
     </table>
-    <p>
-      For reading convenience, the reference documentation also has a page merging all textile files,
-      <a href="Textile/textile-ontology-complete/index-en.html"><em>Textile, complete vocabulary</em></a>.
-    </p>
+    <p><a href="Textile/textile-ontology-complete/index-en.html">Historical Textile 1.1.2 complete vocabulary</a> remains a reading view, not a new 2.0.0 merged ontology.</p>
   </section>
 </section>
 
@@ -677,7 +676,21 @@
       <tr><td><a href="Battery/battery-metals/index-en.html">Battery metals</a></td><td>Cobalt, lead, lithium and nickel, whose recycled content is declared.</td></tr>
       <tr class="group"><th colspan="2">Tyre</th></tr>
       <tr><td><a href="Tyre/eto/index-en.html">Example Tyre Ontology</a></td><td>Example ontology for the tyre sector.</td></tr>
-      <tr class="group"><th colspan="2">Textile</th></tr>
+      <tr class="group"><th colspan="2">Textile 2.0.0</th></tr>
+      <tr><td><a href="Textile/2.0.0/index.html">Textile Ontology 2.0.0</a></td><td>Network landing page and source package aligned to the October 2026 CORE baseline.</td></tr>
+      <tr><td><a href="Textile/2.0.0/assessment/index-en.html">Textile assessment</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/assessment/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/associated-materials/index-en.html">Textile associated materials</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/associated-materials/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/connector/index-en.html">Textile connector</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/connector/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/context/index-en.html">Textile context</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/context/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/core/index-en.html">Textile core</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/core/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/durability/index-en.html">Textile durability</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/durability/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/indicator/index-en.html">Textile indicator</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/indicator/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/process/index-en.html">Textile process</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/process/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/recyclability/index-en.html">Textile recyclability</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/recyclability/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/repairability/index-en.html">Textile repairability</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/repairability/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/soc/index-en.html">Textile soc</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/soc/webvowl/index.html">WebVOWL</a>.</td></tr>
+      <tr><td><a href="Textile/2.0.0/structure/index-en.html">Textile structure</a></td><td>2.0.0 candidate; <a href="Textile/2.0.0/structure/webvowl/index.html">WebVOWL</a>.</td></tr>
+<tr class="group"><th colspan="2">Historical Textile 1.1.2</th></tr>
       <tr><td><a href="Textile/textile-ontology/index-en.html">Textile ontology</a></td><td>Umbrella module: imports the twelve modules, declares no term.</td></tr>
       <tr><td><a href="Textile/textile-ontology-complete/index-en.html">Textile, complete vocabulary</a></td><td>All textile files merged into one page, for reading only.</td></tr>
       <tr><td><a href="Textile/textile-connector/index-en.html">Textile connector</a></td><td>Shared quantitative value, reference period and provenance patterns.</td></tr>

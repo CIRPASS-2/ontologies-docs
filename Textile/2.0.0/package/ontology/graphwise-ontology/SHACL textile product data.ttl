@@ -1,0 +1,329 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix txt: <https://w3id.org/eudpp/textile-core#> .
+@prefix txtctx: <https://w3id.org/eudpp/textile-context#> .
+@prefix soc: <https://w3id.org/eudpp/soc#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################
+# 1. Textile product data shape
+#################################################
+
+txt:TextileProductShape
+    a sh:NodeShape ;
+    sh:targetClass txt:TextileProduct ;
+
+    sh:property [
+        sh:path txt:hasFibreCompositionComponent ;
+        sh:minCount 1 ;
+        sh:class txt:FibreCompositionComponent ;
+        sh:message "A textile product must have at least one structured fibre composition component." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasFibreComponent ;
+        sh:class txt:TextileFibre ;
+        sh:message "If provided, each fibre component must be a txt:TextileFibre." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasTextileFibreContent ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class soc:QuantitativeValue ;
+        sh:node txt:TextileFibreContentValueShape ;
+        sh:message "A textile product must have one textile fibre content value compatible with the 80% threshold." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:usesChemical ;
+        sh:class txtctx:ChemicalSubstance ;
+        sh:message "If provided, txt:usesChemical must point to a txtctx:ChemicalSubstance." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasPackagingMaterial ;
+        sh:class txtctx:PackagingMaterial ;
+        sh:message "If provided, txt:hasPackagingMaterial must point to a txtctx:PackagingMaterial." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasNonTextileComponent ;
+        sh:class txtctx:NonTextileComponent ;
+        sh:message "If provided, txt:hasNonTextileComponent must point to a txtctx:NonTextileComponent." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasNonTextileMaterialFraction ;
+        sh:maxCount 1 ;
+        sh:class soc:QuantitativeValue ;
+        sh:node txt:PercentageValueShape ;
+        sh:message "If provided, the non-textile material fraction must be a percentage value between 0 and 100." ;
+    ] .
+
+#################################################
+# 2. Generic quantitative value shapes
+#################################################
+
+soc:QuantitativeValueShape
+    a sh:NodeShape ;
+    sh:targetClass soc:QuantitativeValue ;
+
+    sh:property [
+        sh:path soc:hasUnit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class soc:Unit ;
+        sh:message "A quantitative value must have exactly one unit." ;
+    ] ;
+
+    sh:or (
+        [ sh:class soc:ExactQuantitativeValue ]
+        [ sh:class soc:MaximumQuantitativeValue ]
+        [ sh:class soc:RangeQuantitativeValue ]
+    ) ;
+    sh:message "A quantitative value must be typed as an exact value, a maximum value, or a range value." .
+
+soc:ExactQuantitativeValueShape
+    a sh:NodeShape ;
+    sh:targetClass soc:ExactQuantitativeValue ;
+
+    sh:property [
+        sh:path soc:numericValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "An exact quantitative value must have exactly one decimal numeric value." ;
+    ] .
+
+soc:MaximumQuantitativeValueShape
+    a sh:NodeShape ;
+    sh:targetClass soc:MaximumQuantitativeValue ;
+
+    sh:property [
+        sh:path soc:maximumValue ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A maximum quantitative value must have exactly one decimal maximum value." ;
+    ] .
+
+soc:RangeQuantitativeValueShape
+    a sh:NodeShape ;
+    sh:targetClass soc:RangeQuantitativeValue ;
+
+    sh:property [
+        sh:path soc:lowerBound ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A range quantitative value must have exactly one decimal lower bound." ;
+    ] ;
+
+    sh:property [
+        sh:path soc:upperBound ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "A range quantitative value must have exactly one decimal upper bound." ;
+    ] ;
+
+    sh:sparql [
+        sh:message "For a range quantitative value, the lower bound must be less than or equal to the upper bound." ;
+        sh:select """
+            SELECT $this
+            WHERE {
+                $this soc:lowerBound ?lower ;
+                      soc:upperBound ?upper .
+                FILTER (?lower > ?upper)
+            }
+        """ ;
+    ] .
+
+#################################################
+# 3. Generic percentage value shape
+#################################################
+
+txt:PercentageValueShape
+    a sh:NodeShape ;
+
+    sh:property [
+        sh:path soc:hasUnit ;
+        sh:hasValue unit:PERCENT ;
+        sh:message "The value must use unit:PERCENT as unit." ;
+    ] ;
+
+    sh:or (
+        [
+            sh:class soc:ExactQuantitativeValue ;
+            sh:property [
+                sh:path soc:numericValue ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+        [
+            sh:class soc:MaximumQuantitativeValue ;
+            sh:property [
+                sh:path soc:maximumValue ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+        [
+            sh:class soc:RangeQuantitativeValue ;
+            sh:property [
+                sh:path soc:lowerBound ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ] ;
+            sh:property [
+                sh:path soc:upperBound ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+    ) ;
+    sh:message "A percentage value must be expressed between 0 and 100." .
+
+#################################################
+# 4. Textile fibre content threshold shape
+#################################################
+
+txt:TextileFibreContentValueShape
+    a sh:NodeShape ;
+
+    sh:property [
+        sh:path soc:hasUnit ;
+        sh:hasValue unit:PERCENT ;
+        sh:message "Textile fibre content must be expressed as a percentage." ;
+    ] ;
+
+    sh:or (
+        [
+            sh:class soc:ExactQuantitativeValue ;
+            sh:property [
+                sh:path soc:numericValue ;
+                sh:minInclusive 80 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+        [
+            sh:class soc:RangeQuantitativeValue ;
+            sh:property [
+                sh:path soc:lowerBound ;
+                sh:minInclusive 80 ;
+                sh:maxInclusive 100 ;
+            ] ;
+            sh:property [
+                sh:path soc:upperBound ;
+                sh:minInclusive 80 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+    ) ;
+    sh:message "A product classified as txt:TextileProduct must contain at least 80% textile fibres by weight." .
+
+#################################################
+# 5. Fibre composition component shape
+#################################################
+
+txt:FibreCompositionComponentShape
+    a sh:NodeShape ;
+    sh:targetClass txt:FibreCompositionComponent ;
+
+    sh:property [
+        sh:path txt:hasFibreType ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class txt:TextileFibre ;
+        sh:message "A fibre composition component must refer to exactly one textile fibre type." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:hasFibreShare ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class soc:QuantitativeValue ;
+        sh:node txt:FibreShareValueShape ;
+        sh:message "A fibre composition component must have exactly one quantitative fibre share." ;
+    ] .
+
+#################################################
+# 6. Fibre share value shape
+#################################################
+
+txt:FibreShareValueShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf txt:hasFibreShare ;
+
+    sh:node txt:PercentageValueShape ;
+
+    sh:or (
+        [
+            sh:class soc:ExactQuantitativeValue ;
+            sh:property [
+                sh:path soc:numericValue ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+        [
+            sh:class soc:RangeQuantitativeValue ;
+            sh:property [
+                sh:path soc:lowerBound ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ] ;
+            sh:property [
+                sh:path soc:upperBound ;
+                sh:minInclusive 0 ;
+                sh:maxInclusive 100 ;
+            ]
+        ]
+    ) ;
+    sh:message "A fibre share must be a percentage value between 0 and 100." .
+
+#################################################
+# 7. Non-textile material fraction value shape
+#################################################
+
+txt:NonTextileMaterialFractionValueShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf txt:hasNonTextileMaterialFraction ;
+
+    sh:node txt:PercentageValueShape ;
+    sh:message "A non-textile material fraction must be expressed as a percentage between 0 and 100." .
+
+#################################################
+# 8. Ontology-level shapes for excluded classes
+# These validate class annotations, not product instances.
+#################################################
+
+txt:ExcludedTextileProductClassShape
+    a sh:NodeShape ;
+    sh:targetClass owl:Class ;
+
+    sh:property [
+        sh:path txt:inJRCStudyScope ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+        sh:message "If a class has txt:inJRCStudyScope, the value must be a single boolean." ;
+    ] ;
+
+    sh:property [
+        sh:path txt:jrcExclusionReason ;
+        sh:datatype xsd:string ;
+        sh:message "If a class has txt:jrcExclusionReason, the value must be a string." ;
+    ] .
+
+txt:ExcludedCategoryAnnotationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf txt:jrcExclusionReason ;
+
+    sh:property [
+        sh:path txt:inJRCStudyScope ;
+        sh:hasValue false ;
+        sh:message "A class with a JRC exclusion reason should have txt:inJRCStudyScope set to false." ;
+    ] .
